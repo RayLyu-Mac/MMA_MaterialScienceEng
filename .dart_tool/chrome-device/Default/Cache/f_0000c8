@@ -1,0 +1,389 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/foundation/key.dart', 'packages/youtube_player_flutter/src/utils/youtube_meta_data.dart', 'packages/youtube_player_flutter/src/enums/player_state.dart', 'packages/youtube_player_flutter/src/widgets/progress_bar.dart', 'packages/flutter_inappwebview/src/web_storage_manager.dart'], (function load__packages__youtube_player_flutter__src__player__raw_youtube_player_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__foundation__key$46dart, packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart, packages__youtube_player_flutter__src__enums__player_state$46dart, packages__youtube_player_flutter__src__widgets__progress_bar$46dart, packages__flutter_inappwebview__src__web_storage_manager$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const key = packages__flutter__src__foundation__key$46dart.src__foundation__key;
+  const youtube_meta_data = packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart.src__utils__youtube_meta_data;
+  const player_state = packages__youtube_player_flutter__src__enums__player_state$46dart.src__enums__player_state;
+  const youtube_player_controller = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__utils__youtube_player_controller;
+  const in_app_webview = packages__flutter_inappwebview__src__web_storage_manager$46dart.src__in_app_webview;
+  const types = packages__flutter_inappwebview__src__web_storage_manager$46dart.src__types;
+  const webview_options = packages__flutter_inappwebview__src__web_storage_manager$46dart.src__webview_options;
+  const in_app_webview_controller = packages__flutter_inappwebview__src__web_storage_manager$46dart.src__in_app_webview_controller;
+  var raw_youtube_player = Object.create(dart.library);
+  var $first = dartx.first;
+  var $toDouble = dartx.toDouble;
+  var $last = dartx.last;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ListL: () => (T.ListL = dart.constFn(dart.legacy(core.List)))(),
+    ListLToNull: () => (T.ListLToNull = dart.constFn(dart.fnType(core.Null, [T.ListL()])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    numL: () => (T.numL = dart.constFn(dart.legacy(core.num)))(),
+    InAppWebViewControllerL: () => (T.InAppWebViewControllerL = dart.constFn(dart.legacy(in_app_webview_controller.InAppWebViewController)))(),
+    InAppWebViewControllerLToNull: () => (T.InAppWebViewControllerLToNull = dart.constFn(dart.fnType(core.Null, [T.InAppWebViewControllerL()])))(),
+    InAppWebViewControllerLAndStringLToNull: () => (T.InAppWebViewControllerLAndStringLToNull = dart.constFn(dart.fnType(core.Null, [T.InAppWebViewControllerL(), T.StringL()])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: ui.AppLifecycleState.prototype,
+        [_name]: "AppLifecycleState.resumed",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: ui.AppLifecycleState.prototype,
+        [_name]: "AppLifecycleState.inactive",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: ui.AppLifecycleState.prototype,
+        [_name]: "AppLifecycleState.paused",
+        index: 2
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "initialData",
+        [_Location_column]: 9,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "initialOptions",
+        [_Location_column]: 9,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onWebViewCreated",
+        [_Location_column]: 9,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onLoadStop",
+        [_Location_column]: 9,
+        [_Location_line]: 216,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 76,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/raw_youtube_player.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "ignoring",
+        [_Location_column]: 7,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/raw_youtube_player.dart"
+      });
+    }
+  }, false);
+  var C = Array(14).fill(void 0);
+  var I = ["package:youtube_player_flutter/src/player/raw_youtube_player.dart"];
+  var key$ = dart.privateName(raw_youtube_player, "RawYoutubePlayer.key");
+  var onEnded$ = dart.privateName(raw_youtube_player, "RawYoutubePlayer.onEnded");
+  raw_youtube_player.RawYoutubePlayer = class RawYoutubePlayer extends framework.StatefulWidget {
+    get key() {
+      return this[key$];
+    }
+    set key(value) {
+      super.key = value;
+    }
+    get onEnded() {
+      return this[onEnded$];
+    }
+    set onEnded(value) {
+      super.onEnded = value;
+    }
+    createState() {
+      return new raw_youtube_player._RawYoutubePlayerState.new();
+    }
+  };
+  (raw_youtube_player.RawYoutubePlayer.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let onEnded = opts && 'onEnded' in opts ? opts.onEnded : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[key$] = key;
+    this[onEnded$] = onEnded;
+    raw_youtube_player.RawYoutubePlayer.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = raw_youtube_player.RawYoutubePlayer.prototype;
+  dart.addTypeTests(raw_youtube_player.RawYoutubePlayer);
+  dart.addTypeCaches(raw_youtube_player.RawYoutubePlayer);
+  dart.setMethodSignature(raw_youtube_player.RawYoutubePlayer, () => ({
+    __proto__: dart.getMethods(raw_youtube_player.RawYoutubePlayer.__proto__),
+    createState: dart.fnType(dart.legacy(raw_youtube_player._RawYoutubePlayerState), [])
+  }));
+  dart.setLibraryUri(raw_youtube_player.RawYoutubePlayer, I[0]);
+  dart.setFieldSignature(raw_youtube_player.RawYoutubePlayer, () => ({
+    __proto__: dart.getFields(raw_youtube_player.RawYoutubePlayer.__proto__),
+    key: dart.finalFieldType(dart.legacy(key.Key)),
+    onEnded: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, [dart.legacy(youtube_meta_data.YoutubeMetaData)])))
+  }));
+  var _cachedPlayerState = dart.privateName(raw_youtube_player, "_cachedPlayerState");
+  var _isPlayerReady = dart.privateName(raw_youtube_player, "_isPlayerReady");
+  var _onLoadStopCalled = dart.privateName(raw_youtube_player, "_onLoadStopCalled");
+  var _name = dart.privateName(ui, "_name");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const State_WidgetsBindingObserver$36 = class State_WidgetsBindingObserver extends framework.State$(dart.legacy(raw_youtube_player.RawYoutubePlayer)) {};
+  (State_WidgetsBindingObserver$36.new = function() {
+    State_WidgetsBindingObserver$36.__proto__.new.call(this);
+  }).prototype = State_WidgetsBindingObserver$36.prototype;
+  dart.applyMixin(State_WidgetsBindingObserver$36, binding.WidgetsBindingObserver);
+  raw_youtube_player._RawYoutubePlayerState = class _RawYoutubePlayerState extends State_WidgetsBindingObserver$36 {
+    initState() {
+      super.initState();
+      binding.WidgetsBinding.instance.addObserver(this);
+    }
+    dispose() {
+      binding.WidgetsBinding.instance.removeObserver(this);
+      super.dispose();
+    }
+    didChangeAppLifecycleState(state) {
+      let t0, t0$;
+      switch (state) {
+        case C[0] || CT.C0:
+        {
+          if (this[_cachedPlayerState] != null && this[_cachedPlayerState] == player_state.PlayerState.playing) {
+            t0 = this.controller;
+            t0 == null ? null : t0.play();
+          }
+          break;
+        }
+        case C[1] || CT.C1:
+        {
+          break;
+        }
+        case C[2] || CT.C2:
+        {
+          this[_cachedPlayerState] = this.controller.value.playerState;
+          t0$ = this.controller;
+          t0$ == null ? null : t0$.pause();
+          break;
+        }
+        default:
+      }
+    }
+    build(context) {
+      this.controller = youtube_player_controller.YoutubePlayerController.of(context);
+      return new basic.IgnorePointer.new({ignoring: true, child: new in_app_webview.InAppWebView.new({key: this.widget.key, initialData: new types.InAppWebViewInitialData.new({data: this.player, baseUrl: "https://www.youtube.com", encoding: "utf-8", mimeType: "text/html"}), initialOptions: new types.InAppWebViewGroupOptions.new({ios: new webview_options.IOSInAppWebViewOptions.new({allowsInlineMediaPlayback: true}), crossPlatform: new webview_options.InAppWebViewOptions.new({userAgent: this.userAgent, mediaPlaybackRequiresUserGesture: false, transparentBackground: true})}), onWebViewCreated: dart.fn(webController => {
+            let t0;
+            this.controller.updateValue(this.controller.value.copyWith({webViewController: webController}));
+            t0 = webController;
+            (() => {
+              t0.addJavaScriptHandler({handlerName: "Ready", callback: dart.fn(_ => {
+                  this[_isPlayerReady] = true;
+                  if (dart.test(this[_onLoadStopCalled])) {
+                    this.controller.updateValue(this.controller.value.copyWith({isReady: true}));
+                  }
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "StateChange", callback: dart.fn(args => {
+                  let t2, t1;
+                  switch (T.intL().as(args[$first])) {
+                    case -1:
+                    {
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.unStarted, isLoaded: true}));
+                      break;
+                    }
+                    case 0:
+                    {
+                      if (this.widget.onEnded != null) {
+                        t1 = this.widget;
+                        t2 = this.controller.metadata;
+                        t1.onEnded(t2);
+                      }
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.ended}));
+                      break;
+                    }
+                    case 1:
+                    {
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.playing, isPlaying: true, hasPlayed: true, errorCode: 0}));
+                      break;
+                    }
+                    case 2:
+                    {
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.paused, isPlaying: false}));
+                      break;
+                    }
+                    case 3:
+                    {
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.buffering}));
+                      break;
+                    }
+                    case 5:
+                    {
+                      this.controller.updateValue(this.controller.value.copyWith({playerState: player_state.PlayerState.cued}));
+                      break;
+                    }
+                    default:
+                    {
+                      dart.throw(core.Exception.new("Invalid player state obtained."));
+                    }
+                  }
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "PlaybackQualityChange", callback: dart.fn(args => {
+                  this.controller.updateValue(this.controller.value.copyWith({playbackQuality: T.StringL().as(args[$first])}));
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "PlaybackRateChange", callback: dart.fn(args => {
+                  let rate = T.numL().as(args[$first]);
+                  this.controller.updateValue(this.controller.value.copyWith({playbackRate: rate[$toDouble]()}));
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "Errors", callback: dart.fn(args => {
+                  this.controller.updateValue(this.controller.value.copyWith({errorCode: T.intL().as(args[$first])}));
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "VideoData", callback: dart.fn(args => {
+                  this.controller.updateValue(this.controller.value.copyWith({metaData: youtube_meta_data.YoutubeMetaData.fromRawData(args[$first])}));
+                }, T.ListLToNull())});
+              t0.addJavaScriptHandler({handlerName: "VideoTime", callback: dart.fn(args => {
+                  let position = dart.dsend(args[$first], '*', [1000]);
+                  let buffered = T.numL().as(args[$last]);
+                  this.controller.updateValue(this.controller.value.copyWith({position: new core.Duration.new({milliseconds: core.int.as(dart.dsend(position, 'floor', []))}), buffered: buffered[$toDouble]()}));
+                }, T.ListLToNull())});
+              return t0;
+            })();
+          }, T.InAppWebViewControllerLToNull()), onLoadStop: dart.fn((_, __) => {
+            this[_onLoadStopCalled] = true;
+            if (dart.test(this[_isPlayerReady])) {
+              this.controller.updateValue(this.controller.value.copyWith({isReady: true}));
+            }
+          }, T.InAppWebViewControllerLAndStringLToNull()), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10});
+    }
+    get player() {
+      return "    <!DOCTYPE html>\n    <html>\n    <head>\n        <style>\n            html,\n            body {\n                margin: 0;\n                padding: 0;\n                background-color: #000000;\n                overflow: hidden;\n                position: fixed;\n                height: 100%;\n                width: 100%;\n                pointer-events: none;\n            }\n        </style>\n        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>\n    </head>\n    <body>\n        <div id=\"player\"></div>\n        <script>\n            var tag = document.createElement('script');\n            tag.src = \"https://www.youtube.com/iframe_api\";\n            var firstScriptTag = document.getElementsByTagName('script')[0];\n            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n            var player;\n            var timerId;\n            function onYouTubeIframeAPIReady() {\n                player = new YT.Player('player', {\n                    height: '100%',\n                    width: '100%',\n                    videoId: '" + dart.str(this.controller.initialVideoId) + "',\n                    playerVars: {\n                        'controls': 0,\n                        'playsinline': 1,\n                        'enablejsapi': 1,\n                        'fs': 0,\n                        'rel': 0,\n                        'showinfo': 0,\n                        'iv_load_policy': 3,\n                        'modestbranding': 1,\n                        'cc_load_policy': " + dart.str(this.boolean({value: this.controller.flags.enableCaption})) + ",\n                        'cc_lang_pref': '" + dart.str(this.controller.flags.captionLanguage) + "',\n                        'autoplay': " + dart.str(this.boolean({value: this.controller.flags.autoPlay})) + ",\n                        'start': " + dart.str(this.controller.flags.startAt) + ",\n                        'end': " + dart.str(this.controller.flags.endAt) + "\n                    },\n                    events: {\n                        onReady: function(event) { window.flutter_inappwebview.callHandler('Ready'); },\n                        onStateChange: function(event) { sendPlayerStateChange(event.data); },\n                        onPlaybackQualityChange: function(event) { window.flutter_inappwebview.callHandler('PlaybackQualityChange', event.data); },\n                        onPlaybackRateChange: function(event) { window.flutter_inappwebview.callHandler('PlaybackRateChange', event.data); },\n                        onError: function(error) { window.flutter_inappwebview.callHandler('Errors', error.data); }\n                    },\n                });\n            }\n\n            function sendPlayerStateChange(playerState) {\n                clearTimeout(timerId);\n                window.flutter_inappwebview.callHandler('StateChange', playerState);\n                if (playerState == 1) {\n                    startSendCurrentTimeInterval();\n                    sendVideoData(player);\n                }\n            }\n\n            function sendVideoData(player) {\n                var videoData = {\n                    'duration': player.getDuration(),\n                    'title': player.getVideoData().title,\n                    'author': player.getVideoData().author,\n                    'videoId': player.getVideoData().video_id\n                };\n                window.flutter_inappwebview.callHandler('VideoData', videoData);\n            }\n\n            function startSendCurrentTimeInterval() {\n                timerId = setInterval(function () {\n                    window.flutter_inappwebview.callHandler('VideoTime', player.getCurrentTime(), player.getVideoLoadedFraction());\n                }, 100);\n            }\n\n            function play() {\n                player.playVideo();\n                return '';\n            }\n\n            function pause() {\n                player.pauseVideo();\n                return '';\n            }\n\n            function loadById(loadSettings) {\n                player.loadVideoById(loadSettings);\n                return '';\n            }\n\n            function cueById(cueSettings) {\n                player.cueVideoById(cueSettings);\n                return '';\n            }\n\n            function loadPlaylist(playlist, index, startAt) {\n                player.loadPlaylist(playlist, 'playlist', index, startAt);\n                return '';\n            }\n\n            function cuePlaylist(playlist, index, startAt) {\n                player.cuePlaylist(playlist, 'playlist', index, startAt);\n                return '';\n            }\n\n            function mute() {\n                player.mute();\n                return '';\n            }\n\n            function unMute() {\n                player.unMute();\n                return '';\n            }\n\n            function setVolume(volume) {\n                player.setVolume(volume);\n                return '';\n            }\n\n            function seekTo(position, seekAhead) {\n                player.seekTo(position, seekAhead);\n                return '';\n            }\n\n            function setSize(width, height) {\n                player.setSize(width, height);\n                return '';\n            }\n\n            function setPlaybackRate(rate) {\n                player.setPlaybackRate(rate);\n                return '';\n            }\n\n            function setTopMargin(margin) {\n                document.getElementById(\"player\").style.marginTop = margin;\n                return '';\n            }\n        </script>\n    </body>\n    </html>\n  ";
+    }
+    boolean(opts) {
+      let value = opts && 'value' in opts ? opts.value : null;
+      return dart.test(value) ? "'1'" : "'0'";
+    }
+    get userAgent() {
+      return dart.test(this.controller.flags.forceHD) ? "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" : null;
+    }
+  };
+  (raw_youtube_player._RawYoutubePlayerState.new = function() {
+    this.controller = null;
+    this[_cachedPlayerState] = null;
+    this[_isPlayerReady] = false;
+    this[_onLoadStopCalled] = false;
+    raw_youtube_player._RawYoutubePlayerState.__proto__.new.call(this);
+    ;
+  }).prototype = raw_youtube_player._RawYoutubePlayerState.prototype;
+  dart.addTypeTests(raw_youtube_player._RawYoutubePlayerState);
+  dart.addTypeCaches(raw_youtube_player._RawYoutubePlayerState);
+  dart.setMethodSignature(raw_youtube_player._RawYoutubePlayerState, () => ({
+    __proto__: dart.getMethods(raw_youtube_player._RawYoutubePlayerState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    boolean: dart.fnType(dart.legacy(core.String), [], {value: dart.legacy(core.bool)}, {})
+  }));
+  dart.setGetterSignature(raw_youtube_player._RawYoutubePlayerState, () => ({
+    __proto__: dart.getGetters(raw_youtube_player._RawYoutubePlayerState.__proto__),
+    player: dart.legacy(core.String),
+    userAgent: dart.legacy(core.String)
+  }));
+  dart.setLibraryUri(raw_youtube_player._RawYoutubePlayerState, I[0]);
+  dart.setFieldSignature(raw_youtube_player._RawYoutubePlayerState, () => ({
+    __proto__: dart.getFields(raw_youtube_player._RawYoutubePlayerState.__proto__),
+    controller: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    [_cachedPlayerState]: dart.fieldType(dart.legacy(player_state.PlayerState)),
+    [_isPlayerReady]: dart.fieldType(dart.legacy(core.bool)),
+    [_onLoadStopCalled]: dart.fieldType(dart.legacy(core.bool))
+  }));
+  dart.trackLibraries("packages/youtube_player_flutter/src/player/raw_youtube_player.dart", {
+    "package:youtube_player_flutter/src/player/raw_youtube_player.dart": raw_youtube_player
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["raw_youtube_player.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../packages/youtube_player_flutter/src/player/raw_youtube_player.dart.lib.js"}');
+  // Exports:
+  return {
+    src__player__raw_youtube_player: raw_youtube_player
+  };
+}));
+
+//# sourceMappingURL=raw_youtube_player.dart.lib.js.map

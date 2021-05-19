@@ -1,0 +1,713 @@
+# compiler: R8
+# compiler_version: 2.1.62
+# pg_map_id: eaa6b2a
+# common_typos_disable
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity:
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsOptions options -> d
+    androidx.browser.customtabs.CustomTabsSession customTabsSession -> f
+    boolean $assertionsDisabled -> i
+    androidx.browser.customtabs.CustomTabsIntent$Builder builder -> c
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabActivityHelper customTabActivityHelper -> e
+    boolean onChromeSafariBrowserOpened -> g
+    boolean onChromeSafariBrowserCompletedInitialLoad -> h
+    java.lang.String uuid -> b
+    io.flutter.plugin.common.MethodChannel channel -> a
+    void access$000(com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity,java.util.List) -> a
+    void access$100(com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity,androidx.browser.customtabs.CustomTabsIntent) -> a
+    void close() -> a
+    android.app.PendingIntent createPendingIntent(int) -> a
+    void prepareCustomTabs(java.util.List) -> a
+    void prepareCustomTabsIntent(androidx.browser.customtabs.CustomTabsIntent) -> a
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity$1 -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity$a:
+    java.util.List val$menuItemList -> b
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity this$0 -> d
+    java.lang.String val$url -> a
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity val$chromeCustomTabsActivity -> c
+    void onCustomTabsDisconnected() -> a
+    void onCustomTabsConnected() -> b
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity$2 -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity$b:
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsOptions -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.a:
+    java.lang.Boolean keepAliveEnabled -> g
+    java.lang.String packageName -> f
+    java.lang.Boolean instantAppsEnabled -> e
+    java.lang.String toolbarBackgroundColor -> c
+    java.lang.Boolean enableUrlBarHiding -> d
+    java.lang.Boolean addDefaultShareMenuItem -> a
+    java.lang.Boolean showTitle -> b
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsOptions parse(java.util.Map) -> a
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabActivityHelper -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.b:
+    androidx.browser.customtabs.CustomTabsCallback mCustomTabsCallback -> e
+    androidx.browser.customtabs.CustomTabsServiceConnection mConnection -> c
+    com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabActivityHelper$ConnectionCallback mConnectionCallback -> d
+    androidx.browser.customtabs.CustomTabsSession mCustomTabsSession -> a
+    androidx.browser.customtabs.CustomTabsClient mClient -> b
+    void bindCustomTabsService(android.app.Activity) -> a
+    boolean mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List) -> a
+    void onServiceConnected(androidx.browser.customtabs.CustomTabsClient) -> a
+    void onServiceDisconnected() -> a
+    void openCustomTab(android.app.Activity,androidx.browser.customtabs.CustomTabsIntent,android.net.Uri,int) -> a
+    void setConnectionCallback(com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabActivityHelper$ConnectionCallback) -> a
+    void setCustomTabsCallback(androidx.browser.customtabs.CustomTabsCallback) -> a
+    androidx.browser.customtabs.CustomTabsSession getSession() -> b
+    void unbindCustomTabsService(android.app.Activity) -> b
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabActivityHelper$ConnectionCallback -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.b$a:
+    void onCustomTabsDisconnected() -> a
+    void onCustomTabsConnected() -> b
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.CustomTabsHelper -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.c:
+    java.lang.String sPackageNameToUse -> a
+    void addKeepAliveExtra(android.content.Context,android.content.Intent) -> a
+    java.lang.String getPackageNameToUse(android.content.Context) -> a
+    boolean hasSpecializedHandlerIntents(android.content.Context,android.content.Intent) -> b
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.KeepAliveService -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.d:
+    android.os.Binder sBinder -> a
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ServiceConnection -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.e:
+    java.lang.ref.WeakReference mConnectionCallback -> a
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ServiceConnectionCallback -> com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.f:
+    void onServiceConnected(androidx.browser.customtabs.CustomTabsClient) -> a
+    void onServiceDisconnected() -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlocker -> com.pichillilorenzo.flutter_inappwebview.a.a:
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerAction action -> b
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTrigger trigger -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerAction -> com.pichillilorenzo.flutter_inappwebview.a.b:
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType type -> a
+    java.lang.String selector -> b
+    boolean $assertionsDisabled -> c
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerAction fromMap(java.util.Map) -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType -> com.pichillilorenzo.flutter_inappwebview.a.c:
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType CSS_DISPLAY_NONE -> c
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType MAKE_HTTPS -> d
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType BLOCK -> b
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType[] $VALUES -> e
+    java.lang.String value -> a
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType fromValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerHandler -> com.pichillilorenzo.flutter_inappwebview.a.d:
+    java.util.List ruleList -> a
+    android.webkit.WebResourceResponse checkUrl(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView,java.lang.String) -> a
+    android.webkit.WebResourceResponse checkUrl(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView,java.lang.String,com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType) -> a
+    android.webkit.WebResourceResponse checkUrl(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView,java.lang.String,java.lang.String) -> a
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType getResourceTypeFromContentType(java.lang.String) -> a
+    java.util.List getRuleList() -> a
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType getResourceTypeFromUrl(java.lang.String) -> b
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerHandler$1 -> com.pichillilorenzo.flutter_inappwebview.a.d$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView val$webView -> b
+    java.lang.String[] val$webViewUrl -> a
+    java.util.concurrent.CountDownLatch val$latch -> c
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerHandler$2 -> com.pichillilorenzo.flutter_inappwebview.a.d$b:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView val$webView -> a
+    java.lang.String val$jsScript -> b
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerHandler$3 -> com.pichillilorenzo.flutter_inappwebview.a.d$c:
+    int[] $SwitchMap$com$pichillilorenzo$flutter_inappwebview$ContentBlocker$ContentBlockerActionType -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTrigger -> com.pichillilorenzo.flutter_inappwebview.a.e:
+    java.util.List loadType -> f
+    java.util.regex.Pattern urlFilterPatternCompiled -> b
+    java.util.List unlessDomain -> e
+    java.util.List ifDomain -> d
+    java.util.List resourceType -> c
+    java.lang.String urlFilter -> a
+    java.util.List unlessTopUrl -> h
+    java.util.List ifTopUrl -> g
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTrigger fromMap(java.util.Map) -> a
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType -> com.pichillilorenzo.flutter_inappwebview.a.f:
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType IMAGE -> c
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType STYLE_SHEET -> d
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType DOCUMENT -> b
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType SVG_DOCUMENT -> g
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType MEDIA -> h
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType SCRIPT -> e
+    java.lang.String value -> a
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType FONT -> f
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType[] $VALUES -> k
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType POPUP -> i
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType RAW -> j
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType fromValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.Credential -> com.pichillilorenzo.flutter_inappwebview.b.a:
+    java.lang.Long protectionSpaceId -> c
+    java.lang.String username -> a
+    java.lang.String password -> b
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDao -> com.pichillilorenzo.flutter_inappwebview.b.b:
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabaseHelper credentialDatabaseHelper -> a
+    java.lang.String[] projection -> b
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.Credential find(java.lang.String,java.lang.String,java.lang.Long) -> a
+    java.util.List getAllByProtectionSpaceId(java.lang.Long) -> a
+    long insert(com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.Credential) -> a
+    long update(com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.Credential) -> b
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabase -> com.pichillilorenzo.flutter_inappwebview.b.c:
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDao credentialDao -> b
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabase instance -> c
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.ProtectionSpaceDao protectionSpaceDao -> a
+    java.util.List getHttpAuthCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer) -> a
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabase getInstance(android.content.Context) -> a
+    void setHttpAuthCredential(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabaseHelper -> com.pichillilorenzo.flutter_inappwebview.b.d:
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.ProtectionSpace -> com.pichillilorenzo.flutter_inappwebview.b.e:
+    java.lang.Integer port -> e
+    java.lang.Long id -> a
+    java.lang.String procotol -> c
+    java.lang.String host -> b
+    java.lang.String realm -> d
+com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.ProtectionSpaceDao -> com.pichillilorenzo.flutter_inappwebview.b.f:
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.CredentialDatabaseHelper credentialDatabaseHelper -> a
+    java.lang.String[] projection -> b
+    com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.ProtectionSpace find(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer) -> a
+    long insert(com.pichillilorenzo.flutter_inappwebview.CredentialDatabase.ProtectionSpace) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity:
+    boolean isHidden -> k
+    java.lang.String fromActivity -> l
+    androidx.appcompat.app.ActionBar actionBar -> e
+    android.widget.SearchView searchView -> g
+    java.lang.Integer windowId -> b
+    android.widget.ProgressBar progressBar -> j
+    android.view.Menu menu -> f
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserOptions options -> h
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView webView -> d
+    java.util.Map headers -> i
+    java.lang.String uuid -> c
+    java.util.List activityResultListeners -> m
+    io.flutter.plugin.common.MethodChannel channel -> a
+    void printCurrentPage() -> A
+    void reload() -> B
+    java.util.Map requestFocusNodeHref() -> C
+    java.util.Map requestImageRef() -> D
+    void resumeTimers() -> E
+    void show() -> F
+    void stopLoading() -> G
+    boolean zoomIn() -> H
+    boolean zoomOut() -> I
+    boolean canGoBack() -> a
+    boolean canGoBackOrForward(int) -> a
+    void clearMatches(io.flutter.plugin.common.MethodChannel$Result) -> a
+    void evaluateJavascript(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void findAllAsync(java.lang.String) -> a
+    void findNext(java.lang.Boolean,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void loadData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void loadFile(java.lang.String,java.util.Map,io.flutter.plugin.common.MethodChannel$Result) -> a
+    boolean pageDown(boolean) -> a
+    void postUrl(java.lang.String,byte[],io.flutter.plugin.common.MethodChannel$Result) -> a
+    void saveWebArchive(java.lang.String,boolean,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void scrollBy(java.lang.Integer,java.lang.Integer,java.lang.Boolean) -> a
+    void setContextMenu(java.util.Map) -> a
+    void setOptions(com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserOptions,java.util.HashMap) -> a
+    void zoomBy(java.lang.Float) -> a
+    boolean canGoForward() -> b
+    void close(io.flutter.plugin.common.MethodChannel$Result) -> b
+    void goBackOrForward(int) -> b
+    void injectCSSCode(java.lang.String) -> b
+    void loadFile(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void loadUrl(java.lang.String,java.util.Map,io.flutter.plugin.common.MethodChannel$Result) -> b
+    boolean pageUp(boolean) -> b
+    void scrollTo(java.lang.Integer,java.lang.Integer,java.lang.Boolean) -> b
+    void clearCache() -> c
+    void getSelectedText(io.flutter.plugin.common.MethodChannel$Result) -> c
+    void injectCSSFileFromUrl(java.lang.String) -> c
+    void loadUrl(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> c
+    void clearFocus() -> d
+    void injectJavascriptFileFromUrl(java.lang.String) -> d
+    void startSafeBrowsing(io.flutter.plugin.common.MethodChannel$Result) -> d
+    void clearSslPreferences() -> e
+    void takeScreenshot(io.flutter.plugin.common.MethodChannel$Result) -> e
+    void dispose() -> f
+    java.util.Map getCertificate() -> g
+    java.lang.Integer getContentHeight() -> h
+    java.util.HashMap getCopyBackForwardList() -> i
+    java.util.Map getHitTestResult() -> j
+    java.util.Map getOptions() -> k
+    java.lang.String getOriginalUrl() -> l
+    java.lang.Integer getProgress() -> m
+    java.lang.Float getScale() -> n
+    java.lang.Integer getScrollX() -> o
+    java.lang.Integer getScrollY() -> p
+    java.lang.String getUrl() -> q
+    java.lang.String getWebViewTitle() -> r
+    void goBack() -> s
+    void goForward() -> t
+    void hide() -> u
+    boolean isLoading() -> v
+    void onPauseWebView() -> w
+    void onResumeWebView() -> x
+    void pauseTimers() -> y
+    void prepareView() -> z
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$1 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$2 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$b:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$3 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$c:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$4 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$d:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    void onReceiveValue(java.lang.Boolean) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$5 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$e:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$6 -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$f:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$ActivityResultListener -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity$g:
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserOptions -> com.pichillilorenzo.flutter_inappwebview.InAppBrowser.a:
+    java.lang.Boolean closeOnCannotGoBack -> g
+    java.lang.Boolean progressBar -> h
+    java.lang.Boolean hideUrlBar -> e
+    java.lang.Boolean hideTitleBar -> f
+    java.lang.String toolbarTopBackgroundColor -> c
+    java.lang.Boolean hidden -> a
+    java.lang.Boolean toolbarTop -> b
+    java.lang.String toolbarTopFixedTitle -> d
+    java.util.Map getRealOptions(com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity) -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserOptions parse(java.util.Map) -> a
+    java.util.Map toMap() -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.ContextMenuOptions -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.a:
+    java.lang.Boolean hideDefaultSystemContextMenuItems -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.ContextMenuOptions parse(java.util.Map) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.b:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView webView -> a
+    io.flutter.plugin.common.MethodChannel channel -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.b$a:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    void onReceiveValue(java.lang.Boolean) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView$2 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.b$b:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView$3 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.b$c:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView:
+    android.os.Handler headlessHandler -> u
+    java.lang.Runnable checkScrollStoppedTask -> v
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewRenderProcessClient inAppWebViewRenderProcessClient -> k
+    java.util.regex.Pattern regexToCancelSubFramesLoadingCompiled -> q
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient inAppWebViewChromeClient -> j
+    android.graphics.Point contextMenuPoint -> A
+    com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerHandler contentBlockerHandler -> p
+    int initialPositionScrollStoppedTask -> w
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient inAppWebViewClient -> i
+    io.flutter.plugin.common.MethodChannel channel -> f
+    android.view.GestureDetector gestureDetector -> r
+    float scale -> o
+    android.widget.LinearLayout floatingContextMenu -> s
+    boolean isLoading -> n
+    java.util.Map contextMenu -> t
+    java.lang.Runnable checkContextMenuShouldBeClosedTask -> y
+    java.lang.Object id -> g
+    java.lang.Integer windowId -> h
+    com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface javaScriptBridgeInterface -> l
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView flutterWebView -> e
+    android.graphics.Point lastTouch -> B
+    android.os.Handler mHandler -> C
+    int newCheckContextMenuShouldBeClosedTaskTask -> z
+    int newCheckScrollStoppedTask -> x
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions options -> m
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity inAppBrowserActivity -> d
+    android.graphics.Point access$000(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView) -> a
+    void dispose() -> a
+    void evaluateJavascript(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> a
+    java.util.Map getCertificateMap(android.net.http.SslCertificate) -> a
+    void getSelectedText(android.webkit.ValueCallback) -> a
+    void getSelectedText(io.flutter.plugin.common.MethodChannel$Result) -> a
+    void injectCSSCode(java.lang.String) -> a
+    void injectDeferredObject(java.lang.String,java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void loadData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void loadFile(java.lang.String,java.util.Map,io.flutter.plugin.common.MethodChannel$Result) -> a
+    void onFloatingActionGlobalLayout(int,int) -> a
+    void postUrl(java.lang.String,byte[],io.flutter.plugin.common.MethodChannel$Result) -> a
+    android.view.ActionMode rebuildActionMode(android.view.ActionMode,android.view.ActionMode$Callback) -> a
+    void scrollBy(java.lang.Integer,java.lang.Integer,java.lang.Boolean) -> a
+    void setOptions(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions,java.util.HashMap) -> a
+    void injectCSSFileFromUrl(java.lang.String) -> b
+    void loadFile(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void loadUrl(java.lang.String,java.util.Map,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void scrollTo(java.lang.Integer,java.lang.Integer,java.lang.Boolean) -> b
+    void takeScreenshot(io.flutter.plugin.common.MethodChannel$Result) -> b
+    void injectJavascriptFileFromUrl(java.lang.String) -> c
+    void loadUrl(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> c
+    void adjustFloatingContextMenuPosition() -> f
+    void clearAllCache() -> g
+    void clearCookies() -> h
+    void hideContextMenu() -> i
+    boolean isLoading() -> j
+    void onHideContextMenu() -> k
+    void onScrollStopped() -> l
+    void prepare() -> m
+    void printCurrentPage() -> n
+    java.util.Map requestFocusNodeHref() -> o
+    java.util.Map requestImageRef() -> p
+    void sendOnCreateContextMenuEvent() -> q
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$j:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$10 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$11 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$b:
+    android.view.ActionMode val$actionMode -> b
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> f
+    android.view.MenuItem val$menuItem -> c
+    int val$itemId -> d
+    android.view.ActionMode$Callback val$callback -> a
+    java.lang.String val$itemTitle -> e
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$12 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$c:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> c
+    java.lang.String val$itemTitle -> b
+    int val$itemId -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$13 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$d:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> c
+    int val$y -> b
+    int val$x -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$14 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$e:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$15 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$f:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$16 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$g:
+    android.webkit.ValueCallback val$resultCallback -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$17 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$h:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$18 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$i:
+    int[] $SwitchMap$com$pichillilorenzo$flutter_inappwebview$InAppWebView$PreferredContentModeOptionType -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$2 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$k:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$3 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$l:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$4 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$m:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$4$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$m$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$4 this$1 -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$5 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$n:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> c
+    float m_downY -> b
+    float m_downX -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$6 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$o:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$7 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$p:
+    void onReceiveValue(java.lang.Boolean) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$8 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$q:
+    io.flutter.plugin.common.MethodChannel$Result val$result -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$9 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$r:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> c
+    java.lang.String val$finalScriptToInject -> a
+    io.flutter.plugin.common.MethodChannel$Result val$result -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$9$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$r$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$9 this$1 -> a
+    void onReceiveValue(java.lang.String) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$DownloadStartListener -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView$s:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity inAppBrowserActivity -> b
+    int windowAutoincrementId -> j
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView flutterWebView -> a
+    int mOriginalSystemUiVisibility -> h
+    java.util.Map windowWebViewMessages -> i
+    android.widget.FrameLayout$LayoutParams FULLSCREEN_LAYOUT_PARAMS -> k
+    android.webkit.WebChromeClient$CustomViewCallback mCustomViewCallback -> f
+    int mOriginalOrientation -> g
+    io.flutter.plugin.common.MethodChannel channel -> c
+    android.net.Uri outputFileUri -> d
+    android.view.View mCustomView -> e
+    java.lang.Boolean acceptsImages(java.lang.String[]) -> a
+    java.lang.Boolean arrayContainsString(java.lang.String[],java.lang.String) -> a
+    void createAlertDialog(android.webkit.WebView,java.lang.String,android.webkit.JsResult,java.lang.String,java.lang.String) -> a
+    void createBeforeUnloadDialog(android.webkit.WebView,java.lang.String,android.webkit.JsResult,java.lang.String,java.lang.String,java.lang.String) -> a
+    void createPromptDialog(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsPromptResult,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void dispose() -> a
+    java.io.File getCapturedFile(java.lang.String) -> a
+    android.content.Intent getFileChooserIntent(java.lang.String[],boolean) -> a
+    android.net.Uri[] getSelectedFiles(android.content.Intent,int) -> a
+    boolean startPhotoPickerIntent(android.webkit.ValueCallback,android.content.Intent,java.lang.String[],boolean) -> a
+    java.lang.Boolean acceptsVideo(java.lang.String[]) -> b
+    void createConfirmDialog(android.webkit.WebView,java.lang.String,android.webkit.JsResult,java.lang.String,java.lang.String,java.lang.String) -> b
+    java.lang.String getMimeTypeFromExtension(java.lang.String) -> b
+    android.content.Intent getPhotoIntent() -> b
+    java.lang.String[] getAcceptedMimeType(java.lang.String[]) -> c
+    android.net.Uri getOutputUri(java.lang.String) -> c
+    android.view.ViewGroup getRootView() -> c
+    android.content.Intent getVideoIntent() -> d
+    java.lang.Boolean isArrayEmpty(java.lang.String[]) -> d
+    boolean needsCameraPermission() -> e
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$j:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient this$0 -> d
+    android.webkit.JsResult val$result -> a
+    android.webkit.WebView val$view -> b
+    java.lang.String val$message -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$10 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$a:
+    android.webkit.JsPromptResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$11 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$b:
+    android.webkit.JsPromptResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$12 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$c:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient this$0 -> d
+    android.webkit.JsResult val$result -> a
+    android.webkit.WebView val$view -> b
+    java.lang.String val$message -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$13 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$d:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$14 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$e:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$15 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$f:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$16 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$g:
+    int val$windowId -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$17 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$h:
+    android.webkit.GeolocationPermissions$Callback val$callback -> a
+    java.lang.String val$origin -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$18 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$i:
+    android.webkit.PermissionRequest val$request -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$2 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$k:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$3 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$l:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$4 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$m:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient this$0 -> d
+    android.webkit.JsResult val$result -> a
+    android.webkit.WebView val$view -> b
+    java.lang.String val$message -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$5 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$n:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$6 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$o:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$7 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$p:
+    android.webkit.JsResult val$result -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$8 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$q:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient this$0 -> e
+    android.webkit.JsPromptResult val$result -> a
+    android.webkit.WebView val$view -> b
+    java.lang.String val$message -> c
+    java.lang.String val$defaultValue -> d
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewChromeClient$9 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.c$r:
+    android.webkit.JsPromptResult val$result -> b
+    java.lang.String val$finalValue -> c
+    android.widget.EditText val$input -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity inAppBrowserActivity -> b
+    java.util.List credentialsProposed -> e
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView flutterWebView -> a
+    int previousAuthRequestFailureCount -> d
+    io.flutter.plugin.common.MethodChannel channel -> c
+    java.util.List access$000() -> a
+    java.util.List access$002(java.util.List) -> a
+    void access$1001(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.os.Message,android.os.Message) -> a
+    int access$102(int) -> a
+    void access$201(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String) -> a
+    void access$401(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError) -> a
+    void access$601(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.ClientCertRequest) -> a
+    void access$801(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.WebResourceRequest,int,android.webkit.SafeBrowsingResponse) -> a
+    android.webkit.WebResourceResponse onShouldInterceptRequest(java.lang.Object) -> a
+    void onShouldOverrideUrlLoading(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView,java.lang.String,java.lang.String,java.util.Map,boolean,boolean,boolean) -> a
+    void access$1101(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.os.Message,android.os.Message) -> b
+    void access$301(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String) -> b
+    void access$501(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError) -> b
+    void access$701(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.ClientCertRequest) -> b
+    void access$901(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient,android.webkit.WebView,android.webkit.WebResourceRequest,int,android.webkit.SafeBrowsingResponse) -> b
+    void dispose() -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$a:
+    java.util.Map val$headers -> d
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView val$webView -> b
+    boolean val$isForMainFrame -> a
+    java.lang.String val$url -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$2 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$b:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient this$0 -> g
+    android.webkit.HttpAuthHandler val$handler -> f
+    android.webkit.WebView val$view -> a
+    int val$port -> e
+    java.lang.String val$protocol -> c
+    java.lang.String val$host -> b
+    java.lang.String val$realm -> d
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$3 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$c:
+    android.webkit.SslErrorHandler val$handler -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient this$0 -> d
+    android.webkit.WebView val$view -> b
+    android.net.http.SslError val$error -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$4 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$d:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient this$0 -> c
+    android.webkit.ClientCertRequest val$request -> b
+    android.webkit.WebView val$view -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$5 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$e:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient this$0 -> e
+    android.webkit.WebResourceRequest val$request -> c
+    android.webkit.WebView val$view -> b
+    int val$threatType -> d
+    android.webkit.SafeBrowsingResponse val$callback -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient$6 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.d$f:
+    android.os.Message val$dontResend -> b
+    android.os.Message val$resend -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient this$0 -> d
+    android.webkit.WebView val$view -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.e:
+    java.lang.Boolean saveFormData -> j0
+    java.lang.Integer overScrollMode -> o0
+    java.lang.String applicationNameForUserAgent -> f
+    java.lang.Integer scrollBarStyle -> q0
+    java.lang.Boolean offscreenPreRaster -> f0
+    java.lang.Integer scrollBarDefaultDelayBeforeFade -> s0
+    java.lang.Boolean allowUniversalAccessFromFileURLs -> L
+    java.lang.Boolean javaScriptCanOpenWindowsAutomatically -> i
+    java.lang.String appCachePath -> M
+    java.lang.Integer scrollBarFadeDuration -> u0
+    java.lang.Boolean loadsImagesAutomatically -> b0
+    java.lang.Boolean horizontalScrollBarEnabled -> m
+    java.lang.String cursiveFontFamily -> Q
+    java.lang.Boolean useShouldInterceptAjaxRequest -> q
+    java.lang.Integer defaultFontSize -> S
+    java.lang.Boolean disableVerticalScroll -> v
+    java.lang.Boolean useOnRenderProcessGone -> x0
+    java.lang.Boolean geolocationEnabled -> Y
+    java.lang.Boolean scrollbarFadingEnabled -> t0
+    java.lang.Boolean networkAvailable -> p0
+    java.lang.String regexToCancelSubFramesLoading -> n0
+    java.lang.Integer preferredContentMode -> p
+    java.lang.Boolean databaseEnabled -> D
+    java.lang.Boolean useShouldOverrideUrlLoading -> a
+    java.lang.String userAgent -> e
+    java.lang.Boolean hardwareAcceleration -> l0
+    java.lang.Boolean domStorageEnabled -> E
+    java.lang.String serifFontFamily -> h0
+    java.util.List contentBlockers -> o
+    java.lang.Boolean allowContentAccess -> I
+    java.lang.Boolean mediaPlaybackRequiresUserGesture -> j
+    java.lang.Boolean useShouldInterceptFetchRequest -> r
+    java.lang.String defaultTextEncodingName -> T
+    java.lang.Boolean disableHorizontalScroll -> w
+    java.lang.Integer minimumLogicalFontSize -> c0
+    java.lang.Integer minimumFontSize -> k
+    java.lang.Boolean clearSessionCache -> A
+    java.lang.Boolean useOnLoadResource -> b
+    java.lang.Integer defaultFixedFontSize -> R
+    java.lang.Boolean javaScriptEnabled -> g
+    java.lang.Boolean thirdPartyCookiesEnabled -> k0
+    java.lang.Boolean useWideViewPort -> F
+    java.lang.Integer mixedContentMode -> H
+    java.lang.Integer verticalScrollbarPosition -> r0
+    java.lang.Boolean allowFileAccess -> J
+    java.lang.Boolean needInitialFocus -> e0
+    java.lang.Boolean blockNetworkImage -> N
+    java.lang.Boolean loadWithOverviewMode -> a0
+    java.lang.Boolean incognito -> s
+    java.lang.String fixedFontFamily -> W
+    java.lang.Boolean disableContextMenu -> x
+    java.lang.Integer disabledActionModeMenuItems -> U
+    java.lang.Boolean disableDefaultErrorPage -> y0
+    java.lang.Boolean useShouldInterceptRequest -> w0
+    java.lang.Integer textZoom -> z
+    java.lang.Boolean useOnDownloadStart -> c
+    java.util.List resourceCustomSchemes -> n
+    java.lang.Boolean builtInZoomControls -> B
+    java.lang.Boolean supportMultipleWindows -> m0
+    java.lang.Boolean safeBrowsingEnabled -> G
+    java.lang.Boolean debuggingEnabled -> h
+    java.lang.String standardFontFamily -> i0
+    java.lang.String sansSerifFontFamily -> g0
+    java.lang.Boolean allowFileAccessFromFileURLs -> K
+    java.lang.Boolean verticalScrollBarEnabled -> l
+    java.lang.Boolean blockNetworkLoads -> O
+    java.lang.Boolean cacheEnabled -> t
+    java.util.Map rendererPriorityPolicy -> v0
+    android.webkit.WebSettings$LayoutAlgorithm layoutAlgorithm -> Z
+    java.lang.String fantasyFontFamily -> V
+    java.lang.Boolean transparentBackground -> u
+    java.lang.Integer forceDark -> X
+    java.lang.Boolean supportZoom -> y
+    java.lang.Integer initialScale -> d0
+    java.lang.Boolean displayZoomControls -> C
+    java.lang.Boolean clearCache -> d
+    java.lang.Integer cacheMode -> P
+    java.lang.String getLayoutAlgorithm() -> a
+    java.util.Map getRealOptions(com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView) -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions parse(java.util.Map) -> a
+    void setLayoutAlgorithm(java.lang.String) -> a
+    java.util.Map toMap() -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.e$a:
+    int[] $SwitchMap$android$webkit$WebSettings$LayoutAlgorithm -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewRenderProcessClient -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.f:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity inAppBrowserActivity -> b
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView flutterWebView -> a
+    io.flutter.plugin.common.MethodChannel channel -> c
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewRenderProcessClient$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.f$a:
+    androidx.webkit.WebViewRenderProcess val$renderer -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewRenderProcessClient$2 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.f$b:
+    androidx.webkit.WebViewRenderProcess val$renderer -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.g:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.ThreadedInputConnectionProxyAdapterView proxyAdapterView -> c
+    android.view.View containerView -> a
+    android.view.View threadedInputConnectionProxyView -> b
+    void dispose() -> a
+    boolean isCalledFromListPopupWindowShow() -> b
+    void lockInputConnection() -> c
+    void resetInputConnection() -> d
+    void unlockInputConnection() -> e
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView$1 -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.g$a:
+    android.view.View val$targetView -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView this$0 -> b
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.h:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType RECOMMENDED -> b
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType[] $VALUES -> e
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType MOBILE -> c
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType DESKTOP -> d
+    int value -> a
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType fromValue(int) -> a
+    int toValue() -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.ThreadedInputConnectionProxyAdapterView -> com.pichillilorenzo.flutter_inappwebview.InAppWebView.i:
+    android.os.IBinder windowToken -> b
+    android.os.Handler imeHandler -> a
+    boolean isLocked -> e
+    android.view.inputmethod.InputConnection cachedConnection -> f
+    android.view.View rootView -> c
+    android.view.View targetView -> d
+    void setLocked(boolean) -> a
+com.pichillilorenzo.flutter_inappwebview.InAppWebViewFlutterPlugin -> com.pichillilorenzo.flutter_inappwebview.c:
+    android.webkit.ValueCallback filePathCallbackLegacy -> a
+    android.webkit.ValueCallback filePathCallback -> b
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface -> com.pichillilorenzo.flutter_inappwebview.d:
+    com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity inAppBrowserActivity -> b
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.FlutterWebView flutterWebView -> a
+    io.flutter.plugin.common.MethodChannel channel -> c
+    void dispose() -> a
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface$1 -> com.pichillilorenzo.flutter_inappwebview.d$a:
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView val$webView -> a
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface$2 -> com.pichillilorenzo.flutter_inappwebview.d$b:
+    java.util.Map val$obj -> c
+    com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView val$webView -> b
+    java.lang.String val$handlerName -> a
+    com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface this$0 -> e
+    java.lang.String val$_callHandlerID -> d
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface$2$1 -> com.pichillilorenzo.flutter_inappwebview.d$b$a:
+    com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface$2 this$1 -> a
+com.pichillilorenzo.flutter_inappwebview.R$id -> com.pichillilorenzo.flutter_inappwebview.R$id:
+    int progressBar -> b
+    int webView -> c
+    int menu_search -> a
+com.pichillilorenzo.flutter_inappwebview.R$layout -> com.pichillilorenzo.flutter_inappwebview.R$layout:
+    int floating_action_mode_item -> d
+    int chrome_custom_tabs_layout -> b
+    int floating_action_mode -> c
+    int activity_web_view -> a
+com.pichillilorenzo.flutter_inappwebview.R$menu -> com.pichillilorenzo.flutter_inappwebview.R$menu:
+    int menu_main -> a
+com.pichillilorenzo.flutter_inappwebview.R$style -> com.pichillilorenzo.flutter_inappwebview.R$style:
+    int Theme_AppCompat_Dialog_Alert -> a
+com.pichillilorenzo.flutter_inappwebview.Shared -> com.pichillilorenzo.flutter_inappwebview.e:
+    android.content.Context applicationContext -> a
+    io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding activityPluginBinding -> e
+    android.app.Activity activity -> f
+    io.flutter.plugin.common.PluginRegistry$Registrar registrar -> b
+    io.flutter.plugin.common.BinaryMessenger messenger -> c
+    io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets flutterAssets -> d
+com.pichillilorenzo.flutter_inappwebview.Util -> com.pichillilorenzo.flutter_inappwebview.f:
+    java.io.InputStream getFileAsset(java.lang.String) -> a
+    okhttp3.OkHttpClient getUnsafeOkHttpClient() -> a
+    java.security.cert.X509Certificate getX509CertFromSslCertHack(android.net.http.SslCertificate) -> a
+    com.pichillilorenzo.flutter_inappwebview.Util$WaitFlutterResult invokeMethodAndWait(io.flutter.plugin.common.MethodChannel,java.lang.String,java.lang.Object) -> a
+    com.pichillilorenzo.flutter_inappwebview.Util$PrivateKeyAndCertificates loadPrivateKeyAndCertificate(java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.String getUrlAsset(java.lang.String) -> b
+com.pichillilorenzo.flutter_inappwebview.Util$1 -> com.pichillilorenzo.flutter_inappwebview.f$a:
+    java.util.Map val$flutterResultMap -> d
+    java.lang.Object val$arguments -> c
+    java.lang.String val$method -> b
+    io.flutter.plugin.common.MethodChannel val$channel -> a
+    java.util.concurrent.CountDownLatch val$latch -> e
+com.pichillilorenzo.flutter_inappwebview.Util$1$1 -> com.pichillilorenzo.flutter_inappwebview.f$a$a:
+    com.pichillilorenzo.flutter_inappwebview.Util$1 this$0 -> a
+com.pichillilorenzo.flutter_inappwebview.Util$2 -> com.pichillilorenzo.flutter_inappwebview.f$b:
+com.pichillilorenzo.flutter_inappwebview.Util$3 -> com.pichillilorenzo.flutter_inappwebview.f$c:
+com.pichillilorenzo.flutter_inappwebview.Util$PrivateKeyAndCertificates -> com.pichillilorenzo.flutter_inappwebview.f$d:
+    java.security.cert.X509Certificate[] certificates -> a
+    java.security.PrivateKey privateKey -> b
+com.pichillilorenzo.flutter_inappwebview.Util$WaitFlutterResult -> com.pichillilorenzo.flutter_inappwebview.f$e:
+    java.lang.Object result -> a
+    java.lang.String error -> b

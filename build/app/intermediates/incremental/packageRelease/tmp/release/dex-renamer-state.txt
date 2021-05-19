@@ -1,0 +1,4 @@
+#Tue May 18 22:27:30 EDT 2021
+base.0=C\:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

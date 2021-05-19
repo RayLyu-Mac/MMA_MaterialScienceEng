@@ -1,0 +1,1242 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/mma_mse/equipment/safty%20sheet/MSDSdata.dart', 'packages/flutter/src/widgets/preferred_size.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/material/input_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/dropdown.dart', 'packages/flutter/src/widgets/icon_data.dart', 'packages/flutter/src/painting/colors.dart'], (function load__packages__mma_mse__equipment__safty$3720sheet__MSDS_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__material__icon_button$46dart, packages__mma_mse__equipment__safty$3720sheet__MSDSdata$46dart, packages__flutter__src__widgets__preferred_size$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__material__input_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__dropdown$46dart, packages__flutter__src__widgets__icon_data$46dart, packages__flutter__src__painting__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const MSDSdata = packages__mma_mse__equipment__safty$3720sheet__MSDSdata$46dart.equipment__safty$32sheet__MSDSdata;
+  const preferred_size = packages__flutter__src__widgets__preferred_size$46dart.src__widgets__preferred_size;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const input_border = packages__flutter__src__material__input_border$46dart.src__material__input_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const dropdown = packages__flutter__src__material__dropdown$46dart.src__material__dropdown;
+  const icon_data = packages__flutter__src__widgets__icon_data$46dart.src__widgets__icon_data;
+  const colors$ = packages__flutter__src__painting__colors$46dart.src__painting__colors;
+  var MSDS = Object.create(dart.library);
+  var $isEmpty = dartx.isEmpty;
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $add = dartx.add;
+  var $toString = dartx.toString;
+  var $clear = dartx.clear;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $toLowerCase = dartx.toLowerCase;
+  var $contains = dartx.contains;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    ScaffoldStateL: () => (T.ScaffoldStateL = dart.constFn(dart.legacy(scaffold.ScaffoldState)))(),
+    GlobalKeyOfScaffoldStateL: () => (T.GlobalKeyOfScaffoldStateL = dart.constFn(framework.GlobalKey$(T.ScaffoldStateL())))(),
+    msdsDataL: () => (T.msdsDataL = dart.constFn(dart.legacy(MSDSdata.msdsData)))(),
+    JSArrayOfmsdsDataL: () => (T.JSArrayOfmsdsDataL = dart.constFn(_interceptors.JSArray$(T.msdsDataL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    PreferredSizeWidgetN: () => (T.PreferredSizeWidgetN = dart.constFn(dart.nullable(preferred_size.PreferredSizeWidget)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    ListTileL: () => (T.ListTileL = dart.constFn(dart.legacy(list_tile.ListTile)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToListTileL: () => (T.BuildContextLAndintLToListTileL = dart.constFn(dart.fnType(T.ListTileL(), [T.BuildContextL(), T.intL()])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    DropdownButtonOfStringL: () => (T.DropdownButtonOfStringL = dart.constFn(dropdown.DropdownButton$(T.StringL())))(),
+    ColorL: () => (T.ColorL = dart.constFn(dart.legacy(ui.Color)))(),
+    dynamicToNull: () => (T.dynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic])))(),
+    JSArrayOfStringL: () => (T.JSArrayOfStringL = dart.constFn(_interceptors.JSArray$(T.StringL())))(),
+    DropdownMenuItemOfStringL: () => (T.DropdownMenuItemOfStringL = dart.constFn(dropdown.DropdownMenuItem$(T.StringL())))(),
+    DropdownMenuItemLOfStringL: () => (T.DropdownMenuItemLOfStringL = dart.constFn(dart.legacy(T.DropdownMenuItemOfStringL())))(),
+    StringLToDropdownMenuItemLOfStringL: () => (T.StringLToDropdownMenuItemLOfStringL = dart.constFn(dart.fnType(T.DropdownMenuItemLOfStringL(), [T.StringL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 5,
+        [_Location_line]: 11,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 5,
+        [_Location_line]: 12,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 10,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 11,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 5,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 48,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 56,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 37,
+        [_Location_line]: 87,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 81,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 17,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 76,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 50,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 105,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 25,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "tileColor",
+        [_Location_column]: 25,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27, C[28] || CT.C28], T._LocationL());
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 104,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shrinkWrap",
+        [_Location_column]: 21,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 21,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 21,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31, C[32] || CT.C32, C[33] || CT.C33], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 23,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 98,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 95,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 17,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 97,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39, C[40] || CT.C40, C[41] || CT.C41], T._LocationL());
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 94,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44], T._LocationL());
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.constList([C[47] || CT.C47], T._LocationL());
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[46] || CT.C46,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 9,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50, C[51] || CT.C51, C[52] || CT.C52], T._LocationL());
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.constList([C[55] || CT.C55], T._LocationL());
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[54] || CT.C54,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 121,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 129,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 21,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58, C[59] || CT.C59], T._LocationL());
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 35,
+        [_Location_line]: 128,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 13,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 13,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.constList([C[62] || CT.C62, C[63] || CT.C63], T._LocationL());
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[61] || CT.C61,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 123,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 36,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.constList([C[67] || CT.C67], T._LocationL());
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[66] || CT.C66,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 141,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: icon_data.IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: null,
+        [IconData_fontFamily]: "MaterialIcons",
+        [IconData_codePoint]: 58795
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: icon.Icon.prototype,
+        [Widget__location]: C[65] || CT.C65,
+        [Widget_key]: null,
+        [Icon_textDirection]: null,
+        [Icon_semanticLabel]: null,
+        [Icon_color]: null,
+        [Icon_size]: null,
+        [Icon_icon]: C[68] || CT.C68
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293781494.0
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291937513.0
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289961435.0
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287985101.0
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286470082.0
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284955319.0
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284364209.0
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283510184.0
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282722208.0
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281408402.0
+      });
+    },
+    get C71() {
+      return C[71] = dart.constMap(T.intL(), T.ColorL(), [50, C[72] || CT.C72, 100, C[73] || CT.C73, 200, C[74] || CT.C74, 300, C[75] || CT.C75, 400, C[76] || CT.C76, 500, C[77] || CT.C77, 600, C[78] || CT.C78, 700, C[79] || CT.C79, 800, C[80] || CT.C80, 900, C[81] || CT.C81]);
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4284955319.0,
+        [ColorSwatch__swatch]: C[71] || CT.C71
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: null,
+        [TextStyle_fontSize]: null,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[70] || CT.C70,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 147,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 15,
+        [_Location_line]: 148,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.constList([C[84] || CT.C84, C[85] || CT.C85], T._LocationL());
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[83] || CT.C83,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 146,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C[87] = dart.constList([C[88] || CT.C88], T._LocationL());
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[87] || CT.C87,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 185,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 17,
+        [_Location_line]: 184,
+        [_Location_file]: null
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C90() {
+      return C[90] = dart.constList([C[91] || CT.C91, C[92] || CT.C92], T._LocationL());
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[90] || CT.C90,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 183,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 13,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "iconSize",
+        [_Location_column]: 13,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 13,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 13,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 145,
+        [_Location_file]: null
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "underline",
+        [_Location_column]: 13,
+        [_Location_line]: 146,
+        [_Location_file]: null
+      });
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 13,
+        [_Location_line]: 150,
+        [_Location_file]: null
+      });
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "items",
+        [_Location_column]: 13,
+        [_Location_line]: 178,
+        [_Location_file]: null
+      });
+    },
+    get C94() {
+      return C[94] = dart.constList([C[95] || CT.C95, C[96] || CT.C96, C[97] || CT.C97, C[98] || CT.C98, C[99] || CT.C99, C[100] || CT.C100, C[101] || CT.C101, C[102] || CT.C102], T._LocationL());
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[94] || CT.C94,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "centerTitle",
+        [_Location_column]: 9,
+        [_Location_line]: 120,
+        [_Location_file]: null
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "actions",
+        [_Location_column]: 9,
+        [_Location_line]: 122,
+        [_Location_file]: null
+      });
+    },
+    get C104() {
+      return C[104] = dart.constList([C[105] || CT.C105, C[106] || CT.C106, C[107] || CT.C107], T._LocationL());
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[104] || CT.C104,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 201,
+        [_Location_file]: null
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 202,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.constList([C[110] || CT.C110, C[111] || CT.C111], T._LocationL());
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[109] || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 200,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/safty%20sheet/MSDS.dart"
+      });
+    }
+  }, false);
+  var C = Array(112).fill(void 0);
+  var I = ["package:mma_mse/equipment/safty%20sheet/MSDS.dart"];
+  MSDS.SearchListExample = class SearchListExample extends framework.StatefulWidget {
+    createState() {
+      return new MSDS._SearchListExampleState.new();
+    }
+  };
+  (MSDS.SearchListExample.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    MSDS.SearchListExample.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = MSDS.SearchListExample.prototype;
+  dart.addTypeTests(MSDS.SearchListExample);
+  dart.addTypeCaches(MSDS.SearchListExample);
+  dart.setMethodSignature(MSDS.SearchListExample, () => ({
+    __proto__: dart.getMethods(MSDS.SearchListExample.__proto__),
+    createState: dart.fnType(dart.legacy(MSDS._SearchListExampleState), [])
+  }));
+  dart.setLibraryUri(MSDS.SearchListExample, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _controller = dart.privateName(MSDS, "_controller");
+  var _list = dart.privateName(MSDS, "_list");
+  var _isSearching = dart.privateName(MSDS, "_isSearching");
+  var _searchText = dart.privateName(MSDS, "_searchText");
+  var _screenWidth = dart.privateName(MSDS, "_screenWidth");
+  var _screenH = dart.privateName(MSDS, "_screenH");
+  var _handleSearchStart = dart.privateName(MSDS, "_handleSearchStart");
+  var _handleSearchEnd = dart.privateName(MSDS, "_handleSearchEnd");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Icon_textDirection = dart.privateName(icon, "Icon.textDirection");
+  var Icon_semanticLabel = dart.privateName(icon, "Icon.semanticLabel");
+  var Icon_color = dart.privateName(icon, "Icon.color");
+  var Icon_size = dart.privateName(icon, "Icon.size");
+  var IconData_matchTextDirection = dart.privateName(icon_data, "IconData.matchTextDirection");
+  var IconData_fontPackage = dart.privateName(icon_data, "IconData.fontPackage");
+  var IconData_fontFamily = dart.privateName(icon_data, "IconData.fontFamily");
+  var IconData_codePoint = dart.privateName(icon_data, "IconData.codePoint");
+  var Icon_icon = dart.privateName(icon, "Icon.icon");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var ColorSwatch__swatch = dart.privateName(colors$, "ColorSwatch._swatch");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  MSDS._SearchListExampleState = class _SearchListExampleState extends framework.State$(dart.legacy(MSDS.SearchListExample)) {
+    initState() {
+      super.initState();
+      this[_isSearching] = false;
+      this.total = new MSDSdata.msdsData.new().msDataList();
+      for (let i = 0; i < dart.notNull(this.total[$length]); i = i + 1) {
+        this[_list][$add](dart.dload(this.total[$_get](i), 'name'));
+      }
+    }
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_screenWidth] = media_query.MediaQuery.of(this.context).size.width;
+      this[_screenH] = media_query.MediaQuery.of(this.context).size.height;
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({key: this.globalKey, appBar: T.PreferredSizeWidgetN().as(this.buildAppBar(context)), body: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new container.Container.new({constraints: new box.BoxConstraints.expand({width: dart.notNull(this[_screenWidth]) / 1.15, height: dart.notNull(this[_screenH]) / 8}), child: new text_field.TextField.new({controller: this[_controller], style: new text_style.TextStyle.new({color: colors.Colors.white}), decoration: new input_decorator.InputDecoration.new({border: new input_border.OutlineInputBorder.new(), focusedBorder: new input_border.OutlineInputBorder.new({gapPadding: 6.0, borderSide: new borders.BorderSide.new({width: 3.0, color: colors.Colors.black})}), prefixIcon: new icon.Icon.new(icons.Icons.search, {color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), hintText: "Search...", hintStyle: new text_style.TextStyle.new({color: colors.Colors.white})}), onChanged: dart.bind(this, 'searchOperation'), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), new container.Container.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, mainAxisSize: flex.MainAxisSize.min, children: T.JSArrayOfWidgetL().of([new basic.Flexible.new({child: new scroll_view.ListView.builder({shrinkWrap: true, itemCount: this.name[$length], itemBuilder: dart.fn((context, index) => {
+                        let listData = T.StringL().as(this.name[$_get](index));
+                        return new list_tile.ListTile.new({title: new text.Text.new(dart.toString(listData), {$creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), tileColor: this.property[$_get](index).level, $creationLocationd_0dea112b090073317d4: C[25] || CT.C25});
+                      }, T.BuildContextLAndintLToListTileL()), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29}), $creationLocationd_0dea112b090073317d4: C[34] || CT.C34})]), $creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), $creationLocationd_0dea112b090073317d4: C[42] || CT.C42})]), $creationLocationd_0dea112b090073317d4: C[45] || CT.C45}), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48});
+    }
+    buildAppBar(context) {
+      let dropdownValue = "Search Name";
+      return new app_bar.AppBar.new({centerTitle: true, title: new text.Text.new("MSDS Data Sheet", {$creationLocationd_0dea112b090073317d4: C[53] || CT.C53}), actions: T.JSArrayOfWidgetL().of([new icon_button.IconButton.new({icon: this.icon, onPressed: dart.fn(() => {
+              this.setState(dart.fn(() => {
+                if (dart.equals(this.icon.icon, icons.Icons.search)) {
+                  this.icon = new icon.Icon.new(icons.Icons.close, {color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[56] || CT.C56});
+                  this[_handleSearchStart]();
+                } else {
+                  this[_handleSearchEnd]();
+                }
+              }, T.VoidToNull()));
+            }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[60] || CT.C60}), new (T.DropdownButtonOfStringL()).new({icon: C[64] || CT.C64, iconSize: 24.0, elevation: 16, value: dropdownValue, style: C[69] || CT.C69, underline: new container.Container.new({height: 2.0, color: colors.Colors.deepPurpleAccent, $creationLocationd_0dea112b090073317d4: C[82] || CT.C82}), onChanged: dart.fn(value => {
+              this.setState(dart.fn(() => {
+                dropdownValue = T.StringL().as(value);
+                switch (value) {
+                  case "Search Name":
+                  {
+                    this.searchName = true;
+                    this[_list][$clear]();
+                    for (let i = 0; i < dart.notNull(this.total[$length]); i = i + 1) {
+                      this[_list][$add](dart.dload(this.total[$_get](i), 'name'));
+                    }
+                    break;
+                  }
+                  case "Search Location":
+                  {
+                    this.searchLoc = true;
+                    this[_list][$clear]();
+                    for (let i = 0; i < dart.notNull(this.total[$length]); i = i + 1) {
+                      this[_list][$add](dart.dload(this.total[$_get](i), 'location'));
+                    }
+                    break;
+                  }
+                  case "Search Chemical Formula":
+                  {
+                    this.searchChem = true;
+                    this[_list][$clear]();
+                    for (let i = 0; i < dart.notNull(this.total[$length]); i = i + 1) {
+                      this[_list][$add](dart.dload(this.total[$_get](i), 'short'));
+                    }
+                    break;
+                  }
+                }
+              }, T.VoidToNull()));
+            }, T.dynamicToNull()), items: T.JSArrayOfStringL().of(["Search Name", "Search Location", "Search Chemical Formula"])[$map](T.DropdownMenuItemLOfStringL(), dart.fn(value => new (T.DropdownMenuItemOfStringL()).new({value: value, child: new text.Text.new(value, {$creationLocationd_0dea112b090073317d4: C[86] || CT.C86}), $creationLocationd_0dea112b090073317d4: C[89] || CT.C89}), T.StringLToDropdownMenuItemLOfStringL()))[$toList](), $creationLocationd_0dea112b090073317d4: C[93] || CT.C93})]), $creationLocationd_0dea112b090073317d4: C[103] || CT.C103});
+    }
+    [_handleSearchStart]() {
+      this.setState(dart.fn(() => {
+        this[_isSearching] = true;
+      }, T.VoidToNull()));
+    }
+    [_handleSearchEnd]() {
+      this.setState(dart.fn(() => {
+        this.icon = new icon.Icon.new(icons.Icons.search, {color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[108] || CT.C108});
+        this[_isSearching] = false;
+        this[_controller].clear();
+      }, T.VoidToNull()));
+    }
+    searchOperation(searchText) {
+      this.name[$clear]();
+      this.property[$clear]();
+      if (this[_isSearching] != null) {
+        for (let j = 0; j < dart.notNull(this[_list][$length]); j = j + 1) {
+          let data = T.StringL().as(this[_list][$_get](j));
+          if (data[$toLowerCase]()[$contains](searchText[$toLowerCase]())) {
+            this.name[$add](data);
+            this.property[$add](T.msdsDataL().as(this.total[$_get](j)));
+          }
+        }
+      }
+    }
+  };
+  (MSDS._SearchListExampleState.new = function() {
+    this.appBarTitle = new text.Text.new("Search Example", {style: new text_style.TextStyle.new({color: colors.Colors.white}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+    this.icon = new icon.Icon.new(icons.Icons.search, {color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4});
+    this.globalKey = T.GlobalKeyOfScaffoldStateL().new();
+    this[_controller] = new editable_text.TextEditingController.new();
+    this[_list] = [];
+    this[_isSearching] = null;
+    this.searchChem = false;
+    this.searchLoc = false;
+    this.searchName = false;
+    this[_searchText] = "";
+    this.total = [];
+    this.name = [];
+    this.property = T.JSArrayOfmsdsDataL().of([]);
+    this[_screenWidth] = null;
+    this[_screenH] = null;
+    MSDS._SearchListExampleState.__proto__.new.call(this);
+    this[_controller].addListener(dart.fn(() => {
+      if (this[_controller].text[$isEmpty]) {
+        this.setState(dart.fn(() => {
+          this[_isSearching] = false;
+          this[_searchText] = "";
+        }, T.VoidToNull()));
+      } else {
+        this.setState(dart.fn(() => {
+          this[_isSearching] = true;
+          this[_searchText] = this[_controller].text;
+        }, T.VoidToNull()));
+      }
+    }, T.VoidToNull()));
+  }).prototype = MSDS._SearchListExampleState.prototype;
+  dart.addTypeTests(MSDS._SearchListExampleState);
+  dart.addTypeCaches(MSDS._SearchListExampleState);
+  dart.setMethodSignature(MSDS._SearchListExampleState, () => ({
+    __proto__: dart.getMethods(MSDS._SearchListExampleState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    buildAppBar: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_handleSearchStart]: dart.fnType(dart.void, []),
+    [_handleSearchEnd]: dart.fnType(dart.void, []),
+    searchOperation: dart.fnType(dart.void, [dart.legacy(core.String)])
+  }));
+  dart.setLibraryUri(MSDS._SearchListExampleState, I[0]);
+  dart.setFieldSignature(MSDS._SearchListExampleState, () => ({
+    __proto__: dart.getFields(MSDS._SearchListExampleState.__proto__),
+    appBarTitle: dart.fieldType(dart.legacy(framework.Widget)),
+    icon: dart.fieldType(dart.legacy(icon.Icon)),
+    globalKey: dart.finalFieldType(dart.legacy(framework.GlobalKey$(dart.legacy(scaffold.ScaffoldState)))),
+    [_controller]: dart.finalFieldType(dart.legacy(editable_text.TextEditingController)),
+    [_list]: dart.fieldType(dart.legacy(core.List)),
+    [_isSearching]: dart.fieldType(dart.legacy(core.bool)),
+    searchChem: dart.fieldType(dart.legacy(core.bool)),
+    searchLoc: dart.fieldType(dart.legacy(core.bool)),
+    searchName: dart.fieldType(dart.legacy(core.bool)),
+    [_searchText]: dart.fieldType(dart.legacy(core.String)),
+    total: dart.fieldType(dart.legacy(core.List)),
+    name: dart.fieldType(dart.legacy(core.List)),
+    property: dart.fieldType(dart.legacy(core.List$(dart.legacy(MSDSdata.msdsData)))),
+    [_screenWidth]: dart.fieldType(dart.legacy(core.double)),
+    [_screenH]: dart.fieldType(dart.legacy(core.double))
+  }));
+  dart.trackLibraries("packages/mma_mse/equipment/safty%20sheet/MSDS.dart", {
+    "package:mma_mse/equipment/safty%20sheet/MSDS.dart": MSDS
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["MSDS.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../packages/mma_mse/equipment/safty%2520sheet/MSDS.dart.lib.js"}');
+  // Exports:
+  return {
+    equipment__safty$32sheet__MSDS: MSDS
+  };
+}));
+
+//# sourceMappingURL=MSDS.dart.lib.js.map

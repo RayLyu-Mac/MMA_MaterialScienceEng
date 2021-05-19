@@ -1,0 +1,985 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/animation/listener_helpers.dart', 'packages/flutter/src/animation/animation_controller.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/widgets/icon_data.dart', 'packages/flutter/src/animation/curves.dart'], (function load__packages__flutter__src__material__expansion_tile_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__animation__listener_helpers$46dart, packages__flutter__src__animation__animation_controller$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__widgets__icon_data$46dart, packages__flutter__src__animation__curves$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _internal = dart_sdk._internal;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const page_storage = packages__flutter__src__widgets__widget_span$46dart.src__widgets__page_storage;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const transitions = packages__flutter__src__widgets__widget_span$46dart.src__widgets__transitions;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const tween = packages__flutter__src__animation__listener_helpers$46dart.src__animation__tween;
+  const animation = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animation;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const theme$ = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icon_data = packages__flutter__src__widgets__icon_data$46dart.src__widgets__icon_data;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  var expansion_tile = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    ColorN: () => (T.ColorN = dart.constFn(dart.nullable(ui.Color)))(),
+    boolN: () => (T.boolN = dart.constFn(dart.nullable(core.bool)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    voidToNull: () => (T.voidToNull = dart.constFn(dart.fnType(core.Null, [dart.void])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    TweenOfdouble: () => (T.TweenOfdouble = dart.constFn(tween.Tween$(core.double)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.constList([], T.WidgetL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 41,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 30,
+        [_Location_line]: 242,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: icon_data.IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: null,
+        [IconData_fontFamily]: "MaterialIcons",
+        [IconData_codePoint]: 59151
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: icon.Icon.prototype,
+        [Widget__location]: C[2] || CT.C2,
+        [Widget_key]: null,
+        [Icon_textDirection]: null,
+        [Icon_semanticLabel]: null,
+        [Icon_color]: null,
+        [Icon_size]: null,
+        [Icon_icon]: C[5] || CT.C5
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "turns",
+        [_Location_column]: 17,
+        [_Location_line]: 241,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 44,
+        [_Location_line]: 240,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 15,
+        [_Location_line]: 235,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "contentPadding",
+        [_Location_column]: 15,
+        [_Location_line]: 236,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 15,
+        [_Location_line]: 237,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 15,
+        [_Location_line]: 238,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "subtitle",
+        [_Location_column]: 15,
+        [_Location_line]: 239,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "trailing",
+        [_Location_column]: 15,
+        [_Location_line]: 240,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 234,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 15,
+        [_Location_line]: 248,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "heightFactor",
+        [_Location_column]: 15,
+        [_Location_line]: 249,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 250,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 247,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 247,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 246,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 9,
+        [_Location_line]: 229,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 230,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 228,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 7,
+        [_Location_line]: 221,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 228,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 220,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 284,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 285,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36, C[37] || CT.C37], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 283,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 282,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 283,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 281,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 281,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "enabled",
+        [_Location_column]: 9,
+        [_Location_line]: 288,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44, C[45] || CT.C45], T._LocationL());
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 280,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 280,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "offstage",
+        [_Location_column]: 7,
+        [_Location_line]: 290,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.constList([C[48] || CT.C48, C[49] || CT.C49], T._LocationL());
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[47] || CT.C47,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 279,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "animation",
+        [_Location_column]: 7,
+        [_Location_line]: 294,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 7,
+        [_Location_line]: 295,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 296,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53, C[54] || CT.C54], T._LocationL());
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[51] || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 293,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart"
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 200000
+      });
+    }
+  }, false);
+  var C = Array(56).fill(void 0);
+  var I = [
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/packages/flutter/lib/src/material/expansion_tile.dart",
+    "package:flutter/src/material/expansion_tile.dart"
+  ];
+  var leading$ = dart.privateName(expansion_tile, "ExpansionTile.leading");
+  var title$ = dart.privateName(expansion_tile, "ExpansionTile.title");
+  var subtitle$ = dart.privateName(expansion_tile, "ExpansionTile.subtitle");
+  var onExpansionChanged$ = dart.privateName(expansion_tile, "ExpansionTile.onExpansionChanged");
+  var children$ = dart.privateName(expansion_tile, "ExpansionTile.children");
+  var backgroundColor$ = dart.privateName(expansion_tile, "ExpansionTile.backgroundColor");
+  var collapsedBackgroundColor$ = dart.privateName(expansion_tile, "ExpansionTile.collapsedBackgroundColor");
+  var trailing$ = dart.privateName(expansion_tile, "ExpansionTile.trailing");
+  var initiallyExpanded$ = dart.privateName(expansion_tile, "ExpansionTile.initiallyExpanded");
+  var maintainState$ = dart.privateName(expansion_tile, "ExpansionTile.maintainState");
+  var tilePadding$ = dart.privateName(expansion_tile, "ExpansionTile.tilePadding");
+  var expandedAlignment$ = dart.privateName(expansion_tile, "ExpansionTile.expandedAlignment");
+  var expandedCrossAxisAlignment$ = dart.privateName(expansion_tile, "ExpansionTile.expandedCrossAxisAlignment");
+  var childrenPadding$ = dart.privateName(expansion_tile, "ExpansionTile.childrenPadding");
+  expansion_tile.ExpansionTile = class ExpansionTile extends framework.StatefulWidget {
+    get leading() {
+      return this[leading$];
+    }
+    set leading(value) {
+      super.leading = value;
+    }
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    get subtitle() {
+      return this[subtitle$];
+    }
+    set subtitle(value) {
+      super.subtitle = value;
+    }
+    get onExpansionChanged() {
+      return this[onExpansionChanged$];
+    }
+    set onExpansionChanged(value) {
+      super.onExpansionChanged = value;
+    }
+    get children() {
+      return this[children$];
+    }
+    set children(value) {
+      super.children = value;
+    }
+    get backgroundColor() {
+      return this[backgroundColor$];
+    }
+    set backgroundColor(value) {
+      super.backgroundColor = value;
+    }
+    get collapsedBackgroundColor() {
+      return this[collapsedBackgroundColor$];
+    }
+    set collapsedBackgroundColor(value) {
+      super.collapsedBackgroundColor = value;
+    }
+    get trailing() {
+      return this[trailing$];
+    }
+    set trailing(value) {
+      super.trailing = value;
+    }
+    get initiallyExpanded() {
+      return this[initiallyExpanded$];
+    }
+    set initiallyExpanded(value) {
+      super.initiallyExpanded = value;
+    }
+    get maintainState() {
+      return this[maintainState$];
+    }
+    set maintainState(value) {
+      super.maintainState = value;
+    }
+    get tilePadding() {
+      return this[tilePadding$];
+    }
+    set tilePadding(value) {
+      super.tilePadding = value;
+    }
+    get expandedAlignment() {
+      return this[expandedAlignment$];
+    }
+    set expandedAlignment(value) {
+      super.expandedAlignment = value;
+    }
+    get expandedCrossAxisAlignment() {
+      return this[expandedCrossAxisAlignment$];
+    }
+    set expandedCrossAxisAlignment(value) {
+      super.expandedCrossAxisAlignment = value;
+    }
+    get childrenPadding() {
+      return this[childrenPadding$];
+    }
+    set childrenPadding(value) {
+      super.childrenPadding = value;
+    }
+    createState() {
+      return new expansion_tile._ExpansionTileState.new();
+    }
+  };
+  (expansion_tile.ExpansionTile.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let leading = opts && 'leading' in opts ? opts.leading : null;
+    let title = opts && 'title' in opts ? opts.title : null;
+    if (title == null) dart.nullFailed(I[0], 37, 19, "title");
+    let subtitle = opts && 'subtitle' in opts ? opts.subtitle : null;
+    let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+    let onExpansionChanged = opts && 'onExpansionChanged' in opts ? opts.onExpansionChanged : null;
+    let children = opts && 'children' in opts ? opts.children : C[0] || CT.C0;
+    if (children == null) dart.nullFailed(I[0], 41, 10, "children");
+    let trailing = opts && 'trailing' in opts ? opts.trailing : null;
+    let initiallyExpanded = opts && 'initiallyExpanded' in opts ? opts.initiallyExpanded : false;
+    if (initiallyExpanded == null) dart.nullFailed(I[0], 43, 10, "initiallyExpanded");
+    let maintainState = opts && 'maintainState' in opts ? opts.maintainState : false;
+    if (maintainState == null) dart.nullFailed(I[0], 44, 10, "maintainState");
+    let tilePadding = opts && 'tilePadding' in opts ? opts.tilePadding : null;
+    let expandedCrossAxisAlignment = opts && 'expandedCrossAxisAlignment' in opts ? opts.expandedCrossAxisAlignment : null;
+    let expandedAlignment = opts && 'expandedAlignment' in opts ? opts.expandedAlignment : null;
+    let childrenPadding = opts && 'childrenPadding' in opts ? opts.childrenPadding : null;
+    let collapsedBackgroundColor = opts && 'collapsedBackgroundColor' in opts ? opts.collapsedBackgroundColor : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[leading$] = leading;
+    this[title$] = title;
+    this[subtitle$] = subtitle;
+    this[backgroundColor$] = backgroundColor;
+    this[onExpansionChanged$] = onExpansionChanged;
+    this[children$] = children;
+    this[trailing$] = trailing;
+    this[initiallyExpanded$] = initiallyExpanded;
+    this[maintainState$] = maintainState;
+    this[tilePadding$] = tilePadding;
+    this[expandedCrossAxisAlignment$] = expandedCrossAxisAlignment;
+    this[expandedAlignment$] = expandedAlignment;
+    this[childrenPadding$] = childrenPadding;
+    this[collapsedBackgroundColor$] = collapsedBackgroundColor;
+    if (!(initiallyExpanded != null)) dart.assertFailed(null, I[0], 50, 15, "initiallyExpanded != null");
+    if (!(maintainState != null)) dart.assertFailed(null, I[0], 51, 15, "maintainState != null");
+    if (!(expandedCrossAxisAlignment != flex.CrossAxisAlignment.baseline)) dart.assertFailed("CrossAxisAlignment.baseline is not supported since the expanded children " + "are aligned in a column, not a row. Try to use another constant.", I[0], 53, 8, "expandedCrossAxisAlignment != CrossAxisAlignment.baseline");
+    expansion_tile.ExpansionTile.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = expansion_tile.ExpansionTile.prototype;
+  dart.addTypeTests(expansion_tile.ExpansionTile);
+  dart.addTypeCaches(expansion_tile.ExpansionTile);
+  dart.setMethodSignature(expansion_tile.ExpansionTile, () => ({
+    __proto__: dart.getMethods(expansion_tile.ExpansionTile.__proto__),
+    createState: dart.fnType(expansion_tile._ExpansionTileState, [])
+  }));
+  dart.setLibraryUri(expansion_tile.ExpansionTile, I[1]);
+  dart.setFieldSignature(expansion_tile.ExpansionTile, () => ({
+    __proto__: dart.getFields(expansion_tile.ExpansionTile.__proto__),
+    leading: dart.finalFieldType(dart.nullable(framework.Widget)),
+    title: dart.finalFieldType(framework.Widget),
+    subtitle: dart.finalFieldType(dart.nullable(framework.Widget)),
+    onExpansionChanged: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [core.bool]))),
+    children: dart.finalFieldType(core.List$(framework.Widget)),
+    backgroundColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    collapsedBackgroundColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    trailing: dart.finalFieldType(dart.nullable(framework.Widget)),
+    initiallyExpanded: dart.finalFieldType(core.bool),
+    maintainState: dart.finalFieldType(core.bool),
+    tilePadding: dart.finalFieldType(dart.nullable(edge_insets.EdgeInsetsGeometry)),
+    expandedAlignment: dart.finalFieldType(dart.nullable(alignment.Alignment)),
+    expandedCrossAxisAlignment: dart.finalFieldType(dart.nullable(flex.CrossAxisAlignment)),
+    childrenPadding: dart.finalFieldType(dart.nullable(edge_insets.EdgeInsetsGeometry))
+  }));
+  var _borderColorTween = dart.privateName(expansion_tile, "_borderColorTween");
+  var _headerColorTween = dart.privateName(expansion_tile, "_headerColorTween");
+  var _iconColorTween = dart.privateName(expansion_tile, "_iconColorTween");
+  var _backgroundColorTween = dart.privateName(expansion_tile, "_backgroundColorTween");
+  var ___ExpansionTileState__controller = dart.privateName(expansion_tile, "_#_ExpansionTileState#_controller");
+  var ___ExpansionTileState__controller_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_controller#isSet");
+  var ___ExpansionTileState__iconTurns = dart.privateName(expansion_tile, "_#_ExpansionTileState#_iconTurns");
+  var ___ExpansionTileState__iconTurns_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_iconTurns#isSet");
+  var ___ExpansionTileState__heightFactor = dart.privateName(expansion_tile, "_#_ExpansionTileState#_heightFactor");
+  var ___ExpansionTileState__heightFactor_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_heightFactor#isSet");
+  var ___ExpansionTileState__borderColor = dart.privateName(expansion_tile, "_#_ExpansionTileState#_borderColor");
+  var ___ExpansionTileState__borderColor_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_borderColor#isSet");
+  var ___ExpansionTileState__headerColor = dart.privateName(expansion_tile, "_#_ExpansionTileState#_headerColor");
+  var ___ExpansionTileState__headerColor_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_headerColor#isSet");
+  var ___ExpansionTileState__iconColor = dart.privateName(expansion_tile, "_#_ExpansionTileState#_iconColor");
+  var ___ExpansionTileState__iconColor_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_iconColor#isSet");
+  var ___ExpansionTileState__backgroundColor = dart.privateName(expansion_tile, "_#_ExpansionTileState#_backgroundColor");
+  var ___ExpansionTileState__backgroundColor_isSet = dart.privateName(expansion_tile, "_#_ExpansionTileState#_backgroundColor#isSet");
+  var _isExpanded = dart.privateName(expansion_tile, "_isExpanded");
+  var _controller = dart.privateName(expansion_tile, "_controller");
+  var _iconTurns = dart.privateName(expansion_tile, "_iconTurns");
+  var _heightFactor = dart.privateName(expansion_tile, "_heightFactor");
+  var _borderColor = dart.privateName(expansion_tile, "_borderColor");
+  var _headerColor = dart.privateName(expansion_tile, "_headerColor");
+  var _iconColor = dart.privateName(expansion_tile, "_iconColor");
+  var _backgroundColor = dart.privateName(expansion_tile, "_backgroundColor");
+  var _handleTap = dart.privateName(expansion_tile, "_handleTap");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Icon_textDirection = dart.privateName(icon, "Icon.textDirection");
+  var Icon_semanticLabel = dart.privateName(icon, "Icon.semanticLabel");
+  var Icon_color = dart.privateName(icon, "Icon.color");
+  var Icon_size = dart.privateName(icon, "Icon.size");
+  var IconData_matchTextDirection = dart.privateName(icon_data, "IconData.matchTextDirection");
+  var IconData_fontPackage = dart.privateName(icon_data, "IconData.fontPackage");
+  var IconData_fontFamily = dart.privateName(icon_data, "IconData.fontFamily");
+  var IconData_codePoint = dart.privateName(icon_data, "IconData.codePoint");
+  var Icon_icon = dart.privateName(icon, "Icon.icon");
+  var _buildChildren = dart.privateName(expansion_tile, "_buildChildren");
+  const State_SingleTickerProviderStateMixin$36 = class State_SingleTickerProviderStateMixin extends framework.State$(expansion_tile.ExpansionTile) {};
+  (State_SingleTickerProviderStateMixin$36.new = function() {
+    ticker_provider.SingleTickerProviderStateMixin$(expansion_tile.ExpansionTile)[dart.mixinNew].call(this);
+    State_SingleTickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_SingleTickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_SingleTickerProviderStateMixin$36, ticker_provider.SingleTickerProviderStateMixin$(expansion_tile.ExpansionTile));
+  expansion_tile._ExpansionTileState = class _ExpansionTileState extends State_SingleTickerProviderStateMixin$36 {
+    get [_controller]() {
+      let t0;
+      return dart.test(this[___ExpansionTileState__controller_isSet]) ? (t0 = this[___ExpansionTileState__controller], t0) : dart.throw(new _internal.LateError.fieldNI("_controller"));
+    }
+    set [_controller](t0) {
+      if (t0 == null) dart.nullFailed(I[0], 165, 28, "null");
+      this[___ExpansionTileState__controller_isSet] = true;
+      this[___ExpansionTileState__controller] = t0;
+    }
+    get [_iconTurns]() {
+      let t1;
+      return dart.test(this[___ExpansionTileState__iconTurns_isSet]) ? (t1 = this[___ExpansionTileState__iconTurns], t1) : dart.throw(new _internal.LateError.fieldNI("_iconTurns"));
+    }
+    set [_iconTurns](t1) {
+      if (t1 == null) dart.nullFailed(I[0], 166, 26, "null");
+      this[___ExpansionTileState__iconTurns_isSet] = true;
+      this[___ExpansionTileState__iconTurns] = t1;
+    }
+    get [_heightFactor]() {
+      let t2;
+      return dart.test(this[___ExpansionTileState__heightFactor_isSet]) ? (t2 = this[___ExpansionTileState__heightFactor], t2) : dart.throw(new _internal.LateError.fieldNI("_heightFactor"));
+    }
+    set [_heightFactor](t2) {
+      if (t2 == null) dart.nullFailed(I[0], 167, 26, "null");
+      this[___ExpansionTileState__heightFactor_isSet] = true;
+      this[___ExpansionTileState__heightFactor] = t2;
+    }
+    get [_borderColor]() {
+      let t3;
+      return dart.test(this[___ExpansionTileState__borderColor_isSet]) ? (t3 = this[___ExpansionTileState__borderColor], t3) : dart.throw(new _internal.LateError.fieldNI("_borderColor"));
+    }
+    set [_borderColor](t3) {
+      if (t3 == null) dart.nullFailed(I[0], 168, 26, "null");
+      this[___ExpansionTileState__borderColor_isSet] = true;
+      this[___ExpansionTileState__borderColor] = t3;
+    }
+    get [_headerColor]() {
+      let t4;
+      return dart.test(this[___ExpansionTileState__headerColor_isSet]) ? (t4 = this[___ExpansionTileState__headerColor], t4) : dart.throw(new _internal.LateError.fieldNI("_headerColor"));
+    }
+    set [_headerColor](t4) {
+      if (t4 == null) dart.nullFailed(I[0], 169, 26, "null");
+      this[___ExpansionTileState__headerColor_isSet] = true;
+      this[___ExpansionTileState__headerColor] = t4;
+    }
+    get [_iconColor]() {
+      let t5;
+      return dart.test(this[___ExpansionTileState__iconColor_isSet]) ? (t5 = this[___ExpansionTileState__iconColor], t5) : dart.throw(new _internal.LateError.fieldNI("_iconColor"));
+    }
+    set [_iconColor](t5) {
+      if (t5 == null) dart.nullFailed(I[0], 170, 26, "null");
+      this[___ExpansionTileState__iconColor_isSet] = true;
+      this[___ExpansionTileState__iconColor] = t5;
+    }
+    get [_backgroundColor]() {
+      let t6;
+      return dart.test(this[___ExpansionTileState__backgroundColor_isSet]) ? (t6 = this[___ExpansionTileState__backgroundColor], t6) : dart.throw(new _internal.LateError.fieldNI("_backgroundColor"));
+    }
+    set [_backgroundColor](t6) {
+      if (t6 == null) dart.nullFailed(I[0], 171, 26, "null");
+      this[___ExpansionTileState__backgroundColor_isSet] = true;
+      this[___ExpansionTileState__backgroundColor] = t6;
+    }
+    initState() {
+      let t7, t7$;
+      super.initState();
+      this[_controller] = new animation_controller.AnimationController.new({duration: expansion_tile._kExpand, vsync: this});
+      this[_heightFactor] = this[_controller].drive(core.double, expansion_tile._ExpansionTileState._easeInTween);
+      this[_iconTurns] = this[_controller].drive(core.double, expansion_tile._ExpansionTileState._halfTween.chain(expansion_tile._ExpansionTileState._easeInTween));
+      this[_borderColor] = this[_controller].drive(T.ColorN(), this[_borderColorTween].chain(expansion_tile._ExpansionTileState._easeOutTween));
+      this[_headerColor] = this[_controller].drive(T.ColorN(), this[_headerColorTween].chain(expansion_tile._ExpansionTileState._easeInTween));
+      this[_iconColor] = this[_controller].drive(T.ColorN(), this[_iconColorTween].chain(expansion_tile._ExpansionTileState._easeInTween));
+      this[_backgroundColor] = this[_controller].drive(T.ColorN(), this[_backgroundColorTween].chain(expansion_tile._ExpansionTileState._easeOutTween));
+      this[_isExpanded] = (t7$ = T.boolN().as((t7 = page_storage.PageStorage.of(this.context), t7 == null ? null : t7.readState(this.context))), t7$ == null ? this.widget.initiallyExpanded : t7$);
+      if (dart.test(this[_isExpanded])) this[_controller].value = 1.0;
+    }
+    dispose() {
+      this[_controller].dispose();
+      super.dispose();
+    }
+    [_handleTap]() {
+      this.setState(dart.fn(() => {
+        let t7;
+        this[_isExpanded] = !dart.test(this[_isExpanded]);
+        if (dart.test(this[_isExpanded])) {
+          this[_controller].forward();
+        } else {
+          this[_controller].reverse().then(dart.void, dart.fn(value => {
+            if (!dart.test(this.mounted)) return;
+            this.setState(dart.fn(() => {
+            }, T.VoidTovoid()));
+          }, T.voidToNull()));
+        }
+        t7 = page_storage.PageStorage.of(this.context);
+        t7 == null ? null : t7.writeState(this.context, this[_isExpanded]);
+      }, T.VoidTovoid()));
+      if (this.widget.onExpansionChanged != null) dart.nullCheck(this.widget.onExpansionChanged)(this[_isExpanded]);
+    }
+    [_buildChildren](context, child) {
+      let t7, t7$, t7$0, t7$1;
+      if (context == null) dart.nullFailed(I[0], 217, 38, "context");
+      let borderSideColor = (t7 = this[_borderColor].value, t7 == null ? colors.Colors.transparent : t7);
+      return new container.Container.new({decoration: new box_decoration.BoxDecoration.new({color: (t7$ = this[_backgroundColor].value, t7$ == null ? colors.Colors.transparent : t7$), border: new box_border.Border.new({top: new borders.BorderSide.new({color: borderSideColor}), bottom: new borders.BorderSide.new({color: borderSideColor})})}), child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T.JSArrayOfWidget().of([list_tile.ListTileTheme.merge({iconColor: this[_iconColor].value, textColor: this[_headerColor].value, child: new list_tile.ListTile.new({onTap: dart.bind(this, _handleTap), contentPadding: this.widget.tilePadding, leading: this.widget.leading, title: this.widget.title, subtitle: this.widget.subtitle, trailing: (t7$0 = this.widget.trailing, t7$0 == null ? new transitions.RotationTransition.new({turns: this[_iconTurns], child: C[1] || CT.C1, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}) : t7$0), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10})}), new basic.ClipRect.new({child: new basic.Align.new({alignment: (t7$1 = this.widget.expandedAlignment, t7$1 == null ? alignment.Alignment.center : t7$1), heightFactor: this[_heightFactor].value, child: child, $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23})]), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30});
+    }
+    didChangeDependencies() {
+      let t7, t7$, t7$0;
+      let theme = theme$.Theme.of(this.context);
+      this[_borderColorTween].end = theme.dividerColor;
+      t7 = this[_headerColorTween];
+      (() => {
+        t7.begin = dart.nullCheck(theme.textTheme.subtitle1).color;
+        t7.end = theme.accentColor;
+        return t7;
+      })();
+      t7$ = this[_iconColorTween];
+      (() => {
+        t7$.begin = theme.unselectedWidgetColor;
+        t7$.end = theme.accentColor;
+        return t7$;
+      })();
+      t7$0 = this[_backgroundColorTween];
+      (() => {
+        t7$0.begin = this.widget.collapsedBackgroundColor;
+        t7$0.end = this.widget.backgroundColor;
+        return t7$0;
+      })();
+      super.didChangeDependencies();
+    }
+    build(context) {
+      let t7, t7$;
+      if (context == null) dart.nullFailed(I[0], 275, 29, "context");
+      let closed = !dart.test(this[_isExpanded]) && dart.test(this[_controller].isDismissed);
+      let shouldRemoveChildren = closed && !dart.test(this.widget.maintainState);
+      let result = new basic.Offstage.new({child: new ticker_provider.TickerMode.new({child: new basic.Padding.new({padding: (t7 = this.widget.childrenPadding, t7 == null ? edge_insets.EdgeInsets.zero : t7), child: new basic.Column.new({crossAxisAlignment: (t7$ = this.widget.expandedCrossAxisAlignment, t7$ == null ? flex.CrossAxisAlignment.center : t7$), children: this.widget.children, $creationLocationd_0dea112b090073317d4: C[34] || CT.C34}), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38}), enabled: !closed, $creationLocationd_0dea112b090073317d4: C[42] || CT.C42}), offstage: closed, $creationLocationd_0dea112b090073317d4: C[46] || CT.C46});
+      return new transitions.AnimatedBuilder.new({animation: this[_controller].view, builder: dart.bind(this, _buildChildren), child: shouldRemoveChildren ? null : result, $creationLocationd_0dea112b090073317d4: C[50] || CT.C50});
+    }
+  };
+  (expansion_tile._ExpansionTileState.new = function() {
+    this[_borderColorTween] = new tween.ColorTween.new();
+    this[_headerColorTween] = new tween.ColorTween.new();
+    this[_iconColorTween] = new tween.ColorTween.new();
+    this[_backgroundColorTween] = new tween.ColorTween.new();
+    this[___ExpansionTileState__controller] = null;
+    this[___ExpansionTileState__controller_isSet] = false;
+    this[___ExpansionTileState__iconTurns] = null;
+    this[___ExpansionTileState__iconTurns_isSet] = false;
+    this[___ExpansionTileState__heightFactor] = null;
+    this[___ExpansionTileState__heightFactor_isSet] = false;
+    this[___ExpansionTileState__borderColor] = null;
+    this[___ExpansionTileState__borderColor_isSet] = false;
+    this[___ExpansionTileState__headerColor] = null;
+    this[___ExpansionTileState__headerColor_isSet] = false;
+    this[___ExpansionTileState__iconColor] = null;
+    this[___ExpansionTileState__iconColor_isSet] = false;
+    this[___ExpansionTileState__backgroundColor] = null;
+    this[___ExpansionTileState__backgroundColor_isSet] = false;
+    this[_isExpanded] = false;
+    expansion_tile._ExpansionTileState.__proto__.new.call(this);
+    ;
+  }).prototype = expansion_tile._ExpansionTileState.prototype;
+  dart.addTypeTests(expansion_tile._ExpansionTileState);
+  dart.addTypeCaches(expansion_tile._ExpansionTileState);
+  dart.setMethodSignature(expansion_tile._ExpansionTileState, () => ({
+    __proto__: dart.getMethods(expansion_tile._ExpansionTileState.__proto__),
+    [_handleTap]: dart.fnType(dart.void, []),
+    [_buildChildren]: dart.fnType(framework.Widget, [framework.BuildContext, dart.nullable(framework.Widget)]),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(expansion_tile._ExpansionTileState, () => ({
+    __proto__: dart.getGetters(expansion_tile._ExpansionTileState.__proto__),
+    [_controller]: animation_controller.AnimationController,
+    [_iconTurns]: animation.Animation$(core.double),
+    [_heightFactor]: animation.Animation$(core.double),
+    [_borderColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_headerColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_iconColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_backgroundColor]: animation.Animation$(dart.nullable(ui.Color))
+  }));
+  dart.setSetterSignature(expansion_tile._ExpansionTileState, () => ({
+    __proto__: dart.getSetters(expansion_tile._ExpansionTileState.__proto__),
+    [_controller]: animation_controller.AnimationController,
+    [_iconTurns]: animation.Animation$(core.double),
+    [_heightFactor]: animation.Animation$(core.double),
+    [_borderColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_headerColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_iconColor]: animation.Animation$(dart.nullable(ui.Color)),
+    [_backgroundColor]: animation.Animation$(dart.nullable(ui.Color))
+  }));
+  dart.setLibraryUri(expansion_tile._ExpansionTileState, I[1]);
+  dart.setFieldSignature(expansion_tile._ExpansionTileState, () => ({
+    __proto__: dart.getFields(expansion_tile._ExpansionTileState.__proto__),
+    [_borderColorTween]: dart.finalFieldType(tween.ColorTween),
+    [_headerColorTween]: dart.finalFieldType(tween.ColorTween),
+    [_iconColorTween]: dart.finalFieldType(tween.ColorTween),
+    [_backgroundColorTween]: dart.finalFieldType(tween.ColorTween),
+    [___ExpansionTileState__controller]: dart.fieldType(dart.nullable(animation_controller.AnimationController)),
+    [___ExpansionTileState__controller_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__iconTurns]: dart.fieldType(dart.nullable(animation.Animation$(core.double))),
+    [___ExpansionTileState__iconTurns_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__heightFactor]: dart.fieldType(dart.nullable(animation.Animation$(core.double))),
+    [___ExpansionTileState__heightFactor_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__borderColor]: dart.fieldType(dart.nullable(animation.Animation$(dart.nullable(ui.Color)))),
+    [___ExpansionTileState__borderColor_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__headerColor]: dart.fieldType(dart.nullable(animation.Animation$(dart.nullable(ui.Color)))),
+    [___ExpansionTileState__headerColor_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__iconColor]: dart.fieldType(dart.nullable(animation.Animation$(dart.nullable(ui.Color)))),
+    [___ExpansionTileState__iconColor_isSet]: dart.fieldType(core.bool),
+    [___ExpansionTileState__backgroundColor]: dart.fieldType(dart.nullable(animation.Animation$(dart.nullable(ui.Color)))),
+    [___ExpansionTileState__backgroundColor_isSet]: dart.fieldType(core.bool),
+    [_isExpanded]: dart.fieldType(core.bool)
+  }));
+  dart.defineLazy(expansion_tile._ExpansionTileState, {
+    /*expansion_tile._ExpansionTileState._easeOutTween*/get _easeOutTween() {
+      return new tween.CurveTween.new({curve: curves.Curves.easeOut});
+    },
+    /*expansion_tile._ExpansionTileState._easeInTween*/get _easeInTween() {
+      return new tween.CurveTween.new({curve: curves.Curves.easeIn});
+    },
+    /*expansion_tile._ExpansionTileState._halfTween*/get _halfTween() {
+      return new (T.TweenOfdouble()).new({begin: 0.0, end: 0.5});
+    }
+  }, false);
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  dart.defineLazy(expansion_tile, {
+    /*expansion_tile._kExpand*/get _kExpand() {
+      return C[55] || CT.C55;
+    }
+  }, false);
+  dart.trackLibraries("packages/flutter/src/material/expansion_tile.dart", {
+    "package:flutter/src/material/expansion_tile.dart": expansion_tile
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["expansion_tile.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IA6DgB;;;;;;IAKD;;;;;;IAKC;;;;;;IAOY;;;;;;IAKP;;;;;;IAGN;;;;;;IAGA;;;;;;IAGC;;;;;;IAGH;;;;;;IAOA;;;;;;IASe;;;;;;IAgBT;;;;;;IAgBS;;;;;;IAKA;;;;;;;AAGW;IAAqB;;;QArHnD;QACA;QACS;;QACT;QACA;QACA;QACA;;QACA;QACA;;QACA;;QACA;QACA;QACA;QACA;QACA;;IAbA;IACS;IACT;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;UACK,AAAkB,iBAAD;UACjB,AAAc,aAAD;UAEpB,AAA2B,0BAAD,IAAuB,qDAAQ,AACzD,8EACI;AAEJ,gEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA4GK;IAAW;;;AAAX;;IAAW;;;AACb;IAAU;;;AAAV;;IAAU;;;AACV;IAAa;;;AAAb;;IAAa;;;AACb;IAAY;;;AAAZ;;IAAY;;;AACZ;IAAY;;;AAAZ;;IAAY;;;AACZ;IAAU;;;AAAV;;IAAU;;;AACV;IAAgB;;;AAAhB;;IAAgB;;;AAMpB,MAAX;AAC4D,MAAlE,oBAAc,4DAA8B,gCAAiB;AACd,MAA/C,sBAAgB,AAAY,qCAAM;AAC4B,MAA9D,mBAAa,AAAY,qCAAM,AAAW,oDAAM;AACwB,MAAxE,qBAAe,AAAY,oCAAM,AAAkB,8BAAM;AACc,MAAvE,qBAAe,AAAY,oCAAM,AAAkB,8BAAM;AACU,MAAnE,mBAAa,AAAY,oCAAM,AAAgB,4BAAM;AAC2B,MAAhF,yBAAmB,AAAY,oCAAM,AAAsB,kCAAM;AAE6B,MAA9F,qBAAmE,MAAT,mBAAhC,4BAAG,4BAAH,OAAa,aAAU,iBAAS,cAAY,AAAO;AAC7E,oBAAI,oBACF,AAAY,AAAW,0BAAH;IACxB;;AAIuB,MAArB,AAAY;AACG,MAAT;IACR;;AAiBI,MAdF,cAAS;;AACmB,QAA1B,oBAAc,WAAC;AACf,sBAAI;AACmB,UAArB,AAAY;;AAQV,UANF,AAAY,AAAU,4CAAW,QAAM;AACrC,2BAAK,eACH;AAGA,YAFF,cAAS;;;;AAK4C,aAA7C,4BAAG;qBAAH,OAAa,cAAW,cAAS;;AAE/C,UAAI,AAAO,AAAmB,wCACH,AAAC,AAAa,eAAvC,AAAO,gCAAoB;IAC/B;qBAEmC,SAAiB;;UAAjB;AACrB,6BAAqC,KAAnB,AAAa,0BAAA,aAAgB;AAE3D,YAAO,0CACO,8CACoB,MAAvB,AAAiB,8BAAA,cAAgB,0CAChC,gCACD,mCAAkB,eAAe,YAC9B,mCAAkB,eAAe,eAGtC,oCACsB,iCACT,wBACF,0CACD,AAAW,mCACX,AAAa,iCACjB,6CACE,mCACS,AAAO,kCACd,AAAO,4BACT,AAAO,6BACJ,AAAO,iCACS,OAAhB,AAAO,sBAAA,eAAY,+CACpB,sKAKb,+BACS,iCAC+B,OAAzB,AAAO,+BAAA,eAA+B,kDACnC,AAAc,kCACrB,KAAK;IAMxB;;;AAIkB,kBAAc,gBAAG;AACS,MAA1C,AAAkB,8BAAM,AAAM,KAAD;AAGF,WAF3B;;AACI,mBAAiC,AAAE,eAA3B,AAAM,AAAU,KAAX;AACb,iBAAM,AAAM,KAAD;;;AAGY,YAF3B;;AACI,oBAAQ,AAAM,KAAD;AACb,kBAAM,AAAM,KAAD;;;AAGiB,aAFhC;;AACI,qBAAQ,AAAO;AACf,mBAAM,AAAO;;;AACY,MAAvB;IACR;UAG0B;;;AACb,mBAAsB,WAAZ,gCAAe,AAAY;AACrC,iCAAuB,AAAO,MAAD,eAAK,AAAO;AAEvC,mBAAS,+BACb,2CACE,iCAC2B,KAAvB,AAAO,6BAAA,aAA8B,0CACvC,2CACiD,MAAlC,AAAO,wCAAA,cAAiD,iDAClE,AAAO,qJAGZ,CAAC,MAAM,uEAER,MAAM;AAGlB,YAAO,iDACM,AAAY,2CACd,8BACF,oBAAoB,GAAG,OAAO,MAAM;IAE/C;;;IA1IiB,0BAAoB;IACpB,0BAAoB;IACpB,wBAAkB;IAClB,8BAAwB;8CAEhB;;6CACF;;gDACA;;+CACA;;+CACA;;6CACA;;mDACA;;IAElB,oBAAc;;;EA8HrB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MA/IkC,gDAAa;YAAG,kCAAyB;;MACzC,+CAAY;YAAG,kCAAyB;;MACxC,6CAAU;YAAG,qCAAqB,UAAU;;;;;MAjJ/D,uBAAQ","file":"../../../../../../../../packages/flutter/src/material/expansion_tile.dart.lib.js"}');
+  // Exports:
+  return {
+    src__material__expansion_tile: expansion_tile
+  };
+}));
+
+//# sourceMappingURL=expansion_tile.dart.lib.js.map

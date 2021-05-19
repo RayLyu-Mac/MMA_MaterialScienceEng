@@ -1,0 +1,1444 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/material/input_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/image_picker/image_picker.dart', 'packages/image_picker_platform_interface/src/types/image_source.dart', 'packages/flutter_email_sender/flutter_email_sender.dart'], (function load__packages__mma_mse__SendEmail__sendEmailMain_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__material__input_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__box_fit$46dart, packages__image_picker__image_picker$46dart, packages__image_picker_platform_interface__src__types__image_source$46dart, packages__flutter_email_sender__flutter_email_sender$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const io = dart_sdk.io;
+  const collection = dart_sdk.collection;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const flat_button = packages__flutter__src__material__icon_button$46dart.src__material__flat_button;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const snack_bar = packages__flutter__src__material__icon_button$46dart.src__material__snack_bar;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const input_border = packages__flutter__src__material__input_border$46dart.src__material__input_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  const image_picker = packages__image_picker__image_picker$46dart.image_picker;
+  const image_source = packages__image_picker_platform_interface__src__types__image_source$46dart.src__types__image_source;
+  const flutter_email_sender = packages__flutter_email_sender__flutter_email_sender$46dart.flutter_email_sender;
+  var sendEmailMain = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $add = dartx.add;
+  var $removeAt = dartx.removeAt;
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    JSArrayOfStringL: () => (T.JSArrayOfStringL = dart.constFn(_interceptors.JSArray$(T.StringL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    FutureOfvoid: () => (T.FutureOfvoid = dart.constFn(async.Future$(dart.void)))(),
+    FutureLOfvoid: () => (T.FutureLOfvoid = dart.constFn(dart.legacy(T.FutureOfvoid())))(),
+    VoidToFutureLOfvoid: () => (T.VoidToFutureLOfvoid = dart.constFn(dart.fnType(T.FutureLOfvoid(), [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    LinkedHashSetOfvoid: () => (T.LinkedHashSetOfvoid = dart.constFn(collection.LinkedHashSet$(dart.void)))(),
+    SetOfvoid: () => (T.SetOfvoid = dart.constFn(core.Set$(dart.void)))(),
+    SetLOfvoid: () => (T.SetLOfvoid = dart.constFn(dart.legacy(T.SetOfvoid())))(),
+    VoidToSetLOfvoid: () => (T.VoidToSetLOfvoid = dart.constFn(dart.fnType(T.SetLOfvoid(), [])))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    ScaffoldStateL: () => (T.ScaffoldStateL = dart.constFn(dart.legacy(scaffold.ScaffoldState)))(),
+    GlobalKeyOfScaffoldStateL: () => (T.GlobalKeyOfScaffoldStateL = dart.constFn(framework.GlobalKey$(T.ScaffoldStateL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 11,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 11,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 9,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 17,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 21,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "cursorColor",
+        [_Location_column]: 17,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 15,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 13,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 13,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 29,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 23,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 19,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLines",
+        [_Location_column]: 19,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "expands",
+        [_Location_column]: 19,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "cursorColor",
+        [_Location_column]: 19,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 19,
+        [_Location_line]: 107,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.constList([C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43, C[44] || CT.C44, C[45] || CT.C45], T._LocationL());
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[40] || CT.C40,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 102,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 17,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.constList([C[48] || CT.C48, C[49] || CT.C49], T._LocationL());
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[47] || CT.C47,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 97,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53, C[54] || CT.C54], T._LocationL());
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[51] || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 96,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 42,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C[56] = dart.constList([C[57] || CT.C57], T._LocationL());
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[56] || CT.C56,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 142,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 37,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.constList([C[60] || CT.C60], T._LocationL());
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[59] || CT.C59,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 143,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 25,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "label",
+        [_Location_column]: 25,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.constList([C[63] || CT.C63, C[64] || CT.C64, C[65] || CT.C65], T._LocationL());
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[62] || CT.C62,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "splashColor",
+        [_Location_column]: 21,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C67() {
+      return C[67] = dart.constList([C[68] || CT.C68, C[69] || CT.C69], T._LocationL());
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[67] || CT.C67,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 138,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 17,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 135,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.constList([C[72] || CT.C72, C[73] || CT.C73, C[74] || CT.C74], T._LocationL());
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[71] || CT.C71,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 132,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 131,
+        [_Location_file]: null
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 132,
+        [_Location_file]: null
+      });
+    },
+    get C76() {
+      return C[76] = dart.constList([C[77] || CT.C77, C[78] || CT.C78, C[79] || CT.C79], T._LocationL());
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[76] || CT.C76,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 129,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "file",
+        [_Location_column]: 51,
+        [_Location_line]: 162,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 37,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C81() {
+      return C[81] = dart.constList([C[82] || CT.C82, C[83] || CT.C83], T._LocationL());
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[81] || CT.C81,
+        [_Location_name]: null,
+        [_Location_column]: 46,
+        [_Location_line]: 162,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 33,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 33,
+        [_Location_line]: 160,
+        [_Location_file]: null
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 33,
+        [_Location_line]: 161,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 33,
+        [_Location_line]: 162,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C[85] = dart.constList([C[86] || CT.C86, C[87] || CT.C87, C[88] || CT.C88, C[89] || CT.C89], T._LocationL());
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[85] || CT.C85,
+        [_Location_name]: null,
+        [_Location_column]: 38,
+        [_Location_line]: 158,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "flex",
+        [_Location_column]: 31,
+        [_Location_line]: 157,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 31,
+        [_Location_line]: 158,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C[91] = dart.constList([C[92] || CT.C92, C[93] || CT.C93], T._LocationL());
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[91] || CT.C91,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 156,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 46,
+        [_Location_line]: 166,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C[95] = dart.constList([C[96] || CT.C96], T._LocationL());
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[95] || CT.C95,
+        [_Location_name]: null,
+        [_Location_column]: 35,
+        [_Location_line]: 166,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 29,
+        [_Location_line]: 166,
+        [_Location_file]: null
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 29,
+        [_Location_line]: 167,
+        [_Location_file]: null
+      });
+    },
+    get C98() {
+      return C[98] = dart.constList([C[99] || CT.C99, C[100] || CT.C100], T._LocationL());
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[98] || CT.C98,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 165,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 25,
+        [_Location_line]: 154,
+        [_Location_file]: null
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 25,
+        [_Location_line]: 155,
+        [_Location_file]: null
+      });
+    },
+    get C102() {
+      return C[102] = dart.constList([C[103] || CT.C103, C[104] || CT.C104], T._LocationL());
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[102] || CT.C102,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 153,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C106() {
+      return C[106] = dart.constList([C[107] || CT.C107], T._LocationL());
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[106] || CT.C106,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 149,
+        [_Location_file]: null
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 150,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.constList([C[110] || CT.C110, C[111] || CT.C111], T._LocationL());
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[109] || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 148,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C114() {
+      return C[114] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 146,
+        [_Location_file]: null
+      });
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 147,
+        [_Location_file]: null
+      });
+    },
+    get C116() {
+      return C[116] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 148,
+        [_Location_file]: null
+      });
+    },
+    get C113() {
+      return C[113] = dart.constList([C[114] || CT.C114, C[115] || CT.C115, C[116] || CT.C116], T._LocationL());
+    },
+    get C112() {
+      return C[112] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[113] || CT.C113,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 145,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 179,
+        [_Location_file]: null
+      });
+    },
+    get C120() {
+      return C[120] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 180,
+        [_Location_file]: null
+      });
+    },
+    get C118() {
+      return C[118] = dart.constList([C[119] || CT.C119, C[120] || CT.C120], T._LocationL());
+    },
+    get C117() {
+      return C[117] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[118] || CT.C118,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 178,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 178,
+        [_Location_file]: null
+      });
+    },
+    get C124() {
+      return C[124] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 15,
+        [_Location_line]: 182,
+        [_Location_file]: null
+      });
+    },
+    get C122() {
+      return C[122] = dart.constList([C[123] || CT.C123, C[124] || CT.C124], T._LocationL());
+    },
+    get C121() {
+      return C[121] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[122] || CT.C122,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 177,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C127() {
+      return C[127] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 13,
+        [_Location_line]: 175,
+        [_Location_file]: null
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 13,
+        [_Location_line]: 176,
+        [_Location_file]: null
+      });
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 177,
+        [_Location_file]: null
+      });
+    },
+    get C126() {
+      return C[126] = dart.constList([C[127] || CT.C127, C[128] || CT.C128, C[129] || CT.C129], T._LocationL());
+    },
+    get C125() {
+      return C[125] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[126] || CT.C126,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 174,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C131() {
+      return C[131] = dart.constList([C[132] || CT.C132], T._LocationL());
+    },
+    get C130() {
+      return C[130] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[131] || CT.C131,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 59,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C135() {
+      return C[135] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "resizeToAvoidBottomInset",
+        [_Location_column]: 7,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C137() {
+      return C[137] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C134() {
+      return C[134] = dart.constList([C[135] || CT.C135, C[136] || CT.C136, C[137] || CT.C137], T._LocationL());
+    },
+    get C133() {
+      return C[133] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[134] || CT.C134,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C140() {
+      return C[140] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C139() {
+      return C[139] = dart.constList([C[140] || CT.C140], T._LocationL());
+    },
+    get C138() {
+      return C[138] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[139] || CT.C139,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 242,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    },
+    get C143() {
+      return C[143] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "content",
+        [_Location_column]: 7,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C142() {
+      return C[142] = dart.constList([C[143] || CT.C143], T._LocationL());
+    },
+    get C141() {
+      return C[141] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[142] || CT.C142,
+        [_Location_name]: null,
+        [_Location_column]: 44,
+        [_Location_line]: 241,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/SendEmail/sendEmailMain.dart"
+      });
+    }
+  }, false);
+  var C = Array(144).fill(void 0);
+  var I = ["package:mma_mse/SendEmail/sendEmailMain.dart"];
+  var locationOfEqup$ = dart.privateName(sendEmailMain, "EmailContent.locationOfEqup");
+  var nameOfEqup$ = dart.privateName(sendEmailMain, "EmailContent.nameOfEqup");
+  var emailTo$ = dart.privateName(sendEmailMain, "EmailContent.emailTo");
+  var now = dart.privateName(sendEmailMain, "EmailContent.now");
+  sendEmailMain.EmailContent = class EmailContent extends framework.StatefulWidget {
+    get locationOfEqup() {
+      return this[locationOfEqup$];
+    }
+    set locationOfEqup(value) {
+      super.locationOfEqup = value;
+    }
+    get nameOfEqup() {
+      return this[nameOfEqup$];
+    }
+    set nameOfEqup(value) {
+      super.nameOfEqup = value;
+    }
+    get emailTo() {
+      return this[emailTo$];
+    }
+    set emailTo(value) {
+      super.emailTo = value;
+    }
+    get now() {
+      return this[now];
+    }
+    set now(value) {
+      super.now = value;
+    }
+    createState() {
+      return new sendEmailMain._EmailContentState.new();
+    }
+  };
+  (sendEmailMain.EmailContent.new = function(opts) {
+    let locationOfEqup = opts && 'locationOfEqup' in opts ? opts.locationOfEqup : null;
+    let nameOfEqup = opts && 'nameOfEqup' in opts ? opts.nameOfEqup : null;
+    let emailTo = opts && 'emailTo' in opts ? opts.emailTo : null;
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[now] = new core.DateTime.now();
+    this[locationOfEqup$] = locationOfEqup;
+    this[nameOfEqup$] = nameOfEqup;
+    this[emailTo$] = emailTo;
+    sendEmailMain.EmailContent.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = sendEmailMain.EmailContent.prototype;
+  dart.addTypeTests(sendEmailMain.EmailContent);
+  dart.addTypeCaches(sendEmailMain.EmailContent);
+  dart.setMethodSignature(sendEmailMain.EmailContent, () => ({
+    __proto__: dart.getMethods(sendEmailMain.EmailContent.__proto__),
+    createState: dart.fnType(dart.legacy(sendEmailMain._EmailContentState), [])
+  }));
+  dart.setLibraryUri(sendEmailMain.EmailContent, I[0]);
+  dart.setFieldSignature(sendEmailMain.EmailContent, () => ({
+    __proto__: dart.getFields(sendEmailMain.EmailContent.__proto__),
+    locationOfEqup: dart.finalFieldType(dart.legacy(core.String)),
+    nameOfEqup: dart.finalFieldType(dart.legacy(core.String)),
+    emailTo: dart.finalFieldType(dart.legacy(core.String)),
+    now: dart.finalFieldType(dart.legacy(core.DateTime))
+  }));
+  var _screenWidth = dart.privateName(sendEmailMain, "_screenWidth");
+  var _screenH = dart.privateName(sendEmailMain, "_screenH");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _removeAttachment = dart.privateName(sendEmailMain, "_removeAttachment");
+  var _openImagePicker = dart.privateName(sendEmailMain, "_openImagePicker");
+  sendEmailMain._EmailContentState = class _EmailContentState extends framework.State$(dart.legacy(sendEmailMain.EmailContent)) {
+    dispose() {
+      this.name.dispose();
+      this.errorMessage.dispose();
+      super.dispose();
+    }
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_screenWidth] = media_query.MediaQuery.of(this.context).size.width;
+      this[_screenH] = media_query.MediaQuery.of(this.context).size.height;
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Report Issue to Equipment Manager", {style: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 40}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), backgroundColor: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), resizeToAvoidBottomInset: false, body: new basic.Stack.new({children: T.JSArrayOfWidgetL().of([new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 45, left: dart.notNull(this[_screenWidth]) / 15, child: new text.Text.new("*Please make sure the error report is valid", {style: new text_style.TextStyle.new({color: colors.Colors.redAccent}), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 15, left: dart.notNull(this[_screenWidth]) / 15, child: new container.Container.new({constraints: new box.BoxConstraints.expand({width: dart.notNull(this[_screenWidth]) / 1.15, height: dart.notNull(this[_screenH]) / 8}), child: new text_field.TextField.new({controller: this.name, cursorColor: colors.Colors.black, decoration: new input_decorator.InputDecoration.new({border: new input_border.OutlineInputBorder.new(), focusedBorder: new input_border.OutlineInputBorder.new({gapPadding: 6.0, borderSide: new borders.BorderSide.new({width: 3.0, color: colors.Colors.black})}), labelText: "Name", hintText: "Write your name here", labelStyle: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 30, fontWeight: ui.FontWeight.bold, color: colors.Colors.black}), suffixIcon: new icon.Icon.new(icons.Icons.supervised_user_circle, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[17] || CT.C17})}), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 5.4, left: dart.notNull(this[_screenWidth]) / 15, child: new container.Container.new({constraints: new box.BoxConstraints.expand({width: dart.notNull(this[_screenWidth]) / 1.15, height: dart.notNull(this[_screenH]) / 2.5}), child: new text_field.TextField.new({controller: this.errorMessage, maxLines: null, expands: true, cursorColor: colors.Colors.black, decoration: new input_decorator.InputDecoration.new({border: new input_border.OutlineInputBorder.new({gapPadding: 6.0, borderSide: new borders.BorderSide.new({width: 3.0, color: colors.Colors.black})}), focusedBorder: new input_border.OutlineInputBorder.new({gapPadding: 6.0, borderSide: new borders.BorderSide.new({width: 3.0, color: colors.Colors.black})}), labelText: "Error Message", hintText: "Please be specific with the error:", labelStyle: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 30, fontWeight: ui.FontWeight.bold, color: colors.Colors.black}), suffixIcon: new icon.Icon.new(icons.Icons.error_outline_outlined, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[35] || CT.C35})}), $creationLocationd_0dea112b090073317d4: C[39] || CT.C39}), $creationLocationd_0dea112b090073317d4: C[46] || CT.C46}), $creationLocationd_0dea112b090073317d4: C[50] || CT.C50}), new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 1.3, left: dart.notNull(this[_screenWidth]) / 11, child: new container.Container.new({constraints: new box.BoxConstraints.expand({width: dart.notNull(this[_screenWidth]) / 1.15, height: dart.notNull(this[_screenH]) / 16}), decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(5.0), border: box_border.Border.all({color: colors.Colors.black, width: 4.0})}), child: new ink_well.InkWell.new({splashColor: colors.Colors.blueGrey, child: new flat_button._FlatButtonWithIcon.new({onPressed: dart.fn(() => this.send(), T.VoidToFutureLOfvoid()), icon: new icon.Icon.new(icons.Icons.email_rounded, {$creationLocationd_0dea112b090073317d4: C[55] || CT.C55}), label: new text.Text.new("Contact Manager", {$creationLocationd_0dea112b090073317d4: C[58] || CT.C58}), $creationLocationd_0dea112b090073317d4: C[61] || CT.C61}), $creationLocationd_0dea112b090073317d4: C[66] || CT.C66}), $creationLocationd_0dea112b090073317d4: C[70] || CT.C70}), $creationLocationd_0dea112b090073317d4: C[75] || CT.C75}), new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 1.8, left: dart.notNull(this[_screenWidth]) / 50, child: new basic.Padding.new({padding: new edge_insets.EdgeInsets.all(3.0), child: new basic.Wrap.new({children: (() => {
+                    let t0 = T.JSArrayOfWidgetL().of([]);
+                    for (let i = 0; i < dart.notNull(this.attachments[$length]); i = i + 1)
+                      t0[$add](new basic.Row.new({mainAxisSize: flex.MainAxisSize.min, children: T.JSArrayOfWidgetL().of([new basic.Expanded.new({flex: 0, child: new container.Container.new({margin: new edge_insets.EdgeInsets.all(10.0), width: dart.notNull(this[_screenWidth]) / 6, height: dart.notNull(this[_screenH]) / 16, child: new image.Image.file(io.File.new(this.attachments[$_get](i)), {fit: box_fit.BoxFit.cover, $creationLocationd_0dea112b090073317d4: C[80] || CT.C80}), $creationLocationd_0dea112b090073317d4: C[84] || CT.C84}), $creationLocationd_0dea112b090073317d4: C[90] || CT.C90}), new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.remove_circle, {$creationLocationd_0dea112b090073317d4: C[94] || CT.C94}), onPressed: dart.fn(() => T.LinkedHashSetOfvoid().from([this[_removeAttachment](i)]), T.VoidToSetLOfvoid()), $creationLocationd_0dea112b090073317d4: C[97] || CT.C97})]), $creationLocationd_0dea112b090073317d4: C[101] || CT.C101}));
+                    return t0;
+                  })(), $creationLocationd_0dea112b090073317d4: C[105] || CT.C105}), $creationLocationd_0dea112b090073317d4: C[108] || CT.C108}), $creationLocationd_0dea112b090073317d4: C[112] || CT.C112}), new basic.Positioned.new({top: dart.notNull(this[_screenH]) / 1.7, left: dart.notNull(this[_screenWidth]) / 1.2, child: new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.attach_file_outlined, {size: dart.notNull(this[_screenH]) / 26, $creationLocationd_0dea112b090073317d4: C[117] || CT.C117}), onPressed: dart.bind(this, _openImagePicker), $creationLocationd_0dea112b090073317d4: C[121] || CT.C121}), $creationLocationd_0dea112b090073317d4: C[125] || CT.C125})]), $creationLocationd_0dea112b090073317d4: C[130] || CT.C130}), $creationLocationd_0dea112b090073317d4: C[133] || CT.C133});
+    }
+    [_openImagePicker]() {
+      return async.async(dart.dynamic, (function* _openImagePicker() {
+        let pick = (yield new image_picker.ImagePicker.new().getImage({source: image_source.ImageSource.camera}));
+        if (pick != null) {
+          this.setState(dart.fn(() => {
+            this.attachments[$add](pick.path);
+          }, T.VoidToNull()));
+        }
+      }).bind(this));
+    }
+    [_removeAttachment](index) {
+      this.setState(dart.fn(() => {
+        this.attachments[$removeAt](index);
+      }, T.VoidToNull()));
+    }
+    send() {
+      return async.async(dart.void, (function* send() {
+        let email = new flutter_email_sender.Email.new({body: "Dear Manager:\nMy name is " + dart.notNull(this.name.text) + " " + "The" + " " + dart.notNull(this.widget.nameOfEqup) + " " + "in" + " " + dart.notNull(this.widget.locationOfEqup) + " " + "met " + dart.notNull(this.errorMessage.text) + "\nCould you please come over and help me to fix this?\nReally appreciate your time and help\n \nSincerely\n" + dart.notNull(this.name.text) + ":)", subject: "Issue Relate to " + dart.notNull(this.widget.locationOfEqup) + " " + dart.notNull(this.widget.nameOfEqup), recipients: T.JSArrayOfStringL().of([this.widget.emailTo]), attachmentPaths: this.attachments});
+        let platformResponse = null;
+        let _scaffoldKey = T.GlobalKeyOfScaffoldStateL().new();
+        try {
+          yield flutter_email_sender.FlutterEmailSender.send(email);
+          platformResponse = "success";
+        } catch (e) {
+          let error = dart.getThrown(e);
+          platformResponse = dart.toString(error);
+        }
+        if (!dart.test(this.mounted)) return;
+        _scaffoldKey.currentState.showSnackBar(new snack_bar.SnackBar.new({content: new text.Text.new(platformResponse, {$creationLocationd_0dea112b090073317d4: C[138] || CT.C138}), $creationLocationd_0dea112b090073317d4: C[141] || CT.C141}));
+      }).bind(this));
+    }
+  };
+  (sendEmailMain._EmailContentState.new = function() {
+    this.name = new editable_text.TextEditingController.new();
+    this.errorMessage = new editable_text.TextEditingController.new();
+    this[_screenWidth] = null;
+    this[_screenH] = null;
+    this.attachments = T.JSArrayOfStringL().of([]);
+    this.isHTML = false;
+    sendEmailMain._EmailContentState.__proto__.new.call(this);
+    ;
+  }).prototype = sendEmailMain._EmailContentState.prototype;
+  dart.addTypeTests(sendEmailMain._EmailContentState);
+  dart.addTypeCaches(sendEmailMain._EmailContentState);
+  dart.setMethodSignature(sendEmailMain._EmailContentState, () => ({
+    __proto__: dart.getMethods(sendEmailMain._EmailContentState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_openImagePicker]: dart.fnType(dart.legacy(async.Future), []),
+    [_removeAttachment]: dart.fnType(dart.void, [dart.legacy(core.int)]),
+    send: dart.fnType(dart.legacy(async.Future$(dart.void)), [])
+  }));
+  dart.setLibraryUri(sendEmailMain._EmailContentState, I[0]);
+  dart.setFieldSignature(sendEmailMain._EmailContentState, () => ({
+    __proto__: dart.getFields(sendEmailMain._EmailContentState.__proto__),
+    name: dart.fieldType(dart.legacy(editable_text.TextEditingController)),
+    errorMessage: dart.fieldType(dart.legacy(editable_text.TextEditingController)),
+    [_screenWidth]: dart.fieldType(dart.legacy(core.double)),
+    [_screenH]: dart.fieldType(dart.legacy(core.double)),
+    attachments: dart.fieldType(dart.legacy(core.List$(dart.legacy(core.String)))),
+    isHTML: dart.fieldType(dart.legacy(core.bool))
+  }));
+  dart.trackLibraries("packages/mma_mse/SendEmail/sendEmailMain.dart", {
+    "package:mma_mse/SendEmail/sendEmailMain.dart": sendEmailMain
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["sendEmailMain.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAee;;;;;;IACA;;;;;;IACA;;;;;;IACE;;;;;;;AAGqB;IAAoB;;;QAXpC;QACD;QACA;QACX;;IAKO,YAAe;IARV;IACD;IACA;AAEb,8DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;AAgBL,MAAd,AAAK;AACiB,MAAtB,AAAa;AACE,MAAT;IACR;;AAS+B,MAAvB;AAC0C,MAAhD,qBAA0B,AAAY,AAAK,0BAAd;AACgB,MAA7C,iBAAsB,AAAY,AAAK,0BAAd;IAC3B;UAG0B;AACxB,YAAO,oCACG,+BACC,kBACL,6CACO,wCAA6B,aAAT,kBAAW,gFAEhB,wGAEA,aACpB,+BACM,yBACR,+BACkB,aAAT,kBAAW,UACG,aAAb,sBAAe,WACd,kBACL,uDACO,qCAAwB,+IAErC,+BACgB,aAAT,kBAAW,UACG,aAAb,sBAAe,WACd,0CACuB,sCACJ,aAAb,sBAAe,cAAuB,aAAT,kBAAW,YAC5C,0CACO,wBACQ,iCACR,iDACF,0DACO,qDACC,iBACA,mCAAkB,YAAmB,oCAC1C,kBACD,oCACE,wCACW,aAAT,kBAAW,gBACE,2BACT,mCACN,kBACJ,4CACQ,mQAMxB,+BACkB,aAAT,kBAAW,WACG,aAAb,sBAAe,WACd,0CACuB,sCACJ,aAAb,sBAAe,cAAuB,aAAT,kBAAW,cAC5C,0CACO,6BACF,eACD,mBACW,iCACR,iDACF,qDACQ,iBAER,mCAAkB,YAAmB,wCAC9B,qDACC,iBAER,mCAAkB,YAAmB,oCAClC,2BACD,kDACE,wCACW,aAAT,kBAAW,gBACE,2BACT,mCACN,kBACJ,4CACQ,mQAK1B,+BACkB,aAAT,kBAAW,WACG,aAAb,sBAAe,WACd,0CACuB,sCACJ,aAAb,sBAAe,cAAuB,aAAT,kBAAW,kBACvC,oDACmB,wCAAS,cACrB,8BAAkB,4BAAc,gBAC5C,uCACiB,+BACF,oDACH,cAAM,6CACX,kBAAW,8FACV,kBAAK,2TAE1B,+BACkB,aAAT,kBAAW,WACG,aAAb,sBAAe,WACd,gCACe,+BAAI,aACjB,8BACK;;AACR,6BAAS,IAAI,GAAG,AAAE,CAAD,gBAAG,AAAY,4BAAQ,IAAA,AAAC,CAAA;AACvC,gEAC6B,iCACjB,yBACR,8BACU,UACC,qCACc,+BAAI,cACH,aAAb,sBAAe,WACL,aAAT,kBAAW,WACN,qBAAK,YAAK,AAAW,wBAAC,CAAC,UACpB,uMAEtB,sCACQ,kBAAW,kGACN,cAAM,8BAAC,wBAAkB,CAAC;;+MAOvD,+BACgB,aAAT,kBAAW,WACG,aAAb,sBAAe,YACd,sCACC,kBACE,yCACS,aAAT,kBAAW,sFAER;IAMvB;;AAEuB;AACf,oBAAO,MAAM,AAAc,qDAA6B;AAC9D,YAAI,AAAK,IAAD;AAGJ,UAFF,cAAS;AACmB,YAA1B,AAAY,uBAAI,AAAK,IAAD;;;MAG1B;;wBAE2B;AAGvB,MAFF,cAAS;AACoB,QAA3B,AAAY,4BAAS,KAAK;;IAE9B;;AAEiB;AACH,oBAAQ,0CACZ,AAA6B,AACrB,AACN,AACE,AACF,AACc,AACd,AACC,AACD,AACkB,AAClB,AACG,AACW,AAC4F,AACpG,4CAbV,AAAK,kBACL,MACA,QACA,mBACA,AAAO,0BACP,MACA,OACA,mBACA,AAAO,8BACP,MACA,sBACA,AAAa,0BACb,6HACA,AAAK,kBACL,eAEA,AAAmB,AAAwB,AAAM,kCAA5B,AAAO,8BAAiB,mBAAM,AAAO,qCAClD,yBAAC,AAAO,wCACH;AAGZ;AACwB,2BAAe;AAE9C;AACsC,UAApC,MAAyB,6CAAK,KAAK;AACP,UAA5B,mBAAmB;;cACZ;AAC4B,UAAnC,mBAAyB,cAAN,KAAK;;AAG1B,uBAAK,eAAS;AAIZ,QAFF,AAAa,AAAa,YAAd,2BAA2B,qCAC5B,kBAAK,gBAAgB;MAElC;;;;IA1NsB,YAAW;IACX,oBAAmB;IASlC;IACA;IACM,mBAAc;IACtB,cAAS;;;EA8MhB","file":"../../../../../../../../packages/mma_mse/SendEmail/sendEmailMain.dart.lib.js"}');
+  // Exports:
+  return {
+    SendEmail__sendEmailMain: sendEmailMain
+  };
+}));
+
+//# sourceMappingURL=sendEmailMain.dart.lib.js.map

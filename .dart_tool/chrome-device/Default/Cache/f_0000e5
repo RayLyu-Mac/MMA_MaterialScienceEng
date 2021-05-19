@@ -1,0 +1,730 @@
+define(['dart_sdk'], (function load__packages__flutter_inappwebview__src__util_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var util = Object.create(dart.library);
+  var $startsWith = dartx.startsWith;
+  var $trim = dartx.trim;
+  var $times = dartx['*'];
+  var $_get = dartx._get;
+  var $replaceFirst = dartx.replaceFirst;
+  var $substring = dartx.substring;
+  var $split = dartx.split;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    StringLTointL: () => (T.StringLTointL = dart.constFn(dart.fnType(T.intL(), [T.StringL()])))(),
+    StringLToStringL: () => (T.StringLToStringL = dart.constFn(dart.fnType(T.StringL(), [T.StringL()])))(),
+    doubleL: () => (T.doubleL = dart.constFn(dart.legacy(core.double)))(),
+    StringLTodoubleL: () => (T.StringLTodoubleL = dart.constFn(dart.fnType(T.doubleL(), [T.StringL()])))(),
+    numL: () => (T.numL = dart.constFn(dart.legacy(core.num)))(),
+    JSArrayOfnumL: () => (T.JSArrayOfnumL = dart.constFn(_interceptors.JSArray$(T.numL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var C = [];
+  var I = ["package:flutter_inappwebview/src/util.dart"];
+  util.Util = class Util extends core.Object {
+    static convertColorFromStringRepresentation(colorValue) {
+      if (colorValue[$startsWith]("#")) {
+        return util.Util.getColorFromHex(colorValue);
+      } else if (colorValue[$startsWith]("rgb(")) {
+        return util.Util.getColorFromRgbString(colorValue);
+      } else if (colorValue[$startsWith]("rgba(")) {
+        return util.Util.getColorFromRgbaString(colorValue);
+      } else if (colorValue[$startsWith]("hls(")) {
+        return util.Util.getColorFromHlsString(colorValue);
+      } else if (colorValue[$startsWith]("hlsa(")) {
+        return util.Util.getColorFromHlsaString(colorValue);
+      } else {
+        switch (colorValue) {
+          case "aliceblue":
+          {
+            return util.Util.getColorFromHex("#f0f8ff");
+          }
+          case "antiquewhite":
+          {
+            return util.Util.getColorFromHex("#faebd7");
+          }
+          case "aqua":
+          {
+            return util.Util.getColorFromHex("#00ffff");
+          }
+          case "aquamarine":
+          {
+            return util.Util.getColorFromHex("#7fffd4");
+          }
+          case "azure":
+          {
+            return util.Util.getColorFromHex("#f0ffff");
+          }
+          case "beige":
+          {
+            return util.Util.getColorFromHex("#f5f5dc");
+          }
+          case "bisque":
+          {
+            return util.Util.getColorFromHex("#ffe4c4");
+          }
+          case "black":
+          {
+            return util.Util.getColorFromHex("#000000");
+          }
+          case "blanchedalmond":
+          {
+            return util.Util.getColorFromHex("#ffebcd");
+          }
+          case "blue":
+          {
+            return util.Util.getColorFromHex("#0000ff");
+          }
+          case "blueviolet":
+          {
+            return util.Util.getColorFromHex("#8a2be2");
+          }
+          case "brown":
+          {
+            return util.Util.getColorFromHex("#a52a2a");
+          }
+          case "burlywood":
+          {
+            return util.Util.getColorFromHex("#deb887");
+          }
+          case "cadetblue":
+          {
+            return util.Util.getColorFromHex("#5f9ea0");
+          }
+          case "chartreuse":
+          {
+            return util.Util.getColorFromHex("#7fff00");
+          }
+          case "chocolate":
+          {
+            return util.Util.getColorFromHex("#d2691e");
+          }
+          case "coral":
+          {
+            return util.Util.getColorFromHex("#ff7f50");
+          }
+          case "cornflowerblue":
+          {
+            return util.Util.getColorFromHex("#6495ed");
+          }
+          case "cornsilk":
+          {
+            return util.Util.getColorFromHex("#fff8dc");
+          }
+          case "crimson":
+          {
+            return util.Util.getColorFromHex("#dc143c");
+          }
+          case "cyan":
+          {
+            return util.Util.getColorFromHex("#00ffff");
+          }
+          case "darkblue":
+          {
+            return util.Util.getColorFromHex("#00008b");
+          }
+          case "darkcyan":
+          {
+            return util.Util.getColorFromHex("#008b8b");
+          }
+          case "darkgoldenrod":
+          {
+            return util.Util.getColorFromHex("#b8860b");
+          }
+          case "darkgray":
+          {
+            return util.Util.getColorFromHex("#a9a9a9");
+          }
+          case "darkgreen":
+          {
+            return util.Util.getColorFromHex("#006400");
+          }
+          case "darkgrey":
+          {
+            return util.Util.getColorFromHex("#a9a9a9");
+          }
+          case "darkkhaki":
+          {
+            return util.Util.getColorFromHex("#bdb76b");
+          }
+          case "darkmagenta":
+          {
+            return util.Util.getColorFromHex("#8b008b");
+          }
+          case "darkolivegreen":
+          {
+            return util.Util.getColorFromHex("#556b2f");
+          }
+          case "darkorange":
+          {
+            return util.Util.getColorFromHex("#ff8c00");
+          }
+          case "darkorchid":
+          {
+            return util.Util.getColorFromHex("#9932cc");
+          }
+          case "darkred":
+          {
+            return util.Util.getColorFromHex("#8b0000");
+          }
+          case "darksalmon":
+          {
+            return util.Util.getColorFromHex("#e9967a");
+          }
+          case "darkseagreen":
+          {
+            return util.Util.getColorFromHex("#8fbc8f");
+          }
+          case "darkslateblue":
+          {
+            return util.Util.getColorFromHex("#483d8b");
+          }
+          case "darkslategray":
+          {
+            return util.Util.getColorFromHex("#2f4f4f");
+          }
+          case "darkslategrey":
+          {
+            return util.Util.getColorFromHex("#2f4f4f");
+          }
+          case "darkturquoise":
+          {
+            return util.Util.getColorFromHex("#00ced1");
+          }
+          case "darkviolet":
+          {
+            return util.Util.getColorFromHex("#9400d3");
+          }
+          case "deeppink":
+          {
+            return util.Util.getColorFromHex("#ff1493");
+          }
+          case "deepskyblue":
+          {
+            return util.Util.getColorFromHex("#00bfff");
+          }
+          case "dimgray":
+          {
+            return util.Util.getColorFromHex("#696969");
+          }
+          case "dimgrey":
+          {
+            return util.Util.getColorFromHex("#696969");
+          }
+          case "dodgerblue":
+          {
+            return util.Util.getColorFromHex("#1e90ff");
+          }
+          case "firebrick":
+          {
+            return util.Util.getColorFromHex("#b22222");
+          }
+          case "floralwhite":
+          {
+            return util.Util.getColorFromHex("#fffaf0");
+          }
+          case "forestgreen":
+          {
+            return util.Util.getColorFromHex("#228b22");
+          }
+          case "fuchsia":
+          {
+            return util.Util.getColorFromHex("#ff00ff");
+          }
+          case "gainsboro":
+          {
+            return util.Util.getColorFromHex("#dcdcdc");
+          }
+          case "ghostwhite":
+          {
+            return util.Util.getColorFromHex("#f8f8ff");
+          }
+          case "gold":
+          {
+            return util.Util.getColorFromHex("#ffd700");
+          }
+          case "goldenrod":
+          {
+            return util.Util.getColorFromHex("#daa520");
+          }
+          case "gray":
+          {
+            return util.Util.getColorFromHex("#808080");
+          }
+          case "green":
+          {
+            return util.Util.getColorFromHex("#008000");
+          }
+          case "greenyellow":
+          {
+            return util.Util.getColorFromHex("#adff2f");
+          }
+          case "grey":
+          {
+            return util.Util.getColorFromHex("#808080");
+          }
+          case "honeydew":
+          {
+            return util.Util.getColorFromHex("#f0fff0");
+          }
+          case "hotpink":
+          {
+            return util.Util.getColorFromHex("#ff69b4");
+          }
+          case "indianred":
+          {
+            return util.Util.getColorFromHex("#cd5c5c");
+          }
+          case "indigo":
+          {
+            return util.Util.getColorFromHex("#4b0082");
+          }
+          case "ivory":
+          {
+            return util.Util.getColorFromHex("#fffff0");
+          }
+          case "khaki":
+          {
+            return util.Util.getColorFromHex("#f0e68c");
+          }
+          case "lavender":
+          {
+            return util.Util.getColorFromHex("#e6e6fa");
+          }
+          case "lavenderblush":
+          {
+            return util.Util.getColorFromHex("#fff0f5");
+          }
+          case "lawngreen":
+          {
+            return util.Util.getColorFromHex("#7cfc00");
+          }
+          case "lemonchiffon":
+          {
+            return util.Util.getColorFromHex("#fffacd");
+          }
+          case "lightblue":
+          {
+            return util.Util.getColorFromHex("#add8e6");
+          }
+          case "lightcoral":
+          {
+            return util.Util.getColorFromHex("#f08080");
+          }
+          case "lightcyan":
+          {
+            return util.Util.getColorFromHex("#e0ffff");
+          }
+          case "lightgoldenrodyellow":
+          {
+            return util.Util.getColorFromHex("#fafad2");
+          }
+          case "lightgray":
+          {
+            return util.Util.getColorFromHex("#d3d3d3");
+          }
+          case "lightgreen":
+          {
+            return util.Util.getColorFromHex("#90ee90");
+          }
+          case "lightgrey":
+          {
+            return util.Util.getColorFromHex("#d3d3d3");
+          }
+          case "lightpink":
+          {
+            return util.Util.getColorFromHex("#ffb6c1");
+          }
+          case "lightsalmon":
+          {
+            return util.Util.getColorFromHex("#ffa07a");
+          }
+          case "lightseagreen":
+          {
+            return util.Util.getColorFromHex("#20b2aa");
+          }
+          case "lightskyblue":
+          {
+            return util.Util.getColorFromHex("#87cefa");
+          }
+          case "lightslategray":
+          {
+            return util.Util.getColorFromHex("#778899");
+          }
+          case "lightslategrey":
+          {
+            return util.Util.getColorFromHex("#778899");
+          }
+          case "lightsteelblue":
+          {
+            return util.Util.getColorFromHex("#b0c4de");
+          }
+          case "lightyellow":
+          {
+            return util.Util.getColorFromHex("#ffffe0");
+          }
+          case "lime":
+          {
+            return util.Util.getColorFromHex("#00ff00");
+          }
+          case "limegreen":
+          {
+            return util.Util.getColorFromHex("#32cd32");
+          }
+          case "linen":
+          {
+            return util.Util.getColorFromHex("#faf0e6");
+          }
+          case "magenta":
+          {
+            return util.Util.getColorFromHex("#ff00ff");
+          }
+          case "maroon":
+          {
+            return util.Util.getColorFromHex("#800000");
+          }
+          case "mediumaquamarine":
+          {
+            return util.Util.getColorFromHex("#66cdaa");
+          }
+          case "mediumblue":
+          {
+            return util.Util.getColorFromHex("#0000cd");
+          }
+          case "mediumorchid":
+          {
+            return util.Util.getColorFromHex("#ba55d3");
+          }
+          case "mediumpurple":
+          {
+            return util.Util.getColorFromHex("#9370db");
+          }
+          case "mediumseagreen":
+          {
+            return util.Util.getColorFromHex("#3cb371");
+          }
+          case "mediumslateblue":
+          {
+            return util.Util.getColorFromHex("#7b68ee");
+          }
+          case "mediumspringgreen":
+          {
+            return util.Util.getColorFromHex("#00fa9a");
+          }
+          case "mediumturquoise":
+          {
+            return util.Util.getColorFromHex("#48d1cc");
+          }
+          case "mediumvioletred":
+          {
+            return util.Util.getColorFromHex("#c71585");
+          }
+          case "midnightblue":
+          {
+            return util.Util.getColorFromHex("#191970");
+          }
+          case "mintcream":
+          {
+            return util.Util.getColorFromHex("#f5fffa");
+          }
+          case "mistyrose":
+          {
+            return util.Util.getColorFromHex("#ffe4e1");
+          }
+          case "moccasin":
+          {
+            return util.Util.getColorFromHex("#ffe4b5");
+          }
+          case "navajowhite":
+          {
+            return util.Util.getColorFromHex("#ffdead");
+          }
+          case "navy":
+          {
+            return util.Util.getColorFromHex("#000080");
+          }
+          case "oldlace":
+          {
+            return util.Util.getColorFromHex("#fdf5e6");
+          }
+          case "olive":
+          {
+            return util.Util.getColorFromHex("#808000");
+          }
+          case "olivedrab":
+          {
+            return util.Util.getColorFromHex("#6b8e23");
+          }
+          case "orange":
+          {
+            return util.Util.getColorFromHex("#ffa500");
+          }
+          case "orangered":
+          {
+            return util.Util.getColorFromHex("#ff4500");
+          }
+          case "orchid":
+          {
+            return util.Util.getColorFromHex("#da70d6");
+          }
+          case "palegoldenrod":
+          {
+            return util.Util.getColorFromHex("#eee8aa");
+          }
+          case "palegreen":
+          {
+            return util.Util.getColorFromHex("#98fb98");
+          }
+          case "paleturquoise":
+          {
+            return util.Util.getColorFromHex("#afeeee");
+          }
+          case "palevioletred":
+          {
+            return util.Util.getColorFromHex("#db7093");
+          }
+          case "papayawhip":
+          {
+            return util.Util.getColorFromHex("#ffefd5");
+          }
+          case "peachpuff":
+          {
+            return util.Util.getColorFromHex("#ffdab9");
+          }
+          case "peru":
+          {
+            return util.Util.getColorFromHex("#cd853f");
+          }
+          case "pink":
+          {
+            return util.Util.getColorFromHex("#ffc0cb");
+          }
+          case "plum":
+          {
+            return util.Util.getColorFromHex("#dda0dd");
+          }
+          case "powderblue":
+          {
+            return util.Util.getColorFromHex("#b0e0e6");
+          }
+          case "purple":
+          {
+            return util.Util.getColorFromHex("#800080");
+          }
+          case "rebeccapurple":
+          {
+            return util.Util.getColorFromHex("#663399");
+          }
+          case "red":
+          {
+            return util.Util.getColorFromHex("#ff0000");
+          }
+          case "rosybrown":
+          {
+            return util.Util.getColorFromHex("#bc8f8f");
+          }
+          case "royalblue":
+          {
+            return util.Util.getColorFromHex("#4169e1");
+          }
+          case "saddlebrown":
+          {
+            return util.Util.getColorFromHex("#8b4513");
+          }
+          case "salmon":
+          {
+            return util.Util.getColorFromHex("#fa8072");
+          }
+          case "sandybrown":
+          {
+            return util.Util.getColorFromHex("#f4a460");
+          }
+          case "seagreen":
+          {
+            return util.Util.getColorFromHex("#2e8b57");
+          }
+          case "seashell":
+          {
+            return util.Util.getColorFromHex("#fff5ee");
+          }
+          case "sienna":
+          {
+            return util.Util.getColorFromHex("#a0522d");
+          }
+          case "silver":
+          {
+            return util.Util.getColorFromHex("#c0c0c0");
+          }
+          case "skyblue":
+          {
+            return util.Util.getColorFromHex("#87ceeb");
+          }
+          case "slateblue":
+          {
+            return util.Util.getColorFromHex("#6a5acd");
+          }
+          case "slategray":
+          {
+            return util.Util.getColorFromHex("#708090");
+          }
+          case "slategrey":
+          {
+            return util.Util.getColorFromHex("#708090");
+          }
+          case "snow":
+          {
+            return util.Util.getColorFromHex("#fffafa");
+          }
+          case "springgreen":
+          {
+            return util.Util.getColorFromHex("#00ff7f");
+          }
+          case "steelblue":
+          {
+            return util.Util.getColorFromHex("#4682b4");
+          }
+          case "tan":
+          {
+            return util.Util.getColorFromHex("#d2b48c");
+          }
+          case "teal":
+          {
+            return util.Util.getColorFromHex("#008080");
+          }
+          case "thistle":
+          {
+            return util.Util.getColorFromHex("#d8bfd8");
+          }
+          case "tomato":
+          {
+            return util.Util.getColorFromHex("#ff6347");
+          }
+          case "turquoise":
+          {
+            return util.Util.getColorFromHex("#40e0d0");
+          }
+          case "violet":
+          {
+            return util.Util.getColorFromHex("#ee82ee");
+          }
+          case "wheat":
+          {
+            return util.Util.getColorFromHex("#f5deb3");
+          }
+          case "white":
+          {
+            return util.Util.getColorFromHex("#ffffff");
+          }
+          case "whitesmoke":
+          {
+            return util.Util.getColorFromHex("#f5f5f5");
+          }
+          case "yellow":
+          {
+            return util.Util.getColorFromHex("#ffff00");
+          }
+          case "yellowgreen":
+          {
+            return util.Util.getColorFromHex("#9acd32");
+          }
+        }
+      }
+      return null;
+    }
+    static getColorFromHex(hexString) {
+      hexString = hexString[$trim]();
+      if (hexString.length === 4) {
+        hexString = "#" + hexString[$_get](1)[$times](2) + hexString[$_get](2)[$times](2) + hexString[$_get](3)[$times](2);
+      }
+      let buffer = new core.StringBuffer.new();
+      if (hexString.length === 6 || hexString.length === 7) buffer.write("ff");
+      buffer.write(hexString[$replaceFirst]("#", ""));
+      return new ui.Color.new(core.int.parse(buffer.toString(), {radix: 16}));
+    }
+    static getColorFromRgbString(rgbString) {
+      rgbString = rgbString[$trim]();
+      let rgbValues = rgbString[$substring](4, rgbString.length - 1)[$split](",")[$map](T.intL(), dart.fn(rbgValue => core.int.parse(rbgValue[$trim]()), T.StringLTointL()))[$toList]();
+      return new ui.Color.fromRGBO(rgbValues[$_get](0), rgbValues[$_get](1), rgbValues[$_get](2), 1.0);
+    }
+    static getColorFromRgbaString(rgbaString) {
+      rgbaString = rgbaString[$trim]();
+      let rgbaValues = rgbaString[$substring](5, rgbaString.length - 1)[$split](",")[$map](T.StringL(), dart.fn(rbgValue => rbgValue[$trim](), T.StringLToStringL()))[$toList]();
+      return new ui.Color.fromRGBO(core.int.parse(rgbaValues[$_get](0)), core.int.parse(rgbaValues[$_get](1)), core.int.parse(rgbaValues[$_get](2)), core.double.parse(rgbaValues[$_get](3)));
+    }
+    static getColorFromHlsString(hlsString) {
+      hlsString = hlsString[$trim]();
+      let hlsValues = hlsString[$substring](4, hlsString.length - 1)[$split](",")[$map](T.doubleL(), dart.fn(rbgValue => core.double.parse(rbgValue[$trim]()), T.StringLTodoubleL()))[$toList]();
+      let rgbValues = util.Util.hslToRgb(hlsValues[$_get](0), hlsValues[$_get](1), hlsValues[$_get](2));
+      return new ui.Color.fromRGBO(dart.asInt(rgbValues[$_get](0)), dart.asInt(rgbValues[$_get](1)), dart.asInt(rgbValues[$_get](2)), 1.0);
+    }
+    static getColorFromHlsaString(hlsaString) {
+      hlsaString = hlsaString[$trim]();
+      let hlsaValues = hlsaString[$substring](5, hlsaString.length - 1)[$split](",")[$map](T.doubleL(), dart.fn(rbgValue => core.double.parse(rbgValue[$trim]()), T.StringLTodoubleL()))[$toList]();
+      let rgbaValues = util.Util.hslToRgb(hlsaValues[$_get](0), hlsaValues[$_get](1), hlsaValues[$_get](2));
+      return new ui.Color.fromRGBO(dart.asInt(rgbaValues[$_get](0)), dart.asInt(rgbaValues[$_get](1)), dart.asInt(rgbaValues[$_get](2)), hlsaValues[$_get](3));
+    }
+    static hslToRgb(h, s, l) {
+      let r = null;
+      let g = null;
+      let b = null;
+      if (s === 0) {
+        r = g = b = l;
+      } else {
+        let q = dart.notNull(l) < 0.5 ? dart.notNull(l) * (1 + dart.notNull(s)) : dart.notNull(l) + dart.notNull(s) - dart.notNull(l) * dart.notNull(s);
+        let p = 2 * dart.notNull(l) - q;
+        r = util.Util.hueToRgb(p, q, dart.notNull(h) + 1 / 3);
+        g = util.Util.hueToRgb(p, q, h);
+        b = util.Util.hueToRgb(p, q, dart.notNull(h) - 1 / 3);
+      }
+      let rgb = T.JSArrayOfnumL().of([util.Util.to255(r), util.Util.to255(g), util.Util.to255(b)]);
+      return rgb;
+    }
+    static to255(v) {
+      return math.min(T.numL(), 255, 256 * dart.notNull(v));
+    }
+    static hueToRgb(p, q, t) {
+      if (dart.notNull(t) < 0) t = dart.notNull(t) + 1;
+      if (dart.notNull(t) > 1) t = dart.notNull(t) - 1;
+      if (dart.notNull(t) < 1 / 6) return dart.notNull(p) + (dart.notNull(q) - dart.notNull(p)) * 6 * dart.notNull(t);
+      if (dart.notNull(t) < 1 / 2) return q;
+      if (dart.notNull(t) < 2 / 3) return dart.notNull(p) + (dart.notNull(q) - dart.notNull(p)) * (2 / 3 - dart.notNull(t)) * 6;
+      return p;
+    }
+  };
+  (util.Util.new = function() {
+    ;
+  }).prototype = util.Util.prototype;
+  dart.addTypeTests(util.Util);
+  dart.addTypeCaches(util.Util);
+  dart.setLibraryUri(util.Util, I[0]);
+  dart.trackLibraries("packages/flutter_inappwebview/src/util.dart", {
+    "package:flutter_inappwebview/src/util.dart": util
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["util.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;gDAK2D;AACvD,UAAI,AAAW,UAAD,cAAY;AACxB,cAAY,2BAAgB,UAAU;YACjC,KAAI,AAAW,UAAD,cAAY;AAC/B,cAAY,iCAAsB,UAAU;YACvC,KAAI,AAAW,UAAD,cAAY;AAC/B,cAAY,kCAAuB,UAAU;YACxC,KAAI,AAAW,UAAD,cAAY;AAC/B,cAAY,iCAAsB,UAAU;YACvC,KAAI,AAAW,UAAD,cAAY;AAC/B,cAAY,kCAAuB,UAAU;;AAmB7C,gBAAQ,UAAU;;;AAEd,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAE5B,kBAAY,2BAAgB;;;;AAGlC,YAAO;IACT;2BAEoC;AACN,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","file":"../../../../../../../../../packages/flutter_inappwebview/src/util.dart.lib.js"}');
+  // Exports:
+  return {
+    src__util: util
+  };
+}));
+
+//# sourceMappingURL=util.dart.lib.js.map

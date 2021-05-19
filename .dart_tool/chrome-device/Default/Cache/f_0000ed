@@ -1,0 +1,980 @@
+define(['dart_sdk'], (function load__packages__flutter_inappwebview__src__X509Certificate__oid_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var oid = Object.create(dart.library);
+  var $firstWhere = dartx.firstWhere;
+  var $_get = dartx._get;
+  var $hashCode = dartx.hashCode;
+  var $toString = dartx.toString;
+  var $_equals = dartx._equals;
+  var $toSet = dartx.toSet;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    OIDL: () => (T.OIDL = dart.constFn(dart.legacy(oid.OID)))(),
+    OIDLToboolL: () => (T.OIDLToboolL = dart.constFn(dart.fnType(T.boolL(), [T.OIDL()])))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    JSArrayOfOIDL: () => (T.JSArrayOfOIDL = dart.constFn(_interceptors.JSArray$(T.OIDL())))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "0.4.0.1862.1.1"
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "0.4.0.1862.1.3"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "0.4.0.1862.1.4"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10040.4.1"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10045.2.1"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10045.3.1.7"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10045.4.3.2"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10045.4.3.4"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.1"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.2"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.3"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.4"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.5"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.7"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: ".2.840.113549.1.1.8"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: ".2.840.113549.1.1.9"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: ".2.840.113549.1.1.10"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.11"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.12"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.1.13"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.7.1"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.7.2"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.7.3"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.9.1"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.9.16.2.47"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.9.3"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.9.4"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.1.9.5"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.10040.4.3"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.4.1.11129.2.4.2"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.4.1.311.60.2.1.2"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.4.1.311.60.2.1.3"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.1.1"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.1.3"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.2.1"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.2.2"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.3.1"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.3.2"
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.48.1"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.48.2"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.9.1"
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.14.3.2.7"
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.14.3.2.26"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.2.1"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.2.2"
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.2.3"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.2.5"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.113733.1.7.23.6"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.23.140.1.1"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.23.140.1.2.2"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.14"
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.15"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.17"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.18"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.19"
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.31"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.32"
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.35"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.37"
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.9"
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.10"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.11"
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.15"
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.17"
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.3"
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.4"
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.42"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.46"
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.5"
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.6"
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.7"
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.8"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.4.9"
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.2.840.113549.3.7"
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.1.2"
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.1.22"
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.101.3.4.1.42"
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.113730.1.1"
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.16.840.1.113730.1.13"
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.16"
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.20"
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.21"
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.22"
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.23"
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.24"
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.27"
+      });
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.28"
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.29"
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.30"
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.33"
+      });
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.36"
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.46"
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "2.5.29.54"
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.3.3"
+      });
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.3.4"
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: oid.OID.prototype,
+        [_value$]: "1.3.6.1.5.5.7.3.8"
+      });
+    },
+    get C96() {
+      return C[96] = dart.constMap(T.StringL(), T.StringL(), ["0.4.0.1862.1.1", "etsiQcsCompliance", "0.4.0.1862.1.3", "etsiQcsRetentionPeriod", "0.4.0.1862.1.4", "etsiQcsQcSSCD", "1.2.840.10040.4.1", "dsa", "1.2.840.10045.2.1", "ecPublicKey", "1.2.840.10045.3.1.7", "prime256v1", "1.2.840.10045.4.3.2", "ecdsaWithSHA256", "1.2.840.10045.4.3.4", "ecdsaWithSHA512", "1.2.840.113549.1.1.1", "rsaEncryption", "1.2.840.113549.1.1.2", "md2WithRSAEncryption", "1.2.840.113549.1.1.3", "md4WithRSAEncryption", "1.2.840.113549.1.1.4", "md5WithRSAEncryption", "1.2.840.113549.1.1.5", "sha1WithRSAEncryption", "1.2.840.113549.1.1.7", "RSAES-OAEP", ".2.840.113549.1.1.8", "mgf1", ".2.840.113549.1.1.9", "pSpecified", ".2.840.113549.1.1.10", "RSASSA-PSS", "1.2.840.113549.1.1.11", "sha256WithRSAEncryption", "1.2.840.113549.1.1.12", "sha384WithRSAEncryption", "1.2.840.113549.1.1.13", "sha512WithRSAEncryption", "1.2.840.113549.1.7.1", "pkcs7data", "1.2.840.113549.1.7.2", "pkcs7signedData", "1.2.840.113549.1.7.3", "pkcs7envelopedData", "1.2.840.113549.1.9.1", "emailAddress", "1.2.840.113549.1.9.16.2.47", "signingCertificateV2", "1.2.840.113549.1.9.3", "contentType", "1.2.840.113549.1.9.4", "messageDigest", "1.2.840.113549.1.9.5", "signingTime", "1.2.840.10040.4.3", "dsaWithSha1", "1.3.6.1.4.1.11129.2.4.2", "certificateExtension", "1.3.6.1.4.1.311.60.2.1.2", "jurisdictionOfIncorporationSP", "1.3.6.1.4.1.311.60.2.1.3", "jurisdictionOfIncorporationC", "1.3.6.1.5.5.7.1.1", "authorityInfoAccess", "1.3.6.1.5.5.7.1.3", "qcStatements", "1.3.6.1.5.5.7.2.1", "cps", "1.3.6.1.5.5.7.2.2", "unotice", "1.3.6.1.5.5.7.3.1", "serverAuth", "1.3.6.1.5.5.7.3.2", "clientAuth", "1.3.6.1.5.5.7.48.1", "ocsp", "1.3.6.1.5.5.7.48.2", "caIssuers", "1.3.6.1.5.5.7.9.1", "dateOfBirth", "1.3.14.3.2.7", "desCBC", "1.3.14.3.2.26", "sha1", "2.16.840.1.101.3.4.2.1", "sha256", "2.16.840.1.101.3.4.2.2", "sha384", "2.16.840.1.101.3.4.2.3", "sha512", "1.2.840.113549.2.5", "md5", "2.16.840.1.113733.1.7.23.6", "VeriSign EV policy", "2.23.140.1.1", "extendedValidation", "2.23.140.1.2.2", "organizationValidated", "2.5.29.14", "subjectKeyIdentifier", "2.5.29.15", "keyUsage", "2.5.29.17", "subjectAltName", "2.5.29.18", "issuerAltName", "2.5.29.19", "basicConstraints", "2.5.29.31", "cRLDistributionPoints", "2.5.29.32", "certificatePolicies", "2.5.29.35", "authorityKeyIdentifier", "2.5.29.37", "extKeyUsage", "2.5.29.9", "subjectDirectoryAttributes", "2.5.4.10", "organizationName", "2.5.4.11", "organizationalUnitName", "2.5.4.15", "businessCategory", "2.5.4.17", "postalCode", "2.5.4.3", "commonName", "2.5.4.4", "surname", "2.5.4.42", "givenName", "2.5.4.46", "dnQualifier", "2.5.4.5", "serialNumber", "2.5.4.6", "countryName", "2.5.4.7", "localityName", "2.5.4.8", "stateOrProvinceName", "2.5.4.9", "streetAddress", "1.2.840.113549.3.7", "des-EDE3-CBC", "2.16.840.1.101.3.4.1.2", "aes128-CBC", "2.16.840.1.101.3.4.1.22", "aes192-CBC", "2.16.840.1.101.3.4.1.42", "aes256-CBC", "2.16.840.1.113730.1.1", "nsCertType", "2.16.840.1.113730.1.13", "nsComment", "2.5.29.16", "privateKeyUsagePeriod", "2.5.29.20", "cRLNumber", "2.5.29.21", "cRLReason", "2.5.29.22", "expirationDate", "2.5.29.23", "instructionCode", "2.5.29.24", "invalidityDate", "2.5.29.27", "deltaCRLIndicator", "2.5.29.28", "issuingDistributionPoint", "2.5.29.29", "certificateIssuer", "2.5.29.30", "nameConstraints", "2.5.29.33", "policyMappings", "2.5.29.36", "policyConstraints", "2.5.29.46", "freshestCRL", "2.5.29.54", "inhibitAnyPolicy", "1.3.6.1.5.5.7.3.3", "codeSigning", "1.3.6.1.5.5.7.3.4", "emailProtection", "1.3.6.1.5.5.7.3.8", "timeStamping"]);
+    }
+  }, false);
+  var C = Array(97).fill(void 0);
+  var I = ["package:flutter_inappwebview/src/X509Certificate/oid.dart"];
+  var _value$ = dart.privateName(oid, "OID._value");
+  var _value = dart.privateName(oid, "_value");
+  oid.OID = class OID extends core.Object {
+    get [_value]() {
+      return this[_value$];
+    }
+    set [_value](value) {
+      super[_value] = value;
+    }
+    static fromValue(value) {
+      return oid.OID.values[$firstWhere](dart.fn(element => element.toValue() == value, T.OIDLToboolL()), {orElse: dart.fn(() => null, T.VoidToNull())});
+    }
+    toValue() {
+      return this[_value];
+    }
+    name() {
+      return oid.OID._oidMapName[$_get](this[_value]);
+    }
+    toString() {
+      return "(" + dart.str(this[_value]) + ", " + dart.str(this.name()) + ")";
+    }
+    _equals(value) {
+      if (value == null) return false;
+      return dart.equals(value, this[_value]);
+    }
+    get hashCode() {
+      return dart.hashCode(this[_value]);
+    }
+  };
+  (oid.OID._internal = function(_value) {
+    this[_value$] = _value;
+    ;
+  }).prototype = oid.OID.prototype;
+  dart.addTypeTests(oid.OID);
+  dart.addTypeCaches(oid.OID);
+  dart.setMethodSignature(oid.OID, () => ({
+    __proto__: dart.getMethods(oid.OID.__proto__),
+    toValue: dart.fnType(dart.legacy(core.String), []),
+    name: dart.fnType(dart.legacy(core.String), []),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), []),
+    _equals: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    [$_equals]: dart.fnType(dart.legacy(core.bool), [dart.dynamic])
+  }));
+  dart.setGetterSignature(oid.OID, () => ({
+    __proto__: dart.getGetters(oid.OID.__proto__),
+    hashCode: dart.legacy(core.int),
+    [$hashCode]: dart.legacy(core.int)
+  }));
+  dart.setLibraryUri(oid.OID, I[0]);
+  dart.setFieldSignature(oid.OID, () => ({
+    __proto__: dart.getFields(oid.OID.__proto__),
+    [_value]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(oid.OID, ['toString', '_equals']);
+  dart.defineExtensionAccessors(oid.OID, ['hashCode']);
+  dart.defineLazy(oid.OID, {
+    /*oid.OID.values*/get values() {
+      return T.JSArrayOfOIDL().of([oid.OID.etsiQcsCompliance, oid.OID.etsiQcsRetentionPeriod, oid.OID.etsiQcsQcSSCD, oid.OID.dsa, oid.OID.ecPublicKey, oid.OID.prime256v1, oid.OID.ecdsaWithSHA256, oid.OID.ecdsaWithSHA512, oid.OID.rsaEncryption, oid.OID.md2WithRSAEncryption, oid.OID.md4WithRSAEncryption, oid.OID.md5WithRSAEncryption, oid.OID.sha1WithRSAEncryption, oid.OID.RSAES_OAEP, oid.OID.mgf1, oid.OID.pSpecified, oid.OID.RSASSA_PSS, oid.OID.sha256WithRSAEncryption, oid.OID.sha384WithRSAEncryption, oid.OID.sha512WithRSAEncryption, oid.OID.pkcs7data, oid.OID.pkcs7signedData, oid.OID.pkcs7envelopedData, oid.OID.emailAddress, oid.OID.signingCertificateV2, oid.OID.contentType, oid.OID.messageDigest, oid.OID.signingTime, oid.OID.dsaWithSha1, oid.OID.certificateExtension, oid.OID.jurisdictionOfIncorporationSP, oid.OID.jurisdictionOfIncorporationC, oid.OID.authorityInfoAccess, oid.OID.qcStatements, oid.OID.cps, oid.OID.unotice, oid.OID.serverAuth, oid.OID.clientAuth, oid.OID.ocsp, oid.OID.caIssuers, oid.OID.dateOfBirth, oid.OID.desCBC, oid.OID.sha1, oid.OID.sha256, oid.OID.sha384, oid.OID.sha512, oid.OID.md5, oid.OID.VeriSignEVpolicy, oid.OID.extendedValidation, oid.OID.organizationValidated, oid.OID.subjectKeyIdentifier, oid.OID.keyUsage, oid.OID.subjectAltName, oid.OID.issuerAltName, oid.OID.basicConstraints, oid.OID.cRLDistributionPoints, oid.OID.certificatePolicies, oid.OID.authorityKeyIdentifier, oid.OID.extKeyUsage, oid.OID.subjectDirectoryAttributes, oid.OID.organizationName, oid.OID.organizationalUnitName, oid.OID.businessCategory, oid.OID.postalCode, oid.OID.commonName, oid.OID.surname, oid.OID.givenName, oid.OID.dnQualifier, oid.OID.serialNumber, oid.OID.countryName, oid.OID.localityName, oid.OID.stateOrProvinceName, oid.OID.streetAddress, oid.OID.desEDE3CBC, oid.OID.aes128CBC, oid.OID.aes192CBC, oid.OID.aes256CBC, oid.OID.nsCertType, oid.OID.nsComment, oid.OID.privateKeyUsagePeriod, oid.OID.cRLNumber, oid.OID.cRLReason, oid.OID.expirationDate, oid.OID.instructionCode, oid.OID.invalidityDate, oid.OID.deltaCRLIndicator, oid.OID.issuingDistributionPoint, oid.OID.certificateIssuer, oid.OID.nameConstraints, oid.OID.policyMappings, oid.OID.policyConstraints, oid.OID.freshestCRL, oid.OID.inhibitAnyPolicy, oid.OID.codeSigning, oid.OID.emailProtection, oid.OID.timeStamping])[$toSet]();
+    },
+    /*oid.OID.etsiQcsCompliance*/get etsiQcsCompliance() {
+      return C[0] || CT.C0;
+    },
+    /*oid.OID.etsiQcsRetentionPeriod*/get etsiQcsRetentionPeriod() {
+      return C[1] || CT.C1;
+    },
+    /*oid.OID.etsiQcsQcSSCD*/get etsiQcsQcSSCD() {
+      return C[2] || CT.C2;
+    },
+    /*oid.OID.dsa*/get dsa() {
+      return C[3] || CT.C3;
+    },
+    /*oid.OID.ecPublicKey*/get ecPublicKey() {
+      return C[4] || CT.C4;
+    },
+    /*oid.OID.prime256v1*/get prime256v1() {
+      return C[5] || CT.C5;
+    },
+    /*oid.OID.ecdsaWithSHA256*/get ecdsaWithSHA256() {
+      return C[6] || CT.C6;
+    },
+    /*oid.OID.ecdsaWithSHA512*/get ecdsaWithSHA512() {
+      return C[7] || CT.C7;
+    },
+    /*oid.OID.rsaEncryption*/get rsaEncryption() {
+      return C[8] || CT.C8;
+    },
+    /*oid.OID.md2WithRSAEncryption*/get md2WithRSAEncryption() {
+      return C[9] || CT.C9;
+    },
+    /*oid.OID.md4WithRSAEncryption*/get md4WithRSAEncryption() {
+      return C[10] || CT.C10;
+    },
+    /*oid.OID.md5WithRSAEncryption*/get md5WithRSAEncryption() {
+      return C[11] || CT.C11;
+    },
+    /*oid.OID.sha1WithRSAEncryption*/get sha1WithRSAEncryption() {
+      return C[12] || CT.C12;
+    },
+    /*oid.OID.RSAES_OAEP*/get RSAES_OAEP() {
+      return C[13] || CT.C13;
+    },
+    /*oid.OID.mgf1*/get mgf1() {
+      return C[14] || CT.C14;
+    },
+    /*oid.OID.pSpecified*/get pSpecified() {
+      return C[15] || CT.C15;
+    },
+    /*oid.OID.RSASSA_PSS*/get RSASSA_PSS() {
+      return C[16] || CT.C16;
+    },
+    /*oid.OID.sha256WithRSAEncryption*/get sha256WithRSAEncryption() {
+      return C[17] || CT.C17;
+    },
+    /*oid.OID.sha384WithRSAEncryption*/get sha384WithRSAEncryption() {
+      return C[18] || CT.C18;
+    },
+    /*oid.OID.sha512WithRSAEncryption*/get sha512WithRSAEncryption() {
+      return C[19] || CT.C19;
+    },
+    /*oid.OID.pkcs7data*/get pkcs7data() {
+      return C[20] || CT.C20;
+    },
+    /*oid.OID.pkcs7signedData*/get pkcs7signedData() {
+      return C[21] || CT.C21;
+    },
+    /*oid.OID.pkcs7envelopedData*/get pkcs7envelopedData() {
+      return C[22] || CT.C22;
+    },
+    /*oid.OID.emailAddress*/get emailAddress() {
+      return C[23] || CT.C23;
+    },
+    /*oid.OID.signingCertificateV2*/get signingCertificateV2() {
+      return C[24] || CT.C24;
+    },
+    /*oid.OID.contentType*/get contentType() {
+      return C[25] || CT.C25;
+    },
+    /*oid.OID.messageDigest*/get messageDigest() {
+      return C[26] || CT.C26;
+    },
+    /*oid.OID.signingTime*/get signingTime() {
+      return C[27] || CT.C27;
+    },
+    /*oid.OID.dsaWithSha1*/get dsaWithSha1() {
+      return C[28] || CT.C28;
+    },
+    /*oid.OID.certificateExtension*/get certificateExtension() {
+      return C[29] || CT.C29;
+    },
+    /*oid.OID.jurisdictionOfIncorporationSP*/get jurisdictionOfIncorporationSP() {
+      return C[30] || CT.C30;
+    },
+    /*oid.OID.jurisdictionOfIncorporationC*/get jurisdictionOfIncorporationC() {
+      return C[31] || CT.C31;
+    },
+    /*oid.OID.authorityInfoAccess*/get authorityInfoAccess() {
+      return C[32] || CT.C32;
+    },
+    /*oid.OID.qcStatements*/get qcStatements() {
+      return C[33] || CT.C33;
+    },
+    /*oid.OID.cps*/get cps() {
+      return C[34] || CT.C34;
+    },
+    /*oid.OID.unotice*/get unotice() {
+      return C[35] || CT.C35;
+    },
+    /*oid.OID.serverAuth*/get serverAuth() {
+      return C[36] || CT.C36;
+    },
+    /*oid.OID.clientAuth*/get clientAuth() {
+      return C[37] || CT.C37;
+    },
+    /*oid.OID.ocsp*/get ocsp() {
+      return C[38] || CT.C38;
+    },
+    /*oid.OID.caIssuers*/get caIssuers() {
+      return C[39] || CT.C39;
+    },
+    /*oid.OID.dateOfBirth*/get dateOfBirth() {
+      return C[40] || CT.C40;
+    },
+    /*oid.OID.desCBC*/get desCBC() {
+      return C[41] || CT.C41;
+    },
+    /*oid.OID.sha1*/get sha1() {
+      return C[42] || CT.C42;
+    },
+    /*oid.OID.sha256*/get sha256() {
+      return C[43] || CT.C43;
+    },
+    /*oid.OID.sha384*/get sha384() {
+      return C[44] || CT.C44;
+    },
+    /*oid.OID.sha512*/get sha512() {
+      return C[45] || CT.C45;
+    },
+    /*oid.OID.md5*/get md5() {
+      return C[46] || CT.C46;
+    },
+    /*oid.OID.VeriSignEVpolicy*/get VeriSignEVpolicy() {
+      return C[47] || CT.C47;
+    },
+    /*oid.OID.extendedValidation*/get extendedValidation() {
+      return C[48] || CT.C48;
+    },
+    /*oid.OID.organizationValidated*/get organizationValidated() {
+      return C[49] || CT.C49;
+    },
+    /*oid.OID.subjectKeyIdentifier*/get subjectKeyIdentifier() {
+      return C[50] || CT.C50;
+    },
+    /*oid.OID.keyUsage*/get keyUsage() {
+      return C[51] || CT.C51;
+    },
+    /*oid.OID.subjectAltName*/get subjectAltName() {
+      return C[52] || CT.C52;
+    },
+    /*oid.OID.issuerAltName*/get issuerAltName() {
+      return C[53] || CT.C53;
+    },
+    /*oid.OID.basicConstraints*/get basicConstraints() {
+      return C[54] || CT.C54;
+    },
+    /*oid.OID.cRLDistributionPoints*/get cRLDistributionPoints() {
+      return C[55] || CT.C55;
+    },
+    /*oid.OID.certificatePolicies*/get certificatePolicies() {
+      return C[56] || CT.C56;
+    },
+    /*oid.OID.authorityKeyIdentifier*/get authorityKeyIdentifier() {
+      return C[57] || CT.C57;
+    },
+    /*oid.OID.extKeyUsage*/get extKeyUsage() {
+      return C[58] || CT.C58;
+    },
+    /*oid.OID.subjectDirectoryAttributes*/get subjectDirectoryAttributes() {
+      return C[59] || CT.C59;
+    },
+    /*oid.OID.organizationName*/get organizationName() {
+      return C[60] || CT.C60;
+    },
+    /*oid.OID.organizationalUnitName*/get organizationalUnitName() {
+      return C[61] || CT.C61;
+    },
+    /*oid.OID.businessCategory*/get businessCategory() {
+      return C[62] || CT.C62;
+    },
+    /*oid.OID.postalCode*/get postalCode() {
+      return C[63] || CT.C63;
+    },
+    /*oid.OID.commonName*/get commonName() {
+      return C[64] || CT.C64;
+    },
+    /*oid.OID.surname*/get surname() {
+      return C[65] || CT.C65;
+    },
+    /*oid.OID.givenName*/get givenName() {
+      return C[66] || CT.C66;
+    },
+    /*oid.OID.dnQualifier*/get dnQualifier() {
+      return C[67] || CT.C67;
+    },
+    /*oid.OID.serialNumber*/get serialNumber() {
+      return C[68] || CT.C68;
+    },
+    /*oid.OID.countryName*/get countryName() {
+      return C[69] || CT.C69;
+    },
+    /*oid.OID.localityName*/get localityName() {
+      return C[70] || CT.C70;
+    },
+    /*oid.OID.stateOrProvinceName*/get stateOrProvinceName() {
+      return C[71] || CT.C71;
+    },
+    /*oid.OID.streetAddress*/get streetAddress() {
+      return C[72] || CT.C72;
+    },
+    /*oid.OID.desEDE3CBC*/get desEDE3CBC() {
+      return C[73] || CT.C73;
+    },
+    /*oid.OID.aes128CBC*/get aes128CBC() {
+      return C[74] || CT.C74;
+    },
+    /*oid.OID.aes192CBC*/get aes192CBC() {
+      return C[75] || CT.C75;
+    },
+    /*oid.OID.aes256CBC*/get aes256CBC() {
+      return C[76] || CT.C76;
+    },
+    /*oid.OID.nsCertType*/get nsCertType() {
+      return C[77] || CT.C77;
+    },
+    /*oid.OID.nsComment*/get nsComment() {
+      return C[78] || CT.C78;
+    },
+    /*oid.OID.privateKeyUsagePeriod*/get privateKeyUsagePeriod() {
+      return C[79] || CT.C79;
+    },
+    /*oid.OID.cRLNumber*/get cRLNumber() {
+      return C[80] || CT.C80;
+    },
+    /*oid.OID.cRLReason*/get cRLReason() {
+      return C[81] || CT.C81;
+    },
+    /*oid.OID.expirationDate*/get expirationDate() {
+      return C[82] || CT.C82;
+    },
+    /*oid.OID.instructionCode*/get instructionCode() {
+      return C[83] || CT.C83;
+    },
+    /*oid.OID.invalidityDate*/get invalidityDate() {
+      return C[84] || CT.C84;
+    },
+    /*oid.OID.deltaCRLIndicator*/get deltaCRLIndicator() {
+      return C[85] || CT.C85;
+    },
+    /*oid.OID.issuingDistributionPoint*/get issuingDistributionPoint() {
+      return C[86] || CT.C86;
+    },
+    /*oid.OID.certificateIssuer*/get certificateIssuer() {
+      return C[87] || CT.C87;
+    },
+    /*oid.OID.nameConstraints*/get nameConstraints() {
+      return C[88] || CT.C88;
+    },
+    /*oid.OID.policyMappings*/get policyMappings() {
+      return C[89] || CT.C89;
+    },
+    /*oid.OID.policyConstraints*/get policyConstraints() {
+      return C[90] || CT.C90;
+    },
+    /*oid.OID.freshestCRL*/get freshestCRL() {
+      return C[91] || CT.C91;
+    },
+    /*oid.OID.inhibitAnyPolicy*/get inhibitAnyPolicy() {
+      return C[92] || CT.C92;
+    },
+    /*oid.OID.codeSigning*/get codeSigning() {
+      return C[93] || CT.C93;
+    },
+    /*oid.OID.emailProtection*/get emailProtection() {
+      return C[94] || CT.C94;
+    },
+    /*oid.OID.timeStamping*/get timeStamping() {
+      return C[95] || CT.C95;
+    },
+    /*oid.OID._oidMapName*/get _oidMapName() {
+      return C[96] || CT.C96;
+    }
+  }, true);
+  dart.trackLibraries("packages/flutter_inappwebview/src/X509Certificate/oid.dart", {
+    "package:flutter_inappwebview/src/X509Certificate/oid.dart": oid
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["oid.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../packages/flutter_inappwebview/src/X509Certificate/oid.dart.lib.js"}');
+  // Exports:
+  return {
+    src__X509Certificate__oid: oid
+  };
+}));
+
+//# sourceMappingURL=oid.dart.lib.js.map

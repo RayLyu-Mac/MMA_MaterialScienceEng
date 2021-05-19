@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\interpolator\\mtrl_fast_out_linear_in.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\interpolator\\mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\interpolator\\mtrl_linear.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\interpolator\\mtrl_linear.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\interpolator\\mtrl_fast_out_slow_in.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\interpolator\\mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\interpolator\\mtrl_linear_out_slow_in.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\interpolator\\mtrl_linear_out_slow_in.xml"
+    }
+]

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69b2dc58-c5ba-4cdf-86c9-b8f2bbf6b993" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/equipment/safty sheet/MSDS.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/equipment/safty sheet/MSDS.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sdoyQ2zYnbt3eTaDfyp6KTck2z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69b2dc58-c5ba-4cdf-86c9-b8f2bbf6b993" name="Default Changelist" comment="" />
+      <created>1621212080266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621212080266</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3660" y="271" key="FileChooserDialogImpl" timestamp="1621272862707">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state x="3660" y="271" key="FileChooserDialogImpl/0.0.1280.760/1920.0.2560.1040@1920.0.2560.1040" timestamp="1621272862707" />
+  </component>
+</project>

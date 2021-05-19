@@ -1,0 +1,2 @@
+com/sidlatau/flutteremailsender/BuildConfig.java
+ com.sidlatau.flutteremailsender.BuildConfig

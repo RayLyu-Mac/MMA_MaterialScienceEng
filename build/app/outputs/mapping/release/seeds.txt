@@ -1,0 +1,1500 @@
+android.support.v4.media.session.MediaSessionCompat$QueueItem
+io.flutter.embedding.engine.FlutterJNI: void nativeNotifyLowMemoryWarning(long)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_STOP
+io.flutter.view.AccessibilityViewEmbedder
+io.flutter.embedding.android.FlutterTextureView: io.flutter.embedding.engine.renderer.FlutterRenderer getAttachedRenderer()
+androidx.lifecycle.ReflectiveGenericLifecycleObserver
+com.google.android.material.appbar.AppBarLayout: int getTopInset()
+com.google.android.material.appbar.AppBarLayout$BaseBehavior
+androidx.appcompat.widget.AppCompatImageView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView
+androidx.savedstate.SavedStateRegistry$1
+me.dm7.barcodescanner.zxing.ZXingScannerView
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: float getAlpha()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks
+androidx.appcompat.widget.ActionBarContainer: void setSplitBackground(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.SearchView: void setSubmitButtonEnabled(boolean)
+androidx.appcompat.widget.ActionBarOverlayLayout: java.lang.CharSequence getTitle()
+me.dm7.barcodescanner.core.CameraPreview
+com.google.android.material.button.MaterialButton: int getIconSize()
+androidx.appcompat.widget.Toolbar: void setCollapseContentDescription(int)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface$ForceDarkBehavior: int FORCE_DARK_ONLY
+androidx.appcompat.widget.AppCompatImageView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+me.dm7.barcodescanner.core.ViewFinderView: android.graphics.Rect getFramingRect()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostResumed(android.app.Activity)
+androidx.appcompat.widget.AppCompatCheckBox: void setButtonDrawable(android.graphics.drawable.Drawable)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.content.res.ColorStateList getSupportImageTintList()
+androidx.appcompat.widget.ButtonBarLayout: void setStacked(boolean)
+android.support.v4.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+com.google.android.material.floatingactionbutton.FloatingActionButton: com.google.android.material.animation.MotionSpec getHideMotionSpec()
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface: void onReceivedError(android.webkit.WebView,android.webkit.WebResourceRequest,java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.SearchView: SearchView(android.content.Context,android.util.AttributeSet)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler getWebkitToCompatConverter()
+androidx.appcompat.widget.AppCompatButton: int[] getAutoSizeTextAvailableSizes()
+com.google.android.material.snackbar.BaseTransientBottomBar$Behavior: BaseTransientBottomBar$Behavior()
+androidx.core.app.CoreComponentFactory
+io.flutter.embedding.engine.FlutterJNI: void setAsyncWaitForVsyncDelegate(io.flutter.embedding.engine.FlutterJNI$AsyncWaitForVsyncDelegate)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setRippleColor(int)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$Adapter getAdapter()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setRotation(float)
+org.chromium.support_lib_boundary.StaticsBoundaryInterface: boolean isMultiProcessEnabled()
+androidx.appcompat.widget.AppCompatSpinner: void setAdapter(android.widget.Adapter)
+io.flutter.embedding.android.FlutterImageView: android.view.Surface getSurface()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setHideMotionSpecResource(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotX(float)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertWebMessagePort(java.lang.Object)
+androidx.appcompat.widget.SearchView: void setInputType(int)
+org.chromium.support_lib_boundary.WebResourceErrorBoundaryInterface: java.lang.CharSequence getDescription()
+android.support.v4.media.session.MediaSessionCompat$Token
+androidx.appcompat.widget.ActionBarOverlayLayout: void setHideOnContentScrollEnabled(boolean)
+org.chromium.support_lib_boundary.JsReplyProxyBoundaryInterface
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setVisibility(int)
+androidx.appcompat.widget.ActionBarContainer: void setStackedBackground(android.graphics.drawable.Drawable)
+org.chromium.support_lib_boundary.TracingControllerBoundaryInterface: boolean stop(java.io.OutputStream,java.util.concurrent.Executor)
+androidx.appcompat.widget.LinearLayoutCompat: void setGravity(int)
+androidx.appcompat.app.AlertController$RecycleListView: AlertController$RecycleListView(android.content.Context,android.util.AttributeSet)
+com.google.android.material.internal.BaselineLayout: int getBaseline()
+com.google.android.material.button.MaterialButton: android.content.res.ColorStateList getStrokeColor()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setAlpha(float)
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: android.graphics.SurfaceTexture surfaceTexture()
+androidx.core.widget.NestedScrollView$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.Toolbar: android.graphics.drawable.Drawable getCollapseIcon()
+androidx.appcompat.widget.AppCompatSpinner: void setPopupBackgroundResource(int)
+androidx.appcompat.widget.AppCompatSpinner: int getDropDownVerticalOffset()
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface
+androidx.appcompat.widget.Toolbar: int getContentInsetStartWithNavigation()
+androidx.cardview.widget.CardView: void setCardElevation(float)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setOffscreenPreRaster(boolean)
+okhttp3.Protocol: okhttp3.Protocol valueOf(java.lang.String)
+androidx.appcompat.widget.ActionBarContextView: void setCustomView(android.view.View)
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback: io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback this$0
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathOffset(float)
+androidx.appcompat.view.menu.ListMenuItemView: void setGroupDividerEnabled(boolean)
+androidx.appcompat.widget.AppCompatEditText: void setTextClassifier(android.view.textclassifier.TextClassifier)
+androidx.savedstate.Recreator
+androidx.fragment.app.Fragment$2
+com.google.android.material.bottomappbar.BottomAppBar$SavedState: android.os.Parcelable$Creator CREATOR
+com.google.android.material.button.MaterialButton: void setStrokeColor(android.content.res.ColorStateList)
+androidx.appcompat.widget.AppCompatTextView: void setLastBaselineToBottomHeight(int)
+androidx.recyclerview.widget.RecyclerView: androidx.core.view.NestedScrollingChildHelper getScrollingChildHelper()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_ANY
+androidx.appcompat.widget.SearchView: void setMaxWidth(int)
+androidx.recyclerview.widget.RecyclerView: void setRecycledViewPool(androidx.recyclerview.widget.RecyclerView$RecycledViewPool)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleY(float)
+androidx.appcompat.widget.AbsActionBarView: void setVisibility(int)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: boolean getSafeBrowsingEnabled()
+io.flutter.embedding.engine.FlutterOverlaySurface: android.view.Surface surface
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setShowMotionSpecResource(int)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$HapticFeedbackType: io.flutter.embedding.engine.systemchannels.PlatformChannel$HapticFeedbackType[] values()
+androidx.appcompat.widget.AppCompatCheckBox: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$Brightness: io.flutter.embedding.engine.systemchannels.PlatformChannel$Brightness[] values()
+androidx.appcompat.widget.SearchView$SearchAutoComplete: void setSearchView(androidx.appcompat.widget.SearchView)
+androidx.cardview.widget.CardView: android.content.res.ColorStateList getCardBackgroundColor()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateY()
+com.google.android.material.bottomappbar.BottomAppBar$Behavior
+io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference
+androidx.appcompat.widget.AppCompatEditText: android.view.textclassifier.TextClassifier getTextClassifier()
+me.dm7.barcodescanner.core.ViewFinderView: void setLaserColor(int)
+androidx.appcompat.widget.Toolbar: android.graphics.drawable.Drawable getOverflowIcon()
+androidx.appcompat.widget.SearchView: int getImeOptions()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatButton createButton(android.content.Context,android.util.AttributeSet)
+com.google.android.material.floatingactionbutton.FloatingActionButton: int getSize()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setRootAlpha(int)
+androidx.appcompat.widget.LinearLayoutCompat: int getDividerWidth()
+io.flutter.embedding.engine.FlutterJNI: FlutterJNI()
+androidx.appcompat.widget.AppCompatCheckBox: android.content.res.ColorStateList getSupportBackgroundTintList()
+me.dm7.barcodescanner.core.CameraPreview: int getDisplayOrientation()
+io.flutter.view.FlutterView: io.flutter.view.FlutterNativeView getFlutterNativeView()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: InputAwareWebView(android.content.Context,android.util.AttributeSet)
+com.google.android.material.bottomappbar.BottomAppBar: void setHideOnScroll(boolean)
+androidx.appcompat.widget.AppCompatRadioButton: void setBackgroundResource(int)
+androidx.appcompat.view.menu.ActionMenuItemView: void setTitle(java.lang.CharSequence)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setBorderCornerRadius(int)
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMajor()
+io.flutter.plugin.platform.SingleViewPresentation: boolean startFocused
+androidx.appcompat.widget.SearchView: void setOnSearchClickListener(android.view.View$OnClickListener)
+com.google.android.material.bottomsheet.BottomSheetBehavior
+androidx.recyclerview.widget.RecyclerView: void setHasFixedSize(boolean)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: InAppWebView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface
+androidx.appcompat.widget.AppCompatRadioButton: void setSupportButtonTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.widget.Toolbar: void setTitle(int)
+io.flutter.embedding.engine.FlutterJNI: void onDisplayOverlaySurface(int,int,int,int,int)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler getStatics()
+androidx.appcompat.view.menu.ListMenuItemView: void setForceShowIcon(boolean)
+androidx.appcompat.widget.ViewStubCompat: void setOnInflateListener(androidx.appcompat.widget.ViewStubCompat$OnInflateListener)
+androidx.recyclerview.widget.RecyclerView: void setAccessibilityDelegateCompat(androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate)
+androidx.media.AudioAttributesCompatParcelizer: void write(androidx.media.AudioAttributesCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.widget.ActionMenuView: void setPopupTheme(int)
+androidx.appcompat.widget.AppCompatSpinner$SavedState: android.os.Parcelable$Creator CREATOR
+com.google.zxing.qrcode.decoder.DataMask: com.google.zxing.qrcode.decoder.DataMask[] values()
+com.google.android.material.appbar.ViewOffsetBehavior: ViewOffsetBehavior(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.android.RenderMode: io.flutter.embedding.android.RenderMode valueOf(java.lang.String)
+com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior: FloatingActionButton$Behavior()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setSupportImageTintList(android.content.res.ColorStateList)
+io.flutter.embedding.engine.FlutterOverlaySurface: int id
+androidx.appcompat.widget.AppCompatTextView: void setSupportCompoundDrawablesTintList(android.content.res.ColorStateList)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setIcon(android.graphics.drawable.Drawable)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: java.lang.String getPathName()
+io.flutter.embedding.engine.FlutterJNI: void onSurfaceWindowChanged(android.view.Surface)
+android.support.v4.media.session.PlaybackStateCompat
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setExpandedComponentIdHint(int)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostCreated(android.app.Activity,android.os.Bundle)
+com.google.android.material.button.MaterialButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.recyclerview.widget.RecyclerView: void setItemAnimator(androidx.recyclerview.widget.RecyclerView$ItemAnimator)
+io.flutter.embedding.engine.FlutterJNI: boolean nativeFlutterTextUtilsIsRegionalIndicator(int)
+androidx.appcompat.widget.LinearLayoutCompat: void setMeasureWithLargestChildEnabled(boolean)
+androidx.appcompat.widget.Toolbar: void setNavigationContentDescription(int)
+com.google.android.material.circularreveal.CircularRevealFrameLayout
+io.flutter.embedding.engine.FlutterJNI: io.flutter.plugin.localization.LocalizationPlugin localizationPlugin
+androidx.appcompat.widget.AppCompatCheckBox: android.content.res.ColorStateList getSupportButtonTintList()
+io.flutter.embedding.engine.FlutterJNI: void onDisplayPlatformView(int,int,int,int,int,int,int,io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack)
+com.google.android.material.circularreveal.CircularRevealFrameLayout: void setCircularRevealScrimColor(int)
+io.flutter.plugins.urllauncher.WebViewActivity$2: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager deferredComponentManager
+io.flutter.plugin.platform.SingleViewPresentation
+androidx.activity.ComponentActivity: ComponentActivity()
+androidx.appcompat.widget.ActionMenuView: void setOverflowReserved(boolean)
+androidx.appcompat.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.ActionMenuView: void setPresenter(androidx.appcompat.widget.ActionMenuPresenter)
+com.google.android.material.theme.MaterialComponentsViewInflater
+androidx.core.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+androidx.appcompat.widget.ActivityChooserView$InnerLayout
+androidx.appcompat.widget.AppCompatImageButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+io.flutter.view.AccessibilityViewEmbedder: AccessibilityViewEmbedder(android.view.View,int)
+androidx.appcompat.widget.AppCompatButton: int getAutoSizeStepGranularity()
+androidx.appcompat.widget.ScrollingTabContainerView
+com.google.android.material.button.MaterialButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setLogo(int)
+io.flutter.embedding.engine.systemchannels.TextInputChannel$TextCapitalization: io.flutter.embedding.engine.systemchannels.TextInputChannel$TextCapitalization[] values()
+androidx.appcompat.widget.ContentFrameLayout: void setAttachListener(androidx.appcompat.widget.ContentFrameLayout$OnAttachListener)
+org.chromium.support_lib_boundary.TracingControllerBoundaryInterface: boolean isTracing()
+io.flutter.embedding.engine.FlutterJNI: void loadDartDeferredLibrary(int,java.lang.String[])
+androidx.core.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.SearchView: void setSearchableInfo(android.app.SearchableInfo)
+com.google.android.material.transformation.ExpandableTransformationBehavior: ExpandableTransformationBehavior(android.content.Context,android.util.AttributeSet)
+io.flutter.plugin.platform.SingleViewPresentation: SingleViewPresentation(android.content.Context,android.view.Display,io.flutter.plugin.platform.PlatformViewFactory,io.flutter.plugin.platform.AccessibilityEventsDelegate,int,java.lang.Object,android.view.View$OnFocusChangeListener)
+io.flutter.embedding.engine.FlutterJNI: void onPreEngineRestart()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior
+com.google.android.material.internal.NavigationMenuItemView: void setIconPadding(int)
+io.flutter.plugin.platform.SingleViewPresentation: android.content.Context outerContext
+com.google.zxing.common.CharacterSetECI: com.google.zxing.common.CharacterSetECI valueOf(java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: java.lang.String observatoryUri
+com.google.android.material.button.MaterialButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+io.flutter.view.FlutterCallbackInformation: FlutterCallbackInformation(java.lang.String,java.lang.String,java.lang.String)
+org.chromium.support_lib_boundary.WebMessageBoundaryInterface: java.lang.reflect.InvocationHandler[] getPorts()
+androidx.cardview.widget.CardView: void setMinimumHeight(int)
+androidx.recyclerview.widget.RecyclerView: RecyclerView(android.content.Context,android.util.AttributeSet)
+android.support.v4.media.MediaBrowserCompat$MediaItem: android.os.Parcelable$Creator CREATOR
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: int getCacheMode()
+androidx.appcompat.view.menu.ExpandedMenuView: int getWindowAnimations()
+androidx.appcompat.widget.AppCompatTextView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+io.flutter.plugins.urllauncher.WebViewActivity$FlutterWebChromeClient$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatEditText createEditText(android.content.Context,android.util.AttributeSet)
+android.support.v4.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: void setAllowFileAccess(boolean)
+org.chromium.support_lib_boundary.SafeBrowsingResponseBoundaryInterface: void backToSafety(boolean)
+com.google.zxing.ResultMetadataType: com.google.zxing.ResultMetadataType[] values()
+com.google.android.material.internal.NavigationMenuItemView: void setActionView(android.view.View)
+io.flutter.plugins.GeneratedPluginRegistrant
+androidx.recyclerview.widget.RecyclerView: int getItemDecorationCount()
+androidx.appcompat.view.menu.ListMenuItemView: void setSubMenuArrowVisible(boolean)
+androidx.core.widget.NestedScrollView: float getBottomFadingEdgeStrength()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatRatingBar createRatingBar(android.content.Context,android.util.AttributeSet)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatHoveredFocusedTranslationZResource(int)
+androidx.appcompat.widget.ActionBarOverlayLayout: ActionBarOverlayLayout(android.content.Context,android.util.AttributeSet)
+com.google.android.material.appbar.HeaderScrollingViewBehavior: HeaderScrollingViewBehavior()
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState$State: com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState$State[] values()
+androidx.appcompat.widget.Toolbar: void setLogoDescription(java.lang.CharSequence)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setRippleColor(android.content.res.ColorStateList)
+androidx.core.graphics.drawable.IconCompat
+androidx.media.AudioAttributesImplApi21Parcelizer: androidx.media.AudioAttributesImplApi21 read(androidx.versionedparcelable.VersionedParcel)
+androidx.core.widget.NestedScrollView: float getTopFadingEdgeStrength()
+io.flutter.plugins.imagepicker.ImagePickerPlugin$LifeCycleObserver
+com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode[] values()
+com.google.android.material.appbar.AppBarLayout$Behavior: AppBarLayout$Behavior()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: java.util.List finalClippingPaths
+androidx.recyclerview.widget.RecyclerView: void setLayoutManager(androidx.recyclerview.widget.RecyclerView$LayoutManager)
+androidx.transition.ChangeBounds$7: androidx.transition.ChangeBounds$ViewBounds mViewBounds
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatSeekBar createSeekBar(android.content.Context,android.util.AttributeSet)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface$ForceDarkBehavior: int MEDIA_QUERY_ONLY
+androidx.coordinatorlayout.widget.CoordinatorLayout: androidx.core.view.WindowInsetsCompat getLastWindowInsets()
+androidx.appcompat.widget.Toolbar: java.lang.CharSequence getNavigationContentDescription()
+androidx.versionedparcelable.CustomVersionedParcelable: CustomVersionedParcelable()
+androidx.core.widget.NestedScrollView
+me.dm7.barcodescanner.core.BarcodeScannerView: void setIsBorderCornerRounded(boolean)
+io.flutter.embedding.engine.FlutterJNI: long nativeAttach(io.flutter.embedding.engine.FlutterJNI,boolean)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.graphics.PorterDuff$Mode getBackgroundTintMode()
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertSafeBrowsingResponse(java.lang.Object)
+androidx.appcompat.widget.ActionMenuView: int getWindowAnimations()
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity: ChromeCustomTabsActivity()
+androidx.recyclerview.widget.RecyclerView: int getMaxFlingVelocity()
+io.flutter.embedding.engine.FlutterJNI: java.lang.String TAG
+androidx.appcompat.widget.FitWindowsFrameLayout
+androidx.appcompat.widget.ActionBarContainer: void setVisibility(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathStart(float)
+com.google.android.material.transformation.FabTransformationScrimBehavior
+io.flutter.embedding.engine.FlutterJNI: void dispatchPlatformMessage(java.lang.String,java.nio.ByteBuffer,int,int)
+com.google.android.material.floatingactionbutton.FloatingActionButton: com.google.android.material.animation.MotionSpec getShowMotionSpec()
+org.chromium.support_lib_boundary.WebMessageListenerBoundaryInterface: void onPostMessage(android.webkit.WebView,java.lang.reflect.InvocationHandler,android.net.Uri,boolean,java.lang.reflect.InvocationHandler)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathEnd(float)
+androidx.appcompat.widget.DialogTitle: DialogTitle(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.view.menu.ListMenuItemView
+com.google.zxing.ResultMetadataType: com.google.zxing.ResultMetadataType valueOf(java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType[] values()
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+io.flutter.embedding.android.FlutterView
+io.flutter.embedding.engine.FlutterJNI: boolean nativeFlutterTextUtilsIsEmoji(int)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertWebResourceError(java.lang.Object)
+io.flutter.embedding.engine.FlutterJNI: boolean nativeFlutterTextUtilsIsEmojiModifierBase(int)
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
+androidx.appcompat.widget.AppCompatImageView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+com.google.android.material.appbar.AppBarLayout$Behavior: AppBarLayout$Behavior(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.Toolbar: android.view.Menu getMenu()
+com.google.android.material.bottomappbar.BottomAppBar: void setFabAlignmentMode(int)
+androidx.core.widget.NestedScrollView: float getVerticalScrollFactorCompat()
+io.flutter.plugin.platform.SingleViewPresentation: android.view.View$OnFocusChangeListener focusChangeListener
+io.flutter.plugins.urllauncher.WebViewActivity
+io.flutter.view.AccessibilityViewEmbedder: void setFlutterNodesTranslateBounds(android.view.accessibility.AccessibilityNodeInfo,android.graphics.Rect,android.view.accessibility.AccessibilityNodeInfo)
+androidx.appcompat.app.AppCompatActivity: void setContentView(android.view.View)
+androidx.appcompat.widget.AppCompatImageView: void setSupportImageTintList(android.content.res.ColorStateList)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: void setContainerView(android.view.View)
+io.flutter.embedding.engine.FlutterJNI: java.util.Set flutterUiDisplayListeners
+io.flutter.embedding.android.FlutterSplashView$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.widget.AppCompatCheckBox: void setButtonDrawable(int)
+org.chromium.support_lib_boundary.SafeBrowsingResponseBoundaryInterface
+io.flutter.embedding.android.FlutterSurfaceView: io.flutter.embedding.engine.renderer.FlutterRenderer getAttachedRenderer()
+androidx.core.app.RemoteActionCompat: RemoteActionCompat()
+androidx.activity.ImmLeaksCleaner
+okhttp3.Protocol: okhttp3.Protocol[] values()
+androidx.appcompat.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatTextView: void setTextMetricsParamsCompat(androidx.core.text.PrecomputedTextCompat$Params)
+androidx.appcompat.view.menu.ExpandedMenuView
+androidx.appcompat.widget.AppCompatRadioButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+io.flutter.view.FlutterView: io.flutter.app.FlutterPluginRegistry getPluginRegistry()
+com.google.android.material.snackbar.BaseTransientBottomBar$Behavior
+io.flutter.view.AccessibilityViewEmbedder: boolean performAction(int,int,android.os.Bundle)
+androidx.appcompat.widget.LinearLayoutCompat: void setShowDividers(int)
+androidx.appcompat.widget.Toolbar: void setSubtitleTextColor(int)
+com.google.android.material.snackbar.SnackbarContentLayout: android.widget.Button getActionView()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType: io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType valueOf(java.lang.String)
+com.google.android.material.floatingactionbutton.FloatingActionButton: boolean getUseCompatPadding()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean access$200(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+com.google.android.material.button.MaterialButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+androidx.browser.browseractions.BrowserActionsFallbackMenuView: BrowserActionsFallbackMenuView(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.FlutterJNI: void markTextureFrameAvailable(long)
+com.google.android.material.button.MaterialButton: android.content.res.ColorStateList getBackgroundTintList()
+org.chromium.support_lib_boundary.ServiceWorkerControllerBoundaryInterface: void setServiceWorkerClient(java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.AppCompatTextView: android.content.res.ColorStateList getSupportCompoundDrawablesTintList()
+com.google.android.material.button.MaterialButton: void setCornerRadius(int)
+io.flutter.embedding.engine.FlutterJNI: void setPlatformViewsController(io.flutter.plugin.platform.PlatformViewsController)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setupCameraPreview(me.dm7.barcodescanner.core.CameraWrapper)
+io.flutter.view.AccessibilityViewEmbedder: java.util.Map embeddedViewToDisplayBounds
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView createMultiAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.app.AppCompatActivity: AppCompatActivity()
+androidx.appcompat.widget.SearchView: int getPreferredWidth()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setSize(int)
+androidx.appcompat.widget.AppCompatRadioButton
+io.flutter.embedding.android.FlutterActivityLaunchConfigs$BackgroundMode: io.flutter.embedding.android.FlutterActivityLaunchConfigs$BackgroundMode valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate getCompatAccessibilityDelegate()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatImageButton createImageButton(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$Brightness: io.flutter.embedding.engine.systemchannels.PlatformChannel$Brightness valueOf(java.lang.String)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.Object convertSafeBrowsingResponse(java.lang.reflect.InvocationHandler)
+io.flutter.embedding.engine.FlutterJNI: void onEndFrame()
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface: boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest)
+androidx.media.AudioAttributesImplBaseParcelizer: AudioAttributesImplBaseParcelizer()
+androidx.appcompat.view.menu.ActionMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+androidx.appcompat.widget.SearchView: void setQueryHint(java.lang.CharSequence)
+com.google.android.material.appbar.AppBarLayout: void setOrientation(int)
+androidx.appcompat.widget.AppCompatCheckBox: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+io.flutter.embedding.android.FlutterImageView
+com.google.android.material.floatingactionbutton.FloatingActionButton
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: boolean getWillSuppressErrorPage()
+androidx.appcompat.widget.AppCompatButton: void setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)
+com.google.android.material.internal.VisibilityAwareImageButton: void setVisibility(int)
+androidx.appcompat.widget.DropDownListView: void setSelector(android.graphics.drawable.Drawable)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.Map getOptions()
+me.dm7.barcodescanner.core.ViewFinderView
+io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference: HiddenLifecycleReference(androidx.lifecycle.Lifecycle)
+io.flutter.embedding.engine.FlutterJNI: void addIsDisplayingFlutterUiListener(io.flutter.embedding.engine.renderer.FlutterUiDisplayListener)
+com.google.android.material.transformation.FabTransformationBehavior: FabTransformationBehavior()
+io.flutter.plugins.imagepicker.ImagePickerFileProvider
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableDelegateState: int getChangingConfigurations()
+androidx.appcompat.widget.ActionBarContextView
+io.flutter.view.AccessibilityViewEmbedder: android.view.accessibility.AccessibilityNodeInfo getRootNode(android.view.View,int,android.graphics.Rect)
+androidx.appcompat.widget.Toolbar: int getTitleMarginEnd()
+io.flutter.embedding.engine.FlutterJNI: void ensureNotAttachedToNative()
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface: void onSafeBrowsingHit(android.webkit.WebView,android.webkit.WebResourceRequest,int,java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.Toolbar: android.view.MenuInflater getMenuInflater()
+io.flutter.view.AccessibilityBridge$Flag: io.flutter.view.AccessibilityBridge$Flag valueOf(java.lang.String)
+io.flutter.view.AccessibilityViewEmbedder: android.view.accessibility.AccessibilityNodeInfo convertToFlutterNode(android.view.accessibility.AccessibilityNodeInfo,int,android.view.View)
+io.flutter.embedding.engine.FlutterOverlaySurface: FlutterOverlaySurface(int,android.view.Surface)
+androidx.appcompat.widget.AppCompatEditText: android.text.Editable getText()
+androidx.appcompat.widget.AppCompatTextView: void setSupportCompoundDrawablesTintMode(android.graphics.PorterDuff$Mode)
+com.google.android.material.transformation.TransformationChildLayout
+me.dm7.barcodescanner.core.BarcodeScannerView: void setBorderLineLength(int)
+androidx.appcompat.app.AppCompatViewInflater: java.lang.Object[] mConstructorArgs
+io.flutter.plugins.urllauncher.WebViewActivity$2
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.widget.Toolbar: java.lang.CharSequence getCollapseContentDescription()
+androidx.coordinatorlayout.widget.CoordinatorLayout$Behavior: CoordinatorLayout$Behavior()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathStart()
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: void attachToGLContext(int)
+androidx.appcompat.widget.SearchView: void setOnQueryTextFocusChangeListener(android.view.View$OnFocusChangeListener)
+io.flutter.embedding.engine.FlutterJNI: void setAccessibilityDelegate(io.flutter.embedding.engine.FlutterJNI$AccessibilityDelegate)
+com.google.android.material.appbar.AppBarLayout: int getDownNestedScrollRange()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleX(float)
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ActionBroadcastReceiver: ActionBroadcastReceiver()
+com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout: void setOnLayoutChangeListener(com.google.android.material.snackbar.BaseTransientBottomBar$OnLayoutChangeListener)
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType valueOf(java.lang.String)
+androidx.appcompat.widget.AppCompatImageView: android.graphics.PorterDuff$Mode getSupportImageTintMode()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillColor(int)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event valueOf(java.lang.String)
+androidx.appcompat.widget.ButtonBarLayout
+androidx.browser.browseractions.BrowserActionsFallbackMenuView
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.FlutterOverlaySurface createOverlaySurface()
+org.chromium.support_lib_boundary.ServiceWorkerClientBoundaryInterface
+androidx.appcompat.widget.AppCompatTextView: int getAutoSizeMaxTextSize()
+com.google.android.material.button.MaterialButton: void setCornerRadiusResource(int)
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatSpinner: void setDropDownHorizontalOffset(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.Object convertWebMessagePort(java.lang.reflect.InvocationHandler)
+androidx.coordinatorlayout.widget.CoordinatorLayout: android.graphics.drawable.Drawable getStatusBarBackground()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_DESTROY
+com.google.android.material.transformation.FabTransformationBehavior: FabTransformationBehavior(android.content.Context,android.util.AttributeSet)
+android.support.v4.media.session.ParcelableVolumeInfo
+io.flutter.embedding.android.FlutterActivity: FlutterActivity()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostStarted(android.app.Activity)
+org.chromium.support_lib_boundary.SafeBrowsingResponseBoundaryInterface: void proceed(boolean)
+com.google.android.material.bottomsheet.BottomSheetBehavior$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.Toolbar: int getContentInsetEnd()
+io.flutter.embedding.engine.FlutterJNI: void nativeRegisterTexture(long,long,io.flutter.embedding.engine.renderer.SurfaceTextureWrapper)
+io.flutter.view.AccessibilityViewEmbedder: android.util.SparseArray flutterIdToOrigin
+androidx.appcompat.widget.Toolbar: int getTitleMarginBottom()
+io.flutter.embedding.engine.FlutterJNI: void nativeInvokePlatformMessageEmptyResponseCallback(long,int)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityStarted(android.app.Activity)
+com.google.android.material.button.MaterialButton: void setIconPadding(int)
+org.chromium.support_lib_boundary.TracingControllerBoundaryInterface
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean needsSave
+io.flutter.embedding.engine.FlutterJNI: boolean loadLibraryCalled
+androidx.activity.ComponentActivity$3
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateY(float)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: int getFillColor()
+com.google.android.material.bottomappbar.BottomAppBar: android.content.res.ColorStateList getBackgroundTint()
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setStatusBarBackground(android.graphics.drawable.Drawable)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.view.FlutterCallbackInformation nativeLookupCallbackInformation(long)
+io.flutter.view.FlutterView: android.view.accessibility.AccessibilityNodeProvider getAccessibilityNodeProvider()
+io.flutter.plugins.urllauncher.WebViewActivity: WebViewActivity()
+androidx.appcompat.app.AppCompatViewInflater: int[] sOnClickAttrs
+androidx.appcompat.app.AppCompatViewInflater: android.view.View createView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet,boolean,boolean,boolean,boolean)
+androidx.appcompat.widget.ScrollingTabContainerView: void setContentHeight(int)
+androidx.appcompat.widget.SearchView: java.lang.CharSequence getQueryHint()
+androidx.appcompat.widget.AppCompatTextView: androidx.core.text.PrecomputedTextCompat$Params getTextMetricsParamsCompat()
+androidx.appcompat.widget.Toolbar: void setLogo(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillAlpha(float)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setHasNonEmbeddedTabs(boolean)
+androidx.appcompat.widget.Toolbar: void setTitleMarginEnd(int)
+androidx.appcompat.widget.Toolbar: int getCurrentContentInsetRight()
+android.support.v4.media.MediaBrowserCompat$CustomActionResultReceiver
+androidx.lifecycle.Lifecycle$State: androidx.lifecycle.Lifecycle$State valueOf(java.lang.String)
+com.google.android.material.bottomappbar.BottomAppBar: void setFabCradleRoundedCornerRadius(float)
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType valueOf(java.lang.String)
+com.google.android.material.snackbar.Snackbar$SnackbarLayout: Snackbar$SnackbarLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AbsActionBarView: int getContentHeight()
+androidx.webkit.internal.WebViewFeatureInternal: androidx.webkit.internal.WebViewFeatureInternal valueOf(java.lang.String)
+androidx.appcompat.app.AppCompatActivity
+androidx.appcompat.widget.AppCompatImageButton: void setImageBitmap(android.graphics.Bitmap)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback: void onEnd(android.view.WindowInsetsAnimation)
+androidx.recyclerview.widget.RecyclerView: void setAdapter(androidx.recyclerview.widget.RecyclerView$Adapter)
+androidx.appcompat.widget.AppCompatImageButton: void setSupportImageTintMode(android.graphics.PorterDuff$Mode)
+com.example.mma_mse.MainActivity: MainActivity()
+com.google.android.material.bottomappbar.BottomAppBar: void setSubtitle(java.lang.CharSequence)
+io.flutter.plugin.platform.SingleViewPresentation: int viewId
+androidx.media.AudioAttributesCompatParcelizer: AudioAttributesCompatParcelizer()
+androidx.appcompat.widget.AppCompatTextView
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setIncognito(boolean)
+androidx.appcompat.widget.AppCompatCheckBox: android.graphics.PorterDuff$Mode getSupportButtonTintMode()
+androidx.appcompat.widget.SearchView: SearchView(android.content.Context)
+androidx.appcompat.widget.Toolbar: android.widget.TextView getTitleTextView()
+io.flutter.embedding.engine.FlutterJNI: void onSurfaceCreated(android.view.Surface)
+androidx.recyclerview.widget.RecyclerView: void setRecyclerListener(androidx.recyclerview.widget.RecyclerView$RecyclerListener)
+com.google.android.material.button.MaterialButton: int getIconGravity()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatPressedTranslationZ(float)
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: void release()
+androidx.appcompat.widget.AppCompatRadioButton: android.content.res.ColorStateList getSupportButtonTintList()
+io.flutter.embedding.engine.systemchannels.SettingsChannel$PlatformBrightness: io.flutter.embedding.engine.systemchannels.SettingsChannel$PlatformBrightness valueOf(java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: void setRefreshRateFPS(float)
+org.chromium.support_lib_boundary.ServiceWorkerClientBoundaryInterface: android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebResourceRequest)
+org.chromium.support_lib_boundary.WebMessageCallbackBoundaryInterface: void onMessage(java.lang.reflect.InvocationHandler,java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.Toolbar: int getContentInsetStart()
+androidx.appcompat.widget.AppCompatImageButton: void setImageURI(android.net.Uri)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setBackgroundResource(int)
+androidx.core.widget.NestedScrollView: NestedScrollView(android.content.Context,android.util.AttributeSet)
+androidx.lifecycle.DefaultLifecycleObserver
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: void setDropDownBackgroundResource(int)
+androidx.cardview.widget.CardView: void setMaxCardElevation(float)
+androidx.core.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+io.flutter.embedding.engine.FlutterJNI: long performNativeAttach(io.flutter.embedding.engine.FlutterJNI,boolean)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.plugin.platform.PlatformViewsController platformViewsController
+androidx.appcompat.widget.ActionMenuView: android.view.Menu getMenu()
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: void nativeSurfaceCreated(long,android.view.Surface)
+org.chromium.support_lib_boundary.WebResourceErrorBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: boolean nativeFlutterTextUtilsIsEmojiModifier(int)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setSafeBrowsingEnabled(boolean)
+org.chromium.support_lib_boundary.WebResourceRequestBoundaryInterface
+androidx.appcompat.widget.ViewStubCompat
+com.google.android.material.transformation.ExpandableBehavior: ExpandableBehavior()
+io.flutter.embedding.engine.FlutterJNI: void asyncWaitForVsync(long)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.String[] getSupportedFeatures()
+androidx.appcompat.widget.Toolbar: void setNavigationIcon(android.graphics.drawable.Drawable)
+org.chromium.support_lib_boundary.TracingControllerBoundaryInterface: void start(int,java.util.Collection,int)
+io.flutter.embedding.engine.FlutterJNI: void nativeSetAccessibilityFeatures(long,int)
+io.flutter.embedding.engine.FlutterJNI: void handlePlatformMessageResponse(int,byte[])
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: void install()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: int getStrokeColor()
+androidx.appcompat.widget.AlertDialogLayout
+androidx.appcompat.widget.ActionBarContextView: int getAnimatedVisibility()
+androidx.appcompat.widget.AppCompatTextView: int getAutoSizeMinTextSize()
+com.google.android.material.button.MaterialButton
+io.flutter.embedding.engine.FlutterOverlaySurface: int getId()
+androidx.appcompat.widget.ActionBarOverlayLayout: void setWindowTitle(java.lang.CharSequence)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertServiceWorkerSettings(java.lang.Object)
+androidx.cardview.widget.CardView: int getContentPaddingTop()
+androidx.customview.view.AbsSavedState: android.os.Parcelable$Creator CREATOR
+org.chromium.support_lib_boundary.ProxyControllerBoundaryInterface: void clearProxyOverride(java.lang.Runnable,java.util.concurrent.Executor)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setLaserEnabled(boolean)
+androidx.appcompat.widget.AppCompatImageButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+androidx.appcompat.widget.AppCompatEditText: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+io.flutter.view.AccessibilityBridge$AccessibilityFeature: io.flutter.view.AccessibilityBridge$AccessibilityFeature[] values()
+io.flutter.embedding.engine.FlutterJNI: void nativeDispatchSemanticsAction(long,int,int,java.nio.ByteBuffer,int)
+io.flutter.embedding.engine.FlutterJNI: void nativeOnVsync(long,long,long)
+androidx.lifecycle.CompositeGeneratedAdaptersObserver
+androidx.appcompat.widget.ActionMenuView
+org.chromium.support_lib_boundary.WebMessageListenerBoundaryInterface
+io.flutter.view.FlutterCallbackInformation: java.lang.String callbackName
+com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout: void setClickableOrFocusableBasedOnAccessibility(boolean)
+androidx.appcompat.widget.Toolbar: void setTitleTextColor(int)
+com.google.android.material.internal.ForegroundLinearLayout: ForegroundLinearLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatEditText
+androidx.appcompat.widget.AppCompatTextView: android.content.res.ColorStateList getSupportBackgroundTintList()
+androidx.recyclerview.widget.GridLayoutManager
+com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior: FloatingActionButton$BaseBehavior(android.content.Context,android.util.AttributeSet)
+androidx.media.AudioAttributesImplApi21Parcelizer: void write(androidx.media.AudioAttributesImplApi21,androidx.versionedparcelable.VersionedParcel)
+io.flutter.embedding.engine.FlutterJNI: void updateCustomAccessibilityActions(java.nio.ByteBuffer,java.lang.String[])
+org.chromium.support_lib_boundary.WebResourceRequestBoundaryInterface: boolean isRedirect()
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setStatusBarBackgroundColor(int)
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMinor()
+com.google.android.material.transformation.FabTransformationSheetBehavior: FabTransformationSheetBehavior()
+com.google.android.material.theme.MaterialComponentsViewInflater: androidx.appcompat.widget.AppCompatButton createButton(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.app.AppCompatViewInflater: void checkOnClickListener(android.view.View,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatImageView: android.content.res.ColorStateList getSupportImageTintList()
+com.google.android.material.button.MaterialButton: void setIconTint(android.content.res.ColorStateList)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setImageDrawable(android.graphics.drawable.Drawable)
+androidx.cardview.widget.CardView: void setCardBackgroundColor(android.content.res.ColorStateList)
+org.chromium.support_lib_boundary.SafeBrowsingResponseBoundaryInterface: void showInterstitial(boolean)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeColor(int)
+androidx.recyclerview.widget.RecyclerView: void setEdgeEffectFactory(androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler createWebView(android.webkit.WebView)
+android.support.v4.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+androidx.appcompat.widget.LinearLayoutCompat: void setDividerPadding(int)
+io.flutter.plugin.platform.SingleViewPresentation: SingleViewPresentation(android.content.Context,android.view.Display,io.flutter.plugin.platform.AccessibilityEventsDelegate,io.flutter.plugin.platform.SingleViewPresentation$PresentationState,android.view.View$OnFocusChangeListener,boolean)
+okhttp3.TlsVersion: okhttp3.TlsVersion valueOf(java.lang.String)
+com.google.android.material.bottomappbar.BottomAppBar: int getFabAlignmentMode()
+io.flutter.embedding.android.DrawableSplashScreen$DrawableSplashScreenView
+io.flutter.embedding.engine.FlutterJNI: void updateSemantics(java.nio.ByteBuffer,java.lang.String[])
+org.chromium.support_lib_boundary.JsReplyProxyBoundaryInterface: void postMessage(java.lang.String)
+androidx.appcompat.widget.LinearLayoutCompat: float getWeightSum()
+io.flutter.embedding.engine.FlutterJNI: void dispatchPointerDataPacket(java.nio.ByteBuffer,int)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setShowMotionSpec(com.google.android.material.animation.MotionSpec)
+androidx.appcompat.widget.AppCompatCheckedTextView
+io.flutter.embedding.engine.FlutterJNI: void onSurfaceChanged(int,int)
+android.support.v4.graphics.drawable.IconCompatParcelizer
+androidx.appcompat.widget.SearchView: void setImeOptions(int)
+io.flutter.embedding.engine.FlutterJNI: void nativeDeferredComponentInstallFailure(int,java.lang.String,boolean)
+androidx.appcompat.widget.AppCompatTextView: android.view.textclassifier.TextClassifier getTextClassifier()
+okhttp3.internal.http2.ErrorCode: okhttp3.internal.http2.ErrorCode valueOf(java.lang.String)
+org.chromium.support_lib_boundary.WebViewRendererClientBoundaryInterface: void onRendererResponsive(android.webkit.WebView,java.lang.reflect.InvocationHandler)
+io.flutter.embedding.engine.FlutterJNI: void nativeSurfaceWindowChanged(long,android.view.Surface)
+androidx.cardview.widget.CardView: void setRadius(float)
+androidx.appcompat.widget.AppCompatSpinner: androidx.appcompat.widget.AppCompatSpinner$SpinnerPopup getInternalPopup()
+androidx.cardview.widget.CardView: int getContentPaddingBottom()
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.graphics.PorterDuff$Mode getSupportImageTintMode()
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: void postMessageToMainFrame(java.lang.reflect.InvocationHandler,android.net.Uri)
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.decoder.ErrorCorrectionLevel[] values()
+androidx.appcompat.widget.Toolbar: void setTitleMarginStart(int)
+androidx.appcompat.widget.Toolbar: void setNavigationIcon(int)
+io.flutter.embedding.engine.FlutterJNI: void attachToNative(boolean)
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface: void onReceivedHttpError(android.webkit.WebView,android.webkit.WebResourceRequest,android.webkit.WebResourceResponse)
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.SingleViewPresentation$PresentationState state
+org.chromium.support_lib_boundary.WebMessagePortBoundaryInterface: void postMessage(java.lang.reflect.InvocationHandler)
+android.support.v4.media.MediaMetadataCompat
+androidx.appcompat.widget.AppCompatCheckBox: int getCompoundPaddingLeft()
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.Object convertServiceWorkerSettings(java.lang.reflect.InvocationHandler)
+com.google.android.material.internal.CheckableImageButton: CheckableImageButton(android.content.Context,android.util.AttributeSet)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient: void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap)
+com.google.android.material.appbar.ViewOffsetBehavior: ViewOffsetBehavior()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCustomSize(int)
+androidx.appcompat.widget.AppCompatRadioButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+com.google.android.material.button.MaterialButton: int getCornerRadius()
+io.flutter.embedding.android.FlutterSplashView$SavedState: android.os.Bundle splashScreenState
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle)
+androidx.appcompat.view.menu.ActionMenuItemView
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: void goForwardButtonClicked(android.view.MenuItem)
+androidx.appcompat.view.menu.ActionMenuItemView: void setChecked(boolean)
+androidx.appcompat.widget.FitWindowsLinearLayout: FitWindowsLinearLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.Toolbar: void setContentInsetEndWithActions(int)
+io.flutter.embedding.engine.FlutterJNI: void setPlatformMessageHandler(io.flutter.embedding.engine.dart.PlatformMessageHandler)
+org.chromium.support_lib_boundary.ServiceWorkerControllerBoundaryInterface
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: ImeSyncDeferringInsetsCallback(android.view.View,int,int)
+androidx.core.app.RemoteActionCompatParcelizer
+androidx.appcompat.view.menu.ActionMenuItemView: androidx.appcompat.view.menu.MenuItemImpl getItemData()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: android.graphics.Matrix finalMatrix
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: android.graphics.drawable.Drawable getCircularRevealOverlayDrawable()
+androidx.recyclerview.widget.RecyclerView: void setScrollingTouchSlop(int)
+androidx.appcompat.view.menu.ListMenuItemView: void setTitle(java.lang.CharSequence)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType: io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType[] values()
+org.chromium.support_lib_boundary.FeatureFlagHolderBoundaryInterface: java.lang.String[] getSupportedFeatures()
+me.dm7.barcodescanner.core.BarcodeScannerView: void setupLayout(me.dm7.barcodescanner.core.CameraWrapper)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_RESUME
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.dart.PlatformMessageHandler platformMessageHandler
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.HashMap getCopyBackForwardList()
+io.flutter.embedding.engine.FlutterJNI: void nativeInit(android.content.Context,java.lang.String[],java.lang.String,java.lang.String,java.lang.String,long)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setBorderStrokeWidth(int)
+com.google.android.material.internal.CheckableImageButton: void setChecked(boolean)
+io.flutter.plugin.platform.SingleViewPresentation: void onCreate(android.os.Bundle)
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper
+androidx.appcompat.widget.LinearLayoutCompat: int getOrientation()
+com.google.android.material.snackbar.SnackbarContentLayout: android.widget.TextView getMessageView()
+androidx.appcompat.widget.AppCompatEditText: void setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)
+androidx.appcompat.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet)
+me.dm7.barcodescanner.zxing.ZXingScannerView: void setFormats(java.util.List)
+androidx.appcompat.widget.AppCompatTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context,android.util.AttributeSet)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean access$302(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback,boolean)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface
+com.google.android.material.behavior.SwipeDismissBehavior
+io.flutter.embedding.android.FlutterImageView$SurfaceKind: io.flutter.embedding.android.FlutterImageView$SurfaceKind valueOf(java.lang.String)
+androidx.appcompat.widget.Toolbar: android.graphics.drawable.Drawable getLogo()
+com.google.android.material.bottomappbar.BottomAppBar: boolean getHideOnScroll()
+me.dm7.barcodescanner.core.CameraPreview: void setShouldScaleToFill(boolean)
+com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode valueOf(java.lang.String)
+androidx.appcompat.widget.AppCompatImageView: void setBackgroundResource(int)
+io.flutter.embedding.engine.FlutterJNI: void dispatchSemanticsAction(int,io.flutter.view.AccessibilityBridge$Action)
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: boolean released
+com.google.android.material.floatingactionbutton.FloatingActionButton: int getSizeDimension()
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo getRevealInfo()
+com.google.zxing.aztec.decoder.Decoder$Table: com.google.zxing.aztec.decoder.Decoder$Table valueOf(java.lang.String)
+androidx.appcompat.widget.ViewStubCompat: int getLayoutResource()
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: android.webkit.WebChromeClient getWebChromeClient()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath
+org.chromium.support_lib_boundary.WebViewRendererBoundaryInterface: boolean terminate()
+androidx.appcompat.widget.AppCompatCheckedTextView: void setCheckMarkDrawable(int)
+com.example.mma_mse.MainActivity
+androidx.appcompat.widget.ActionBarOverlayLayout: int getActionBarHideOffset()
+io.flutter.view.AccessibilityViewEmbedder: int nextFlutterId
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: boolean getBlockNetworkLoads()
+androidx.core.widget.NestedScrollView: int getNestedScrollAxes()
+androidx.appcompat.widget.ActionBarOverlayLayout: void setWindowCallback(android.view.Window$Callback)
+com.google.android.material.internal.NavigationMenuItemView: void setTextAppearance(int)
+io.flutter.embedding.engine.FlutterJNI: float refreshRateFPS
+androidx.appcompat.widget.SearchView$SearchAutoComplete
+androidx.lifecycle.FullLifecycleObserverAdapter
+com.google.android.material.bottomappbar.BottomAppBar: androidx.coordinatorlayout.widget.CoordinatorLayout$Behavior getBehavior()
+io.flutter.embedding.android.FlutterView: android.view.accessibility.AccessibilityNodeProvider getAccessibilityNodeProvider()
+com.google.common.util.concurrent.AbstractFuture$Waiter: java.lang.Thread thread
+androidx.appcompat.widget.AppCompatImageButton: void setSupportImageTintList(android.content.res.ColorStateList)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.WindowInsets lastWindowInsets
+io.flutter.view.FlutterCallbackInformation
+com.google.common.util.concurrent.AbstractFuture: java.lang.Object value
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityResumed(android.app.Activity)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setActionBarHideOffset(int)
+io.flutter.embedding.engine.FlutterJNI: void notifyLowMemoryWarning()
+androidx.appcompat.widget.ActionBarOverlayLayout
+androidx.appcompat.view.menu.ListMenuItemView: void setCheckable(boolean)
+org.chromium.support_lib_boundary.WebViewRendererClientBoundaryInterface: void onRendererUnresponsive(android.webkit.WebView,java.lang.reflect.InvocationHandler)
+io.flutter.embedding.engine.FlutterJNI: void nativeDispatchEmptyPlatformMessage(long,java.lang.String,int)
+org.chromium.support_lib_boundary.WebMessagePortBoundaryInterface: void setWebMessageCallback(java.lang.reflect.InvocationHandler)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: android.graphics.Bitmap getBitmap()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatElevationResource(int)
+com.google.android.material.transformation.ExpandableBehavior
+androidx.cardview.widget.CardView: float getRadius()
+android.support.v4.media.MediaBrowserCompat$ItemReceiver
+androidx.appcompat.widget.LinearLayoutCompat: int getShowDividers()
+org.chromium.support_lib_boundary.WebResourceErrorBoundaryInterface: int getErrorCode()
+androidx.appcompat.widget.LinearLayoutCompat: android.graphics.drawable.Drawable getDividerDrawable()
+com.google.android.material.transformation.TransformationChildCard
+androidx.appcompat.widget.AppCompatCheckBox: void setBackgroundResource(int)
+androidx.appcompat.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet)
+org.chromium.support_lib_boundary.StaticsBoundaryInterface: void setSafeBrowsingWhitelist(java.util.List,android.webkit.ValueCallback)
+androidx.appcompat.widget.AppCompatRadioButton: void setSupportButtonTintList(android.content.res.ColorStateList)
+androidx.appcompat.widget.AbsActionBarView: void setContentHeight(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState: int getChangingConfigurations()
+androidx.appcompat.widget.AppCompatSpinner: int getDropDownHorizontalOffset()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityStopped(android.app.Activity)
+androidx.appcompat.widget.SearchView$SearchAutoComplete: void setImeVisibility(boolean)
+androidx.appcompat.widget.AppCompatEditText: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+com.google.android.material.bottomappbar.BottomAppBar: androidx.appcompat.widget.ActionMenuView getActionMenuView()
+org.chromium.support_lib_boundary.WebMessageBoundaryInterface
+com.google.android.material.appbar.AppBarLayout$BaseBehavior$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.android.FlutterTextureView
+io.flutter.embedding.engine.FlutterJNI: void invokePlatformMessageResponseCallback(int,java.nio.ByteBuffer,int)
+androidx.appcompat.widget.AppCompatTextView: void setLineHeight(int)
+com.google.android.material.button.MaterialButton: void setStrokeWidth(int)
+org.chromium.support_lib_boundary.WebMessageCallbackBoundaryInterface
+androidx.recyclerview.widget.RecyclerView: boolean getClipToPadding()
+io.flutter.embedding.engine.FlutterJNI: void nativeMarkTextureFrameAvailable(long,long)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathOffset()
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: boolean getAllowFileAccess()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityCreated(android.app.Activity,android.os.Bundle)
+androidx.appcompat.widget.AppCompatButton: int getAutoSizeMaxTextSize()
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: void goBackButtonClicked(android.view.MenuItem)
+io.flutter.embedding.android.FlutterSplashView$SavedState: java.lang.String access$602(io.flutter.embedding.android.FlutterSplashView$SavedState,java.lang.String)
+androidx.appcompat.widget.ViewStubCompat: int getInflatedId()
+androidx.appcompat.widget.AppCompatButton
+androidx.appcompat.widget.Toolbar: Toolbar(android.content.Context,android.util.AttributeSet)
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface: void _callHandler(java.lang.String,java.lang.String,java.lang.String)
+androidx.appcompat.view.menu.ListMenuItemView: android.view.LayoutInflater getInflater()
+android.support.v4.media.RatingCompat
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPreDestroyed(android.app.Activity)
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: void setCacheMode(int)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient
+com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior
+androidx.appcompat.widget.Toolbar: int getCurrentContentInsetLeft()
+me.dm7.barcodescanner.core.BarcodeScannerView: boolean getFlash()
+com.google.android.material.transformation.FabTransformationScrimBehavior: FabTransformationScrimBehavior()
+io.flutter.embedding.engine.FlutterJNI: void addEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeWidth(float)
+androidx.appcompat.widget.SearchView$SearchAutoComplete: void setThreshold(int)
+io.flutter.embedding.android.FlutterSplashView$SavedState: java.lang.String previousCompletedSplashIsolate
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatAutoCompleteTextView createAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.ActionMenuView: int getPopupTheme()
+androidx.appcompat.widget.AppCompatSpinner: int getDropDownWidth()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.View access$602(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback,android.view.View)
+com.google.android.material.behavior.HideBottomViewOnScrollBehavior: HideBottomViewOnScrollBehavior(android.content.Context,android.util.AttributeSet)
+androidx.coordinatorlayout.widget.CoordinatorLayout$Behavior: CoordinatorLayout$Behavior(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.systemchannels.TextInputChannel$TextCapitalization: io.flutter.embedding.engine.systemchannels.TextInputChannel$TextCapitalization valueOf(java.lang.String)
+androidx.appcompat.app.AppCompatViewInflater: android.view.View createViewFromTag(android.content.Context,java.lang.String,android.util.AttributeSet)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: void pushClipRRect(int,int,int,int,float[])
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$ItemAnimator getItemAnimator()
+androidx.appcompat.widget.ActionBarOverlayLayout: void setActionBarVisibilityCallback(androidx.appcompat.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback)
+androidx.appcompat.widget.Toolbar: int getContentInsetLeft()
+com.google.android.material.floatingactionbutton.FloatingActionButton: int getRippleColor()
+androidx.lifecycle.Lifecycling$1
+org.chromium.support_lib_boundary.StaticsBoundaryInterface
+io.flutter.embedding.android.FlutterView$ZeroSides: io.flutter.embedding.android.FlutterView$ZeroSides valueOf(java.lang.String)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: int access$500(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+com.google.android.material.floatingactionbutton.FloatingActionButton: float getCompatPressedTranslationZ()
+androidx.appcompat.widget.ActionBarContextView: void setTitle(java.lang.CharSequence)
+androidx.recyclerview.widget.StaggeredGridLayoutManager
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setSupportImageTintMode(android.graphics.PorterDuff$Mode)
+io.flutter.view.AccessibilityViewEmbedder: android.view.View rootAccessibilityView
+androidx.appcompat.view.menu.ActionMenuItemView: void setItemInvoker(androidx.appcompat.view.menu.MenuBuilder$ItemInvoker)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.FlutterJNI$AccessibilityDelegate accessibilityDelegate
+com.google.zxing.DecodeHintType: com.google.zxing.DecodeHintType valueOf(java.lang.String)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: java.util.List getFinalClippingPaths()
+io.flutter.embedding.engine.FlutterJNI: void removeEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
+com.google.android.material.behavior.SwipeDismissBehavior: SwipeDismissBehavior()
+io.flutter.embedding.engine.systemchannels.PlatformChannel$SystemUiOverlay: io.flutter.embedding.engine.systemchannels.PlatformChannel$SystemUiOverlay[] values()
+io.flutter.embedding.engine.systemchannels.PlatformChannel$SystemUiOverlay: io.flutter.embedding.engine.systemchannels.PlatformChannel$SystemUiOverlay valueOf(java.lang.String)
+com.google.android.material.button.MaterialButton: void setBackgroundResource(int)
+com.google.android.material.internal.ForegroundLinearLayout
+com.google.android.material.button.MaterialButton: void setIconGravity(int)
+androidx.appcompat.widget.AppCompatCheckedTextView: void setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: android.content.res.ColorStateList getSupportBackgroundTintList()
+me.dm7.barcodescanner.core.BarcodeScannerView: void setBorderColor(int)
+io.flutter.embedding.engine.FlutterJNI: java.lang.Long nativeShellHolderId
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler getServiceWorkerController()
+androidx.cardview.widget.CardView: void setMinimumWidth(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: android.graphics.Matrix getLocalMatrix()
+com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior: FloatingActionButton$Behavior(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.app.AppCompatViewInflater: java.util.Map sConstructorMap
+androidx.appcompat.widget.AppCompatTextView: void setTextFuture(java.util.concurrent.Future)
+androidx.appcompat.widget.DropDownListView: void setListSelectionHidden(boolean)
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: void setCircularRevealOverlayDrawable(android.graphics.drawable.Drawable)
+com.google.android.material.internal.NavigationMenuItemView: androidx.appcompat.view.menu.MenuItemImpl getItemData()
+io.flutter.embedding.android.FlutterSplashView$SavedState: android.os.Bundle access$700(io.flutter.embedding.android.FlutterSplashView$SavedState)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: int getForceDarkBehavior()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateX()
+androidx.cardview.widget.CardView: void setPreventCornerOverlap(boolean)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.View view
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: java.lang.reflect.InvocationHandler getWebViewRendererClient()
+androidx.media.AudioAttributesImplApi21Parcelizer
+androidx.appcompat.widget.ActionBarOverlayLayout: void setIcon(int)
+androidx.appcompat.widget.LinearLayoutCompat: void setDividerDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.AppCompatRadioButton: android.graphics.PorterDuff$Mode getSupportButtonTintMode()
+androidx.recyclerview.widget.RecyclerView: void setScrollState(int)
+io.flutter.embedding.engine.FlutterJNI
+androidx.appcompat.widget.MenuPopupWindow$MenuDropDownListView
+io.flutter.embedding.engine.FlutterJNI: void detachFromNativeAndReleaseResources()
+io.flutter.embedding.engine.FlutterJNI: void runBundleAndSnapshotFromLibrary(java.lang.String,java.lang.String,java.lang.String,android.content.res.AssetManager)
+io.flutter.view.FlutterView: android.graphics.Bitmap getBitmap()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getRotation()
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: int getDisabledActionModeMenuItems()
+androidx.fragment.app.FragmentActivity: FragmentActivity()
+com.google.android.material.internal.NavigationMenuItemView: void setNeedsEmptyIcon(boolean)
+androidx.appcompat.widget.ActionBarContextView: int getContentHeight()
+com.google.android.material.circularreveal.CircularRevealFrameLayout: void setRevealInfo(com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo)
+io.flutter.embedding.engine.systemchannels.TextInputChannel$TextInputType: io.flutter.embedding.engine.systemchannels.TextInputChannel$TextInputType[] values()
+androidx.appcompat.widget.AppCompatSpinner: java.lang.CharSequence getPrompt()
+com.google.android.material.snackbar.Snackbar$SnackbarLayout
+com.google.android.material.floatingactionbutton.FloatingActionButton: float getCompatHoveredFocusedTranslationZ()
+com.google.android.material.floatingactionbutton.FloatingActionButton: int getExpandedComponentIdHint()
+androidx.appcompat.widget.ActionBarContextView: java.lang.CharSequence getSubtitle()
+androidx.appcompat.widget.Toolbar: void setSubtitle(int)
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: void setAllowContentAccess(boolean)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatElevation(float)
+androidx.appcompat.widget.Toolbar: java.lang.CharSequence getLogoDescription()
+androidx.appcompat.widget.AppCompatEditText: android.content.res.ColorStateList getSupportBackgroundTintList()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorView: android.graphics.Matrix getPlatformViewMatrix()
+androidx.appcompat.widget.AppCompatRadioButton: void setButtonDrawable(android.graphics.drawable.Drawable)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: void removeWebMessageListener(java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: void setSemanticsEnabled(boolean)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean access$202(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback,boolean)
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setBackgroundResource(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup
+androidx.appcompat.widget.ActionMenuView: void setOverflowIcon(android.graphics.drawable.Drawable)
+com.google.android.material.internal.NavigationMenuItemView: void setHorizontalPadding(int)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertSettings(android.webkit.WebSettings)
+com.google.android.material.button.MaterialButton: android.graphics.PorterDuff$Mode getBackgroundTintMode()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatPressedTranslationZResource(int)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface$ForceDarkBehavior: int PREFER_MEDIA_QUERY_OVER_FORCE_DARK
+androidx.appcompat.widget.LinearLayoutCompat: int getGravity()
+androidx.activity.ComponentActivity$2
+androidx.recyclerview.widget.RecyclerView: void setViewCacheExtension(androidx.recyclerview.widget.RecyclerView$ViewCacheExtension)
+androidx.webkit.internal.WebViewFeatureInternal: androidx.webkit.internal.WebViewFeatureInternal[] values()
+androidx.appcompat.widget.Toolbar: void setSubtitleTextColor(android.content.res.ColorStateList)
+io.flutter.embedding.android.FlutterView: io.flutter.embedding.engine.FlutterEngine getAttachedFlutterEngine()
+androidx.appcompat.widget.SearchView$SearchAutoComplete: int getSearchViewTextMinWidthDp()
+io.flutter.plugins.imagepicker.ImagePickerFileProvider: ImagePickerFileProvider()
+androidx.appcompat.widget.AppCompatTextView: AppCompatTextView(android.content.Context,android.util.AttributeSet)
+androidx.cardview.widget.CardView: float getCardElevation()
+androidx.appcompat.widget.AppCompatImageView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType[] values()
+me.dm7.barcodescanner.core.BarcodeScannerView: void setAspectTolerance(float)
+androidx.appcompat.widget.FitWindowsLinearLayout: void setOnFitSystemWindowsListener(androidx.appcompat.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
+com.google.android.material.appbar.AppBarLayout: int getPendingAction()
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+com.google.android.material.button.MaterialButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+com.google.android.material.internal.NavigationMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+com.google.android.material.bottomsheet.BottomSheetBehavior: BottomSheetBehavior()
+androidx.appcompat.widget.SearchView: int getPreferredHeight()
+androidx.appcompat.widget.SearchView: void setQuery(java.lang.CharSequence)
+androidx.appcompat.widget.AppCompatTextView: void setPrecomputedText(androidx.core.text.PrecomputedTextCompat)
+androidx.appcompat.widget.Toolbar: android.graphics.drawable.Drawable getNavigationIcon()
+androidx.core.graphics.drawable.IconCompatParcelizer
+androidx.cardview.widget.CardView: void setUseCompatPadding(boolean)
+androidx.appcompat.widget.AppCompatCheckBox
+androidx.appcompat.widget.SearchView: int getSuggestionCommitIconResId()
+io.flutter.plugins.urllauncher.UrlLauncher$LaunchStatus: io.flutter.plugins.urllauncher.UrlLauncher$LaunchStatus[] values()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.View access$600(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: void setBlockNetworkLoads(boolean)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$HapticFeedbackType: io.flutter.embedding.engine.systemchannels.PlatformChannel$HapticFeedbackType valueOf(java.lang.String)
+androidx.appcompat.widget.DropDownListView: void setSelectorEnabled(boolean)
+com.google.android.material.floatingactionbutton.FloatingActionButton: int getCustomSize()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: int deferredInsetTypes
+io.flutter.embedding.engine.FlutterJNI: boolean getIsSoftwareRenderingEnabled()
+androidx.appcompat.widget.AppCompatEditText: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPreStopped(android.app.Activity)
+androidx.appcompat.widget.AppCompatSpinner: void setDropDownVerticalOffset(int)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$DeviceOrientation: io.flutter.embedding.engine.systemchannels.PlatformChannel$DeviceOrientation[] values()
+androidx.lifecycle.Lifecycle$State: androidx.lifecycle.Lifecycle$State[] values()
+io.flutter.plugin.editing.TextInputPlugin$InputTarget$Type: io.flutter.plugin.editing.TextInputPlugin$InputTarget$Type valueOf(java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: void nativeLoadDartDeferredLibrary(long,int,java.lang.String[])
+androidx.annotation.Keep
+androidx.appcompat.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context,android.util.AttributeSet)
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setStatusBarBackgroundResource(int)
+androidx.appcompat.view.menu.ActionMenuItemView: void setExpandedFormat(boolean)
+io.flutter.embedding.engine.FlutterJNI: void onSurfaceDestroyed()
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.core.content.FileProvider: FileProvider()
+io.flutter.embedding.android.FlutterSplashView$SavedState: FlutterSplashView$SavedState(android.os.Parcelable)
+com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior: FloatingActionButton$BaseBehavior()
+android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.Toolbar: int getContentInsetEndWithActions()
+androidx.appcompat.widget.LinearLayoutCompat: void setBaselineAligned(boolean)
+io.flutter.view.AccessibilityBridge$AccessibilityFeature: io.flutter.view.AccessibilityBridge$AccessibilityFeature valueOf(java.lang.String)
+androidx.appcompat.widget.AppCompatButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+com.google.android.material.bottomappbar.BottomAppBar: float getFabTranslationX()
+androidx.appcompat.widget.AppCompatRadioButton: void setButtonDrawable(int)
+androidx.appcompat.widget.ActionBarContainer: android.view.View getTabContainer()
+androidx.core.widget.NestedScrollView: void setNestedScrollingEnabled(boolean)
+com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior: AppBarLayout$ScrollingViewBehavior()
+com.google.android.material.internal.ForegroundLinearLayout: void setForegroundGravity(int)
+androidx.appcompat.widget.AppCompatImageButton: void setImageDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.LinearLayoutCompat: void setWeightSum(float)
+androidx.appcompat.widget.AppCompatTextView: void setAutoSizeTextTypeWithDefaults(int)
+androidx.appcompat.widget.DialogTitle
+org.chromium.support_lib_boundary.IsomorphicObjectBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: void onRenderingStopped()
+com.google.zxing.BarcodeFormat: com.google.zxing.BarcodeFormat valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotY(float)
+com.google.android.material.transformation.ExpandableTransformationBehavior: ExpandableTransformationBehavior()
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setFitsSystemWindows(boolean)
+androidx.appcompat.widget.ScrollingTabContainerView: void setTabSelected(int)
+com.google.android.material.floatingactionbutton.FloatingActionButton: com.google.android.material.floatingactionbutton.FloatingActionButtonImpl getImpl()
+org.chromium.support_lib_boundary.FeatureFlagHolderBoundaryInterface
+com.google.android.material.appbar.AppBarLayout: int getTotalScrollRange()
+androidx.appcompat.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: java.util.List getMutators()
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setForceDarkBehavior(int)
+me.dm7.barcodescanner.core.ViewFinderView: void setViewFinderOffset(int)
+androidx.appcompat.widget.ActivityChooserView$InnerLayout: ActivityChooserView$InnerLayout(android.content.Context,android.util.AttributeSet)
+org.chromium.support_lib_boundary.ProxyControllerBoundaryInterface: void setProxyOverride(java.lang.String[][],java.lang.String[],java.lang.Runnable,java.util.concurrent.Executor)
+com.google.android.material.circularreveal.CircularRevealFrameLayout: void setCircularRevealOverlayDrawable(android.graphics.drawable.Drawable)
+com.google.android.material.internal.NavigationMenuItemView: void setIconTintList(android.content.res.ColorStateList)
+com.google.android.material.internal.NavigationMenuItemView: void setTextColor(android.content.res.ColorStateList)
+androidx.coordinatorlayout.widget.CoordinatorLayout: void setOnHierarchyChangeListener(android.view.ViewGroup$OnHierarchyChangeListener)
+androidx.appcompat.widget.Toolbar: void setTitle(java.lang.CharSequence)
+org.chromium.support_lib_boundary.IsomorphicObjectBoundaryInterface: java.lang.Object getOrCreatePeer(java.util.concurrent.Callable)
+androidx.versionedparcelable.ParcelImpl
+androidx.appcompat.widget.Toolbar: void setCollapseContentDescription(java.lang.CharSequence)
+androidx.coordinatorlayout.widget.CoordinatorLayout$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatCheckBox: void setSupportButtonTintMode(android.graphics.PorterDuff$Mode)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotY()
+androidx.appcompat.app.AppCompatViewInflater: java.lang.String[] sClassPrefixList
+androidx.appcompat.widget.AppCompatSpinner: android.graphics.drawable.Drawable getPopupBackground()
+androidx.appcompat.widget.AppCompatSpinner: void setDropDownWidth(int)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.Map getCertificateMap()
+androidx.appcompat.view.menu.ActionMenuItemView: void setPopupCallback(androidx.appcompat.view.menu.ActionMenuItemView$PopupCallback)
+io.flutter.embedding.engine.FlutterJNI: void nativeSurfaceDestroyed(long)
+com.google.android.material.snackbar.SnackbarContentLayout: SnackbarContentLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatSpinner: void setPrompt(java.lang.CharSequence)
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$Mode: com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$Mode[] values()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: FlutterMutatorsStack()
+androidx.appcompat.widget.SearchView: void setAppSearchData(android.os.Bundle)
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMinor()
+androidx.coordinatorlayout.widget.CoordinatorLayout: int getNestedScrollAxes()
+io.flutter.embedding.engine.FlutterJNI: void invokePlatformMessageEmptyResponseCallback(int)
+io.flutter.embedding.engine.FlutterJNI: void requestDartDeferredLibrary(int)
+androidx.cardview.widget.CardView: float getMaxCardElevation()
+io.flutter.embedding.engine.FlutterJNI: void ensureAttachedToNative()
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.PlatformView getView()
+androidx.coordinatorlayout.widget.CoordinatorLayout
+androidx.appcompat.widget.ButtonBarLayout: ButtonBarLayout(android.content.Context,android.util.AttributeSet)
+androidx.recyclerview.widget.LinearLayoutManager
+androidx.appcompat.widget.LinearLayoutCompat
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$OnFlingListener getOnFlingListener()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatTextView createTextView(android.content.Context,android.util.AttributeSet)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setFlash(boolean)
+me.dm7.barcodescanner.zxing.ZXingScannerView: void setResultHandler(me.dm7.barcodescanner.zxing.ZXingScannerView$ResultHandler)
+android.support.v4.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+io.flutter.embedding.engine.FlutterJNI: void setAccessibilityFeatures(int)
+com.google.android.material.button.MaterialButton: void setBackground(android.graphics.drawable.Drawable)
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.SingleViewPresentation$PresentationState detachState()
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: android.graphics.Matrix getFinalMatrix()
+io.flutter.view.FlutterView: void setInitialRoute(java.lang.String)
+androidx.appcompat.widget.SearchView: void setOnQueryTextListener(androidx.appcompat.widget.SearchView$OnQueryTextListener)
+androidx.appcompat.widget.ActionBarContextView: void setSubtitle(java.lang.CharSequence)
+io.flutter.embedding.engine.FlutterJNI: void unregisterTexture(long)
+androidx.appcompat.widget.AppCompatButton: void setSupportAllCaps(boolean)
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser$Mode: com.google.zxing.pdf417.decoder.DecodedBitStreamParser$Mode[] values()
+androidx.core.app.RemoteActionCompat
+androidx.appcompat.widget.Toolbar: void setCollapseIcon(int)
+io.flutter.embedding.engine.FlutterJNI: boolean setRefreshRateFPSCalled
+io.flutter.view.AccessibilityViewEmbedder: void copyAccessibilityFields(android.view.accessibility.AccessibilityNodeInfo,android.view.accessibility.AccessibilityNodeInfo)
+androidx.appcompat.widget.AppCompatImageView: void setSupportImageTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.widget.Toolbar: void setNavigationOnClickListener(android.view.View$OnClickListener)
+com.google.common.util.concurrent.AbstractFuture: com.google.common.util.concurrent.AbstractFuture$Waiter waiters
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: int getRootAlpha()
+com.google.android.material.bottomsheet.BottomSheetBehavior: BottomSheetBehavior(android.content.Context,android.util.AttributeSet)
+com.google.android.material.bottomappbar.BottomAppBar$Behavior: BottomAppBar$Behavior()
+com.google.android.material.bottomappbar.BottomAppBar: void setCradleVerticalOffset(float)
+androidx.appcompat.widget.AppCompatImageView: void setImageBitmap(android.graphics.Bitmap)
+androidx.appcompat.widget.AppCompatSpinner: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.widget.AppCompatSpinner: void setPopupBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.LinearLayoutCompat: int getBaselineAlignedChildIndex()
+androidx.appcompat.widget.ScrollingTabContainerView: void setAllowCollapse(boolean)
+androidx.activity.OnBackPressedDispatcher$LifecycleOnBackPressedCancellable
+io.flutter.embedding.engine.FlutterJNI: void setViewportMetrics(float,int,int,int,int,int,int,int,int,int,int,int,int,int,int)
+com.google.android.material.appbar.AppBarLayout: float getTargetElevation()
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper: android.os.Parcelable$Creator CREATOR
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityDestroyed(android.app.Activity)
+androidx.appcompat.widget.AppCompatTextView: void setFirstBaselineToTopHeight(int)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setSquareViewFinder(boolean)
+androidx.appcompat.widget.ActionMenuView: void setOnMenuItemClickListener(androidx.appcompat.widget.ActionMenuView$OnMenuItemClickListener)
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: void reloadButtonClicked(android.view.MenuItem)
+io.flutter.view.AccessibilityViewEmbedder: java.lang.String TAG
+io.flutter.plugins.urllauncher.WebViewActivity$FlutterWebChromeClient$1
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.decoder.ErrorCorrectionLevel valueOf(java.lang.String)
+org.chromium.support_lib_boundary.WebViewClientBoundaryInterface: void onPageCommitVisible(android.webkit.WebView,java.lang.String)
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+io.flutter.plugins.imagepicker.CameraDevice: io.flutter.plugins.imagepicker.CameraDevice[] values()
+com.google.android.material.internal.ForegroundLinearLayout: int getForegroundGravity()
+androidx.appcompat.widget.Toolbar: void setLogoDescription(int)
+android.support.v4.os.ResultReceiver: android.os.Parcelable$Creator CREATOR
+androidx.versionedparcelable.ParcelImpl: android.os.Parcelable$Creator CREATOR
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: int access$100(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+io.flutter.embedding.engine.FlutterJNI: android.os.Looper mainLooper
+androidx.appcompat.widget.Toolbar: java.lang.CharSequence getTitle()
+androidx.appcompat.widget.AppCompatSpinner: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+com.google.android.material.circularreveal.CircularRevealFrameLayout: android.graphics.drawable.Drawable getCircularRevealOverlayDrawable()
+io.flutter.embedding.engine.FlutterJNI: void nativeSetViewportMetrics(long,float,int,int,int,int,int,int,int,int,int,int,int,int,int,int)
+org.chromium.support_lib_boundary.WebMessageBoundaryInterface: java.lang.String getData()
+androidx.appcompat.widget.FitWindowsLinearLayout
+io.flutter.embedding.android.TransparencyMode: io.flutter.embedding.android.TransparencyMode valueOf(java.lang.String)
+com.google.common.util.concurrent.AbstractFuture: com.google.common.util.concurrent.AbstractFuture$Listener listeners
+androidx.appcompat.widget.AppCompatSpinner: android.content.res.ColorStateList getSupportBackgroundTintList()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setImageResource(int)
+androidx.recyclerview.widget.RecyclerView: void setLayoutFrozen(boolean)
+com.google.zxing.common.CharacterSetECI: com.google.zxing.common.CharacterSetECI[] values()
+androidx.appcompat.widget.AppCompatAutoCompleteTextView
+androidx.appcompat.widget.Toolbar: void setSubtitle(java.lang.CharSequence)
+androidx.appcompat.widget.AppCompatTextView: int getLastBaselineToBottomHeight()
+androidx.appcompat.widget.Toolbar: void setTitleMarginBottom(int)
+io.flutter.view.AccessibilityBridge$TextDirection: io.flutter.view.AccessibilityBridge$TextDirection valueOf(java.lang.String)
+io.flutter.embedding.engine.systemchannels.TextInputChannel$TextInputType: io.flutter.embedding.engine.systemchannels.TextInputChannel$TextInputType valueOf(java.lang.String)
+androidx.recyclerview.widget.GridLayoutManager: GridLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel: LoaderManagerImpl$LoaderViewModel()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateX(float)
+io.flutter.view.FlutterView
+androidx.media.AudioAttributesCompat: AudioAttributesCompat()
+android.support.v4.media.MediaBrowserCompat$SearchResultReceiver
+androidx.appcompat.widget.ActionBarContextView: ActionBarContextView(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.FlutterJNI: void ensureRunningOnMainThread()
+androidx.appcompat.widget.ActionBarContextView: java.lang.CharSequence getTitle()
+androidx.media.AudioAttributesImplBaseParcelizer: void write(androidx.media.AudioAttributesImplBase,androidx.versionedparcelable.VersionedParcel)
+com.google.android.material.bottomappbar.BottomAppBar: float getCradleVerticalOffset()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatImageView createImageView(android.content.Context,android.util.AttributeSet)
+io.flutter.view.AccessibilityViewEmbedder: void addChildrenToFlutterNode(android.view.accessibility.AccessibilityNodeInfo,android.view.View,android.view.accessibility.AccessibilityNodeInfo)
+io.flutter.embedding.engine.FlutterJNI: boolean nativeFlutterTextUtilsIsVariationSelector(int)
+io.flutter.view.AccessibilityViewEmbedder: java.util.Map originToFlutterId
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: InAppBrowserActivity()
+androidx.appcompat.app.AppCompatViewInflater: java.lang.Class[] sConstructorSignature
+com.google.android.material.bottomappbar.BottomAppBar
+io.flutter.view.FlutterView$ZeroSides: io.flutter.view.FlutterView$ZeroSides valueOf(java.lang.String)
+androidx.appcompat.app.AppCompatViewInflater: android.view.View createViewByPrefix(android.content.Context,java.lang.String,java.lang.String)
+io.flutter.embedding.android.DrawableSplashScreen$DrawableSplashScreenView: void setSplashDrawable(android.graphics.drawable.Drawable)
+com.google.android.material.bottomappbar.BottomAppBar: void setFabCradleMargin(float)
+io.flutter.view.AccessibilityViewEmbedder: android.view.accessibility.AccessibilityNodeInfo createAccessibilityNodeInfo(int)
+androidx.appcompat.widget.AppCompatTextView: int[] getAutoSizeTextAvailableSizes()
+androidx.appcompat.widget.Toolbar: void setTitleTextColor(android.content.res.ColorStateList)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setWillSuppressErrorPage(boolean)
+androidx.appcompat.widget.MenuPopupWindow$MenuDropDownListView: void setSelector(android.graphics.drawable.Drawable)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.content.res.ColorStateList getRippleColorStateList()
+com.apptreesoftware.barcodescan.BarcodeScannerActivity: BarcodeScannerActivity()
+io.flutter.embedding.engine.FlutterJNI: void loadLibrary()
+io.flutter.view.AccessibilityViewEmbedder: boolean onAccessibilityHoverEvent(int,android.view.MotionEvent)
+com.google.android.material.behavior.HideBottomViewOnScrollBehavior: HideBottomViewOnScrollBehavior()
+io.flutter.plugins.GeneratedPluginRegistrant: void registerWith(io.flutter.embedding.engine.FlutterEngine)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: boolean getOffscreenPreRaster()
+com.google.android.material.button.MaterialButton: void setIcon(android.graphics.drawable.Drawable)
+com.google.android.material.bottomappbar.BottomAppBar: void setBackgroundTint(android.content.res.ColorStateList)
+androidx.appcompat.widget.AppCompatEditText: void setBackgroundResource(int)
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatCheckBox createCheckBox(android.content.Context,android.util.AttributeSet)
+com.google.android.material.transformation.ExpandableTransformationBehavior
+androidx.appcompat.widget.SearchView: void setIconifiedByDefault(boolean)
+androidx.appcompat.widget.LinearLayoutCompat: void setHorizontalGravity(int)
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.Object convertWebResourceError(java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.Toolbar: int getContentInsetRight()
+androidx.versionedparcelable.CustomVersionedParcelable
+androidx.appcompat.widget.AppCompatImageView
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: SurfaceTextureWrapper(android.graphics.SurfaceTexture)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.graphics.drawable.Drawable getContentBackground()
+io.flutter.embedding.engine.FlutterJNI: void handlePlatformMessage(java.lang.String,byte[],int)
+com.google.android.material.internal.CheckableImageButton
+io.flutter.embedding.engine.FlutterJNI: void onBeginFrame()
+com.google.android.material.internal.NavigationMenuItemView: void setTitle(java.lang.CharSequence)
+androidx.appcompat.widget.AppCompatButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+io.flutter.embedding.engine.FlutterJNI: boolean isAttached()
+androidx.appcompat.widget.AppCompatImageButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+io.flutter.embedding.engine.FlutterJNI: void prefetchDefaultFontManager()
+androidx.media.AudioAttributesImplApi21Parcelizer: AudioAttributesImplApi21Parcelizer()
+com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout
+com.google.android.material.transformation.FabTransformationBehavior
+androidx.fragment.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatSpinner: android.content.Context getPopupContext()
+com.google.android.material.appbar.AppBarLayout: void setLiftOnScroll(boolean)
+com.google.android.material.button.MaterialButton: void setIconTintMode(android.graphics.PorterDuff$Mode)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: void insertVisualStateCallback(long,java.lang.reflect.InvocationHandler)
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+org.chromium.support_lib_boundary.StaticsBoundaryInterface: void initSafeBrowsing(android.content.Context,android.webkit.ValueCallback)
+com.google.android.material.internal.NavigationMenuView
+androidx.appcompat.widget.ActionBarContextView: void setTitleOptional(boolean)
+androidx.appcompat.widget.AppCompatRadioButton: int getCompoundPaddingLeft()
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setDisabledActionModeMenuItems(int)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPaused(android.app.Activity)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_PAUSE
+androidx.appcompat.widget.Toolbar: void setCollapseIcon(android.graphics.drawable.Drawable)
+io.flutter.view.AccessibilityViewEmbedder: io.flutter.view.AccessibilityViewEmbedder$ReflectionAccessors reflectionAccessors
+com.google.android.material.behavior.HideBottomViewOnScrollBehavior
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: void getTransformMatrix(float[])
+androidx.appcompat.widget.LinearLayoutCompat: int getBaseline()
+androidx.appcompat.widget.ActionBarContextView: void setContentHeight(int)
+com.google.zxing.DecodeHintType: com.google.zxing.DecodeHintType[] values()
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderStrokeWidth(int)
+androidx.coordinatorlayout.widget.CoordinatorLayout: java.util.List getDependencySortedChildren()
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: void setCircularRevealScrimColor(int)
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: android.graphics.SurfaceTexture surfaceTexture
+io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference: androidx.lifecycle.Lifecycle getLifecycle()
+androidx.recyclerview.widget.RecyclerView$LayoutManager: RecyclerView$LayoutManager()
+io.flutter.view.AccessibilityViewEmbedder: boolean requestSendAccessibilityEvent(android.view.View,android.view.View,android.view.accessibility.AccessibilityEvent)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setBorderAlpha(float)
+androidx.appcompat.widget.SearchView: void setIconified(boolean)
+io.flutter.embedding.engine.FlutterJNI: java.lang.String[] computePlatformResolvedLocale(java.lang.String[])
+androidx.appcompat.view.menu.ListMenuItemView: void setChecked(boolean)
+com.google.android.material.internal.VisibilityAwareImageButton: int getUserSetVisibility()
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: void setForceDark(int)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$ClipboardContentFormat: io.flutter.embedding.engine.systemchannels.PlatformChannel$ClipboardContentFormat valueOf(java.lang.String)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: android.webkit.WebViewClient getWebViewClient()
+io.flutter.view.FlutterCallbackInformation: io.flutter.view.FlutterCallbackInformation lookupCallbackInformation(long)
+androidx.appcompat.widget.ActionBarContainer: void setTabContainer(androidx.appcompat.widget.ScrollingTabContainerView)
+androidx.appcompat.widget.AppCompatImageButton: AppCompatImageButton(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.FlutterOverlaySurface
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface
+io.flutter.plugins.GeneratedPluginRegistrant: GeneratedPluginRegistrant()
+org.chromium.support_lib_boundary.WebMessagePortBoundaryInterface: void setWebMessageCallback(java.lang.reflect.InvocationHandler,android.os.Handler)
+androidx.appcompat.widget.AppCompatTextView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+io.flutter.embedding.engine.FlutterJNI: void dispatchEmptyPlatformMessage(java.lang.String,int)
+androidx.appcompat.widget.AppCompatCheckBox: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+me.dm7.barcodescanner.core.ViewFinderView: void setSquareViewFinder(boolean)
+com.google.android.material.transformation.FabTransformationSheetBehavior: FabTransformationSheetBehavior(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatTextView: int getFirstBaselineToTopHeight()
+io.flutter.embedding.engine.FlutterJNI: java.util.Set engineLifecycleListeners
+me.dm7.barcodescanner.core.BarcodeScannerView: void setLaserColor(int)
+com.google.android.material.button.MaterialButton: void setRippleColor(android.content.res.ColorStateList)
+androidx.appcompat.widget.SearchView: void setSuggestionsAdapter(androidx.cursoradapter.widget.CursorAdapter)
+com.google.android.material.internal.VisibilityAwareImageButton
+androidx.appcompat.widget.AppCompatTextView: int getAutoSizeTextType()
+androidx.cardview.widget.CardView: int getContentPaddingRight()
+androidx.appcompat.widget.ButtonBarLayout: void setAllowStacking(boolean)
+androidx.recyclerview.widget.RecyclerView: void setNestedScrollingEnabled(boolean)
+androidx.appcompat.widget.AppCompatTextView: void setTextClassifier(android.view.textclassifier.TextClassifier)
+androidx.recyclerview.widget.RecyclerView
+androidx.appcompat.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context)
+io.flutter.embedding.android.FlutterSplashView$SavedState: java.lang.String access$600(io.flutter.embedding.android.FlutterSplashView$SavedState)
+io.flutter.embedding.engine.systemchannels.SettingsChannel$PlatformBrightness: io.flutter.embedding.engine.systemchannels.SettingsChannel$PlatformBrightness[] values()
+me.dm7.barcodescanner.core.CameraPreview: android.hardware.Camera$Size getOptimalPreviewSize()
+androidx.recyclerview.widget.RecyclerView: void setClipToPadding(boolean)
+androidx.cardview.widget.CardView
+androidx.appcompat.widget.LinearLayoutCompat: void setOrientation(int)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: void setSupportLibraryVersion(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: androidx.core.graphics.PathParser$PathDataNode[] getPathData()
+me.dm7.barcodescanner.core.BarcodeScannerView
+androidx.appcompat.widget.AppCompatImageButton: android.content.res.ColorStateList getSupportImageTintList()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatImageView: void setImageDrawable(android.graphics.drawable.Drawable)
+io.flutter.plugins.urllauncher.UrlLauncher$LaunchStatus: io.flutter.plugins.urllauncher.UrlLauncher$LaunchStatus valueOf(java.lang.String)
+io.flutter.view.FlutterCallbackInformation: java.lang.String callbackLibraryPath
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VClipPath
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatToggleButton createToggleButton(android.content.Context,android.util.AttributeSet)
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.AccessibilityEventsDelegate accessibilityEventsDelegate
+androidx.appcompat.widget.SearchView: void setOnSuggestionListener(androidx.appcompat.widget.SearchView$OnSuggestionListener)
+androidx.appcompat.widget.LinearLayoutCompat: void setVerticalGravity(int)
+io.flutter.embedding.android.FlutterImageView: io.flutter.embedding.engine.renderer.FlutterRenderer getAttachedRenderer()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setCompatHoveredFocusedTranslationZ(float)
+com.google.android.material.button.MaterialButton: void setIconResource(int)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: java.lang.reflect.InvocationHandler[] createWebMessageChannel()
+androidx.core.widget.NestedScrollView: void setOnScrollChangeListener(androidx.core.widget.NestedScrollView$OnScrollChangeListener)
+androidx.appcompat.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMajor()
+androidx.cardview.widget.CardView: boolean getUseCompatPadding()
+androidx.appcompat.app.AlertController$RecycleListView
+io.flutter.embedding.engine.FlutterJNI: void nativeRunBundleAndSnapshotFromLibrary(long,java.lang.String,java.lang.String,java.lang.String,android.content.res.AssetManager)
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior
+androidx.appcompat.widget.AppCompatRadioButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+com.google.android.material.button.MaterialButton: void setIconSize(int)
+com.google.common.util.concurrent.AbstractFuture$Waiter: com.google.common.util.concurrent.AbstractFuture$Waiter next
+io.flutter.embedding.engine.FlutterJNI: void nativeUnregisterTexture(long,long)
+androidx.recyclerview.widget.RecyclerView: int getScrollState()
+androidx.appcompat.widget.AppCompatButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+io.flutter.embedding.android.RenderMode: io.flutter.embedding.android.RenderMode[] values()
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity
+androidx.appcompat.widget.AbsActionBarView: int getAnimatedVisibility()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeWidth()
+io.flutter.embedding.android.FlutterSplashView$SavedState: android.os.Bundle access$702(io.flutter.embedding.android.FlutterSplashView$SavedState,android.os.Bundle)
+io.flutter.embedding.engine.systemchannels.PlatformChannel$ClipboardContentFormat: io.flutter.embedding.engine.systemchannels.PlatformChannel$ClipboardContentFormat[] values()
+androidx.appcompat.widget.ActionBarOverlayLayout: int getNestedScrollAxes()
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: void setRevealInfo(com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo)
+com.google.android.material.bottomappbar.BottomAppBar: float getFabCradleMargin()
+androidx.media.AudioAttributesImplBaseParcelizer
+androidx.appcompat.app.AppCompatViewInflater: AppCompatViewInflater()
+io.flutter.view.AccessibilityBridge$Action: io.flutter.view.AccessibilityBridge$Action[] values()
+io.flutter.view.FlutterView: io.flutter.embedding.engine.dart.DartExecutor getDartExecutor()
+androidx.media.AudioAttributesImplBaseParcelizer: androidx.media.AudioAttributesImplBase read(androidx.versionedparcelable.VersionedParcel)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: java.lang.String getGroupName()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: ReportFragment$LifecycleCallbacks()
+androidx.appcompat.widget.Toolbar: void setOnMenuItemClickListener(androidx.appcompat.widget.Toolbar$OnMenuItemClickListener)
+io.flutter.embedding.android.FlutterImageView$SurfaceKind: io.flutter.embedding.android.FlutterImageView$SurfaceKind[] values()
+io.flutter.view.AccessibilityViewEmbedder: android.view.View platformViewOfNode(int)
+com.google.android.material.bottomappbar.BottomAppBar: void setTitle(java.lang.CharSequence)
+io.flutter.embedding.engine.FlutterJNI: void nativePrefetchDefaultFontManager()
+io.flutter.embedding.engine.FlutterJNI: void setLocalizationPlugin(io.flutter.plugin.localization.LocalizationPlugin)
+androidx.appcompat.widget.ActionMenuView: void setExpandedActionViewsExclusive(boolean)
+androidx.core.graphics.drawable.IconCompat: IconCompat()
+androidx.fragment.app.BackStackState: android.os.Parcelable$Creator CREATOR
+com.google.android.material.appbar.AppBarLayout$BaseBehavior: AppBarLayout$BaseBehavior(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.android.FlutterSurfaceView
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$LayoutManager getLayoutManager()
+com.google.android.material.button.MaterialButton: android.graphics.PorterDuff$Mode getIconTintMode()
+okhttp3.TlsVersion: okhttp3.TlsVersion[] values()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback: android.view.WindowInsets onProgress(android.view.WindowInsets,java.util.List)
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundResource(int)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$InsetsListener insetsListener
+androidx.appcompat.widget.SearchView
+androidx.appcompat.widget.AppCompatImageButton
+androidx.lifecycle.ViewModel: ViewModel()
+io.flutter.embedding.engine.FlutterJNI: void nativeUpdateJavaAssetManager(long,android.content.res.AssetManager,java.lang.String)
+com.google.android.material.floatingactionbutton.FloatingActionButton: android.content.res.ColorStateList getBackgroundTintList()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.WindowInsets access$400(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setAutoFocus(boolean)
+io.flutter.plugin.platform.SingleViewPresentation: java.lang.Object createParams
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMajor()
+org.chromium.support_lib_boundary.StaticsBoundaryInterface: android.net.Uri getSafeBrowsingPrivacyPolicyUrl()
+com.google.android.material.button.MaterialButton: int getStrokeWidth()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableDelegateState
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+com.google.android.material.appbar.HeaderBehavior: HeaderBehavior(android.content.Context,android.util.AttributeSet)
+android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setDesktopMode(boolean)
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: void shareButtonClicked(android.view.MenuItem)
+io.flutter.embedding.engine.FlutterJNI: void init(android.content.Context,java.lang.String[],java.lang.String,java.lang.String,java.lang.String,long)
+android.support.v4.media.MediaDescriptionCompat
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setDropDownBackgroundResource(int)
+androidx.recyclerview.widget.RecyclerView: void setPreserveFocusAfterLayout(boolean)
+com.apptreesoftware.barcodescan.BarcodeScannerActivity
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorView
+io.flutter.view.FlutterView$ZeroSides: io.flutter.view.FlutterView$ZeroSides[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeAlpha(float)
+me.dm7.barcodescanner.core.CameraPreview: void setAutoFocus(boolean)
+androidx.recyclerview.widget.RecyclerView: long getNanoTime()
+com.google.android.material.circularreveal.cardview.CircularRevealCardView
+androidx.recyclerview.widget.RecyclerView: void setOnScrollListener(androidx.recyclerview.widget.RecyclerView$OnScrollListener)
+com.google.android.material.floatingactionbutton.FloatingActionButton: float getCompatElevation()
+androidx.appcompat.widget.Toolbar$SavedState: android.os.Parcelable$Creator CREATOR
+io.flutter.embedding.engine.systemchannels.PlatformChannel$SoundType: io.flutter.embedding.engine.systemchannels.PlatformChannel$SoundType valueOf(java.lang.String)
+androidx.appcompat.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context,android.util.AttributeSet,int)
+io.flutter.plugins.imagepicker.CameraDevice: io.flutter.plugins.imagepicker.CameraDevice valueOf(java.lang.String)
+io.flutter.embedding.engine.FlutterJNI: void dispatchSemanticsAction(int,io.flutter.view.AccessibilityBridge$Action,java.lang.Object)
+androidx.appcompat.widget.SearchView: int getSuggestionRowLayout()
+androidx.appcompat.widget.AppCompatSpinner: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPrePaused(android.app.Activity)
+org.chromium.support_lib_boundary.WebMessagePortBoundaryInterface: void close()
+androidx.appcompat.widget.Toolbar: void setNavigationContentDescription(java.lang.CharSequence)
+com.google.android.material.button.MaterialButton: int getIconPadding()
+androidx.appcompat.widget.Toolbar: androidx.appcompat.widget.ActionMenuPresenter getOuterActionMenuPresenter()
+androidx.appcompat.app.AppCompatViewInflater: android.content.Context themifyContext(android.content.Context,android.util.AttributeSet,boolean,boolean)
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser$Mode: com.google.zxing.pdf417.decoder.DecodedBitStreamParser$Mode valueOf(java.lang.String)
+androidx.appcompat.widget.AppCompatCheckBox: void setSupportButtonTintList(android.content.res.ColorStateList)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] values()
+com.google.android.material.stateful.ExtendableSavedState: android.os.Parcelable$Creator CREATOR
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleX()
+androidx.appcompat.widget.AppCompatImageView: void setImageURI(android.net.Uri)
+me.dm7.barcodescanner.core.BarcodeScannerView: int getRotationCount()
+androidx.appcompat.widget.Toolbar: void setPopupTheme(int)
+io.flutter.embedding.android.TransparencyMode: io.flutter.embedding.android.TransparencyMode[] values()
+androidx.transition.ChangeBounds$7
+androidx.coordinatorlayout.widget.CoordinatorLayout: CoordinatorLayout(android.content.Context,android.util.AttributeSet)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setBackgroundColor(int)
+androidx.appcompat.widget.AppCompatEditText: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.view.menu.ListMenuItemView: androidx.appcompat.view.menu.MenuItemImpl getItemData()
+com.google.android.material.button.MaterialButton: android.content.res.ColorStateList getRippleColor()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath
+androidx.recyclerview.widget.StaggeredGridLayoutManager: StaggeredGridLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+com.google.android.material.snackbar.SnackbarContentLayout
+androidx.appcompat.widget.Toolbar: void setCollapsible(boolean)
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ActionBroadcastReceiver
+androidx.appcompat.widget.AppCompatTextView: int getAutoSizeStepGranularity()
+androidx.cardview.widget.CardView: void setCardBackgroundColor(int)
+androidx.appcompat.widget.AppCompatCheckBox: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.recyclerview.widget.RecyclerView: int getMinFlingVelocity()
+androidx.appcompat.widget.AppCompatSpinner: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback: ImeSyncDeferringInsetsCallback$AnimationCallback(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+androidx.appcompat.widget.LinearLayoutCompat: int getDividerPadding()
+io.flutter.embedding.android.FlutterSplashView$SavedState: FlutterSplashView$SavedState(android.os.Parcel)
+androidx.appcompat.widget.Toolbar: void setOverflowIcon(android.graphics.drawable.Drawable)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack
+androidx.appcompat.widget.LinearLayoutCompat: void setBaselineAlignedChildIndex(int)
+androidx.appcompat.widget.ActionMenuView: android.graphics.drawable.Drawable getOverflowIcon()
+androidx.appcompat.widget.SearchView: int getMaxWidth()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType: com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setItemViewCacheSize(int)
+io.flutter.embedding.engine.FlutterOverlaySurface: android.view.Surface getSurface()
+androidx.appcompat.widget.Toolbar: int getTitleMarginTop()
+androidx.appcompat.widget.ActionBarOverlayLayout: void setOverlayMode(boolean)
+com.google.android.material.bottomappbar.BottomAppBar: float getFabCradleRoundedCornerRadius()
+android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
+com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout: void setOnAttachStateChangeListener(com.google.android.material.snackbar.BaseTransientBottomBar$OnAttachStateChangeListener)
+com.google.android.material.button.MaterialButton: android.graphics.drawable.Drawable getIcon()
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: void setWebViewRendererClient(java.lang.reflect.InvocationHandler)
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderAlpha(float)
+org.chromium.support_lib_boundary.ServiceWorkerControllerBoundaryInterface: java.lang.reflect.InvocationHandler getServiceWorkerWebSettings()
+androidx.fragment.app.FragmentManagerViewModel
+com.google.android.material.appbar.AppBarLayout$Behavior
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotX()
+com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior: AppBarLayout$ScrollingViewBehavior(android.content.Context,android.util.AttributeSet)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleY()
+io.flutter.embedding.engine.FlutterJNI: void updateJavaAssetManager(android.content.res.AssetManager,java.lang.String)
+com.google.android.material.appbar.HeaderBehavior: HeaderBehavior()
+io.flutter.view.FlutterCallbackInformation: java.lang.String callbackClassName
+com.google.android.material.circularreveal.cardview.CircularRevealCardView: int getCircularRevealScrimColor()
+com.google.android.material.transformation.FabTransformationSheetBehavior
+io.flutter.view.AccessibilityBridge$TextDirection: io.flutter.view.AccessibilityBridge$TextDirection[] values()
+androidx.core.widget.NestedScrollView: int getScrollRange()
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$RecycledViewPool getRecycledViewPool()
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatRadioButton createRadioButton(android.content.Context,android.util.AttributeSet)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: void pushClipRect(int,int,int,int)
+com.google.android.material.circularreveal.CircularRevealFrameLayout: int getCircularRevealScrimColor()
+androidx.appcompat.widget.AppCompatTextView: void setBackgroundResource(int)
+androidx.appcompat.widget.SearchView: void setQueryRefinementEnabled(boolean)
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatCheckedTextView createCheckedTextView(android.content.Context,android.util.AttributeSet)
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface: boolean getAllowContentAccess()
+android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderCornerRounded(boolean)
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.PlatformViewFactory viewFactory
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderCornerRadius(int)
+androidx.recyclerview.widget.RecyclerView: boolean getPreserveFocusAfterLayout()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setUseCompatPadding(boolean)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface$ForceDarkBehavior
+io.flutter.view.AccessibilityViewEmbedder: void cacheVirtualIdMappings(android.view.View,int,int)
+com.google.android.material.button.MaterialButton: void setRippleColorResource(int)
+androidx.recyclerview.widget.RecyclerView: int getBaseline()
+com.google.android.material.appbar.AppBarLayout$BaseBehavior: AppBarLayout$BaseBehavior()
+androidx.recyclerview.widget.RecyclerView$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.cardview.widget.CardView: boolean getPreventCornerOverlap()
+androidx.appcompat.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.ViewStubCompat: void setVisibility(int)
+io.flutter.embedding.engine.FlutterJNI: void destroyOverlaySurfaces()
+io.flutter.embedding.engine.FlutterJNI: void setDeferredComponentManager(io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager)
+me.dm7.barcodescanner.core.ViewFinderView: void setMaskColor(int)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathEnd()
+io.flutter.plugin.platform.SingleViewPresentation: io.flutter.plugin.platform.SingleViewPresentation$AccessibilityDelegatingFrameLayout rootView
+com.google.android.material.transformation.ExpandableBehavior: ExpandableBehavior(android.content.Context,android.util.AttributeSet)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeAlpha()
+me.dm7.barcodescanner.zxing.ZXingScannerView: java.util.Collection getFormats()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean access$300(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback)
+androidx.appcompat.widget.AppCompatImageView: android.content.res.ColorStateList getSupportBackgroundTintList()
+com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider: FlutterEmailSenderFileProvider()
+me.dm7.barcodescanner.core.ViewFinderView: void setLaserEnabled(boolean)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: java.util.List mutators
+androidx.appcompat.view.menu.ActionMenuItemView: void setCheckable(boolean)
+com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout: BaseTransientBottomBar$SnackbarBaseLayout(android.content.Context,android.util.AttributeSet)
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$Mode: com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$Mode valueOf(java.lang.String)
+android.support.v4.media.session.PlaybackStateCompat$CustomAction
+com.google.android.material.button.MaterialButton: void setInternalBackground(android.graphics.drawable.Drawable)
+com.google.android.material.button.MaterialButton: void setIconTintResource(int)
+org.chromium.support_lib_boundary.WebViewRendererClientBoundaryInterface
+androidx.appcompat.widget.SearchView: androidx.cursoradapter.widget.CursorAdapter getSuggestionsAdapter()
+androidx.appcompat.widget.Toolbar: int getPopupTheme()
+androidx.appcompat.widget.AppCompatEditText: java.lang.CharSequence getText()
+androidx.appcompat.widget.AppCompatSpinner: void setAdapter(android.widget.SpinnerAdapter)
+io.flutter.view.AccessibilityViewEmbedder: java.lang.Integer getRecordFlutterId(android.view.View,android.view.accessibility.AccessibilityRecord)
+io.flutter.embedding.engine.FlutterJNI: boolean prefetchDefaultFontManagerCalled
+androidx.appcompat.widget.AppCompatImageButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.recyclerview.widget.StaggeredGridLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
+com.google.android.material.appbar.AppBarLayout: int getMinimumHeightForVisibleOverlappingContent()
+org.chromium.support_lib_boundary.VisualStateCallbackBoundaryInterface
+com.google.android.material.transformation.FabTransformationScrimBehavior: FabTransformationScrimBehavior(android.content.Context,android.util.AttributeSet)
+com.google.android.material.appbar.AppBarLayout: int getDownNestedPreScrollRange()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView
+com.google.zxing.aztec.decoder.Decoder$Table: com.google.zxing.aztec.decoder.Decoder$Table[] values()
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: void updateTexImage()
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: android.content.res.ColorStateList getSupportBackgroundTintList()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_CREATE
+androidx.appcompat.widget.LinearLayoutCompat: int getVirtualChildCount()
+io.flutter.view.FlutterView: float getDevicePixelRatio()
+io.flutter.embedding.android.FlutterActivityLaunchConfigs$BackgroundMode: io.flutter.embedding.android.FlutterActivityLaunchConfigs$BackgroundMode[] values()
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: void closeButtonClicked(android.view.MenuItem)
+androidx.appcompat.widget.Toolbar: int getCurrentContentInsetEnd()
+com.google.android.material.button.MaterialButton: android.content.res.ColorStateList getIconTint()
+androidx.core.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: boolean animating
+androidx.appcompat.widget.ActionMenuView: ActionMenuView(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.SearchView: java.lang.CharSequence getQuery()
+androidx.appcompat.widget.Toolbar: androidx.appcompat.widget.DecorToolbar getWrapper()
+io.flutter.embedding.engine.FlutterJNI: void nativeDestroy(long)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.FlutterJNI nativeSpawn(long,java.lang.String,java.lang.String)
+androidx.appcompat.widget.Toolbar: android.content.Context getPopupContext()
+com.google.android.material.internal.NavigationMenuItemView: NavigationMenuItemView(android.content.Context,android.util.AttributeSet)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType: com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType[] values()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderLineLength(int)
+me.dm7.barcodescanner.core.CameraPreview: void setAspectTolerance(float)
+io.flutter.embedding.engine.FlutterJNI: void nativeSurfaceChanged(long,int,int)
+io.flutter.embedding.android.FlutterSplashView$SavedState
+io.flutter.embedding.engine.FlutterJNI: void nativeDispatchPointerDataPacket(long,java.nio.ByteBuffer,int)
+androidx.appcompat.widget.AppCompatTextView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.widget.Toolbar: int getTitleMarginStart()
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler getProxyController()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView
+androidx.appcompat.widget.Toolbar: int getCurrentContentInsetStart()
+io.flutter.view.AccessibilityBridge$Flag: io.flutter.view.AccessibilityBridge$Flag[] values()
+android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
+androidx.recyclerview.widget.RecyclerView: void setChildDrawingOrderCallback(androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: void setPathData(androidx.core.graphics.PathParser$PathDataNode[])
+io.flutter.embedding.engine.FlutterJNI: boolean initCalled
+androidx.appcompat.app.AppCompatViewInflater: java.lang.String LOG_TAG
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.WindowInsetsAnimation$Callback getAnimationCallback()
+io.flutter.embedding.engine.FlutterJNI: void deferredComponentInstallFailure(int,java.lang.String,boolean)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback animationCallback
+me.dm7.barcodescanner.core.BarcodeScannerView: void setShouldScaleToFill(boolean)
+androidx.core.widget.NestedScrollView: void setFillViewport(boolean)
+org.chromium.support_lib_boundary.WebMessagePortBoundaryInterface
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState$State: com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState$State valueOf(java.lang.String)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: int overlayInsetTypes
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: void setInputConnectionTarget(android.view.View)
+com.google.android.material.appbar.AppBarLayout: int getUpNestedPreScrollRange()
+com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider
+com.google.android.material.internal.NavigationMenuItemView: void setChecked(boolean)
+androidx.appcompat.widget.ViewStubCompat: void setLayoutResource(int)
+io.flutter.embedding.engine.FlutterJNI: android.graphics.Bitmap nativeGetBitmap(long)
+com.google.android.material.internal.NavigationMenuItemView
+androidx.appcompat.widget.ViewStubCompat: void setLayoutInflater(android.view.LayoutInflater)
+io.flutter.embedding.android.FlutterView$ZeroSides: io.flutter.embedding.android.FlutterView$ZeroSides[] values()
+androidx.appcompat.view.menu.ListMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.SearchView: int getInputType()
+androidx.appcompat.widget.SearchView$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.AppCompatTextView: void setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)
+org.chromium.support_lib_boundary.VisualStateCallbackBoundaryInterface: void onComplete(long)
+androidx.appcompat.widget.SearchView: void setOnCloseListener(androidx.appcompat.widget.SearchView$OnCloseListener)
+androidx.appcompat.widget.AppCompatTextView: java.lang.CharSequence getText()
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: void addWebMessageListener(java.lang.String,java.lang.String[],java.lang.reflect.InvocationHandler)
+android.support.v4.media.MediaBrowserCompat$MediaItem
+androidx.appcompat.widget.ViewStubCompat: void setInflatedId(int)
+io.flutter.embedding.android.FlutterSplashView$SavedState: void writeToParcel(android.os.Parcel,int)
+io.flutter.embedding.engine.FlutterJNI: void removeIsDisplayingFlutterUiListener(io.flutter.embedding.engine.renderer.FlutterUiDisplayListener)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getFillAlpha()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.lang.Float getUpdatedScale()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_START
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory getEdgeEffectFactory()
+androidx.appcompat.widget.ContentFrameLayout
+androidx.recyclerview.widget.RecyclerView: void setOnFlingListener(androidx.recyclerview.widget.RecyclerView$OnFlingListener)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] $VALUES
+androidx.appcompat.widget.ActionBarContainer
+androidx.appcompat.widget.AppCompatImageButton: android.graphics.PorterDuff$Mode getSupportImageTintMode()
+androidx.core.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.widget.AppCompatTextView: android.graphics.PorterDuff$Mode getSupportCompoundDrawablesTintMode()
+androidx.appcompat.widget.Toolbar: void setLogo(android.graphics.drawable.Drawable)
+com.google.android.material.bottomappbar.BottomAppBar: void setFabDiameter(int)
+com.google.android.material.button.MaterialButton: void setBackgroundTintList(android.content.res.ColorStateList)
+org.chromium.support_lib_boundary.WebSettingsBoundaryInterface: int getForceDark()
+androidx.coordinatorlayout.widget.CoordinatorLayout: int getSuggestedMinimumHeight()
+io.flutter.embedding.engine.systemchannels.PlatformChannel$SoundType: io.flutter.embedding.engine.systemchannels.PlatformChannel$SoundType[] values()
+io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference: androidx.lifecycle.Lifecycle lifecycle
+androidx.core.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.app.AppCompatViewInflater: android.view.View createView(android.content.Context,java.lang.String,android.util.AttributeSet)
+androidx.appcompat.widget.FitWindowsFrameLayout: void setOnFitSystemWindowsListener(androidx.appcompat.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
+org.chromium.support_lib_boundary.WebViewRendererBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: void registerTexture(long,io.flutter.embedding.engine.renderer.SurfaceTextureWrapper)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)
+android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
+androidx.appcompat.widget.Toolbar: android.widget.TextView getSubtitleTextView()
+androidx.recyclerview.widget.LinearLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
+org.chromium.support_lib_boundary.WebkitToCompatConverterBoundaryInterface: java.lang.reflect.InvocationHandler convertWebResourceRequest(android.webkit.WebResourceRequest)
+androidx.recyclerview.widget.LinearLayoutManager: LinearLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setUiOptions(int)
+androidx.appcompat.widget.Toolbar: void setTitleMarginTop(int)
+com.google.android.material.appbar.AppBarLayout
+androidx.lifecycle.SingleGeneratedAdapterObserver
+io.flutter.embedding.engine.systemchannels.PlatformChannel$DeviceOrientation: io.flutter.embedding.engine.systemchannels.PlatformChannel$DeviceOrientation valueOf(java.lang.String)
+androidx.core.widget.NestedScrollView: void setSmoothScrollingEnabled(boolean)
+com.google.android.material.button.MaterialButton: void setBackgroundColor(int)
+io.flutter.embedding.engine.FlutterJNI: void nativeSetSemanticsEnabled(long,boolean)
+com.google.android.material.appbar.HeaderScrollingViewBehavior: HeaderScrollingViewBehavior(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.AppCompatImageButton: void setBackgroundResource(int)
+androidx.core.app.ComponentActivity: ComponentActivity()
+com.google.zxing.qrcode.decoder.DataMask: com.google.zxing.qrcode.decoder.DataMask valueOf(java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity
+androidx.appcompat.widget.ButtonBarLayout: int getMinimumHeight()
+com.google.android.material.button.MaterialButton: void setStrokeColorResource(int)
+androidx.appcompat.widget.AppCompatImageButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+androidx.appcompat.widget.AppCompatRadioButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+com.google.android.material.bottomappbar.BottomAppBar$Behavior: BottomAppBar$Behavior(android.content.Context,android.util.AttributeSet)
+com.google.android.material.internal.NavigationMenuItemView: void setCheckable(boolean)
+androidx.cardview.widget.CardView: int getContentPaddingLeft()
+androidx.appcompat.widget.AppCompatRadioButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.AlertDialogLayout: AlertDialogLayout(android.content.Context,android.util.AttributeSet)
+androidx.lifecycle.LiveData$LifecycleBoundObserver
+androidx.media.AudioAttributesCompatParcelizer: androidx.media.AudioAttributesCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.appcompat.widget.ActionBarOverlayLayout: void setShowingForActionMode(boolean)
+com.google.android.material.internal.NavigationMenuView: int getWindowAnimations()
+com.google.android.material.internal.NavigationMenuView: NavigationMenuView(android.content.Context,android.util.AttributeSet)
+com.google.android.material.button.MaterialButton: void setStrokeWidthResource(int)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: void remove()
+androidx.appcompat.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
+androidx.appcompat.widget.ActionBarContextView: void setVisibility(int)
+io.flutter.embedding.engine.FlutterJNI: void onFirstFrame()
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setBackgroundTintList(android.content.res.ColorStateList)
+androidx.appcompat.app.AppCompatViewInflater: androidx.appcompat.widget.AppCompatSpinner createSpinner(android.content.Context,android.util.AttributeSet)
+com.google.android.material.internal.BaselineLayout
+androidx.appcompat.widget.ActionBarContainer: void setPrimaryBackground(android.graphics.drawable.Drawable)
+androidx.appcompat.widget.AppCompatSpinner
+androidx.appcompat.widget.Toolbar: void setContentInsetStartWithNavigation(int)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.WindowInsets access$402(io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback,android.view.WindowInsets)
+com.google.android.material.internal.ForegroundLinearLayout: void setForeground(android.graphics.drawable.Drawable)
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.FlutterJNI$AsyncWaitForVsyncDelegate asyncWaitForVsyncDelegate
+io.flutter.embedding.engine.FlutterJNI: void dispatchSemanticsAction(int,int,java.nio.ByteBuffer,int)
+com.google.android.material.internal.ForegroundLinearLayout: android.graphics.drawable.Drawable getForeground()
+io.flutter.embedding.engine.FlutterJNI: boolean nativeGetIsSoftwareRenderingEnabled()
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback$AnimationCallback: void onPrepare(android.view.WindowInsetsAnimation)
+com.google.android.material.theme.MaterialComponentsViewInflater: MaterialComponentsViewInflater()
+io.flutter.embedding.engine.renderer.SurfaceTextureWrapper: void detachFromGLContext()
+com.google.android.material.circularreveal.CircularRevealFrameLayout: com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo getRevealInfo()
+org.chromium.support_lib_boundary.ServiceWorkerWebSettingsBoundaryInterface
+androidx.appcompat.widget.AppCompatImageButton: void setImageResource(int)
+io.flutter.plugin.platform.SingleViewPresentation: android.widget.FrameLayout container
+androidx.appcompat.widget.ActionBarContainer: ActionBarContainer(android.content.Context,android.util.AttributeSet)
+androidx.coordinatorlayout.widget.CoordinatorLayout: int getSuggestedMinimumWidth()
+androidx.appcompat.widget.Toolbar
+androidx.fragment.app.FragmentState: android.os.Parcelable$Creator CREATOR
+com.google.android.material.bottomappbar.BottomAppBar: float getFabTranslationY()
+androidx.appcompat.widget.AppCompatButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+androidx.core.widget.NestedScrollView: int getMaxScrollAmount()
+androidx.appcompat.widget.AppCompatButton: int getAutoSizeMinTextSize()
+io.flutter.view.AccessibilityViewEmbedder: void setFlutterNodeParent(android.view.accessibility.AccessibilityNodeInfo,android.view.View,android.view.accessibility.AccessibilityNodeInfo)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setCacheEnabled(boolean)
+androidx.recyclerview.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem: android.os.Parcelable$Creator CREATOR
+io.flutter.embedding.engine.FlutterJNI: io.flutter.embedding.engine.FlutterJNI spawn(java.lang.String,java.lang.String)
+com.google.android.material.floatingactionbutton.FloatingActionButton: void setHideMotionSpec(com.google.android.material.animation.MotionSpec)
+androidx.media.AudioAttributesCompat
+androidx.appcompat.app.AppCompatViewInflater: void verifyNotNull(android.view.View,java.lang.String)
+com.google.zxing.BarcodeFormat: com.google.zxing.BarcodeFormat[] values()
+android.support.v4.app.RemoteActionCompatParcelizer
+io.flutter.embedding.engine.FlutterJNI: void nativeInvokePlatformMessageResponseCallback(long,int,java.nio.ByteBuffer,int)
+org.chromium.support_lib_boundary.ProxyControllerBoundaryInterface
+io.flutter.embedding.engine.FlutterJNI: java.lang.String getObservatoryUri()
+me.dm7.barcodescanner.core.ViewFinderView: void setBorderColor(int)
+androidx.core.app.CoreComponentFactory: CoreComponentFactory()
+io.flutter.view.AccessibilityBridge$Action: io.flutter.view.AccessibilityBridge$Action valueOf(java.lang.String)
+org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface: java.lang.reflect.InvocationHandler getTracingController()
+androidx.appcompat.widget.ActionBarContainer: void setTransitioning(boolean)
+androidx.appcompat.widget.AppCompatSpinner: void setBackgroundResource(int)
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface: void _hideContextMenu()
+io.flutter.embedding.engine.FlutterJNI: void nativeDispatchPlatformMessage(long,java.lang.String,java.nio.ByteBuffer,int,int)
+androidx.appcompat.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMinor()
+com.google.android.material.appbar.AppBarLayout: void setExpanded(boolean)
+io.flutter.plugin.editing.TextInputPlugin$InputTarget$Type: io.flutter.plugin.editing.TextInputPlugin$InputTarget$Type[] values()
+androidx.appcompat.widget.MenuPopupWindow$MenuDropDownListView: void setHoverListener(androidx.appcompat.widget.MenuItemHoverListener)
+io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack: void pushTransform(float[])
+androidx.appcompat.widget.AppCompatImageView: void setImageResource(int)
+androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+androidx.media.AudioAttributesCompatParcelizer
+androidx.appcompat.widget.SearchView: SearchView(android.content.Context,android.util.AttributeSet,int)
+androidx.appcompat.widget.AppCompatButton: void setAutoSizeTextTypeWithDefaults(int)
+okhttp3.internal.http2.ErrorCode: okhttp3.internal.http2.ErrorCode[] values()
+androidx.appcompat.widget.AppCompatButton: int getAutoSizeTextType()
+com.google.android.material.internal.BaselineLayout: BaselineLayout(android.content.Context,android.util.AttributeSet)
+androidx.appcompat.widget.Toolbar: java.lang.CharSequence getSubtitle()
+androidx.appcompat.widget.AppCompatAutoCompleteTextView: void setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)
+me.dm7.barcodescanner.core.BarcodeScannerView: void setMaskColor(int)
+io.flutter.plugin.editing.ImeSyncDeferringInsetsCallback: android.view.View$OnApplyWindowInsetsListener getInsetsListener()
+com.google.android.material.button.MaterialButton: void setBackgroundTintMode(android.graphics.PorterDuff$Mode)
+org.chromium.support_lib_boundary.WebViewProviderBoundaryInterface: java.lang.reflect.InvocationHandler getWebViewRenderer()
+com.google.android.material.appbar.AppBarLayout: void setTargetElevation(float)
+androidx.appcompat.widget.AppCompatButton: void setBackgroundResource(int)

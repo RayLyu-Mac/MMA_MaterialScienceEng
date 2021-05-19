@@ -1,0 +1,869 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/mma_mse/Instruction/KeyenceMicroscope/keyenceData.dart', 'packages/flutter/src/services/system_chrome.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/drawer_header.dart', 'packages/mma_mse/customTileScroll.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/material/card.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/youtube_player_flutter/src/widgets/youtube_player_builder.dart', 'packages/youtube_player_flutter/src/widgets/progress_bar.dart'], (function load__packages__mma_mse__Instruction__KeyenceMicroscope__keyenceMain_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__mma_mse__Instruction__KeyenceMicroscope__keyenceData$46dart, packages__flutter__src__services__system_chrome$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__drawer_header$46dart, packages__mma_mse__customTileScroll$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__material__card$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__youtube_player_flutter__src__widgets__youtube_player_builder$46dart, packages__youtube_player_flutter__src__widgets__progress_bar$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const scroll_controller = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_controller;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const keyenceData = packages__mma_mse__Instruction__KeyenceMicroscope__keyenceData$46dart.Instruction__KeyenceMicroscope__keyenceData;
+  const system_chrome = packages__flutter__src__services__system_chrome$46dart.src__services__system_chrome;
+  const drawer = packages__flutter__src__material__icon_button$46dart.src__material__drawer;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const drawer_header = packages__flutter__src__material__drawer_header$46dart.src__material__drawer_header;
+  const customTileScroll = packages__mma_mse__customTileScroll$46dart.customTileScroll;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const youtube_player = packages__youtube_player_flutter__src__widgets__youtube_player_builder$46dart.src__player__youtube_player;
+  const youtube_player_controller = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__utils__youtube_player_controller;
+  var keyenceMain = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $add = dartx.add;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    videoL: () => (T.videoL = dart.constFn(dart.legacy(keyenceData.video)))(),
+    JSArrayOfvideoL: () => (T.JSArrayOfvideoL = dart.constFn(_interceptors.JSArray$(T.videoL())))(),
+    DeviceOrientationL: () => (T.DeviceOrientationL = dart.constFn(dart.legacy(system_chrome.DeviceOrientation)))(),
+    JSArrayOfDeviceOrientationL: () => (T.JSArrayOfDeviceOrientationL = dart.constFn(_interceptors.JSArray$(T.DeviceOrientationL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    DrawerL: () => (T.DrawerL = dart.constFn(dart.legacy(drawer.Drawer)))(),
+    VoidToDrawerL: () => (T.VoidToDrawerL = dart.constFn(dart.fnType(T.DrawerL(), [])))(),
+    ColorN: () => (T.ColorN = dart.constFn(dart.nullable(ui.Color)))(),
+    YoutubePlayerControllerL: () => (T.YoutubePlayerControllerL = dart.constFn(dart.legacy(youtube_player_controller.YoutubePlayerController)))(),
+    GestureDetectorL: () => (T.GestureDetectorL = dart.constFn(dart.legacy(gesture_detector.GestureDetector)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToGestureDetectorL: () => (T.BuildContextLAndintLToGestureDetectorL = dart.constFn(dart.fnType(T.GestureDetectorL(), [T.BuildContextL(), T.intL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 35,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 28,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 21,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "pageTo",
+        [_Location_column]: 21,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fonts",
+        [_Location_column]: 21,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 21,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 13,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 11,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 11,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 65,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 53,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 95,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 27,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 27,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 90,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 53,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 102,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 27,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 27,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.constList([C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43], T._LocationL());
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[40] || CT.C40,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 31,
+        [_Location_line]: 111,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "liveUIColor",
+        [_Location_column]: 31,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46, C[47] || CT.C47], T._LocationL());
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 110,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 29,
+        [_Location_line]: 109,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50, C[51] || CT.C51], T._LocationL());
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 108,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 27,
+        [_Location_line]: 107,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 108,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], T._LocationL());
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 106,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58], T._LocationL());
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 19,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 19,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 19,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "clipBehavior",
+        [_Location_column]: 19,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.constList([C[61] || CT.C61, C[62] || CT.C62, C[63] || CT.C63, C[64] || CT.C64, C[65] || CT.C65, C[66] || CT.C66], T._LocationL());
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[60] || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 81,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.constList([C[69] || CT.C69], T._LocationL());
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[68] || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 80,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 13,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemExtent",
+        [_Location_column]: 13,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 13,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 13,
+        [_Location_line]: 79,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.constList([C[72] || CT.C72, C[73] || CT.C73, C[74] || CT.C74, C[75] || CT.C75], T._LocationL());
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[71] || CT.C71,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.constList([C[78] || CT.C78], T._LocationL());
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[77] || CT.C77,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 9,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "drawer",
+        [_Location_column]: 9,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C80() {
+      return C[80] = dart.constList([C[81] || CT.C81, C[82] || CT.C82, C[83] || CT.C83], T._LocationL());
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[80] || CT.C80,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/Instruction/KeyenceMicroscope/keyenceMain.dart"
+      });
+    }
+  }, false);
+  var C = Array(84).fill(void 0);
+  var I = ["package:mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart"];
+  var videoType$ = dart.privateName(keyenceMain, "KeyenceMicroInstru.videoType");
+  keyenceMain.KeyenceMicroInstru = class KeyenceMicroInstru extends framework.StatefulWidget {
+    get videoType() {
+      return this[videoType$];
+    }
+    set videoType(value) {
+      super.videoType = value;
+    }
+    createState() {
+      return new keyenceMain._KeyenceMicroInstruState.new();
+    }
+  };
+  (keyenceMain.KeyenceMicroInstru.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let videoType = opts && 'videoType' in opts ? opts.videoType : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[videoType$] = videoType;
+    keyenceMain.KeyenceMicroInstru.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = keyenceMain.KeyenceMicroInstru.prototype;
+  dart.addTypeTests(keyenceMain.KeyenceMicroInstru);
+  dart.addTypeCaches(keyenceMain.KeyenceMicroInstru);
+  dart.setMethodSignature(keyenceMain.KeyenceMicroInstru, () => ({
+    __proto__: dart.getMethods(keyenceMain.KeyenceMicroInstru.__proto__),
+    createState: dart.fnType(dart.legacy(keyenceMain._KeyenceMicroInstruState), [])
+  }));
+  dart.setLibraryUri(keyenceMain.KeyenceMicroInstru, I[0]);
+  dart.setFieldSignature(keyenceMain.KeyenceMicroInstru, () => ({
+    __proto__: dart.getFields(keyenceMain.KeyenceMicroInstru.__proto__),
+    videoType: dart.finalFieldType(dart.legacy(keyenceData.video))
+  }));
+  var _instructionList = dart.privateName(keyenceMain, "_instructionList");
+  var _screenWidth = dart.privateName(keyenceMain, "_screenWidth");
+  var _screenH = dart.privateName(keyenceMain, "_screenH");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  keyenceMain._KeyenceMicroInstruState = class _KeyenceMicroInstruState extends framework.State$(dart.legacy(keyenceMain.KeyenceMicroInstru)) {
+    initState() {
+      super.initState();
+      this[_instructionList] = new keyenceData.video.new().videoList();
+      system_chrome.SystemChrome.setPreferredOrientations(T.JSArrayOfDeviceOrientationL().of([system_chrome.DeviceOrientation.portraitUp, system_chrome.DeviceOrientation.portraitDown]));
+    }
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_screenWidth] = media_query.MediaQuery.of(this.context).size.width;
+      this[_screenH] = media_query.MediaQuery.of(this.context).size.height;
+    }
+    build(context) {
+      const keyenceInstruction = () => {
+        return new drawer.Drawer.new({child: new scroll_view.ListView.new({children: (() => {
+              let t0 = T.JSArrayOfWidgetL().of([new drawer_header.DrawerHeader.new({child: new text.Text.new("Keyence Microscope", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3})]);
+              for (let j = 0; j < dart.notNull(this.title[$length]); j = j + 1)
+                t0[$add](new customTileScroll.ScrollcustomListTile.new({name: T.StringL().as(this.title[$_get](j)), pageTo: j - 1, fonts: 13.0, controller: this.controller, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}));
+              return t0;
+            })(), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+      };
+      dart.fn(keyenceInstruction, T.VoidToDrawerL());
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({backgroundColor: colors.Colors.black, title: new text.Text.new("Keyence MicroScope Instruction", {style: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 35, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), drawer: keyenceInstruction(), body: new safe_area.SafeArea.new({child: new scroll_view.ListView.builder({controller: this.controller, itemExtent: 335.0, itemCount: this[_instructionList][$length], itemBuilder: dart.fn((context, index) => new gesture_detector.GestureDetector.new({child: new card.Card.new({color: T.ColorN().as(dart.dload(this[_instructionList][$_get](index), 'materialcolor')), margin: new edge_insets.EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 8.0), elevation: 5.0, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(12.0)}), clipBehavior: ui.Clip.antiAlias, child: new basic.Stack.new({children: T.JSArrayOfWidgetL().of([new basic.Positioned.new({top: 270.0, left: 5.0, child: new text.Text.new(core.String.as(dart.dload(this[_instructionList][$_get](index), 'title')), {style: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 47, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), new basic.Positioned.new({top: 290.0, left: 5.0, child: new text.Text.new(core.String.as(dart.dload(this[_instructionList][$_get](index), 'subtitle')), {style: new text_style.TextStyle.new({fontSize: dart.notNull(this[_screenH]) / 58}), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[39] || CT.C39}), new basic.Positioned.new({top: 0.0, child: new container.Container.new({height: 265.0, child: new youtube_player.YoutubePlayer.new({controller: T.YoutubePlayerControllerL().as(dart.dload(this[_instructionList][$_get](index), 'videoController')), liveUIColor: colors.Colors.amber, $creationLocationd_0dea112b090073317d4: C[44] || CT.C44}), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48}), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52})]), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56}), $creationLocationd_0dea112b090073317d4: C[59] || CT.C59}), $creationLocationd_0dea112b090073317d4: C[67] || CT.C67}), T.BuildContextLAndintLToGestureDetectorL()), $creationLocationd_0dea112b090073317d4: C[70] || CT.C70}), $creationLocationd_0dea112b090073317d4: C[76] || CT.C76}), $creationLocationd_0dea112b090073317d4: C[79] || CT.C79});
+    }
+  };
+  (keyenceMain._KeyenceMicroInstruState.new = function() {
+    this[_instructionList] = T.JSArrayOfvideoL().of([]);
+    this[_screenWidth] = null;
+    this[_screenH] = null;
+    this.controller = new scroll_controller.ScrollController.new();
+    this.title = ["Start the machine", "Placing the sample into the stage", "Adjust the light for the microscope", "Taking simple image", "Correcting a sample which is not flat", "Large Image Scan", "Enhancing the resolution", "Glare removal", "Finish the experiment"];
+    keyenceMain._KeyenceMicroInstruState.__proto__.new.call(this);
+    ;
+  }).prototype = keyenceMain._KeyenceMicroInstruState.prototype;
+  dart.addTypeTests(keyenceMain._KeyenceMicroInstruState);
+  dart.addTypeCaches(keyenceMain._KeyenceMicroInstruState);
+  dart.setMethodSignature(keyenceMain._KeyenceMicroInstruState, () => ({
+    __proto__: dart.getMethods(keyenceMain._KeyenceMicroInstruState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(keyenceMain._KeyenceMicroInstruState, I[0]);
+  dart.setFieldSignature(keyenceMain._KeyenceMicroInstruState, () => ({
+    __proto__: dart.getFields(keyenceMain._KeyenceMicroInstruState.__proto__),
+    [_instructionList]: dart.fieldType(dart.legacy(core.List)),
+    [_screenWidth]: dart.fieldType(dart.legacy(core.double)),
+    [_screenH]: dart.fieldType(dart.legacy(core.double)),
+    controller: dart.finalFieldType(dart.legacy(scroll_controller.ScrollController)),
+    title: dart.fieldType(dart.legacy(core.List))
+  }));
+  dart.trackLibraries("packages/mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart", {
+    "package:mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart": keyenceMain
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["keyenceMain.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAOc;;;;;;;AAI8B;IAA0B;;;QAHtC;QAAU;;;AAAc,kEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;AAyBlD,MAAX;AACgC,MAAtC,yBAAmB,AAAQ;AAIzB,MAHW,oDAAyB,oCAClB,4CACA;IAEtB;;AAI+B,MAAvB;AAC0C,MAAhD,qBAA0B,AAAY,AAAK,0BAAd;AACgB,MAA7C,iBAAsB,AAAY,AAAK,0BAAd;IAC3B;UAG0B;AACxB,YAAO;AAAwB,6CAClB,wCACK;gDACR,2CAAoB,kBAAK;AACzB,uBAAS,IAAI,GAAG,AAAE,CAAD,gBAAG,AAAM,sBAAQ,IAAA,AAAC,CAAA;AACjC,6FACU,AAAK,kBAAC,CAAC,YACL,AAAE,CAAD,GAAG,UACL,kBACK;;;;;AAI5B,YAAO,oCACK,yCACkB,4BACjB,kBACL,0CAEI,wCAA6B,aAAT,kBAAW,gBAA2B,oJAG1D,kBAAkB,UACpB,mCACY,8CACF,6BACA,kBACD,AAAiB,8CACf,SAAc,SAAa,UAC/B,iDACE,wCAC0B,WAAxB,AAAgB,8BAAC,KAAK,8BACV,oCAAS,MAAI,MAAI,MAAI,iBAC7B,YACJ,uEACwB,wCAAS,uBACrB,0BACZ,+BACK,yBACR,+BACS,aACC,YACC,iCACmB,WAAxB,AAAgB,8BAAC,KAAK,sBACf,wCACgB,aAAT,kBAAW,gBACE,4IAEjC,+BACS,aACC,YACC,iCACmB,WAAxB,AAAgB,8BAAC,KAAK,yBACf,wCAA6B,aAAT,kBAAW,4HAE5C,+BACS,YACE,qCACG,cACD,kFAEuB,WAAxB,AAAgB,8BAAC,KAAK,qCACN;IAUhD;;;IA3GK,yBAAmB;IACjB;IACA;IACgB,kBAAa;IAC/B,aAAQ,CACX,qBACA,qCACA,uCACA,uBACA,yCACA,oBACA,4BACA,iBACA;;;EA+FJ","file":"../../../../../../../../../packages/mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart.lib.js"}');
+  // Exports:
+  return {
+    Instruction__KeyenceMicroscope__keyenceMain: keyenceMain
+  };
+}));
+
+//# sourceMappingURL=keyenceMain.dart.lib.js.map

@@ -1,0 +1,663 @@
+define(['dart_sdk'], (function load__packages__flutter_inappwebview__src__X509Certificate__asn1_identifier_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var asn1_identifier = Object.create(dart.library);
+  var $firstWhere = dartx.firstWhere;
+  var $hashCode = dartx.hashCode;
+  var $toString = dartx.toString;
+  var $_equals = dartx._equals;
+  var $toSet = dartx.toSet;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    ASN1IdentifierClassL: () => (T.ASN1IdentifierClassL = dart.constFn(dart.legacy(asn1_identifier.ASN1IdentifierClass)))(),
+    ASN1IdentifierClassLToboolL: () => (T.ASN1IdentifierClassLToboolL = dart.constFn(dart.fnType(T.boolL(), [T.ASN1IdentifierClassL()])))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    JSArrayOfASN1IdentifierClassL: () => (T.JSArrayOfASN1IdentifierClassL = dart.constFn(_interceptors.JSArray$(T.ASN1IdentifierClassL())))(),
+    ASN1IdentifierTagNumberL: () => (T.ASN1IdentifierTagNumberL = dart.constFn(dart.legacy(asn1_identifier.ASN1IdentifierTagNumber)))(),
+    ASN1IdentifierTagNumberLToboolL: () => (T.ASN1IdentifierTagNumberLToboolL = dart.constFn(dart.fnType(T.boolL(), [T.ASN1IdentifierTagNumberL()])))(),
+    JSArrayOfASN1IdentifierTagNumberL: () => (T.JSArrayOfASN1IdentifierTagNumberL = dart.constFn(_interceptors.JSArray$(T.ASN1IdentifierTagNumberL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierClass.prototype,
+        [_value$]: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierClass.prototype,
+        [_value$]: 64
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierClass.prototype,
+        [_value$]: 128
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierClass.prototype,
+        [_value$]: 192
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 0
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 1
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 2
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 3
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 4
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 5
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 6
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 7
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 8
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 9
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 10
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 11
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 12
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 13
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 16
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 17
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 18
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 19
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 20
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 21
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 22
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 23
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 24
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 25
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 26
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 27
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 28
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 29
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: asn1_identifier.ASN1IdentifierTagNumber.prototype,
+        [_value$0]: 30
+      });
+    }
+  }, false);
+  var C = Array(33).fill(void 0);
+  var I = ["package:flutter_inappwebview/src/X509Certificate/asn1_identifier.dart"];
+  var _value$ = dart.privateName(asn1_identifier, "ASN1IdentifierClass._value");
+  var _value = dart.privateName(asn1_identifier, "_value");
+  asn1_identifier.ASN1IdentifierClass = class ASN1IdentifierClass extends core.Object {
+    get [_value]() {
+      return this[_value$];
+    }
+    set [_value](value) {
+      super[_value] = value;
+    }
+    static fromValue(value) {
+      if (value != null) return asn1_identifier.ASN1IdentifierClass.values[$firstWhere](dart.fn(element => element.toValue() == value, T.ASN1IdentifierClassLToboolL()), {orElse: dart.fn(() => null, T.VoidToNull())});
+      return null;
+    }
+    toValue() {
+      return this[_value];
+    }
+    toString() {
+      switch (this.toValue()) {
+        case 0:
+        {
+          return "UNIVERSAL";
+        }
+        case 64:
+        {
+          return "APPLICATION";
+        }
+        case 128:
+        {
+          return "CONTEXT_SPECIFIC";
+        }
+        case 192:
+        {
+          return "PRIVATE";
+        }
+      }
+      return "";
+    }
+    _equals(value) {
+      if (value == null) return false;
+      return dart.equals(value, this[_value]);
+    }
+    get hashCode() {
+      return dart.hashCode(this[_value]);
+    }
+  };
+  (asn1_identifier.ASN1IdentifierClass._internal = function(_value) {
+    this[_value$] = _value;
+    ;
+  }).prototype = asn1_identifier.ASN1IdentifierClass.prototype;
+  dart.addTypeTests(asn1_identifier.ASN1IdentifierClass);
+  dart.addTypeCaches(asn1_identifier.ASN1IdentifierClass);
+  dart.setMethodSignature(asn1_identifier.ASN1IdentifierClass, () => ({
+    __proto__: dart.getMethods(asn1_identifier.ASN1IdentifierClass.__proto__),
+    toValue: dart.fnType(dart.legacy(core.int), []),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), []),
+    _equals: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    [$_equals]: dart.fnType(dart.legacy(core.bool), [dart.dynamic])
+  }));
+  dart.setGetterSignature(asn1_identifier.ASN1IdentifierClass, () => ({
+    __proto__: dart.getGetters(asn1_identifier.ASN1IdentifierClass.__proto__),
+    hashCode: dart.legacy(core.int),
+    [$hashCode]: dart.legacy(core.int)
+  }));
+  dart.setLibraryUri(asn1_identifier.ASN1IdentifierClass, I[0]);
+  dart.setFieldSignature(asn1_identifier.ASN1IdentifierClass, () => ({
+    __proto__: dart.getFields(asn1_identifier.ASN1IdentifierClass.__proto__),
+    [_value]: dart.finalFieldType(dart.legacy(core.int))
+  }));
+  dart.defineExtensionMethods(asn1_identifier.ASN1IdentifierClass, ['toString', '_equals']);
+  dart.defineExtensionAccessors(asn1_identifier.ASN1IdentifierClass, ['hashCode']);
+  dart.defineLazy(asn1_identifier.ASN1IdentifierClass, {
+    /*asn1_identifier.ASN1IdentifierClass.values*/get values() {
+      return T.JSArrayOfASN1IdentifierClassL().of([asn1_identifier.ASN1IdentifierClass.UNIVERSAL, asn1_identifier.ASN1IdentifierClass.APPLICATION, asn1_identifier.ASN1IdentifierClass.CONTEXT_SPECIFIC, asn1_identifier.ASN1IdentifierClass.PRIVATE])[$toSet]();
+    },
+    /*asn1_identifier.ASN1IdentifierClass.UNIVERSAL*/get UNIVERSAL() {
+      return C[0] || CT.C0;
+    },
+    /*asn1_identifier.ASN1IdentifierClass.APPLICATION*/get APPLICATION() {
+      return C[1] || CT.C1;
+    },
+    /*asn1_identifier.ASN1IdentifierClass.CONTEXT_SPECIFIC*/get CONTEXT_SPECIFIC() {
+      return C[2] || CT.C2;
+    },
+    /*asn1_identifier.ASN1IdentifierClass.PRIVATE*/get PRIVATE() {
+      return C[3] || CT.C3;
+    }
+  }, true);
+  var _value$0 = dart.privateName(asn1_identifier, "ASN1IdentifierTagNumber._value");
+  asn1_identifier.ASN1IdentifierTagNumber = class ASN1IdentifierTagNumber extends core.Object {
+    get [_value]() {
+      return this[_value$0];
+    }
+    set [_value](value) {
+      super[_value] = value;
+    }
+    static fromValue(value) {
+      if (value != null) return asn1_identifier.ASN1IdentifierTagNumber.values[$firstWhere](dart.fn(element => element.toValue() == value, T.ASN1IdentifierTagNumberLToboolL()), {orElse: dart.fn(() => null, T.VoidToNull())});
+      return null;
+    }
+    toValue() {
+      return this[_value];
+    }
+    toString() {
+      switch (this.toValue()) {
+        case 0:
+        {
+          return "END_OF_CONTENT";
+        }
+        case 1:
+        {
+          return "BOOLEAN";
+        }
+        case 2:
+        {
+          return "INTEGER";
+        }
+        case 3:
+        {
+          return "BIT_STRING";
+        }
+        case 4:
+        {
+          return "OCTET_STRING";
+        }
+        case 5:
+        {
+          return "NULL";
+        }
+        case 6:
+        {
+          return "OBJECT_IDENTIFIER";
+        }
+        case 7:
+        {
+          return "OBJECT_DESCRIPTOR";
+        }
+        case 8:
+        {
+          return "EXTERNAL";
+        }
+        case 9:
+        {
+          return "READ";
+        }
+        case 10:
+        {
+          return "ENUMERATED";
+        }
+        case 11:
+        {
+          return "EMBEDDED_PDV";
+        }
+        case 12:
+        {
+          return "UTF8_STRING";
+        }
+        case 13:
+        {
+          return "RELATIVE_OID";
+        }
+        case 16:
+        {
+          return "SEQUENCE";
+        }
+        case 17:
+        {
+          return "SET";
+        }
+        case 18:
+        {
+          return "NUMERIC_STRING";
+        }
+        case 19:
+        {
+          return "PRINTABLE_STRING";
+        }
+        case 20:
+        {
+          return "T61_STRING";
+        }
+        case 21:
+        {
+          return "VIDEOTEX_STRING";
+        }
+        case 22:
+        {
+          return "IA5_STRING";
+        }
+        case 23:
+        {
+          return "UTC_TIME";
+        }
+        case 24:
+        {
+          return "GENERALIZED_TIME";
+        }
+        case 25:
+        {
+          return "GRAPHIC_STRING";
+        }
+        case 26:
+        {
+          return "VISIBLE_STRING";
+        }
+        case 27:
+        {
+          return "GENERAL_STRING";
+        }
+        case 28:
+        {
+          return "UNIVERSAL_STRING";
+        }
+        case 29:
+        {
+          return "CHARACTER_STRING";
+        }
+        case 30:
+        {
+          return "BMP_STRING";
+        }
+      }
+      return "";
+    }
+    _equals(value) {
+      if (value == null) return false;
+      return dart.equals(value, this[_value]);
+    }
+    get hashCode() {
+      return dart.hashCode(this[_value]);
+    }
+  };
+  (asn1_identifier.ASN1IdentifierTagNumber._internal = function(_value) {
+    this[_value$0] = _value;
+    ;
+  }).prototype = asn1_identifier.ASN1IdentifierTagNumber.prototype;
+  dart.addTypeTests(asn1_identifier.ASN1IdentifierTagNumber);
+  dart.addTypeCaches(asn1_identifier.ASN1IdentifierTagNumber);
+  dart.setMethodSignature(asn1_identifier.ASN1IdentifierTagNumber, () => ({
+    __proto__: dart.getMethods(asn1_identifier.ASN1IdentifierTagNumber.__proto__),
+    toValue: dart.fnType(dart.legacy(core.int), []),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), []),
+    _equals: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    [$_equals]: dart.fnType(dart.legacy(core.bool), [dart.dynamic])
+  }));
+  dart.setGetterSignature(asn1_identifier.ASN1IdentifierTagNumber, () => ({
+    __proto__: dart.getGetters(asn1_identifier.ASN1IdentifierTagNumber.__proto__),
+    hashCode: dart.legacy(core.int),
+    [$hashCode]: dart.legacy(core.int)
+  }));
+  dart.setLibraryUri(asn1_identifier.ASN1IdentifierTagNumber, I[0]);
+  dart.setFieldSignature(asn1_identifier.ASN1IdentifierTagNumber, () => ({
+    __proto__: dart.getFields(asn1_identifier.ASN1IdentifierTagNumber.__proto__),
+    [_value]: dart.finalFieldType(dart.legacy(core.int))
+  }));
+  dart.defineExtensionMethods(asn1_identifier.ASN1IdentifierTagNumber, ['toString', '_equals']);
+  dart.defineExtensionAccessors(asn1_identifier.ASN1IdentifierTagNumber, ['hashCode']);
+  dart.defineLazy(asn1_identifier.ASN1IdentifierTagNumber, {
+    /*asn1_identifier.ASN1IdentifierTagNumber.values*/get values() {
+      return T.JSArrayOfASN1IdentifierTagNumberL().of([asn1_identifier.ASN1IdentifierTagNumber.END_OF_CONTENT, asn1_identifier.ASN1IdentifierTagNumber.BOOLEAN, asn1_identifier.ASN1IdentifierTagNumber.INTEGER, asn1_identifier.ASN1IdentifierTagNumber.BIT_STRING, asn1_identifier.ASN1IdentifierTagNumber.OCTET_STRING, asn1_identifier.ASN1IdentifierTagNumber.NULL, asn1_identifier.ASN1IdentifierTagNumber.OBJECT_IDENTIFIER, asn1_identifier.ASN1IdentifierTagNumber.OBJECT_DESCRIPTOR, asn1_identifier.ASN1IdentifierTagNumber.EXTERNAL, asn1_identifier.ASN1IdentifierTagNumber.READ, asn1_identifier.ASN1IdentifierTagNumber.ENUMERATED, asn1_identifier.ASN1IdentifierTagNumber.EMBEDDED_PDV, asn1_identifier.ASN1IdentifierTagNumber.UTF8_STRING, asn1_identifier.ASN1IdentifierTagNumber.RELATIVE_OID, asn1_identifier.ASN1IdentifierTagNumber.SEQUENCE, asn1_identifier.ASN1IdentifierTagNumber.SET, asn1_identifier.ASN1IdentifierTagNumber.NUMERIC_STRING, asn1_identifier.ASN1IdentifierTagNumber.PRINTABLE_STRING, asn1_identifier.ASN1IdentifierTagNumber.T61_STRING, asn1_identifier.ASN1IdentifierTagNumber.VIDEOTEX_STRING, asn1_identifier.ASN1IdentifierTagNumber.IA5_STRING, asn1_identifier.ASN1IdentifierTagNumber.UTC_TIME, asn1_identifier.ASN1IdentifierTagNumber.GENERALIZED_TIME, asn1_identifier.ASN1IdentifierTagNumber.GRAPHIC_STRING, asn1_identifier.ASN1IdentifierTagNumber.VISIBLE_STRING, asn1_identifier.ASN1IdentifierTagNumber.GENERAL_STRING, asn1_identifier.ASN1IdentifierTagNumber.UNIVERSAL_STRING, asn1_identifier.ASN1IdentifierTagNumber.CHARACTER_STRING, asn1_identifier.ASN1IdentifierTagNumber.BMP_STRING])[$toSet]();
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.END_OF_CONTENT*/get END_OF_CONTENT() {
+      return C[4] || CT.C4;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.BOOLEAN*/get BOOLEAN() {
+      return C[5] || CT.C5;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.INTEGER*/get INTEGER() {
+      return C[6] || CT.C6;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.BIT_STRING*/get BIT_STRING() {
+      return C[7] || CT.C7;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.OCTET_STRING*/get OCTET_STRING() {
+      return C[8] || CT.C8;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.NULL*/get NULL() {
+      return C[9] || CT.C9;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.OBJECT_IDENTIFIER*/get OBJECT_IDENTIFIER() {
+      return C[10] || CT.C10;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.OBJECT_DESCRIPTOR*/get OBJECT_DESCRIPTOR() {
+      return C[11] || CT.C11;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.EXTERNAL*/get EXTERNAL() {
+      return C[12] || CT.C12;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.READ*/get READ() {
+      return C[13] || CT.C13;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.ENUMERATED*/get ENUMERATED() {
+      return C[14] || CT.C14;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.EMBEDDED_PDV*/get EMBEDDED_PDV() {
+      return C[15] || CT.C15;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.UTF8_STRING*/get UTF8_STRING() {
+      return C[16] || CT.C16;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.RELATIVE_OID*/get RELATIVE_OID() {
+      return C[17] || CT.C17;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.SEQUENCE*/get SEQUENCE() {
+      return C[18] || CT.C18;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.SET*/get SET() {
+      return C[19] || CT.C19;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.NUMERIC_STRING*/get NUMERIC_STRING() {
+      return C[20] || CT.C20;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.PRINTABLE_STRING*/get PRINTABLE_STRING() {
+      return C[21] || CT.C21;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.T61_STRING*/get T61_STRING() {
+      return C[22] || CT.C22;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.VIDEOTEX_STRING*/get VIDEOTEX_STRING() {
+      return C[23] || CT.C23;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.IA5_STRING*/get IA5_STRING() {
+      return C[24] || CT.C24;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.UTC_TIME*/get UTC_TIME() {
+      return C[25] || CT.C25;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.GENERALIZED_TIME*/get GENERALIZED_TIME() {
+      return C[26] || CT.C26;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.GRAPHIC_STRING*/get GRAPHIC_STRING() {
+      return C[27] || CT.C27;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.VISIBLE_STRING*/get VISIBLE_STRING() {
+      return C[28] || CT.C28;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.GENERAL_STRING*/get GENERAL_STRING() {
+      return C[29] || CT.C29;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.UNIVERSAL_STRING*/get UNIVERSAL_STRING() {
+      return C[30] || CT.C30;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.CHARACTER_STRING*/get CHARACTER_STRING() {
+      return C[31] || CT.C31;
+    },
+    /*asn1_identifier.ASN1IdentifierTagNumber.BMP_STRING*/get BMP_STRING() {
+      return C[32] || CT.C32;
+    }
+  }, true);
+  var rawValue$ = dart.privateName(asn1_identifier, "ASN1Identifier.rawValue");
+  asn1_identifier.ASN1Identifier = class ASN1Identifier extends core.Object {
+    get rawValue() {
+      return this[rawValue$];
+    }
+    set rawValue(value) {
+      this[rawValue$] = value;
+    }
+    isPrimitive() {
+      return (dart.notNull(this.rawValue) & 32) === 0;
+    }
+    isConstructed() {
+      return (dart.notNull(this.rawValue) & 32) !== 0;
+    }
+    tagNumber() {
+      let t0;
+      t0 = asn1_identifier.ASN1IdentifierTagNumber.fromValue(dart.notNull(this.rawValue) & 31);
+      return t0 == null ? asn1_identifier.ASN1IdentifierTagNumber.END_OF_CONTENT : t0;
+    }
+    typeClass() {
+      for (let tc of T.JSArrayOfASN1IdentifierClassL().of([asn1_identifier.ASN1IdentifierClass.APPLICATION, asn1_identifier.ASN1IdentifierClass.CONTEXT_SPECIFIC, asn1_identifier.ASN1IdentifierClass.PRIVATE])) {
+        if ((dart.notNull(this.rawValue) & dart.notNull(tc.toValue())) >>> 0 === tc.toValue()) {
+          return tc;
+        }
+      }
+      return asn1_identifier.ASN1IdentifierClass.UNIVERSAL;
+    }
+    get description() {
+      let tc = this.typeClass();
+      let tn = this.tagNumber();
+      if (dart.equals(tc, asn1_identifier.ASN1IdentifierClass.UNIVERSAL)) {
+        return dart.toString(tn);
+      } else {
+        return dart.str(tc) + "(" + dart.str(tn.toValue()) + ")";
+      }
+    }
+    toString() {
+      return this.description;
+    }
+  };
+  (asn1_identifier.ASN1Identifier.new = function(rawValue) {
+    this[rawValue$] = rawValue;
+    ;
+  }).prototype = asn1_identifier.ASN1Identifier.prototype;
+  dart.addTypeTests(asn1_identifier.ASN1Identifier);
+  dart.addTypeCaches(asn1_identifier.ASN1Identifier);
+  dart.setMethodSignature(asn1_identifier.ASN1Identifier, () => ({
+    __proto__: dart.getMethods(asn1_identifier.ASN1Identifier.__proto__),
+    isPrimitive: dart.fnType(dart.legacy(core.bool), []),
+    isConstructed: dart.fnType(dart.legacy(core.bool), []),
+    tagNumber: dart.fnType(dart.legacy(asn1_identifier.ASN1IdentifierTagNumber), []),
+    typeClass: dart.fnType(dart.legacy(asn1_identifier.ASN1IdentifierClass), []),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setGetterSignature(asn1_identifier.ASN1Identifier, () => ({
+    __proto__: dart.getGetters(asn1_identifier.ASN1Identifier.__proto__),
+    description: dart.legacy(core.String)
+  }));
+  dart.setLibraryUri(asn1_identifier.ASN1Identifier, I[0]);
+  dart.setFieldSignature(asn1_identifier.ASN1Identifier, () => ({
+    __proto__: dart.getFields(asn1_identifier.ASN1Identifier.__proto__),
+    rawValue: dart.fieldType(dart.legacy(core.int))
+  }));
+  dart.defineExtensionMethods(asn1_identifier.ASN1Identifier, ['toString']);
+  dart.trackLibraries("packages/flutter_inappwebview/src/X509Certificate/asn1_identifier.dart", {
+    "package:flutter_inappwebview/src/X509Certificate/asn1_identifier.dart": asn1_identifier
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["asn1_identifier.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../packages/flutter_inappwebview/src/X509Certificate/asn1_identifier.dart.lib.js"}');
+  // Exports:
+  return {
+    src__X509Certificate__asn1_identifier: asn1_identifier
+  };
+}));
+
+//# sourceMappingURL=asn1_identifier.dart.lib.js.map

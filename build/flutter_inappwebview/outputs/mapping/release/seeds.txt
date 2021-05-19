@@ -1,0 +1,67 @@
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType: com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType valueOf(java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity
+com.pichillilorenzo.flutter_inappwebview.R$drawable
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setIncognito(boolean)
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ActionBroadcastReceiver
+com.pichillilorenzo.flutter_inappwebview.R$integer
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: InAppWebView(android.content.Context,android.util.AttributeSet)
+com.pichillilorenzo.flutter_inappwebview.R$styleable
+com.pichillilorenzo.flutter_inappwebview.R$id: R$id()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.Map getCertificateMap()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: InputAwareWebView(android.content.Context,android.util.AttributeSet)
+com.pichillilorenzo.flutter_inappwebview.R$anim
+com.pichillilorenzo.flutter_inappwebview.R$style: R$style()
+com.pichillilorenzo.flutter_inappwebview.R$dimen: R$dimen()
+com.pichillilorenzo.flutter_inappwebview.R$bool
+com.pichillilorenzo.flutter_inappwebview.R$integer: R$integer()
+com.pichillilorenzo.flutter_inappwebview.R$xml: R$xml()
+com.pichillilorenzo.flutter_inappwebview.R$layout: R$layout()
+com.pichillilorenzo.flutter_inappwebview.R$drawable: R$drawable()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.lang.Float getUpdatedScale()
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface: void _hideContextMenu()
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: InputAwareWebView(android.content.Context)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: InputAwareWebView(android.content.Context,android.view.View)
+com.pichillilorenzo.flutter_inappwebview.R$id
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType[] values()
+com.pichillilorenzo.flutter_inappwebview.JavaScriptBridgeInterface: void _callHandler(java.lang.String,java.lang.String,java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.R$attr
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType valueOf(java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.R$color
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: void setContainerView(android.view.View)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType: com.pichillilorenzo.flutter_inappwebview.InAppWebView.PreferredContentModeOptionType[] values()
+com.pichillilorenzo.flutter_inappwebview.R$bool: R$bool()
+com.pichillilorenzo.flutter_inappwebview.R$dimen
+com.pichillilorenzo.flutter_inappwebview.R$anim: R$anim()
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerActionType valueOf(java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.R$string: R$string()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setDesktopMode(boolean)
+com.pichillilorenzo.flutter_inappwebview.R$xml
+com.pichillilorenzo.flutter_inappwebview.R$styleable: R$styleable()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: void setCacheEnabled(boolean)
+com.pichillilorenzo.flutter_inappwebview.R$attr: R$attr()
+com.pichillilorenzo.flutter_inappwebview.R$menu
+com.pichillilorenzo.flutter_inappwebview.R$menu: R$menu()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient
+com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType: com.pichillilorenzo.flutter_inappwebview.ContentBlocker.ContentBlockerTriggerResourceType[] values()
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity: ChromeCustomTabsActivity()
+com.pichillilorenzo.flutter_inappwebview.R$layout
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.HashMap getCopyBackForwardList()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient: void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap)
+com.pichillilorenzo.flutter_inappwebview.R$color: R$color()
+com.pichillilorenzo.flutter_inappwebview.R
+com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ActionBroadcastReceiver: ActionBroadcastReceiver()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: InputAwareWebView(android.content.Context,android.util.AttributeSet,int)
+com.pichillilorenzo.flutter_inappwebview.R: R()
+com.pichillilorenzo.flutter_inappwebview.R$string
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: java.util.Map getOptions()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewClient: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: InAppWebView(android.content.Context)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: InAppWebView(android.content.Context,java.lang.Object,java.lang.Object,java.lang.Integer,com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebViewOptions,java.util.Map,android.view.View)
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InputAwareWebView: void setInputConnectionTarget(android.view.View)
+com.pichillilorenzo.flutter_inappwebview.R$style
+com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity: InAppBrowserActivity()
+com.pichillilorenzo.flutter_inappwebview.InAppWebView.InAppWebView: InAppWebView(android.content.Context,android.util.AttributeSet,int)

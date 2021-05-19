@@ -1,0 +1,305 @@
+define(['dart_sdk', 'packages/image_picker_platform_interface/src/method_channel/method_channel_image_picker.dart', 'packages/image_picker_platform_interface/src/types/camera_device.dart', 'packages/image_picker_platform_interface/src/types/image_source.dart', 'packages/image_picker_platform_interface/src/types/picked_file/html.dart'], (function load__packages__image_picker_for_web__image_picker_for_web_dart(dart_sdk, packages__image_picker_platform_interface__src__method_channel__method_channel_image_picker$46dart, packages__image_picker_platform_interface__src__types__camera_device$46dart, packages__image_picker_platform_interface__src__types__image_source$46dart, packages__image_picker_platform_interface__src__types__picked_file__html$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _internal = dart_sdk._internal;
+  const html = dart_sdk.html;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const image_picker_platform = packages__image_picker_platform_interface__src__method_channel__method_channel_image_picker$46dart.src__platform_interface__image_picker_platform;
+  const camera_device = packages__image_picker_platform_interface__src__types__camera_device$46dart.src__types__camera_device;
+  const image_source = packages__image_picker_platform_interface__src__types__image_source$46dart.src__types__image_source;
+  const html$ = packages__image_picker_platform_interface__src__types__picked_file__html$46dart.src__types__picked_file__html;
+  var image_picker_for_web = Object.create(dart.library);
+  var $files = dartx.files;
+  var $first = dartx.first;
+  var $target = dartx.target;
+  var $onChange = dartx.onChange;
+  var $onError = dartx.onError;
+  var $children = dartx.children;
+  var $add = dartx.add;
+  var $accept = dartx.accept;
+  var $setAttribute = dartx.setAttribute;
+  var $clear = dartx.clear;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    CompleterOfPickedFile: () => (T.CompleterOfPickedFile = dart.constFn(async.Completer$(html$.PickedFile)))(),
+    EventToNull: () => (T.EventToNull = dart.constFn(dart.fnType(core.Null, [html.Event])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: camera_device.CameraDevice.prototype,
+        [_name]: "CameraDevice.rear",
+        index: 0
+      });
+    }
+  }, false);
+  var C = [void 0];
+  var I = [
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_for_web-2.0.0/lib/image_picker_for_web.dart",
+    "package:image_picker_for_web/image_picker_for_web.dart"
+  ];
+  var __ImagePickerPlugin__target = dart.privateName(image_picker_for_web, "_#ImagePickerPlugin#_target");
+  var __ImagePickerPlugin__target_isSet = dart.privateName(image_picker_for_web, "_#ImagePickerPlugin#_target#isSet");
+  var _overrides = dart.privateName(image_picker_for_web, "_overrides");
+  var _target = dart.privateName(image_picker_for_web, "_target");
+  var _ensureInitialized = dart.privateName(image_picker_for_web, "_ensureInitialized");
+  var _hasOverrides = dart.privateName(image_picker_for_web, "_hasOverrides");
+  var _name = dart.privateName(camera_device, "_name");
+  var _injectAndActivate = dart.privateName(image_picker_for_web, "_injectAndActivate");
+  var _getSelectedFile = dart.privateName(image_picker_for_web, "_getSelectedFile");
+  var _getFileFromInput = dart.privateName(image_picker_for_web, "_getFileFromInput");
+  var _handleOnChangeEvent = dart.privateName(image_picker_for_web, "_handleOnChangeEvent");
+  image_picker_for_web.ImagePickerPlugin = class ImagePickerPlugin extends image_picker_platform.ImagePickerPlatform {
+    get [_hasOverrides]() {
+      return this[_overrides] != null;
+    }
+    get [_target]() {
+      let t0;
+      return dart.test(this[__ImagePickerPlugin__target_isSet]) ? (t0 = this[__ImagePickerPlugin__target], t0) : dart.throw(new _internal.LateError.fieldNI("_target"));
+    }
+    set [_target](t0) {
+      if (t0 == null) dart.nullFailed(I[0], 19, 21, "null");
+      this[__ImagePickerPlugin__target_isSet] = true;
+      this[__ImagePickerPlugin__target] = t0;
+    }
+    static registerWith(registrar) {
+      if (registrar == null) dart.nullFailed(I[0], 29, 38, "registrar");
+      image_picker_platform.ImagePickerPlatform.instance = new image_picker_for_web.ImagePickerPlugin.new();
+    }
+    pickImage(opts) {
+      let source = opts && 'source' in opts ? opts.source : null;
+      if (source == null) dart.nullFailed(I[0], 47, 26, "source");
+      let maxWidth = opts && 'maxWidth' in opts ? opts.maxWidth : null;
+      let maxHeight = opts && 'maxHeight' in opts ? opts.maxHeight : null;
+      let imageQuality = opts && 'imageQuality' in opts ? opts.imageQuality : null;
+      let preferredCameraDevice = opts && 'preferredCameraDevice' in opts ? opts.preferredCameraDevice : C[0] || CT.C0;
+      if (preferredCameraDevice == null) dart.nullFailed(I[0], 51, 18, "preferredCameraDevice");
+      let capture = this.computeCaptureAttribute(source, preferredCameraDevice);
+      return this.pickFile({accept: image_picker_for_web._kAcceptImageMimeType, capture: capture});
+    }
+    pickVideo(opts) {
+      let source = opts && 'source' in opts ? opts.source : null;
+      if (source == null) dart.nullFailed(I[0], 71, 26, "source");
+      let preferredCameraDevice = opts && 'preferredCameraDevice' in opts ? opts.preferredCameraDevice : C[0] || CT.C0;
+      if (preferredCameraDevice == null) dart.nullFailed(I[0], 72, 18, "preferredCameraDevice");
+      let maxDuration = opts && 'maxDuration' in opts ? opts.maxDuration : null;
+      let capture = this.computeCaptureAttribute(source, preferredCameraDevice);
+      return this.pickFile({accept: image_picker_for_web._kAcceptVideoMimeType, capture: capture});
+    }
+    pickFile(opts) {
+      let accept = opts && 'accept' in opts ? opts.accept : null;
+      let capture = opts && 'capture' in opts ? opts.capture : null;
+      let input = html.FileUploadInputElement.as(this.createInputElement(accept, capture));
+      this[_injectAndActivate](input);
+      return this[_getSelectedFile](input);
+    }
+    computeCaptureAttribute(source, device) {
+      if (source == null) dart.nullFailed(I[0], 101, 47, "source");
+      if (device == null) dart.nullFailed(I[0], 101, 68, "device");
+      if (source == image_source.ImageSource.camera) {
+        return device == camera_device.CameraDevice.front ? "user" : "environment";
+      }
+      return null;
+    }
+    [_getFileFromInput](input) {
+      let t2, t1, t1$;
+      if (input == null) dart.nullFailed(I[0], 108, 60, "input");
+      if (dart.test(this[_hasOverrides])) {
+        t1 = dart.nullCheck(this[_overrides]);
+        t2 = input;
+        return t1.getFileFromInput(t2);
+      }
+      t1$ = input[$files];
+      return t1$ == null ? null : t1$[$first];
+    }
+    [_handleOnChangeEvent](event) {
+      if (event == null) dart.nullFailed(I[0], 117, 43, "event");
+      let input = html.FileUploadInputElement.as(event[$target]);
+      let file = this[_getFileFromInput](input);
+      if (file != null) {
+        return html.Url.createObjectUrl(file);
+      }
+      return null;
+    }
+    [_getSelectedFile](input) {
+      if (input == null) dart.nullFailed(I[0], 129, 67, "input");
+      let _completer = T.CompleterOfPickedFile().new();
+      input[$onChange].first.then(core.Null, dart.fn(event => {
+        if (event == null) dart.nullFailed(I[0], 132, 32, "event");
+        let objectUrl = this[_handleOnChangeEvent](event);
+        if (!dart.test(_completer.isCompleted) && objectUrl != null) {
+          _completer.complete(new html$.PickedFile.new(objectUrl));
+        }
+      }, T.EventToNull()));
+      input[$onError].first.then(core.Null, dart.fn(event => {
+        if (event == null) dart.nullFailed(I[0], 138, 31, "event");
+        if (!dart.test(_completer.isCompleted)) {
+          _completer.completeError(event);
+        }
+      }, T.EventToNull()));
+      return _completer.future;
+    }
+    [_ensureInitialized](id) {
+      let t1;
+      if (id == null) dart.nullFailed(I[0], 150, 42, "id");
+      let target = html.querySelector("#" + dart.str(id));
+      if (target == null) {
+        let targetElement = (t1 = html.Element.tag("flt-image-picker-inputs"), (() => {
+          t1.id = id;
+          return t1;
+        })());
+        dart.nullCheck(html.querySelector("body"))[$children][$add](targetElement);
+        target = targetElement;
+      }
+      return target;
+    }
+    createInputElement(accept, capture) {
+      let t3, t2, t1, t1$;
+      if (dart.test(this[_hasOverrides])) {
+        t1 = dart.nullCheck(this[_overrides]);
+        t2 = accept;
+        t3 = capture;
+        return t1.createInputElement(t2, t3);
+      }
+      let element = (t1$ = html.FileUploadInputElement.new(), (() => {
+        t1$[$accept] = accept;
+        return t1$;
+      })());
+      if (capture != null) {
+        element[$setAttribute]("capture", capture);
+      }
+      return element;
+    }
+    [_injectAndActivate](element) {
+      if (element == null) dart.nullFailed(I[0], 180, 40, "element");
+      this[_target][$children][$clear]();
+      this[_target][$children][$add](element);
+      element.click();
+    }
+  };
+  (image_picker_for_web.ImagePickerPlugin.new = function(opts) {
+    let overrides = opts && 'overrides' in opts ? opts.overrides : null;
+    this[__ImagePickerPlugin__target] = null;
+    this[__ImagePickerPlugin__target_isSet] = false;
+    this[_overrides] = overrides;
+    image_picker_for_web.ImagePickerPlugin.__proto__.new.call(this);
+    this[_target] = this[_ensureInitialized](image_picker_for_web._kImagePickerInputsDomId);
+  }).prototype = image_picker_for_web.ImagePickerPlugin.prototype;
+  dart.addTypeTests(image_picker_for_web.ImagePickerPlugin);
+  dart.addTypeCaches(image_picker_for_web.ImagePickerPlugin);
+  dart.setMethodSignature(image_picker_for_web.ImagePickerPlugin, () => ({
+    __proto__: dart.getMethods(image_picker_for_web.ImagePickerPlugin.__proto__),
+    pickImage: dart.fnType(async.Future$(html$.PickedFile), [], {imageQuality: dart.nullable(core.int), maxHeight: dart.nullable(core.double), maxWidth: dart.nullable(core.double), preferredCameraDevice: camera_device.CameraDevice}, {source: image_source.ImageSource}),
+    pickVideo: dart.fnType(async.Future$(html$.PickedFile), [], {maxDuration: dart.nullable(core.Duration), preferredCameraDevice: camera_device.CameraDevice}, {source: image_source.ImageSource}),
+    pickFile: dart.fnType(async.Future$(html$.PickedFile), [], {accept: dart.nullable(core.String), capture: dart.nullable(core.String)}, {}),
+    computeCaptureAttribute: dart.fnType(dart.nullable(core.String), [image_source.ImageSource, camera_device.CameraDevice]),
+    [_getFileFromInput]: dart.fnType(dart.nullable(html.File), [html.FileUploadInputElement]),
+    [_handleOnChangeEvent]: dart.fnType(dart.nullable(core.String), [html.Event]),
+    [_getSelectedFile]: dart.fnType(async.Future$(html$.PickedFile), [html.FileUploadInputElement]),
+    [_ensureInitialized]: dart.fnType(html.Element, [core.String]),
+    createInputElement: dart.fnType(html.Element, [dart.nullable(core.String), dart.nullable(core.String)]),
+    [_injectAndActivate]: dart.fnType(dart.void, [html.Element])
+  }));
+  dart.setGetterSignature(image_picker_for_web.ImagePickerPlugin, () => ({
+    __proto__: dart.getGetters(image_picker_for_web.ImagePickerPlugin.__proto__),
+    [_hasOverrides]: core.bool,
+    [_target]: html.Element
+  }));
+  dart.setSetterSignature(image_picker_for_web.ImagePickerPlugin, () => ({
+    __proto__: dart.getSetters(image_picker_for_web.ImagePickerPlugin.__proto__),
+    [_target]: html.Element
+  }));
+  dart.setLibraryUri(image_picker_for_web.ImagePickerPlugin, I[1]);
+  dart.setFieldSignature(image_picker_for_web.ImagePickerPlugin, () => ({
+    __proto__: dart.getFields(image_picker_for_web.ImagePickerPlugin.__proto__),
+    [_overrides]: dart.finalFieldType(dart.nullable(image_picker_for_web.ImagePickerPluginTestOverrides)),
+    [__ImagePickerPlugin__target]: dart.fieldType(dart.nullable(html.Element)),
+    [__ImagePickerPlugin__target_isSet]: dart.fieldType(core.bool)
+  }));
+  var __ImagePickerPluginTestOverrides_createInputElement = dart.privateName(image_picker_for_web, "_#ImagePickerPluginTestOverrides#createInputElement");
+  var __ImagePickerPluginTestOverrides_createInputElement_isSet = dart.privateName(image_picker_for_web, "_#ImagePickerPluginTestOverrides#createInputElement#isSet");
+  var __ImagePickerPluginTestOverrides_getFileFromInput = dart.privateName(image_picker_for_web, "_#ImagePickerPluginTestOverrides#getFileFromInput");
+  var __ImagePickerPluginTestOverrides_getFileFromInput_isSet = dart.privateName(image_picker_for_web, "_#ImagePickerPluginTestOverrides#getFileFromInput#isSet");
+  image_picker_for_web.ImagePickerPluginTestOverrides = class ImagePickerPluginTestOverrides extends core.Object {
+    get createInputElement() {
+      let t1;
+      return dart.test(this[__ImagePickerPluginTestOverrides_createInputElement_isSet]) ? (t1 = this[__ImagePickerPluginTestOverrides_createInputElement], t1) : dart.throw(new _internal.LateError.fieldNI("createInputElement"));
+    }
+    set createInputElement(t1) {
+      if (t1 == null) dart.nullFailed(I[0], 205, 36, "null");
+      this[__ImagePickerPluginTestOverrides_createInputElement_isSet] = true;
+      this[__ImagePickerPluginTestOverrides_createInputElement] = t1;
+    }
+    get getFileFromInput() {
+      let t2;
+      return dart.test(this[__ImagePickerPluginTestOverrides_getFileFromInput_isSet]) ? (t2 = this[__ImagePickerPluginTestOverrides_getFileFromInput], t2) : dart.throw(new _internal.LateError.fieldNI("getFileFromInput"));
+    }
+    set getFileFromInput(t2) {
+      if (t2 == null) dart.nullFailed(I[0], 208, 46, "null");
+      this[__ImagePickerPluginTestOverrides_getFileFromInput_isSet] = true;
+      this[__ImagePickerPluginTestOverrides_getFileFromInput] = t2;
+    }
+  };
+  (image_picker_for_web.ImagePickerPluginTestOverrides.new = function() {
+    this[__ImagePickerPluginTestOverrides_createInputElement] = null;
+    this[__ImagePickerPluginTestOverrides_createInputElement_isSet] = false;
+    this[__ImagePickerPluginTestOverrides_getFileFromInput] = null;
+    this[__ImagePickerPluginTestOverrides_getFileFromInput_isSet] = false;
+    ;
+  }).prototype = image_picker_for_web.ImagePickerPluginTestOverrides.prototype;
+  dart.addTypeTests(image_picker_for_web.ImagePickerPluginTestOverrides);
+  dart.addTypeCaches(image_picker_for_web.ImagePickerPluginTestOverrides);
+  dart.setGetterSignature(image_picker_for_web.ImagePickerPluginTestOverrides, () => ({
+    __proto__: dart.getGetters(image_picker_for_web.ImagePickerPluginTestOverrides.__proto__),
+    createInputElement: dart.fnType(html.Element, [dart.nullable(core.String), dart.nullable(core.String)]),
+    getFileFromInput: dart.fnType(html.File, [dart.nullable(html.Element)])
+  }));
+  dart.setSetterSignature(image_picker_for_web.ImagePickerPluginTestOverrides, () => ({
+    __proto__: dart.getSetters(image_picker_for_web.ImagePickerPluginTestOverrides.__proto__),
+    createInputElement: dart.fnType(html.Element, [dart.nullable(core.String), dart.nullable(core.String)]),
+    getFileFromInput: dart.fnType(html.File, [dart.nullable(html.Element)])
+  }));
+  dart.setLibraryUri(image_picker_for_web.ImagePickerPluginTestOverrides, I[1]);
+  dart.setFieldSignature(image_picker_for_web.ImagePickerPluginTestOverrides, () => ({
+    __proto__: dart.getFields(image_picker_for_web.ImagePickerPluginTestOverrides.__proto__),
+    [__ImagePickerPluginTestOverrides_createInputElement]: dart.fieldType(dart.nullable(dart.fnType(html.Element, [dart.nullable(core.String), dart.nullable(core.String)]))),
+    [__ImagePickerPluginTestOverrides_createInputElement_isSet]: dart.fieldType(core.bool),
+    [__ImagePickerPluginTestOverrides_getFileFromInput]: dart.fieldType(dart.nullable(dart.fnType(html.File, [dart.nullable(html.Element)]))),
+    [__ImagePickerPluginTestOverrides_getFileFromInput_isSet]: dart.fieldType(core.bool)
+  }));
+  dart.defineLazy(image_picker_for_web, {
+    /*image_picker_for_web._kImagePickerInputsDomId*/get _kImagePickerInputsDomId() {
+      return "__image_picker_web-file-input";
+    },
+    /*image_picker_for_web._kAcceptImageMimeType*/get _kAcceptImageMimeType() {
+      return "image/*";
+    },
+    /*image_picker_for_web._kAcceptVideoMimeType*/get _kAcceptVideoMimeType() {
+      return "video/3gpp,video/x-m4v,video/mp4,video/*";
+    }
+  }, false);
+  dart.trackLibraries("packages/image_picker_for_web/image_picker_for_web.dart", {
+    "package:image_picker_for_web/image_picker_for_web.dart": image_picker_for_web
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["image_picker_for_web.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAgB4B,YAAA,AAAW;IAAO;;;AAE1B;IAAO;;;AAAP;;IAAO;;UAUU;AACiB,MAA9B,qDAAW;IACjC;;UAgBuB;;UACb;UACA;UACH;UACQ;;AAEL,oBAAU,6BAAwB,MAAM,EAAE,qBAAqB;AACvE,YAAO,wBAAiB,qDAAgC,OAAO;IACjE;;UAgBuB;;UACR;;UACH;AAEF,oBAAU,6BAAwB,MAAM,EAAE,qBAAqB;AACvE,YAAO,wBAAiB,qDAAgC,OAAO;IACjE;;UASU;UACA;AAEoB,kBACY,+BAApC,wBAAmB,MAAM,EAAE,OAAO;AACb,MAAzB,yBAAmB,KAAK;AACxB,YAAO,wBAAiB,KAAK;IAC/B;4BAQ4C,QAAqB;UAArB;UAAqB;AAC/D,UAAI,AAAO,MAAD,IAAgB;AACxB,cAAQ,AAAO,OAAD,IAAiB,mCAAS,SAAS;;AAEnD,YAAO;IACT;wBAEyD;;;AACvD,oBAAI;AACF,aAAiB,eAAV;aAA6B,KAAK;cAAN;;AAErC,YAAO,AAAM,KAAD;2BAAC,OAAO;IACtB;;UAIwC;AACJ,kBACjB,+BAAb,AAAM,KAAD;AACQ,iBAAO,wBAAkB,KAAK;AAE/C,UAAI,AAAK,IAAD;AACN,cAAgB,0BAAgB,IAAI;;AAEtC,YAAO;IACT;;UAGgE;AAClC,uBAAa;AAOvC,MALF,AAAM,AAAS,AAAM,KAAhB,kCAAqB;YAAC;AACnB,wBAAY,2BAAqB,KAAK;AAC5C,uBAAK,AAAW,UAAD,iBAAgB,AAAU,SAAD;AACI,UAA1C,AAAW,UAAD,UAAU,yBAAW,SAAS;;;AAO1C,MAJF,AAAM,AAAQ,AAAM,KAAf,iCAAoB;YAAC;AACxB,uBAAK,AAAW,UAAD;AACkB,UAA/B,AAAW,UAAD,eAAe,KAAK;;;AAMlC,YAAO,AAAW,WAAD;IACnB;yBAGuC;;;AACjC,mBAAS,mBAAmB,AAAQ,eAAJ,EAAE;AACtC,UAAI,AAAO,MAAD;AACW,kCACF,iBAAI,4BAAJ;AAAgC,kBAAK,EAAE;;;AAED,QAA7B,AAAE,AAAS,eAArC,mBAAmB,0BAAsB,aAAa;AAChC,QAAtB,SAAS,aAAa;;AAExB,YAAO,OAAM;IACf;uBAKwC,QAAgB;;AACtD,oBAAI;AACF,aAAiB,eAAV;aAA+B,MAAM;aAAE,OAAO;cAAhB;;AAG1B,8DAAe;AAA0B,uBAAS,MAAM;;;AAErE,UAAI,AAAQ,OAAD;AAC+B,QAAxC,AAAQ,OAAD,gBAAc,WAAW,OAAO;;AAGzC,YAAO,QAAO;IAChB;;UAGqC;AACX,MAAxB,AAAQ,AAAS;AACY,MAA7B,AAAQ,AAAS,+BAAI,OAAO;AACb,MAAf,AAAQ,OAAD;IACT;;;QAjKqD;wCAJnC;;IAKF,mBAAE,SAAS;AAF3B;AAGwD,IAAtD,gBAAU,yBAAmB;EAC/B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAmLiC;IAAkB;;;AAAlB;;IAAkB;;;AAGR;IAAgB;;;AAAhB;;IAAgB;;;gEAH1B;;8DAGU;;;EAC7C;;;;;;;;;;;;;;;;;;;;;;MAzMa,6CAAwB;YAAG;;MAC3B,0CAAqB;YAAG;;MACxB,0CAAqB;YAAG","file":"../../../../../../../../packages/image_picker_for_web/image_picker_for_web.dart.lib.js"}');
+  // Exports:
+  return {
+    image_picker_for_web: image_picker_for_web
+  };
+}));
+
+//# sourceMappingURL=image_picker_for_web.dart.lib.js.map

@@ -1,0 +1,1014 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/gestures/drag_details.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/rendering/custom_paint.dart', 'packages/youtube_player_flutter/src/enums/player_state.dart', 'packages/youtube_player_flutter/src/utils/youtube_meta_data.dart', 'packages/flutter_inappwebview/src/web_storage_manager.dart', 'packages/youtube_player_flutter/src/utils/youtube_player_flags.dart', 'packages/flutter/src/services/system_chrome.dart', 'packages/flutter/src/foundation/change_notifier.dart'], (function load__packages__youtube_player_flutter__src__widgets__progress_bar_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__gestures__drag_details$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__rendering__custom_paint$46dart, packages__youtube_player_flutter__src__enums__player_state$46dart, packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart, packages__flutter_inappwebview__src__web_storage_manager$46dart, packages__youtube_player_flutter__src__utils__youtube_player_flags$46dart, packages__flutter__src__services__system_chrome$46dart, packages__flutter__src__foundation__change_notifier$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const drag_details = packages__flutter__src__gestures__drag_details$46dart.src__gestures__drag_details;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const theme_data = packages__flutter__src__material__icon_button$46dart.src__material__theme_data;
+  const custom_paint = packages__flutter__src__rendering__custom_paint$46dart.src__rendering__custom_paint;
+  const player_state = packages__youtube_player_flutter__src__enums__player_state$46dart.src__enums__player_state;
+  const youtube_meta_data = packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart.src__utils__youtube_meta_data;
+  const in_app_webview_controller = packages__flutter_inappwebview__src__web_storage_manager$46dart.src__in_app_webview_controller;
+  const youtube_player_flags = packages__youtube_player_flutter__src__utils__youtube_player_flags$46dart.src__utils__youtube_player_flags;
+  const system_chrome = packages__flutter__src__services__system_chrome$46dart.src__services__system_chrome;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  var progress_bar = Object.create(dart.library);
+  var youtube_player_controller = Object.create(dart.library);
+  var $isNaN = dartx.isNaN;
+  var $toString = dartx.toString;
+  var $abs = dartx.abs;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    RenderBoxL: () => (T.RenderBoxL = dart.constFn(dart.legacy(box.RenderBox)))(),
+    DragDownDetailsL: () => (T.DragDownDetailsL = dart.constFn(dart.legacy(drag_details.DragDownDetails)))(),
+    DragDownDetailsLToNull: () => (T.DragDownDetailsLToNull = dart.constFn(dart.fnType(core.Null, [T.DragDownDetailsL()])))(),
+    DragUpdateDetailsL: () => (T.DragUpdateDetailsL = dart.constFn(dart.legacy(drag_details.DragUpdateDetails)))(),
+    DragUpdateDetailsLToNull: () => (T.DragUpdateDetailsLToNull = dart.constFn(dart.fnType(core.Null, [T.DragUpdateDetailsL()])))(),
+    DragEndDetailsL: () => (T.DragEndDetailsL = dart.constFn(dart.legacy(drag_details.DragEndDetails)))(),
+    DragEndDetailsLToNull: () => (T.DragEndDetailsLToNull = dart.constFn(dart.fnType(core.Null, [T.DragEndDetailsL()])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    _ProgressBarPainterL: () => (T._ProgressBarPainterL = dart.constFn(dart.legacy(progress_bar._ProgressBarPainter)))(),
+    InheritedYoutubePlayerL: () => (T.InheritedYoutubePlayerL = dart.constFn(dart.legacy(youtube_player_controller.InheritedYoutubePlayer)))(),
+    DeviceOrientationL: () => (T.DeviceOrientationL = dart.constFn(dart.legacy(system_chrome.DeviceOrientation)))(),
+    JSArrayOfDeviceOrientationL: () => (T.JSArrayOfDeviceOrientationL = dart.constFn(_interceptors.JSArray$(T.DeviceOrientationL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: box.BoxConstraints.prototype,
+        [BoxConstraints_maxHeight]: 14,
+        [BoxConstraints_minHeight]: 14,
+        [BoxConstraints_maxWidth]: 1 / 0,
+        [BoxConstraints_minWidth]: 1 / 0
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "painter",
+        [_Location_column]: 11,
+        [_Location_line]: 173,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3], T._LocationL());
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 172,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/progress_bar.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 170,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 9,
+        [_Location_line]: 171,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 172,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 169,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/progress_bar.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onHorizontalDragDown",
+        [_Location_column]: 7,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onHorizontalDragUpdate",
+        [_Location_column]: 7,
+        [_Location_line]: 161,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onHorizontalDragEnd",
+        [_Location_column]: 7,
+        [_Location_line]: 165,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onHorizontalDragCancel",
+        [_Location_column]: 7,
+        [_Location_line]: 168,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 169,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/progress_bar.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 36,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 189,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/progress_bar.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 0
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: player_state.PlayerState.prototype,
+        [_name]: "PlayerState.unknown",
+        index: 0
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: youtube_meta_data.YoutubeMetaData.prototype,
+        [YoutubeMetaData_duration]: C[19] || CT.C19,
+        [YoutubeMetaData_author]: "",
+        [YoutubeMetaData_title]: "",
+        [YoutubeMetaData_videoId]: ""
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: youtube_player_flags.YoutubePlayerFlags.prototype,
+        [YoutubePlayerFlags_endAt]: null,
+        [YoutubePlayerFlags_startAt]: 0,
+        [YoutubePlayerFlags_forceHD]: false,
+        [YoutubePlayerFlags_captionLanguage]: "en",
+        [YoutubePlayerFlags_enableCaption]: true,
+        [YoutubePlayerFlags_loop]: false,
+        [YoutubePlayerFlags_disableDragSeek]: false,
+        [YoutubePlayerFlags_hideThumbnail]: false,
+        [YoutubePlayerFlags_isLive]: false,
+        [YoutubePlayerFlags_mute]: false,
+        [YoutubePlayerFlags_autoPlay]: true,
+        [YoutubePlayerFlags_controlsVisibleAtStart]: false,
+        [YoutubePlayerFlags_hideControls]: false
+      });
+    }
+  }, false);
+  var C = Array(23).fill(void 0);
+  var I = [
+    "package:youtube_player_flutter/src/widgets/progress_bar.dart",
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/progress_bar.dart",
+    "package:youtube_player_flutter/src/utils/youtube_player_controller.dart",
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/utils/youtube_player_controller.dart"
+  ];
+  var backgroundColor$ = dart.privateName(progress_bar, "ProgressBarColors.backgroundColor");
+  var playedColor$ = dart.privateName(progress_bar, "ProgressBarColors.playedColor");
+  var bufferedColor$ = dart.privateName(progress_bar, "ProgressBarColors.bufferedColor");
+  var handleColor$ = dart.privateName(progress_bar, "ProgressBarColors.handleColor");
+  progress_bar.ProgressBarColors = class ProgressBarColors extends core.Object {
+    get backgroundColor() {
+      return this[backgroundColor$];
+    }
+    set backgroundColor(value) {
+      super.backgroundColor = value;
+    }
+    get playedColor() {
+      return this[playedColor$];
+    }
+    set playedColor(value) {
+      super.playedColor = value;
+    }
+    get bufferedColor() {
+      return this[bufferedColor$];
+    }
+    set bufferedColor(value) {
+      super.bufferedColor = value;
+    }
+    get handleColor() {
+      return this[handleColor$];
+    }
+    set handleColor(value) {
+      super.handleColor = value;
+    }
+    copyWith(opts) {
+      let t0, t0$, t0$0, t0$1;
+      let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+      let playedColor = opts && 'playedColor' in opts ? opts.playedColor : null;
+      let bufferedColor = opts && 'bufferedColor' in opts ? opts.bufferedColor : null;
+      let handleColor = opts && 'handleColor' in opts ? opts.handleColor : null;
+      return new progress_bar.ProgressBarColors.new({backgroundColor: (t0 = backgroundColor, t0 == null ? this.backgroundColor : t0), handleColor: (t0$ = handleColor, t0$ == null ? this.handleColor : t0$), bufferedColor: (t0$0 = bufferedColor, t0$0 == null ? this.bufferedColor : t0$0), playedColor: (t0$1 = playedColor, t0$1 == null ? this.playedColor : t0$1)});
+    }
+  };
+  (progress_bar.ProgressBarColors.new = function(opts) {
+    let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+    let playedColor = opts && 'playedColor' in opts ? opts.playedColor : null;
+    let bufferedColor = opts && 'bufferedColor' in opts ? opts.bufferedColor : null;
+    let handleColor = opts && 'handleColor' in opts ? opts.handleColor : null;
+    this[backgroundColor$] = backgroundColor;
+    this[playedColor$] = playedColor;
+    this[bufferedColor$] = bufferedColor;
+    this[handleColor$] = handleColor;
+    ;
+  }).prototype = progress_bar.ProgressBarColors.prototype;
+  dart.addTypeTests(progress_bar.ProgressBarColors);
+  dart.addTypeCaches(progress_bar.ProgressBarColors);
+  dart.setMethodSignature(progress_bar.ProgressBarColors, () => ({
+    __proto__: dart.getMethods(progress_bar.ProgressBarColors.__proto__),
+    copyWith: dart.fnType(dart.legacy(progress_bar.ProgressBarColors), [], {backgroundColor: dart.legacy(ui.Color), bufferedColor: dart.legacy(ui.Color), handleColor: dart.legacy(ui.Color), playedColor: dart.legacy(ui.Color)}, {})
+  }));
+  dart.setLibraryUri(progress_bar.ProgressBarColors, I[0]);
+  dart.setFieldSignature(progress_bar.ProgressBarColors, () => ({
+    __proto__: dart.getFields(progress_bar.ProgressBarColors.__proto__),
+    backgroundColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    playedColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    bufferedColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    handleColor: dart.finalFieldType(dart.legacy(ui.Color))
+  }));
+  var controller$ = dart.privateName(progress_bar, "ProgressBar.controller");
+  var colors$ = dart.privateName(progress_bar, "ProgressBar.colors");
+  var isExpanded$ = dart.privateName(progress_bar, "ProgressBar.isExpanded");
+  progress_bar.ProgressBar = class ProgressBar extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get colors() {
+      return this[colors$];
+    }
+    set colors(value) {
+      super.colors = value;
+    }
+    get isExpanded() {
+      return this[isExpanded$];
+    }
+    set isExpanded(value) {
+      super.isExpanded = value;
+    }
+    createState() {
+      return new progress_bar._ProgressBarState.new();
+    }
+  };
+  (progress_bar.ProgressBar.new = function(opts) {
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let colors = opts && 'colors' in opts ? opts.colors : null;
+    let isExpanded = opts && 'isExpanded' in opts ? opts.isExpanded : false;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    this[colors$] = colors;
+    this[isExpanded$] = isExpanded;
+    progress_bar.ProgressBar.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = progress_bar.ProgressBar.prototype;
+  dart.addTypeTests(progress_bar.ProgressBar);
+  dart.addTypeCaches(progress_bar.ProgressBar);
+  dart.setMethodSignature(progress_bar.ProgressBar, () => ({
+    __proto__: dart.getMethods(progress_bar.ProgressBar.__proto__),
+    createState: dart.fnType(dart.legacy(progress_bar._ProgressBarState), [])
+  }));
+  dart.setLibraryUri(progress_bar.ProgressBar, I[0]);
+  dart.setFieldSignature(progress_bar.ProgressBar, () => ({
+    __proto__: dart.getFields(progress_bar.ProgressBar.__proto__),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    colors: dart.finalFieldType(dart.legacy(progress_bar.ProgressBarColors)),
+    isExpanded: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  var _controller = dart.privateName(progress_bar, "_controller");
+  var _touchPoint = dart.privateName(progress_bar, "_touchPoint");
+  var _playedValue = dart.privateName(progress_bar, "_playedValue");
+  var _bufferedValue = dart.privateName(progress_bar, "_bufferedValue");
+  var _touchDown = dart.privateName(progress_bar, "_touchDown");
+  var _position = dart.privateName(progress_bar, "_position");
+  var _setValue = dart.privateName(progress_bar, "_setValue");
+  var _checkTouchPoint = dart.privateName(progress_bar, "_checkTouchPoint");
+  var _seekToRelativePosition = dart.privateName(progress_bar, "_seekToRelativePosition");
+  var _dragEndActions = dart.privateName(progress_bar, "_dragEndActions");
+  var BoxConstraints_maxHeight = dart.privateName(box, "BoxConstraints.maxHeight");
+  var BoxConstraints_minHeight = dart.privateName(box, "BoxConstraints.minHeight");
+  var BoxConstraints_maxWidth = dart.privateName(box, "BoxConstraints.maxWidth");
+  var BoxConstraints_minWidth = dart.privateName(box, "BoxConstraints.minWidth");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _buildBar = dart.privateName(progress_bar, "_buildBar");
+  progress_bar._ProgressBarState = class _ProgressBarState extends framework.State$(dart.legacy(progress_bar.ProgressBar)) {
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_controller] = youtube_player_controller.YoutubePlayerController.of(this.context);
+      if (this[_controller] == null) {
+        if (!(this.widget.controller != null)) dart.assertFailed("\n\nNo controller could be found in the provided context.\n\n" + "Try passing the controller explicitly.", I[1], 89, 9, "widget.controller != null");
+        this[_controller] = this.widget.controller;
+      }
+      this[_controller].addListener(dart.bind(this, 'positionListener'));
+      this.positionListener();
+    }
+    dispose() {
+      let t0;
+      t0 = this[_controller];
+      t0 == null ? null : t0.removeListener(dart.bind(this, 'positionListener'));
+      super.dispose();
+    }
+    positionListener() {
+      let t0;
+      let _totalDuration = (t0 = this[_controller].metadata.duration, t0 == null ? null : t0.inMilliseconds);
+      if (dart.test(this.mounted) && !_totalDuration[$isNaN] && _totalDuration !== 0) {
+        this.setState(dart.fn(() => {
+          this[_playedValue] = dart.notNull(this[_controller].value.position.inMilliseconds) / dart.notNull(_totalDuration);
+          this[_bufferedValue] = this[_controller].value.buffered;
+        }, T.VoidToNull()));
+      }
+    }
+    [_setValue]() {
+      this[_playedValue] = dart.notNull(this[_touchPoint].dx) / dart.notNull(this.context.size.width);
+    }
+    [_checkTouchPoint]() {
+      if (dart.notNull(this[_touchPoint].dx) <= 0) {
+        this[_touchPoint] = new ui.Offset.new(0.0, this[_touchPoint].dy);
+      }
+      if (dart.notNull(this[_touchPoint].dx) >= dart.notNull(this.context.size.width)) {
+        this[_touchPoint] = new ui.Offset.new(this.context.size.width, this[_touchPoint].dy);
+      }
+    }
+    [_seekToRelativePosition](globalPosition) {
+      let box = T.RenderBoxL().as(this.context.findRenderObject());
+      this[_touchPoint] = box.globalToLocal(globalPosition);
+      this[_checkTouchPoint]();
+      let relative = dart.notNull(this[_touchPoint].dx) / dart.notNull(box.size.width);
+      this[_position] = this[_controller].metadata.duration['*'](relative);
+      this[_controller].seekTo(this[_position], {allowSeekAhead: false});
+    }
+    [_dragEndActions]() {
+      this[_controller].updateValue(this[_controller].value.copyWith({isControlsVisible: false, isDragging: false}));
+      this[_controller].seekTo(this[_position], {allowSeekAhead: true});
+      this.setState(dart.fn(() => {
+        this[_touchDown] = false;
+      }, T.VoidToNull()));
+      this[_controller].play();
+    }
+    [_buildBar]() {
+      return new gesture_detector.GestureDetector.new({onHorizontalDragDown: dart.fn(details => {
+          this[_controller].updateValue(this[_controller].value.copyWith({isControlsVisible: true, isDragging: true}));
+          this[_seekToRelativePosition](details.globalPosition);
+          this.setState(dart.fn(() => {
+            this[_setValue]();
+            this[_touchDown] = true;
+          }, T.VoidToNull()));
+        }, T.DragDownDetailsLToNull()), onHorizontalDragUpdate: dart.fn(details => {
+          this[_seekToRelativePosition](details.globalPosition);
+          this.setState(dart.bind(this, _setValue));
+        }, T.DragUpdateDetailsLToNull()), onHorizontalDragEnd: dart.fn(details => {
+          this[_dragEndActions]();
+        }, T.DragEndDetailsLToNull()), onHorizontalDragCancel: dart.bind(this, _dragEndActions), child: new container.Container.new({color: colors.Colors.transparent, constraints: C[0] || CT.C0, child: new basic.CustomPaint.new({painter: new progress_bar._ProgressBarPainter.new({progressWidth: 2.0, handleRadius: 7.0, playedValue: this[_playedValue], bufferedValue: this[_bufferedValue], colors: this.widget.colors, touchDown: this[_touchDown], themeData: theme.Theme.of(this.context)}), $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9});
+    }
+    build(context) {
+      return dart.test(this.widget.isExpanded) ? new basic.Expanded.new({child: this[_buildBar](), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}) : this[_buildBar]();
+    }
+  };
+  (progress_bar._ProgressBarState.new = function() {
+    this[_controller] = null;
+    this[_touchPoint] = ui.Offset.zero;
+    this[_playedValue] = 0.0;
+    this[_bufferedValue] = 0.0;
+    this[_touchDown] = false;
+    this[_position] = null;
+    progress_bar._ProgressBarState.__proto__.new.call(this);
+    ;
+  }).prototype = progress_bar._ProgressBarState.prototype;
+  dart.addTypeTests(progress_bar._ProgressBarState);
+  dart.addTypeCaches(progress_bar._ProgressBarState);
+  dart.setMethodSignature(progress_bar._ProgressBarState, () => ({
+    __proto__: dart.getMethods(progress_bar._ProgressBarState.__proto__),
+    positionListener: dart.fnType(dart.void, []),
+    [_setValue]: dart.fnType(dart.void, []),
+    [_checkTouchPoint]: dart.fnType(dart.void, []),
+    [_seekToRelativePosition]: dart.fnType(dart.void, [dart.legacy(ui.Offset)]),
+    [_dragEndActions]: dart.fnType(dart.void, []),
+    [_buildBar]: dart.fnType(dart.legacy(framework.Widget), []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(progress_bar._ProgressBarState, I[0]);
+  dart.setFieldSignature(progress_bar._ProgressBarState, () => ({
+    __proto__: dart.getFields(progress_bar._ProgressBarState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    [_touchPoint]: dart.fieldType(dart.legacy(ui.Offset)),
+    [_playedValue]: dart.fieldType(dart.legacy(core.double)),
+    [_bufferedValue]: dart.fieldType(dart.legacy(core.double)),
+    [_touchDown]: dart.fieldType(dart.legacy(core.bool)),
+    [_position]: dart.fieldType(dart.legacy(core.Duration))
+  }));
+  progress_bar._ProgressBarPainter = class _ProgressBarPainter extends custom_paint.CustomPainter {
+    shouldRepaint(old) {
+      T._ProgressBarPainterL().as(old);
+      return this.playedValue != old.playedValue || this.bufferedValue != old.bufferedValue || this.touchDown != old.touchDown;
+    }
+    paint(canvas, size) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7;
+      let paint = (t0 = ui.Paint.new(), (() => {
+        t0.isAntiAlias = true;
+        t0.strokeCap = ui.StrokeCap.square;
+        t0.strokeWidth = this.progressWidth;
+        return t0;
+      })());
+      let centerY = dart.notNull(size.height) / 2.0;
+      let barLength = dart.notNull(size.width) - dart.notNull(this.handleRadius) * 2.0;
+      let startPoint = new ui.Offset.new(this.handleRadius, centerY);
+      let endPoint = new ui.Offset.new(dart.notNull(size.width) - dart.notNull(this.handleRadius), centerY);
+      let progressPoint = new ui.Offset.new(barLength * dart.notNull(this.playedValue) + dart.notNull(this.handleRadius), centerY);
+      let secondProgressPoint = new ui.Offset.new(barLength * dart.notNull(this.bufferedValue) + dart.notNull(this.handleRadius), centerY);
+      paint.color = (t0$0 = (t0$ = this.colors, t0$ == null ? null : t0$.backgroundColor), t0$0 == null ? this.themeData.accentColor.withOpacity(0.38) : t0$0);
+      canvas.drawLine(startPoint, endPoint, paint);
+      paint.color = (t0$2 = (t0$1 = this.colors, t0$1 == null ? null : t0$1.bufferedColor), t0$2 == null ? colors.Colors.white70 : t0$2);
+      canvas.drawLine(startPoint, secondProgressPoint, paint);
+      paint.color = (t0$4 = (t0$3 = this.colors, t0$3 == null ? null : t0$3.playedColor), t0$4 == null ? this.themeData.accentColor : t0$4);
+      canvas.drawLine(startPoint, progressPoint, paint);
+      let handlePaint = (t0$5 = ui.Paint.new(), (() => {
+        t0$5.isAntiAlias = true;
+        return t0$5;
+      })());
+      handlePaint.color = colors.Colors.transparent;
+      canvas.drawCircle(progressPoint, centerY, handlePaint);
+      let _handleColor = (t0$7 = (t0$6 = this.colors, t0$6 == null ? null : t0$6.handleColor), t0$7 == null ? this.themeData.accentColor : t0$7);
+      if (dart.test(this.touchDown)) {
+        handlePaint.color = _handleColor.withOpacity(0.4);
+        canvas.drawCircle(progressPoint, dart.notNull(this.handleRadius) * 3, handlePaint);
+      }
+      handlePaint.color = _handleColor;
+      canvas.drawCircle(progressPoint, this.handleRadius, handlePaint);
+    }
+  };
+  (progress_bar._ProgressBarPainter.new = function(opts) {
+    let progressWidth = opts && 'progressWidth' in opts ? opts.progressWidth : null;
+    let handleRadius = opts && 'handleRadius' in opts ? opts.handleRadius : null;
+    let playedValue = opts && 'playedValue' in opts ? opts.playedValue : null;
+    let bufferedValue = opts && 'bufferedValue' in opts ? opts.bufferedValue : null;
+    let colors = opts && 'colors' in opts ? opts.colors : null;
+    let touchDown = opts && 'touchDown' in opts ? opts.touchDown : null;
+    let themeData = opts && 'themeData' in opts ? opts.themeData : null;
+    this.progressWidth = progressWidth;
+    this.handleRadius = handleRadius;
+    this.playedValue = playedValue;
+    this.bufferedValue = bufferedValue;
+    this.colors = colors;
+    this.touchDown = touchDown;
+    this.themeData = themeData;
+    progress_bar._ProgressBarPainter.__proto__.new.call(this);
+    ;
+  }).prototype = progress_bar._ProgressBarPainter.prototype;
+  dart.addTypeTests(progress_bar._ProgressBarPainter);
+  dart.addTypeCaches(progress_bar._ProgressBarPainter);
+  dart.setMethodSignature(progress_bar._ProgressBarPainter, () => ({
+    __proto__: dart.getMethods(progress_bar._ProgressBarPainter.__proto__),
+    shouldRepaint: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)]),
+    paint: dart.fnType(dart.void, [dart.legacy(ui.Canvas), dart.legacy(ui.Size)])
+  }));
+  dart.setLibraryUri(progress_bar._ProgressBarPainter, I[0]);
+  dart.setFieldSignature(progress_bar._ProgressBarPainter, () => ({
+    __proto__: dart.getFields(progress_bar._ProgressBarPainter.__proto__),
+    progressWidth: dart.finalFieldType(dart.legacy(core.double)),
+    handleRadius: dart.finalFieldType(dart.legacy(core.double)),
+    playedValue: dart.finalFieldType(dart.legacy(core.double)),
+    bufferedValue: dart.finalFieldType(dart.legacy(core.double)),
+    colors: dart.finalFieldType(dart.legacy(progress_bar.ProgressBarColors)),
+    touchDown: dart.finalFieldType(dart.legacy(core.bool)),
+    themeData: dart.finalFieldType(dart.legacy(theme_data.ThemeData))
+  }));
+  var isReady$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.isReady");
+  var isControlsVisible$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.isControlsVisible");
+  var hasPlayed$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.hasPlayed");
+  var position$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.position");
+  var buffered$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.buffered");
+  var isPlaying$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.isPlaying");
+  var isFullScreen$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.isFullScreen");
+  var volume$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.volume");
+  var playerState$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.playerState");
+  var playbackRate$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.playbackRate");
+  var errorCode$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.errorCode");
+  var webViewController$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.webViewController");
+  var playbackQuality$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.playbackQuality");
+  var isDragging$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.isDragging");
+  var metaData$ = dart.privateName(youtube_player_controller, "YoutubePlayerValue.metaData");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  var _name = dart.privateName(player_state, "_name");
+  var YoutubeMetaData_duration = dart.privateName(youtube_meta_data, "YoutubeMetaData.duration");
+  var YoutubeMetaData_author = dart.privateName(youtube_meta_data, "YoutubeMetaData.author");
+  var YoutubeMetaData_title = dart.privateName(youtube_meta_data, "YoutubeMetaData.title");
+  var YoutubeMetaData_videoId = dart.privateName(youtube_meta_data, "YoutubeMetaData.videoId");
+  youtube_player_controller.YoutubePlayerValue = class YoutubePlayerValue extends core.Object {
+    get isReady() {
+      return this[isReady$];
+    }
+    set isReady(value) {
+      super.isReady = value;
+    }
+    get isControlsVisible() {
+      return this[isControlsVisible$];
+    }
+    set isControlsVisible(value) {
+      super.isControlsVisible = value;
+    }
+    get hasPlayed() {
+      return this[hasPlayed$];
+    }
+    set hasPlayed(value) {
+      super.hasPlayed = value;
+    }
+    get position() {
+      return this[position$];
+    }
+    set position(value) {
+      super.position = value;
+    }
+    get buffered() {
+      return this[buffered$];
+    }
+    set buffered(value) {
+      super.buffered = value;
+    }
+    get isPlaying() {
+      return this[isPlaying$];
+    }
+    set isPlaying(value) {
+      super.isPlaying = value;
+    }
+    get isFullScreen() {
+      return this[isFullScreen$];
+    }
+    set isFullScreen(value) {
+      super.isFullScreen = value;
+    }
+    get volume() {
+      return this[volume$];
+    }
+    set volume(value) {
+      super.volume = value;
+    }
+    get playerState() {
+      return this[playerState$];
+    }
+    set playerState(value) {
+      super.playerState = value;
+    }
+    get playbackRate() {
+      return this[playbackRate$];
+    }
+    set playbackRate(value) {
+      super.playbackRate = value;
+    }
+    get errorCode() {
+      return this[errorCode$];
+    }
+    set errorCode(value) {
+      super.errorCode = value;
+    }
+    get webViewController() {
+      return this[webViewController$];
+    }
+    set webViewController(value) {
+      super.webViewController = value;
+    }
+    get playbackQuality() {
+      return this[playbackQuality$];
+    }
+    set playbackQuality(value) {
+      super.playbackQuality = value;
+    }
+    get isDragging() {
+      return this[isDragging$];
+    }
+    set isDragging(value) {
+      super.isDragging = value;
+    }
+    get metaData() {
+      return this[metaData$];
+    }
+    set metaData(value) {
+      super.metaData = value;
+    }
+    get hasError() {
+      return this.errorCode !== 0;
+    }
+    copyWith(opts) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12;
+      let isReady = opts && 'isReady' in opts ? opts.isReady : null;
+      let isControlsVisible = opts && 'isControlsVisible' in opts ? opts.isControlsVisible : null;
+      let isLoaded = opts && 'isLoaded' in opts ? opts.isLoaded : null;
+      let hasPlayed = opts && 'hasPlayed' in opts ? opts.hasPlayed : null;
+      let position = opts && 'position' in opts ? opts.position : null;
+      let buffered = opts && 'buffered' in opts ? opts.buffered : null;
+      let isPlaying = opts && 'isPlaying' in opts ? opts.isPlaying : null;
+      let isFullScreen = opts && 'isFullScreen' in opts ? opts.isFullScreen : null;
+      let volume = opts && 'volume' in opts ? opts.volume : null;
+      let playerState = opts && 'playerState' in opts ? opts.playerState : null;
+      let playbackRate = opts && 'playbackRate' in opts ? opts.playbackRate : null;
+      let playbackQuality = opts && 'playbackQuality' in opts ? opts.playbackQuality : null;
+      let errorCode = opts && 'errorCode' in opts ? opts.errorCode : null;
+      let webViewController = opts && 'webViewController' in opts ? opts.webViewController : null;
+      let isDragging = opts && 'isDragging' in opts ? opts.isDragging : null;
+      let metaData = opts && 'metaData' in opts ? opts.metaData : null;
+      return new youtube_player_controller.YoutubePlayerValue.new({isReady: (t0 = isReady, t0 == null ? this.isReady : t0), isControlsVisible: (t0$ = isControlsVisible, t0$ == null ? this.isControlsVisible : t0$), hasPlayed: (t0$0 = hasPlayed, t0$0 == null ? this.hasPlayed : t0$0), position: (t0$1 = position, t0$1 == null ? this.position : t0$1), buffered: (t0$2 = buffered, t0$2 == null ? this.buffered : t0$2), isPlaying: (t0$3 = isPlaying, t0$3 == null ? this.isPlaying : t0$3), isFullScreen: (t0$4 = isFullScreen, t0$4 == null ? this.isFullScreen : t0$4), volume: dart.asNullableInt((t0$5 = volume, t0$5 == null ? this.volume : t0$5)), playerState: (t0$6 = playerState, t0$6 == null ? this.playerState : t0$6), playbackRate: (t0$7 = playbackRate, t0$7 == null ? this.playbackRate : t0$7), playbackQuality: (t0$8 = playbackQuality, t0$8 == null ? this.playbackQuality : t0$8), errorCode: (t0$9 = errorCode, t0$9 == null ? this.errorCode : t0$9), webViewController: (t0$10 = webViewController, t0$10 == null ? this.webViewController : t0$10), isDragging: (t0$11 = isDragging, t0$11 == null ? this.isDragging : t0$11), metaData: (t0$12 = metaData, t0$12 == null ? this.metaData : t0$12)});
+    }
+    toString() {
+      return dart.str(this.runtimeType) + "(" + "metaData: " + dart.str(dart.toString(this.metaData)) + ", " + "isReady: " + dart.str(this.isReady) + ", " + "isControlsVisible: " + dart.str(this.isControlsVisible) + ", " + "position: " + dart.str(this.position.inSeconds) + " sec. , " + "buffered: " + dart.str(this.buffered) + ", " + "isPlaying: " + dart.str(this.isPlaying) + ", " + "volume: " + dart.str(this.volume) + ", " + "playerState: " + dart.str(this.playerState) + ", " + "playbackRate: " + dart.str(this.playbackRate) + ", " + "playbackQuality: " + dart.str(this.playbackQuality) + ", " + "errorCode: " + dart.str(this.errorCode) + ")";
+    }
+  };
+  (youtube_player_controller.YoutubePlayerValue.new = function(opts) {
+    let isReady = opts && 'isReady' in opts ? opts.isReady : false;
+    let isControlsVisible = opts && 'isControlsVisible' in opts ? opts.isControlsVisible : false;
+    let hasPlayed = opts && 'hasPlayed' in opts ? opts.hasPlayed : false;
+    let position = opts && 'position' in opts ? opts.position : C[19] || CT.C19;
+    let buffered = opts && 'buffered' in opts ? opts.buffered : 0;
+    let isPlaying = opts && 'isPlaying' in opts ? opts.isPlaying : false;
+    let isFullScreen = opts && 'isFullScreen' in opts ? opts.isFullScreen : false;
+    let volume = opts && 'volume' in opts ? opts.volume : 100;
+    let playerState = opts && 'playerState' in opts ? opts.playerState : C[20] || CT.C20;
+    let playbackRate = opts && 'playbackRate' in opts ? opts.playbackRate : 1;
+    let playbackQuality = opts && 'playbackQuality' in opts ? opts.playbackQuality : null;
+    let errorCode = opts && 'errorCode' in opts ? opts.errorCode : 0;
+    let webViewController = opts && 'webViewController' in opts ? opts.webViewController : null;
+    let isDragging = opts && 'isDragging' in opts ? opts.isDragging : false;
+    let metaData = opts && 'metaData' in opts ? opts.metaData : C[21] || CT.C21;
+    this[isReady$] = isReady;
+    this[isControlsVisible$] = isControlsVisible;
+    this[hasPlayed$] = hasPlayed;
+    this[position$] = position;
+    this[buffered$] = buffered;
+    this[isPlaying$] = isPlaying;
+    this[isFullScreen$] = isFullScreen;
+    this[volume$] = volume;
+    this[playerState$] = playerState;
+    this[playbackRate$] = playbackRate;
+    this[playbackQuality$] = playbackQuality;
+    this[errorCode$] = errorCode;
+    this[webViewController$] = webViewController;
+    this[isDragging$] = isDragging;
+    this[metaData$] = metaData;
+    ;
+  }).prototype = youtube_player_controller.YoutubePlayerValue.prototype;
+  dart.addTypeTests(youtube_player_controller.YoutubePlayerValue);
+  dart.addTypeCaches(youtube_player_controller.YoutubePlayerValue);
+  dart.setMethodSignature(youtube_player_controller.YoutubePlayerValue, () => ({
+    __proto__: dart.getMethods(youtube_player_controller.YoutubePlayerValue.__proto__),
+    copyWith: dart.fnType(dart.legacy(youtube_player_controller.YoutubePlayerValue), [], {buffered: dart.legacy(core.double), errorCode: dart.legacy(core.int), hasPlayed: dart.legacy(core.bool), isControlsVisible: dart.legacy(core.bool), isDragging: dart.legacy(core.bool), isFullScreen: dart.legacy(core.bool), isLoaded: dart.legacy(core.bool), isPlaying: dart.legacy(core.bool), isReady: dart.legacy(core.bool), metaData: dart.legacy(youtube_meta_data.YoutubeMetaData), playbackQuality: dart.legacy(core.String), playbackRate: dart.legacy(core.double), playerState: dart.legacy(player_state.PlayerState), position: dart.legacy(core.Duration), volume: dart.legacy(core.double), webViewController: dart.legacy(in_app_webview_controller.InAppWebViewController)}, {}),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setGetterSignature(youtube_player_controller.YoutubePlayerValue, () => ({
+    __proto__: dart.getGetters(youtube_player_controller.YoutubePlayerValue.__proto__),
+    hasError: dart.legacy(core.bool)
+  }));
+  dart.setLibraryUri(youtube_player_controller.YoutubePlayerValue, I[2]);
+  dart.setFieldSignature(youtube_player_controller.YoutubePlayerValue, () => ({
+    __proto__: dart.getFields(youtube_player_controller.YoutubePlayerValue.__proto__),
+    isReady: dart.finalFieldType(dart.legacy(core.bool)),
+    isControlsVisible: dart.finalFieldType(dart.legacy(core.bool)),
+    hasPlayed: dart.finalFieldType(dart.legacy(core.bool)),
+    position: dart.finalFieldType(dart.legacy(core.Duration)),
+    buffered: dart.finalFieldType(dart.legacy(core.double)),
+    isPlaying: dart.finalFieldType(dart.legacy(core.bool)),
+    isFullScreen: dart.finalFieldType(dart.legacy(core.bool)),
+    volume: dart.finalFieldType(dart.legacy(core.int)),
+    playerState: dart.finalFieldType(dart.legacy(player_state.PlayerState)),
+    playbackRate: dart.finalFieldType(dart.legacy(core.double)),
+    errorCode: dart.finalFieldType(dart.legacy(core.int)),
+    webViewController: dart.finalFieldType(dart.legacy(in_app_webview_controller.InAppWebViewController)),
+    playbackQuality: dart.finalFieldType(dart.legacy(core.String)),
+    isDragging: dart.finalFieldType(dart.legacy(core.bool)),
+    metaData: dart.finalFieldType(dart.legacy(youtube_meta_data.YoutubeMetaData))
+  }));
+  dart.defineExtensionMethods(youtube_player_controller.YoutubePlayerValue, ['toString']);
+  var initialVideoId$ = dart.privateName(youtube_player_controller, "YoutubePlayerController.initialVideoId");
+  var flags$ = dart.privateName(youtube_player_controller, "YoutubePlayerController.flags");
+  var YoutubePlayerFlags_endAt = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.endAt");
+  var YoutubePlayerFlags_startAt = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.startAt");
+  var YoutubePlayerFlags_forceHD = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.forceHD");
+  var YoutubePlayerFlags_captionLanguage = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.captionLanguage");
+  var YoutubePlayerFlags_enableCaption = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.enableCaption");
+  var YoutubePlayerFlags_loop = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.loop");
+  var YoutubePlayerFlags_disableDragSeek = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.disableDragSeek");
+  var YoutubePlayerFlags_hideThumbnail = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.hideThumbnail");
+  var YoutubePlayerFlags_isLive = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.isLive");
+  var YoutubePlayerFlags_mute = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.mute");
+  var YoutubePlayerFlags_autoPlay = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.autoPlay");
+  var YoutubePlayerFlags_controlsVisibleAtStart = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.controlsVisibleAtStart");
+  var YoutubePlayerFlags_hideControls = dart.privateName(youtube_player_flags, "YoutubePlayerFlags.hideControls");
+  var _callMethod = dart.privateName(youtube_player_controller, "_callMethod");
+  var _updateValues = dart.privateName(youtube_player_controller, "_updateValues");
+  youtube_player_controller.YoutubePlayerController = class YoutubePlayerController extends change_notifier.ValueNotifier$(dart.legacy(youtube_player_controller.YoutubePlayerValue)) {
+    get initialVideoId() {
+      return this[initialVideoId$];
+    }
+    set initialVideoId(value) {
+      super.initialVideoId = value;
+    }
+    get flags() {
+      return this[flags$];
+    }
+    set flags(value) {
+      super.flags = value;
+    }
+    static of(context) {
+      let t0;
+      t0 = context.dependOnInheritedWidgetOfExactType(T.InheritedYoutubePlayerL());
+      return t0 == null ? null : t0.controller;
+    }
+    [_callMethod](methodString) {
+      let t0;
+      if (dart.test(this.value.isReady)) {
+        t0 = this.value.webViewController;
+        t0 == null ? null : t0.evaluateJavascript({source: methodString});
+      } else {
+        core.print("The controller is not ready for method calls.");
+      }
+    }
+    updateValue(newValue) {
+      return this.value = newValue;
+    }
+    play() {
+      return this[_callMethod]("play()");
+    }
+    pause() {
+      return this[_callMethod]("pause()");
+    }
+    load(videoId, opts) {
+      let startAt = opts && 'startAt' in opts ? opts.startAt : 0;
+      let endAt = opts && 'endAt' in opts ? opts.endAt : null;
+      let loadParams = "videoId:\"" + dart.str(videoId) + "\",startSeconds:" + dart.str(startAt);
+      if (endAt != null && dart.notNull(endAt) > dart.notNull(startAt)) {
+        loadParams = loadParams + (",endSeconds:" + dart.str(endAt));
+      }
+      this[_updateValues](videoId);
+      if (this.value.errorCode === 1) {
+        this.pause();
+      } else {
+        this[_callMethod]("loadById({" + loadParams + "})");
+      }
+    }
+    cue(videoId, opts) {
+      let startAt = opts && 'startAt' in opts ? opts.startAt : 0;
+      let endAt = opts && 'endAt' in opts ? opts.endAt : null;
+      let cueParams = "videoId:\"" + dart.str(videoId) + "\",startSeconds:" + dart.str(startAt);
+      if (endAt != null && dart.notNull(endAt) > dart.notNull(startAt)) {
+        cueParams = cueParams + (",endSeconds:" + dart.str(endAt));
+      }
+      this[_updateValues](videoId);
+      if (this.value.errorCode === 1) {
+        this.pause();
+      } else {
+        this[_callMethod]("cueById({" + cueParams + "})");
+      }
+    }
+    [_updateValues](id) {
+      let t0;
+      if ((t0 = id, t0 == null ? null : t0.length) !== 11) {
+        this.updateValue(this.value.copyWith({errorCode: 1}));
+        return;
+      }
+      this.updateValue(this.value.copyWith({errorCode: 0, hasPlayed: false}));
+    }
+    mute() {
+      return this[_callMethod]("mute()");
+    }
+    unMute() {
+      return this[_callMethod]("unMute()");
+    }
+    setVolume(volume) {
+      return dart.notNull(volume) >= 0 && dart.notNull(volume) <= 100 ? this[_callMethod]("setVolume(" + dart.str(volume) + ")") : dart.throw(core.Exception.new("Volume should be between 0 and 100"));
+    }
+    seekTo(position, opts) {
+      let allowSeekAhead = opts && 'allowSeekAhead' in opts ? opts.allowSeekAhead : true;
+      this[_callMethod]("seekTo(" + dart.str(position.inSeconds) + "," + dart.str(allowSeekAhead) + ")");
+      this.play();
+      this.updateValue(this.value.copyWith({position: position}));
+    }
+    setSize(size) {
+      return this[_callMethod]("setSize(" + dart.str(size.width) + ", " + dart.str(size.height) + ")");
+    }
+    fitWidth(screenSize) {
+      let adjustedHeight = 9 / 16 * dart.notNull(screenSize.width);
+      this.setSize(new ui.Size.new(screenSize.width, adjustedHeight));
+      this[_callMethod]("setTopMargin(\"-" + dart.str(((adjustedHeight - dart.notNull(screenSize.height)) / 2 * 100)[$abs]()) + "px\")");
+    }
+    fitHeight(screenSize) {
+      this.setSize(screenSize);
+      this[_callMethod]("setTopMargin(\"0px\")");
+    }
+    setPlaybackRate(rate) {
+      return this[_callMethod]("setPlaybackRate(" + dart.str(rate) + ")");
+    }
+    toggleFullScreenMode() {
+      this.updateValue(this.value.copyWith({isFullScreen: !dart.test(this.value.isFullScreen)}));
+      if (dart.test(this.value.isFullScreen)) {
+        system_chrome.SystemChrome.setPreferredOrientations(T.JSArrayOfDeviceOrientationL().of([system_chrome.DeviceOrientation.landscapeLeft, system_chrome.DeviceOrientation.landscapeRight]));
+      } else {
+        system_chrome.SystemChrome.setPreferredOrientations(T.JSArrayOfDeviceOrientationL().of([system_chrome.DeviceOrientation.portraitUp]));
+      }
+    }
+    get metadata() {
+      return this.value.metaData;
+    }
+    reload() {
+      let t0;
+      t0 = this.value.webViewController;
+      return t0 == null ? null : t0.reload();
+    }
+    reset() {
+      return this.updateValue(this.value.copyWith({isReady: false, isFullScreen: false, isControlsVisible: false, playerState: player_state.PlayerState.unknown, hasPlayed: false, position: core.Duration.zero, buffered: 0.0, errorCode: 0, isLoaded: false, isPlaying: false, isDragging: false, metaData: C[21] || CT.C21}));
+    }
+  };
+  (youtube_player_controller.YoutubePlayerController.new = function(opts) {
+    let initialVideoId = opts && 'initialVideoId' in opts ? opts.initialVideoId : null;
+    let flags = opts && 'flags' in opts ? opts.flags : C[22] || CT.C22;
+    this[initialVideoId$] = initialVideoId;
+    this[flags$] = flags;
+    if (!(initialVideoId != null)) dart.assertFailed("initialVideoId can't be null.", I[3], 162, 16, "initialVideoId != null");
+    if (!(flags != null)) dart.assertFailed(null, I[3], 163, 16, "flags != null");
+    youtube_player_controller.YoutubePlayerController.__proto__.new.call(this, new youtube_player_controller.YoutubePlayerValue.new());
+    ;
+  }).prototype = youtube_player_controller.YoutubePlayerController.prototype;
+  dart.addTypeTests(youtube_player_controller.YoutubePlayerController);
+  dart.addTypeCaches(youtube_player_controller.YoutubePlayerController);
+  dart.setMethodSignature(youtube_player_controller.YoutubePlayerController, () => ({
+    __proto__: dart.getMethods(youtube_player_controller.YoutubePlayerController.__proto__),
+    [_callMethod]: dart.fnType(dart.dynamic, [dart.legacy(core.String)]),
+    updateValue: dart.fnType(dart.void, [dart.legacy(youtube_player_controller.YoutubePlayerValue)]),
+    play: dart.fnType(dart.void, []),
+    pause: dart.fnType(dart.void, []),
+    load: dart.fnType(dart.void, [dart.legacy(core.String)], {endAt: dart.legacy(core.int), startAt: dart.legacy(core.int)}, {}),
+    cue: dart.fnType(dart.void, [dart.legacy(core.String)], {endAt: dart.legacy(core.int), startAt: dart.legacy(core.int)}, {}),
+    [_updateValues]: dart.fnType(dart.void, [dart.legacy(core.String)]),
+    mute: dart.fnType(dart.void, []),
+    unMute: dart.fnType(dart.void, []),
+    setVolume: dart.fnType(dart.void, [dart.legacy(core.int)]),
+    seekTo: dart.fnType(dart.void, [dart.legacy(core.Duration)], {allowSeekAhead: dart.legacy(core.bool)}, {}),
+    setSize: dart.fnType(dart.void, [dart.legacy(ui.Size)]),
+    fitWidth: dart.fnType(dart.void, [dart.legacy(ui.Size)]),
+    fitHeight: dart.fnType(dart.void, [dart.legacy(ui.Size)]),
+    setPlaybackRate: dart.fnType(dart.void, [dart.legacy(core.double)]),
+    toggleFullScreenMode: dart.fnType(dart.void, []),
+    reload: dart.fnType(dart.void, []),
+    reset: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(youtube_player_controller.YoutubePlayerController, () => ({
+    __proto__: dart.getGetters(youtube_player_controller.YoutubePlayerController.__proto__),
+    metadata: dart.legacy(youtube_meta_data.YoutubeMetaData)
+  }));
+  dart.setLibraryUri(youtube_player_controller.YoutubePlayerController, I[2]);
+  dart.setFieldSignature(youtube_player_controller.YoutubePlayerController, () => ({
+    __proto__: dart.getFields(youtube_player_controller.YoutubePlayerController.__proto__),
+    initialVideoId: dart.finalFieldType(dart.legacy(core.String)),
+    flags: dart.finalFieldType(dart.legacy(youtube_player_flags.YoutubePlayerFlags))
+  }));
+  var controller$0 = dart.privateName(youtube_player_controller, "InheritedYoutubePlayer.controller");
+  youtube_player_controller.InheritedYoutubePlayer = class InheritedYoutubePlayer extends framework.InheritedWidget {
+    get controller() {
+      return this[controller$0];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    updateShouldNotify(oldPlayer) {
+      T.InheritedYoutubePlayerL().as(oldPlayer);
+      return dart.hashCode(oldPlayer.controller) != dart.hashCode(this.controller);
+    }
+  };
+  (youtube_player_controller.InheritedYoutubePlayer.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$0] = controller;
+    if (!(controller != null)) dart.assertFailed(null, I[3], 322, 16, "controller != null");
+    youtube_player_controller.InheritedYoutubePlayer.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = youtube_player_controller.InheritedYoutubePlayer.prototype;
+  dart.addTypeTests(youtube_player_controller.InheritedYoutubePlayer);
+  dart.addTypeCaches(youtube_player_controller.InheritedYoutubePlayer);
+  dart.setMethodSignature(youtube_player_controller.InheritedYoutubePlayer, () => ({
+    __proto__: dart.getMethods(youtube_player_controller.InheritedYoutubePlayer.__proto__),
+    updateShouldNotify: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)])
+  }));
+  dart.setLibraryUri(youtube_player_controller.InheritedYoutubePlayer, I[2]);
+  dart.setFieldSignature(youtube_player_controller.InheritedYoutubePlayer, () => ({
+    __proto__: dart.getFields(youtube_player_controller.InheritedYoutubePlayer.__proto__),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  dart.trackLibraries("packages/youtube_player_flutter/src/widgets/progress_bar.dart", {
+    "package:youtube_player_flutter/src/widgets/progress_bar.dart": progress_bar,
+    "package:youtube_player_flutter/src/utils/youtube_player_controller.dart": youtube_player_controller
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["progress_bar.dart","../utils/youtube_player_controller.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../packages/youtube_player_flutter/src/widgets/progress_bar.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__progress_bar: progress_bar,
+    src__utils__youtube_player_controller: youtube_player_controller
+  };
+}));
+
+//# sourceMappingURL=progress_bar.dart.lib.js.map

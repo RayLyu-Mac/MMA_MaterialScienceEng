@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\flutter_inappwebview\\intermediates\\res\\merged\\release\\xml\\image_share_filepaths.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\160a788508b1035896be80451e5f76d6\\browser-1.2.0\\res\\xml\\image_share_filepaths.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\flutter_inappwebview\\intermediates\\res\\merged\\release\\xml\\provider_paths.xml",
+        "source": "C:\\flutter\\flutter_windows_2.0.1-stable\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_inappwebview-4.0.0+4\\android\\src\\main\\res\\xml\\provider_paths.xml"
+    }
+]

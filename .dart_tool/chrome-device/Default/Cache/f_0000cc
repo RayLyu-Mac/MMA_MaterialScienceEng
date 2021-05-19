@@ -1,0 +1,369 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/youtube_player_flutter/src/widgets/progress_bar.dart', 'packages/flutter/src/material/popup_menu.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__youtube_player_flutter__src__widgets__playback_speed_button_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__youtube_player_flutter__src__widgets__progress_bar$46dart, packages__flutter__src__material__popup_menu$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text$ = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const youtube_player_controller = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__utils__youtube_player_controller;
+  const popup_menu = packages__flutter__src__material__popup_menu$46dart.src__material__popup_menu;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var playback_speed_button = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    doubleL: () => (T.doubleL = dart.constFn(dart.legacy(core.double)))(),
+    PopupMenuButtonOfdoubleL: () => (T.PopupMenuButtonOfdoubleL = dart.constFn(popup_menu.PopupMenuButton$(T.doubleL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    PopupMenuEntryOfdoubleL: () => (T.PopupMenuEntryOfdoubleL = dart.constFn(popup_menu.PopupMenuEntry$(T.doubleL())))(),
+    PopupMenuEntryLOfdoubleL: () => (T.PopupMenuEntryLOfdoubleL = dart.constFn(dart.legacy(T.PopupMenuEntryOfdoubleL())))(),
+    JSArrayOfPopupMenuEntryLOfdoubleL: () => (T.JSArrayOfPopupMenuEntryLOfdoubleL = dart.constFn(_interceptors.JSArray$(T.PopupMenuEntryLOfdoubleL())))(),
+    ListOfPopupMenuEntryLOfdoubleL: () => (T.ListOfPopupMenuEntryLOfdoubleL = dart.constFn(core.List$(T.PopupMenuEntryLOfdoubleL())))(),
+    ListLOfPopupMenuEntryLOfdoubleL: () => (T.ListLOfPopupMenuEntryLOfdoubleL = dart.constFn(dart.legacy(T.ListOfPopupMenuEntryLOfdoubleL())))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLToListLOfPopupMenuEntryLOfdoubleL: () => (T.BuildContextLToListLOfPopupMenuEntryLOfdoubleL = dart.constFn(dart.fnType(T.ListLOfPopupMenuEntryLOfdoubleL(), [T.BuildContextL()])))(),
+    CheckedPopupMenuItemOfdoubleL: () => (T.CheckedPopupMenuItemOfdoubleL = dart.constFn(popup_menu.CheckedPopupMenuItem$(T.doubleL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 8,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 8,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 15,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "package",
+        [_Location_column]: 15,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 15,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onSelected",
+        [_Location_column]: 7,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "tooltip",
+        [_Location_column]: 7,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 7,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 19,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "checked",
+        [_Location_column]: 7,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 7,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+      });
+    }
+  }, false);
+  var C = Array(26).fill(void 0);
+  var I = [
+    "package:youtube_player_flutter/src/widgets/playback_speed_button.dart",
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/playback_speed_button.dart"
+  ];
+  var controller$ = dart.privateName(playback_speed_button, "PlaybackSpeedButton.controller");
+  var icon$ = dart.privateName(playback_speed_button, "PlaybackSpeedButton.icon");
+  playback_speed_button.PlaybackSpeedButton = class PlaybackSpeedButton extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get icon() {
+      return this[icon$];
+    }
+    set icon(value) {
+      super.icon = value;
+    }
+    createState() {
+      return new playback_speed_button._PlaybackSpeedButtonState.new();
+    }
+  };
+  (playback_speed_button.PlaybackSpeedButton.new = function(opts) {
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    this[icon$] = icon;
+    playback_speed_button.PlaybackSpeedButton.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = playback_speed_button.PlaybackSpeedButton.prototype;
+  dart.addTypeTests(playback_speed_button.PlaybackSpeedButton);
+  dart.addTypeCaches(playback_speed_button.PlaybackSpeedButton);
+  dart.setMethodSignature(playback_speed_button.PlaybackSpeedButton, () => ({
+    __proto__: dart.getMethods(playback_speed_button.PlaybackSpeedButton.__proto__),
+    createState: dart.fnType(dart.legacy(playback_speed_button._PlaybackSpeedButtonState), [])
+  }));
+  dart.setLibraryUri(playback_speed_button.PlaybackSpeedButton, I[0]);
+  dart.setFieldSignature(playback_speed_button.PlaybackSpeedButton, () => ({
+    __proto__: dart.getFields(playback_speed_button.PlaybackSpeedButton.__proto__),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    icon: dart.finalFieldType(dart.legacy(framework.Widget))
+  }));
+  var _controller = dart.privateName(playback_speed_button, "_controller");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _popUpItem = dart.privateName(playback_speed_button, "_popUpItem");
+  playback_speed_button._PlaybackSpeedButtonState = class _PlaybackSpeedButtonState extends framework.State$(dart.legacy(playback_speed_button.PlaybackSpeedButton)) {
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_controller] = youtube_player_controller.YoutubePlayerController.of(this.context);
+      if (this[_controller] == null) {
+        if (!(this.widget.controller != null)) dart.assertFailed("\n\nNo controller could be found in the provided context.\n\n" + "Try passing the controller explicitly.", I[1], 37, 9, "widget.controller != null");
+        this[_controller] = this.widget.controller;
+      }
+    }
+    build(context) {
+      let t0;
+      return new (T.PopupMenuButtonOfdoubleL()).new({onSelected: dart.bind(this[_controller], 'setPlaybackRate'), child: new basic.Padding.new({padding: C[0] || CT.C0, child: (t0 = this.widget.icon, t0 == null ? new image.Image.asset("assets/speedometer.webp", {package: "youtube_player_flutter", width: 20.0, height: 20.0, color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}) : t0), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), tooltip: "PlayBack Rate", itemBuilder: dart.fn(context => T.JSArrayOfPopupMenuEntryLOfdoubleL().of([T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("2.0x", 2)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("1.75x", 1.75)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("1.5x", 1.5)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("1.25x", 1.25)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("Normal", 1)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("0.75x", 0.75)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("0.5x", 0.5)), T.PopupMenuEntryLOfdoubleL().as(this[_popUpItem]("0.25x", 0.25))]), T.BuildContextLToListLOfPopupMenuEntryLOfdoubleL()), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12});
+    }
+    [_popUpItem](text, rate) {
+      return new (T.CheckedPopupMenuItemOfdoubleL()).new({checked: this[_controller].value.playbackRate == rate, child: new text$.Text.new(text, {$creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), value: rate, $creationLocationd_0dea112b090073317d4: C[21] || CT.C21});
+    }
+  };
+  (playback_speed_button._PlaybackSpeedButtonState.new = function() {
+    this[_controller] = null;
+    playback_speed_button._PlaybackSpeedButtonState.__proto__.new.call(this);
+    ;
+  }).prototype = playback_speed_button._PlaybackSpeedButtonState.prototype;
+  dart.addTypeTests(playback_speed_button._PlaybackSpeedButtonState);
+  dart.addTypeCaches(playback_speed_button._PlaybackSpeedButtonState);
+  dart.setMethodSignature(playback_speed_button._PlaybackSpeedButtonState, () => ({
+    __proto__: dart.getMethods(playback_speed_button._PlaybackSpeedButtonState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_popUpItem]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(core.String), dart.legacy(core.double)])
+  }));
+  dart.setLibraryUri(playback_speed_button._PlaybackSpeedButtonState, I[0]);
+  dart.setFieldSignature(playback_speed_button._PlaybackSpeedButtonState, () => ({
+    __proto__: dart.getFields(playback_speed_button._PlaybackSpeedButtonState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  dart.trackLibraries("packages/youtube_player_flutter/src/widgets/playback_speed_button.dart", {
+    "package:youtube_player_flutter/src/widgets/playback_speed_button.dart": playback_speed_button
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["playback_speed_button.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAYgC;;;;;;IAGjB;;;;;;;AAS8B;IAA2B;;;QAL/D;QACA;;IADA;IACA;AAFD;;EAGJ;;;;;;;;;;;;;;;;;;;;;;;;;;AAW6B,MAAvB;AAC2C,MAAjD,oBAAsC,qDAAG;AACzC,UAAI,AAAY;AACd,cACE,AAAO,AAAW,mDAAO,AACzB,kEACA;AAE6B,QAA/B,oBAAc,AAAO;;IAEzB;UAG0B;;AACxB,YAAO,qDACmB,UAAZ,8CACL,uDAEc,KAAZ,AAAO,kBAAA,aACJ,sBACJ,qCACS,iCACF,cACC,aACM,sJAGb,8BACI,QAAC,WAAY,0EACxB,iBAAW,6CACX,iBAAW,iDACX,iBAAW,+CACX,iBAAW,iDACX,iBAAW,+CACX,iBAAW,iDACX,iBAAW,+CACX,iBAAW;IAGjB;iBAEyB,MAAa;AACpC,YAAO,uDACI,AAAY,AAAM,AAAa,wCAAG,IAAI,SACxC,mBAAK,IAAI,qEACT,IAAI;IAEf;;;IAnDwB;;;EAoD1B","file":"../../../../../../../../../../packages/youtube_player_flutter/src/widgets/playback_speed_button.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__playback_speed_button: playback_speed_button
+  };
+}));
+
+//# sourceMappingURL=playback_speed_button.dart.lib.js.map

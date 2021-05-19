@@ -1,0 +1,320 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/youtube_player_flutter/src/widgets/progress_bar.dart', 'packages/youtube_player_flutter/src/utils/duration_formatter.dart', 'packages/flutter/src/painting/strut_style.dart'], (function load__packages__youtube_player_flutter__src__widgets__duration_widgets_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__youtube_player_flutter__src__widgets__progress_bar$46dart, packages__youtube_player_flutter__src__utils__duration_formatter$46dart, packages__flutter__src__painting__strut_style$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const youtube_player_controller = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__utils__youtube_player_controller;
+  const duration_formatter = packages__youtube_player_flutter__src__utils__duration_formatter$46dart.src__utils__duration_formatter;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  var duration_widgets = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: null,
+        [TextStyle_fontSize]: 12,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[1] || CT.C1,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 7,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 7,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4, C[5] || CT.C5], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/duration_widgets.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 10,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 7,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 108,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/duration_widgets.dart"
+      });
+    }
+  }, false);
+  var C = Array(10).fill(void 0);
+  var I = [
+    "package:youtube_player_flutter/src/widgets/duration_widgets.dart",
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/duration_widgets.dart"
+  ];
+  var controller$ = dart.privateName(duration_widgets, "CurrentPosition.controller");
+  duration_widgets.CurrentPosition = class CurrentPosition extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    createState() {
+      return new duration_widgets._CurrentPositionState.new();
+    }
+  };
+  (duration_widgets.CurrentPosition.new = function(opts) {
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    duration_widgets.CurrentPosition.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = duration_widgets.CurrentPosition.prototype;
+  dart.addTypeTests(duration_widgets.CurrentPosition);
+  dart.addTypeCaches(duration_widgets.CurrentPosition);
+  dart.setMethodSignature(duration_widgets.CurrentPosition, () => ({
+    __proto__: dart.getMethods(duration_widgets.CurrentPosition.__proto__),
+    createState: dart.fnType(dart.legacy(duration_widgets._CurrentPositionState), [])
+  }));
+  dart.setLibraryUri(duration_widgets.CurrentPosition, I[0]);
+  dart.setFieldSignature(duration_widgets.CurrentPosition, () => ({
+    __proto__: dart.getFields(duration_widgets.CurrentPosition.__proto__),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  var _controller = dart.privateName(duration_widgets, "_controller");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  duration_widgets._CurrentPositionState = class _CurrentPositionState extends framework.State$(dart.legacy(duration_widgets.CurrentPosition)) {
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_controller] = youtube_player_controller.YoutubePlayerController.of(this.context);
+      if (this[_controller] == null) {
+        if (!(this.widget.controller != null)) dart.assertFailed("\n\nNo controller could be found in the provided context.\n\n" + "Try passing the controller explicitly.", I[1], 31, 9, "widget.controller != null");
+        this[_controller] = this.widget.controller;
+      }
+      this[_controller].removeListener(dart.bind(this, 'listener'));
+      this[_controller].addListener(dart.bind(this, 'listener'));
+    }
+    dispose() {
+      this[_controller].removeListener(dart.bind(this, 'listener'));
+      super.dispose();
+    }
+    listener() {
+      if (dart.test(this.mounted)) this.setState(dart.fn(() => {
+      }, T.VoidToNull()));
+    }
+    build(context) {
+      let t0, t0$;
+      return new text.Text.new(duration_formatter.durationFormatter((t0$ = (t0 = this[_controller].value.position, t0 == null ? null : t0.inMilliseconds), t0$ == null ? 0 : t0$)), {style: C[0] || CT.C0, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2});
+    }
+  };
+  (duration_widgets._CurrentPositionState.new = function() {
+    this[_controller] = null;
+    duration_widgets._CurrentPositionState.__proto__.new.call(this);
+    ;
+  }).prototype = duration_widgets._CurrentPositionState.prototype;
+  dart.addTypeTests(duration_widgets._CurrentPositionState);
+  dart.addTypeCaches(duration_widgets._CurrentPositionState);
+  dart.setMethodSignature(duration_widgets._CurrentPositionState, () => ({
+    __proto__: dart.getMethods(duration_widgets._CurrentPositionState.__proto__),
+    listener: dart.fnType(dart.void, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(duration_widgets._CurrentPositionState, I[0]);
+  dart.setFieldSignature(duration_widgets._CurrentPositionState, () => ({
+    __proto__: dart.getFields(duration_widgets._CurrentPositionState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  var controller$0 = dart.privateName(duration_widgets, "RemainingDuration.controller");
+  duration_widgets.RemainingDuration = class RemainingDuration extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$0];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    createState() {
+      return new duration_widgets._RemainingDurationState.new();
+    }
+  };
+  (duration_widgets.RemainingDuration.new = function(opts) {
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$0] = controller;
+    duration_widgets.RemainingDuration.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = duration_widgets.RemainingDuration.prototype;
+  dart.addTypeTests(duration_widgets.RemainingDuration);
+  dart.addTypeCaches(duration_widgets.RemainingDuration);
+  dart.setMethodSignature(duration_widgets.RemainingDuration, () => ({
+    __proto__: dart.getMethods(duration_widgets.RemainingDuration.__proto__),
+    createState: dart.fnType(dart.legacy(duration_widgets._RemainingDurationState), [])
+  }));
+  dart.setLibraryUri(duration_widgets.RemainingDuration, I[0]);
+  dart.setFieldSignature(duration_widgets.RemainingDuration, () => ({
+    __proto__: dart.getFields(duration_widgets.RemainingDuration.__proto__),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  duration_widgets._RemainingDurationState = class _RemainingDurationState extends framework.State$(dart.legacy(duration_widgets.RemainingDuration)) {
+    didChangeDependencies() {
+      super.didChangeDependencies();
+      this[_controller] = youtube_player_controller.YoutubePlayerController.of(this.context);
+      if (this[_controller] == null) {
+        if (!(this.widget.controller != null)) dart.assertFailed("\n\nNo controller could be found in the provided context.\n\n" + "Try passing the controller explicitly.", I[1], 86, 9, "widget.controller != null");
+        this[_controller] = this.widget.controller;
+      }
+      this[_controller].removeListener(dart.bind(this, 'listener'));
+      this[_controller].addListener(dart.bind(this, 'listener'));
+    }
+    dispose() {
+      this[_controller].removeListener(dart.bind(this, 'listener'));
+      super.dispose();
+    }
+    listener() {
+      if (dart.test(this.mounted)) this.setState(dart.fn(() => {
+      }, T.VoidToNull()));
+    }
+    build(context) {
+      let t0, t0$, t0$0, t0$1;
+      return new text.Text.new("- " + dart.str(duration_formatter.durationFormatter(dart.notNull((t0$ = (t0 = this[_controller].metadata.duration, t0 == null ? null : t0.inMilliseconds), t0$ == null ? 0 : t0$)) - dart.notNull((t0$1 = (t0$0 = this[_controller].value.position, t0$0 == null ? null : t0$0.inMilliseconds), t0$1 == null ? 0 : t0$1)))), {style: C[0] || CT.C0, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6});
+    }
+  };
+  (duration_widgets._RemainingDurationState.new = function() {
+    this[_controller] = null;
+    duration_widgets._RemainingDurationState.__proto__.new.call(this);
+    ;
+  }).prototype = duration_widgets._RemainingDurationState.prototype;
+  dart.addTypeTests(duration_widgets._RemainingDurationState);
+  dart.addTypeCaches(duration_widgets._RemainingDurationState);
+  dart.setMethodSignature(duration_widgets._RemainingDurationState, () => ({
+    __proto__: dart.getMethods(duration_widgets._RemainingDurationState.__proto__),
+    listener: dart.fnType(dart.void, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(duration_widgets._RemainingDurationState, I[0]);
+  dart.setFieldSignature(duration_widgets._RemainingDurationState, () => ({
+    __proto__: dart.getFields(duration_widgets._RemainingDurationState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController))
+  }));
+  dart.trackLibraries("packages/youtube_player_flutter/src/widgets/duration_widgets.dart", {
+    "package:youtube_player_flutter/src/widgets/duration_widgets.dart": duration_widgets
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["duration_widgets.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAYgC;;;;;;;AAMS;IAAuB;;;QAHxC;;;AAAtB;;EAAkC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAWH,MAAvB;AAC2C,MAAjD,oBAAsC,qDAAG;AACzC,UAAI,AAAY;AACd,cACE,AAAO,AAAW,mDAAO,AACzB,kEACA;AAE6B,QAA/B,oBAAc,AAAO;;AAEa,MAApC,AAAY,2CAAe;AACM,MAAjC,AAAY,wCAAY;IAC1B;;AAIsC,MAApC,AAAY,2CAAe;AACZ,MAAT;IACR;;AAGE,oBAAI,eAAS,AAAe,cAAN;;IACxB;UAG0B;;AACxB,YAAO,mBACL,sCAC6C,YAA3C,AAAY,AAAM,+CAAA,OAAU,oBAAV,cAA4B;IAOpD;;;IAvCwB;;;EAwC1B;;;;;;;;;;;;;;;IAKgC;;;;;;;AAMW;IAAyB;;;QAH1C;;;AAAxB;;EAAoC;;;;;;;;;;;;;;AAWL,MAAvB;AAC2C,MAAjD,oBAAsC,qDAAG;AACzC,UAAI,AAAY;AACd,cACE,AAAO,AAAW,mDAAO,AACzB,kEACA;AAE6B,QAA/B,oBAAc,AAAO;;AAEa,MAApC,AAAY,2CAAe;AACM,MAAjC,AAAY,wCAAY;IAC1B;;AAIsC,MAApC,AAAY,2CAAe;AACZ,MAAT;IACR;;AAGE,oBAAI,eAAS,AAAe,cAAN;;IACxB;UAG0B;;AACxB,YAAO,mBACL,AAGG,gBAHE,qCACkD,cAAN,YAA9C,AAAY,AAAS,kDAAA,OAAU,oBAAV,cAA4B,0BACF,eAA3C,AAAY,AAAM,iDAAA,OAAU,sBAAV,eAA4B;IAOzD;;;IAxCwB;;;EAyC1B","file":"../../../../../../../../../../packages/youtube_player_flutter/src/widgets/duration_widgets.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__duration_widgets: duration_widgets
+  };
+}));
+
+//# sourceMappingURL=duration_widgets.dart.lib.js.map

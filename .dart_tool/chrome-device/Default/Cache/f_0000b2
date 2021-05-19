@@ -1,0 +1,561 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/widgets/page_view.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/drawer_header.dart', 'packages/mma_mse/customTile.dart', 'packages/mma_mse/Search/Test/testDetailMode.dart'], (function load__packages__mma_mse__equipment__CharpyImpact__charpyImpactBackG_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__widgets__page_view$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__drawer_header$46dart, packages__mma_mse__customTile$46dart, packages__mma_mse__Search__Test__testDetailMode$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const page_view = packages__flutter__src__widgets__page_view$46dart.src__widgets__page_view;
+  const drawer = packages__flutter__src__material__icon_button$46dart.src__material__drawer;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const drawer_header = packages__flutter__src__material__drawer_header$46dart.src__material__drawer_header;
+  const customTile = packages__mma_mse__customTile$46dart.customTile;
+  const testDetailMode = packages__mma_mse__Search__Test__testDetailMode$46dart.Search__Test__testDetailMode;
+  var charpyImpactBackG = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    DrawerL: () => (T.DrawerL = dart.constFn(dart.legacy(drawer.Drawer)))(),
+    VoidToDrawerL: () => (T.VoidToDrawerL = dart.constFn(dart.fnType(T.DrawerL(), [])))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    IdentityMapOfStringL$StringL: () => (T.IdentityMapOfStringL$StringL = dart.constFn(_js_helper.IdentityMap$(T.StringL(), T.StringL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 38,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 26,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 17,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "pageTo",
+        [_Location_column]: 17,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fonts",
+        [_Location_column]: 17,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 17,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "pageTo",
+        [_Location_column]: 17,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fonts",
+        [_Location_column]: 17,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 17,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "pageTo",
+        [_Location_column]: 17,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fonts",
+        [_Location_column]: 17,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 44,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 9,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "drawer",
+        [_Location_column]: 7,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36, C[37] || CT.C37], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "doucment",
+        [_Location_column]: 5,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "back_img",
+        [_Location_column]: 5,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 5,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41, C[42] || CT.C42], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 3,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "doucment",
+        [_Location_column]: 5,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "back_img",
+        [_Location_column]: 5,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 5,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.constList([C[45] || CT.C45, C[46] || CT.C46, C[47] || CT.C47], T._LocationL());
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[44] || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 3,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "doucment",
+        [_Location_column]: 5,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "back_img",
+        [_Location_column]: 5,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 5,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50, C[51] || CT.C51, C[52] || CT.C52], T._LocationL());
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 3,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/Users/super/flutter_course/lib/MMA_MSE/MSE_MMA/lib/equipment/CharpyImpact/charpyImpactBackG.dart"
+      });
+    }
+  }, false);
+  var C = Array(53).fill(void 0);
+  var I = ["package:mma_mse/equipment/CharpyImpact/charpyImpactBackG.dart"];
+  charpyImpactBackG.CharpyBackG = class CharpyBackG extends framework.StatefulWidget {
+    createState() {
+      return new charpyImpactBackG._CharpyBackGState.new();
+    }
+  };
+  (charpyImpactBackG.CharpyBackG.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    charpyImpactBackG.CharpyBackG.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = charpyImpactBackG.CharpyBackG.prototype;
+  dart.addTypeTests(charpyImpactBackG.CharpyBackG);
+  dart.addTypeCaches(charpyImpactBackG.CharpyBackG);
+  dart.setMethodSignature(charpyImpactBackG.CharpyBackG, () => ({
+    __proto__: dart.getMethods(charpyImpactBackG.CharpyBackG.__proto__),
+    createState: dart.fnType(dart.legacy(charpyImpactBackG._CharpyBackGState), [])
+  }));
+  dart.setLibraryUri(charpyImpactBackG.CharpyBackG, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  charpyImpactBackG._CharpyBackGState = class _CharpyBackGState extends framework.State$(dart.legacy(charpyImpactBackG.CharpyBackG)) {
+    build(context) {
+      const cutter_bg = () => {
+        return new drawer.Drawer.new({child: new scroll_view.ListView.new({children: T.JSArrayOfWidgetL().of([new drawer_header.DrawerHeader.new({child: new text.Text.new("Background Theory for Charpy Impact", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), new customTile.customListTile.new({controller: this.controller, name: "Tests Standard", pageTo: 0, fonts: 15.0, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), new customTile.customListTile.new({controller: this.controller, name: "Ductile to Brittle Transition", pageTo: 1, fonts: 15.0, $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), new customTile.customListTile.new({controller: this.controller, name: "Factors May Affect the Test", pageTo: 2, fonts: 15.0, $creationLocationd_0dea112b090073317d4: C[18] || CT.C18})]), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27});
+      };
+      dart.fn(cutter_bg, T.VoidToDrawerL());
+      return new scaffold.Scaffold.new({drawer: cutter_bg(), body: new page_view.PageView.new({children: charpyImpactBackG.pages, controller: this.controller, $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), $creationLocationd_0dea112b090073317d4: C[34] || CT.C34});
+    }
+  };
+  (charpyImpactBackG._CharpyBackGState.new = function() {
+    this.controller = new page_view.PageController.new({initialPage: 0});
+    charpyImpactBackG._CharpyBackGState.__proto__.new.call(this);
+    ;
+  }).prototype = charpyImpactBackG._CharpyBackGState.prototype;
+  dart.addTypeTests(charpyImpactBackG._CharpyBackGState);
+  dart.addTypeCaches(charpyImpactBackG._CharpyBackGState);
+  dart.setMethodSignature(charpyImpactBackG._CharpyBackGState, () => ({
+    __proto__: dart.getMethods(charpyImpactBackG._CharpyBackGState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(charpyImpactBackG._CharpyBackGState, I[0]);
+  dart.setFieldSignature(charpyImpactBackG._CharpyBackGState, () => ({
+    __proto__: dart.getFields(charpyImpactBackG._CharpyBackGState.__proto__),
+    controller: dart.finalFieldType(dart.legacy(page_view.PageController))
+  }));
+  dart.defineLazy(charpyImpactBackG, {
+    /*charpyImpactBackG.data*/get data() {
+      return new (T.IdentityMapOfStringL$StringL()).from(["Tests Standard", "Method Followed with ASTM D6110: \nTest consist of striking a suitable specimen with a hammer on a pendulum arm while the specimen is held securely at each end.  The hammer strikes opposite the notch. The energy absorbed by the specimen is determined precisely by measuring the decrease in motion of the pendulum arm. ", "Ductile to Brittle Transition", "Purpose: \nto determine the ductile to brittle temperature by plotting the temperature with the impact strength \n\nMaterial Needed: \n•Hot Plate with beaker and water\n•Ice \n•Dry Ice and ethanol\n•Styrofoam Container\n•Liquid Nitrogen", "Factors May Affect the Test", "\n•1. Interial Effect\n•2.\tThe complexity of the loading at high impact rate and the boundary conditions \n•3.\tThe effect of high strain rates on constitutive equations \n•4.\tThe non-isothermal character of test \n•5.\t3-D aspect of the fracture behavior (tunneling effect)\n•6.\tCompetition between ductile and brittle fracture "]);
+    },
+    set data(_) {},
+    /*charpyImpactBackG.back_img*/get back_img() {
+      return "assest/test/hdtbg1.jpg";
+    },
+    /*charpyImpactBackG.pages*/get pages() {
+      return T.JSArrayOfWidgetL().of([new testDetailMode.pageMode.new({doucment: charpyImpactBackG.data, back_img: charpyImpactBackG.back_img, title: "Tests Standard", $creationLocationd_0dea112b090073317d4: C[38] || CT.C38}), new testDetailMode.pageMode.new({doucment: charpyImpactBackG.data, back_img: charpyImpactBackG.back_img, title: "Ductile to Brittle Transition", $creationLocationd_0dea112b090073317d4: C[43] || CT.C43}), new testDetailMode.pageMode.new({doucment: charpyImpactBackG.data, back_img: charpyImpactBackG.back_img, title: "Factors May Affect the Test", $creationLocationd_0dea112b090073317d4: C[48] || CT.C48})]);
+    }
+  }, true);
+  dart.trackLibraries("packages/mma_mse/equipment/CharpyImpact/charpyImpactBackG.dart", {
+    "package:mma_mse/equipment/CharpyImpact/charpyImpactBackG.dart": charpyImpactBackG
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["charpyImpactBackG.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQqC;IAAmB;;;QAHrC;;AAAQ,iEAAW,GAAG;;EAAC;;;;;;;;;;;;;;UAoCd;AACxB,YAAO;AAAe,6CACP,wCACC,yBACR,2CAAoB,kBAAK,0JACzB,+CACgB,uBACN,0BACE,UACD,+DACX,+CACgB,uBACN,yCACE,UACD,iEACX,+CACgB,uBACN,uCACE,UACD;;;AAGnB,YAAO,oCACG,SAAS,UACX,sCACM,qCACE;IAGlB;;;IA/BqB,kBAAa,+CAA4B;;;EAgChE;;;;;;;;;;;;;MA5DoB,sBAAI;YAAG,8CACzB,kBACI,kUACJ,iCACI,gPACJ,+BACI;;;MAEO,0BAAQ;YAAG;;MACL,uBAAK;YAAG,0BACzB,2CACY,kCACA,mCACH,6EAET,2CACY,kCACA,mCACH,4FAET,2CACY,kCACA,mCACH","file":"../../../../../../../../../packages/mma_mse/equipment/CharpyImpact/charpyImpactBackG.dart.lib.js"}');
+  // Exports:
+  return {
+    equipment__CharpyImpact__charpyImpactBackG: charpyImpactBackG
+  };
+}));
+
+//# sourceMappingURL=charpyImpactBackG.dart.lib.js.map

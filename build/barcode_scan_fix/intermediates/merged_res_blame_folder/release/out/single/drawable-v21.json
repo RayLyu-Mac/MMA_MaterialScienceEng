@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\2e94107f30f39be366a17347c2bf100b\\core-1.1.0\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\12e127716e8127973d2a216cd14a6418\\appcompat-1.0.2\\res\\drawable-v21\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\12e127716e8127973d2a216cd14a6418\\appcompat-1.0.2\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\abc_list_divider_material.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\12e127716e8127973d2a216cd14a6418\\appcompat-1.0.2\\res\\drawable-v21\\abc_list_divider_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\12e127716e8127973d2a216cd14a6418\\appcompat-1.0.2\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\12e127716e8127973d2a216cd14a6418\\appcompat-1.0.2\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\super\\flutter_course\\lib\\MMA_MSE\\MSE_MMA\\build\\barcode_scan_fix\\intermediates\\res\\merged\\release\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\super\\.gradle\\caches\\transforms-2\\files-2.1\\50f23f4316049b4dbfe8a24fb2e3d1c5\\material-1.0.0\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    }
+]

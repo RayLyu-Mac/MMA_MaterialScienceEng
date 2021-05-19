@@ -1,0 +1,175 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mma_mse"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="17"
+9        android:targetSdkVersion="30" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:4:5-67
+14-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:4:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:5:5-79
+15-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:5:22-76
+16    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+16-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:6:5-76
+16-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:6:22-74
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->[:barcode_scan_fix] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\barcode_scan_fix\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
+17-->[:barcode_scan_fix] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\barcode_scan_fix\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-62
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+18-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+19-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
+19-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+20
+21    <application
+21-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:7:4-45:19
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\super\.gradle\caches\transforms-2\files-2.1\2e94107f30f39be366a17347c2bf100b\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:9:9-43
+25        android:label="mma_mse" >
+25-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:8:9-32
+26        <activity
+26-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:10:9-39:20
+27            android:name="com.example.mma_mse.MainActivity"
+27-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:11:13-41
+28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+28-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:14:13-163
+29            android:hardwareAccelerated="true"
+29-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:15:13-47
+30            android:launchMode="singleTop"
+30-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:12:13-43
+31            android:theme="@style/LaunchTheme"
+31-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:13:13-47
+32            android:windowSoftInputMode="adjustResize" >
+32-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:16:13-55
+33
+34            <!--
+35                 Specifies an Android theme to apply to this Activity as soon as
+36                 the Android process has started. This theme is visible to the user
+37                 while the Flutter UI initializes. After that, this theme continues
+38                 to determine the Window background behind the Flutter UI.
+39            -->
+40            <meta-data
+40-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:22:13-25:17
+41                android:name="io.flutter.embedding.android.NormalTheme"
+41-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:23:15-70
+42                android:resource="@style/NormalTheme" />
+42-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:24:15-52
+43            <!--
+44                 Displays an Android View that continues showing the launch screen
+45                 Drawable until Flutter paints its first frame, then this splash
+46                 screen fades out. A splash screen is useful to avoid any visual
+47                 gap between the end of Android's launch screen and the painting of
+48                 Flutter's first frame.
+49            -->
+50            <meta-data
+50-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:31:13-34:17
+51                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+51-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:32:15-79
+52                android:resource="@drawable/launch_background" />
+52-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:33:15-61
+53
+54            <intent-filter>
+54-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:35:13-38:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:36:17-68
+55-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:36:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:37:17-76
+57-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:37:27-74
+58            </intent-filter>
+59        </activity>
+60        <!--
+61             Don't delete the meta-data below.
+62             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+63        -->
+64        <meta-data
+64-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:42:9-44:33
+65            android:name="flutterEmbedding"
+65-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:43:13-44
+66            android:value="2" />
+66-->C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\android\app\src\main\AndroidManifest.xml:44:13-30
+67
+68        <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity" />
+68-->[:barcode_scan_fix] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\barcode_scan_fix\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-91
+68-->[:barcode_scan_fix] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\barcode_scan_fix\intermediates\library_manifest\debug\AndroidManifest.xml:14:19-88
+69        <activity
+69-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:47
+70            android:name="com.pichillilorenzo.flutter_inappwebview.InAppBrowser.InAppBrowserActivity"
+70-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-102
+71            android:configChanges="orientation|screenSize"
+71-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-59
+72            android:theme="@style/AppTheme" />
+72-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-44
+73        <activity
+73-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:55
+74            android:name="com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ChromeCustomTabsActivity"
+74-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-110
+75            android:configChanges="orientation|screenSize"
+75-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-59
+76            android:theme="@style/ThemeTransparent" />
+76-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-52
+77
+78        <receiver android:name="com.pichillilorenzo.flutter_inappwebview.ChromeCustomTabs.ActionBroadcastReceiver" />
+78-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-118
+78-->[:flutter_inappwebview] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_inappwebview\intermediates\library_manifest\debug\AndroidManifest.xml:17:19-115
+79
+80        <provider
+80-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+81            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+81-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+82            android:authorities="com.example.mma_mse.flutter.image_provider"
+82-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+83            android:exported="false"
+83-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+84            android:grantUriPermissions="true" >
+84-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+85            <meta-data
+85-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+87                android:resource="@xml/flutter_image_picker_file_paths" />
+87-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+88        </provider>
+89
+90        <activity
+90-->[:url_launcher] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+91            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+91-->[:url_launcher] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+92            android:exported="false"
+92-->[:url_launcher] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+93            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+93-->[:url_launcher] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+94
+95        <provider
+95-->[:flutter_email_sender] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_email_sender\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+96            android:name="com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider"
+96-->[:flutter_email_sender] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_email_sender\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-90
+97            android:authorities="com.example.mma_mse.file_provider"
+97-->[:flutter_email_sender] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_email_sender\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-65
+98            android:exported="false"
+98-->[:flutter_email_sender] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_email_sender\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+99            android:grantUriPermissions="true" >
+99-->[:flutter_email_sender] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\flutter_email_sender\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+100            <meta-data
+100-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+101                android:name="android.support.FILE_PROVIDER_PATHS"
+101-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+102                android:resource="@xml/shared_file_paths" />
+102-->[:image_picker] C:\Users\super\flutter_course\lib\MMA_MSE\MSE_MMA\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+103        </provider>
+104    </application>
+105
+106</manifest>

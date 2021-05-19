@@ -1,0 +1,2409 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/scheduler/binding.dart', 'packages/flutter/src/services/system_chrome.dart', 'packages/flutter/src/widgets/will_pop_scope.dart', 'packages/flutter/src/widgets/orientation_builder.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/colors.dart', 'packages/youtube_player_flutter/src/widgets/progress_bar.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/foundation/key.dart', 'packages/youtube_player_flutter/src/utils/youtube_meta_data.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/widgets/icon_data.dart', 'packages/youtube_player_flutter/src/utils/errors.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/rendering/stack.dart', 'packages/youtube_player_flutter/src/player/raw_youtube_player.dart', 'packages/flutter/src/widgets/implicit_animations.dart', 'packages/youtube_player_flutter/src/widgets/touch_shutter.dart', 'packages/youtube_player_flutter/src/widgets/live_bottom_bar.dart', 'packages/youtube_player_flutter/src/widgets/duration_widgets.dart', 'packages/youtube_player_flutter/src/widgets/playback_speed_button.dart', 'packages/youtube_player_flutter/src/widgets/full_screen_button.dart', 'packages/youtube_player_flutter/src/widgets/play_pause_button.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/flutter/src/painting/image_stream.dart'], (function load__packages__youtube_player_flutter__src__widgets__youtube_player_builder_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__scheduler__binding$46dart, packages__flutter__src__services__system_chrome$46dart, packages__flutter__src__widgets__will_pop_scope$46dart, packages__flutter__src__widgets__orientation_builder$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__colors$46dart, packages__youtube_player_flutter__src__widgets__progress_bar$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__foundation__key$46dart, packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__widgets__icon_data$46dart, packages__youtube_player_flutter__src__utils__errors$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__rendering__stack$46dart, packages__youtube_player_flutter__src__player__raw_youtube_player$46dart, packages__flutter__src__widgets__implicit_animations$46dart, packages__youtube_player_flutter__src__widgets__touch_shutter$46dart, packages__youtube_player_flutter__src__widgets__live_bottom_bar$46dart, packages__youtube_player_flutter__src__widgets__duration_widgets$46dart, packages__youtube_player_flutter__src__widgets__playback_speed_button$46dart, packages__youtube_player_flutter__src__widgets__full_screen_button$46dart, packages__youtube_player_flutter__src__widgets__play_pause_button$46dart, packages__flutter__src__painting__box_fit$46dart, packages__flutter__src__painting__image_stream$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const async = dart_sdk.async;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const binding$ = packages__flutter__src__scheduler__binding$46dart.src__scheduler__binding;
+  const system_chrome = packages__flutter__src__services__system_chrome$46dart.src__services__system_chrome;
+  const will_pop_scope = packages__flutter__src__widgets__will_pop_scope$46dart.src__widgets__will_pop_scope;
+  const orientation_builder = packages__flutter__src__widgets__orientation_builder$46dart.src__widgets__orientation_builder;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const colors$ = packages__flutter__src__painting__colors$46dart.src__painting__colors;
+  const progress_bar = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__widgets__progress_bar;
+  const youtube_player_controller = packages__youtube_player_flutter__src__widgets__progress_bar$46dart.src__utils__youtube_player_controller;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const key = packages__flutter__src__foundation__key$46dart.src__foundation__key;
+  const youtube_meta_data = packages__youtube_player_flutter__src__utils__youtube_meta_data$46dart.src__utils__youtube_meta_data;
+  const material = packages__flutter__src__material__icon_button$46dart.src__material__material;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icon_data = packages__flutter__src__widgets__icon_data$46dart.src__widgets__icon_data;
+  const errors = packages__youtube_player_flutter__src__utils__errors$46dart.src__utils__errors;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const stack = packages__flutter__src__rendering__stack$46dart.src__rendering__stack;
+  const raw_youtube_player = packages__youtube_player_flutter__src__player__raw_youtube_player$46dart.src__player__raw_youtube_player;
+  const implicit_animations = packages__flutter__src__widgets__implicit_animations$46dart.src__widgets__implicit_animations;
+  const touch_shutter = packages__youtube_player_flutter__src__widgets__touch_shutter$46dart.src__widgets__touch_shutter;
+  const live_bottom_bar = packages__youtube_player_flutter__src__widgets__live_bottom_bar$46dart.src__widgets__live_bottom_bar;
+  const duration_widgets = packages__youtube_player_flutter__src__widgets__duration_widgets$46dart.src__widgets__duration_widgets;
+  const playback_speed_button = packages__youtube_player_flutter__src__widgets__playback_speed_button$46dart.src__widgets__playback_speed_button;
+  const full_screen_button = packages__youtube_player_flutter__src__widgets__full_screen_button$46dart.src__widgets__full_screen_button;
+  const play_pause_button = packages__youtube_player_flutter__src__widgets__play_pause_button$46dart.src__widgets__play_pause_button;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  const image_stream = packages__flutter__src__painting__image_stream$46dart.src__painting__image_stream;
+  var youtube_player_builder = Object.create(dart.library);
+  var widgets = Object.create(dart.library);
+  var youtube_player = Object.create(dart.library);
+  var youtube_player_flutter = Object.create(dart.library);
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $contains = dartx.contains;
+  var $trim = dartx.trim;
+  var $add = dartx.add;
+  var $addAll = dartx.addAll;
+  var $isEmpty = dartx.isEmpty;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StatefulWidgetL: () => (T.StatefulWidgetL = dart.constFn(dart.legacy(framework.StatefulWidget)))(),
+    StateOfStatefulWidgetL: () => (T.StateOfStatefulWidgetL = dart.constFn(framework.State$(T.StatefulWidgetL())))(),
+    StateLOfStatefulWidgetL: () => (T.StateLOfStatefulWidgetL = dart.constFn(dart.legacy(T.StateOfStatefulWidgetL())))(),
+    GlobalKeyOfStateLOfStatefulWidgetL: () => (T.GlobalKeyOfStateLOfStatefulWidgetL = dart.constFn(framework.GlobalKey$(T.StateLOfStatefulWidgetL())))(),
+    SystemUiOverlayL: () => (T.SystemUiOverlayL = dart.constFn(dart.legacy(system_chrome.SystemUiOverlay)))(),
+    JSArrayOfSystemUiOverlayL: () => (T.JSArrayOfSystemUiOverlayL = dart.constFn(_interceptors.JSArray$(T.SystemUiOverlayL())))(),
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    FutureOfboolL: () => (T.FutureOfboolL = dart.constFn(async.Future$(T.boolL())))(),
+    FutureLOfboolL: () => (T.FutureLOfboolL = dart.constFn(dart.legacy(T.FutureOfboolL())))(),
+    VoidToFutureLOfboolL: () => (T.VoidToFutureLOfboolL = dart.constFn(dart.fnType(T.FutureLOfboolL(), [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    OrientationL: () => (T.OrientationL = dart.constFn(dart.legacy(media_query.Orientation)))(),
+    BuildContextLAndOrientationLToWidgetL: () => (T.BuildContextLAndOrientationLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.BuildContextL(), T.OrientationL()])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    ColorL: () => (T.ColorL = dart.constFn(dart.legacy(ui.Color)))(),
+    RegExpL: () => (T.RegExpL = dart.constFn(dart.legacy(core.RegExp)))(),
+    JSArrayOfRegExpL: () => (T.JSArrayOfRegExpL = dart.constFn(_interceptors.JSArray$(T.RegExpL())))(),
+    YoutubePlayerL: () => (T.YoutubePlayerL = dart.constFn(dart.legacy(youtube_player.YoutubePlayer)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    YoutubeMetaDataL: () => (T.YoutubeMetaDataL = dart.constFn(dart.legacy(youtube_meta_data.YoutubeMetaData)))(),
+    YoutubeMetaDataLToNull: () => (T.YoutubeMetaDataLToNull = dart.constFn(dart.fnType(core.Null, [T.YoutubeMetaDataL()])))(),
+    ImageChunkEventL: () => (T.ImageChunkEventL = dart.constFn(dart.legacy(image_stream.ImageChunkEvent)))(),
+    BuildContextLAndWidgetLAndImageChunkEventLToWidgetL: () => (T.BuildContextLAndWidgetLAndImageChunkEventLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.BuildContextL(), T.WidgetL(), T.ImageChunkEventL()])))(),
+    ContainerL: () => (T.ContainerL = dart.constFn(dart.legacy(container.Container)))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    StackTraceL: () => (T.StackTraceL = dart.constFn(dart.legacy(core.StackTrace)))(),
+    BuildContextLAndObjectLAndStackTraceLToContainerL: () => (T.BuildContextLAndObjectLAndStackTraceLToContainerL = dart.constFn(dart.fnType(T.ContainerL(), [T.BuildContextL(), T.ObjectL(), T.StackTraceL()])))(),
+    ImageL: () => (T.ImageL = dart.constFn(dart.legacy(image.Image)))(),
+    BuildContextLAndObjectLAndStackTraceLToImageL: () => (T.BuildContextLAndObjectLAndStackTraceLToImageL = dart.constFn(dart.fnType(T.ImageL(), [T.BuildContextL(), T.ObjectL(), T.StackTraceL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onWillPop",
+        [_Location_column]: 9,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 69,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/youtube_player_builder.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 7,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/youtube_player_builder.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 7,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 82,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/widgets/youtube_player_builder.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 3000000
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294962158.0
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294954450.0
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293892762.0
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293227379.0
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293874512.0
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294198070.0
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293212469.0
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292030255.0
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291176488.0
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290190364.0
+      });
+    },
+    get C13() {
+      return C[13] = dart.constMap(T.intL(), T.ColorL(), [50, C[14] || CT.C14, 100, C[15] || CT.C15, 200, C[16] || CT.C16, 300, C[17] || CT.C17, 400, C[18] || CT.C18, 500, C[19] || CT.C19, 600, C[20] || CT.C20, 700, C[21] || CT.C21, 800, C[22] || CT.C22, 900, C[23] || CT.C23]);
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4294198070.0,
+        [ColorSwatch__swatch]: C[13] || CT.C13
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: progress_bar.ProgressBarColors.prototype,
+        [ProgressBarColors_handleColor]: null,
+        [ProgressBarColors_bufferedColor]: null,
+        [ProgressBarColors_playedColor]: null,
+        [ProgressBarColors_backgroundColor]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 8,
+        [EdgeInsets_right]: 8,
+        [EdgeInsets_top]: 8,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 20,
+        [EdgeInsets_right]: 40,
+        [EdgeInsets_top]: 20,
+        [EdgeInsets_left]: 40
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 31,
+        [_Location_line]: 254,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 25,
+        [_Location_line]: 255,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 253,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: icon_data.IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: null,
+        [IconData_fontFamily]: "MaterialIcons",
+        [IconData_codePoint]: 59137
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: icon.Icon.prototype,
+        [Widget__location]: C[28] || CT.C28,
+        [Widget_key]: null,
+        [Icon_textDirection]: null,
+        [Icon_semanticLabel]: null,
+        [Icon_color]: C[32] || CT.C32,
+        [Icon_size]: null,
+        [Icon_icon]: C[33] || CT.C33
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 38,
+        [_Location_line]: 257,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 257,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[35] || CT.C35,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 5
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: ui.FontWeight.prototype,
+        [FontWeight_index]: 2
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: C[39] || CT.C39,
+        [TextStyle_fontSize]: 15,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[32] || CT.C32,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 260,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 27,
+        [_Location_line]: 265,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.constList([C[42] || CT.C42, C[43] || CT.C43], T._LocationL());
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[41] || CT.C41,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 259,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 25,
+        [_Location_line]: 259,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46], T._LocationL());
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 258,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 252,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.constList([C[49] || CT.C49], T._LocationL());
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[48] || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 251,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 34,
+        [_Location_line]: 274,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53], T._LocationL());
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 274,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[51] || CT.C51,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 16,
+        [SizedBox_width]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294638330.0
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294309365.0
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293848814.0
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292927712.0
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292269782.0
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290624957.0
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288585374.0
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285887861.0
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284572001.0
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282532418.0
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281348144.0
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280361249.0
+      });
+    },
+    get C56() {
+      return C[56] = dart.constMap(T.intL(), T.ColorL(), [50, C[57] || CT.C57, 100, C[58] || CT.C58, 200, C[59] || CT.C59, 300, C[60] || CT.C60, 350, C[61] || CT.C61, 400, C[62] || CT.C62, 500, C[63] || CT.C63, 600, C[64] || CT.C64, 700, C[65] || CT.C65, 800, C[66] || CT.C66, 850, C[67] || CT.C67, 900, C[68] || CT.C68]);
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4288585374.0,
+        [ColorSwatch__swatch]: C[56] || CT.C56
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: C[39] || CT.C39,
+        [TextStyle_fontSize]: null,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[55] || CT.C55,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 64,
+        [_Location_line]: 276,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 21,
+        [_Location_line]: 277,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C[70] = dart.constList([C[71] || CT.C71, C[72] || CT.C72], T._LocationL());
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[70] || CT.C70,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 275,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 248,
+        [_Location_file]: null
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 249,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 250,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C[74] = dart.constList([C[75] || CT.C75, C[76] || CT.C76, C[77] || CT.C77], T._LocationL());
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[74] || CT.C74,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 247,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 15,
+        [_Location_line]: 244,
+        [_Location_file]: null
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 15,
+        [_Location_line]: 245,
+        [_Location_file]: null
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 247,
+        [_Location_file]: null
+      });
+    },
+    get C79() {
+      return C[79] = dart.constList([C[80] || CT.C80, C[81] || CT.C81, C[82] || CT.C82], T._LocationL());
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[79] || CT.C79,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 243,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 240,
+        [_Location_file]: null
+      });
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 11,
+        [_Location_line]: 241,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C84() {
+      return C[84] = dart.constList([C[85] || CT.C85, C[86] || CT.C86, C[87] || CT.C87], T._LocationL());
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[84] || CT.C84,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 239,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 9,
+        [_Location_line]: 238,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 239,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C[89] = dart.constList([C[90] || CT.C90, C[91] || CT.C91], T._LocationL());
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[89] || CT.C89,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 237,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 7,
+        [_Location_line]: 235,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 236,
+        [_Location_file]: null
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 237,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C[93] = dart.constList([C[94] || CT.C94, C[95] || CT.C95, C[96] || CT.C96], T._LocationL());
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[93] || CT.C93,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 234,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 15,
+        [_Location_line]: 304,
+        [_Location_file]: null
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onEnded",
+        [_Location_column]: 15,
+        [_Location_line]: 305,
+        [_Location_file]: null
+      });
+    },
+    get C98() {
+      return C[98] = dart.constList([C[99] || CT.C99, C[100] || CT.C100], T._LocationL());
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[98] || CT.C98,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 303,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "scale",
+        [_Location_column]: 13,
+        [_Location_line]: 299,
+        [_Location_file]: null
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 303,
+        [_Location_file]: null
+      });
+    },
+    get C102() {
+      return C[102] = dart.constList([C[103] || CT.C103, C[104] || CT.C104], T._LocationL());
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[102] || CT.C102,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 298,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 300000
+      });
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 15,
+        [_Location_line]: 319,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 15,
+        [_Location_line]: 320,
+        [_Location_file]: null
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 321,
+        [_Location_file]: null
+      });
+    },
+    get C107() {
+      return C[107] = dart.constList([C[108] || CT.C108, C[109] || CT.C109, C[110] || CT.C110], T._LocationL());
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[107] || CT.C107,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 318,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 100000
+      });
+    },
+    get C114() {
+      return C[114] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "colors",
+        [_Location_column]: 19,
+        [_Location_line]: 336,
+        [_Location_file]: null
+      });
+    },
+    get C113() {
+      return C[113] = dart.constList([C[114] || CT.C114], T._LocationL());
+    },
+    get C112() {
+      return C[112] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[113] || CT.C113,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 335,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C117() {
+      return C[117] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "ignoring",
+        [_Location_column]: 17,
+        [_Location_line]: 334,
+        [_Location_file]: null
+      });
+    },
+    get C118() {
+      return C[118] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 335,
+        [_Location_file]: null
+      });
+    },
+    get C116() {
+      return C[116] = dart.constList([C[117] || CT.C117, C[118] || CT.C118], T._LocationL());
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[116] || CT.C116,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 333,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C121() {
+      return C[121] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottom",
+        [_Location_column]: 15,
+        [_Location_line]: 330,
+        [_Location_file]: null
+      });
+    },
+    get C122() {
+      return C[122] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 331,
+        [_Location_file]: null
+      });
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 15,
+        [_Location_line]: 332,
+        [_Location_file]: null
+      });
+    },
+    get C124() {
+      return C[124] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 333,
+        [_Location_file]: null
+      });
+    },
+    get C120() {
+      return C[120] = dart.constList([C[121] || CT.C121, C[122] || CT.C122, C[123] || CT.C123, C[124] || CT.C124], T._LocationL());
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[120] || CT.C120,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 329,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C127() {
+      return C[127] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "disableDragSeek",
+        [_Location_column]: 15,
+        [_Location_line]: 344,
+        [_Location_file]: null
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "timeOut",
+        [_Location_column]: 15,
+        [_Location_line]: 345,
+        [_Location_file]: null
+      });
+    },
+    get C126() {
+      return C[126] = dart.constList([C[127] || CT.C127, C[128] || CT.C128], T._LocationL());
+    },
+    get C125() {
+      return C[125] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[126] || CT.C126,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 343,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C131() {
+      return C[131] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "liveUIColor",
+        [_Location_column]: 37,
+        [_Location_line]: 358,
+        [_Location_file]: null
+      });
+    },
+    get C130() {
+      return C[130] = dart.constList([C[131] || CT.C131], T._LocationL());
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[130] || CT.C130,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 358,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 48,
+        [_Location_line]: 366,
+        [_Location_file]: null
+      });
+    },
+    get C135() {
+      return C[135] = dart.constList([C[136] || CT.C136], T._LocationL());
+    },
+    get C134() {
+      return C[134] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[135] || CT.C135,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 366,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C133() {
+      return C[133] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[134] || CT.C134,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 14
+      });
+    },
+    get C138() {
+      return C[138] = dart.constList([], T._LocationL());
+    },
+    get C137() {
+      return C[137] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 367,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C142() {
+      return C[142] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 48,
+        [_Location_line]: 368,
+        [_Location_file]: null
+      });
+    },
+    get C141() {
+      return C[141] = dart.constList([C[142] || CT.C142], T._LocationL());
+    },
+    get C140() {
+      return C[140] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[141] || CT.C141,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 368,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C139() {
+      return C[139] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[140] || CT.C140,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 8
+      });
+    },
+    get C145() {
+      return C[145] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "isExpanded",
+        [_Location_column]: 35,
+        [_Location_line]: 370,
+        [_Location_file]: null
+      });
+    },
+    get C146() {
+      return C[146] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "colors",
+        [_Location_column]: 35,
+        [_Location_line]: 371,
+        [_Location_file]: null
+      });
+    },
+    get C144() {
+      return C[144] = dart.constList([C[145] || CT.C145, C[146] || CT.C146], T._LocationL());
+    },
+    get C143() {
+      return C[143] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[144] || CT.C144,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 369,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C147() {
+      return C[147] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 373,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C149() {
+      return C[149] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 374,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C148() {
+      return C[148] = dart.const({
+        __proto__: playback_speed_button.PlaybackSpeedButton.prototype,
+        [Widget__location]: C[149] || CT.C149,
+        [Widget_key]: null,
+        [PlaybackSpeedButton_icon]: null,
+        [PlaybackSpeedButton_controller]: null
+      });
+    },
+    get C150() {
+      return C[150] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 375,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C153() {
+      return C[153] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 27,
+        [_Location_line]: 364,
+        [_Location_file]: null
+      });
+    },
+    get C152() {
+      return C[152] = dart.constList([C[153] || CT.C153], T._LocationL());
+    },
+    get C151() {
+      return C[151] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[152] || CT.C152,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 363,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C156() {
+      return C[156] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 25,
+        [_Location_line]: 360,
+        [_Location_file]: null
+      });
+    },
+    get C157() {
+      return C[157] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 25,
+        [_Location_line]: 363,
+        [_Location_file]: null
+      });
+    },
+    get C155() {
+      return C[155] = dart.constList([C[156] || CT.C156, C[157] || CT.C157], T._LocationL());
+    },
+    get C154() {
+      return C[154] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[155] || CT.C155,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 359,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C160() {
+      return C[160] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 17,
+        [_Location_line]: 352,
+        [_Location_file]: null
+      });
+    },
+    get C161() {
+      return C[161] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 17,
+        [_Location_line]: 356,
+        [_Location_file]: null
+      });
+    },
+    get C162() {
+      return C[162] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 357,
+        [_Location_file]: null
+      });
+    },
+    get C159() {
+      return C[159] = dart.constList([C[160] || CT.C160, C[161] || CT.C161, C[162] || CT.C162], T._LocationL());
+    },
+    get C158() {
+      return C[158] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[159] || CT.C159,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 351,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C165() {
+      return C[165] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottom",
+        [_Location_column]: 15,
+        [_Location_line]: 348,
+        [_Location_file]: null
+      });
+    },
+    get C166() {
+      return C[166] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 349,
+        [_Location_file]: null
+      });
+    },
+    get C167() {
+      return C[167] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 15,
+        [_Location_line]: 350,
+        [_Location_file]: null
+      });
+    },
+    get C168() {
+      return C[168] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 351,
+        [_Location_file]: null
+      });
+    },
+    get C164() {
+      return C[164] = dart.constList([C[165] || CT.C165, C[166] || CT.C166, C[167] || CT.C167, C[168] || CT.C168], T._LocationL());
+    },
+    get C163() {
+      return C[163] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[164] || CT.C164,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 347,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C169() {
+      return C[169] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 53,
+        [_Location_line]: 394,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C172() {
+      return C[172] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 394,
+        [_Location_file]: null
+      });
+    },
+    get C171() {
+      return C[171] = dart.constList([C[172] || CT.C172], T._LocationL());
+    },
+    get C170() {
+      return C[170] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[171] || CT.C171,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 393,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C175() {
+      return C[175] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 19,
+        [_Location_line]: 392,
+        [_Location_file]: null
+      });
+    },
+    get C176() {
+      return C[176] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 393,
+        [_Location_file]: null
+      });
+    },
+    get C174() {
+      return C[174] = dart.constList([C[175] || CT.C175, C[176] || CT.C176], T._LocationL());
+    },
+    get C173() {
+      return C[173] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[174] || CT.C174,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 391,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C179() {
+      return C[179] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 17,
+        [_Location_line]: 386,
+        [_Location_file]: null
+      });
+    },
+    get C180() {
+      return C[180] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 17,
+        [_Location_line]: 390,
+        [_Location_file]: null
+      });
+    },
+    get C181() {
+      return C[181] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 391,
+        [_Location_file]: null
+      });
+    },
+    get C178() {
+      return C[178] = dart.constList([C[179] || CT.C179, C[180] || CT.C180, C[181] || CT.C181], T._LocationL());
+    },
+    get C177() {
+      return C[177] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[178] || CT.C178,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 385,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C184() {
+      return C[184] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 382,
+        [_Location_file]: null
+      });
+    },
+    get C185() {
+      return C[185] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 383,
+        [_Location_file]: null
+      });
+    },
+    get C186() {
+      return C[186] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 15,
+        [_Location_line]: 384,
+        [_Location_file]: null
+      });
+    },
+    get C187() {
+      return C[187] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 385,
+        [_Location_file]: null
+      });
+    },
+    get C183() {
+      return C[183] = dart.constList([C[184] || CT.C184, C[185] || CT.C185, C[186] || CT.C186, C[187] || CT.C187], T._LocationL());
+    },
+    get C182() {
+      return C[182] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[183] || CT.C183,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 381,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C188() {
+      return C[188] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 402,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C191() {
+      return C[191] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 402,
+        [_Location_file]: null
+      });
+    },
+    get C190() {
+      return C[190] = dart.constList([C[191] || CT.C191], T._LocationL());
+    },
+    get C189() {
+      return C[189] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[190] || CT.C190,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 401,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C194() {
+      return C[194] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 9,
+        [_Location_line]: 295,
+        [_Location_file]: null
+      });
+    },
+    get C195() {
+      return C[195] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 9,
+        [_Location_line]: 296,
+        [_Location_file]: null
+      });
+    },
+    get C196() {
+      return C[196] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 297,
+        [_Location_file]: null
+      });
+    },
+    get C193() {
+      return C[193] = dart.constList([C[194] || CT.C194, C[195] || CT.C195, C[196] || CT.C196], T._LocationL());
+    },
+    get C192() {
+      return C[192] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[193] || CT.C193,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 294,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C199() {
+      return C[199] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "aspectRatio",
+        [_Location_column]: 7,
+        [_Location_line]: 293,
+        [_Location_file]: null
+      });
+    },
+    get C200() {
+      return C[200] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 294,
+        [_Location_file]: null
+      });
+    },
+    get C198() {
+      return C[198] = dart.constList([C[199] || CT.C199, C[200] || CT.C200], T._LocationL());
+    },
+    get C197() {
+      return C[197] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[198] || CT.C198,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 292,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C203() {
+      return C[203] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 50,
+        [_Location_line]: 418,
+        [_Location_file]: null
+      });
+    },
+    get C202() {
+      return C[202] = dart.constList([C[203] || CT.C203], T._LocationL());
+    },
+    get C201() {
+      return C[201] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[202] || CT.C202,
+        [_Location_name]: null,
+        [_Location_column]: 40,
+        [_Location_line]: 418,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C206() {
+      return C[206] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 52,
+        [_Location_line]: 428,
+        [_Location_file]: null
+      });
+    },
+    get C205() {
+      return C[205] = dart.constList([C[206] || CT.C206], T._LocationL());
+    },
+    get C204() {
+      return C[204] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[205] || CT.C205,
+        [_Location_name]: null,
+        [_Location_column]: 42,
+        [_Location_line]: 428,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C207() {
+      return C[207] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[138] || CT.C138,
+        [_Location_name]: null,
+        [_Location_column]: 45,
+        [_Location_line]: 429,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C210() {
+      return C[210] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "src",
+        [_Location_column]: 25,
+        [_Location_line]: 420,
+        [_Location_file]: null
+      });
+    },
+    get C211() {
+      return C[211] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 11,
+        [_Location_line]: 426,
+        [_Location_file]: null
+      });
+    },
+    get C212() {
+      return C[212] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "loadingBuilder",
+        [_Location_column]: 11,
+        [_Location_line]: 427,
+        [_Location_file]: null
+      });
+    },
+    get C213() {
+      return C[213] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "errorBuilder",
+        [_Location_column]: 11,
+        [_Location_line]: 429,
+        [_Location_file]: null
+      });
+    },
+    get C209() {
+      return C[209] = dart.constList([C[210] || CT.C210, C[211] || CT.C211, C[212] || CT.C212, C[213] || CT.C213], T._LocationL());
+    },
+    get C208() {
+      return C[208] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[209] || CT.C209,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 419,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    },
+    get C216() {
+      return C[216] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "src",
+        [_Location_column]: 23,
+        [_Location_line]: 411,
+        [_Location_file]: null
+      });
+    },
+    get C217() {
+      return C[217] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 9,
+        [_Location_line]: 416,
+        [_Location_file]: null
+      });
+    },
+    get C218() {
+      return C[218] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "loadingBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 417,
+        [_Location_file]: null
+      });
+    },
+    get C219() {
+      return C[219] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "errorBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 419,
+        [_Location_file]: null
+      });
+    },
+    get C215() {
+      return C[215] = dart.constList([C[216] || CT.C216, C[217] || CT.C217, C[218] || CT.C218, C[219] || CT.C219], T._LocationL());
+    },
+    get C214() {
+      return C[214] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[215] || CT.C215,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 410,
+        [_Location_file]: "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart"
+      });
+    }
+  }, false);
+  var C = Array(220).fill(void 0);
+  var I = [
+    "package:youtube_player_flutter/src/widgets/youtube_player_builder.dart",
+    "file:///C:/flutter/flutter_windows_2.0.1-stable/flutter/.pub-cache/hosted/pub.dartlang.org/youtube_player_flutter-7.0.0+7/lib/src/player/youtube_player.dart",
+    "package:youtube_player_flutter/src/player/youtube_player.dart"
+  ];
+  var player$ = dart.privateName(youtube_player_builder, "YoutubePlayerBuilder.player");
+  var builder$ = dart.privateName(youtube_player_builder, "YoutubePlayerBuilder.builder");
+  var onEnterFullScreen$ = dart.privateName(youtube_player_builder, "YoutubePlayerBuilder.onEnterFullScreen");
+  var onExitFullScreen$ = dart.privateName(youtube_player_builder, "YoutubePlayerBuilder.onExitFullScreen");
+  youtube_player_builder.YoutubePlayerBuilder = class YoutubePlayerBuilder extends framework.StatefulWidget {
+    get player() {
+      return this[player$];
+    }
+    set player(value) {
+      super.player = value;
+    }
+    get builder() {
+      return this[builder$];
+    }
+    set builder(value) {
+      super.builder = value;
+    }
+    get onEnterFullScreen() {
+      return this[onEnterFullScreen$];
+    }
+    set onEnterFullScreen(value) {
+      super.onEnterFullScreen = value;
+    }
+    get onExitFullScreen() {
+      return this[onExitFullScreen$];
+    }
+    set onExitFullScreen(value) {
+      super.onExitFullScreen = value;
+    }
+    createState() {
+      return new youtube_player_builder._YoutubePlayerBuilderState.new();
+    }
+  };
+  (youtube_player_builder.YoutubePlayerBuilder.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let player = opts && 'player' in opts ? opts.player : null;
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    let onEnterFullScreen = opts && 'onEnterFullScreen' in opts ? opts.onEnterFullScreen : null;
+    let onExitFullScreen = opts && 'onExitFullScreen' in opts ? opts.onExitFullScreen : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[player$] = player;
+    this[builder$] = builder;
+    this[onEnterFullScreen$] = onEnterFullScreen;
+    this[onExitFullScreen$] = onExitFullScreen;
+    youtube_player_builder.YoutubePlayerBuilder.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = youtube_player_builder.YoutubePlayerBuilder.prototype;
+  dart.addTypeTests(youtube_player_builder.YoutubePlayerBuilder);
+  dart.addTypeCaches(youtube_player_builder.YoutubePlayerBuilder);
+  dart.setMethodSignature(youtube_player_builder.YoutubePlayerBuilder, () => ({
+    __proto__: dart.getMethods(youtube_player_builder.YoutubePlayerBuilder.__proto__),
+    createState: dart.fnType(dart.legacy(youtube_player_builder._YoutubePlayerBuilderState), [])
+  }));
+  dart.setLibraryUri(youtube_player_builder.YoutubePlayerBuilder, I[0]);
+  dart.setFieldSignature(youtube_player_builder.YoutubePlayerBuilder, () => ({
+    __proto__: dart.getFields(youtube_player_builder.YoutubePlayerBuilder.__proto__),
+    player: dart.finalFieldType(dart.legacy(youtube_player.YoutubePlayer)),
+    builder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(framework.Widget)]))),
+    onEnterFullScreen: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, []))),
+    onExitFullScreen: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, [])))
+  }));
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const State_WidgetsBindingObserver$36 = class State_WidgetsBindingObserver extends framework.State$(dart.legacy(youtube_player_builder.YoutubePlayerBuilder)) {};
+  (State_WidgetsBindingObserver$36.new = function() {
+    State_WidgetsBindingObserver$36.__proto__.new.call(this);
+  }).prototype = State_WidgetsBindingObserver$36.prototype;
+  dart.applyMixin(State_WidgetsBindingObserver$36, binding.WidgetsBindingObserver);
+  youtube_player_builder._YoutubePlayerBuilderState = class _YoutubePlayerBuilderState extends State_WidgetsBindingObserver$36 {
+    initState() {
+      super.initState();
+      binding.WidgetsBinding.instance.addObserver(this);
+    }
+    dispose() {
+      binding.WidgetsBinding.instance.removeObserver(this);
+      super.dispose();
+    }
+    didChangeMetrics() {
+      let physicalSize = binding$.SchedulerBinding.instance.window.physicalSize;
+      let controller = this.widget.player.controller;
+      if (dart.notNull(physicalSize.width) > dart.notNull(physicalSize.height)) {
+        controller.updateValue(controller.value.copyWith({isFullScreen: true}));
+        system_chrome.SystemChrome.setEnabledSystemUIOverlays(T.JSArrayOfSystemUiOverlayL().of([]));
+        if (this.widget.onEnterFullScreen != null) this.widget.onEnterFullScreen();
+      } else {
+        controller.updateValue(controller.value.copyWith({isFullScreen: false}));
+        system_chrome.SystemChrome.setEnabledSystemUIOverlays(system_chrome.SystemUiOverlay.values);
+        if (this.widget.onExitFullScreen != null) this.widget.onExitFullScreen();
+      }
+      super.didChangeMetrics();
+    }
+    build(context) {
+      let t2, t1, t0;
+      let _player = new container.Container.new({key: this.playerKey, child: new will_pop_scope.WillPopScope.new({onWillPop: dart.fn(() => async.async(T.boolL(), (function*() {
+            let controller = this.widget.player.controller;
+            if (dart.test(controller.value.isFullScreen)) {
+              this.widget.player.controller.toggleFullScreenMode();
+              return false;
+            }
+            return true;
+          }).bind(this)), T.VoidToFutureLOfboolL()), child: this.widget.player, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4});
+      let child = (t0 = this.widget, t1 = context, t2 = _player, t0.builder(t1, t2));
+      return new orientation_builder.OrientationBuilder.new({builder: dart.fn((context, orientation) => orientation == media_query.Orientation.portrait ? child : _player, T.BuildContextLAndOrientationLToWidgetL()), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8});
+    }
+  };
+  (youtube_player_builder._YoutubePlayerBuilderState.new = function() {
+    this.playerKey = T.GlobalKeyOfStateLOfStatefulWidgetL().new();
+    youtube_player_builder._YoutubePlayerBuilderState.__proto__.new.call(this);
+    ;
+  }).prototype = youtube_player_builder._YoutubePlayerBuilderState.prototype;
+  dart.addTypeTests(youtube_player_builder._YoutubePlayerBuilderState);
+  dart.addTypeCaches(youtube_player_builder._YoutubePlayerBuilderState);
+  dart.setMethodSignature(youtube_player_builder._YoutubePlayerBuilderState, () => ({
+    __proto__: dart.getMethods(youtube_player_builder._YoutubePlayerBuilderState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(youtube_player_builder._YoutubePlayerBuilderState, I[0]);
+  dart.setFieldSignature(youtube_player_builder._YoutubePlayerBuilderState, () => ({
+    __proto__: dart.getFields(youtube_player_builder._YoutubePlayerBuilderState.__proto__),
+    playerKey: dart.finalFieldType(dart.legacy(framework.GlobalKey$(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))))))
+  }));
+  var key$ = dart.privateName(youtube_player, "YoutubePlayer.key");
+  var controller$ = dart.privateName(youtube_player, "YoutubePlayer.controller");
+  var width$ = dart.privateName(youtube_player, "YoutubePlayer.width");
+  var aspectRatio$ = dart.privateName(youtube_player, "YoutubePlayer.aspectRatio");
+  var controlsTimeOut$ = dart.privateName(youtube_player, "YoutubePlayer.controlsTimeOut");
+  var bufferIndicator$ = dart.privateName(youtube_player, "YoutubePlayer.bufferIndicator");
+  var progressColors$ = dart.privateName(youtube_player, "YoutubePlayer.progressColors");
+  var progressIndicatorColor$ = dart.privateName(youtube_player, "YoutubePlayer.progressIndicatorColor");
+  var onReady$ = dart.privateName(youtube_player, "YoutubePlayer.onReady");
+  var onEnded$ = dart.privateName(youtube_player, "YoutubePlayer.onEnded");
+  var liveUIColor$ = dart.privateName(youtube_player, "YoutubePlayer.liveUIColor");
+  var topActions$ = dart.privateName(youtube_player, "YoutubePlayer.topActions");
+  var bottomActions$ = dart.privateName(youtube_player, "YoutubePlayer.bottomActions");
+  var actionsPadding$ = dart.privateName(youtube_player, "YoutubePlayer.actionsPadding");
+  var thumbnail$ = dart.privateName(youtube_player, "YoutubePlayer.thumbnail");
+  var showVideoProgressIndicator$ = dart.privateName(youtube_player, "YoutubePlayer.showVideoProgressIndicator");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var ColorSwatch__swatch = dart.privateName(colors$, "ColorSwatch._swatch");
+  var ProgressBarColors_handleColor = dart.privateName(progress_bar, "ProgressBarColors.handleColor");
+  var ProgressBarColors_bufferedColor = dart.privateName(progress_bar, "ProgressBarColors.bufferedColor");
+  var ProgressBarColors_playedColor = dart.privateName(progress_bar, "ProgressBarColors.playedColor");
+  var ProgressBarColors_backgroundColor = dart.privateName(progress_bar, "ProgressBarColors.backgroundColor");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  youtube_player.YoutubePlayer = class YoutubePlayer extends framework.StatefulWidget {
+    get key() {
+      return this[key$];
+    }
+    set key(value) {
+      super.key = value;
+    }
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get aspectRatio() {
+      return this[aspectRatio$];
+    }
+    set aspectRatio(value) {
+      super.aspectRatio = value;
+    }
+    get controlsTimeOut() {
+      return this[controlsTimeOut$];
+    }
+    set controlsTimeOut(value) {
+      super.controlsTimeOut = value;
+    }
+    get bufferIndicator() {
+      return this[bufferIndicator$];
+    }
+    set bufferIndicator(value) {
+      super.bufferIndicator = value;
+    }
+    get progressColors() {
+      return this[progressColors$];
+    }
+    set progressColors(value) {
+      super.progressColors = value;
+    }
+    get progressIndicatorColor() {
+      return this[progressIndicatorColor$];
+    }
+    set progressIndicatorColor(value) {
+      super.progressIndicatorColor = value;
+    }
+    get onReady() {
+      return this[onReady$];
+    }
+    set onReady(value) {
+      super.onReady = value;
+    }
+    get onEnded() {
+      return this[onEnded$];
+    }
+    set onEnded(value) {
+      super.onEnded = value;
+    }
+    get liveUIColor() {
+      return this[liveUIColor$];
+    }
+    set liveUIColor(value) {
+      super.liveUIColor = value;
+    }
+    get topActions() {
+      return this[topActions$];
+    }
+    set topActions(value) {
+      super.topActions = value;
+    }
+    get bottomActions() {
+      return this[bottomActions$];
+    }
+    set bottomActions(value) {
+      super.bottomActions = value;
+    }
+    get actionsPadding() {
+      return this[actionsPadding$];
+    }
+    set actionsPadding(value) {
+      super.actionsPadding = value;
+    }
+    get thumbnail() {
+      return this[thumbnail$];
+    }
+    set thumbnail(value) {
+      super.thumbnail = value;
+    }
+    get showVideoProgressIndicator() {
+      return this[showVideoProgressIndicator$];
+    }
+    set showVideoProgressIndicator(value) {
+      super.showVideoProgressIndicator = value;
+    }
+    static convertUrlToId(url, opts) {
+      let t0, t0$;
+      let trimWhitespaces = opts && 'trimWhitespaces' in opts ? opts.trimWhitespaces : true;
+      if (!dart.test((t0$ = (t0 = url, t0 == null ? null : t0[$isNotEmpty]), t0$ == null ? false : t0$))) dart.assertFailed("Url cannot be empty", I[1], 159, 12, "url?.isNotEmpty ?? false");
+      if (!url[$contains]("http") && url.length === 11) return url;
+      if (dart.test(trimWhitespaces)) url = url[$trim]();
+      for (let exp of T.JSArrayOfRegExpL().of([core.RegExp.new("^https:\\/\\/(?:www\\.|m\\.)?youtube\\.com\\/watch\\?v=([_\\-a-zA-Z0-9]{11}).*$"), core.RegExp.new("^https:\\/\\/(?:www\\.|m\\.)?youtube(?:-nocookie)?\\.com\\/embed\\/([_\\-a-zA-Z0-9]{11}).*$"), core.RegExp.new("^https:\\/\\/youtu\\.be\\/([_\\-a-zA-Z0-9]{11}).*$")])) {
+        let match = exp.firstMatch(url);
+        if (match != null && dart.notNull(match.groupCount) >= 1) return match.group(1);
+      }
+      return null;
+    }
+    static getThumbnail(opts) {
+      let videoId = opts && 'videoId' in opts ? opts.videoId : null;
+      let quality = opts && 'quality' in opts ? opts.quality : "sddefault";
+      let webp = opts && 'webp' in opts ? opts.webp : true;
+      return dart.test(webp) ? "https://i3.ytimg.com/vi_webp/" + dart.str(videoId) + "/" + dart.str(quality) + ".webp" : "https://i3.ytimg.com/vi/" + dart.str(videoId) + "/" + dart.str(quality) + ".jpg";
+    }
+    createState() {
+      return new youtube_player._YoutubePlayerState.new();
+    }
+  };
+  (youtube_player.YoutubePlayer.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let width = opts && 'width' in opts ? opts.width : null;
+    let aspectRatio = opts && 'aspectRatio' in opts ? opts.aspectRatio : 1.7777777777777777;
+    let controlsTimeOut = opts && 'controlsTimeOut' in opts ? opts.controlsTimeOut : C[11] || CT.C11;
+    let bufferIndicator = opts && 'bufferIndicator' in opts ? opts.bufferIndicator : null;
+    let progressIndicatorColor = opts && 'progressIndicatorColor' in opts ? opts.progressIndicatorColor : C[12] || CT.C12;
+    let progressColors = opts && 'progressColors' in opts ? opts.progressColors : C[24] || CT.C24;
+    let onReady = opts && 'onReady' in opts ? opts.onReady : null;
+    let onEnded = opts && 'onEnded' in opts ? opts.onEnded : null;
+    let liveUIColor = opts && 'liveUIColor' in opts ? opts.liveUIColor : C[12] || CT.C12;
+    let topActions = opts && 'topActions' in opts ? opts.topActions : null;
+    let bottomActions = opts && 'bottomActions' in opts ? opts.bottomActions : null;
+    let actionsPadding = opts && 'actionsPadding' in opts ? opts.actionsPadding : C[25] || CT.C25;
+    let thumbnail = opts && 'thumbnail' in opts ? opts.thumbnail : null;
+    let showVideoProgressIndicator = opts && 'showVideoProgressIndicator' in opts ? opts.showVideoProgressIndicator : false;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[key$] = key;
+    this[controller$] = controller;
+    this[width$] = width;
+    this[aspectRatio$] = aspectRatio;
+    this[controlsTimeOut$] = controlsTimeOut;
+    this[bufferIndicator$] = bufferIndicator;
+    this[progressIndicatorColor$] = progressIndicatorColor;
+    this[progressColors$] = progressColors;
+    this[onReady$] = onReady;
+    this[onEnded$] = onEnded;
+    this[liveUIColor$] = liveUIColor;
+    this[topActions$] = topActions;
+    this[bottomActions$] = bottomActions;
+    this[actionsPadding$] = actionsPadding;
+    this[thumbnail$] = thumbnail;
+    this[showVideoProgressIndicator$] = showVideoProgressIndicator;
+    youtube_player.YoutubePlayer.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = youtube_player.YoutubePlayer.prototype;
+  dart.addTypeTests(youtube_player.YoutubePlayer);
+  dart.addTypeCaches(youtube_player.YoutubePlayer);
+  dart.setMethodSignature(youtube_player.YoutubePlayer, () => ({
+    __proto__: dart.getMethods(youtube_player.YoutubePlayer.__proto__),
+    createState: dart.fnType(dart.legacy(youtube_player._YoutubePlayerState), [])
+  }));
+  dart.setLibraryUri(youtube_player.YoutubePlayer, I[2]);
+  dart.setFieldSignature(youtube_player.YoutubePlayer, () => ({
+    __proto__: dart.getFields(youtube_player.YoutubePlayer.__proto__),
+    key: dart.finalFieldType(dart.legacy(key.Key)),
+    controller: dart.finalFieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    width: dart.finalFieldType(dart.legacy(core.double)),
+    aspectRatio: dart.finalFieldType(dart.legacy(core.double)),
+    controlsTimeOut: dart.finalFieldType(dart.legacy(core.Duration)),
+    bufferIndicator: dart.finalFieldType(dart.legacy(framework.Widget)),
+    progressColors: dart.finalFieldType(dart.legacy(progress_bar.ProgressBarColors)),
+    progressIndicatorColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    onReady: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, []))),
+    onEnded: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, [dart.legacy(youtube_meta_data.YoutubeMetaData)]))),
+    liveUIColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    topActions: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(framework.Widget)))),
+    bottomActions: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(framework.Widget)))),
+    actionsPadding: dart.finalFieldType(dart.legacy(edge_insets.EdgeInsetsGeometry)),
+    thumbnail: dart.finalFieldType(dart.legacy(framework.Widget)),
+    showVideoProgressIndicator: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  var _aspectRatio = dart.privateName(youtube_player, "_aspectRatio");
+  var _initialLoad = dart.privateName(youtube_player, "_initialLoad");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Icon_textDirection = dart.privateName(icon, "Icon.textDirection");
+  var Icon_semanticLabel = dart.privateName(icon, "Icon.semanticLabel");
+  var Icon_color = dart.privateName(icon, "Icon.color");
+  var Icon_size = dart.privateName(icon, "Icon.size");
+  var IconData_matchTextDirection = dart.privateName(icon_data, "IconData.matchTextDirection");
+  var IconData_fontPackage = dart.privateName(icon_data, "IconData.fontPackage");
+  var IconData_fontFamily = dart.privateName(icon_data, "IconData.fontFamily");
+  var IconData_codePoint = dart.privateName(icon_data, "IconData.codePoint");
+  var Icon_icon = dart.privateName(icon, "Icon.icon");
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var FontWeight_index = dart.privateName(ui, "FontWeight.index");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  var _buildPlayer = dart.privateName(youtube_player, "_buildPlayer");
+  var _thumbnail = dart.privateName(youtube_player, "_thumbnail");
+  var PlaybackSpeedButton_icon = dart.privateName(playback_speed_button, "PlaybackSpeedButton.icon");
+  var PlaybackSpeedButton_controller = dart.privateName(playback_speed_button, "PlaybackSpeedButton.controller");
+  youtube_player._YoutubePlayerState = class _YoutubePlayerState extends framework.State$(dart.legacy(youtube_player.YoutubePlayer)) {
+    initState() {
+      let t0;
+      super.initState();
+      this.controller = (t0 = this.widget.controller, (() => {
+        t0.addListener(dart.bind(this, 'listener'));
+        return t0;
+      })());
+      this[_aspectRatio] = this.widget.aspectRatio;
+    }
+    didUpdateWidget(oldWidget) {
+      let t0, t0$;
+      T.YoutubePlayerL().as(oldWidget);
+      super.didUpdateWidget(oldWidget);
+      t0 = oldWidget.controller;
+      t0 == null ? null : t0.removeListener(dart.bind(this, 'listener'));
+      t0$ = this.widget.controller;
+      t0$ == null ? null : t0$.addListener(dart.bind(this, 'listener'));
+    }
+    listener() {
+      return async.async(dart.void, (function* listener() {
+        if (dart.test(this.controller.value.isReady) && dart.test(this[_initialLoad])) {
+          this[_initialLoad] = false;
+          if (dart.test(this.controller.flags.autoPlay)) this.controller.play();
+          if (dart.test(this.controller.flags.mute)) this.controller.mute();
+          if (this.widget.onReady != null) this.widget.onReady();
+          if (dart.test(this.controller.flags.controlsVisibleAtStart)) {
+            this.controller.updateValue(this.controller.value.copyWith({isControlsVisible: true}));
+          }
+        }
+        if (dart.test(this.mounted)) this.setState(dart.fn(() => {
+        }, T.VoidToNull()));
+      }).bind(this));
+    }
+    dispose() {
+      this.controller.removeListener(dart.bind(this, 'listener'));
+      super.dispose();
+    }
+    build(context) {
+      let t0, t0$;
+      return new material.Material.new({elevation: 0.0, color: colors.Colors.black, child: new youtube_player_controller.InheritedYoutubePlayer.new({controller: this.controller, child: new container.Container.new({color: colors.Colors.black, width: (t0 = this.widget.width, t0 == null ? media_query.MediaQuery.of(context).size.width : t0), child: this[_buildPlayer]({errorWidget: new container.Container.new({color: colors.Colors.black87, padding: C[26] || CT.C26, child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new basic.Row.new({children: T.JSArrayOfWidgetL().of([C[27] || CT.C27, C[34] || CT.C34, new basic.Expanded.new({child: new text.Text.new(errors.errorString(this.controller.value.errorCode, {videoId: (t0$ = this.controller.metadata.videoId, t0$ == null ? this.controller.initialVideoId : t0$)}), {style: C[38] || CT.C38, $creationLocationd_0dea112b090073317d4: C[40] || CT.C40}), $creationLocationd_0dea112b090073317d4: C[44] || CT.C44})]), $creationLocationd_0dea112b090073317d4: C[47] || CT.C47}), C[50] || CT.C50, new text.Text.new("Error Code: " + dart.str(this.controller.value.errorCode), {style: C[54] || CT.C54, $creationLocationd_0dea112b090073317d4: C[69] || CT.C69})]), $creationLocationd_0dea112b090073317d4: C[73] || CT.C73}), $creationLocationd_0dea112b090073317d4: C[78] || CT.C78})}), $creationLocationd_0dea112b090073317d4: C[83] || CT.C83}), $creationLocationd_0dea112b090073317d4: C[88] || CT.C88}), $creationLocationd_0dea112b090073317d4: C[92] || CT.C92});
+    }
+    [_buildPlayer](opts) {
+      let t1, t1$, t1$0;
+      let errorWidget = opts && 'errorWidget' in opts ? opts.errorWidget : null;
+      return new basic.AspectRatio.new({aspectRatio: this[_aspectRatio], child: new basic.Stack.new({fit: stack.StackFit.expand, overflow: stack.Overflow.visible, children: (() => {
+            let t0 = T.JSArrayOfWidgetL().of([new basic.Transform.scale({scale: dart.test(this.controller.value.isFullScreen) ? 1 / dart.notNull(this[_aspectRatio]) * dart.notNull(media_query.MediaQuery.of(this.context).size.width) / dart.notNull(media_query.MediaQuery.of(this.context).size.height) : 1.0, child: new raw_youtube_player.RawYoutubePlayer.new({key: this.widget.key, onEnded: dart.fn(metaData => {
+                    let t2, t1;
+                    if (dart.test(this.controller.flags.loop)) {
+                      this.controller.load(this.controller.metadata.videoId, {startAt: this.controller.flags.startAt, endAt: this.controller.flags.endAt});
+                    }
+                    if (this.widget.onEnded != null) {
+                      t1 = this.widget;
+                      t2 = metaData;
+                      t1.onEnded(t2);
+                    }
+                  }, T.YoutubeMetaDataLToNull()), $creationLocationd_0dea112b090073317d4: C[97] || CT.C97}), $creationLocationd_0dea112b090073317d4: C[101] || CT.C101})]);
+            if (!dart.test(this.controller.flags.hideThumbnail)) t0[$add](new implicit_animations.AnimatedOpacity.new({opacity: dart.test(this.controller.value.isPlaying) ? 0.0 : 1.0, duration: C[105] || CT.C105, child: (t1 = this.widget.thumbnail, t1 == null ? this[_thumbnail] : t1), $creationLocationd_0dea112b090073317d4: C[106] || CT.C106}));
+            if (!dart.test(this.controller.value.isFullScreen) && !dart.test(this.controller.flags.hideControls) && dart.test(this.controller.value.position['>'](C[111] || CT.C111)) && !dart.test(this.controller.value.isControlsVisible) && dart.test(this.widget.showVideoProgressIndicator) && !dart.test(this.controller.flags.isLive)) t0[$add](new basic.Positioned.new({bottom: -7.0, left: -7.0, right: -7.0, child: new basic.IgnorePointer.new({ignoring: true, child: new progress_bar.ProgressBar.new({colors: this.widget.progressColors.copyWith({handleColor: colors.Colors.transparent}), $creationLocationd_0dea112b090073317d4: C[112] || CT.C112}), $creationLocationd_0dea112b090073317d4: C[115] || CT.C115}), $creationLocationd_0dea112b090073317d4: C[119] || CT.C119}));
+            if (!dart.test(this.controller.flags.hideControls)) t0[$addAll](T.JSArrayOfWidgetL().of([new touch_shutter.TouchShutter.new({disableDragSeek: this.controller.flags.disableDragSeek, timeOut: this.widget.controlsTimeOut, $creationLocationd_0dea112b090073317d4: C[125] || CT.C125}), new basic.Positioned.new({bottom: 0.0, left: 0.0, right: 0.0, child: new implicit_animations.AnimatedOpacity.new({opacity: !dart.test(this.controller.flags.hideControls) && dart.test(this.controller.value.isControlsVisible) ? 1.0 : 0.0, duration: C[105] || CT.C105, child: dart.test(this.controller.flags.isLive) ? new live_bottom_bar.LiveBottomBar.new({liveUIColor: this.widget.liveUIColor, $creationLocationd_0dea112b090073317d4: C[129] || CT.C129}) : new basic.Padding.new({padding: this.widget.bottomActions == null ? C[132] || CT.C132 : this.widget.actionsPadding, child: new basic.Row.new({children: (t1$ = this.widget.bottomActions, t1$ == null ? T.JSArrayOfWidgetL().of([C[133] || CT.C133, new duration_widgets.CurrentPosition.new({$creationLocationd_0dea112b090073317d4: C[137] || CT.C137}), C[139] || CT.C139, new progress_bar.ProgressBar.new({isExpanded: true, colors: this.widget.progressColors, $creationLocationd_0dea112b090073317d4: C[143] || CT.C143}), new duration_widgets.RemainingDuration.new({$creationLocationd_0dea112b090073317d4: C[147] || CT.C147}), C[148] || CT.C148, new full_screen_button.FullScreenButton.new({$creationLocationd_0dea112b090073317d4: C[150] || CT.C150})]) : t1$), $creationLocationd_0dea112b090073317d4: C[151] || CT.C151}), $creationLocationd_0dea112b090073317d4: C[154] || CT.C154}), $creationLocationd_0dea112b090073317d4: C[158] || CT.C158}), $creationLocationd_0dea112b090073317d4: C[163] || CT.C163}), new basic.Positioned.new({top: 0.0, left: 0.0, right: 0.0, child: new implicit_animations.AnimatedOpacity.new({opacity: !dart.test(this.controller.flags.hideControls) && dart.test(this.controller.value.isControlsVisible) ? 1.0 : 0.0, duration: C[105] || CT.C105, child: new basic.Padding.new({padding: this.widget.actionsPadding, child: new basic.Row.new({children: (t1$0 = this.widget.topActions, t1$0 == null ? T.JSArrayOfWidgetL().of([new container.Container.new({$creationLocationd_0dea112b090073317d4: C[169] || CT.C169})]) : t1$0), $creationLocationd_0dea112b090073317d4: C[170] || CT.C170}), $creationLocationd_0dea112b090073317d4: C[173] || CT.C173}), $creationLocationd_0dea112b090073317d4: C[177] || CT.C177}), $creationLocationd_0dea112b090073317d4: C[182] || CT.C182})]));
+            if (!dart.test(this.controller.flags.hideControls)) t0[$add](new basic.Center.new({child: new play_pause_button.PlayPauseButton.new({$creationLocationd_0dea112b090073317d4: C[188] || CT.C188}), $creationLocationd_0dea112b090073317d4: C[189] || CT.C189}));
+            if (dart.test(this.controller.value.hasError)) t0[$add](errorWidget);
+            return t0;
+          })(), $creationLocationd_0dea112b090073317d4: C[192] || CT.C192}), $creationLocationd_0dea112b090073317d4: C[197] || CT.C197});
+    }
+    get [_thumbnail]() {
+      return new image.Image.network(youtube_player.YoutubePlayer.getThumbnail({videoId: this.controller.metadata.videoId[$isEmpty] ? this.controller.initialVideoId : this.controller.metadata.videoId}), {fit: box_fit.BoxFit.cover, loadingBuilder: dart.fn((_, child, progress) => progress == null ? child : new container.Container.new({color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[201] || CT.C201}), T.BuildContextLAndWidgetLAndImageChunkEventLToWidgetL()), errorBuilder: dart.fn((context, _, __) => new image.Image.network(youtube_player.YoutubePlayer.getThumbnail({videoId: this.controller.metadata.videoId[$isEmpty] ? this.controller.initialVideoId : this.controller.metadata.videoId, webp: false}), {fit: box_fit.BoxFit.cover, loadingBuilder: dart.fn((_, child, progress) => progress == null ? child : new container.Container.new({color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[204] || CT.C204}), T.BuildContextLAndWidgetLAndImageChunkEventLToWidgetL()), errorBuilder: dart.fn((context, _, __) => new container.Container.new({$creationLocationd_0dea112b090073317d4: C[207] || CT.C207}), T.BuildContextLAndObjectLAndStackTraceLToContainerL()), $creationLocationd_0dea112b090073317d4: C[208] || CT.C208}), T.BuildContextLAndObjectLAndStackTraceLToImageL()), $creationLocationd_0dea112b090073317d4: C[214] || CT.C214});
+    }
+  };
+  (youtube_player._YoutubePlayerState.new = function() {
+    this.controller = null;
+    this[_aspectRatio] = null;
+    this[_initialLoad] = true;
+    youtube_player._YoutubePlayerState.__proto__.new.call(this);
+    ;
+  }).prototype = youtube_player._YoutubePlayerState.prototype;
+  dart.addTypeTests(youtube_player._YoutubePlayerState);
+  dart.addTypeCaches(youtube_player._YoutubePlayerState);
+  dart.setMethodSignature(youtube_player._YoutubePlayerState, () => ({
+    __proto__: dart.getMethods(youtube_player._YoutubePlayerState.__proto__),
+    didUpdateWidget: dart.fnType(dart.void, [dart.legacy(core.Object)]),
+    listener: dart.fnType(dart.void, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_buildPlayer]: dart.fnType(dart.legacy(framework.Widget), [], {errorWidget: dart.legacy(framework.Widget)}, {})
+  }));
+  dart.setGetterSignature(youtube_player._YoutubePlayerState, () => ({
+    __proto__: dart.getGetters(youtube_player._YoutubePlayerState.__proto__),
+    [_thumbnail]: dart.legacy(framework.Widget)
+  }));
+  dart.setLibraryUri(youtube_player._YoutubePlayerState, I[2]);
+  dart.setFieldSignature(youtube_player._YoutubePlayerState, () => ({
+    __proto__: dart.getFields(youtube_player._YoutubePlayerState.__proto__),
+    controller: dart.fieldType(dart.legacy(youtube_player_controller.YoutubePlayerController)),
+    [_aspectRatio]: dart.fieldType(dart.legacy(core.double)),
+    [_initialLoad]: dart.fieldType(dart.legacy(core.bool))
+  }));
+  dart.trackLibraries("packages/youtube_player_flutter/src/widgets/youtube_player_builder.dart", {
+    "package:youtube_player_flutter/src/widgets/youtube_player_builder.dart": youtube_player_builder,
+    "package:youtube_player_flutter/src/widgets/widgets.dart": widgets,
+    "package:youtube_player_flutter/src/player/youtube_player.dart": youtube_player,
+    "package:youtube_player_flutter/youtube_player_flutter.dart": youtube_player_flutter
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["youtube_player_builder.dart","../player/youtube_player.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQsB;;;;;;IAGwB;;;;;;IAGzB;;;;;;IAGA;;;;;;;AAYyB;IAA4B;;;QARlE;QACW;QACA;QACV;QACA;;IAHU;IACA;IACV;IACA;AACF,+EAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;AAYD,MAAX;AACmC,MAA1B,AAAS,4CAAY;IACtC;;AAI8C,MAA7B,AAAS,+CAAe;AACxB,MAAT;IACR;;AAIQ,yBAAgC,AAAS,AAAO;AAChD,uBAAa,AAAO,AAAO;AACjC,UAAuB,aAAnB,AAAa,YAAD,uBAAS,AAAa,YAAD;AACkC,QAArE,AAAW,UAAD,aAAa,AAAW,AAAM,UAAP,+BAA8B;AACpB,QAA9B,sDAA2B;AACxC,YAAI,AAAO,AAAkB,uCAAS,AAAwB,AAAE;;AAEM,QAAtE,AAAW,UAAD,aAAa,AAAW,AAAM,UAAP,+BAA8B;AACA,QAAlD,sDAA2C;AACxD,YAAI,AAAO,AAAiB,sCAAS,AAAuB,AAAE;;AAExC,MAAlB;IACR;UAG0B;;AAClB,oBAAU,kCACT,uBACE,gDACM;AACH,6BAAa,AAAO,AAAO;AACjC,0BAAI,AAAW,AAAM,UAAP;AACmC,cAA/C,AAAO,AAAO,AAAW;AACzB,oBAAO;;AAET,kBAAO;UACR,kDACM,AAAO;AAGZ,wBAAQ,kBAAe,OAAO,OAAE,OAAO,EAAjB;AAC5B,YAAO,0DACI,SAAC,SAAS,gBACf,AAAY,WAAD,IAAgB,mCAAW,KAAK,GAAG,OAAO;IAE7D;;;IAnDgB,iBAAY;;;EAoD9B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IC1CY;;;;;;IAGoB;;;;;;IAOjB;;;;;;IAOA;;;;;;IAOE;;;;;;IAKF;;;;;;IAKW;;;;;;IAKZ;;;;;;IAMO;;;;;;IAO2B;;;;;;IAKlC;;;;;;IAKO;;;;;;IAKA;;;;;;IAOM;;;;;;IAOZ;;;;;;IAOF;;;;;;0BAyByB;;UAAW;AAC7C,sBAAuB,YAAhB,GAAG,eAAH,OAAK,kBAAL,cAAmB,iCAAO;AACjC,WAAK,AAAI,GAAD,YAAU,WAAY,AAAI,AAAO,GAAR,YAAW,IAAK,MAAO,IAAG;AAC3D,oBAAI,eAAe,GAAE,AAAgB,MAAV,AAAI,GAAD;AAE9B,eAAS,MAAO,0BACd,gBACI,oFACJ,gBACI,gGACJ,gBAAO;AAED,oBAAQ,AAAI,GAAD,YAAY,GAAG;AAChC,YAAI,AAAM,KAAD,YAA6B,aAAjB,AAAM,KAAD,gBAAe,GAAG,MAAO,AAAM,MAAD,OAAO;;AAGjE,YAAO;IACT;;UAImB;UACV;UACF;AAEH,2BAAI,IACE,AACF,2CADiC,OAAO,mBAAE,OAAO,cAC/C,AAA+C,sCAArB,OAAO,mBAAE,OAAO;IAAK;;AAGpB;IAAqB;;;QAnDnD;QACU;QACV;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;;IAfA;IACU;IACV;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;AAhBD;;EAiBJ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA8CiB,MAAX;AAC+C,MAArD,wBAAa,AAAO,wBAAA;AAAY,iCAAY;;;AACX,MAAjC,qBAAe,AAAO;IACxB;oBAGmC;;;AACD,MAA1B,sBAAgB,SAAS;AACe,WAA9C,AAAU,SAAD;mBAAC,OAAY,4BAAe;AACG,YAAxC,AAAO;oBAAA,OAAY,0BAAY;IACjC;;AAEa;AACX,sBAAI,AAAW,AAAM,4CAAW;AACV,UAApB,qBAAe;AACf,wBAAI,AAAW,AAAM,iCAAU,AAAW,AAAM;AAChD,wBAAI,AAAW,AAAM,6BAAM,AAAW,AAAM;AAC5C,cAAI,AAAO,AAAQ,6BAAS,AAAc,AAAE;AAC5C,wBAAI,AAAW,AAAM;AAGlB,YAFD,AAAW,4BACT,AAAW,AAAM,mDAA4B;;;AAInD,sBAAI,eAAS,AAAe,cAAN;;MACxB;;;AAIqC,MAAnC,AAAW,yCAAe;AACX,MAAT;IACR;UAG0B;;AACxB,YAAO,uCACM,YACG,4BACP,sEACO,wBACL,oCACS,6BACM,KAAb,AAAO,mBAAA,aAAoB,AAAY,AAAK,0BAAd,OAAO,2BACrC,iCACQ,oCACG,wDAGP,0CACkC,kDACF,yCAC3B,yBACR,6BACY,2DAMR,+BACS,kBACL,mBACE,AAAW,AAAM,4CACoB,MAA5B,AAAW,AAAS,kCAAA,cACzB,AAAW,sQAYzB,kBACE,AAA2C,0BAA5B,AAAW,AAAM;IAalD;;;UAE4B;AAC1B,YAAO,yCACQ,2BACN,0BACS,iCACK,kCACT;8CACE,4CACD,AAAW,AAAM,sCACjB,AAAE,AAAe,AAAqC,iBAAlD,mCAA0B,AAAY,AAAK,0BAAd,yCACrB,AAAY,AAAK,0BAAd,6BAChB,YACC,kDACA,AAAO,0BACH,QAAiB;;AACxB,kCAAI,AAAW,AAAM;AAGe,sBAFlC,AAAW,qBAAK,AAAW,AAAS,4CACvB,AAAW,AAAM,sCACnB,AAAW,AAAM;;AAE9B,wBAAI,AAAO,AAAQ;AACO,2BAAxB;2BAAe,QAAQ;sBAAT;;;AAKtB,2BAAK,AAAW,AAAM,sCACpB,yEACW,AAAW,AAAM,mCAAY,MAAI,0CAElB,KAAjB,AAAO,uBAAA,aAAa;AAE/B,2BAAK,AAAW,AAAM,kDACjB,AAAW,AAAM,iDAClB,AAAW,AAAM,AAAS,sEACzB,AAAW,AAAM,sDAClB,AAAO,sDACN,AAAW,AAAM,+BACpB,2CACU,CAAC,WACH,CAAC,YACA,CAAC,YACD,uCACK,aACH,0CACG,AAAO,AAAe,kDACR;AAK9B,2BAAK,AAAW,AAAM,qCAAiB,qCACrC,qDACmB,AAAW,AAAM,gDACzB,AAAO,0FAElB,kCACU,WACF,YACC,YACA,sDACmC,WAA9B,AAAW,AAAM,iDACnB,AAAW,AAAM,2CACnB,MACA,mDAEC,AAAW,AAAM,gCAClB,oDAA2B,AAAO,uFAClC,gCACW,AAAO,AAAc,wDAExB,AAAO,mCACN,8BAC0B,MAArB,AAAO,2BAAA,cACb,4CAEE,0HAEA,8CACc,cACJ,AAAO,yFAEjB,4HAEA,uWAMpB,+BACO,WACC,YACC,YACA,sDACmC,WAA9B,AAAW,AAAM,iDACnB,AAAW,AAAM,2CACnB,MACA,yCAEC,gCACI,AAAO,mCACT,8BACuB,OAAlB,AAAO,wBAAA,eAAc,yBAAC;AAM1C,2BAAK,AAAW,AAAM,qCACpB,sCACS;AAEX,0BAAI,AAAW,AAAM,iCAAU,oBAAW;;;IAIlD;;AAEyB,YAAM,yBACX,oDACH,AAAW,AAAS,AAAQ,6CAC/B,AAAW,iCACX,AAAW,AAAS,0CAEhB,sCACI,SAAC,GAAG,OAAO,aACvB,AAAS,QAAD,WAAW,KAAK,GAAG,oCAAwB,0JACzC,SAAC,SAAS,GAAG,OAAa,wBACxB,oDACH,AAAW,AAAS,AAAQ,6CAC/B,AAAW,iCACX,AAAW,AAAS,wCACpB,eAEI,sCACI,SAAC,GAAG,OAAO,aACvB,AAAS,QAAD,WAAW,KAAK,GAAG,oCAAwB,0JACzC,SAAC,SAAS,GAAG,OAAO;IAErC;;;IA/OmB;IAEjB;IACF,qBAAe;;;EA6OtB","file":"../../../../../../../../../../packages/youtube_player_flutter/src/widgets/youtube_player_builder.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__youtube_player_builder: youtube_player_builder,
+    src__widgets__widgets: widgets,
+    src__player__youtube_player: youtube_player,
+    youtube_player_flutter: youtube_player_flutter
+  };
+}));
+
+//# sourceMappingURL=youtube_player_builder.dart.lib.js.map
