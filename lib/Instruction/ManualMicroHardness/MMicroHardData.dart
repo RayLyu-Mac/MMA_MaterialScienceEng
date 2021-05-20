@@ -17,23 +17,12 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
-          title: "Tools used for assisting the process",
-          subtitle: "Several useful tools",
-          materialcolor: Colors.blue[400],
-          videoController: YoutubePlayerController(
-            initialVideoId: 'd9L0nf1U8yc',
-            flags: YoutubePlayerFlags(
-              autoPlay: true,
-              mute: false,
-            ),
-          )))
-      ..add(video(
-          title: "Machine Preparation",
+          title: "Calibration I: preparation",
           subtitle:
-              "Set up the temperature(Actual Temp: Top value, Set Point: Bottom value)",
+              "Adjust the load, choose the right indenter and apply preload",
           materialcolor: Colors.amber[300],
           videoController: YoutubePlayerController(
-            initialVideoId: 'mjmuxQAqHZE',
+            initialVideoId: 'm_XPkfJ5Dpg',
             flags: YoutubePlayerFlags(
               autoPlay: true,
               mute: false,
@@ -41,11 +30,11 @@ class video {
           )))
       ..add(
         video(
-            title: "Sample Placement",
-            subtitle: "Wearing all PPE and insert sample into the furnace",
+            title: "Calibration II: Zero the dial and apply major load",
+            subtitle: "Place sample into the holder and adjust the load",
             materialcolor: Colors.amber[400],
             videoController: YoutubePlayerController(
-              initialVideoId: 's5G7AbokcYE',
+              initialVideoId: '8ptfav5a_sY',
               flags: YoutubePlayerFlags(
                 autoPlay: true,
                 mute: false,
@@ -54,11 +43,11 @@ class video {
       )
       ..add(
         video(
-            title: "Operating the furnace door",
-            subtitle: "Make sure don't let the interior of the door facing you",
-            materialcolor: Colors.red[400],
+            title: "Test on flat sample",
+            subtitle: "SOP for flat sample measurement",
+            materialcolor: Colors.pink[400],
             videoController: YoutubePlayerController(
-              initialVideoId: 'fMuzfMrqQag',
+              initialVideoId: '14wU2-1w_4g',
               flags: YoutubePlayerFlags(
                 autoPlay: true,
                 mute: false,
@@ -66,12 +55,22 @@ class video {
             )),
       )
       ..add(video(
-          title: "Removing the sample and place",
-          subtitle:
-              "Turn off the furnace and place the sample on the sand and mark the time",
-          materialcolor: Colors.green[400],
+          title: "Test on round sample",
+          subtitle: "SOP for round sample measurement",
+          materialcolor: Colors.red[400],
           videoController: YoutubePlayerController(
-            initialVideoId: '6trERmdj-rA',
+            initialVideoId: '-pfU2_Rs9qY',
+            flags: YoutubePlayerFlags(
+              autoPlay: true,
+              mute: false,
+            ),
+          )))
+      ..add(video(
+          title: "Finish the Test and Clean Up",
+          subtitle: "Shut down the machine and unload the sample",
+          materialcolor: Colors.green,
+          videoController: YoutubePlayerController(
+            initialVideoId: '4J7MmuzXo2w',
             flags: YoutubePlayerFlags(
               autoPlay: true,
               mute: false,

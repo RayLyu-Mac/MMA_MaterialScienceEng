@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/user_note.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
+import 'package:mma_mse/user_note.dart';
+import '../functionButtonMode.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
+import 'package:mma_mse/Instruction/ManualMicroHardness/MMicroHardMain.dart';
 
-class DigitalRWMain extends StatefulWidget {
-  DigitalRWMain(
-      {Key key,
-      @optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.location})
-      : super(key: key);
+class ManualMicroHardness extends StatefulWidget {
   final String location;
   final String emailTo;
+  ManualMicroHardness(
+      {Key key,
+      @optionalTypeArgs this.location,
+      @optionalTypeArgs this.emailTo})
+      : super(key: key);
+
   @override
-  _DigitalRWMainState createState() => _DigitalRWMainState();
+  _ManualMicroHardnessState createState() => _ManualMicroHardnessState();
 }
 
-class _DigitalRWMainState extends State<DigitalRWMain> {
+class _ManualMicroHardnessState extends State<ManualMicroHardness> {
   double _screenWidth;
   double _screenH;
 
@@ -33,7 +33,7 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Digital Rockwell Machine"),
+        title: Text("Manual Micro-Hardness Tester"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
@@ -54,7 +54,7 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 2.2, height: 280),
                   child: Text(
-                    'A microscope that can observe uneven surfaces and 3D objects with clear images thanks to its large depth of field and long observation distance. Together with a model that uses a full control system to provide high-resolution observation that rivals an SEM, this lineup includes entry models equipped with frequently used functions. Dedicated lenses that bring out the best performance of microscopes are also available.',
+                    'Used to measure the relative toughness of a material, more specifically, the energy absorbed by a standard notched specimen while breaking under an impact load. Has been used as an economical quality control method to determine the notch sensitivity. The standard size for specimen: 55 mm *10 mm* 10mm, having a notch machined across one of the larger dimensions.',
                     style: TextStyle(
                         fontSize: _screenH / 55, fontWeight: FontWeight.bold),
                   )),
@@ -69,41 +69,44 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
               ),
             ),
             functionButtonMode(
-                top: _screenH / 1.56,
-                left: _screenWidth / 12,
-                buttonName: "Instruction",
-                warnV: "gPepaJjjSRg",
-                pageTo: DigiRWInstr()),
+              top: _screenH / 1.56,
+              left: _screenWidth / 12,
+              buttonName: "Instruction",
+              pageTo: ManualMicHardnessInstru(),
+              warnV: "t-4WN785oxM",
+            ),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
-              buttonName: "Schedulling",
-              url: _launchURL,
+              buttonName: "Theory",
+              pageTo: tensile_test_bg(),
             ),
             functionButtonMode(
-                top: _screenH / 1.8,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Theory",
-                pageTo: icp_instruction()),
+              top: _screenH / 1.8,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Result",
+              pageTo: tensile_test_bg(),
+            ),
             functionButtonMode(
-                top: _screenH / 1.56,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Manager",
-                pageTo: EmailContent(
+              top: _screenH / 1.56,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Manager",
+              pageTo: EmailContent(
+                  locationOfEqup: widget.location != null
+                      ? widget.location
+                      : "Not Specificed",
+                  nameOfEqup: "Manual MicroHardness Tester",
                   emailTo: widget.emailTo != null
                       ? widget.emailTo
-                      : "Please enter the email",
-                  locationOfEqup:
-                      widget.location != null ? widget.location : "NUll",
-                  nameOfEqup: "ICP-OES",
-                )),
+                      : "Please enter the email address!"),
+            ),
             Positioned(
                 top: _screenH / 1.33,
                 left: _screenWidth / 1.3,
@@ -115,22 +118,13 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => user_note(
-                                    loc: "JHE 236 ICP-OES",
-                                    themem_color: Colors.red[100],
+                                    loc: "ML Charpy Impact",
+                                    themem_color: Colors.green[100],
                                   )));
                     }))
           ],
         ),
       ),
     );
-  }
-}
-
-_launchURL() async {
-  const url = 'https://msebooking.mcmaster.ca/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }
