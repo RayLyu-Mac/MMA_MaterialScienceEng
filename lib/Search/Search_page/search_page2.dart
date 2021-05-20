@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/buttonMode.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
 import 'package:mma_mse/Search/tools/toolsMain.dart';
 import 'package:mma_mse/Search/direction/dir_main.dart';
 
@@ -72,15 +72,24 @@ class _search_p2State extends State<search_p2> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
-            IntroButtonMode(
-              pageTo: toolMain(),
-              length: _screenH / 4.3,
-              width: _screenWidth / 2.4,
-              backImg:
-                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
+            Positioned(
               top: _screenH / 2.75,
               left: 20,
-              shadowColor: Colors.green,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => toolMain()));
+                },
+                child: Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"),
+                          fit: BoxFit.cover)),
+                ),
+              ),
             ),
           ],
         ),

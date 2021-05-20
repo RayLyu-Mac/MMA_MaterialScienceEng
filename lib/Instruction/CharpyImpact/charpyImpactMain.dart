@@ -16,8 +16,8 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
   List _instructionList = List<video>();
   double _screenWidth;
   double _screenH;
-  List titles = [];
   final ScrollController controller = ScrollController();
+  List titles = [];
 
   @override
   void initState() {
@@ -41,19 +41,18 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer charpyInstruction() => Drawer(
+    Drawer charpyInstruc() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction for Charpy Impact Tester"),
+                child: Text("Instruction For CHarpy Imp[act Tester"),
               ),
-              for (var k = 0; k < titles.length; k++)
+              for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
-                  name: titles[k],
-                  pageTo: k - 1,
-                  fonts: 13,
-                  controller: controller,
-                ),
+                    name: titles[i],
+                    pageTo: i - 1,
+                    fonts: 13,
+                    controller: controller),
             ],
           ),
         );
@@ -66,11 +65,11 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: charpyInstruction(),
+        drawer: charpyInstruc(),
         body: SafeArea(
           child: ListView.builder(
-            controller: controller,
             itemExtent: 325,
+            controller: controller,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(

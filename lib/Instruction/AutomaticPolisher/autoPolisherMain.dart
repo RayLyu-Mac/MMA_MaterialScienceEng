@@ -17,8 +17,8 @@ class _AutoPolisherinstructionState extends State<AutoPolisherinstruction> {
   List _instructionList = List<video>();
   double _screenWidth;
   double _screenH;
-  List titles = [];
   final ScrollController controller = ScrollController();
+  List titles = [];
 
   @override
   void initState() {
@@ -42,19 +42,18 @@ class _AutoPolisherinstructionState extends State<AutoPolisherinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer autopolisherinstru() => Drawer(
+    Drawer autoPolisherInstru() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction for Charpy Impact Tester"),
+                child: Text("Instruction For Automatic Polisher"),
               ),
-              for (var k = 0; k < titles.length; k++)
+              for (var i = 0; i < _instructionList.length; i++)
                 ScrollcustomListTile(
-                  name: titles[k],
-                  pageTo: k - 1,
-                  fonts: 13,
-                  controller: controller,
-                ),
+                    name: titles[i],
+                    pageTo: i - 1,
+                    fonts: 13,
+                    controller: controller),
             ],
           ),
         );
@@ -67,11 +66,11 @@ class _AutoPolisherinstructionState extends State<AutoPolisherinstruction> {
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: autopolisherinstru(),
+        drawer: autoPolisherInstru(),
         body: SafeArea(
           child: ListView.builder(
-            controller: controller,
             itemExtent: 325,
+            controller: controller,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(

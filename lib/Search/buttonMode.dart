@@ -5,13 +5,12 @@ class IntroButtonMode extends StatefulWidget {
   IntroButtonMode(
       {@required this.pageTo,
       @required this.backImg,
-      @optionalTypeArgs this.title,
+      @required this.title,
       @optionalTypeArgs this.top,
       @optionalTypeArgs this.left,
       @optionalTypeArgs this.fontsize,
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.width,
-      @optionalTypeArgs this.shadowColor,
       Key key})
       : super(key: key);
   final Widget pageTo;
@@ -22,7 +21,6 @@ class IntroButtonMode extends StatefulWidget {
   final double left;
   final double width;
   final double length;
-  final Color shadowColor;
   bool str = false;
 
   @override
@@ -76,7 +74,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                     height:
                         widget.length != null ? widget.length : _screenH / 2.8),
                 child: Text(
-                  widget.title != null ? widget.title : "-",
+                  widget.title,
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: widget.fontsize != null
@@ -88,10 +86,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                          offset: const Offset(4, 4),
-                          color: widget.shadowColor != null
-                              ? widget.shadowColor
-                              : Colors.blue[100])
+                          offset: const Offset(4, 4), color: Colors.blue[100])
                     ],
                     image: DecorationImage(
                         image: NetworkImage(widget.backImg),
@@ -127,10 +122,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        offset: const Offset(4, 4),
-                        color: widget.shadowColor != null
-                            ? widget.shadowColor
-                            : Colors.blue[100])
+                        offset: const Offset(4, 4), color: Colors.blue[100])
                   ],
                   image: DecorationImage(
                       image: NetworkImage(widget.backImg), fit: BoxFit.cover)),

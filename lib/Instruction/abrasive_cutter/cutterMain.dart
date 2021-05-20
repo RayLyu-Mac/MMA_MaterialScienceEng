@@ -16,8 +16,8 @@ class _BulkAbraCutterInstruState extends State<BulkAbraCutterInstru> {
   List _instructionList = List<video>();
   double _screenWidth;
   double _screenH;
-  List titles = [];
   final ScrollController controller = ScrollController();
+  List titles = [];
 
   @override
   void initState() {
@@ -41,19 +41,18 @@ class _BulkAbraCutterInstruState extends State<BulkAbraCutterInstru> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer abrsaivecutterinstru() => Drawer(
+    Drawer abrasiveCutterInstr() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction for Charpy Impact Tester"),
+                child: Text("Instruction For Abrsaive Cutter"),
               ),
-              for (var k = 0; k < titles.length; k++)
+              for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
-                  name: titles[k],
-                  pageTo: k - 1,
-                  fonts: 13,
-                  controller: controller,
-                ),
+                    name: titles[i],
+                    pageTo: i - 1,
+                    fonts: 13,
+                    controller: controller),
             ],
           ),
         );
@@ -66,7 +65,7 @@ class _BulkAbraCutterInstruState extends State<BulkAbraCutterInstru> {
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: abrsaivecutterinstru(),
+        drawer: abrasiveCutterInstr(),
         body: SafeArea(
           child: ListView.builder(
             itemExtent: 325,

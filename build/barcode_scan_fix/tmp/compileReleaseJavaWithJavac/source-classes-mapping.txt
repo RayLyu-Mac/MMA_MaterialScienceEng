@@ -1,2 +1,0 @@
-com/yourcompany/barcodescan/BuildConfig.java
- com.yourcompany.barcodescan.BuildConfig

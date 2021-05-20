@@ -16,15 +16,15 @@ class _MHTinstructionState extends State<MHTinstruction> {
   List _instructionList = List<video>();
   double _screenWidth;
   double _screenH;
-  List titles = [];
   final ScrollController controller = ScrollController();
+  List titles = [];
 
   @override
   void initState() {
     super.initState();
     _instructionList = video().videoList();
     for (var j = 0; j < _instructionList.length; j++) {
-      titles.add(_instructionList[j].title);
+      titles.add(_instructionList[j].titles);
     }
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -41,19 +41,18 @@ class _MHTinstructionState extends State<MHTinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer microHardnessInstr() => Drawer(
+    Drawer microhardnessInstr() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction for Charpy Impact Tester"),
+                child: Text("Instruction For MicroHardness Tester"),
               ),
-              for (var k = 0; k < titles.length; k++)
+              for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
-                  name: titles[k],
-                  pageTo: k - 1,
-                  fonts: 13,
-                  controller: controller,
-                ),
+                    name: titles[i],
+                    pageTo: i - 1,
+                    fonts: 13,
+                    controller: controller),
             ],
           ),
         );
@@ -66,11 +65,11 @@ class _MHTinstructionState extends State<MHTinstruction> {
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: microHardnessInstr(),
+        drawer: microhardnessInstr(),
         body: SafeArea(
           child: ListView.builder(
-            controller: controller,
             itemExtent: 330,
+            controller: controller,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
