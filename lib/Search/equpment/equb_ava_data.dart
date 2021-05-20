@@ -5,12 +5,13 @@ import "package:mma_mse/equipment/BulkAbrasive/BulkAbrasiveMain.dart";
 import 'package:mma_mse/equipment/Automatic Micro Hardness Tester/AMHMain.dart';
 import 'package:mma_mse/equipment/CharpyImpact/Charpy.dart';
 import 'package:mma_mse/equipment/Keyence Microscope/keyenceMain.dart';
-import 'package:mma_mse/equipment/Rockwell.dart';
+import 'package:mma_mse/equipment/manualRW/Rockwell.dart';
 import 'package:mma_mse/equipment/siliconCarbideFurnace/SiCFurnaceMain.dart';
 import 'package:mma_mse/equipment/autoPolisher/autoPolisherMain.dart';
 import 'package:mma_mse/equipment/Nikon Microscope/NikonMicroMain.dart';
 import 'package:mma_mse/equipment/blueFurnace/blurFMain.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
+import 'package:mma_mse/equipment/digitalRW/digitalRWMain.dart';
 
 class HeroType {
   String title;
@@ -41,13 +42,13 @@ class HeroType {
           materialColor: Colors.amber[800],
           pageTo: tensile_test()))
       ..add(HeroType(
-          title: 'Rockwell Hardness Machine',
+          title: 'Manual Rockwell Hardness Tester',
           subTitle: 'Test for material hardness',
           pageTo: hardness_test(),
           fText:
               'Device Needed: Rockwell machine.\n \nMaterial property can be tested: hardness ',
           image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/rwt.jpg?raw=true',
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true',
           materialColor: Colors.blueGrey[600]))
       ..add(HeroType(
           title: 'ICP-OES',
@@ -120,20 +121,27 @@ class HeroType {
       ..add(HeroType(
           title: 'Nikon Microscope',
           subTitle:
-              'The purpose to grind and polish a material is to reveal the microstructure. ',
+              'Light Microscope for investigating the material microstructure',
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true',
           pageTo: NikonMicro(),
-          materialColor: Colors.blueAccent))
+          materialColor: Colors.blue[300]))
       ..add(HeroType(
           title: 'Llyods Tensile Tester',
-          subTitle:
-              'The purpose to grind and polish a material is to reveal the microstructure. ',
+          subTitle: 'Apply tensile test to find according aterial property',
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
           pageTo: LlyoldTensileTester(),
-          materialColor: Colors.blueAccent));
+          materialColor: Colors.purpleAccent))
+      ..add(HeroType(
+          title: 'Digital Rockwell Hardness Tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
+          pageTo: LlyoldTensileTester(),
+          materialColor: Colors.yellowAccent));
   }
 }

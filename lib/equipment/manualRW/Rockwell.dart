@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/hardness_t_back.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:mma_mse/Instruction/utm_instruction/utmInstructionMain.dart';
+import 'package:mma_mse/equipment/functionButtonMode.dart';
+import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 
 class hardness_test extends StatefulWidget {
-  hardness_test({Key key}) : super(key: key);
+  hardness_test(
+      {Key key,
+      @optionalTypeArgs this.emailTo,
+      @optionalTypeArgs this.location})
+      : super(key: key);
+  final String location;
+  final String emailTo;
 
   @override
   _hardness_testState createState() => _hardness_testState();
@@ -60,96 +69,43 @@ class _hardness_testState extends State<hardness_test> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/rwt.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
               ),
             ),
-            Positioned(
+            functionButtonMode(
               top: _screenH / 1.56,
               left: _screenWidth / 12,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => utm_instruction(),
-                      ));
-                },
-                child: Container(
-                  constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.9,
-                    height: _screenH / 16,
-                  ),
-                  padding: EdgeInsets.all(6),
-                  child: Text(
-                    "Instruction",
-                    style: TextStyle(
-                        fontSize: _screenH / 50, fontWeight: FontWeight.bold),
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.black, width: 4)),
-                ),
-              ),
+              buttonName: "Instruction",
+              pageTo: utm_instruction(),
+              warnV: "bdunyatEEG0",
             ),
-            Positioned(
+            functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
-              child: GestureDetector(
-                child: Container(
-                  width: _screenWidth / 2.9,
-                  height: _screenH / 16,
-                  padding: EdgeInsets.all(6),
-                  child: Text(
-                    "History",
-                    style: TextStyle(
-                        fontSize: _screenH / 50, fontWeight: FontWeight.bold),
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.black, width: 4)),
-                ),
-              ),
+              buttonName: "Theory",
+              pageTo: hardness_test_bg(),
             ),
-            Positioned(
+            functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 2 + 16,
-              child: GestureDetector(
-                child: Container(
-                  width: _screenWidth / 2.9,
-                  height: _screenH / 16,
-                  padding: EdgeInsets.all(6),
-                  child: Text(
-                    "Result",
-                    style: TextStyle(
-                        fontSize: _screenH / 50, fontWeight: FontWeight.bold),
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.black, width: 4)),
-                ),
-              ),
+              buttonName: "Result",
+              pageTo: hardness_test(),
             ),
-            Positioned(
+            functionButtonMode(
               top: _screenH / 1.56,
               left: _screenWidth / 2 + 16,
-              child: GestureDetector(
-                child: Container(
-                  width: _screenWidth / 2.9,
-                  height: _screenH / 16,
-                  padding: EdgeInsets.all(6),
-                  child: Text(
-                    "Manager",
-                    style: TextStyle(
-                        fontSize: _screenH / 50, fontWeight: FontWeight.bold),
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.black, width: 4)),
-                ),
-              ),
+              buttonName: "Manager",
+              pageTo: EmailContent(
+                  locationOfEqup: widget.location != null
+                      ? widget.location
+                      : "Not Specificed",
+                  nameOfEqup: "Llyods Tensile Tester",
+                  emailTo: widget.emailTo != null
+                      ? widget.emailTo
+                      : "Please enter the email address!"),
             ),
             Positioned(
                 top: _screenH / 1.33,

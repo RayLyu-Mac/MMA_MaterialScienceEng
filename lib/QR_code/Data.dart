@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/equipment/Rockwell.dart';
+import 'package:mma_mse/equipment/manualRW/Rockwell.dart';
 import 'package:mma_mse/equipment/CharpyImpact/Charpy.dart';
 import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
 
