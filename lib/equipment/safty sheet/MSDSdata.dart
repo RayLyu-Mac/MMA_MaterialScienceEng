@@ -5,6 +5,23 @@ Color yellow = Colors.yellow[300];
 Color blue = Colors.blue[300];
 Color grey = Colors.grey[300];
 Color red = Colors.red[300];
+Color redD = Colors.redAccent;
+Color white = Colors.white70;
+Map<Color, String> saftyLevel = {
+  green: "General Storage can be stored on higher shelves",
+  yellow:
+      "tore corrosives in this group in chemical resistant secondary containers, store away from organics and flammables or other incompatible materials",
+  blue:
+      "When necessary, secure poison area or separate from other chemical staorage",
+  grey:
+      "Separated from white store in chemical resistant catch trays or corrosive cabinat, store acids away from bases",
+  red:
+      "Store in flammable storage cabinet/ area, but separate flammable solids from other hazard classes",
+  redD:
+      "Separated from Red store in flammable storage cabinet/ area, but separate flammable solids from other hazard classes",
+  white:
+      "eparated from Red store in flammable storage cabinet/ area, but separate flammable solids from other hazard classes"
+};
 
 class msdsData {
   String location;
@@ -51,7 +68,7 @@ class msdsData {
       ..add(msdsData(
           location: "JHE-240 /246/A",
           name: "Ammonium Bifluoride",
-          level: Colors.white,
+          level: white,
           type: "Solid",
           short: "NH4HF2"))
       ..add(msdsData(
