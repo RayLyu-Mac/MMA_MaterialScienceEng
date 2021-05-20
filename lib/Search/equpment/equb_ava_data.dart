@@ -10,6 +10,7 @@ import 'package:mma_mse/equipment/siliconCarbideFurnace/SiCFurnaceMain.dart';
 import 'package:mma_mse/equipment/autoPolisher/autoPolisherMain.dart';
 import 'package:mma_mse/equipment/Nikon Microscope/NikonMicroMain.dart';
 import 'package:mma_mse/equipment/blueFurnace/blurFMain.dart';
+import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 
 class HeroType {
   String title;
@@ -124,6 +125,15 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true',
           pageTo: NikonMicro(),
+          materialColor: Colors.blueAccent))
+      ..add(HeroType(
+          title: 'Llyods Tensile Tester',
+          subTitle:
+              'The purpose to grind and polish a material is to reveal the microstructure. ',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
+          pageTo: LlyoldTensileTester(),
           materialColor: Colors.blueAccent));
   }
 }

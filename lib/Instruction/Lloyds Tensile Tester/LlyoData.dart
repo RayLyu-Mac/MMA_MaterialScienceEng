@@ -17,11 +17,11 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
-          title: "Step 1: Turning on the machine",
-          subtitle: "Turn on the gas cylinder and the ICP Machine",
+          title: "Start the experiment",
+          subtitle: "Turn on the machine and the software",
           materialcolor: Colors.amber[300],
           videoController: YoutubePlayerController(
-            initialVideoId: 'Dtk_P8kckWM',
+            initialVideoId: 'taifpWToaMc',
             flags: YoutubePlayerFlags(
               autoPlay: true,
               mute: false,
@@ -29,11 +29,24 @@ class video {
           )))
       ..add(
         video(
-            title: "Step 2: Set up for software",
-            subtitle: "Open the software and set up the method",
+            title: "Use the extensometer",
+            subtitle: "Method of using the extensometer",
             materialcolor: Colors.amber[400],
             videoController: YoutubePlayerController(
-              initialVideoId: 'VFYjSrI02kQ',
+              initialVideoId: 'rIvRC6OAfwE',
+              flags: YoutubePlayerFlags(
+                autoPlay: false,
+                mute: false,
+              ),
+            )),
+      )
+      ..add(
+        video(
+            title: "Loading Sample to the grip",
+            subtitle: "The proper way of loading sample to the machine",
+            materialcolor: Colors.blue,
+            videoController: YoutubePlayerController(
+              initialVideoId: 'nDR80RWMVUs',
               flags: YoutubePlayerFlags(
                 autoPlay: true,
                 mute: false,
@@ -42,62 +55,25 @@ class video {
       )
       ..add(
         video(
-            title: "Step 3: Peristaltic Pump Set-Up",
-            subtitle:
-                "Setting tension, Ensuring proper flow and Inserting Tubes",
-            materialcolor: Colors.amber,
+            title: "Running the tensile test",
+            subtitle: "Start the experiment and observation the data",
+            materialcolor: Colors.red[400],
             videoController: YoutubePlayerController(
-              initialVideoId: 'WDtx6M9AkYU',
+              initialVideoId: '0cvb-QyCVZw',
               flags: YoutubePlayerFlags(
-                autoPlay: true,
-                mute: false,
-              ),
-            )),
-      )
-      ..add(
-        video(
-            title: "Step 4: Edit Method on software",
-            subtitle: "Periodic table, Conditions, Standard, Sequence",
-            materialcolor: Colors.pink[400],
-            videoController: YoutubePlayerController(
-              initialVideoId: 'Ywu-4KFUc8M',
-              flags: YoutubePlayerFlags(
-                autoPlay: true,
+                autoPlay: false,
                 mute: false,
               ),
             )),
       )
       ..add(video(
-          title: "Step 5: Ignite the Torch",
-          subtitle:
-              "Ignite by pushing ignited icon on the top bar of toolbox program",
-          materialcolor: Colors.red[400],
-          videoController: YoutubePlayerController(
-            initialVideoId: '-neaMKjd1BA',
-            flags: YoutubePlayerFlags(
-              autoPlay: true,
-              mute: false,
-            ),
-          )))
-      ..add(video(
-          title: "Step 6: Analysis",
-          subtitle: "Calibration and ID element",
+          title: "Finish the test",
+          subtitle: "Remove the extensometer and turn off the machine",
           materialcolor: Colors.green[400],
           videoController: YoutubePlayerController(
-            initialVideoId: 'WbTSPS2rLm0',
+            initialVideoId: 'jRFT1Z9c7z8',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
-              mute: false,
-            ),
-          )))
-      ..add(video(
-          title: "Step 7: Finish the experiement",
-          subtitle: "Saving Data and Turn off the machine",
-          materialcolor: Colors.green,
-          videoController: YoutubePlayerController(
-            initialVideoId: 'nAFwvCeKqL0',
-            flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )));
