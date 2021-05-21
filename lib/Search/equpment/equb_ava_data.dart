@@ -12,6 +12,7 @@ import 'package:mma_mse/equipment/Nikon Microscope/NikonMicroMain.dart';
 import 'package:mma_mse/equipment/blueFurnace/blurFMain.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 import 'package:mma_mse/equipment/digitalRW/digitalRWMain.dart';
+import 'package:mma_mse/equipment/manualMicroHardness/manualMHMain.dart';
 
 class HeroType {
   String title;
@@ -141,7 +142,15 @@ class HeroType {
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
-          pageTo: LlyoldTensileTester(),
+          pageTo: DigitalRWMain(),
+          materialColor: Colors.yellowAccent))
+      ..add(HeroType(
+          title: 'Manual MicroHardness tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
+          pageTo: ManualMicroHardness(),
           materialColor: Colors.yellowAccent));
   }
 }

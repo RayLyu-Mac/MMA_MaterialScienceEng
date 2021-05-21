@@ -4,6 +4,7 @@ import 'package:mma_mse/user_note.dart';
 import 'package:mma_mse/Instruction/utm_instruction/utmInstructionMain.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/Instruction/rockwell/manual/manualRWMain.dart';
 
 class hardness_test extends StatefulWidget {
   hardness_test(
@@ -79,8 +80,8 @@ class _hardness_testState extends State<hardness_test> {
               top: _screenH / 1.56,
               left: _screenWidth / 12,
               buttonName: "Instruction",
-              pageTo: utm_instruction(),
-              warnV: "bdunyatEEG0",
+              pageTo: ManualRWInstr(),
+              warnV: "t-4WN785oxM",
             ),
             functionButtonMode(
               top: _screenH / 1.8,
