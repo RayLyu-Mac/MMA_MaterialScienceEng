@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/user_note.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart';
+import 'package:mma_mse/user_note.dart';
+import '../functionButtonMode.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
+import 'package:mma_mse/Instruction/ManualMicroHardness/MMicroHardMain.dart';
 
-class KeyenceMMain extends StatefulWidget {
-  KeyenceMMain({Key key}) : super(key: key);
+class ManualMicroHardness extends StatefulWidget {
+  final String location;
+  final String emailTo;
+  ManualMicroHardness(
+      {Key key,
+      @optionalTypeArgs this.location,
+      @optionalTypeArgs this.emailTo})
+      : super(key: key);
 
   @override
-  _KeyenceMMainState createState() => _KeyenceMMainState();
+  _ManualMicroHardnessState createState() => _ManualMicroHardnessState();
 }
 
-class _KeyenceMMainState extends State<KeyenceMMain> {
+class _ManualMicroHardnessState extends State<ManualMicroHardness> {
   double _screenWidth;
   double _screenH;
 
@@ -27,7 +33,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Keyence Microscope"),
+        title: Text("Manual Micro-Hardness Tester"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
@@ -48,7 +54,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 2.2, height: 280),
                   child: Text(
-                    'A microscope that can observe uneven surfaces and 3D objects with clear images thanks to its large depth of field and long observation distance. Together with a model that uses a full control system to provide high-resolution observation that rivals an SEM, this lineup includes entry models equipped with frequently used functions. Dedicated lenses that bring out the best performance of microscopes are also available.',
+                    'Used to measure the relative toughness of a material, more specifically, the energy absorbed by a standard notched specimen while breaking under an impact load. Has been used as an economical quality control method to determine the notch sensitivity. The standard size for specimen: 55 mm *10 mm* 10mm, having a notch machined across one of the larger dimensions.',
                     style: TextStyle(
                         fontSize: _screenH / 55, fontWeight: FontWeight.bold),
                   )),
@@ -63,39 +69,44 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
               ),
             ),
             functionButtonMode(
-                top: _screenH / 1.56,
-                left: _screenWidth / 12,
-                buttonName: "Instruction",
-                warnNote:
-                    "•Make Sure the smaples used have been properly polished and etched\n•",
-                pageTo: KeyenceMicroInstru()),
+              top: _screenH / 1.56,
+              left: _screenWidth / 12,
+              buttonName: "Instruction",
+              pageTo: ManualMicHardnessInstru(),
+              warnV: "t-4WN785oxM",
+            ),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
-              buttonName: "Schedulling",
-              url: _launchURL,
+              buttonName: "Theory",
+              pageTo: tensile_test_bg(),
             ),
             functionButtonMode(
-                top: _screenH / 1.8,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Theory",
-                pageTo: KeyenceMicroInstru()),
+              top: _screenH / 1.8,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Result",
+              pageTo: tensile_test_bg(),
+            ),
             functionButtonMode(
-                top: _screenH / 1.56,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Manager",
-                pageTo: EmailContent(
-                  emailTo: "rayrayray0495@gmail.com",
-                  locationOfEqup: "JHE 235",
-                  nameOfEqup: "ICP-OES",
-                )),
+              top: _screenH / 1.56,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Manager",
+              pageTo: EmailContent(
+                  locationOfEqup: widget.location != null
+                      ? widget.location
+                      : "Not Specificed",
+                  nameOfEqup: "Manual MicroHardness Tester",
+                  emailTo: widget.emailTo != null
+                      ? widget.emailTo
+                      : "Please enter the email address!"),
+            ),
             Positioned(
                 top: _screenH / 1.33,
                 left: _screenWidth / 1.3,
@@ -107,22 +118,13 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => user_note(
-                                    loc: "JHE 236 ICP-OES",
-                                    themem_color: Colors.red[100],
+                                    loc: "ML Charpy Impact",
+                                    themem_color: Colors.green[100],
                                   )));
                     }))
           ],
         ),
       ),
     );
-  }
-}
-
-_launchURL() async {
-  const url = 'https://msebooking.mcmaster.ca/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }

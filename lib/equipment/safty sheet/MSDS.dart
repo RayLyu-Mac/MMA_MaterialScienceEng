@@ -110,6 +110,8 @@ class _SearchListExampleState extends State<SearchListExample> {
                                                   property[index].short),
                                           Text("The type of the material: " +
                                               property[index].type),
+                                          Text("The level of harzard is: " +
+                                              saftyLevel[property[index].level])
                                         ],
                                       );
                                     });

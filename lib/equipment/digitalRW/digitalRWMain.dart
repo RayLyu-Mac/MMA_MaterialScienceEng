@@ -2,17 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
+import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart';
+import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
 
-class KeyenceMMain extends StatefulWidget {
-  KeyenceMMain({Key key}) : super(key: key);
-
+class DigitalRWMain extends StatefulWidget {
+  DigitalRWMain(
+      {Key key,
+      @optionalTypeArgs this.emailTo,
+      @optionalTypeArgs this.location})
+      : super(key: key);
+  final String location;
+  final String emailTo;
   @override
-  _KeyenceMMainState createState() => _KeyenceMMainState();
+  _DigitalRWMainState createState() => _DigitalRWMainState();
 }
 
-class _KeyenceMMainState extends State<KeyenceMMain> {
+class _DigitalRWMainState extends State<DigitalRWMain> {
   double _screenWidth;
   double _screenH;
 
@@ -27,7 +33,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Keyence Microscope"),
+        title: Text("Digital Rockwell Machine"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
@@ -63,7 +69,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -73,9 +79,8 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
-                warnNote:
-                    "•Make Sure the smaples used have been properly polished and etched\n•",
-                pageTo: KeyenceMicroInstru()),
+                warnV: "gPepaJjjSRg",
+                pageTo: DigiRWInstr()),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
@@ -86,14 +91,17 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Theory",
-                pageTo: KeyenceMicroInstru()),
+                pageTo: icp_instruction()),
             functionButtonMode(
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(
-                  emailTo: "rayrayray0495@gmail.com",
-                  locationOfEqup: "JHE 235",
+                  emailTo: widget.emailTo != null
+                      ? widget.emailTo
+                      : "Please enter the email",
+                  locationOfEqup:
+                      widget.location != null ? widget.location : "NUll",
                   nameOfEqup: "ICP-OES",
                 )),
             Positioned(

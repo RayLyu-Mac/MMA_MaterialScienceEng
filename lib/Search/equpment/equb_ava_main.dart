@@ -41,12 +41,76 @@ class _equb_mainState extends State<equb_main> {
     Drawer searchEquipMain() => Drawer(
             child: ListView(children: [
           DrawerHeader(child: Text("Equipment Avaiable in MSE")),
-          for (var equ = 0; equ < equipments.length; equ++)
-            ScrollcustomListTile(
-                name: equipments[equ],
-                pageTo: equ,
-                fonts: 13,
-                controller: controller)
+          ExpansionTile(
+            title: Text("Tensile Machine"),
+            children: [
+              ScrollcustomListTile(
+                  name: equipments[0],
+                  pageTo: 0,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[11],
+                  pageTo: 11,
+                  fonts: 13,
+                  controller: controller),
+            ],
+          ),
+          ExpansionTile(
+            title: Text("Hardness Tester"),
+            children: [
+              ScrollcustomListTile(
+                  name: equipments[1],
+                  pageTo: 1,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[5],
+                  pageTo: 5,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[13],
+                  pageTo: 13,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[12],
+                  pageTo: 12,
+                  fonts: 13,
+                  controller: controller),
+            ],
+          ),
+          ExpansionTile(
+            title: Text("Microscope"),
+            children: [
+              ScrollcustomListTile(
+                  name: equipments[6],
+                  pageTo: 6,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[10],
+                  pageTo: 10,
+                  fonts: 13,
+                  controller: controller),
+            ],
+          ),
+          ExpansionTile(
+            title: Text("Furnace"),
+            children: [
+              ScrollcustomListTile(
+                  name: equipments[7],
+                  pageTo: 7,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[9],
+                  pageTo: 9,
+                  fonts: 13,
+                  controller: controller),
+            ],
+          )
         ]));
     return Scaffold(
       appBar: AppBar(
