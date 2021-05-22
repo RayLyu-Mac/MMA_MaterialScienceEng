@@ -5,6 +5,7 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/MountPress/MetPress 200/MetMain.dart';
+import 'package:mma_mse/equipment/MountPress/backGround.dart';
 
 class METPress extends StatefulWidget {
   METPress(
@@ -92,7 +93,7 @@ class _METPressState extends State<METPress> {
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Theory",
-                pageTo: icp_instruction()),
+                pageTo: mountPressBackG()),
             functionButtonMode(
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,
