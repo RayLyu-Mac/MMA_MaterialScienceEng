@@ -44,7 +44,7 @@ class _pageModeState extends State<pageMode> {
                 height: _screenH,
                 width: _screenWidth,
                 alignment: Alignment.center,
-                image: AssetImage(widget.back_img),
+                image: NetworkImage(widget.back_img),
               ),
             )),
         Positioned(
