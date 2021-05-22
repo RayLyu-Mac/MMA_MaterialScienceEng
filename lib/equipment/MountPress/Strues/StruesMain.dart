@@ -33,7 +33,7 @@ class _StruesMainState extends State<StruesMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buehler Precision Cutter"),
+        title: Text("Mounting Press (Struers)"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(

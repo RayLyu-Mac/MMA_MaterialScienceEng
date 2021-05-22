@@ -33,7 +33,7 @@ class _EcoPressState extends State<EcoPress> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buehler Precision Cutter"),
+        title: Text("Mounting Press ECOPRESS 200"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(

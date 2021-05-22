@@ -110,7 +110,39 @@ class _equb_mainState extends State<equb_main> {
                   fonts: 13,
                   controller: controller),
             ],
-          )
+          ),
+          ExpansionTile(
+            title: Text("Cutter"),
+            children: [
+              ScrollcustomListTile(
+                  name: equipments[3],
+                  pageTo: 3,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[14],
+                  pageTo: 14,
+                  fonts: 13,
+                  controller: controller),
+            ],
+          ),
+          ExpansionTile(title: Text("Mounting Press"), children: [
+            ScrollcustomListTile(
+                name: equipments[15],
+                pageTo: 15,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: equipments[16],
+                pageTo: 16,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: equipments[17],
+                pageTo: 17,
+                fonts: 13,
+                controller: controller),
+          ])
         ]));
     return Scaffold(
       appBar: AppBar(

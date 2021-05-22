@@ -33,7 +33,7 @@ class _METPressState extends State<METPress> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buehler Precision Cutter"),
+        title: Text("Mounting Press (METLAB)"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
