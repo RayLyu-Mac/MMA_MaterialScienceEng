@@ -172,7 +172,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true',
           pageTo: EcoPress(),
-          materialColor: Colors.yellowAccent))
+          materialColor: Colors.orangeAccent))
       ..add(HeroType(
           title: 'Mounting Press (Struers)',
           subTitle:
@@ -181,7 +181,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true',
           pageTo: StruesMain(),
-          materialColor: Colors.yellowAccent))
+          materialColor: Colors.purpleAccent))
       ..add(HeroType(
           title: 'Mounting Press (METLAB)',
           subTitle:
@@ -190,6 +190,6 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
           pageTo: METPress(),
-          materialColor: Colors.yellowAccent));
+          materialColor: Colors.greenAccent));
   }
 }
