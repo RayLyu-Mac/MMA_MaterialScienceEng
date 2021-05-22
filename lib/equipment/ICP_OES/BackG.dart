@@ -27,7 +27,8 @@ Map<String, String> document = {
   "Reason two: Carry Over or Memory Effect":
       "•Spray Chamber can be contaiminated by the previous analysis \n•Look at the intenstiy and if the peaks are dropping this shows that the contaimination is being flushed out\n•Take note of the intensity and repeat with the blank"
 };
-String backImg = "assest/test/hdtbg1.jpg";
+String backImg =
+    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/bg.jpg?raw=true";
 List<Widget> pages = [
   pageMode(
       doucment: document,
