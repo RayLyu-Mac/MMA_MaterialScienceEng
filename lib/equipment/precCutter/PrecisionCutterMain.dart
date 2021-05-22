@@ -5,6 +5,7 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/PrecisionCutter/PCutterMain.dart';
+import 'PrecutterDashB.dart';
 
 class PcutterMain extends StatefulWidget {
   PcutterMain(
@@ -91,7 +92,7 @@ class _PcutterMainState extends State<PcutterMain> {
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Theory",
-                pageTo: icp_instruction()),
+                pageTo: PrecisonCutterDashB()),
             functionButtonMode(
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,
