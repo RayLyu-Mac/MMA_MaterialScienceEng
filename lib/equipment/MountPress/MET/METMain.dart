@@ -6,8 +6,8 @@ import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/MountPress/MetPress 200/MetMain.dart';
 
-class BPcutterMain extends StatefulWidget {
-  BPcutterMain(
+class METPress extends StatefulWidget {
+  METPress(
       {Key key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
@@ -15,10 +15,10 @@ class BPcutterMain extends StatefulWidget {
   final String location;
   final String emailTo;
   @override
-  _BPcutterMainState createState() => _BPcutterMainState();
+  _METPressState createState() => _METPressState();
 }
 
-class _BPcutterMainState extends State<BPcutterMain> {
+class _METPressState extends State<METPress> {
   double _screenWidth;
   double _screenH;
 

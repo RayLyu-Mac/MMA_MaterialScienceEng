@@ -6,8 +6,8 @@ import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/PrecisionCutter/PCutterMain.dart';
 
-class BPcutterMain extends StatefulWidget {
-  BPcutterMain(
+class PcutterMain extends StatefulWidget {
+  PcutterMain(
       {Key key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
@@ -15,10 +15,10 @@ class BPcutterMain extends StatefulWidget {
   final String location;
   final String emailTo;
   @override
-  _BPcutterMainState createState() => _BPcutterMainState();
+  _PcutterMainState createState() => _PcutterMainState();
 }
 
-class _BPcutterMainState extends State<BPcutterMain> {
+class _PcutterMainState extends State<PcutterMain> {
   double _screenWidth;
   double _screenH;
 

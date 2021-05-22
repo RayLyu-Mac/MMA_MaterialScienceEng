@@ -14,6 +14,9 @@ import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 import 'package:mma_mse/equipment/digitalRW/digitalRWMain.dart';
 import 'package:mma_mse/equipment/manualMicroHardness/manualMHMain.dart';
 import 'package:mma_mse/equipment/precCutter/PrecisionCutterMain.dart';
+import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
+import 'package:mma_mse/equipment/MountPress/MET/METMain.dart';
+import 'package:mma_mse/equipment/MountPress/Strues/StruesMain.dart';
 
 class HeroType {
   String title;
@@ -159,31 +162,34 @@ class HeroType {
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true',
-          pageTo: BPcutterMain(),
+          pageTo: PcutterMain(),
           materialColor: Colors.blueAccent[400]))
       ..add(HeroType(
-          title: 'Manual MicroHardness tester',
-          subTitle: 'Test the hardness of the material',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          title: 'Mounting Press ECOPRESS 200',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
-          pageTo: ManualMicroHardness(),
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true',
+          pageTo: EcoPress(),
           materialColor: Colors.yellowAccent))
       ..add(HeroType(
-          title: 'Manual MicroHardness tester',
-          subTitle: 'Test the hardness of the material',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          title: 'Mounting Press (Struers)',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
-          pageTo: ManualMicroHardness(),
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true',
+          pageTo: StruesMain(),
           materialColor: Colors.yellowAccent))
       ..add(HeroType(
-          title: 'Manual MicroHardness tester',
-          subTitle: 'Test the hardness of the material',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          title: 'Mounting Press (METLAB)',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
-          pageTo: ManualMicroHardness(),
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
+          pageTo: METPress(),
           materialColor: Colors.yellowAccent));
   }
 }

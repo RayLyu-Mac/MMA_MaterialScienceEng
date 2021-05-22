@@ -6,8 +6,8 @@ import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/MountPress/struers/struesMain.dart';
 
-class BPcutterMain extends StatefulWidget {
-  BPcutterMain(
+class StruesMain extends StatefulWidget {
+  StruesMain(
       {Key key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
@@ -15,10 +15,10 @@ class BPcutterMain extends StatefulWidget {
   final String location;
   final String emailTo;
   @override
-  _BPcutterMainState createState() => _BPcutterMainState();
+  _StruesMainState createState() => _StruesMainState();
 }
 
-class _BPcutterMainState extends State<BPcutterMain> {
+class _StruesMainState extends State<StruesMain> {
   double _screenWidth;
   double _screenH;
 
