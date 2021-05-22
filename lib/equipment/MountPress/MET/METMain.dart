@@ -69,7 +69,7 @@ class _METPressState extends State<METPress> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -79,7 +79,8 @@ class _METPressState extends State<METPress> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
-                warnV: "gPepaJjjSRg",
+                warnNote:
+                    "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
                 pageTo: METinstruction()),
             functionButtonMode(
               top: _screenH / 1.8,

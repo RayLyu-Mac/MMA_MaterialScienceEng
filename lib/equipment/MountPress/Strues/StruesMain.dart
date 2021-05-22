@@ -79,7 +79,8 @@ class _StruesMainState extends State<StruesMain> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
-                warnV: "gPepaJjjSRg",
+                warnNote:
+                    "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
                 pageTo: struesinstruction()),
             functionButtonMode(
               top: _screenH / 1.8,

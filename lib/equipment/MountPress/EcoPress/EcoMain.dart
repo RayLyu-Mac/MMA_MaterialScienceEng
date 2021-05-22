@@ -79,7 +79,8 @@ class _EcoPressState extends State<EcoPress> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
-                warnV: "gPepaJjjSRg",
+                warnNote:
+                    "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
                 pageTo: EcoPressinstruction()),
             functionButtonMode(
               top: _screenH / 1.8,
