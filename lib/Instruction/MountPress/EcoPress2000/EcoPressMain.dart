@@ -41,11 +41,11 @@ class _EcoPressinstructionState extends State<EcoPressinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer EcoPressInstr() => Drawer(
+    Drawer ecoPressInstr() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For MicroHardness Tester"),
+                child: Text("Instruction For Mounting Press ECOPRESS 200"),
               ),
               for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
@@ -60,12 +60,12 @@ class _EcoPressinstructionState extends State<EcoPressinstruction> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Micro-Hardness Tester instruction",
+            "Mounting Press ECOPRESS 200 instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: EcoPressInstr(),
+        drawer: ecoPressInstr(),
         body: SafeArea(
           child: ListView.builder(
             itemExtent: 330,

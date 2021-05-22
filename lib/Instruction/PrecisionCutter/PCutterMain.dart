@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'MetData.dart';
+import 'PCutterData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTileScroll.dart';
 
-class METinstruction extends StatefulWidget {
+class PCutterinstruction extends StatefulWidget {
   final video videoType;
-  const METinstruction({Key key, this.videoType}) : super(key: key);
+  const PCutterinstruction({Key key, this.videoType}) : super(key: key);
 
   @override
-  _METinstructionState createState() => _METinstructionState();
+  _PCutterinstructionState createState() => _PCutterinstructionState();
 }
 
-class _METinstructionState extends State<METinstruction> {
+class _PCutterinstructionState extends State<PCutterinstruction> {
   List _instructionList = List<video>();
   double _screenWidth;
   double _screenH;
@@ -41,11 +41,11 @@ class _METinstructionState extends State<METinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer metInstr() => Drawer(
+    Drawer pCutterinstru() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For Mounting Press (METLAB)"),
+                child: Text("Instruction For Precision Cutter"),
               ),
               for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
@@ -60,12 +60,12 @@ class _METinstructionState extends State<METinstruction> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Mounting Press (METLAB) instruction",
+            "Precision Cutter instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: metInstr(),
+        drawer: pCutterinstru(),
         body: SafeArea(
           child: ListView.builder(
             itemExtent: 330,

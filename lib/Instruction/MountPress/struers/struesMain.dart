@@ -41,11 +41,11 @@ class _struesinstructionState extends State<struesinstruction> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer microhardnessInstr() => Drawer(
+    Drawer struesInstr() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For MicroHardness Tester"),
+                child: Text("Instruction For Mounting Press (Struers)"),
               ),
               for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
@@ -60,12 +60,12 @@ class _struesinstructionState extends State<struesinstruction> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Micro-Hardness Tester instruction",
+            "Mounting Press (Struers) instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: microhardnessInstr(),
+        drawer: struesInstr(),
         body: SafeArea(
           child: ListView.builder(
             itemExtent: 330,

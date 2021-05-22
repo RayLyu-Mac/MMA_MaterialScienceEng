@@ -13,6 +13,7 @@ import 'package:mma_mse/equipment/blueFurnace/blurFMain.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 import 'package:mma_mse/equipment/digitalRW/digitalRWMain.dart';
 import 'package:mma_mse/equipment/manualMicroHardness/manualMHMain.dart';
+import 'package:mma_mse/equipment/precCutter/PrecisionCutterMain.dart';
 
 class HeroType {
   String title;
@@ -143,6 +144,38 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
           pageTo: DigitalRWMain(),
+          materialColor: Colors.yellowAccent))
+      ..add(HeroType(
+          title: 'Manual MicroHardness tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
+          pageTo: ManualMicroHardness(),
+          materialColor: Colors.yellowAccent))
+      ..add(HeroType(
+          title: 'Precision cutter',
+          subTitle: 'The precision cutter is used for small delicate cuts.',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true',
+          pageTo: BPcutterMain(),
+          materialColor: Colors.blueAccent[400]))
+      ..add(HeroType(
+          title: 'Manual MicroHardness tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
+          pageTo: ManualMicroHardness(),
+          materialColor: Colors.yellowAccent))
+      ..add(HeroType(
+          title: 'Manual MicroHardness tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
+          pageTo: ManualMicroHardness(),
           materialColor: Colors.yellowAccent))
       ..add(HeroType(
           title: 'Manual MicroHardness tester',

@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/MountPress/EcoPress2000/EcoPressMain.dart';
+import 'package:mma_mse/Instruction/PrecisionCutter/PCutterMain.dart';
 
 class BPcutterMain extends StatefulWidget {
   BPcutterMain(
@@ -69,7 +69,7 @@ class _BPcutterMainState extends State<BPcutterMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -80,7 +80,7 @@ class _BPcutterMainState extends State<BPcutterMain> {
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
                 warnV: "gPepaJjjSRg",
-                pageTo: EcoPressinstruction()),
+                pageTo: PCutterinstruction()),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
