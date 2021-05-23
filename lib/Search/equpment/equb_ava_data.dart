@@ -17,6 +17,7 @@ import 'package:mma_mse/equipment/precCutter/PrecisionCutterMain.dart';
 import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/MountPress/MET/METMain.dart';
 import 'package:mma_mse/equipment/MountPress/Strues/StruesMain.dart';
+import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
 
 class HeroType {
   String title;
@@ -190,6 +191,15 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
           pageTo: METPress(),
-          materialColor: Colors.greenAccent));
+          materialColor: Colors.greenAccent))
+      ..add(HeroType(
+          title: 'Manual Grinder',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
+          pageTo: ManualGrinder(),
+          materialColor: Colors.blueGrey[400]));
   }
 }
