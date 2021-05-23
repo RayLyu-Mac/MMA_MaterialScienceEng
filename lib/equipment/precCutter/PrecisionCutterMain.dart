@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
+import 'backG.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/PrecisionCutter/PCutterMain.dart';
 import 'PrecutterDashB.dart';
@@ -59,6 +59,12 @@ class _PcutterMainState extends State<PcutterMain> {
                     style: TextStyle(
                         fontSize: _screenH / 55, fontWeight: FontWeight.bold),
                   )),
+            ),
+            functionButtonMode(
+              top: _screenH / 2.2,
+              left: _screenWidth / 1.25,
+              buttonName: "Background theory",
+              pageTo: precisionBlade(),
             ),
             Positioned(
               top: _screenH / 30,

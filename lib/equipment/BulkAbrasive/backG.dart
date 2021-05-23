@@ -22,7 +22,8 @@ Map<String, String> data = {
   "10S30":
       "Resin Bonded “Silicon Carbide” for Soft Non-Ferrous materials (30 – 300 HV)",
 };
-final String back_img = "assest/test/hdtbg1.jpg";
+String back_img =
+    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/bg.jpg?raw=true";
 final List<Widget> pages = [
   pageMode(
     doucment: data,
