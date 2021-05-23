@@ -91,7 +91,7 @@ class _PcutterMainState extends State<PcutterMain> {
             functionButtonMode(
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
-                buttonName: "Theory",
+                buttonName: "Dash Board",
                 pageTo: PrecisonCutterDashB()),
             functionButtonMode(
                 top: _screenH / 1.56,

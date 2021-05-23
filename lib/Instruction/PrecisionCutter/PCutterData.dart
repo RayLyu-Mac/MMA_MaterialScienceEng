@@ -17,6 +17,17 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
+          title: "Assemble Blade",
+          subtitle: "Put the blade into postion and use screw driver",
+          materialcolor: Colors.yellow[300],
+          videoController: YoutubePlayerController(
+            initialVideoId: 'pdIl5KIRY7o',
+            flags: YoutubePlayerFlags(
+              autoPlay: true,
+              mute: false,
+            ),
+          )))
+      ..add(video(
           title: "Load Sample",
           subtitle: "Loose the screw and olace sample toward front",
           materialcolor: Colors.amber[300],
