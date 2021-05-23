@@ -80,7 +80,8 @@ class _ManualGrinderState extends State<ManualGrinder> {
               left: _screenWidth / 12,
               buttonName: "Instruction",
               pageTo: ManualGrinderinstruction(),
-              warnV: "t-4WN785oxM",
+              warnNote:
+                  "•Securely hold the sample as it could become a projectile if the grinding wheel catches the sample.\n•The water is cold, and your hand can become numb, you may not realize that your finger is touching the grinding paper and you can grind your skin off your finger.",
             ),
             functionButtonMode(
               top: _screenH / 1.8,
