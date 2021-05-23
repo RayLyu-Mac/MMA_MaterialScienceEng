@@ -95,7 +95,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             height: _screenWidth / 18,
             width: _screenH / 8,
             stepTitle: "Display",
-            instruction: "Display of the machine",
+            instruction: "Self-explanatory",
             buttonName: "F1",
           ),
           DashButton(
@@ -106,7 +106,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             fontsize: _screenWidth / 35,
             width: _screenH / 8,
             stepTitle: "Display",
-            instruction: "Display of the machine",
+            instruction: "Self-explanatory",
             buttonName: "F2",
           ),
           DashButton(
@@ -117,7 +117,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             fontsize: _screenWidth / 35,
             width: _screenH / 8,
             stepTitle: "Display",
-            instruction: "Display of the machine",
+            instruction: "Self-explanatory",
             buttonName: "F3",
           ),
           DashButton(
@@ -128,7 +128,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             fontsize: _screenWidth / 35,
             width: _screenH / 8,
             stepTitle: "Display",
-            instruction: "Display of the machine",
+            instruction: "Self-explanatory",
             buttonName: "F4",
           ),
           DashButton(
@@ -140,7 +140,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             width: _screenH / 8,
             stepTitle: "Up Page",
             instruction: "Increase distance or speed",
-            buttonName: "F4",
+            button_icon: Icon(FontAwesomeIcons.sortAlphaUp),
           ),
           DashButton(
             cardColor: Colors.blue,
@@ -151,7 +151,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             width: _screenH / 8,
             stepTitle: "Doen Page",
             instruction: "Decrease distance or speed",
-            buttonName: "F4",
+            button_icon: Icon(FontAwesomeIcons.sortAlphaDown),
           ),
           DashButton(
             cardColor: Colors.pinkAccent,
@@ -160,8 +160,8 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             height: _screenWidth / 18,
             fontsize: _screenWidth / 35,
             width: _screenH / 8,
-            stepTitle: "Up Page",
-            instruction: "Increase distance or speed",
+            stepTitle: "Esc key",
+            instruction: "Back you out a sub menu",
             buttonName: "Esc",
           ),
           DashButton(
@@ -170,8 +170,8 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 5,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Enter button",
+            instruction: "Go into a sub menu",
             button_icon: Icon(FontAwesomeIcons.arrowsAltH),
           ),
           DashButton(
@@ -180,8 +180,9 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 8,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Fast Movement",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Double left arrow",
+            instruction:
+                "Two Functions:Move to the left \n•Fast Movement: Press and hold the button the sample will accelerate to the blade \n•Excalt Movement: short press the sample will move excalty 0.1mm",
             button_icon: Icon(FontAwesomeIcons.angleDoubleLeft),
           ),
           DashButton(
@@ -190,8 +191,9 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Left arrow",
+            instruction:
+                "Two Functions: \n•Slow Movement: Press and hold the button the sample will accelerate to the blade \n•Excalt Movement: short press the sample will move excalty 0.005mm",
             button_icon: Icon(FontAwesomeIcons.arrowLeft),
           ),
           DashButton(
@@ -200,8 +202,8 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Down Arrow",
+            instruction: "Move sample away from the blade",
             button_icon: Icon(FontAwesomeIcons.arrowDown),
           ),
           DashButton(
@@ -210,8 +212,8 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 8,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Up Arrow",
+            instruction: "Move sample toward the blade",
             button_icon: Icon(FontAwesomeIcons.arrowUp),
           ),
           DashButton(
@@ -220,8 +222,9 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Right Arrow",
+            instruction:
+                "Two Functions: \n•Slow Movement: Press and hold the button the sample will accelerate to the blade \n•Excalt Movement: short press the sample will move excalty 0.005mm",
             button_icon: Icon(FontAwesomeIcons.arrowRight),
           ),
           DashButton(
@@ -230,8 +233,9 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             top: _screenWidth / 8,
             height: _screenWidth / 18,
             width: _screenH / 8,
-            stepTitle: "Doen Page",
-            instruction: "Decrease distance or speed",
+            stepTitle: "Double right arrow",
+            instruction:
+                "Two Functions:Move to right \n•Fast Movement: Press and hold the button the sample will accelerate to the blade \n•Excalt Movement: short press the sample will move excalty 0.1mm",
             button_icon: Icon(FontAwesomeIcons.angleDoubleRight),
           ),
           DashButton(
