@@ -31,6 +31,7 @@ class _test_avaState extends State<test_ava> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text("Test Availble in MSE",
             style: TextStyle(color: Colors.white, fontSize: 18)),
       ),

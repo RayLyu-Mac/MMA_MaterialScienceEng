@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../TestsDetailes/hardnessTest/hardness_t_back.dart';
 import '../TestsDetailes/tensile_test_bg.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMain.dart';
 
 class HeroType {
   String title;
@@ -24,14 +25,14 @@ class HeroType {
           materialColor: Colors.amber[700]))
       ..add(HeroType(
           title: 'Tensile Test',
-          pageTo: tensile_test_bg(),
+          pageTo: metAnalysis(),
           subTitle: 'Find the microstructure property',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
           materialColor: Colors.green[700]))
       ..add(HeroType(
           title: 'Hall Effect',
-          pageTo: tensile_test_bg(),
+          pageTo: metAnalysis(),
           subTitle: 'Find the microstructure property',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',

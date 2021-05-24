@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class pageMode extends StatefulWidget {
   final String content;
@@ -7,6 +8,7 @@ class pageMode extends StatefulWidget {
   final String addOnImg;
   final String docNumber;
   final bool wholeImg;
+  final Widget pageTo;
   pageMode(
       {@required this.title,
       @optionalTypeArgs this.wholeImg,
@@ -14,6 +16,7 @@ class pageMode extends StatefulWidget {
       @optionalTypeArgs this.content,
       @optionalTypeArgs this.docNumber,
       @optionalTypeArgs this.addOnImg,
+      @optionalTypeArgs this.pageTo,
       Key key})
       : super(key: key);
 
@@ -48,11 +51,13 @@ class _pageModeState extends State<pageMode> {
               ),
             )),
         Positioned(
-          top: _screenH / 6.5,
+          top: _screenH / 12.5,
           left: _screenWidth / 13,
           child: Container(
+              padding: EdgeInsets.fromLTRB(_screenWidth / 25, _screenH / 60,
+                  _screenWidth / 40, _screenH / 60),
               constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.15, height: _screenH / 1.35),
+                  width: _screenWidth / 1.15, height: _screenH / 1.15),
               decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.7),
                   borderRadius: BorderRadius.circular(16.0),
@@ -61,39 +66,44 @@ class _pageModeState extends State<pageMode> {
                     color: Colors.white.withOpacity(0.4),
                   )),
               child: Column(children: [
-                Padding(
-                    padding: EdgeInsets.fromLTRB(_screenWidth / 4.6,
-                        _screenH / 60, _screenWidth / 40, _screenH / 60)),
-                Text(
-                  widget.title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: _screenH / 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontFamily: "Raleway",
-                      decoration: TextDecoration.none),
+                Flexible(
+                  flex: 3,
+                  child: Text(
+                    widget.title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: _screenH / 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontFamily: "Raleway",
+                        decoration: TextDecoration.none),
+                  ),
                 ),
                 SizedBox(
                   height: _screenH / 50,
                 ),
-                Text(
-                  widget.content != null ? widget.content : "Error",
-                  style: TextStyle(
-                      fontSize: _screenH / 42,
-                      color: Colors.black,
-                      fontFamily: "Raleway",
-                      decoration: TextDecoration.none),
-                ),
+                Flexible(
+                  flex: 20,
+                  fit: FlexFit.loose,
+                  child: Text(
+                    widget.content != null ? widget.content : "Error",
+                    style: TextStyle(
+                        fontSize: _screenH / 33,
+                        color: Colors.black,
+                        fontFamily: "Raleway",
+                        decoration: TextDecoration.none),
+                  ),
+                )
               ])),
         ),
         Positioned(
-            top: _screenH / 1.6,
+            top: _screenH / 1.5,
             left: _screenWidth / 5.5,
             child: imgAddOn(
               screenH: _screenH,
               screenW: _screenWidth,
               img: widget.addOnImg,
+              pageTo: widget.pageTo,
             ))
       ],
     );
@@ -104,9 +114,11 @@ class imgAddOn extends StatelessWidget {
   final String img;
   final double screenW;
   final double screenH;
+  final Widget pageTo;
   const imgAddOn(
       {@required this.img,
       @required this.screenH,
+      @optionalTypeArgs this.pageTo,
       @required this.screenW,
       Key key})
       : super(key: key);
@@ -114,14 +126,35 @@ class imgAddOn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (img != null) {
-      return Container(
-          constraints: BoxConstraints.expand(
-              width: screenW / 1.5, height: screenH / 4.3),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: Colors.black,
-              image: DecorationImage(
-                  image: NetworkImage(img), fit: BoxFit.cover)));
+      if (pageTo != null) {
+        return InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      duration: Duration(milliseconds: 700),
+                      child: pageTo,
+                      type: PageTransitionType.scale,
+                      alignment: Alignment.topCenter));
+            },
+            child: Container(
+                constraints: BoxConstraints.expand(
+                    width: screenW / 1.5, height: screenH / 3.6),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.black,
+                    image: DecorationImage(
+                        image: NetworkImage(img), fit: BoxFit.cover))));
+      } else {
+        return Container(
+            constraints: BoxConstraints.expand(
+                width: screenW / 1.5, height: screenH / 3.6),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.black,
+                image: DecorationImage(
+                    image: NetworkImage(img), fit: BoxFit.cover)));
+      }
     } else {
       return SizedBox(
         height: 0,

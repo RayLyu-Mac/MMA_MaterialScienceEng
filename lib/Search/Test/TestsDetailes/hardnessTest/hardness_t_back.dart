@@ -17,9 +17,6 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
   double _screenH;
   List<testdetailData> testBGdetail = testdetailData().detailL();
   List<Widget> pages = [];
-
-  // (page1(),page2(),page3(),page4()) //
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

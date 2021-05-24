@@ -4,6 +4,7 @@ import 'package:mma_mse/user_note.dart';
 import '../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/NikonMicro/NikonMain.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMain.dart';
 
 class NikonMicro extends StatefulWidget {
   final String location;
@@ -86,13 +87,13 @@ class _NikonMicroState extends State<NikonMicro> {
               top: _screenH / 1.8,
               left: _screenWidth / 12,
               buttonName: "Theory",
-              pageTo: tensile_test_bg(),
+              pageTo: metAnalysis(),
             ),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 2 + 16,
               buttonName: "Result",
-              pageTo: tensile_test_bg(),
+              pageTo: metAnalysis(),
             ),
             functionButtonMode(
               top: _screenH / 1.56,
