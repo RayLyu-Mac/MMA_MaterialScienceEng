@@ -31,11 +31,11 @@ class HeroType {
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
           materialColor: Colors.green[700]))
       ..add(HeroType(
-          title: 'Hall Effect',
+          title: 'Meturllgical Analysis',
           pageTo: metAnalysis(),
-          subTitle: 'Find the microstructure property',
+          subTitle: 'Find the microstructure & property',
           image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
-          materialColor: Colors.green[700]));
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/ms.jpg?raw=true',
+          materialColor: Colors.redAccent[700]));
   }
 }
