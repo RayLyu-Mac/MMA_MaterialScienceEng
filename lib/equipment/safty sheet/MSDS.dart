@@ -67,68 +67,139 @@ class _SearchListExampleState extends State<SearchListExample> {
 
   @override
   Widget build(BuildContext context) {
+    String dropdownValue = "Name";
     return new Scaffold(
         key: globalKey,
         appBar: buildAppBar(context),
-        body: SafeArea(
-            child: PrimaryScrollController(
-                controller: controller,
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  height: 60,
+                  width: 240,
+                  child: TextField(
+                    expands: true,
+                    maxLines: null,
+                    controller: _controller,
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                    decoration: new InputDecoration(
+                        border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 3.0, color: Colors.black)),
+                        hintText: "Search...",
+                        hintStyle: new TextStyle(color: Colors.black)),
+                    onChanged: searchOperation,
+                  ),
+                ),
+                Container(
+                  height: 30,
+                  width: 80,
+                  child: DropdownButton(
+                    isExpanded: true,
+                    icon: const Icon(Icons.arrow_downward),
+                    iconSize: 25,
+                    elevation: 16,
+                    value: dropdownValue,
+                    style: const TextStyle(color: Colors.deepPurple),
+                    onChanged: (value) {
+                      setState(() {
+                        dropdownValue = value;
+                        switch (value) {
+                          case "Name":
+                            searchName = true;
+                            _list.clear();
+                            for (var i = 0; i < total.length; i++) {
+                              _list.add(total[i].name);
+                            }
+                            break;
+                          case "Location":
+                            searchLoc = true;
+                            _list.clear();
+                            for (var i = 0; i < total.length; i++) {
+                              _list.add(total[i].location);
+                            }
+                            break;
+                          case "Chemical Formula":
+                            searchChem = true;
+                            _list.clear();
+                            for (var i = 0; i < total.length; i++) {
+                              _list.add(total[i].short);
+                            }
+                            break;
+                        }
+                      });
+                    },
+                    items: <String>["Name", "Location", "Chemical Formula"]
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                )
+              ],
+            ),
+            Expanded(
                 child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: name.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    String listData = name[index];
-                    return new Padding(
-                        padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-                        child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                border:
-                                    Border.all(color: Colors.grey, width: 4)),
-                            child: InkWell(
-                              splashColor: Colors.grey,
-                              onTap: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return SimpleDialog(
-                                        backgroundColor: property[index]
-                                            .level
-                                            .withOpacity(0.9),
-                                        contentPadding: EdgeInsets.fromLTRB(
-                                            _screenWidth / 30,
-                                            _screenH / 30,
-                                            _screenWidth / 50,
-                                            _screenH / 25),
-                                        title: Text(property[index].name),
-                                        children: [
-                                          Text(
-                                              "The Location of the material: " +
-                                                  property[index].location),
-                                          Text(
-                                              "The Chemical Formula the material: " +
-                                                  property[index].short),
-                                          Text("The type of the material: " +
-                                              property[index].type),
-                                          Text("The level of harzard is: " +
-                                              saftyLevel[property[index].level])
-                                        ],
-                                      );
-                                    });
-                              },
-                              child: ListTile(
-                                title: new Text(listData.toString()),
-                                tileColor: property[index].level,
-                              ),
-                            )));
-                  },
-                ))));
+              shrinkWrap: true,
+              itemCount: name.length,
+              itemBuilder: (BuildContext context, int index) {
+                String listData = name[index];
+                return new Padding(
+                    padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.grey, width: 4)),
+                        child: InkWell(
+                          splashColor: Colors.grey,
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return SimpleDialog(
+                                    backgroundColor:
+                                        property[index].level.withOpacity(0.9),
+                                    contentPadding: EdgeInsets.fromLTRB(
+                                        _screenWidth / 30,
+                                        _screenH / 30,
+                                        _screenWidth / 50,
+                                        _screenH / 25),
+                                    title: Text(property[index].name),
+                                    children: [
+                                      Text("The Location of the material: " +
+                                          property[index].location),
+                                      Text(
+                                          "The Chemical Formula the material: " +
+                                              property[index].short),
+                                      Text("The type of the material: " +
+                                          property[index].type),
+                                      Text("The level of harzard is: " +
+                                          saftyLevel[property[index].level])
+                                    ],
+                                  );
+                                });
+                          },
+                          child: ListTile(
+                            title: new Text(listData.toString()),
+                            tileColor: property[index].level,
+                          ),
+                        )));
+              },
+            ))
+          ],
+        ));
   }
 
   Widget buildAppBar(BuildContext context) {
-    String dropdownValue = "Name";
     return new AppBar(
-        toolbarHeight: 80,
+        backgroundColor: Colors.black,
+        toolbarHeight: 60,
         centerTitle: true,
         title: Column(
           children: [
@@ -136,27 +207,6 @@ class _SearchListExampleState extends State<SearchListExample> {
             SizedBox(
               height: 10,
             ),
-            Container(
-              height: 40,
-              width: 240,
-              child: TextField(
-                expands: true,
-                maxLines: null,
-                controller: _controller,
-                style: new TextStyle(
-                  fontSize: _screenH / 35,
-                  color: Colors.black,
-                ),
-                decoration: new InputDecoration(
-                    border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3.0, color: Colors.black)),
-                    hintText: "Search...",
-                    hintStyle: new TextStyle(color: Colors.white)),
-                onChanged: searchOperation,
-              ),
-            )
           ],
         ),
         actions: <Widget>[
@@ -177,56 +227,6 @@ class _SearchListExampleState extends State<SearchListExample> {
               });
             },
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 30,
-            width: 50,
-            child: DropdownButton(
-              isExpanded: true,
-              icon: const Icon(Icons.arrow_downward),
-              iconSize: 25,
-              elevation: 16,
-              value: dropdownValue,
-              style: const TextStyle(color: Colors.deepPurple),
-              onChanged: (value) {
-                setState(() {
-                  dropdownValue = value;
-                  switch (value) {
-                    case "Name":
-                      searchName = true;
-                      _list.clear();
-                      for (var i = 0; i < total.length; i++) {
-                        _list.add(total[i].name);
-                      }
-                      break;
-                    case "Location":
-                      searchLoc = true;
-                      _list.clear();
-                      for (var i = 0; i < total.length; i++) {
-                        _list.add(total[i].location);
-                      }
-                      break;
-                    case "Chemical Formula":
-                      searchChem = true;
-                      _list.clear();
-                      for (var i = 0; i < total.length; i++) {
-                        _list.add(total[i].short);
-                      }
-                      break;
-                  }
-                });
-              },
-              items: <String>["Name", "Location", "Chemical Formula"]
-                  .map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-            ),
-          )
         ]);
   }
 
