@@ -74,6 +74,8 @@ class _SearchListExampleState extends State<SearchListExample> {
         body: Column(
           children: [
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   height: 60,
