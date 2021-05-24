@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/floors/floor1.dart';
 import 'package:page_transition/page_transition.dart';
 import 'dart:core';
 import '../testDetailMode.dart';
+import 'package:mma_mse/customTile.dart';
 
 Map<String, String> document = {
   "1":
@@ -52,16 +54,10 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
   Drawer _htSideMenue() => Drawer(
         child: ListView(children: <Widget>[
           DrawerHeader(child: Text('Hardness Test')),
-          ListTile(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: pages[0],
-                      type: PageTransitionType.leftToRight));
-            },
-            title: Text('Definition of hardness'),
+          customListTile(
+            name: "Definiton of Hardness",
+            pageTo: 0,
+            fonts: 13,
           ),
           ListTile(
             onTap: () {

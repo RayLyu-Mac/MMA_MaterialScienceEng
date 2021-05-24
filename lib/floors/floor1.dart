@@ -44,24 +44,24 @@ class _floor1State extends State<floor1> {
               style: TextStyle(fontSize: _screenH / 30),
             )),
             ExpansionTile(title: Text("Mechanical Lab"), children: [
-              customListTile(
+              floor1customListTile(
                 name: "UTM Machine",
                 pageTo: mech_lab(),
                 fonts: _screenH / 45,
               ),
-              customListTile(
+              floor1customListTile(
                 name: "Rockwell",
                 pageTo: mech_lab(),
                 fonts: _screenH / 45,
               ),
             ]),
             ExpansionTile(title: Text("Thermo Lab"), children: [
-              customListTile(
+              floor1customListTile(
                 name: "UTM Machine",
                 pageTo: mech_lab(),
                 fonts: _screenH / 45,
               ),
-              customListTile(
+              floor1customListTile(
                 name: "Rockwell",
                 pageTo: mech_lab(),
                 fonts: _screenH / 45,
@@ -209,8 +209,8 @@ class _floor1State extends State<floor1> {
   }
 }
 
-class customListTile extends StatelessWidget {
-  const customListTile(
+class floor1customListTile extends StatelessWidget {
+  const floor1customListTile(
       {@required this.name, @required this.pageTo, @required this.fonts, key})
       : super(key: key);
   final String name;
