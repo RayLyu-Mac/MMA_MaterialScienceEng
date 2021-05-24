@@ -33,45 +33,60 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
         appBar: AppBar(
           title: Text("Sample demonstration"),
         ),
-        body: Container(
-          padding: EdgeInsets.fromLTRB(_screenWidth / 30, _screenH / 40,
-              _screenWidth / 30, _screenH / 40),
-          child: ListView.separated(
-              separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
-                  height: 15,
-                );
-              },
-              controller: controller,
-              itemCount: grindSample.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Row(
-                  children: [
-                    Container(
-                        constraints: BoxConstraints.expand(
-                            width: _screenWidth / 4, height: _screenH / 5),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(grindSample[index].sampleImg),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(10),
-                        )),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(grindSample[index].lev.toString()),
-                    Container(
-                        constraints: BoxConstraints.expand(
-                            width: _screenWidth / 4, height: _screenH / 5),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(grindSample[index].microImg),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(10),
-                        ))
-                  ],
-                );
-              }),
+        body: Column(
+          children: [
+            Text("The Picture of grinded sample"),
+            Text(
+                "Sample Img               SiC Grit Paper                    MicroImg (under400X) "),
+            Expanded(
+                child: Container(
+              padding: EdgeInsets.fromLTRB(
+                  _screenWidth / 30, 0, _screenWidth / 30, 0),
+              child: ListView.separated(
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      height: 2,
+                    );
+                  },
+                  controller: controller,
+                  itemCount: grindSample.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Row(
+                      children: [
+                        Container(
+                            constraints: BoxConstraints.expand(
+                                width: _screenWidth / 2.5,
+                                height: _screenH / 4.5),
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      grindSample[index].sampleImg),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(10),
+                            )),
+                        SizedBox(
+                          width: _screenWidth / 30,
+                        ),
+                        Text(grindSample[index].lev.toString()),
+                        SizedBox(
+                          width: _screenWidth / 30,
+                        ),
+                        Container(
+                            constraints: BoxConstraints.expand(
+                                width: _screenWidth / 2.5,
+                                height: _screenH / 4.5),
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image:
+                                      NetworkImage(grindSample[index].microImg),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(10),
+                            ))
+                      ],
+                    );
+                  }),
+            ))
+          ],
         ));
   }
 }
