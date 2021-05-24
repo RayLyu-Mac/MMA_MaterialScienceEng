@@ -31,46 +31,46 @@ String backImg =
     "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/bg.jpg?raw=true";
 List<Widget> pages = [
   pageMode(
-      doucment: document,
+      content: document.values.toList()[0],
       docNumber: "Sample Introduction System",
       back_img: backImg,
       title: "Sample Introduction System"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[1],
       docNumber: "Excitation Source",
       back_img: backImg,
       title: "Excitation Source"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[2],
       docNumber: "Spectrometer",
       back_img: backImg,
       title: "Spectrometer"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[3],
       docNumber: "Detection System",
       back_img: backImg,
       title: "Detection System"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[4],
       docNumber: "Data Acquisition and Processing",
       back_img: backImg,
       title: "Data Acquisition and Processing"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[5],
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpBlankCali.png?raw=true",
       docNumber: "Blank Result Expected",
       back_img: backImg,
       title: "Blank Result Expected"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[6],
       docNumber: "Reason one: Natural Interference",
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpNaturaI.png?raw=true",
       back_img: backImg,
       title: "Reason one: Natural Interference"),
   pageMode(
-      doucment: document,
+      content: document.values.toList()[7],
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpCarry.png?raw=true",
       docNumber: "Reason two: Carry Over or Memory Effect",

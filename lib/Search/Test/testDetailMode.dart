@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class pageMode extends StatefulWidget {
-  final Map<String, String> doucment;
+  final String content;
   final String back_img;
   final String title;
   final String addOnImg;
@@ -10,8 +10,8 @@ class pageMode extends StatefulWidget {
   pageMode(
       {@required this.title,
       @optionalTypeArgs this.wholeImg,
-      @required this.doucment,
       @required this.back_img,
+      @optionalTypeArgs this.content,
       @optionalTypeArgs this.docNumber,
       @optionalTypeArgs this.addOnImg,
       Key key})
@@ -78,9 +78,7 @@ class _pageModeState extends State<pageMode> {
                   height: _screenH / 50,
                 ),
                 Text(
-                  widget.doucment[widget.docNumber != null
-                      ? widget.docNumber
-                      : widget.title],
+                  widget.content != null ? widget.content : "Error",
                   style: TextStyle(
                       fontSize: _screenH / 42,
                       color: Colors.black,

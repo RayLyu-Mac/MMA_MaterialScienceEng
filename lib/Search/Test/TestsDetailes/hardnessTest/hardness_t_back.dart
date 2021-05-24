@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/floors/floor1.dart';
-import 'package:page_transition/page_transition.dart';
+import 'hardnessTBGData.dart';
 import 'dart:core';
-import '../testDetailMode.dart';
+import '../../testDetailMode.dart';
 import 'package:mma_mse/customTile.dart';
-
-Map<String, String> document = {
-  "1":
-      "Hardness is defined as the resistance of metal to plastic deformation, ususally by indentation",
-  "2":
-      "Mainly divided into micro and macro \nMicro: \nVickers: 10grams up to 1kg \nKnoop: 10grams up to 1kg \n \nMacro: \nVickers: 1kg - 150kg\nRockwell: Superficial(15N,30N,45N or A,B,C Scale)\nBrinell: 3000kg",
-  "3":
-      "•Can be applied to thick to thin coatings and on bulk from hard to sofr material\n•By using series of formula, hardness and ealstic modulus are calculated in a fast measurement",
-  "4":
-      "•Applied force and indentation depth are measured dynamically during a load-unload cycle\n•Hardness and ealstic modulus are calculated directly from the resultant force-displacement curve",
-  "5":
-      "On a surface covered by thin layers/coatings, the maximum depth of the indentation must be lower than 10% of total depth of the voering to avoid influence of the substrate"
-};
+import 'package:flutter/services.dart';
 
 class hardness_test_bg extends StatefulWidget {
   hardness_test_bg({Key key}) : super(key: key);
@@ -28,20 +15,9 @@ class hardness_test_bg extends StatefulWidget {
 class _hardness_test_bgState extends State<hardness_test_bg> {
   double _screenWidth;
   double _screenH;
-  List<Widget> pages = [
-    pageMode(
-        doucment: document,
-        docNumber: "1",
-        back_img: "assest/test/hdtbg1.jpg",
-        title: "Definition of Hardness"),
-    pageMode(
-      doucment: document,
-      docNumber: "2",
-      back_img: "assest/test/hdtbg1.jpg",
-      title: "Instrumented Hardness Test",
-      addOnImg: "assest/search/direction/emaf.jpg",
-    )
-  ];
+  List<testdetailData> testBGdetail = testdetailData().detailL();
+  List<Widget> pages = [];
+
   // (page1(),page2(),page3(),page4()) //
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
@@ -51,35 +27,43 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  Drawer _htSideMenue() => Drawer(
-        child: ListView(children: <Widget>[
-          DrawerHeader(child: Text('Hardness Test')),
-          customListTile(
-            name: "Definiton of Hardness",
-            pageTo: 0,
-            fonts: 13,
-          ),
-          ListTile(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: pages[1],
-                      type: PageTransitionType.leftToRight));
-            },
-            title: Text('Hardness test types'),
-          ),
-        ]),
-      );
+  @override
+  void initState() {
+    super.initState();
+
+    for (var j = 0; j < testBGdetail.length; j++) {
+      pages.add(pageMode(
+        title: testBGdetail[j].title,
+        content: testBGdetail[j].content,
+        back_img: testBGdetail[j].backImg,
+        addOnImg: testBGdetail[j].addOnImg,
+      ));
+    }
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
     final PageController controller = PageController(initialPage: 0);
+    Drawer _htSideMenue() => Drawer(
+          child: ListView(children: <Widget>[
+            DrawerHeader(child: Text('Hardness Test')),
+            for (var j = 0; j < testBGdetail.length; j++)
+              customListTile(
+                controller: controller,
+                name: testBGdetail[j].title,
+                pageTo: j,
+                fonts: 13,
+              ),
+          ]),
+        );
     return Scaffold(
       drawer: Theme(
         data: ThemeData(
-          canvasColor: Colors.white.withOpacity(0.6),
+          canvasColor: Colors.white.withOpacity(0.8),
         ),
         child: Container(width: 220, child: _htSideMenue()),
       ),

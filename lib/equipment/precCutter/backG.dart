@@ -53,7 +53,7 @@ class _precisionBladeState extends State<precisionBlade> {
           for (var i = 0; i < img.length; i++)
             pageMode(
                 title: blades.keys.toList()[i],
-                doucment: blades,
+                content: blades.values.toList()[i],
                 back_img: img[i])
         ],
       ),

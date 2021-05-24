@@ -26,42 +26,42 @@ String back_img =
     "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/bg.jpg?raw=true";
 final List<Widget> pages = [
   pageMode(
-    doucment: data,
+    content: data.values.toList()[0],
     back_img: back_img,
     title: "CW12-50",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/cw12.jpg?raw=true",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[1],
     back_img: back_img,
     title: "51-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/51met.jpg?raw=true",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[2],
     back_img: back_img,
     title: "52-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/52met.jpg?raw=true",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[3],
     back_img: back_img,
     title: "53-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/53met.jpg?raw=true",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[4],
     back_img: back_img,
     title: "54-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/54met.jpg?raw=true",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[5],
     back_img: back_img,
     title: "10S30",
     addOnImg:

@@ -20,17 +20,17 @@ Map<String, String> data = {
 final String back_img = "assest/test/hdtbg1.jpg";
 final List<Widget> pages = [
   pageMode(
-    doucment: data,
+    content: data.values.toList()[0],
     back_img: back_img,
     title: "Tests Standard",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[1],
     back_img: back_img,
     title: "Ductile to Brittle Transition",
   ),
   pageMode(
-    doucment: data,
+    content: data.values.toList()[2],
     back_img: back_img,
     title: "Factors May Affect the Test",
   ),
