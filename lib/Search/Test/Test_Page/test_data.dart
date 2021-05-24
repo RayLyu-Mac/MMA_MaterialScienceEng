@@ -28,6 +28,13 @@ class HeroType {
           subTitle: 'Find the microstructure property',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
+          materialColor: Colors.green[700]))
+      ..add(HeroType(
+          title: 'Hall Effect',
+          pageTo: tensile_test_bg(),
+          subTitle: 'Find the microstructure property',
+          image:
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
           materialColor: Colors.green[700]));
   }
 }
