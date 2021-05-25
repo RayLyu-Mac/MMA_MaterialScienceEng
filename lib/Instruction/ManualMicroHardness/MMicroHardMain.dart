@@ -15,7 +15,6 @@ class ManualMicHardnessInstru extends StatefulWidget {
 
 class _ManualMicHardnessInstruState extends State<ManualMicHardnessInstru> {
   List _instructionList = List<video>();
-  double _screenWidth;
   double _screenH;
   final ScrollController controller = ScrollController();
   List titles = [];
@@ -36,7 +35,6 @@ class _ManualMicHardnessInstruState extends State<ManualMicHardnessInstru> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
   }
 
