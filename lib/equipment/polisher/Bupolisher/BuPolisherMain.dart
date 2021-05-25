@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/Instruction/Cutter/BuehlerCutter/BcutterMain.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
@@ -82,7 +83,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
               buttonName: "Instruction",
               warnNote:
                   "•Securely hold the sample as it could become a projectile if the polishing wheel catches the sample.",
-              pageTo: BuehlerPolisherInstru(),
+              pageTo: BuehlerCutterInstru(),
             ),
             functionButtonMode(
               top: _screenH / 1.8,
@@ -94,7 +95,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Dash Board Buttons",
-                pageTo: BuehlerPolisherInstru()),
+                pageTo: BuehlerCutterInstru()),
             functionButtonMode(
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,

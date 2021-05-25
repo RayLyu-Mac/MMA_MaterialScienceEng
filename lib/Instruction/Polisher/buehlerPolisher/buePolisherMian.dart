@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-// import '../abrasive_cutter/cutterData.dart';
 import 'buePolisherData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTileScroll.dart';
 
-// ignore: camel_case_types
-class BuehlerPolisherInstru extends StatefulWidget {
+class BehPolisherInstru extends StatefulWidget {
   final video videoType;
-  const BuehlerPolisherInstru({Key key, this.videoType}) : super(key: key);
+  const BehPolisherInstru({Key key, this.videoType}) : super(key: key);
 
   @override
-  _BuehlerPolisherInstruState createState() => _BuehlerPolisherInstruState();
+  _BehPolisherInstruState createState() => _BehPolisherInstruState();
 }
 
-class _BuehlerPolisherInstruState extends State<BuehlerPolisherInstru> {
+class _BehPolisherInstruState extends State<BehPolisherInstru> {
   List _instructionList = List<video>();
+  double _screenWidth;
   double _screenH;
   final ScrollController controller = ScrollController();
+  List titles = [];
+
   @override
   void initState() {
     super.initState();
     _instructionList = video().videoList();
+    for (var j = 0; j < _instructionList.length; j++) {
+      titles.add(_instructionList[j].title);
+    }
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -31,31 +35,21 @@ class _BuehlerPolisherInstruState extends State<BuehlerPolisherInstru> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  List steps = [
-    "step 1: Brifely introduction of Polisher" //0:49-1:12
-        "Step 2: Dash Board Introduction", //1:13-1:51
-    "Step 3: Polish with 3-Micron Diamond Paste", //1:52-2:27
-    "step 4: Washing and Rinsing the sample after each polish " //2:28-2:51
-        "step 5: Dry the sample " //2:53-3:08
-        "step 6: Polish with 1-Micron Diamond Paste" //3:08-4:04
-        "step 7: Washing and Rinsing the sample after each polish " //4:05-4:29
-        "step 8: Dry the sample " //4:30-4:42
-        "step 9: Clean the Polisher" //4:43-5:16
-  ];
   @override
   Widget build(BuildContext context) {
-    Drawer bpolisherInstru() => Drawer(
+    Drawer behlerPolisherInstru() => Drawer(
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For Manual Polisher"),
+                child: Text("Instruction For Automatic Polisher"),
               ),
-              for (var i = 0; i < steps.length; i++)
+              for (var i = 0; i < _instructionList.length; i++)
                 ScrollcustomListTile(
-                    name: steps[i],
+                    name: titles[i],
                     pageTo: i - 1,
                     fonts: 13,
                     controller: controller),
@@ -66,22 +60,22 @@ class _BuehlerPolisherInstruState extends State<BuehlerPolisherInstru> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Manual Polisher instruction",
+            "Automatic Polisher Instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: bpolisherInstru(),
+        drawer: behlerPolisherInstru(),
         body: SafeArea(
           child: ListView.builder(
+            itemExtent: 325,
             controller: controller,
-            itemExtent: 335,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 child: Card(
                   color: _instructionList[index].materialcolor,
-                  margin: EdgeInsets.fromLTRB(24, 16, 24, 8),
+                  margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
                   elevation: 5,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0)),
@@ -89,25 +83,25 @@ class _BuehlerPolisherInstruState extends State<BuehlerPolisherInstru> {
                   child: Stack(
                     children: [
                       Positioned(
-                          top: 270,
+                          top: 265,
                           left: 5,
                           child: Text(
                             _instructionList[index].title,
                             style: TextStyle(
-                                fontSize: _screenH / 50,
+                                fontSize: _screenH / 47,
                                 fontWeight: FontWeight.bold),
                           )),
                       Positioned(
-                          top: 290,
+                          top: 285,
                           left: 5,
                           child: Text(
                             _instructionList[index].subtitle,
-                            style: TextStyle(fontSize: _screenH / 60),
+                            style: TextStyle(fontSize: _screenH / 58),
                           )),
                       Positioned(
                           top: 0,
                           child: Container(
-                            height: 265,
+                            height: 260,
                             child: YoutubePlayer(
                               controller:
                                   _instructionList[index].videoController,

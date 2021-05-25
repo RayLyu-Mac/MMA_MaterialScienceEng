@@ -7,6 +7,7 @@ Color grey = Colors.grey[300];
 Color red = Colors.red[300];
 Color redD = Colors.redAccent;
 Color white = Colors.white70;
+String locJHE240246A = "JHE-240 /246/A";
 Map<Color, String> saftyLevel = {
   green: "General Storage can be stored on higher shelves",
   yellow:
@@ -316,6 +317,55 @@ class msdsData {
           name: "Dioctyl Phthalate",
           level: green,
           type: "Organic",
-          short: "C₆H₄(CO₂C₈H₁₇)₂"));
+          short: "C₆H₄(CO₂C₈H₁₇)₂"))
+      ..add(msdsData(
+          location: "JHE-240 /246/A",
+          name: "Ferric Ammonium Sulphate",
+          level: green,
+          type: "Organic",
+          short: "NH₄Fe(SO₄)₂"))
+      ..add(msdsData(
+          location: "JHE-240 /246/A",
+          name: "Ferric Chloride",
+          level: white,
+          type: "Organic",
+          short: "FeCl3"))
+      ..add(msdsData(
+          location: "JHE-240 /246/A",
+          name: "Ferric Nitrate",
+          level: yellow,
+          type: "Organic",
+          short: "Fe(NO3)3"))
+      ..add(msdsData(
+          location: "JHE-240 /246/A",
+          name: "Ferric Oxide",
+          level: green,
+          type: "Solid",
+          short: "Fe2O3"))
+      ..add(msdsData(
+          location: "JHE-240 /246/A",
+          name: "Ferrous Oxide",
+          level: green,
+          type: "Solid",
+          short: "FeO"))
+      ..add(
+          msdsData(location: "JHE-240 /246/A", name: "Ferrous Oxalate", level: green, type: "Solid", short: "FeC2O4"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Ferrous Oxide", level: green, type: "Solid", short: "FeO"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Ferrous Sulphate", level: green, type: "Solid", short: "FeSO4"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Ferrous Sulphate Hetahydrate", level: green, type: "Solid", short: "FeSO4 5H2O"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Ferrous Sulphide", level: green, type: "Solid", short: "FeS"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Lithium Hydroxide", level: white, type: "Solid", short: "Li(OH)"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Lithium Metaborate", level: green, type: "Solid", short: "LiBO2"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Lithium Nitrate", level: white, type: "Solid", short: "LiNO3"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Chloride", level: green, type: "Solid", short: "MgCl2"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Chloride Hexahydrate", level: green, type: "Solid", short: "MgCl2 6H2O"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Dioxide", level: yellow, type: "Solid", short: "MgO2"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Oxide", level: green, type: "Solid", short: "MgO"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Perchlorate Anhydrous", level: yellow, type: "Solid", short: "Mg(CLO4)2)"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Sulfate heptahydrate", level: green, type: "Solid", short: "MgSO4 6H2O"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Magnesium Sulphate", level: green, type: "Solid", short: "MgSO4"))
+      ..add(msdsData(location: "JHE-240 /246/A", name: "Manganese Dioxide", level: yellow, type: "Solid", short: "MgO2"))
+      ..add(msdsData(location: locJHE240246A, name: "Mercury Chloride", level: blue, type: "Solid", short: "HgCl2"))
+      ..add(msdsData(location: locJHE240246A, name: "Mercury Iodide", level: blue, type: "Solid", short: "Hgl2"));
   }
 }

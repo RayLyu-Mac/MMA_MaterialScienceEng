@@ -120,6 +120,11 @@ class _equb_mainState extends State<equb_main> {
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
+                  name: equipments[20],
+                  pageTo: 20,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
                   name: equipments[14],
                   pageTo: 14,
                   fonts: 13,
@@ -144,6 +149,11 @@ class _equb_mainState extends State<equb_main> {
                 controller: controller),
           ]),
           ExpansionTile(title: Text("Polisher"), children: [
+            ScrollcustomListTile(
+                name: equipments[19],
+                pageTo: 19,
+                fonts: 13,
+                controller: controller),
             ScrollcustomListTile(
                 name: equipments[8],
                 pageTo: 8,

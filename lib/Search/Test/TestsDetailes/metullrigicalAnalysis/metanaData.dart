@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
+import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
+import 'package:mma_mse/equipment/Microscope/Nikon/NikonMicroMain.dart';
 
 class testdetailData {
   String title;
@@ -31,6 +33,30 @@ class testdetailData {
           backImg: bImg,
           pageTo: ManualGrinder(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Step3: Polish the sample",
+          content:
+              "hen the specimen will be polished by 1 micron polishing wheel with which is better for removing the scratches and deformation on the surface of testing. The wheel speed is around 100 RPM. Lubricant was applied to the surface of specimen to decrease the friction between the paper and the specimen",
+          backImg: bImg,
+          pageTo: BuehlerPolisherMain(),
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Step4: Etching",
+          content:
+              "Etching was performed after the polish. 1.5% of Nital Solution (which is the nitrate acid as solute and alcohol as the solution[9]) was used, and we clipped the specimen and immersed the specimen’s surface we want on into the solution for 20s, with shaking of the beaker to make sure all the surface got etched.",
+          backImg: bImg,
+          pageTo: ManualGrinder(),
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Step5: Microscope Observation",
+          content:
+              "The images of the microstructures were analyzed using Image J, an image processing software suite developed at the National Institutes of Health and the Laboratory for Optical and Computational Instrumentation.",
+          backImg: bImg,
+          pageTo: NikonMicro(),
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/niko.jpg?raw=true"));
   }
 }

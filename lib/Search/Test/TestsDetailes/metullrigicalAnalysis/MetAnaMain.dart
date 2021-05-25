@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'metanaData.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/customTile.dart';
 
 class metAnalysis extends StatefulWidget {
   metAnalysis({Key key}) : super(key: key);
@@ -16,6 +17,7 @@ class _metAnalysisState extends State<metAnalysis> {
   double _screenH;
   List<testdetailData> testBGdetail = testdetailData().detailL();
   List<Widget> pages = [];
+  List listtile = [];
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -28,6 +30,7 @@ class _metAnalysisState extends State<metAnalysis> {
     super.initState();
 
     for (var j = 0; j < testBGdetail.length; j++) {
+      listtile.add(testBGdetail[j].title);
       pages.add(pageMode(
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
@@ -45,10 +48,24 @@ class _metAnalysisState extends State<metAnalysis> {
   @override
   Widget build(BuildContext context) {
     final PageController controller = PageController(initialPage: 0);
+    Drawer meturAna() => Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(child: Text("Process For Meturllgical Analysis")),
+              for (var k = 0; k < listtile.length; k++)
+                customListTile(
+                    name: listtile[k],
+                    pageTo: k,
+                    fonts: 13,
+                    controller: controller)
+            ],
+          ),
+        );
     return Scaffold(
+        drawer: meturAna(),
         body: PageView(
-      controller: controller,
-      children: pages,
-    ));
+          controller: controller,
+          children: pages,
+        ));
   }
 }
