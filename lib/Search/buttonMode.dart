@@ -83,11 +83,12 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
+                    gradient: SweepGradient(colors: [
+                      Color(0xFFFFFF00),
+                      Color(0xFF00FF00),
+                      Color(0xFF00FFFF)
+                    ], startAngle: 0.0, endAngle: 3 * 3.14),
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                          offset: const Offset(4, 4), color: Colors.blue[100])
-                    ],
                     image: DecorationImage(
                         image: NetworkImage(widget.backImg),
                         fit: BoxFit.cover)),

@@ -31,13 +31,19 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text("Sample demonstration"),
         ),
         body: Column(
           children: [
-            Text("The Picture of grinded sample"),
             Text(
-                "Sample Img               SiC Grit Paper                    MicroImg (under400X) "),
+              "The Picture of grinded sample",
+              style: TextStyle(
+                  fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 15,
+            ),
             Expanded(
                 child: Container(
               padding: EdgeInsets.fromLTRB(
@@ -45,7 +51,7 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
               child: ListView.separated(
                   separatorBuilder: (BuildContext context, int index) {
                     return SizedBox(
-                      height: 2,
+                      height: 4,
                     );
                   },
                   controller: controller,
@@ -53,10 +59,14 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
                   itemBuilder: (BuildContext context, int index) {
                     return Row(
                       children: [
+                        Text(grindSample[index].lev.toString()),
+                        SizedBox(
+                          width: _screenWidth / 30,
+                        ),
                         Container(
                             constraints: BoxConstraints.expand(
-                                width: _screenWidth / 2.5,
-                                height: _screenH / 4.5),
+                                width: _screenWidth / 2.74,
+                                height: _screenH / 5.2),
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: NetworkImage(
@@ -67,14 +77,10 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
                         SizedBox(
                           width: _screenWidth / 30,
                         ),
-                        Text(grindSample[index].lev.toString()),
-                        SizedBox(
-                          width: _screenWidth / 30,
-                        ),
                         Container(
                             constraints: BoxConstraints.expand(
-                                width: _screenWidth / 2.5,
-                                height: _screenH / 4.5),
+                                width: _screenWidth / 2.74,
+                                height: _screenH / 5.2),
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image:
@@ -94,56 +100,56 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
 class samples {
   String microImg;
   String sampleImg;
-  int lev;
+  String lev;
 
   samples({this.lev, this.sampleImg, this.microImg});
   List<samples> grindsampledata() {
     List data = List<samples>();
     return data
       ..add(samples(
-          lev: 80,
+          lev: "A: 80  ",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/80sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/80micro.tif.jpg?raw=true"))
       ..add(samples(
-          lev: 180,
+          lev: "B:180 ",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/180sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/180micro.jpg?raw=true"))
       ..add(samples(
-          lev: 240,
+          lev: "C:240",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/240sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/240micro.jpg?raw=true"))
       ..add(samples(
-          lev: 320,
+          lev: "D:320",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/320sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/320micro.jpg?raw=true"))
       ..add(samples(
-          lev: 400,
+          lev: "E:400",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/400sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/400micro.jpg?raw=true"))
       ..add(samples(
-          lev: 600,
+          lev: "F:600",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/600sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/600micro.jpg?raw=true"))
       ..add(samples(
-          lev: 800,
+          lev: "G:800",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/800sample.jpg?raw=true",
           microImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/800micro.jpg?raw=true"))
       ..add(samples(
-          lev: 1200,
+          lev: "H1200",
           sampleImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/1200sample.jpg?raw=true",
           microImg:
