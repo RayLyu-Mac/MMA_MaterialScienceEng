@@ -18,6 +18,7 @@ import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/MountPress/MET/METMain.dart';
 import 'package:mma_mse/equipment/MountPress/Strues/StruesMain.dart';
 import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
+import 'package:mma_mse/equipment/manualPolisher/manual_polisher_MainPage.dart';
 
 class HeroType {
   String title;
@@ -199,7 +200,7 @@ class HeroType {
           fText: 'Avaiable on JHE 245',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
-          pageTo: ManualGrinder(),
+          pageTo: manual_polisher(),
           materialColor: Colors.blueGrey[400]));
   }
 }
