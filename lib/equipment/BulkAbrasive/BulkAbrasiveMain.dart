@@ -7,6 +7,7 @@ import 'backG.dart';
 import 'package:mma_mse/Instruction/abrasive_cutter/cutterMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:flutter/services.dart';
 
 class BulkAbrasive_Main extends StatefulWidget {
   final String location;
@@ -30,6 +31,15 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override

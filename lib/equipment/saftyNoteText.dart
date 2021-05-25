@@ -14,12 +14,19 @@ class warning extends StatefulWidget {
 class _warningState extends State<warning> with SingleTickerProviderStateMixin {
   double _screenWidth;
   double _screenH;
+  double adjust;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.83;
+      adjust = 0.83;
+    } else {
+      adjust = 1;
+    }
   }
 
   @override
@@ -27,7 +34,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
     return Center(
         child: Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 1.21, height: _screenH / 1.45),
+                width: _screenWidth / 1.21, height: _screenH / 1.45 / adjust),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(6.0),
@@ -56,7 +63,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                       ),
                       Text(
                         widget.warning_note,
-                        style: TextStyle(fontSize: _screenH / 38),
+                        style: TextStyle(fontSize: _screenH / 40),
                       ),
                       SizedBox(
                         height: _screenH / 55,

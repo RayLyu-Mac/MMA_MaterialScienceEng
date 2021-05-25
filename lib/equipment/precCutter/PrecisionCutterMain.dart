@@ -6,6 +6,7 @@ import 'backG.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/PrecisionCutter/PCutterMain.dart';
 import 'PrecutterDashB.dart';
+import 'package:flutter/services.dart';
 
 class PcutterMain extends StatefulWidget {
   PcutterMain(
@@ -15,6 +16,7 @@ class PcutterMain extends StatefulWidget {
       : super(key: key);
   final String location;
   final String emailTo;
+
   @override
   _PcutterMainState createState() => _PcutterMainState();
 }
@@ -22,12 +24,27 @@ class PcutterMain extends StatefulWidget {
 class _PcutterMainState extends State<PcutterMain> {
   double _screenWidth;
   double _screenH;
-
+  double adjust;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth < 0.5) {
+      _screenH = _screenH * 1.3;
+      adjust = 0.9;
+    } else {
+      adjust = 1;
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override

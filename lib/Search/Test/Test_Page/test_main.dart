@@ -42,7 +42,7 @@ class _test_avaState extends State<test_ava> {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
-                    margin: EdgeInsets.fromLTRB(24, 16, 24, 8),
+                    margin: EdgeInsets.fromLTRB(20, 14, 20, 8),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0)),
@@ -68,8 +68,8 @@ class _test_avaState extends State<test_ava> {
                           ),
                         ),
                         Positioned(
-                          top: 185.0,
-                          left: 32.0,
+                          top: 183.0,
+                          left: 20.0,
                           width: _screenWidthAdjustment,
                           child: Hero(
                               tag: 'text' + _heroTypeList[index].title,
@@ -86,7 +86,7 @@ class _test_avaState extends State<test_ava> {
                         ),
                         Positioned(
                             top: 213.0,
-                            left: 32.0,
+                            left: 20.0,
                             width: _screenWidthAdjustment,
                             child: Hero(
                                 tag: 'subtitle' + _heroTypeList[index].title,

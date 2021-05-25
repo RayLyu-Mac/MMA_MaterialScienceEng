@@ -33,11 +33,20 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
 
   double _screenWidth;
   double _screenH;
+  double adjust;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth < 0.5) {
+      _screenH = _screenH * 1.35;
+      adjust = 0.75;
+    } else {
+      adjust = 1;
+    }
   }
 
   @override
@@ -64,10 +73,10 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
               )),
           Positioned(
               top: _screenWidth / 40,
-              left: _screenH / 15,
+              left: _screenH / 15 * adjust,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenH / 0.65, height: _screenWidth / 2.3),
+                    width: _screenH / 0.63, height: _screenWidth / 2.4),
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(16.0),

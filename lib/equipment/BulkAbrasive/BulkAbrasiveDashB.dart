@@ -35,11 +35,18 @@ class _automaticModeInterFaceButtonState
 
   double _screenWidth;
   double _screenH;
+  double adjust;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth < 0.5) {
+      _screenH = _screenH * 1.3;
+      adjust = 0.9;
+    } else {
+      adjust = 1;
+    }
   }
 
   @override
@@ -55,7 +62,7 @@ class _automaticModeInterFaceButtonState
               top: _screenWidth / 35,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.1, height: _screenH / 1.4),
+                    width: _screenWidth / 1.1, height: _screenH / 1.5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
@@ -67,7 +74,7 @@ class _automaticModeInterFaceButtonState
           DashButton(
               cardColor: Colors.blue[300],
               instruction: "•The Clamping bed is fed at a continuous speed",
-              left: _screenH / 7,
+              left: _screenH / 7 / adjust,
               stepTitle: "Rapid",
               buttonName: "Rapid",
               top: _screenWidth / 18),
@@ -75,7 +82,7 @@ class _automaticModeInterFaceButtonState
             cardColor: Colors.yellow,
             instruction:
                 "•Used when you are cutting either a thick sample or a very hard sample \nThe clamping bed will move ahead a bit then stop to allow cuttings to be removed then mvoe ahead again and continue to do this until the sample is sectioned",
-            left: _screenH / 7,
+            left: _screenH / 7 / adjust,
             stepTitle: "Pulse",
             top: _screenWidth / 6.5,
             buttonName: "Pulse",

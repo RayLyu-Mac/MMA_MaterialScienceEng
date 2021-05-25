@@ -142,7 +142,24 @@ class _equb_mainState extends State<equb_main> {
                 pageTo: 17,
                 fonts: 13,
                 controller: controller),
-          ])
+          ]),
+          ExpansionTile(title: Text("Polisher"), children: [
+            ScrollcustomListTile(
+                name: equipments[8],
+                pageTo: 8,
+                fonts: 13,
+                controller: controller),
+          ]),
+          ScrollcustomListTile(
+              name: equipments[2],
+              pageTo: 2,
+              fonts: 13,
+              controller: controller),
+          ScrollcustomListTile(
+              name: equipments[4],
+              pageTo: 4,
+              fonts: 13,
+              controller: controller),
         ]));
     return Scaffold(
       appBar: AppBar(
@@ -187,7 +204,7 @@ class _equb_mainState extends State<equb_main> {
                         ),
                         Positioned(
                           top: 225.0,
-                          left: 18.0,
+                          left: 14.0,
                           width: _screenWidthAdjustment,
                           child: Hero(
                               tag: 'text' + _heroTypeList[index].title,
@@ -204,7 +221,7 @@ class _equb_mainState extends State<equb_main> {
                         ),
                         Positioned(
                             top: 253.0,
-                            left: 18.0,
+                            left: 14.0,
                             width: _screenWidthAdjustment,
                             child: Hero(
                                 tag: 'subtitle' + _heroTypeList[index].title,

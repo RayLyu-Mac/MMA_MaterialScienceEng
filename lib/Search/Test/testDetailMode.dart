@@ -27,11 +27,20 @@ class pageMode extends StatefulWidget {
 class _pageModeState extends State<pageMode> {
   double _screenWidth;
   double _screenH;
+  double adjust;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.85;
+      adjust = 0.85;
+    } else {
+      adjust = 1;
+    }
+    ;
   }
 
   @override
@@ -44,7 +53,7 @@ class _pageModeState extends State<pageMode> {
             child: Container(
               child: Image(
                 fit: BoxFit.cover,
-                height: _screenH,
+                height: _screenH / adjust,
                 width: _screenWidth,
                 alignment: Alignment.center,
                 image: NetworkImage(widget.back_img),
@@ -54,10 +63,8 @@ class _pageModeState extends State<pageMode> {
           top: _screenH / 12.5,
           left: _screenWidth / 13,
           child: Container(
-              padding: EdgeInsets.fromLTRB(_screenWidth / 25, _screenH / 60,
-                  _screenWidth / 40, _screenH / 60),
               constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.15, height: _screenH / 1.15),
+                  width: _screenWidth / 1.15, height: _screenH / 1.15 / adjust),
               decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.7),
                   borderRadius: BorderRadius.circular(16.0),
@@ -88,7 +95,7 @@ class _pageModeState extends State<pageMode> {
                   child: Text(
                     widget.content != null ? widget.content : "Error",
                     style: TextStyle(
-                        fontSize: _screenH / 33,
+                        fontSize: _screenH / 37,
                         color: Colors.black,
                         fontFamily: "Raleway",
                         decoration: TextDecoration.none),
@@ -97,7 +104,7 @@ class _pageModeState extends State<pageMode> {
               ])),
         ),
         Positioned(
-            top: _screenH / 1.5,
+            top: _screenH / 1.5 / adjust,
             left: _screenWidth / 5.5,
             child: imgAddOn(
               screenH: _screenH,
