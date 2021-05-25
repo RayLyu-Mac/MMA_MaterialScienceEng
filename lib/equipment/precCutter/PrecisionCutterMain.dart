@@ -28,14 +28,6 @@ class _PcutterMainState extends State<PcutterMain> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth < 0.5) {
-      _screenH = _screenH * 1.3;
-      adjust = 0.9;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override

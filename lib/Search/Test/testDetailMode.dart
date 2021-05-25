@@ -40,7 +40,6 @@ class _pageModeState extends State<pageMode> {
     } else {
       adjust = 1;
     }
-    ;
   }
 
   @override
