@@ -202,7 +202,7 @@ class HeroType {
           fText: 'Avaiable on JHE 245',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
-          pageTo: manual_polisher(),
+          pageTo: ManualGrinder(),
           materialColor: Colors.blueGrey[400]))
       ..add(HeroType(
           title: 'Buehler Manual Polisher',
@@ -212,6 +212,8 @@ class HeroType {
           image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
           pageTo: BuehlerPolisherMain(),
           materialColor: Colors.redAccent))
-      ..add(HeroType(title: 'Buehler Precision Cutter', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true', pageTo: BuehlerCutterMain(), materialColor: Colors.lightBlueAccent));
+      ..add(HeroType(title: 'Buehler Precision Cutter', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true', pageTo: BuehlerCutterMain(), materialColor: Colors.lightBlueAccent))
+      ..add(HeroType(title: 'Manual Polisher', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mpolisher.jpg?raw=true', pageTo: BuehlerPolisherMain(), materialColor: Colors.redAccent))
+      ..add(HeroType(title: 'Etching', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true', pageTo: BuehlerPolisherMain(), materialColor: Colors.redAccent));
   }
 }
