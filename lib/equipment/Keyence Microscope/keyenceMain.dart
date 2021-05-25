@@ -3,7 +3,7 @@ import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/KeyenceMicroscope/keyenceMain.dart';
+import 'package:mma_mse/Instruction/Microscope/Keyence/keyenceMain.dart';
 
 class KeyenceMMain extends StatefulWidget {
   KeyenceMMain({Key key}) : super(key: key);

@@ -3,7 +3,7 @@ import 'package:mma_mse/Search/Search_page/search_main.dart';
 import '../../equipment/UTM/universal_tensile_machine_MainPage.dart';
 import '../../equipment/CharpyImpact/Charpy.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/equipment/BulkAbrasive/BulkAbrasiveDashB.dart';
+import 'package:mma_mse/equipment/cutter/BulkAbrasiveCutter/BulkAbrasiveDashB.dart';
 
 class mech_lab extends StatefulWidget {
   mech_lab({Key key}) : super(key: key);

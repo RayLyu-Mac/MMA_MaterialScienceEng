@@ -3,7 +3,7 @@ import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'AutoPolisherDashBoard.dart';
-import 'package:mma_mse/Instruction/AutomaticPolisher/autoPolisherMain.dart';
+import 'package:mma_mse/Instruction/Polisher/automatic%20Polisher/autoPolisherMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 
 class AutoPolisherMain extends StatefulWidget {

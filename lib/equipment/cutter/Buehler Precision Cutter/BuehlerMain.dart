@@ -5,6 +5,7 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
+import 'package:mma_mse/Instruction/Cutter/BuehlerCutter/BcutterMain.dart';
 
 class BuehlerCutterMain extends StatefulWidget {
   BuehlerCutterMain(
@@ -79,8 +80,9 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 12,
                 buttonName: "Instruction",
-                warnV: "gPepaJjjSRg",
-                pageTo: DigiRWInstr()),
+                warnNote:
+                    "When using the Precision Cutter although there is a safety shield; safety glasses are required.\nPlease be familiar with the parameter you are going to set",
+                pageTo: BuehlerCutterInstru()),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,

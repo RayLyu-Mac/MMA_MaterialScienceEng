@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/user_note.dart';
-import 'package:mma_mse/Instruction/manualPolisher/manualpolisherinstructionMain.dart';
+import 'package:mma_mse/Instruction/Polisher/manualPolisher/manualpolisherinstructionMain.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/LogInRequest/logInRequest.dart';
 import 'package:page_transition/page_transition.dart';

@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/ICP_OES/ICPMain.dart';
 import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
-import "package:mma_mse/equipment/BulkAbrasive/BulkAbrasiveMain.dart";
+import 'package:mma_mse/equipment/cutter/BulkAbrasiveCutter/BulkAbrasiveMain.dart';
 import 'package:mma_mse/equipment/Automatic Micro Hardness Tester/AMHMain.dart';
 import 'package:mma_mse/equipment/CharpyImpact/Charpy.dart';
 import 'package:mma_mse/equipment/Keyence Microscope/keyenceMain.dart';
 import 'package:mma_mse/equipment/manualRW/Rockwell.dart';
 import 'package:mma_mse/equipment/siliconCarbideFurnace/SiCFurnaceMain.dart';
-import 'package:mma_mse/equipment/autoPolisher/autoPolisherMain.dart';
+import 'package:mma_mse/equipment/polisher/automaticPolisher/autoPolisherMain.dart';
 import 'package:mma_mse/equipment/Nikon Microscope/NikonMicroMain.dart';
 import 'package:mma_mse/equipment/blueFurnace/blurFMain.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 import 'package:mma_mse/equipment/digitalRW/digitalRWMain.dart';
 import 'package:mma_mse/equipment/manualMicroHardness/manualMHMain.dart';
-import 'package:mma_mse/equipment/precCutter/PrecisionCutterMain.dart';
+import 'package:mma_mse/equipment/cutter/precCutter/PrecisionCutterMain.dart';
 import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/MountPress/MET/METMain.dart';
 import 'package:mma_mse/equipment/MountPress/Strues/StruesMain.dart';
 import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
-import 'package:mma_mse/equipment/manualPolisher/manual_polisher_MainPage.dart';
+import 'package:mma_mse/equipment/polisher/manualPolisher/manual_polisher_MainPage.dart';
+import 'package:mma_mse/equipment/cutter/Buehler Precision Cutter/BuehlerMain.dart';
+import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
 
 class HeroType {
   String title;
@@ -201,6 +203,15 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
           pageTo: manual_polisher(),
-          materialColor: Colors.blueGrey[400]));
+          materialColor: Colors.blueGrey[400]))
+      ..add(HeroType(
+          title: 'Buehler Manual Polisher',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
+          image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
+          pageTo: BuehlerPolisherMain(),
+          materialColor: Colors.redAccent))
+      ..add(HeroType(title: 'Buehler Precision Cutter', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true', pageTo: BuehlerCutterMain(), materialColor: Colors.lightBlueAccent));
   }
 }

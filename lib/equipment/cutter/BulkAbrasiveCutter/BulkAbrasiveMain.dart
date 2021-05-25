@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'BulkAbrasiveDashB.dart';
 import 'backG.dart';
-import 'package:mma_mse/Instruction/abrasive_cutter/cutterMain.dart';
+import 'package:mma_mse/Instruction/Cutter/AbrasiveCutter/cutterMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/services.dart';
