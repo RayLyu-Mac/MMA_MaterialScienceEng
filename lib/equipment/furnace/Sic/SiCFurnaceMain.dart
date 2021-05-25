@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/user_note.dart';
-import '../functionButtonMode.dart';
+import '../../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
-import 'package:mma_mse/Instruction/SiCFurnace/SiCMain.dart';
+import 'package:mma_mse/Instruction/furnace/SiC/SiCMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMain.dart';
 
 class SiCFurnace extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/user_note.dart';
-import '../functionButtonMode.dart';
+import '../../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/Microscope/Nikon/NikonMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMain.dart';
