@@ -51,6 +51,14 @@ class HeroType {
           materialColor: Colors.amber[800],
           pageTo: tensile_test()))
       ..add(HeroType(
+          title: 'Llyods Tensile Tester',
+          subTitle: 'Apply tensile test to find according aterial property',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
+          pageTo: LlyoldTensileTester(),
+          materialColor: Colors.amber[800]))
+      ..add(HeroType(
           title: 'Manual Rockwell Hardness Tester',
           subTitle: 'Test for material hardness',
           pageTo: hardness_test(),
@@ -60,38 +68,29 @@ class HeroType {
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true',
           materialColor: Colors.blueGrey[600]))
       ..add(HeroType(
-          title: 'ICP-OES',
-          subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
-          pageTo: ICP_OES_Main(),
-          fText:
-              'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true',
-          materialColor: Colors.redAccent[700]))
-      ..add(HeroType(
-          title: 'Automatic Bulk Abrasive Cutter',
-          subTitle: 'Cut the material',
-          fText: 'Avaiable on JHE 242',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true',
-          pageTo: BulkAbrasive_Main(),
-          materialColor: Colors.purple))
-      ..add(HeroType(
-          title: 'Charpy Impact Tester',
-          subTitle: 'Used to measure the relative toughness of a material',
-          fText: 'Avaiable on JHE 242',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true',
-          pageTo: charpy_test(),
-          materialColor: Colors.grey))
-      ..add(HeroType(
           title: 'Automatic Micro-Hardness Tester',
           subTitle: 'Machine Used for Hardness Test',
           fText: 'Avaiable on JHE 242',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true',
           pageTo: AutomaticMicroHardnessMain(),
-          materialColor: Colors.blue))
+          materialColor: Colors.blueGrey[600]))
+      ..add(HeroType(
+          title: 'Digital Rockwell Hardness Tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
+          pageTo: DigitalRWMain(),
+          materialColor: Colors.blueGrey[600]))
+      ..add(HeroType(
+          title: 'Manual MicroHardness tester',
+          subTitle: 'Test the hardness of the material',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
+          pageTo: ManualMicroHardness(),
+          materialColor: Colors.blueGrey[600]))
       ..add(HeroType(
           title: 'Keyence Microscope',
           subTitle: 'Microscope for microstructure analysis',
@@ -99,34 +98,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true',
           pageTo: KeyenceMMain(),
-          materialColor: Colors.blueAccent))
-      ..add(HeroType(
-          title: 'Silicon Carbide Furnace',
-          subTitle:
-              'The High temperature silicon carbide furnace is used when the user needs a temperature higher than 950°C. ',
-          fText: 'Avaiable on JHE 244',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true',
-          pageTo: SiCFurnace(),
-          materialColor: Colors.blueAccent))
-      ..add(HeroType(
-          title: 'Automatic Polisher',
-          subTitle:
-              'The purpose to grind and polish a material is to reveal the microstructure. ',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true',
-          pageTo: AutoPolisherMain(),
-          materialColor: Colors.blueAccent))
-      ..add(HeroType(
-          title: 'Blue Furnace',
-          subTitle:
-              'heat a sample to a high enough temperature to change the microstructure',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true',
-          pageTo: BlueFurnace(),
-          materialColor: Colors.blueAccent))
+          materialColor: Colors.purpleAccent))
       ..add(HeroType(
           title: 'Nikon Microscope',
           subTitle:
@@ -135,31 +107,42 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true',
           pageTo: NikonMicro(),
-          materialColor: Colors.blue[300]))
-      ..add(HeroType(
-          title: 'Llyods Tensile Tester',
-          subTitle: 'Apply tensile test to find according aterial property',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
-          image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
-          pageTo: LlyoldTensileTester(),
           materialColor: Colors.purpleAccent))
       ..add(HeroType(
-          title: 'Digital Rockwell Hardness Tester',
-          subTitle: 'Test the hardness of the material',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          title: 'Silicon Carbide Furnace',
+          subTitle:
+              'The High temperature silicon carbide furnace is used when the user needs a temperature higher than 950°C. ',
+          fText: 'Avaiable on JHE 244',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
-          pageTo: DigitalRWMain(),
-          materialColor: Colors.yellowAccent))
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true',
+          pageTo: SiCFurnace(),
+          materialColor: Colors.redAccent))
       ..add(HeroType(
-          title: 'Manual MicroHardness tester',
-          subTitle: 'Test the hardness of the material',
+          title: 'Blue Furnace',
+          subTitle:
+              'heat a sample to a high enough temperature to change the microstructure',
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
-          pageTo: ManualMicroHardness(),
-          materialColor: Colors.yellowAccent))
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true',
+          pageTo: BlueFurnace(),
+          materialColor: Colors.redAccent))
+      ..add(HeroType(
+          title: 'Automatic Bulk Abrasive Cutter',
+          subTitle: 'Cut the material',
+          fText: 'Avaiable on JHE 242',
+          image:
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true',
+          pageTo: BulkAbrasive_Main(),
+          materialColor: Colors.greenAccent[400]))
+      ..add(HeroType(
+          title: 'Buehler Precision Cutter',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true',
+          pageTo: BuehlerCutterMain(),
+          materialColor: Colors.greenAccent[400]))
       ..add(HeroType(
           title: 'Precision cutter',
           subTitle: 'The precision cutter is used for small delicate cuts.',
@@ -167,7 +150,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true',
           pageTo: PcutterMain(),
-          materialColor: Colors.blueAccent[400]))
+          materialColor: Colors.greenAccent[400]))
       ..add(HeroType(
           title: 'Mounting Press ECOPRESS 200',
           subTitle:
@@ -176,7 +159,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true',
           pageTo: EcoPress(),
-          materialColor: Colors.orangeAccent))
+          materialColor: Colors.grey[600]))
       ..add(HeroType(
           title: 'Mounting Press (Struers)',
           subTitle:
@@ -185,7 +168,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true',
           pageTo: StruesMain(),
-          materialColor: Colors.purpleAccent))
+          materialColor: Colors.grey[600]))
       ..add(HeroType(
           title: 'Mounting Press (METLAB)',
           subTitle:
@@ -194,26 +177,45 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
           pageTo: METPress(),
-          materialColor: Colors.greenAccent))
+          materialColor: Colors.grey[600]))
       ..add(HeroType(
-          title: 'Manual Grinder',
+          title: 'Automatic Polisher',
           subTitle:
-              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
-          fText: 'Avaiable on JHE 245',
+              'The purpose to grind and polish a material is to reveal the microstructure. ',
+          fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
-          pageTo: ManualGrinder(),
-          materialColor: Colors.blueGrey[400]))
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true',
+          pageTo: AutoPolisherMain(),
+          materialColor: Colors.lightBlueAccent))
       ..add(HeroType(
           title: 'Buehler Manual Polisher',
           subTitle:
               'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
           fText: 'Avaiable on JHE 245',
-          image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
           pageTo: BuehlerPolisherMain(),
-          materialColor: Colors.redAccent))
-      ..add(HeroType(title: 'Buehler Precision Cutter', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true', pageTo: BuehlerCutterMain(), materialColor: Colors.lightBlueAccent))
-      ..add(HeroType(title: 'Manual Polisher', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mpolisher.jpg?raw=true', pageTo: BuehlerPolisherMain(), materialColor: Colors.redAccent))
+          materialColor: Colors.lightBlueAccent))
+      ..add(HeroType(
+          title: 'Manual Polisher',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 245',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mpolisher.jpg?raw=true',
+          pageTo: BuehlerPolisherMain(),
+          materialColor: Colors.lightBlueAccent))
+      ..add(HeroType(
+          title: 'ICP-OES',
+          subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
+          pageTo: ICP_OES_Main(),
+          fText:
+              'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
+          image:
+              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true',
+          materialColor: Colors.redAccent[700]))
+      ..add(HeroType(title: 'Charpy Impact Tester', subTitle: 'Used to measure the relative toughness of a material', fText: 'Avaiable on JHE 242', image: 'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true', pageTo: charpy_test(), materialColor: Colors.grey))
+      ..add(HeroType(title: 'Manual Grinder', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true', pageTo: ManualGrinder(), materialColor: Colors.blueGrey[400]))
       ..add(HeroType(title: 'Etching', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true', pageTo: BuehlerPolisherMain(), materialColor: Colors.redAccent));
   }
 }

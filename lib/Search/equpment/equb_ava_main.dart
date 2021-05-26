@@ -17,6 +17,8 @@ class _equb_mainState extends State<equb_main> {
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
   List equipments = [];
+  double co = 0.5;
+  Color col = Colors.black;
   final ScrollController controller = ScrollController();
 
   @override
@@ -42,7 +44,11 @@ class _equb_mainState extends State<equb_main> {
             child: ListView(children: [
           DrawerHeader(child: Text("Equipment Avaiable in MSE")),
           ExpansionTile(
-            title: Text("Tensile Machine"),
+            backgroundColor: Colors.amber[800].withOpacity(co),
+            title: Text(
+              "Tensile Machine",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
             children: [
               ScrollcustomListTile(
                   name: equipments[0],
@@ -50,18 +56,35 @@ class _equb_mainState extends State<equb_main> {
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
-                  name: equipments[11],
-                  pageTo: 11,
+                  name: equipments[1],
+                  pageTo: 1,
                   fonts: 13,
                   controller: controller),
             ],
           ),
+          SizedBox(
+            height: 5,
+          ),
           ExpansionTile(
-            title: Text("Hardness Tester"),
+            backgroundColor: Colors.blueGrey[600].withOpacity(co),
+            title: Text(
+              "Hardness Tester",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
             children: [
               ScrollcustomListTile(
-                  name: equipments[1],
-                  pageTo: 1,
+                  name: equipments[2],
+                  pageTo: 2,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[3],
+                  pageTo: 3,
+                  fonts: 13,
+                  controller: controller),
+              ScrollcustomListTile(
+                  name: equipments[4],
+                  pageTo: 4,
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
@@ -69,20 +92,17 @@ class _equb_mainState extends State<equb_main> {
                   pageTo: 5,
                   fonts: 13,
                   controller: controller),
-              ScrollcustomListTile(
-                  name: equipments[13],
-                  pageTo: 13,
-                  fonts: 13,
-                  controller: controller),
-              ScrollcustomListTile(
-                  name: equipments[12],
-                  pageTo: 12,
-                  fonts: 13,
-                  controller: controller),
             ],
           ),
+          SizedBox(
+            height: 5,
+          ),
           ExpansionTile(
-            title: Text("Microscope"),
+            backgroundColor: Colors.purpleAccent.withOpacity(co),
+            title: Text(
+              "Microscope",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
             children: [
               ScrollcustomListTile(
                   name: equipments[6],
@@ -90,18 +110,25 @@ class _equb_mainState extends State<equb_main> {
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
-                  name: equipments[10],
-                  pageTo: 10,
+                  name: equipments[7],
+                  pageTo: 7,
                   fonts: 13,
                   controller: controller),
             ],
           ),
+          SizedBox(
+            height: 5,
+          ),
           ExpansionTile(
-            title: Text("Furnace"),
+            backgroundColor: Colors.redAccent.withOpacity(co),
+            title: Text(
+              "Furnace",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
             children: [
               ScrollcustomListTile(
-                  name: equipments[7],
-                  pageTo: 7,
+                  name: equipments[8],
+                  pageTo: 8,
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
@@ -111,63 +138,103 @@ class _equb_mainState extends State<equb_main> {
                   controller: controller),
             ],
           ),
+          SizedBox(
+            height: 5,
+          ),
           ExpansionTile(
-            title: Text("Cutter"),
+            backgroundColor: Colors.greenAccent[400].withOpacity(co),
+            title: Text(
+              "Cutter",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
             children: [
               ScrollcustomListTile(
-                  name: equipments[3],
-                  pageTo: 3,
+                  name: equipments[10],
+                  pageTo: 10,
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
-                  name: equipments[20],
-                  pageTo: 20,
+                  name: equipments[11],
+                  pageTo: 11,
                   fonts: 13,
                   controller: controller),
               ScrollcustomListTile(
-                  name: equipments[14],
-                  pageTo: 14,
+                  name: equipments[12],
+                  pageTo: 12,
                   fonts: 13,
                   controller: controller),
             ],
           ),
-          ExpansionTile(title: Text("Mounting Press"), children: [
-            ScrollcustomListTile(
-                name: equipments[15],
-                pageTo: 15,
-                fonts: 13,
-                controller: controller),
-            ScrollcustomListTile(
-                name: equipments[16],
-                pageTo: 16,
-                fonts: 13,
-                controller: controller),
-            ScrollcustomListTile(
-                name: equipments[17],
-                pageTo: 17,
-                fonts: 13,
-                controller: controller),
-          ]),
-          ExpansionTile(title: Text("Polisher"), children: [
-            ScrollcustomListTile(
-                name: equipments[19],
-                pageTo: 19,
-                fonts: 13,
-                controller: controller),
-            ScrollcustomListTile(
-                name: equipments[8],
-                pageTo: 8,
-                fonts: 13,
-                controller: controller),
-          ]),
+          SizedBox(
+            height: 5,
+          ),
+          ExpansionTile(
+              backgroundColor: Colors.grey[600].withOpacity(co),
+              title: Text(
+                "Mounting Press",
+                style: TextStyle(color: Colors.black, fontSize: 15),
+              ),
+              children: [
+                ScrollcustomListTile(
+                    name: equipments[13],
+                    pageTo: 13,
+                    fonts: 13,
+                    controller: controller),
+                ScrollcustomListTile(
+                    name: equipments[14],
+                    pageTo: 14,
+                    fonts: 13,
+                    controller: controller),
+                ScrollcustomListTile(
+                    name: equipments[15],
+                    pageTo: 15,
+                    fonts: 13,
+                    controller: controller),
+              ]),
+          SizedBox(
+            height: 5,
+          ),
+          ExpansionTile(
+              backgroundColor: Colors.lightBlueAccent.withOpacity(co),
+              title: Text(
+                "Polisher",
+                style: TextStyle(color: Colors.black, fontSize: 15),
+              ),
+              children: [
+                ScrollcustomListTile(
+                    name: equipments[16],
+                    pageTo: 16,
+                    fonts: 13,
+                    controller: controller),
+                ScrollcustomListTile(
+                    name: equipments[17],
+                    pageTo: 17,
+                    fonts: 13,
+                    controller: controller),
+                ScrollcustomListTile(
+                    name: equipments[18],
+                    pageTo: 18,
+                    fonts: 13,
+                    controller: controller),
+              ]),
           ScrollcustomListTile(
-              name: equipments[2],
-              pageTo: 2,
+              name: equipments[19],
+              pageTo: 19,
               fonts: 13,
               controller: controller),
           ScrollcustomListTile(
-              name: equipments[4],
-              pageTo: 4,
+              name: equipments[20],
+              pageTo: 20,
+              fonts: 13,
+              controller: controller),
+          ScrollcustomListTile(
+              name: equipments[21],
+              pageTo: 21,
+              fonts: 13,
+              controller: controller),
+          ScrollcustomListTile(
+              name: equipments[22],
+              pageTo: 22,
               fonts: 13,
               controller: controller),
         ]));

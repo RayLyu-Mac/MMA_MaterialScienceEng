@@ -38,7 +38,9 @@ class ScrollcustomListTile extends StatelessWidget {
                       child: Text(
                         name,
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: fonts),
+                            fontWeight: FontWeight.bold,
+                            fontSize: fonts,
+                            color: Colors.grey[800]),
                       ),
                     )
                   ],
