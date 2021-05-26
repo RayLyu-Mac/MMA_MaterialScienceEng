@@ -39,8 +39,10 @@ dependencies:
   flutter_email_sender: ^5.0.0
   font_awesome_flutter: ^9.0.0
   image_picker: ^0.7.5
+  csv: ^5.0.0
   syncfusion_flutter_pdf: ^19.1.63-beta
   syncfusion_flutter_pdfviewer: ^19.1.63-beta
+  permission_handler: ^7.1.0
 
 dev_dependencies:
   flutter_test:
@@ -57,8 +59,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-   - assest/welcome/motto.png
    - assest/layout/layout.png
+   - assest/csv/Rockwell/RockWellC.csv
+   - assest/csv/vicker.csv
    - assest/layout/sci.png
    - assest/floors/floor1/Mech.png
    - assest/floors/floor1/g.png

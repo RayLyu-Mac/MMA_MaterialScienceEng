@@ -2,9 +2,18 @@ import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:csv/csv.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:page_transition/page_transition.dart';
+import 'dart:io';
+import 'package:mma_mse/HardnessConversion/Data.dart';
 
 class equb_main extends StatefulWidget {
   final HeroType heroType;
+
   const equb_main({Key key, this.heroType}) : super(key: key);
 
   @override
@@ -17,6 +26,10 @@ class _equb_mainState extends State<equb_main> {
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
   List equipments = [];
+  List code = [];
+  String titleForCsv;
+  List<Widget> pT = [];
+
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
@@ -28,6 +41,8 @@ class _equb_mainState extends State<equb_main> {
     _heroTypeList = HeroType().createSampleList();
 
     for (var eq = 0; eq < _heroTypeList.length; eq++) {
+      code.add("JHEMain" + _heroTypeList[eq].title);
+      pT.add(_heroTypeList[eq].pageTo);
       equipments.add(_heroTypeList[eq].title);
     }
   }
@@ -36,6 +51,21 @@ class _equb_mainState extends State<equb_main> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
+  }
+
+  getCsv() async {
+    if (await Permission.storage.request().isGranted) {
+      String dir = (await getExternalStorageDirectory()).path + "/qrCode.csv";
+      String file = "$dir";
+      print(file);
+      File f = new File(file);
+      String csv = const ListToCsvConverter().convert([code, pT]);
+      f.writeAsString(csv);
+    } else {
+      Map<Permission, PermissionStatus> statuses = await [
+        Permission.storage,
+      ].request();
+    }
   }
 
   @override
@@ -344,6 +374,15 @@ class _equb_mainState extends State<equb_main> {
                   },
                 );
               })),
+      floatingActionButton: FloatingActionButton(
+          child: Text("To Csv"),
+          onPressed: () {
+            Navigator.push(
+                context,
+                PageTransition(
+                    child: hardnessData(),
+                    type: PageTransitionType.bottomToTop));
+          }),
     );
   }
 }
