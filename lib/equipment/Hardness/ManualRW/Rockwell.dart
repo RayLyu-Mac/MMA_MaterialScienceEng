@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 import 'package:mma_mse/user_note.dart';
-import 'package:mma_mse/Instruction/utm_instruction/utmInstructionMain.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/manual/manualRWMain.dart';
+import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'package:page_transition/page_transition.dart';
 
 class hardness_test extends StatefulWidget {
   hardness_test(
@@ -76,6 +77,24 @@ class _hardness_testState extends State<hardness_test> {
                     )),
               ),
             ),
+            Positioned(
+                top: _screenH / 2.2,
+                left: _screenWidth / 1.25,
+                child: IconButton(
+                  tooltip: "Hardness Conversion",
+                  iconSize: _screenH / 17,
+                  icon: Icon(Icons.file_present),
+                  color: Colors.lightBlueAccent,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: Duration(milliseconds: 700),
+                            child: hardnessData(),
+                            type: PageTransitionType.scale,
+                            alignment: Alignment.topCenter));
+                  },
+                )),
             functionButtonMode(
               top: _screenH / 1.56,
               left: _screenWidth / 12,

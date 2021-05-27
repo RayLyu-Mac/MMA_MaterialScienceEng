@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/HardnessConversion/Data.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/user_note.dart';
-import '../functionButtonMode.dart';
+import '../../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/ManualMicroHardness/MMicroHardMain.dart';
+import 'package:page_transition/page_transition.dart';
 
 class ManualMicroHardness extends StatefulWidget {
   final String location;
@@ -75,6 +77,24 @@ class _ManualMicroHardnessState extends State<ManualMicroHardness> {
                     )),
               ),
             ),
+            Positioned(
+                top: _screenH / 2.2,
+                left: _screenWidth / 1.25,
+                child: IconButton(
+                  tooltip: "Hardness Conversion",
+                  iconSize: _screenH / 17,
+                  icon: Icon(Icons.file_present),
+                  color: Colors.lightBlueAccent,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: Duration(milliseconds: 700),
+                            child: hardnessData(),
+                            type: PageTransitionType.scale,
+                            alignment: Alignment.topCenter));
+                  },
+                )),
             functionButtonMode(
               top: _screenH / 1.56,
               left: _screenWidth / 12,

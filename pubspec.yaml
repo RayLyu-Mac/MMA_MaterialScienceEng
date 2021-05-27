@@ -61,6 +61,12 @@ flutter:
   assets:
    - assest/layout/layout.png
    - assest/csv/Rockwell/RockWellC.csv
+   - assest/csv/Rockwell/RockwellB.csv
+   - assest/csv/Rockwell/A.csv
+   - assest/csv/Rockwell/D.csv
+   - assest/csv/Rockwell/superficial15.csv
+   - assest/csv/shore.csv
+   - assest/csv/Brinell3000.csv
    - assest/csv/vicker.csv
    - assest/layout/sci.png
    - assest/floors/floor1/Mech.png

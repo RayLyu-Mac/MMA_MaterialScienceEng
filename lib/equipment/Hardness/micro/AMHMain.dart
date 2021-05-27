@@ -5,6 +5,8 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/Polisher/automatic%20Polisher/autoPolisherMain.dart';
+import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AutomaticMicroHardnessMain extends StatefulWidget {
   AutomaticMicroHardnessMain({Key key}) : super(key: key);
@@ -72,6 +74,24 @@ class _AutomaticMicroHardnessMainState
                     )),
               ),
             ),
+            Positioned(
+                top: _screenH / 2.2,
+                left: _screenWidth / 1.25,
+                child: IconButton(
+                  tooltip: "Hardness Conversion",
+                  iconSize: _screenH / 17,
+                  icon: Icon(Icons.file_present),
+                  color: Colors.lightBlueAccent,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: Duration(milliseconds: 700),
+                            child: hardnessData(),
+                            type: PageTransitionType.scale,
+                            alignment: Alignment.topCenter));
+                  },
+                )),
             functionButtonMode(
               top: _screenH / 1.56,
               left: _screenWidth / 12,

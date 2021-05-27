@@ -12,7 +12,7 @@ import 'package:mma_mse/equipment/Microscope/Nikon/NikonMicroMain.dart';
 import 'package:mma_mse/equipment/furnace/blue/blurFMain.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 import 'package:mma_mse/equipment/Hardness/digitalRW/digitalRWMain.dart';
-import 'package:mma_mse/equipment/manualMicroHardness/manualMHMain.dart';
+import 'package:mma_mse/equipment/Hardness/manualMicroHardness/manualMHMain.dart';
 import 'package:mma_mse/equipment/cutter/precCutter/PrecisionCutterMain.dart';
 import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/MountPress/MET/METMain.dart';

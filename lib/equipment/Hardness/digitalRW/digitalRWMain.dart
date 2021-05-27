@@ -5,6 +5,7 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
+import 'package:mma_mse/HardnessConversion/Data.dart';
 
 class DigitalRWMain extends StatefulWidget {
   DigitalRWMain(
