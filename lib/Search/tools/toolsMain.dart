@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/buttonMode.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
+import 'package:mma_mse/HardnessConversion/Data.dart';
 
 class toolMain extends StatefulWidget {
   toolMain({Key key}) : super(key: key);
@@ -37,7 +38,15 @@ class _toolMainState extends State<toolMain> {
             title: "MSDS Sheet",
             top: _screenH / 30,
             left: _screenWidth / 40,
-          )
+          ),
+          IntroButtonMode(
+            pageTo: hardnessData(),
+            backImg:
+                "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
+            title: "Hardness Conversion Sheet",
+            top: _screenH / 5,
+            left: _screenWidth / 2,
+          ),
         ],
       ),
     );
