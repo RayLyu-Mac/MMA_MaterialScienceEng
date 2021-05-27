@@ -4,6 +4,8 @@ import 'package:mma_mse/user_note.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/Etching/EtchingMain.dart';
+import 'acidProtocol.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Etching extends StatefulWidget {
   final String location;
@@ -79,21 +81,18 @@ class _EtchingState extends State<Etching> {
               top: _screenH / 2.2,
               left: _screenWidth / 1.25,
               child: IconButton(
-                  tooltip: "Fire Protocol",
+                  tooltip: "HF working Tip",
                   iconSize: _screenH / 20,
-                  icon: Icon(Icons.fireplace),
+                  icon: Icon(Icons.warning_outlined),
                   color: Colors.redAccent,
                   onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: Text("If fire happens"),
-                            backgroundColor: Colors.red[300].withOpacity(0.9),
-                            content: Text(
-                                "•If a fire occurs, follow the “McMaster University Fire Instructions” leave the room and contact a technical staff\n \n•if the fire is out of control engage the fire alarm for the building; and contact emergency response 88, then EOHSS at 24352, stay nearby to provide information to responders.\n \n•DO NOT TRY to extinguish the fire because of serious health hazard. \n \n•If you accidentally drop the sample on your self Don’t panic! Remain calm. Immediately go to the sink and rinse with cold water to try and reduce the burn, seek medical help. "),
-                          );
-                        });
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: Duration(milliseconds: 700),
+                            child: AcidSafty(),
+                            type: PageTransitionType.scale,
+                            alignment: Alignment.topCenter));
                   }),
             ),
             functionButtonMode(
@@ -102,7 +101,7 @@ class _EtchingState extends State<Etching> {
               buttonName: "Instruction",
               pageTo: Etchinginstruction(),
               warnNote:
-                  "•Make sure the furnace is properly grounded and no loose wires are connected to furnace\n•Extra cautios need to be taken since material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occues leave the room and contact technicians",
+                  "•All Work Involve Chemical Should be done in Fume Hood \n•Make sure you are familiar with the location for eyewash and shower \n•Make sure the Solvent Spill Kit is around \n•If you are going to use HF please read the manual before proceeding",
             ),
             functionButtonMode(
               top: _screenH / 1.8,

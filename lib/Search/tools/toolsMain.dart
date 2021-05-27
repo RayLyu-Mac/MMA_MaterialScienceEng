@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/buttonMode.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
-import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
+import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/HardnessConversion/Data.dart';
 
 class toolMain extends StatefulWidget {
@@ -46,6 +46,14 @@ class _toolMainState extends State<toolMain> {
             title: "Hardness Conversion Sheet",
             top: _screenH / 5,
             left: _screenWidth / 2,
+          ),
+          IntroButtonMode(
+            pageTo: AcidSafty(),
+            backImg:
+                "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
+            title: "Acid Safty Sheet",
+            top: _screenH / 2.2,
+            left: _screenWidth / 40,
           ),
         ],
       ),
