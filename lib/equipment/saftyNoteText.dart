@@ -34,7 +34,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
     return Center(
         child: Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 1.21, height: _screenH / 1.45 / adjust),
+                width: _screenWidth / 1.21, height: _screenH / 1.25 / adjust),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(6.0),

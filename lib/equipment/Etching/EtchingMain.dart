@@ -101,7 +101,7 @@ class _EtchingState extends State<Etching> {
               buttonName: "Instruction",
               pageTo: Etchinginstruction(),
               warnNote:
-                  "•All Work Involve Chemical Should be done in Fume Hood \n•Make sure you are familiar with the location for eyewash and shower \n•Make sure the Solvent Spill Kit is around \n•If you are going to use HF please read the manual before proceeding",
+                  "•All Work Involve Chemical Should be done in Fume Hood \n•Make sure you are familiar with the location for eyewash and shower \n•Make sure the Solvent Spill Kit is around \n•If you are going to use HF please read the manual before proceeding\n•When Etching: All containment must go to waste bucket.\•nAll waste bucket and contianer need to be properly cleaned",
             ),
             functionButtonMode(
               top: _screenH / 1.8,
