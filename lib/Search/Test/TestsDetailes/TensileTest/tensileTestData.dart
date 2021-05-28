@@ -33,13 +33,12 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/models.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Step3: Polish the sample",
+          title: "Bone Structure and Test Sample Structure",
           content:
-              "hen the specimen will be polished by 1 micron polishing wheel with which is better for removing the scratches and deformation on the surface of testing. The wheel speed is around 100 RPM. Lubricant was applied to the surface of specimen to decrease the friction between the paper and the specimen",
+              "The human vertebra consistes of a hard cover: Corticol part which is highly calcification make it high density and hard; and soft part: Cancellous which has hollow structure make it soft and easy to break. \n \nThe sample we are going to test:As shown on the picture, its a sandwhich structure consisting of two strong face sheet and one middle light weight core material.",
           backImg: bImg,
-          pageTo: BuehlerPolisherMain(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
       ..add(testdetailData(
           title: "Step4: Etching",
           content:

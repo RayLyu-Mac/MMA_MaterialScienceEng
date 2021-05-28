@@ -114,7 +114,7 @@ class _hardnessDataState extends State<hardnessData> {
                   return TableRow(
                       children: item.map((row) {
                     return Container(
-                      color: Colors.white,
+                      color: Colors.grey[200],
                       child: Padding(
                         padding: const EdgeInsets.all(6.0),
                         child: Text(
