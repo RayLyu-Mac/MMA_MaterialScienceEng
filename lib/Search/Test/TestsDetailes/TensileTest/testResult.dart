@@ -61,7 +61,10 @@ class _tensileTResultState extends State<tensileTResult> {
         appBar: AppBar(
           title: Text("Test Result for tensile test"),
         ),
-        drawer: tensileResult(),
+        drawer: Container(
+          width: _screenWidth / 1.7,
+          child: tensileResult(),
+        ),
         body: ListView.builder(
             itemCount: result.length,
             itemExtent: 385,

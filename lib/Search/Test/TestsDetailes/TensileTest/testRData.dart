@@ -17,7 +17,7 @@ class testdetailData {
     List detail = List<testdetailData>();
     return detail
       ..add(testdetailData(
-          title: "General Stress Strain Curve",
+          title: "Typical Result",
           content: "General Result for Tensile Test",
           backImg: bImg,
           addOnImg:
@@ -49,6 +49,6 @@ class testdetailData {
               "Definition: \nTotal mechanical energy per unit volume consumed by the material in straining it to that value \n \nCalculation Method: \nThe area under the stress strain curve",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/ElasticE.PNG?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/IMG_0774(20210527-200435).PNG?raw=true"));
   }
 }
