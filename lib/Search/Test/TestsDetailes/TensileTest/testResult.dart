@@ -58,7 +58,9 @@ class _tensileTResultState extends State<tensileTResult> {
         );
 
     return Scaffold(
+        backgroundColor: Colors.lightBlueAccent[100],
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text("Test Result for tensile test"),
         ),
         drawer: Container(
@@ -71,9 +73,10 @@ class _tensileTResultState extends State<tensileTResult> {
             controller: controller,
             itemBuilder: (BuildContext context, int index) {
               return Card(
+                  color: Colors.white.withOpacity(0.7),
                   semanticContainer: true,
                   margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
-                  elevation: 6,
+                  elevation: 8,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                   clipBehavior: Clip.antiAlias,
@@ -89,12 +92,12 @@ class _tensileTResultState extends State<tensileTResult> {
                         ),
                       ),
                       Positioned(
-                          top: 45,
+                          top: 30,
                           left: 0,
                           child: Image.network(
                             result[index].addOnImg,
                             fit: BoxFit.fitWidth,
-                            height: 220,
+                            height: 225,
                           )),
                       Positioned(
                           top: 265,

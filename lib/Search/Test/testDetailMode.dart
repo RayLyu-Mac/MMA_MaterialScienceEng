@@ -159,7 +159,7 @@ class imgAddOn extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.black,
                 image: DecorationImage(
-                    image: NetworkImage(img), fit: BoxFit.cover)));
+                    image: NetworkImage(img), fit: BoxFit.fitHeight)));
       }
     } else {
       return SizedBox(
