@@ -27,7 +27,7 @@ class HeroType {
           materialColor: Colors.amber[700]))
       ..add(HeroType(
           title: 'Tensile Test',
-          pageTo: tensileTResult(),
+          pageTo: TensileTest(),
           subTitle: 'Find the microstructure property',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',

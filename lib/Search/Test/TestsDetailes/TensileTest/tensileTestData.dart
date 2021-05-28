@@ -26,13 +26,12 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/tensileBg.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Step2: Grind sample",
+          title: "Experiment Models",
           content:
-              "Then the sample was grinded several times. Start with 240 silicon carbide (Sic) paper, the specimen’s edge was first being grinded to make it easier to be picked up. Then goes to a series of silicon carbide wheel with the counter clockwise or clockwise 90 turn based on the last direction and with appropriate downward force. The specimen checked for every 40 seconds to see how well it grinded and the operators would adjust the force they apply on",
+              "The experiment model we are going to use. The sample are fixed on both end and the tensile machine will apply a force downward to the sample",
           backImg: bImg,
-          pageTo: ManualGrinder(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/models.jpg?raw=true"))
       ..add(testdetailData(
           title: "Step3: Polish the sample",
           content:

@@ -3,6 +3,7 @@ import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'tensileTestData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
+import 'testResult.dart';
 
 class TensileTest extends StatefulWidget {
   TensileTest({Key key}) : super(key: key);
@@ -39,6 +40,7 @@ class _TensileTestState extends State<TensileTest> {
         pageTo: testBGdetail[j].pageTo,
       ));
     }
+    pages.add(tensileTResult());
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
