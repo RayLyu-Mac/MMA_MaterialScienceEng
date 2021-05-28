@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
-import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
-import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
-import 'package:mma_mse/equipment/Microscope/Nikon/NikonMicroMain.dart';
+import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
 
 class testdetailData {
   String title;
@@ -40,20 +37,19 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Step4: Etching",
+          title: "Raw Data: Load versus Deflection",
           content:
-              "Etching was performed after the polish. 1.5% of Nital Solution (which is the nitrate acid as solute and alcohol as the solution[9]) was used, and we clipped the specimen and immersed the specimen’s surface we want on into the solution for 20s, with shaking of the beaker to make sure all the surface got etched.",
+              "Directly from tensile test machine we can get the data for load versus deflection, this is the data which directly reflect the changes in this experiment.\n \nClick the picture to see the actual process!",
           backImg: bImg,
-          pageTo: ManualGrinder(),
+          pageTo: tensile_test(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/load.png?raw=true"))
       ..add(testdetailData(
-          title: "Step5: Microscope Observation",
+          title: "Processed Data: Stress Versus Strain",
           content:
-              "The images of the microstructures were analyzed using Image J, an image processing software suite developed at the National Institutes of Health and the Laboratory for Optical and Computational Instrumentation.",
+              "We need to further processed data to stress versus strain so we can use that to investigate the material property.\n \nFor load to stress: 3PL/2d^2b (Need formula) (MPa=1N/mm^2)\n For Strain: Deflection/Length (mm/mm)",
           backImg: bImg,
-          pageTo: NikonMicro(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/niko.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/stress.png?raw=true"));
   }
 }
