@@ -24,7 +24,7 @@ class _MHTinstructionState extends State<MHTinstruction> {
     super.initState();
     _instructionList = video().videoList();
     for (var j = 0; j < _instructionList.length; j++) {
-      titles.add(_instructionList[j].titles);
+      titles.add(_instructionList[j].title);
     }
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
