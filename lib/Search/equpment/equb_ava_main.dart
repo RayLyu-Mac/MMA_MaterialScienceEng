@@ -50,7 +50,27 @@ class _equb_mainState extends State<equb_main> {
   Widget build(BuildContext context) {
     Drawer searchEquipMain() => Drawer(
             child: ListView(children: [
-          DrawerHeader(child: Text("Equipment Avaiable in MSE")),
+          DrawerHeader(
+              child: Stack(
+            children: [
+              Positioned(
+                top: 0,
+                left: 10,
+                child: Text("Equipment Avaiable in MSE"),
+              ),
+              Positioned(
+                  top: 5,
+                  left: 0,
+                  child: Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.2, height: _screenWidth / 0.9),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/logo.png?raw=true"))),
+                  ))
+            ],
+          )),
           ExpansionTile(
             backgroundColor: Colors.amber[800].withOpacity(co),
             title: Text(
@@ -352,15 +372,6 @@ class _equb_mainState extends State<equb_main> {
                   },
                 );
               })),
-      floatingActionButton: FloatingActionButton(
-          child: Text("To Csv"),
-          onPressed: () {
-            Navigator.push(
-                context,
-                PageTransition(
-                    child: hardnessData(),
-                    type: PageTransitionType.bottomToTop));
-          }),
     );
   }
 }
