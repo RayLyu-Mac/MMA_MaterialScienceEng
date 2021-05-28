@@ -14,18 +14,17 @@ class testdetailData {
   testdetailData(
       {this.title, this.content, this.backImg, this.addOnImg, this.pageTo});
   String bImg =
-      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/IronS.jpg?raw=true";
+      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/caracc.jpg?raw=true";
   List<testdetailData> detailL() {
     List detail = List<testdetailData>();
     return detail
       ..add(testdetailData(
-          title: "Step1: Mount the sample",
+          title: "Background",
           content:
-              "First step is to mounting the sample using mounting press machine and a thermosetting resin to form a single polymeric-specimen compound. Followed with engrave the initial, sample’s name and date on the back of the compound",
+              "In a car accident, the driver got hurt on his vertebera. In this experiment we are going to simulate the situation by performing a three-point test on the sample which has a very similar structure with our vertebera. By doing this we can investigate why the human veterbra has this structure and see the benefit of it",
           backImg: bImg,
-          pageTo: EcoPress(),
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/tensileBg.jpg?raw=true"))
       ..add(testdetailData(
           title: "Step2: Grind sample",
           content:
