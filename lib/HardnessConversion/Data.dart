@@ -25,6 +25,7 @@ class _hardnessDataState extends State<hardnessData> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text("Hardness"),
         ),
         body: Column(
@@ -36,7 +37,8 @@ class _hardnessDataState extends State<hardnessData> {
                   isExpanded: true,
                   hint: Text("Types of hardness test"),
                   dropdownColor: Colors.blueGrey[200],
-                  icon: const Icon(Icons.arrow_downward_sharp),
+                  icon: const Icon(Icons.arrow_downward_sharp,
+                      color: Colors.grey),
                   iconSize: 30,
                   elevation: 16,
                   value: dropdownValue,
@@ -67,9 +69,13 @@ class _hardnessDataState extends State<hardnessData> {
                           dropdownValue = value;
                           loadAsset("Rockwell/D.csv");
                           break;
-                        case "RockWell ASuperficial 15-N 15Kg Brale":
+                        case "RockWell Superficial 15-N 15Kg Brale":
                           dropdownValue = value;
                           loadAsset("Rockwell/superficial15.csv");
+                          break;
+                        case "RockWell Superficial 30-N 30Kg Brale":
+                          dropdownValue = value;
+                          loadAsset("Rockwell/superf30.csv");
                           break;
                         case "Shore Sciero-scope":
                           dropdownValue = value;
@@ -79,6 +85,10 @@ class _hardnessDataState extends State<hardnessData> {
                           dropdownValue = value;
                           loadAsset("Brinell3000.csv");
                           break;
+                        case "Brinell 50Kg 10mm Ball Steel":
+                          dropdownValue = value;
+                          loadAsset("Brinell50.csv");
+                          break;
                       }
                     });
                   },
@@ -87,9 +97,11 @@ class _hardnessDataState extends State<hardnessData> {
                     "RockWell B",
                     "RockWell C",
                     "RockWell D",
-                    "RockWell ASuperficial 15-N 15Kg Brale",
+                    "RockWell Superficial 15-N 15Kg Brale",
+                    "RockWell Superficial 30-N 30Kg Brale",
                     "Shore Sciero-scope",
                     "Vickers 136",
+                    "Brinell 50Kg 10mm Ball Steel",
                     "Brinell 3000Kg 10mm Ball Steel"
                   ].map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(

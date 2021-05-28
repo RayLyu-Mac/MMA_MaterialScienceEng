@@ -51,7 +51,8 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 - 10, height: _screenH / 4 - 5),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assest/search/e.png"),
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/e.png?raw=true"),
                           fit: BoxFit.cover)),
                 ),
               ),
@@ -77,7 +78,8 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assest/search/T.jpg"),
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/T.jpg?raw=true"),
                           fit: BoxFit.cover)),
                 ),
               ),
@@ -103,7 +105,8 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assest/search/s.png"),
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/s.png?raw=true"),
                           fit: BoxFit.cover)),
                 ),
               ),

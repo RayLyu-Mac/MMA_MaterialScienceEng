@@ -220,3 +220,13 @@ class HeroType {
       ..add(HeroType(title: 'Etching', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true', pageTo: Etching(), materialColor: Colors.redAccent));
   }
 }
+
+List<String> code = [];
+List<Widget> pageTo = [];
+Map<String, Widget> to = {};
+var qrd = HeroType().createSampleList();
+void createList() {
+  for (var eq = 0; eq < qrd.length; eq++) {
+    to.addAll({qrd[eq].title: qrd[eq].pageTo});
+  }
+}

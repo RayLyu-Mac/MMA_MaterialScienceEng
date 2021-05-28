@@ -3,6 +3,7 @@ import 'floor1/mech_lab.dart';
 import '../Search/Search_page/search_main.dart';
 import 'package:page_transition/page_transition.dart';
 import '../QR_code/Data.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import '../equipment/saftyNoteText.dart';
 
@@ -18,13 +19,21 @@ class _floor1State extends State<floor1> {
   double _screenWidth;
   double _screenH;
   double tra = 0.002;
+  int nu;
 
   @override
-  void goToPage(String qr_result) {
+  void initState() {
+    super.initState();
+    createList();
+  }
+
+  @override
+  void goToPage(qr_result) {
+    print(to["Automatic Bulk Abrasive Cutter"]);
     Navigator.push(
         context,
         PageTransition(
-            child: qr_data[qr_result], type: PageTransitionType.bottomToTop));
+            child: to[qr_result], type: PageTransitionType.bottomToTop));
   }
 
   @override

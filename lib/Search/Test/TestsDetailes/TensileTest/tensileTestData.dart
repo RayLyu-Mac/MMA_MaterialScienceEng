@@ -50,6 +50,13 @@ class testdetailData {
               "We need to further processed data to stress versus strain so we can use that to investigate the material property.\n \nFor load to stress: 3PL/2d^2b (Need formula) (MPa=1N/mm^2)\n For Strain: Deflection/Length (mm/mm)",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/stress.png?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/stress.png?raw=true"))
+      ..add(testdetailData(
+          title: "Comparison",
+          content:
+              "After we calculated the material property of the sample we can start to compare the difference of two samples.",
+          backImg: bImg,
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/result.jpg?raw=true"));
   }
 }

@@ -40,9 +40,8 @@ dependencies:
   font_awesome_flutter: ^9.0.0
   image_picker: ^0.7.5
   csv: ^5.0.0
-  syncfusion_flutter_pdf: ^19.1.63-beta
-  syncfusion_flutter_pdfviewer: ^19.1.63-beta
   permission_handler: ^7.1.0
+  collection: ^1.15.0
 
 dev_dependencies:
   flutter_test:
@@ -67,23 +66,20 @@ flutter:
    - assest/csv/Rockwell/superficial15.csv
    - assest/csv/shore.csv
    - assest/csv/Brinell3000.csv
+   - assest/csv/Brinell500.csv
+   - assest/csv/Rockwell/superf30.csv
    - assest/csv/vicker.csv
    - assest/layout/sci.png
    - assest/floors/floor1/Mech.png
    - assest/floors/floor1/g.png
    - assest/floors/floor1/w.jpg
-   - assest/search/e.png
-   - assest/search/T.jpg
-   - assest/search/s.png
    - assest/equipment/theory/HT.png
    - assest/test/hdtbg1.jpg
    - assest/test/ttbg1.jpg
    - assest/equipment/theory/IH.png
    - assest/equipment/theory/fdc.png
    - assest/search/dir.jpg
-   - assest/search/rsh.jpg
    - assest/equipment/theory/automatic_cutter/posserabracut.png
-   - assest/equipment/polisher.jpg
    
   # To add assets to your application, add an assets section, like this:
   # assets:
