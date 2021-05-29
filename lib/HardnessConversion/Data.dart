@@ -39,7 +39,7 @@ class _hardnessDataState extends State<hardnessData> {
                   dropdownColor: Colors.blueGrey[200],
                   icon: const Icon(Icons.arrow_downward_sharp,
                       color: Colors.grey),
-                  iconSize: 30,
+                  iconSize: 25,
                   elevation: 16,
                   value: dropdownValue,
                   style: const TextStyle(

@@ -221,8 +221,6 @@ class HeroType {
   }
 }
 
-List<String> code = [];
-List<Widget> pageTo = [];
 Map<String, Widget> to = {};
 var qrd = HeroType().createSampleList();
 void createList() {

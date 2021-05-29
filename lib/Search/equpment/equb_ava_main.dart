@@ -59,11 +59,11 @@ class _equb_mainState extends State<equb_main> {
                 child: Text("Equipment Avaiable in MSE"),
               ),
               Positioned(
-                  top: 5,
+                  top: 25,
                   left: 0,
                   child: Container(
                     constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.2, height: _screenWidth / 0.9),
+                        width: _screenWidth / 1.4, height: _screenWidth / 4),
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
