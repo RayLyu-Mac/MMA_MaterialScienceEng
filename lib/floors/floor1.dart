@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'floor1/mech_lab.dart';
 import '../Search/Search_page/search_main.dart';
 import 'package:page_transition/page_transition.dart';
-import '../QR_code/Data.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import '../equipment/saftyNoteText.dart';
+import 'package:floatingpanel/floatingpanel.dart';
+import 'package:mma_mse/QR_code/Scan.dart';
+import 'package:mma_mse/Search/equpment/equpSearchMain.dart';
 
 class floor1 extends StatefulWidget {
   floor1({Key key}) : super(key: key);
@@ -19,6 +21,7 @@ class _floor1State extends State<floor1> {
   double _screenWidth;
   double _screenH;
   double tra = 0.002;
+  List buttonP = [EqupSearch(), qrScanner()];
   int nu;
 
   @override
@@ -209,7 +212,7 @@ class _floor1State extends State<floor1> {
                     },
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

@@ -41,3 +41,12 @@ class HeroType {
           materialColor: Colors.redAccent[700]));
   }
 }
+
+Map<String, Widget> testAva = {};
+var qrd = HeroType().test_data_list();
+createTestList() {
+  for (var eq = 0; eq < qrd.length; eq++) {
+    testAva.addAll({qrd[eq].title: qrd[eq].pageTo});
+  }
+  return testAva;
+}

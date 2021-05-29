@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'MSDSdata.dart';
-import 'package:mma_mse/customTile.dart';
 
 class SearchListExample extends StatefulWidget {
   @override

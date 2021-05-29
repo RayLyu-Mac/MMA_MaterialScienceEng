@@ -3,6 +3,9 @@ import 'package:mma_mse/floors/floor1.dart';
 import 'Search/Search_page/search_main.dart';
 import 'floors/floor1.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:floatingpanel/floatingpanel.dart';
+import 'package:mma_mse/QR_code/Scan.dart';
+import 'package:mma_mse/Search/equpment/equpSearchMain.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
@@ -64,6 +67,7 @@ class _layout_overviewState extends State<layout_overview> {
   double _screenWidth;
   double _screenH;
   double tra = 0.001;
+  List buttonP = [EqupSearch(), qrScanner()];
 
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -230,7 +234,35 @@ class _layout_overviewState extends State<layout_overview> {
                       image: DecorationImage(
                           image: AssetImage("assest/layout/sci.png"),
                           fit: BoxFit.cover)),
-                ))
+                )),
+            FloatBoxPanel(
+                panelIcon: Icons.menu,
+                dockType: DockType
+                    .outside, // 'DockType.inside' or 'DockType.outside', weather to dock the panel outside or inside the edge of the screen
+                dockOffset:
+                    5.0, // Offset the dock from the edge depending on the 'dockType' property
+                panelAnimDuration:
+                    400, // Duration for panel open and close animation
+                panelAnimCurve:
+                    Curves.easeOut, // Curve for panel open and close animation
+                dockAnimDuration:
+                    400, // Auto dock to the edge of screen - animation duration
+                dockAnimCurve: Curves.easeOut, // Auto dock animation curve
+                panelOpenOffset:
+                    20.0, // Offset from the edge of screen when panel is open
+                buttons: [
+                  Icons.search,
+                  Icons.qr_code_scanner,
+                ],
+                onPressed: (numbers) {
+                  print(buttonP.toString());
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          child: buttonP[numbers],
+                          type: PageTransitionType.scale,
+                          alignment: Alignment.topCenter));
+                }),
           ],
         )));
   }

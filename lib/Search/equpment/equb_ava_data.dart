@@ -223,8 +223,9 @@ class HeroType {
 
 Map<String, Widget> to = {};
 var qrd = HeroType().createSampleList();
-void createList() {
+createList() {
   for (var eq = 0; eq < qrd.length; eq++) {
     to.addAll({qrd[eq].title: qrd[eq].pageTo});
   }
+  return to;
 }
