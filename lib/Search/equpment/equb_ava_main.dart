@@ -63,15 +63,21 @@ class _equb_mainState extends State<equb_main> {
                   left: 0,
                   child: Container(
                     constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.4, height: _screenWidth / 4),
+                        width: _screenWidth / 1.5, height: _screenWidth / 4),
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
-                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/logo.png?raw=true"))),
+                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/logocolor.png?raw=true"))),
                   ))
             ],
           )),
+          Divider(
+            height: 1,
+            thickness: 7,
+            color: Colors.grey[600],
+          ),
           ExpansionTile(
+            leading: Icon(Icons.fastfood),
             backgroundColor: Colors.amber[800].withOpacity(co),
             title: Text(
               "Tensile Machine",
