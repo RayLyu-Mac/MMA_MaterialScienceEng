@@ -77,22 +77,25 @@ class _SearchListExampleState extends State<SearchListExample> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 60,
-                  width: 240,
+                  padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
+                  height: 55,
+                  width: 245,
                   child: TextField(
                     expands: true,
                     maxLines: null,
                     controller: _controller,
                     style: TextStyle(
+                      fontSize: _screenH / 30,
+                      fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                     decoration: new InputDecoration(
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(width: 3.0, color: Colors.black)),
-                        hintText: "Search...",
-                        hintStyle: new TextStyle(color: Colors.black)),
+                      contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 2.5, color: Colors.black)),
+                    ),
                     onChanged: searchOperation,
                   ),
                 ),

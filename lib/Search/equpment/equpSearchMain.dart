@@ -26,7 +26,7 @@ class _EqupSearchState extends State<EqupSearch> {
   List tests = [];
   final ScrollController controller = ScrollController();
 
-  _SearchListExampleState() {
+  _EqupSearchState() {
     _controller.addListener(() {
       if (_controller.text.isEmpty) {
         setState(() {
@@ -71,17 +71,20 @@ class _EqupSearchState extends State<EqupSearch> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(5, 15, 5, 10),
-                height: 80,
+                padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
+                height: 55,
                 width: 245,
                 child: TextField(
                   expands: true,
                   maxLines: null,
                   controller: _controller,
                   style: TextStyle(
+                    fontSize: _screenH / 30,
+                    fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                   decoration: new InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
                         borderSide:
@@ -98,15 +101,15 @@ class _EqupSearchState extends State<EqupSearch> {
                 width: 95,
                 child: DropdownButton(
                   isExpanded: true,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.arrow_downward,
-                    color: Colors.grey,
+                    color: Colors.grey[700],
                   ),
                   iconSize: 20,
                   elevation: 16,
                   hint: Text("Types"),
                   value: dropDown,
-                  style: const TextStyle(color: Colors.deepPurple),
+                  style: TextStyle(color: Colors.grey.shade700),
                   onChanged: (value) {
                     setState(() {
                       dropDown = value;
