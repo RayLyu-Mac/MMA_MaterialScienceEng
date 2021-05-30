@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/equipment/Dash_borad_button.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
@@ -6,6 +7,7 @@ import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
 import 'package:mma_mse/Instruction/Cutter/BuehlerCutter/BcutterMain.dart';
+import 'DashBorad.dart';
 
 class BuehlerCutterMain extends StatefulWidget {
   BuehlerCutterMain(
@@ -93,7 +95,7 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
                 top: _screenH / 1.8,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Theory",
-                pageTo: icp_instruction()),
+                pageTo: BueDashBoard()),
             functionButtonMode(
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,

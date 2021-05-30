@@ -255,7 +255,6 @@ class _layout_overviewState extends State<layout_overview> {
                   Icons.qr_code_scanner,
                 ],
                 onPressed: (numbers) {
-                  print(buttonP.toString());
                   Navigator.push(
                       context,
                       PageTransition(

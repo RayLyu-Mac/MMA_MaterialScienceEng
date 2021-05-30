@@ -144,7 +144,6 @@ class _search_areaState extends State<search_area> {
                   Icons.qr_code_scanner,
                 ],
                 onPressed: (numbers) {
-                  print(buttonP.toString());
                   Navigator.push(
                       context,
                       PageTransition(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class DashButton extends StatefulWidget {
   final Color cardColor;
@@ -11,15 +12,17 @@ class DashButton extends StatefulWidget {
   final double width;
   final double height;
   final double fontsize;
+  final Widget pageTo;
   const DashButton(
       {@optionalTypeArgs this.buttonName,
       @optionalTypeArgs this.height,
       @optionalTypeArgs this.width,
       @required this.cardColor,
+      @optionalTypeArgs this.pageTo,
       @required this.left,
       @required this.top,
-      @required this.stepTitle,
-      @required this.instruction,
+      @optionalTypeArgs this.stepTitle,
+      @optionalTypeArgs this.instruction,
       @optionalTypeArgs this.button_icon,
       @optionalTypeArgs this.fontsize,
       Key key})
@@ -46,39 +49,48 @@ class _DashButtonState extends State<DashButton> {
         left: widget.left,
         child: InkWell(
           onTap: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return SimpleDialog(
-                    backgroundColor: widget.cardColor,
-                    contentPadding: EdgeInsets.fromLTRB(_screenWidth / 30,
-                        _screenH / 30, _screenWidth / 50, _screenH / 25),
-                    title: Text(
-                      widget.stepTitle,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: _screenWidth / 24),
-                    ),
-                    children: [
-                      SizedBox(
-                        height: _screenWidth / 50,
-                      ),
-                      Text(
-                        widget.instruction,
+            if (widget.pageTo != null) {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: widget.pageTo,
+                      type: PageTransitionType.scale,
+                      alignment: Alignment.topCenter));
+            } else {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return SimpleDialog(
+                      backgroundColor: widget.cardColor,
+                      contentPadding: EdgeInsets.fromLTRB(_screenWidth / 30,
+                          _screenH / 30, _screenWidth / 50, _screenH / 25),
+                      title: Text(
+                        widget.stepTitle,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: _screenWidth / 33),
-                      )
-                    ],
-                  );
-                });
+                            fontSize: _screenWidth / 24),
+                      ),
+                      children: [
+                        SizedBox(
+                          height: _screenWidth / 50,
+                        ),
+                        Text(
+                          widget.instruction,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: _screenWidth / 33),
+                        )
+                      ],
+                    );
+                  });
+            }
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(
-                widget.width != null ? widget.width / 5 : _screenWidth / 60,
-                widget.width != null ? widget.width / 8 : _screenH / 27,
+                widget.width != null ? widget.width / 9 : _screenWidth / 60,
+                widget.width != null ? widget.width / 10 : _screenH / 27,
                 _screenWidth / 80,
-                widget.height != null ? widget.height / 8 : _screenH / 60),
+                widget.height != null ? widget.height / 10 : _screenH / 60),
             child: swtich(
                 iconButton: widget.button_icon,
                 iconName: widget.buttonName,
