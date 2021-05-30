@@ -5,8 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import '../equipment/saftyNoteText.dart';
-import 'package:floatingpanel/floatingpanel.dart';
-import 'package:mma_mse/QR_code/Scan.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/equpment/equpSearchMain.dart';
 
 class floor1 extends StatefulWidget {
@@ -21,7 +20,7 @@ class _floor1State extends State<floor1> {
   double _screenWidth;
   double _screenH;
   double tra = 0.002;
-  List buttonP = [EqupSearch(), qrScanner()];
+  double adjust;
   int nu;
 
   @override
@@ -44,6 +43,12 @@ class _floor1State extends State<floor1> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.83;
+      adjust = 0.83;
+    } else {
+      adjust = 1;
+    }
   }
 
   @override
@@ -99,20 +104,6 @@ class _floor1State extends State<floor1> {
               size: 34,
             ),
           ),
-          IconButton(
-            onPressed: () async {
-              String codeSanner = await BarcodeScanner.scan(); //barcode scnner
-              setState(() {
-                qr_result = codeSanner;
-                goToPage(qr_result);
-              });
-            },
-            icon: Icon(
-              Icons.scanner,
-              color: Colors.white,
-              size: 34,
-            ),
-          )
         ],
         backgroundColor: Colors.black,
         title: Text("Floor I",
@@ -127,97 +118,54 @@ class _floor1State extends State<floor1> {
         ),
         child: Container(width: 220, child: _floor1sidemenu()),
       ),
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints.expand(
-              width: _screenWidth / 1.2, height: _screenH / 1.4),
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(
-                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/floors/floor1/floor1.PNG?raw=true"),
-                  fit: BoxFit.cover)),
-          child: Row(
-            children: [
-              SizedBox(
-                width: 1,
+      body: Stack(
+        children: [
+          Positioned(
+              top: _screenH / 40,
+              left: _screenWidth / 15,
+              child: Container(
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 1.2, height: _screenH / 1.3),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/floors/floor1/floor1.PNG?raw=true"),
+                        fit: BoxFit.cover)),
+              )),
+          Positioned(
+            top: _screenH / 2,
+            left: _screenWidth / 10,
+            child: GestureDetector(
+              child: Container(
+                color: Colors.black.withOpacity(tra),
+                height: _screenH / 9,
+                width: _screenWidth / 3.5,
               ),
-              Column(
-                children: [
-                  GestureDetector(
-                    child: Container(
-                      color: Colors.black.withOpacity(tra),
-                      height: _screenH / 9,
-                      width: _screenWidth / 3.5,
-                    ),
-                    onTap: () {
-                      warning(
-                          pageTo: mech_lab(),
-                          warning_note:
-                              "•Safty Glasses \n•Closed-toe shoes with sock \n•Long pants \n•Lab Coats \n•No Contact Lens");
-                    },
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      color: Colors.black.withOpacity(tra),
-                      height: _screenH / 6,
-                      width: _screenWidth / 3.5,
-                    ),
-                    onTap: () {
-                      warning(
-                          pageTo: mech_lab(),
-                          warning_note:
-                              "•Safty Glasses \n•Closed-toe shoes with sock \n•Long pants \n•Lab Coats \n•No Contact Lens");
-                    },
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      color: Colors.black.withOpacity(tra),
-                      height: _screenH / 6,
-                      width: _screenWidth / 3.5,
-                    ),
-                    onTap: () {
-                      showDialog<void>(
-                          context: context,
-                          barrierDismissible: false, // user must tap button!
-                          builder: (BuildContext context) {
-                            return warning(
-                                pageTo: mech_lab(),
-                                warning_note:
-                                    "•Safty Glasses \n•Closed-toe shoes with sock \n•Long pants \n•Lab Coats \n•No Contact Lens");
-                          });
-                    },
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      color: Colors.black.withOpacity(tra),
-                      height: _screenH / 5.2,
-                      width: _screenWidth / 3.5,
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              child: mech_lab(),
-                              type: PageTransitionType.scale,
-                              alignment: Alignment.centerLeft));
-                    },
-                  ),
-                ],
-              ),
-            ],
+              onTap: () {
+                warning(
+                    pageTo: mech_lab(),
+                    warning_note:
+                        "•Safty Glasses \n•Closed-toe shoes with sock \n•Long pants \n•Lab Coats \n•No Contact Lens");
+              },
+            ),
           ),
-        ),
+          floationPanel(
+              button: [
+                Icons.search,
+                Icons.qr_code_scanner,
+              ],
+              animationTime: 550,
+              buttonP: [EqupSearch(), scanQR])
+        ],
       ),
     );
+  }
+
+  scanQR() async {
+    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    setState(() {
+      goToPage(codeSanner);
+    });
   }
 }
 
