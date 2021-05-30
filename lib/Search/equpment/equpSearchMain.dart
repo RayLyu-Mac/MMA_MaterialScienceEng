@@ -15,6 +15,7 @@ class _EqupSearchState extends State<EqupSearch> {
   bool _isSearching;
   String _searchText = "";
   List<Widget> property = [];
+  List<Widget> mseproperty = [];
   List _list = [];
   List possibleResult = [];
   Map<String, Widget> equipment = {};
@@ -158,7 +159,9 @@ class _EqupSearchState extends State<EqupSearch> {
                                   Navigator.push(
                                       context,
                                       PageTransition(
-                                          child: property[index],
+                                          child: property[index] != null
+                                              ? property[index]
+                                              : mseproperty[index],
                                           type: PageTransitionType.scale,
                                           alignment: Alignment.topCenter));
                                 })));
@@ -220,12 +223,14 @@ class _EqupSearchState extends State<EqupSearch> {
   void searchOperation(String searchText) {
     possibleResult.clear();
     property.clear();
+    mseproperty.clear();
     if (_isSearching != null) {
       for (int j = 0; j < _list.length; j++) {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           possibleResult.add(data);
           property.add(equipment[data]);
+          mseproperty.add(mseTest[data]);
         }
       }
     }
