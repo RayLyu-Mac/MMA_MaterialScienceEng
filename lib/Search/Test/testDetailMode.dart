@@ -94,7 +94,7 @@ class _pageModeState extends State<pageMode> {
                   child: Text(
                     widget.content != null ? widget.content : "Error",
                     style: TextStyle(
-                        fontSize: _screenH / 37,
+                        fontSize: _screenH / 39,
                         color: Colors.black,
                         fontFamily: "Raleway",
                         decoration: TextDecoration.none),

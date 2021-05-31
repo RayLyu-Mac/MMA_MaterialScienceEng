@@ -69,7 +69,7 @@ class _tensileTResultState extends State<tensileTResult> {
         ),
         body: ListView.builder(
             itemCount: result.length,
-            itemExtent: 385,
+            itemExtent: 395,
             controller: controller,
             itemBuilder: (BuildContext context, int index) {
               return Card(
@@ -83,7 +83,7 @@ class _tensileTResultState extends State<tensileTResult> {
                   child: Stack(
                     children: [
                       Positioned(
-                        top: 10.0,
+                        top: 7.0,
                         left: 10.0,
                         child: Text(
                           result[index].title,
