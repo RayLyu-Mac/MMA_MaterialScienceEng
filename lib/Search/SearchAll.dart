@@ -1,6 +1,6 @@
 import 'dart:collection';
 import 'package:mma_mse/Search/tools/tooData.dart';
-import 'package:mma_mse/Search/tools/toolsMain.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'equpment/equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -59,7 +59,7 @@ class _EqupSearchState extends State<EqupSearch> {
       List<dynamic> datatype = [];
       datatype.clear();
       datatype.add(equipment.values.toList()[equpN]);
-      datatype.add("Equipment In MSE");
+      datatype.add(Icons.science_rounded);
       datatype.add(Colors.lightGreenAccent);
       wholeSample.addAll({equipment.keys.toList()[equpN]: datatype});
     }
@@ -68,7 +68,7 @@ class _EqupSearchState extends State<EqupSearch> {
       List<dynamic> datatype = [];
       datatype.clear();
       datatype.add(mseTest.values.toList()[mtest]);
-      datatype.add("Tests in MSE");
+      datatype.add(FontAwesomeIcons.fileContract);
       datatype.add(Colors.lightBlueAccent[100]);
       wholeSample.addAll({mseTest.keys.toList()[mtest]: datatype});
     }
@@ -77,7 +77,7 @@ class _EqupSearchState extends State<EqupSearch> {
       List<dynamic> datatype = [];
       datatype.clear();
       datatype.add(tools.values.toList()[mtool]);
-      datatype.add("Tools");
+      datatype.add(FontAwesomeIcons.tools);
       datatype.add(Colors.pinkAccent[100]);
       wholeSample.addAll({tools.keys.toList()[mtool]: datatype});
     }
@@ -103,11 +103,15 @@ class _EqupSearchState extends State<EqupSearch> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                width: _screenWidth / 70,
+              ),
               Container(
-                padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
+                padding: EdgeInsets.fromLTRB(8, 8, 5, 2),
                 height: 55,
-                width: 245,
+                width: _screenWidth / 1.08,
                 child: TextField(
+                  autocorrect: true,
                   expands: true,
                   maxLines: null,
                   controller: _controller,
@@ -117,6 +121,9 @@ class _EqupSearchState extends State<EqupSearch> {
                     color: Colors.black,
                   ),
                   decoration: new InputDecoration(
+                    hintText: "Search For Equpment/Test/Tools...",
+                    hintStyle:
+                        TextStyle(color: Colors.grey, fontSize: _screenH / 40),
                     contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
@@ -146,12 +153,13 @@ class _EqupSearchState extends State<EqupSearch> {
                                     Border.all(color: Colors.grey, width: 4)),
                             child: InkWell(
                                 child: ListTile(
+                                  trailing: Icon(property[index][1]),
                                   tileColor: property[index][2],
                                   title: new Text(listData.toString()),
                                 ),
                                 splashColor: Colors.grey,
                                 onTap: () {
-                                  print(property[index][2]);
+                                  print(property[index][1]);
                                   Navigator.push(
                                       context,
                                       PageTransition(
