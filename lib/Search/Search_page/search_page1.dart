@@ -5,7 +5,7 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import '../room/room_main.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
-import 'package:mma_mse/Search/equpment/equpSearchMain.dart';
+import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:floatingpanel/floatingpanel.dart';
 import 'package:floatingpanel/floatingpanel.dart';

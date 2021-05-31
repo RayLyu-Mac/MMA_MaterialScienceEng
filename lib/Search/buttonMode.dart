@@ -11,6 +11,7 @@ class IntroButtonMode extends StatefulWidget {
       @optionalTypeArgs this.fontsize,
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.width,
+      @optionalTypeArgs this.positionCode,
       Key key})
       : super(key: key);
   final Widget pageTo;
@@ -21,6 +22,7 @@ class IntroButtonMode extends StatefulWidget {
   final double left;
   final double width;
   final double length;
+  final String positionCode;
   bool str = false;
 
   @override
@@ -49,10 +51,16 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
 
   @override
   Widget build(BuildContext context) {
+    Map<String, List> position = {
+      "a": [_screenWidth / 19, _screenH / 50, _screenH / 2.8],
+      "b": [_screenWidth / 1.9, _screenH / 50, _screenH / 5],
+      "c": [_screenWidth / 1.9, _screenH / 4.3, _screenH / 2.8],
+      "d": [_screenWidth / 1.9, _screenH / 5, _screenH / 5]
+    };
     return widget.str != false
         ? Positioned(
-            top: widget.top,
-            left: widget.left,
+            left: position[widget.positionCode][0] ?? widget.top,
+            top: position[widget.positionCode][1] ?? widget.left,
             child: InkWell(
               hoverColor: Colors.white.withOpacity(0.4),
               splashColor: Colors.white.withOpacity(0.2),
@@ -68,18 +76,15 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
               child: Container(
                 alignment: Alignment.center,
                 constraints: BoxConstraints.expand(
-                    width: widget.width != null
-                        ? widget.width
-                        : _screenWidth / 2.7,
-                    height:
-                        widget.length != null ? widget.length : _screenH / 2.8),
+                    width: widget.width ?? _screenWidth / 2.7,
+                    height: position[widget.positionCode][2] ??
+                        widget.length ??
+                        _screenH / 2.8),
                 child: Text(
                   widget.title,
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: widget.fontsize != null
-                          ? widget.fontsize
-                          : _screenH / 35,
+                      fontSize: widget.fontsize ?? _screenH / 35,
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(

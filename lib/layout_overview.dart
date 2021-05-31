@@ -5,7 +5,7 @@ import 'Search/Search_page/search_main.dart';
 import 'floors/floor1.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:floatingpanel/floatingpanel.dart';
-import 'package:mma_mse/Search/equpment/equpSearchMain.dart';
+import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 

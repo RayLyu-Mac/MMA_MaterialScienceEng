@@ -1,4 +1,7 @@
-import 'equb_ava_data.dart';
+import 'dart:collection';
+import 'package:mma_mse/Search/tools/tooData.dart';
+import 'package:mma_mse/Search/tools/toolsMain.dart';
+import 'equpment/equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
@@ -14,12 +17,14 @@ class _EqupSearchState extends State<EqupSearch> {
   final TextEditingController _controller = new TextEditingController();
   bool _isSearching;
   String _searchText = "";
-  List<Widget> property = [];
-  List<Widget> mseproperty = [];
+  List<List> property = [];
   List _list = [];
   List possibleResult = [];
   Map<String, Widget> equipment = {};
   Map<String, Widget> mseTest = {};
+  Map<String, Widget> tools = {};
+  Map<String, List<dynamic>> wholeSample = HashMap();
+
   Icon icon = new Icon(
     Icons.search,
     color: Colors.white,
@@ -49,11 +54,38 @@ class _EqupSearchState extends State<EqupSearch> {
     _isSearching = false;
     equipment = createList();
     mseTest = createTestList();
+    tools = createToolList();
+    for (var equpN = 0; equpN < equipment.length; equpN++) {
+      List<dynamic> datatype = [];
+      datatype.clear();
+      datatype.add(equipment.values.toList()[equpN]);
+      datatype.add("Equipment In MSE");
+      datatype.add(Colors.lightGreenAccent);
+      wholeSample.addAll({equipment.keys.toList()[equpN]: datatype});
+    }
+
+    for (var mtest = 0; mtest < mseTest.length; mtest++) {
+      List<dynamic> datatype = [];
+      datatype.clear();
+      datatype.add(mseTest.values.toList()[mtest]);
+      datatype.add("Tests in MSE");
+      datatype.add(Colors.lightBlueAccent[100]);
+      wholeSample.addAll({mseTest.keys.toList()[mtest]: datatype});
+    }
+
+    for (var mtool = 0; mtool < tools.length; mtool++) {
+      List<dynamic> datatype = [];
+      datatype.clear();
+      datatype.add(tools.values.toList()[mtool]);
+      datatype.add("Tools");
+      datatype.add(Colors.pinkAccent[100]);
+      wholeSample.addAll({tools.keys.toList()[mtool]: datatype});
+    }
+    _list.addAll(wholeSample.keys.toList());
   }
 
   double _screenWidth;
   double _screenH;
-  String dropDown;
 
   @override
   void didChangeDependencies() {
@@ -97,44 +129,6 @@ class _EqupSearchState extends State<EqupSearch> {
               SizedBox(
                 width: 15,
               ),
-              Container(
-                height: 40,
-                width: 95,
-                child: DropdownButton(
-                  isExpanded: true,
-                  icon: Icon(
-                    Icons.arrow_downward,
-                    color: Colors.grey[700],
-                  ),
-                  iconSize: 20,
-                  elevation: 16,
-                  hint: Text("Types"),
-                  value: dropDown,
-                  style: TextStyle(color: Colors.grey.shade700),
-                  onChanged: (value) {
-                    setState(() {
-                      dropDown = value;
-                      switch (value) {
-                        case "Equipment":
-                          _list.clear();
-                          _list.addAll(equipment.keys.toList());
-                          break;
-                        case "Test":
-                          _list.clear();
-                          _list.addAll(mseTest.keys.toList());
-                          break;
-                      }
-                    });
-                  },
-                  items: <String>["Equipment", "Test"]
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                ),
-              )
             ],
           ),
           Expanded(
@@ -152,16 +146,16 @@ class _EqupSearchState extends State<EqupSearch> {
                                     Border.all(color: Colors.grey, width: 4)),
                             child: InkWell(
                                 child: ListTile(
+                                  tileColor: property[index][2],
                                   title: new Text(listData.toString()),
                                 ),
                                 splashColor: Colors.grey,
                                 onTap: () {
+                                  print(property[index][2]);
                                   Navigator.push(
                                       context,
                                       PageTransition(
-                                          child: property[index] != null
-                                              ? property[index]
-                                              : mseproperty[index],
+                                          child: property[index][0],
                                           type: PageTransitionType.scale,
                                           alignment: Alignment.topCenter));
                                 })));
@@ -223,14 +217,12 @@ class _EqupSearchState extends State<EqupSearch> {
   void searchOperation(String searchText) {
     possibleResult.clear();
     property.clear();
-    mseproperty.clear();
     if (_isSearching != null) {
       for (int j = 0; j < _list.length; j++) {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           possibleResult.add(data);
-          property.add(equipment[data]);
-          mseproperty.add(mseTest[data]);
+          property.add(wholeSample[data]);
         }
       }
     }
