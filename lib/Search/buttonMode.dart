@@ -12,6 +12,7 @@ class IntroButtonMode extends StatefulWidget {
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.width,
       @optionalTypeArgs this.positionCode,
+      @required this.str,
       Key key})
       : super(key: key);
   final Widget pageTo;
@@ -23,7 +24,7 @@ class IntroButtonMode extends StatefulWidget {
   final double width;
   final double length;
   final String positionCode;
-  bool str = false;
+  final bool str;
 
   @override
   _IntroButtonModeState createState() => _IntroButtonModeState();
@@ -39,14 +40,6 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-  }
-
-  @override
-  void initState() {
-    if (widget.top != null) {
-      widget.str = true;
-    }
-    super.initState();
   }
 
   @override

@@ -18,7 +18,6 @@ class ToolData {
       ..add(ToolData(
           name: "MSDS Sheet",
           pageTo: SearchListExample(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
@@ -26,21 +25,18 @@ class ToolData {
           name: "Hardness Conversion Sheet",
           posCode: "b",
           pageTo: hardnessData(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
           name: "Acid Safty Sheet",
           posCode: "c",
           pageTo: AcidSafty(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
           name: "Fire Protocol",
           posCode: "d",
           pageTo: AcidSafty(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }

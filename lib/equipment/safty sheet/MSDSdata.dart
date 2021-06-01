@@ -441,6 +441,12 @@ class msdsData {
       ..add(msdsData(location: locJHE240246A, name: "Thymol Blue", level: green, type: "Solid", short: "C27H30O5S"))
       ..add(msdsData(location: locJHE240246A, name: "Titanium", level: green, type: "Solid", short: "Ti"))
       ..add(msdsData(location: locJHE240246A, name: "Titanium IV Sulfide", level: white, type: "Solid", short: "TiS2"))
-      ..add(msdsData(location: locJHE240246A, name: "Tungsten", level: green, type: "Solid", short: "W"));
+      ..add(msdsData(location: locJHE240246A, name: "Tungsten", level: green, type: "Solid", short: "W"))
+      ..add(msdsData(location: locJHE240246A, name: "Vanadium Pentoxide", level: blue, type: "Solid", short: "V2O5"))
+      ..add(msdsData(location: locJHE240246A, name: "Vinyl Alcohol", level: red, type: "organic", short: "C2H4O"))
+      ..add(msdsData(location: locJHE240246A, name: "Yttrium Nitrate", level: yellow, type: "Solid", short: "Y(NO3)3"))
+      ..add(msdsData(location: locJHE240246A, name: "Yttrium Nitrate Pentahydrate", level: yellow, type: "Solid", short: "Y(NO3)3 5H2O"))
+      ..add(msdsData(location: locJHE240246A, name: "Yttrium Oxide", level: green, type: "Solid", short: "Y2O3"))
+      ..add(msdsData(location: locJHE240246A, name: "Yttrium Sulfide", level: green, type: "Solid", short: "Y2S3"));
   }
 }

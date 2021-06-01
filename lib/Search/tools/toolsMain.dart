@@ -40,10 +40,10 @@ class _toolMainState extends State<toolMain> {
             children: [
               for (var i = 0; i < toolDataList.length; i++)
                 IntroButtonMode(
+                  str: true,
                   pageTo: toolDataList[i].pageTo,
                   backImg: toolDataList[i].backImg,
                   title: toolDataList[i].name,
-                  top: toolDataList[i].top,
                   positionCode: toolDataList[i].posCode,
                 ),
             ],

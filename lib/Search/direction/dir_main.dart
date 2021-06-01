@@ -61,6 +61,7 @@ class _direction_mainState extends State<direction_main> {
                 height: _screenH / 25,
               ),
               IntroButtonMode(
+                  str: false,
                   pageTo: biomatCourseList(),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/biomat.jpg?raw=true",
@@ -69,6 +70,7 @@ class _direction_mainState extends State<direction_main> {
                 height: _screenH / 25,
               ),
               IntroButtonMode(
+                  str: false,
                   pageTo: biomatCourseList(),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/data.jpg?raw=true",
@@ -84,6 +86,7 @@ class _direction_mainState extends State<direction_main> {
                 height: _screenH / 25,
               ),
               IntroButtonMode(
+                  str: false,
                   pageTo: biomatCourseList(),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/smart.jpg?raw=true",
@@ -92,6 +95,7 @@ class _direction_mainState extends State<direction_main> {
                 height: _screenH / 25,
               ),
               IntroButtonMode(
+                  str: false,
                   pageTo: biomatCourseList(),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/emaf.jpg?raw=true",

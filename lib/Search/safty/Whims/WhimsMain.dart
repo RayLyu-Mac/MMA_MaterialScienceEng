@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'testRData.dart';
+import 'WhimsData.dart';
 import 'package:mma_mse/customTileScroll.dart';
 
 class tensileTResult extends StatefulWidget {
