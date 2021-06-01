@@ -16,28 +16,28 @@ class ToolData {
     List toolD = List<ToolData>();
     return toolD
       ..add(ToolData(
-          name: "MSDS Sheet",
+          name: "Chemical Safty",
           pageTo: SearchListExample(),
           top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
       ..add(ToolData(
-          name: "Hardness Conversion Sheet",
+          name: "Fire Safty",
           posCode: "b",
           pageTo: hardnessData(),
           top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Acid Safty Sheet",
+          name: "Personal Protection Equipment",
           posCode: "c",
           pageTo: AcidSafty(),
           top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Fire Protocol",
+          name: "Contact Info",
           posCode: "d",
           pageTo: AcidSafty(),
           top: 1,

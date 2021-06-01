@@ -68,6 +68,7 @@ class _SearchListExampleState extends State<SearchListExample> {
   Widget build(BuildContext context) {
     String dropdownValue = "Name";
     return new Scaffold(
+        resizeToAvoidBottomInset: false,
         key: globalKey,
         appBar: buildAppBar(context),
         body: Column(
@@ -148,54 +149,67 @@ class _SearchListExampleState extends State<SearchListExample> {
                 )
               ],
             ),
-            Expanded(
-                child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: name.length,
-              itemBuilder: (BuildContext context, int index) {
-                String listData = name[index];
-                return new Padding(
-                    padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-                    child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.grey, width: 4)),
-                        child: InkWell(
-                          splashColor: Colors.grey,
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return SimpleDialog(
-                                    backgroundColor:
-                                        property[index].level.withOpacity(0.9),
-                                    contentPadding: EdgeInsets.fromLTRB(
-                                        _screenWidth / 30,
-                                        _screenH / 30,
-                                        _screenWidth / 50,
-                                        _screenH / 25),
-                                    title: Text(property[index].name),
-                                    children: [
-                                      Text("The Location of the material: " +
-                                          property[index].location),
-                                      Text(
-                                          "The Chemical Formula the material: " +
-                                              property[index].short),
-                                      Text("The type of the material: " +
-                                          property[index].type),
-                                      Text("The level of harzard is: " +
-                                          saftyLevel[property[index].level])
-                                    ],
-                                  );
-                                });
-                          },
-                          child: ListTile(
-                            title: new Text(listData.toString()),
-                            tileColor: property[index].level,
-                          ),
-                        )));
-              },
-            ))
+            name.length != 0
+                ? Expanded(
+                    child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: name.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      String listData = name[index];
+                      return new Padding(
+                          padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border:
+                                      Border.all(color: Colors.grey, width: 4)),
+                              child: InkWell(
+                                splashColor: Colors.grey,
+                                onTap: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return SimpleDialog(
+                                          backgroundColor: property[index]
+                                              .level
+                                              .withOpacity(0.9),
+                                          contentPadding: EdgeInsets.fromLTRB(
+                                              _screenWidth / 30,
+                                              _screenH / 30,
+                                              _screenWidth / 50,
+                                              _screenH / 25),
+                                          title: Text(property[index].name),
+                                          children: [
+                                            Text(
+                                                "The Location of the material: " +
+                                                    property[index].location),
+                                            Text(
+                                                "The Chemical Formula the material: " +
+                                                    property[index].short),
+                                            Text("The type of the material: " +
+                                                property[index].type),
+                                            Text("The level of harzard is: " +
+                                                saftyLevel[
+                                                    property[index].level])
+                                          ],
+                                        );
+                                      });
+                                },
+                                child: ListTile(
+                                  title: new Text(listData.toString()),
+                                  tileColor: property[index].level,
+                                ),
+                              )));
+                    },
+                  ))
+                : Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.5, height: _screenH / 1.5),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/searchChem.png?raw=true"))),
+                  )
           ],
         ));
   }

@@ -97,6 +97,7 @@ class _EqupSearchState extends State<EqupSearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: buildAppBar(context),
         body: Column(children: [
           SizedBox(
