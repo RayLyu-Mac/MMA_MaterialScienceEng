@@ -1,10 +1,12 @@
 import 'dart:collection';
 import 'package:mma_mse/Search/tools/tooData.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
 import 'equpment/equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
+import 'package:mma_mse/Search/safty/saftyData.dart';
 
 class EqupSearch extends StatefulWidget {
   EqupSearch({Key key}) : super(key: key);
@@ -23,6 +25,7 @@ class _EqupSearchState extends State<EqupSearch> {
   Map<String, Widget> equipment = {};
   Map<String, Widget> mseTest = {};
   Map<String, Widget> tools = {};
+  Map<String, Widget> safty = {};
   Map<String, List<dynamic>> wholeSample = HashMap();
 
   Icon icon = new Icon(
@@ -55,6 +58,7 @@ class _EqupSearchState extends State<EqupSearch> {
     equipment = createList();
     mseTest = createTestList();
     tools = createToolList();
+    safty = createSaftyList();
     for (var equpN = 0; equpN < equipment.length; equpN++) {
       List<dynamic> datatype = [];
       datatype.clear();
@@ -78,8 +82,17 @@ class _EqupSearchState extends State<EqupSearch> {
       datatype.clear();
       datatype.add(tools.values.toList()[mtool]);
       datatype.add(FontAwesomeIcons.tools);
-      datatype.add(Colors.pinkAccent[100]);
+      datatype.add(Colors.blueGrey[100]);
       wholeSample.addAll({tools.keys.toList()[mtool]: datatype});
+    }
+
+    for (var sft = 0; sft < safty.length; sft++) {
+      List<dynamic> datatype = [];
+      datatype.clear();
+      datatype.add(safty.values.toList()[sft]);
+      datatype.add(FontAwesomeIcons.yinYang);
+      datatype.add(Colors.redAccent[100]);
+      wholeSample.addAll({safty.keys.toList()[sft]: datatype});
     }
     _list.addAll(wholeSample.keys.toList());
   }

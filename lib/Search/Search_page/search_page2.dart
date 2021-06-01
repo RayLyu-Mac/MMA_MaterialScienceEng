@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
+import 'package:mma_mse/Search/safty/saftyMain.dart';
 import 'package:mma_mse/Search/tools/toolsMain.dart';
 import 'package:mma_mse/Search/direction/dir_main.dart';
 
@@ -87,6 +87,33 @@ class _search_p2State extends State<search_p2> {
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"),
+                          fit: BoxFit.cover)),
+                ),
+              ),
+            ),
+            Positioned(
+              top: _screenH / 1.45,
+              left: _screenWidth / 8,
+              child: Text(
+                "Safety",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Positioned(
+              top: _screenH / 1.6,
+              left: _screenWidth / 2.2,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => saftyMain()));
+                },
+                child: Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 2, height: _screenH / 5),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/main.jpg?raw=truee"),
                           fit: BoxFit.cover)),
                 ),
               ),

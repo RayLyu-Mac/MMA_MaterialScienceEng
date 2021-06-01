@@ -447,6 +447,13 @@ class msdsData {
       ..add(msdsData(location: locJHE240246A, name: "Yttrium Nitrate", level: yellow, type: "Solid", short: "Y(NO3)3"))
       ..add(msdsData(location: locJHE240246A, name: "Yttrium Nitrate Pentahydrate", level: yellow, type: "Solid", short: "Y(NO3)3 5H2O"))
       ..add(msdsData(location: locJHE240246A, name: "Yttrium Oxide", level: green, type: "Solid", short: "Y2O3"))
-      ..add(msdsData(location: locJHE240246A, name: "Yttrium Sulfide", level: green, type: "Solid", short: "Y2S3"));
+      ..add(msdsData(location: locJHE240246A, name: "Yttrium Sulfide", level: green, type: "Solid", short: "Y2S3"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Calcine", level: green, type: "Solid", short: "Zinc Roasting?"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Chloride", level: blue, type: "Solid", short: "ZnCl2"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Nitrate", level: yellow, type: "Solid", short: "Zn(ZNO3)2"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Oxide", level: green, type: "Solid", short: "ZnO"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Selenide", level: yellow, type: "Solid", short: "ZnSe"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Sulphate heptahydrate", level: green, type: "Solid", short: "ZnSO4 7H2O"))
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Sulphide", level: green, type: "Solid", short: "ZnS"));
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
-import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'FireSafty/FireMain.dart';
+import 'Whims/WhimsMain.dart';
 
 class ToolData {
   String posCode;
@@ -25,7 +26,7 @@ class ToolData {
       ..add(ToolData(
           name: "Fire Safty",
           posCode: "b",
-          pageTo: hardnessData(),
+          pageTo: ExtingshSymbols(),
           top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
@@ -37,9 +38,9 @@ class ToolData {
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Contact Info",
+          name: "WHIMS Symbol",
           posCode: "d",
-          pageTo: AcidSafty(),
+          pageTo: WhimsSymbols(),
           top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
@@ -47,10 +48,10 @@ class ToolData {
 }
 
 Map<String, Widget> to = {};
-var qrd = ToolData().createToolList();
-createToolList() {
-  for (var eq = 0; eq < qrd.length; eq++) {
-    to.addAll({qrd[eq].name: qrd[eq].pageTo});
+var sft = ToolData().createToolList();
+createSaftyList() {
+  for (var eq = 0; eq < sft.length; eq++) {
+    to.addAll({sft[eq].name: sft[eq].pageTo});
   }
   return to;
 }
