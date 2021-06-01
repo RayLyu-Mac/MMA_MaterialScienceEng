@@ -19,7 +19,6 @@ class ToolData {
       ..add(ToolData(
           name: "Chemical Safty",
           pageTo: SearchListExample(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
@@ -27,21 +26,42 @@ class ToolData {
           name: "Fire Safty",
           posCode: "b",
           pageTo: ExtingshSymbols(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
           name: "Personal Protection Equipment",
           posCode: "c",
           pageTo: AcidSafty(),
-          top: 1,
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
           name: "WHIMS Symbol",
           posCode: "d",
           pageTo: WhimsSymbols(),
-          top: 1,
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
+      ..add(ToolData(
+          name: "Chemical Safty",
+          pageTo: SearchListExample(),
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
+          posCode: "a"))
+      ..add(ToolData(
+          name: "Fire Safty",
+          posCode: "b",
+          pageTo: ExtingshSymbols(),
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
+      ..add(ToolData(
+          name: "Personal Protection Equipment",
+          posCode: "c",
+          pageTo: AcidSafty(),
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
+      ..add(ToolData(
+          name: "WHIMS Symbol",
+          posCode: "d",
+          pageTo: WhimsSymbols(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }
