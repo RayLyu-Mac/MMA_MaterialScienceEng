@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'WhimsData.dart';
 import 'package:mma_mse/customTileScroll.dart';
 
-class tensileTResult extends StatefulWidget {
-  tensileTResult({Key key}) : super(key: key);
+class WhimsSymbols extends StatefulWidget {
+  WhimsSymbols({Key key}) : super(key: key);
 
   @override
-  _tensileTResultState createState() => _tensileTResultState();
+  _WhimsSymbolsState createState() => _WhimsSymbolsState();
 }
 
-class _tensileTResultState extends State<tensileTResult> {
+class _WhimsSymbolsState extends State<WhimsSymbols> {
   double _screenWidth;
   double _screenH;
   double adjust;
@@ -44,14 +44,14 @@ class _tensileTResultState extends State<tensileTResult> {
     Drawer tensileResult() => Drawer(
           child: ListView(
             children: [
-              DrawerHeader(child: Text("Test Result for Tensile Test")),
+              DrawerHeader(child: Text("Whims Symbols for Potential Hazard")),
               for (var j = 0; j < result.length; j++)
                 ScrollcustomListTile(
                   name: result[j].title,
                   pageTo: j,
-                  fonts: 13,
+                  fonts: 12,
                   controller: controller,
-                  offset: 385,
+                  offset: 435,
                 )
             ],
           ),
@@ -61,15 +61,18 @@ class _tensileTResultState extends State<tensileTResult> {
         backgroundColor: Colors.lightBlueAccent[100],
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text("Test Result for tensile test"),
+          title: Text(
+            "Whims Symbols for Potential Hazard",
+            style: TextStyle(fontSize: _screenH / 40),
+          ),
         ),
         drawer: Container(
-          width: _screenWidth / 1.7,
+          width: _screenWidth / 1.4,
           child: tensileResult(),
         ),
         body: ListView.builder(
             itemCount: result.length,
-            itemExtent: 395,
+            itemExtent: 435,
             controller: controller,
             itemBuilder: (BuildContext context, int index) {
               return Card(
@@ -83,30 +86,33 @@ class _tensileTResultState extends State<tensileTResult> {
                   child: Stack(
                     children: [
                       Positioned(
-                        top: 7.0,
+                        top: 5.0,
                         left: 10.0,
                         child: Text(
                           result[index].title,
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
+                              fontSize: result[index].titleFontsize ?? 15,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Positioned(
-                          top: 30,
-                          left: 0,
+                          top: 40,
+                          left: _screenWidth / (result[index].picLeft ?? 60),
                           child: Image.network(
                             result[index].addOnImg,
                             fit: BoxFit.fitWidth,
                             height: 225,
                           )),
                       Positioned(
-                          top: 265,
+                          top: 275,
                           left: 5,
                           child: Container(
                               width: _screenWidth / 1.2,
                               child: Text(
                                 result[index].content,
-                                style: TextStyle(fontSize: _screenH / 60),
+                                style: TextStyle(
+                                    fontSize: result[index].contentFontsize ??
+                                        _screenH / 45),
                               )))
                     ],
                   ));

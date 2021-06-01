@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
 
 class ToolData {
   String posCode;
@@ -34,9 +35,9 @@ class ToolData {
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Fire Protocol",
+          name: "Whims Symbol",
           posCode: "d",
-          pageTo: AcidSafty(),
+          pageTo: WhimsSymbols(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }
