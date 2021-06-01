@@ -99,6 +99,9 @@ class _EqupSearchState extends State<EqupSearch> {
     return Scaffold(
         appBar: buildAppBar(context),
         body: Column(children: [
+          SizedBox(
+            height: _screenH / 60,
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -138,36 +141,46 @@ class _EqupSearchState extends State<EqupSearch> {
               ),
             ],
           ),
-          Expanded(
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: possibleResult.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    String listData = possibleResult[index];
-                    return new Padding(
-                        padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-                        child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                border:
-                                    Border.all(color: Colors.grey, width: 4)),
-                            child: InkWell(
-                                child: ListTile(
-                                  trailing: Icon(property[index][1]),
-                                  tileColor: property[index][2],
-                                  title: new Text(listData.toString()),
-                                ),
-                                splashColor: Colors.grey,
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      PageTransition(
-                                          child: property[index][0],
-                                          type: PageTransitionType.scale,
-                                          duration: Duration(milliseconds: 600),
-                                          alignment: Alignment.topCenter));
-                                })));
-                  }))
+          possibleResult.length != 0
+              ? Expanded(
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: possibleResult.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        String listData = possibleResult[index];
+                        return new Padding(
+                            padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                        color: Colors.grey, width: 4)),
+                                child: InkWell(
+                                    child: ListTile(
+                                      trailing: Icon(property[index][1]),
+                                      tileColor: property[index][2],
+                                      title: new Text(listData.toString()),
+                                    ),
+                                    splashColor: Colors.grey,
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          PageTransition(
+                                              child: property[index][0],
+                                              type: PageTransitionType.scale,
+                                              duration:
+                                                  Duration(milliseconds: 600),
+                                              alignment: Alignment.topCenter));
+                                    })));
+                      }))
+              : Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 1.5, height: _screenH / 1.5),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/SearchB.png?raw=true"))),
+                )
         ]));
   }
 
