@@ -159,12 +159,12 @@ class _EqupSearchState extends State<EqupSearch> {
                                 ),
                                 splashColor: Colors.grey,
                                 onTap: () {
-                                  print(property[index][1]);
                                   Navigator.push(
                                       context,
                                       PageTransition(
                                           child: property[index][0],
                                           type: PageTransitionType.scale,
+                                          duration: Duration(milliseconds: 600),
                                           alignment: Alignment.topCenter));
                                 })));
                   }))
@@ -173,53 +173,18 @@ class _EqupSearchState extends State<EqupSearch> {
 
   Widget buildAppBar(BuildContext context) {
     return new AppBar(
-        backgroundColor: Colors.black,
-        toolbarHeight: 60,
-        centerTitle: true,
-        title: Column(
-          children: [
-            Text("Quick Search"),
-            SizedBox(
-              height: 10,
-            ),
-          ],
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: icon,
-            onPressed: () {
-              setState(() {
-                if (this.icon.icon == Icons.search) {
-                  this.icon = new Icon(
-                    Icons.close,
-                    color: Colors.white,
-                  );
-
-                  _handleSearchStart();
-                } else {
-                  _handleSearchEnd();
-                }
-              });
-            },
+      backgroundColor: Colors.black,
+      toolbarHeight: 60,
+      centerTitle: true,
+      title: Column(
+        children: [
+          Text("Quick Search"),
+          SizedBox(
+            height: 10,
           ),
-        ]);
-  }
-
-  void _handleSearchStart() {
-    setState(() {
-      _isSearching = true;
-    });
-  }
-
-  void _handleSearchEnd() {
-    setState(() {
-      this.icon = new Icon(
-        Icons.search,
-        color: Colors.white,
-      );
-      _isSearching = false;
-      _controller.clear();
-    });
+        ],
+      ),
+    );
   }
 
   void searchOperation(String searchText) {

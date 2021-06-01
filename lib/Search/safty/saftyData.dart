@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/HardnessConversion/Data.dart';
-import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
 
 class ToolData {
   String posCode;
