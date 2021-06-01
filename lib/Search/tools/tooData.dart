@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/HardnessConversion/Data.dart';
-import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
+import 'package:mma_mse/Search/safty/FireSafty/FireMain.dart';
 
 class ToolData {
   String posCode;
@@ -37,7 +37,7 @@ class ToolData {
       ..add(ToolData(
           name: "Whims Symbol",
           posCode: "d",
-          pageTo: WhimsSymbols(),
+          pageTo: ExtingshSymbols(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }
