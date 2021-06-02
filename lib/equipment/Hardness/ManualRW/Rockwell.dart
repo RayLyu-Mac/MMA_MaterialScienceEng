@@ -4,7 +4,7 @@ import 'package:mma_mse/user_note.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/manual/manualRWMain.dart';
-import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'package:page_transition/page_transition.dart';
 
 class hardness_test extends StatefulWidget {
