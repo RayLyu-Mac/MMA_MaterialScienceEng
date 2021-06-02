@@ -90,7 +90,7 @@ class _EqupSearchState extends State<EqupSearch> {
       List<dynamic> datatype = [];
       datatype.clear();
       datatype.add(safty.values.toList()[sft]);
-      datatype.add(FontAwesomeIcons.yinYang);
+      datatype.add(FontAwesomeIcons.skull);
       datatype.add(Colors.redAccent[100]);
       wholeSample.addAll({safty.keys.toList()[sft]: datatype});
     }

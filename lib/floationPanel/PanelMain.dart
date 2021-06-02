@@ -24,7 +24,7 @@ class _floationPanelState extends State<floationPanel> {
   @override
   Widget build(BuildContext context) {
     return FloatBoxPanel(
-        panelIcon: widget.panelIcon ?? Icons.menu,
+        panelIcon: widget.panelIcon ?? Icons.add,
         dockType: DockType
             .outside, // 'DockType.inside' or 'DockType.outside', weather to dock the panel outside or inside the edge of the screen
         dockOffset:
