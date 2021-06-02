@@ -114,7 +114,14 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                                 style: TextStyle(
                                     fontSize: result[index].contentFontsize ??
                                         _screenH / 45),
-                              )))
+                              ))),
+                      Positioned(
+                          top: 300,
+                          left: 5,
+                          child: FlatButton.icon(
+                              onPressed: () {},
+                              icon: Icon(Icons.location_city_outlined),
+                              label: Text("Location of the extinguisher")))
                     ],
                   ));
             }));

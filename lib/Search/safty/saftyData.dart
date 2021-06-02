@@ -3,6 +3,7 @@ import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'FireSafty/FireMain.dart';
 import 'Whims/WhimsMain.dart';
+import 'ShowerWasher/ShowerMain.dart';
 
 class ToolData {
   String posCode;
@@ -17,7 +18,7 @@ class ToolData {
     List toolD = List<ToolData>();
     return toolD
       ..add(ToolData(
-          name: "Chemical Safty",
+          name: "MSDS Sheet",
           pageTo: SearchListExample(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
@@ -29,7 +30,7 @@ class ToolData {
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Personal Protection Equipment",
+          name: "Acids Safty",
           posCode: "c",
           pageTo: AcidSafty(),
           backImg:
@@ -47,9 +48,9 @@ class ToolData {
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
       ..add(ToolData(
-          name: "Fire Safty",
+          name: "Chemical Shower/ Eye washer",
           posCode: "b",
-          pageTo: ExtingshSymbols(),
+          pageTo: ChemicalShowerEyeWasher(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(

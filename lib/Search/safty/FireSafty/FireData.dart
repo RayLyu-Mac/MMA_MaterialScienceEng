@@ -35,14 +35,14 @@ class testdetailData {
           titleFontsize: 16,
           title: "Class C: Electrical Equipment",
           content:
-              "For fires involving electrical equipment, like appliances, wiring, circuit breakers or outlets. You should never use water to extinguish a class C fire. Water is a powerful conductor, so the risk of electrical shock is substantial. The geometric symbol is a blue circle and the pictograph shows an electrical cord and outlet that have caught on fire.",
+              "For fires involving electrical equipment, like appliances, wiring, circuit breakers or outlets. You should never use water to extinguish a class C fire. Water is a powerful conductor, so the risk of electrical shock is substantial.",
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/extinguisher/C.jpg?raw=true"))
       ..add(testdetailData(
           titleFontsize: 16,
           title: "Class D: Fire in Chem Lab",
           content:
-              "For fires most commonly occurring in a chemical laboratories. These involve combustible metals, like magnesium, titanium, potassium or sodium. The geometric symbol is the yellow star, or decagon. A pictograph is not commonly used for this class but you might see one that shows a metal beam and flames.",
+              "For fires most commonly occurring in a chemical laboratories. These involve combustible metals. A pictograph is not commonly used for this class but you might see one that shows a metal beam and flames.",
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/extinguisher/D.png?raw=true"))
       ..add(testdetailData(
