@@ -38,6 +38,10 @@ class _TensileTestState extends State<TensileTest> {
         back_img: testBGdetail[j].backImg,
         addOnImg: testBGdetail[j].addOnImg,
         pageTo: testBGdetail[j].pageTo,
+        height: testBGdetail[j].height,
+        length: testBGdetail[j].top,
+        width: testBGdetail[j].width,
+        left: testBGdetail[j].left,
       ));
     }
     pages.add(tensileTResult());

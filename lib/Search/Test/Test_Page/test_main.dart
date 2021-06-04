@@ -37,12 +37,12 @@ class _test_avaState extends State<test_ava> {
       ),
       body: SafeArea(
           child: ListView.builder(
-              itemExtent: 265.0,
+              itemExtent: 275.0,
               itemCount: _heroTypeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
-                    margin: EdgeInsets.fromLTRB(20, 14, 20, 8),
+                    margin: EdgeInsets.fromLTRB(8, 12, 20, 8),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0)),
@@ -63,13 +63,13 @@ class _test_avaState extends State<test_ava> {
                             child: Image.network(
                               _heroTypeList[index].image,
                               fit: BoxFit.fitWidth,
-                              height: 180,
+                              height: 190,
                             ),
                           ),
                         ),
                         Positioned(
-                          top: 183.0,
-                          left: 20.0,
+                          top: 193.0,
+                          left: 10.0,
                           width: _screenWidthAdjustment,
                           child: Hero(
                               tag: 'text' + _heroTypeList[index].title,
@@ -78,15 +78,17 @@ class _test_avaState extends State<test_ava> {
                                 child: Text(
                                   '${_heroTypeList[index].title}',
                                   style: TextStyle(
-                                      fontSize: 25.0,
+                                      fontSize:
+                                          _heroTypeList[index].titleFontSize ??
+                                              25.0,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black),
                                 ),
                               )),
                         ),
                         Positioned(
-                            top: 213.0,
-                            left: 20.0,
+                            top: 223.0,
+                            left: 10.0,
                             width: _screenWidthAdjustment,
                             child: Hero(
                                 tag: 'subtitle' + _heroTypeList[index].title,
@@ -96,7 +98,9 @@ class _test_avaState extends State<test_ava> {
                                       _heroTypeList[index].subTitle,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                          fontSize: 16,
+                                          fontSize: _heroTypeList[index]
+                                                  .contentFontsize ??
+                                              16,
                                           fontWeight: FontWeight.bold),
                                     )))),
                       ],

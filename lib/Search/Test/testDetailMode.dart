@@ -9,10 +9,18 @@ class pageMode extends StatefulWidget {
   final String docNumber;
   final bool wholeImg;
   final Widget pageTo;
+  final double height;
+  final double length;
+  final double width;
+  final double left;
   pageMode(
       {@required this.title,
       @optionalTypeArgs this.wholeImg,
+      @optionalTypeArgs this.height,
+      @optionalTypeArgs this.length,
+      @optionalTypeArgs this.left,
       @required this.back_img,
+      @optionalTypeArgs this.width,
       @optionalTypeArgs this.content,
       @optionalTypeArgs this.docNumber,
       @optionalTypeArgs this.addOnImg,
@@ -103,10 +111,12 @@ class _pageModeState extends State<pageMode> {
               ])),
         ),
         Positioned(
-            top: _screenH / 1.5 / adjust,
-            left: _screenWidth / 7.5,
+            top: _screenH / (widget.height ?? 1.5) / adjust,
+            left: _screenWidth / (widget.left ?? 7),
             child: imgAddOn(
               screenH: _screenH,
+              width: widget.width,
+              length: widget.length,
               screenW: _screenWidth,
               img: widget.addOnImg,
               pageTo: widget.pageTo,
@@ -121,9 +131,13 @@ class imgAddOn extends StatelessWidget {
   final double screenW;
   final double screenH;
   final Widget pageTo;
+  final double length;
+  final double width;
   const imgAddOn(
       {@required this.img,
+      @optionalTypeArgs this.width,
       @required this.screenH,
+      @optionalTypeArgs this.length,
       @optionalTypeArgs this.pageTo,
       @required this.screenW,
       Key key})
@@ -154,7 +168,8 @@ class imgAddOn extends StatelessWidget {
       } else {
         return Container(
             constraints: BoxConstraints.expand(
-                width: screenW / 1.3, height: screenH / 3.6),
+                width: screenW / (width ?? 1.3),
+                height: screenH / (length ?? 3.6)),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.black,

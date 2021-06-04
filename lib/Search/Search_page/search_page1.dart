@@ -103,7 +103,7 @@ class _search_areaState extends State<search_area> {
               top: _screenH / 2.75 + 50,
               left: _screenWidth / 2 + 30,
               child: Text(
-                "Available Test \nIn MSE Department",
+                "Case Study",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),

@@ -10,11 +10,19 @@ class HeroType {
   String subTitle;
   String image;
   List _heroType;
+  double contentFontsize;
+  double titleFontSize;
   Widget pageTo;
   Color materialColor;
 
   HeroType(
-      {this.title, this.subTitle, this.pageTo, this.image, this.materialColor});
+      {this.title,
+      this.subTitle,
+      this.pageTo,
+      this.image,
+      this.contentFontsize,
+      this.materialColor,
+      this.titleFontSize});
   List<HeroType> test_data_list() {
     List _heroType = List<HeroType>();
     return _heroType
@@ -26,12 +34,15 @@ class HeroType {
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
           materialColor: Colors.amber[700]))
       ..add(HeroType(
-          title: 'Tensile Test',
+          title: 'UTM Case: Three Point Test',
+          titleFontSize: 22,
+          contentFontsize: 14,
           pageTo: TensileTest(),
-          subTitle: 'Find the microstructure property',
+          subTitle:
+              'Find the advantage of composite material from human bone structure',
           image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
-          materialColor: Colors.green[700]))
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
+          materialColor: Colors.green[400]))
       ..add(HeroType(
           title: 'Meturllgical Analysis',
           pageTo: metAnalysis(),
