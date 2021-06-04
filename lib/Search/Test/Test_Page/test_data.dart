@@ -4,6 +4,7 @@ import '../TestsDetailes/hardnessTest/hardness_t_back.dart';
 import '../TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/tensileTestMain.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/ACLTest/ACLMain.dart';
 
 class HeroType {
   String title;
@@ -38,6 +39,16 @@ class HeroType {
           titleFontSize: 22,
           contentFontsize: 14,
           pageTo: TensileTest(),
+          subTitle:
+              'Find the advantage of composite material from human bone structure',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
+          materialColor: Colors.green[400]))
+      ..add(HeroType(
+          title: 'UTM Case: Elastic Modulus',
+          titleFontSize: 22,
+          contentFontsize: 14,
+          pageTo: ACLTest(),
           subTitle:
               'Find the advantage of composite material from human bone structure',
           image:

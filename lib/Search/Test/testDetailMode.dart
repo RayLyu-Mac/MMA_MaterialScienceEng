@@ -73,7 +73,7 @@ class _pageModeState extends State<pageMode> {
               constraints: BoxConstraints.expand(
                   width: _screenWidth / 1.15, height: _screenH / 1.15 / adjust),
               decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(16.0),
                   border: Border.all(
                     width: 1.5,

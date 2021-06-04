@@ -42,7 +42,7 @@ class _test_avaState extends State<test_ava> {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
-                    margin: EdgeInsets.fromLTRB(8, 12, 20, 8),
+                    margin: EdgeInsets.fromLTRB(18, 12, 18, 8),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0)),
