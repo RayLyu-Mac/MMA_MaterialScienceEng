@@ -13,7 +13,7 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
+    flutterVersionCode = '3'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
@@ -31,6 +31,10 @@ def keystoreProperties = new Properties()
    }
 android {
     compileSdkVersion 30
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false //<- add this line
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -41,7 +45,7 @@ android {
         applicationId "com.MMA_MSE.myapp"
         minSdkVersion 17
         targetSdkVersion 30
-        versionCode 1
+        versionCode 3
         versionName "1.0"
     }
 

@@ -5,7 +5,7 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/Polisher/automatic%20Polisher/autoPolisherMain.dart';
-import 'package:mma_mse/HardnessConversion/Data.dart';
+import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'package:page_transition/page_transition.dart';
 
 class AutomaticMicroHardnessMain extends StatefulWidget {

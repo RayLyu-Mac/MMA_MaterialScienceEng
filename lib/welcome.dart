@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/layout_overview.dart';
 import 'floors/floor1.dart';
+import 'terms&Cond.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key key}) : super(key: key);
@@ -105,7 +106,8 @@ class _welcomeState extends State<welcome> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => layout_overview(),
+                          builder: (context) =>
+                              conditionTerms(pageTo: layout_overview()),
                         ));
                   },
                 )),

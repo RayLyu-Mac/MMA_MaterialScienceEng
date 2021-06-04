@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'constantData.dart';
+import 'UnitConv.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:page_transition/page_transition.dart';
 
 class MatlsConstant extends StatefulWidget {
   MatlsConstant({Key key}) : super(key: key);
@@ -113,7 +114,20 @@ class _MatlsConstantState extends State<MatlsConstant> {
                                 style: TextStyle(
                                     fontSize: result[index].contentFontsize ??
                                         _screenH / 45),
-                              )))
+                              ))),
+                      Positioned(
+                          child: FlatButton.icon(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        duration: Duration(milliseconds: 700),
+                                        child: result[index].pageTo,
+                                        type: PageTransitionType.scale,
+                                        alignment: Alignment.topCenter));
+                              },
+                              icon: Icon(Icons.file_present),
+                              label: Text("Formula Sheet")))
                     ],
                   ));
             }));
