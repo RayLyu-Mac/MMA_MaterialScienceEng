@@ -103,12 +103,11 @@ class _welcomeState extends State<welcome> {
                             fit: BoxFit.cover)),
                   ),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              conditionTerms(pageTo: layout_overview()),
-                        ));
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return conditionTerms(pageTo: layout_overview());
+                        });
                   },
                 )),
             Positioned(

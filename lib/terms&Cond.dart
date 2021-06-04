@@ -12,9 +12,6 @@ class conditionTerms extends StatefulWidget {
 class _conditionTermsState extends State<conditionTerms> {
   @override
   Widget build(BuildContext context) {
-    bool isChecked = true;
-    void valueChange(bool value) => setState(() => isChecked = value);
-
     return SingleChildScrollView(
       child: AlertDialog(
         title: Text("Terms and Conditions: Please Read Before Using this App"),
@@ -30,20 +27,17 @@ class _conditionTermsState extends State<conditionTerms> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Text(
                 "Please view the reference list for the pictures and words used in this app"),
-            Checkbox(value: isChecked, onChanged: valueChange),
-            isChecked != false
-                ? FlatButton.icon(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              child: widget.pageTo,
-                              type: PageTransitionType.scale,
-                              alignment: Alignment.topCenter));
-                    },
-                    icon: Icon(Icons.align_horizontal_left_sharp),
-                    label: Text("Start to use the app"))
-                : Text("Please agree to those terms")
+            FlatButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          child: widget.pageTo,
+                          type: PageTransitionType.scale,
+                          alignment: Alignment.topCenter));
+                },
+                icon: Icon(Icons.align_horizontal_left_sharp),
+                label: Text("Agree and Start"))
           ],
         ),
       ),

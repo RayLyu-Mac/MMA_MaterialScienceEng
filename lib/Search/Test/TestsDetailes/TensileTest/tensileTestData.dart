@@ -18,21 +18,35 @@ class testdetailData {
       ..add(testdetailData(
           title: "Background",
           content:
-              "In a car accident, the driver got hurt on his vertebera. In this experiment we are going to simulate the situation by performing a three-point test on the sample which has a very similar structure with our vertebera. By doing this we can investigate why the human veterbra has this structure and see the benefit of it",
+              "Bones are complex materials necessary for daily function and keeping us alive. They allow our bodies to move by providing a framework for muscles and tendons to attach, protect organs such as our heart and lungs, and even produce blood cells. Therefore, two types of bones exist in our body.\n \nCorticol Bone: Stiff with high elastic modulus. \n \nTrabecular bone: Porous and has low elastic modulus. \nThe common bone structure in human body is cortical bone forms the outside and the trabecular bone is sandwiched inside. ",
           backImg: bImg,
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/tensileBg.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Experiment Models",
+          title: "Introduction",
           content:
-              "The experiment model we are going to use. The sample are fixed on both end and the tensile machine will apply a force downward to the sample",
+              "Composites are a class of material formed when two or more constituent materials are combined to achieve desired mechanical properties. There are three main categories of composites; particle reinforced composites, fiber reinforced composites, and structural composites [3]. This investigation will focus on structural (sandwich) composites. It is clear that our bone structure consists with the sandwich model. \nTherefore this experiment will use the material that has similar material property to human bone to find the advantage of this structure by simulating the car accident situation.",
           backImg: bImg,
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/models.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Bone Structure and Test Sample Structure",
+          title: "Case Introduction",
           content:
-              "The human vertebra consistes of a hard cover: Corticol part which is highly calcification make it high density and hard; and soft part: Cancellous which has hollow structure make it soft and easy to break. \n \nThe sample we are going to test:As shown on the picture, its a sandwhich structure consisting of two strong face sheet and one middle light weight core material.",
+              "Vertebra has the same structure as state before and it is usually got fracture in a car accident. When a vehicle stops suddenly, the waistband of the seat belt restricts the motion of the lumbar spine (force 2) while the body’s inertia propels it forward. In this experiment we will make comparison between the sandwich structure with the single material structure. \nThus, the best way to simulate damage caused by car accident to driver’s vertebra is by performing the 3-point test in Tensile machine and making comparison on the elastic modulus of the two different structure. ",
+          backImg: bImg,
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Material Properties Involved",
+          content:
+              "When using a 3-point bend test, the material properties found are referred to as ‘flexural’ properties meaning the material was resisting bend forces when the values were measured. As the samples in this lab will be under bending conditions, we will focus on the flexural properties.\nThe flexural elastic modulus is calculated by finding the slope of the linear region of the load vs. deflection or stress vs. strain graph.",
+          backImg: bImg,
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Procedure",
+          content:
+              "1.	Record dimensions of the specimen (b, d) and setup (L). \n2. Load the sample \n3. Execute ‘3-point bend test’ algorithm to collect load vs displacement data. Note that the crosshead displacement stored in the output file does not directly represent the deflection D in Eqs. (1) and (2). To obtain the deflection, the crosshead displacement needs to be adjusted for any distance the load pit traversed before establishing a firm contact with a surface of the sample. \n4. Plot the load vs. deflection and stress vs. strain curves to determine the elastic modulus from the linear region. Also, determine the load and stress at fracture. \n5. Repeat steps 1–4 for all samples.",
           backImg: bImg,
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
