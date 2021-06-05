@@ -1,5 +1,6 @@
 import 'test_data.dart';
 import 'package:flutter/material.dart';
+import 'package:mma_mse/customTileScroll.dart';
 
 class test_ava extends StatefulWidget {
   final HeroType heroType;
@@ -14,6 +15,7 @@ class _test_avaState extends State<test_ava> {
   double _screenWidth;
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
+  final ScrollController controller = ScrollController();
 
   @override
   void initState() {
@@ -29,15 +31,31 @@ class _test_avaState extends State<test_ava> {
 
   @override
   Widget build(BuildContext context) {
+    Drawer testCase() => Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(child: Text("Case Study of Using those Equipments")),
+              for (var tc = 0; tc < _heroTypeList.length; tc++)
+                ScrollcustomListTile(
+                  name: _heroTypeList[tc].title,
+                  pageTo: tc,
+                  fonts: 13,
+                  controller: controller,
+                  offset: 300,
+                )
+            ],
+          ),
+        );
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text("Test Availble in MSE",
             style: TextStyle(color: Colors.white, fontSize: 18)),
       ),
+      drawer: testCase(),
       body: SafeArea(
           child: ListView.builder(
-              itemExtent: 275.0,
+              itemExtent: 285.0,
               itemCount: _heroTypeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
@@ -63,12 +81,12 @@ class _test_avaState extends State<test_ava> {
                             child: Image.network(
                               _heroTypeList[index].image,
                               fit: BoxFit.fitWidth,
-                              height: 190,
+                              height: 195,
                             ),
                           ),
                         ),
                         Positioned(
-                          top: 193.0,
+                          top: 198.0,
                           left: 10.0,
                           width: _screenWidthAdjustment,
                           child: Hero(
@@ -87,7 +105,7 @@ class _test_avaState extends State<test_ava> {
                               )),
                         ),
                         Positioned(
-                            top: 223.0,
+                            top: 228.0,
                             left: 10.0,
                             width: _screenWidthAdjustment,
                             child: Hero(

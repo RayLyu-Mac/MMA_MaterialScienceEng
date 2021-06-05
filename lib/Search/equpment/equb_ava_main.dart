@@ -2,9 +2,6 @@ import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
-import 'package:page_transition/page_transition.dart';
-
-import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 
 class equb_main extends StatefulWidget {
   final HeroType heroType;

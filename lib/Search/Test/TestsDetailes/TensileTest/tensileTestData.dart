@@ -28,6 +28,12 @@ class testdetailData {
     List detail = List<testdetailData>();
     return detail
       ..add(testdetailData(
+        title: " Declaration",
+        content:
+            "In this section you are going to learn about the UTM used in three-point test. \n \nThe content of this sections comes from Matls 3M03: Mechanical Behavior of Material Demo 1b\n \nReference:\nRubel, O. Material 3M03, Lab 4: CREEP AND HIGH TEMPERATURE DEFORMATION, McMaster University.",
+        backImg: bImg,
+      ))
+      ..add(testdetailData(
           title: "Background",
           content:
               "Bones are complex materials necessary for daily function and keeping us alive. They allow our bodies to move by providing a framework for muscles and tendons to attach, protect organs such as our heart and lungs, and even produce blood cells. Therefore, two types of bones exist in our body.\n \nCorticol Bone: Stiff with high elastic modulus. \n \nTrabecular bone: Porous and has low elastic modulus. \nThe common bone structure in human body is cortical bone forms the outside and the trabecular bone is sandwiched inside. ",

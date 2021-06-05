@@ -38,8 +38,8 @@ class _CreepTestState extends State<CreepTest> {
         back_img: testBGdetail[j].backImg,
         addOnImg: testBGdetail[j].addOnImg,
         pageTo: testBGdetail[j].pageTo,
-        height: testBGdetail[j].height,
-        length: testBGdetail[j].top,
+        height: testBGdetail[j].top,
+        length: testBGdetail[j].height,
         width: testBGdetail[j].width,
         left: testBGdetail[j].left,
       ));
