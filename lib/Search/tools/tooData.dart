@@ -36,9 +36,9 @@ class ToolData {
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Matls Constant",
+          name: "Unit Conversion",
           posCode: "d",
-          pageTo: unitC(),
+          pageTo: UnitCOnverMain(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }

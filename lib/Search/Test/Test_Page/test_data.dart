@@ -42,18 +42,17 @@ class HeroType {
           subTitle:
               'Find the advantage of composite material from human bone structure',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/3p.jpg?raw=true',
           materialColor: Colors.green[400]))
       ..add(HeroType(
           title: 'UTM Case: Elastic Modulus',
           titleFontSize: 22,
           contentFontsize: 14,
           pageTo: ACLTest(),
-          subTitle:
-              'Find the advantage of composite material from human bone structure',
+          subTitle: 'Test the material strength for synthetic ACL graft',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
-          materialColor: Colors.green[400]))
+          materialColor: Colors.greenAccent))
       ..add(HeroType(
           title: 'Meturllgical Analysis',
           pageTo: metAnalysis(),
