@@ -3,9 +3,11 @@ import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'acidData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
+import 'acidSafyFinal.dart';
 
 class AcidSafty extends StatefulWidget {
-  AcidSafty({Key key}) : super(key: key);
+  final Widget pageTo;
+  AcidSafty({@optionalTypeArgs this.pageTo, Key key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -38,6 +40,9 @@ class _AcidSaftyState extends State<AcidSafty> {
         addOnImg: testBGdetail[j].addOnImg,
         pageTo: testBGdetail[j].pageTo,
       ));
+    }
+    if (widget.pageTo != null) {
+      pages.add(acidQuiz());
     }
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

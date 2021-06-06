@@ -6,6 +6,7 @@ import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/Etching/EtchingMain.dart';
 import 'acidProtocol.dart';
 import 'package:page_transition/page_transition.dart';
+import 'AcidSafty/AcidMain.dart';
 
 class Etching extends StatefulWidget {
   final String location;
@@ -90,7 +91,7 @@ class _EtchingState extends State<Etching> {
                         context,
                         PageTransition(
                             duration: Duration(milliseconds: 700),
-                            child: AcidSafty(),
+                            child: Aciddetail(),
                             type: PageTransitionType.scale,
                             alignment: Alignment.topCenter));
                   }),
@@ -99,7 +100,9 @@ class _EtchingState extends State<Etching> {
               top: _screenH / 1.56,
               left: _screenWidth / 12,
               buttonName: "Instruction",
-              pageTo: Etchinginstruction(),
+              pageTo: AcidSafty(
+                pageTo: Etchinginstruction(),
+              ),
               warnNote:
                   "•All Work Involve Chemical Should be done in Fume Hood \n•Make sure you are familiar with the location for eyewash and shower \n•Make sure the Solvent Spill Kit is around \n•If you are going to use HF please read the manual before proceeding\n•When Etching: All containment must go to waste bucket.\•nAll waste bucket and contianer need to be properly cleaned",
             ),
