@@ -22,13 +22,30 @@ class _AciddetailState extends State<Aciddetail> {
   int q2;
   int c1;
   int c2;
+  int q3;
+  int c3;
+  bool checked = false;
   Color bordC;
+
+  List<int> qs = [];
+  List<int> cs = [];
   List<String> chemN = [];
   List<String> chemP = [];
   List<String> toxi = [];
   List<String> ppe = [];
   List<List> whole = [];
   List<String> questionB = ["Property", "Toxicity", "PPE"];
+  List<int> code = [12, 25, 19];
+  List<bool> answs = [];
+  bool choicea = false;
+  bool choiceb = false;
+  bool choicec = false;
+
+  List<List> _selectedIndex = [
+    [4, 3],
+    [4, 3],
+    [4, 3]
+  ];
 
   @override
   void didChangeDependencies() {
@@ -42,6 +59,9 @@ class _AciddetailState extends State<Aciddetail> {
     } else {
       adjust = 1;
     }
+    qs = [q1, q2, q3];
+    cs = [c1, c2, c3];
+    answs = [choicea, choiceb, choicec];
   }
 
   List<testdetailData> result = testdetailData().detailL();
@@ -53,6 +73,8 @@ class _AciddetailState extends State<Aciddetail> {
     q2 = random.nextInt(3);
     c1 = random.nextInt(result.length);
     c2 = random.nextInt(result.length);
+    c3 = random.nextInt(result.length);
+    q3 = random.nextInt(result.length);
     for (var i = 0; i < result.length; i++) {
       chemN.add(result[i].chemName);
       chemP.add(result[i].chemicalP);
@@ -66,6 +88,10 @@ class _AciddetailState extends State<Aciddetail> {
 
   @override
   Widget build(BuildContext context) {
+    _onSelected(int index, int ii) {
+      setState(() => _selectedIndex[ii][0] = index);
+    }
+
     final ScrollController controller = ScrollController();
     final PageController pcontroller = PageController();
     return PageView(
@@ -159,49 +185,115 @@ class _AciddetailState extends State<Aciddetail> {
                 }),
           ),
         Scaffold(
-          appBar: AppBar(
-            title: Text("Short Quiz before Proceeding"),
-          ),
-          body: Column(
-            children: [
-              Container(
-                width: _screenWidth / 1.2,
-                height: _screenH / 6,
-                child: Text("Whats the " + questionB[q1] + " for " + chemN[c1]),
+            appBar: AppBar(
+              title: Text("Short Quiz before Proceeding"),
+            ),
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  for (var ii = 0; ii < qs.length; ii++)
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      height: _screenH / 1.2,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            width: _screenWidth / 1.2,
+                            height: _screenH / 18,
+                            child: Text(
+                              "Question #" +
+                                  (ii + 1).toString() +
+                                  " Whats the " +
+                                  questionB[qs[ii]] +
+                                  " for " +
+                                  chemN[cs[ii]],
+                              style: TextStyle(
+                                  fontSize: _screenH / 40,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Container(
+                            height: _screenH / 1.4,
+                            child: ListView.separated(
+                                itemCount: 3,
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                                separatorBuilder: (context, index) {
+                                  return Divider(
+                                    height: 10,
+                                  );
+                                },
+                                itemBuilder: (
+                                  BuildContext context,
+                                  int index,
+                                ) {
+                                  return Container(
+                                    color:
+                                        settleColor(_selectedIndex, index, ii),
+                                    child: ListTile(
+                                      shape: RoundedRectangleBorder(
+                                        side: BorderSide(
+                                            color: Colors.red, width: 3),
+                                      ),
+                                      onTap: () {
+                                        _onSelected(index, ii);
+                                        if (index == cs[ii]) {
+                                          setState(() {
+                                            _selectedIndex[ii][1] = 1;
+                                            answs[ii] = true;
+                                          });
+                                        } else {
+                                          setState(() {
+                                            _selectedIndex[ii][1] = 0;
+                                          });
+                                        }
+                                      },
+                                      title: Text(whole[qs[ii]][index]),
+                                    ),
+                                  );
+                                }),
+                          )
+                        ],
+                      ),
+                    ),
+                  Text("The code for the shred is:"),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(_screenWidth / 4, 5, 20, 5),
+                    child: Row(
+                      children: [
+                        for (var jj = 0; jj < 3; jj++)
+                          Container(
+                            height: _screenH / 12,
+                            width: _screenWidth / 6,
+                            child: answs[jj]
+                                ? Text(code[jj].toString())
+                                : Container(),
+                            decoration: BoxDecoration(color: Colors.grey[100]),
+                          ),
+                        SizedBox(
+                          width: 5,
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
-              Container(
-                height: _screenH / 1.5,
-                child: ListView.builder(
-                    itemCount: 3,
-                    itemExtent: _screenH / 4,
-                    itemBuilder: (BuildContext context, int index) {
-                      return InkWell(
-                        highlightColor: bordC ?? Colors.grey,
-                        customBorder: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(9),
-                        ),
-                        onTap: () {
-                          if (index == c1) {
-                            setState(() {
-                              bordC = Colors.greenAccent;
-                              print("great");
-                            });
-                          } else {
-                            setState(() {
-                              bordC = Colors.redAccent;
-                              print("bad");
-                            });
-                          }
-                        },
-                        splashColor: Colors.lightBlueAccent,
-                        child: Text(whole[q1][index]),
-                      );
-                    }),
-              )
-            ],
-          ),
-        )
+            ))
       ],
     );
+  }
+
+  settleColor(List select, int index, int ii) {
+    if (select[ii][0] == index) {
+      if (select[ii][1] == 1) {
+        return Colors.green;
+      } else {
+        return Colors.red;
+      }
+    } else {
+      return Colors.grey[100];
+    }
   }
 }
