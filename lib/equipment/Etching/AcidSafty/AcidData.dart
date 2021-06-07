@@ -1,15 +1,21 @@
 class testdetailData {
   String chemName;
   String chemicalP;
+  String physicalP;
   String toxic;
   String prep;
   String ppe;
   String backImg;
+  double contFontS;
+  String addImg;
   List<String> whims;
 
   testdetailData(
       {this.backImg,
+      this.physicalP,
+      this.addImg,
       this.chemicalP,
+      this.contFontS,
       this.ppe,
       this.prep,
       this.whims,
@@ -30,6 +36,9 @@ class testdetailData {
     return detail
       ..add(testdetailData(
         chemName: "Hydrofluoric Acid HF",
+        // https://pubchem.ncbi.nlm.nih.gov/compound/Hydrofluoric-acid#section=Experimental-Properties
+        physicalP:
+            "Hydrogen fluoride, anhydrous appears as a colorless fuming liquid boiling at 67°F. Shipped as a liquid confined under its own vapor pressure.\nVapors are heavier than air. Density 8.2 lb / gal.",
         chemicalP:
             "It can react with glazes, enamels, pottery, concrete, rubber,leather, many metals (especially cast iron) and many organic compounds. It can etches glass and it may explode when meet hydrogen gas. ",
         toxic:
@@ -41,8 +50,11 @@ class testdetailData {
         backImg: bImg,
       ))
       ..add(testdetailData(
+          //https://pubchem.ncbi.nlm.nih.gov/compound/Picric-acid#section=Computed-Properties
           chemName: "Picric Acid",
-          chemicalP: "Dry acid is yellow crystal, soluable to water. Highly sensitve to heat/shick/friction and may explode\nLess dangerous with 10% water, but still dangerous when acid is less than 30% water, very reactive.\nIts a flammable solid",
+          physicalP: "Dry acid is yellow crystal, soluable to water.",
+          chemicalP:
+              "Molecular weight is 229 g/mol\nHighly sensitve to heat/shick/friction and may explode\nLess dangerous with 10% water, but still dangerous when acid is less than 30% water, very reactive.\nIts a flammable solid",
           toxic: "•Corrosive to eyes and skins\n•Can cause sever allergic reaction once sensitized\n•Harmful if swollowed\n•Symptoms are headache, nausea, vomitting, diarrhea, convlusions or even death",
           prep: prepara,
           ppe: "\n•Safety Googles\n•Closed lab coat with sleeves fully extended to the wrist lab coat\n•neoprene rubber gloves and nitrile rubber when used for short periods only (resistance to breakthrough within 1 to 4 hours). Verify with manufacturer’s glove compatibility charts.",
@@ -52,12 +64,14 @@ class testdetailData {
             wexplo
           ]))
       ..add(testdetailData(
+          // https://www.vedantu.com/chemistry/hydrochloric-acid
           chemName: "Hydrochloric Acid",
-          chemicalP:
-              "Clear colorless solution and has a highly pungent odor, soluable to water.\nStrong acid, can complete dossociated in water, can dosspve many metals and forms oxideized metal chlorides and hydrogen gas",
+          physicalP:
+              "Clear colorless solution and has a highly pungent odor.\nBoiling points, density, pH depends on the concentration",
+          chemicalP: "Soluable to water.\nStrong acid, can complete dossociated in water, can dosspve many metals and forms oxideized metal chlorides and hydrogen gas",
           toxic: "•Corrosive to eye, skin and mucous membranes.\n•Skin Contact can results in severe burns and scarring\n•Inhalation will cause harm to eyes nose and respiratory tract\n•Ingestion will cause sever damage to mucous membrane, esophagus and stomach",
           prep: prepara,
-          ppe: "\n•Lab Coat\n•Safty glasses\n•Face shield when splash is feasible\n•Gloves must be checked before use and exchange when broke or containmed\n•Wash forarm after gloves removed",
+          ppe: "\n•Lab Coat\n•Safty glasses\n•Face shield when splash is feasible\n•Gloves must be checked befor use and exchange when broke or containmed\n•Wash forarm after gloves removed",
           whims: [wcorro, wtoxi]));
   }
 }

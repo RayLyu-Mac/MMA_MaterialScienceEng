@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:mma_mse/Search/safty/ShowerWasher/ShowerMain.dart';
 import 'package:flutter/material.dart';
 import 'AcidData.dart';
 import 'package:mma_mse/customTileScroll.dart';
@@ -33,8 +33,14 @@ class _AciddetailState extends State<Aciddetail> {
   List<String> chemP = [];
   List<String> toxi = [];
   List<String> ppe = [];
+  List<String> physiP = [];
   List<List> whole = [];
-  List<String> questionB = ["Property", "Toxicity", "PPE"];
+  List<String> questionB = [
+    "Chemical Property",
+    "Toxicity",
+    "PPE",
+    "Physical Property"
+  ];
   List<int> code = [12, 25, 19];
   List<bool> answs = [];
   bool choicea = false;
@@ -70,6 +76,7 @@ class _AciddetailState extends State<Aciddetail> {
     super.initState();
     var random = Random();
     q1 = random.nextInt(3);
+
     q2 = random.nextInt(3);
     c1 = random.nextInt(result.length);
     c2 = random.nextInt(result.length);
@@ -80,14 +87,22 @@ class _AciddetailState extends State<Aciddetail> {
       chemP.add(result[i].chemicalP);
       toxi.add(result[i].toxic);
       ppe.add(result[i].ppe);
+      physiP.add(result[i].physicalP);
     }
     whole.add(chemP);
     whole.add(toxi);
     whole.add(ppe);
+    whole.add(physiP);
   }
 
   @override
   Widget build(BuildContext context) {
+    String phyP =
+        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/PhyP.jpg?raw=true";
+    String chemPimg =
+        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/chemP.jpg?raw=true";
+    String ppeImg =
+        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/PPE.png?raw=true";
     _onSelected(int index, int ii) {
       setState(() => _selectedIndex[ii][0] = index);
     }
@@ -105,12 +120,13 @@ class _AciddetailState extends State<Aciddetail> {
               backgroundColor: Colors.black,
             ),
             body: ListView.builder(
-                itemCount: 5,
-                itemExtent: 395,
+                itemCount: 6,
+                itemExtent: 420,
                 controller: controller,
                 itemBuilder: (BuildContext context, int index) {
                   Map<String, dynamic> tiles = {
-                    "Property": result[acids].chemicalP,
+                    "Physical Property": result[acids].physicalP,
+                    "Chemical Property": result[acids].chemicalP,
                     "Toxicity": result[acids].toxic,
                     "Preparation": result[acids].prep,
                     "PPE required": result[acids].ppe,
@@ -128,10 +144,16 @@ class _AciddetailState extends State<Aciddetail> {
                     clipBehavior: Clip.antiAlias,
                     child: Stack(
                       children: [
-                        Positioned(top: 7, left: 10, child: Text(partName)),
-                        index == 4
+                        Positioned(
+                            top: 12,
+                            left: 10,
+                            child: Text(partName,
+                                style: TextStyle(
+                                    fontSize: _screenH / 28,
+                                    fontWeight: FontWeight.bold))),
+                        index == 5
                             ? Positioned(
-                                top: 30,
+                                top: 50,
                                 left: 5,
                                 child: Column(
                                   children: [
@@ -156,6 +178,9 @@ class _AciddetailState extends State<Aciddetail> {
                                           )
                                       ],
                                     ),
+                                    SizedBox(
+                                      height: _screenH / 40,
+                                    ),
                                     FlatButton.icon(
                                         onPressed: () {
                                           Navigator.push(
@@ -172,13 +197,49 @@ class _AciddetailState extends State<Aciddetail> {
                                             Text("Check the whole WHIMS List"))
                                   ],
                                 ))
-                            : Positioned(
-                                top: 20,
-                                left: 5,
-                                child: Container(
-                                  width: _screenWidth / 1.2,
-                                  child: Text(prop),
-                                ))
+                            : index == 3
+                                ? Positioned(
+                                    top: 40,
+                                    left: 5,
+                                    child: Container(
+                                      width: _screenWidth / 1.2,
+                                      child: Text(
+                                        prop,
+                                        style:
+                                            TextStyle(fontSize: _screenH / 35),
+                                      ),
+                                    ))
+                                : Positioned(
+                                    top: 40,
+                                    left: 5,
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          width: _screenWidth / 1.2,
+                                          child: Text(
+                                            prop,
+                                            style: TextStyle(
+                                                fontSize: _screenH / 35),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: _screenH / 20,
+                                        ),
+                                        Container(
+                                            width: _screenWidth / 1.6,
+                                            height: _screenH / 4,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image:
+                                                        NetworkImage(index == 0
+                                                            ? chemPimg
+                                                            : index == 1
+                                                                ? phyP
+                                                                : index == 4
+                                                                    ? ppeImg
+                                                                    : null)))),
+                                      ],
+                                    ))
                       ],
                     ),
                   );
@@ -265,6 +326,8 @@ class _AciddetailState extends State<Aciddetail> {
                       children: [
                         for (var jj = 0; jj < 3; jj++)
                           Container(
+                            padding: EdgeInsets.fromLTRB(
+                                _screenWidth / 10, 5, 15, 5),
                             height: _screenH / 12,
                             width: _screenWidth / 6,
                             child: answs[jj]
