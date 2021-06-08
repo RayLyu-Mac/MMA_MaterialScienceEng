@@ -11,6 +11,8 @@ class testdetailData {
   double left;
   double top;
   double width;
+  String addonImgLft;
+  String addonImgRht;
 
   testdetailData(
       {this.title,
@@ -21,6 +23,8 @@ class testdetailData {
       this.width,
       this.top,
       this.pageTo,
+      this.addonImgLft,
+      this.addonImgRht,
       this.height});
   String bImg =
       "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/caracc.jpg?raw=true";
@@ -32,6 +36,10 @@ class testdetailData {
           content:
               "Carbon-Steel Phase Diagram:\nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
           backImg: bImg,
+          addonImgLft:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feCLeft.png?raw=true",
+          addonImgRht:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feCRight.png?raw=true",
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feC.png?raw=true"))
       ..add(testdetailData(

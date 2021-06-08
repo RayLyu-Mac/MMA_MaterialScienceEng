@@ -4,6 +4,7 @@ import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'ConstantCheck/PressureU.dart';
 import 'ConstantCheck/UnitConvMain.dart';
+import 'phaseDiagram/phaseDMain.dart';
 
 class ToolData {
   String posCode;
@@ -32,7 +33,7 @@ class ToolData {
       ..add(ToolData(
           name: "Phase Diagram Check",
           posCode: "c",
-          pageTo: AcidSafty(),
+          pageTo: PhaseDiag(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
