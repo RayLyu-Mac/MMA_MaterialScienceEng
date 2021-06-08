@@ -36,6 +36,18 @@ class testdetailData {
           content:
               "Definition: \nTotal mechanical energy per unit volume consumed by the material in straining it to that value \n \nCalculation Method: \nThe area under the stress strain curve",
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/IMG_0774(20210527-200435).PNG?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/IMG_0774(20210527-200435).PNG?raw=true"))
+      ..add(testdetailData(
+          title: "Stress Calculation",
+          content:
+              "P: Load\nL: Span of the support\nb: Width of the sample\nd:Height of the sample",
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/formula.jpg?raw=true"))
+      ..add(testdetailData(
+          title: "Flexural Strain Calculation",
+          content:
+              "P: Load\nL: Span of the support\nd:Height of the sample\nD: Deflection of the sample",
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/formula.jpg?raw=true"));
   }
 }
