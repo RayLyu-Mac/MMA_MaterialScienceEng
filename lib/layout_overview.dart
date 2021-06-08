@@ -69,6 +69,22 @@ class _layout_overviewState extends State<layout_overview> {
   double _screenWidth;
   double _screenH;
   double tra = 0.001;
+  List<Color> floorC = [
+    Colors.orangeAccent,
+    Colors.lightGreenAccent,
+    Colors.lightBlueAccent
+  ];
+  List<double> floorD = [
+    6.5,
+    3,
+    1.95,
+  ];
+  List<double> buttonD = [
+    0,
+    12,
+    3.8,
+    2.25,
+  ];
 
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -152,77 +168,31 @@ class _layout_overviewState extends State<layout_overview> {
                   style: TextStyle(
                       fontSize: _screenH / 40, fontWeight: FontWeight.bold),
                 )),
-            Positioned(
-              top: _screenH / 8.7,
-              left: 3,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.1, height: _screenH / 2.2),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assest/layout/layout.png"),
-                        fit: BoxFit.cover)),
-              ),
-            ),
-            Positioned(
-                top: _screenH / 10,
-                left: _screenWidth / 1.4,
-                child: GestureDetector(
+            for (var jj = 0; jj < 3; jj++)
+              Positioned(
+                  top: _screenH / floorD[jj],
+                  left: jj == 1 ? _screenWidth / 2.5 : _screenWidth / 20,
                   child: Container(
-                    color: Colors.black.withOpacity(tra),
-                    height: _height - 30,
-                    width: _width,
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                          duration: const Duration(milliseconds: 500),
-                          child: floor1(),
-                          type: PageTransitionType.rightToLeftWithFade,
-                        ));
-                  },
-                )),
-            Positioned(
-              top: _screenH / 3.7,
-              left: _screenWidth / 1.4,
-              child: GestureDetector(
-                child: Container(
-                  color: Colors.black.withOpacity(tra),
-                  height: _height - 30,
-                  width: _width,
-                ),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                        duration: const Duration(milliseconds: 500),
-                        child: floor1(),
-                        type: PageTransitionType.rightToLeftWithFade,
-                      ));
-                },
+                    height: _screenH / 20,
+                    width: _screenWidth / 1.7,
+                    color: floorC[jj],
+                  )),
+            for (var ii = 1; ii < 4; ii++)
+              Positioned(
+                top: _screenH / (buttonD[ii]),
+                left: ii == 2 ? _screenWidth / 2.2 : _screenWidth / 10,
+                child: RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: floor1(),
+                              type: PageTransitionType.scale,
+                              alignment: Alignment.topCenter));
+                    },
+                    icon: Icon(Icons.home_filled),
+                    label: Text("Floor $ii")),
               ),
-            ),
-            Positioned(
-              top: _screenH / 2.2,
-              left: _screenWidth / 1.4,
-              child: GestureDetector(
-                child: Container(
-                  color: Colors.black.withOpacity(tra),
-                  height: _height - 30,
-                  width: _width,
-                ),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                        duration: const Duration(milliseconds: 500),
-                        child: floor1(),
-                        type: PageTransitionType.rightToLeftWithFade,
-                      ));
-                },
-              ),
-            ),
             Positioned(
                 top: _screenH / 1.65,
                 left: _screenWidth / 1.6,

@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:mma_mse/Search/safty/ShowerWasher/ShowerMain.dart';
+import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:flutter/material.dart';
+import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
 import 'AcidData.dart';
 import 'package:mma_mse/customTileScroll.dart';
 import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
@@ -60,7 +62,7 @@ class _AciddetailState extends State<Aciddetail> {
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.85;
+      _screenH = _screenH * 0.83;
       adjust = 0.85;
     } else {
       adjust = 1;
@@ -121,7 +123,7 @@ class _AciddetailState extends State<Aciddetail> {
             ),
             body: ListView.builder(
                 itemCount: 6,
-                itemExtent: 420,
+                itemExtent: 430,
                 controller: controller,
                 itemBuilder: (BuildContext context, int index) {
                   Map<String, dynamic> tiles = {
@@ -201,13 +203,50 @@ class _AciddetailState extends State<Aciddetail> {
                                 ? Positioned(
                                     top: 40,
                                     left: 5,
-                                    child: Container(
-                                      width: _screenWidth / 1.2,
-                                      child: Text(
-                                        prop,
-                                        style:
-                                            TextStyle(fontSize: _screenH / 35),
-                                      ),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          width: _screenWidth / 1.2,
+                                          child: Text(
+                                            prop,
+                                            style: TextStyle(
+                                                fontSize: _screenH / 35),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: _screenH / 30,
+                                        ),
+                                        FlatButton.icon(
+                                            onPressed: () {
+                                              Navigator.push(
+                                                  context,
+                                                  PageTransition(
+                                                      duration: const Duration(
+                                                          milliseconds: 500),
+                                                      child:
+                                                          ChemicalShowerEyeWasher(),
+                                                      type: PageTransitionType
+                                                          .leftToRight));
+                                            },
+                                            icon: Icon(Icons.shower_rounded),
+                                            label: Text(
+                                                "Eye wash station & Chemical Shower")),
+                                        FlatButton.icon(
+                                            color: Colors.grey.withOpacity(0.7),
+                                            onPressed: () {
+                                              Navigator.push(
+                                                  context,
+                                                  PageTransition(
+                                                      duration: const Duration(
+                                                          milliseconds: 500),
+                                                      child:
+                                                          SearchListExample(),
+                                                      type: PageTransitionType
+                                                          .rightToLeft));
+                                            },
+                                            icon: Icon(Icons.search),
+                                            label: Text("MSDS Data Sheet"))
+                                      ],
                                     ))
                                 : Positioned(
                                     top: 40,
@@ -226,18 +265,18 @@ class _AciddetailState extends State<Aciddetail> {
                                           height: _screenH / 20,
                                         ),
                                         Container(
-                                            width: _screenWidth / 1.6,
-                                            height: _screenH / 4,
+                                            width: _screenWidth / 1.5,
+                                            height: _screenH / 4.3,
                                             decoration: BoxDecoration(
                                                 image: DecorationImage(
-                                                    image:
-                                                        NetworkImage(index == 0
-                                                            ? chemPimg
-                                                            : index == 1
-                                                                ? phyP
-                                                                : index == 4
-                                                                    ? ppeImg
-                                                                    : null)))),
+                                                    image: NetworkImage(index ==
+                                                            0
+                                                        ? chemPimg
+                                                        : index == 1
+                                                            ? phyP
+                                                            : index == 4
+                                                                ? ppeImg
+                                                                : "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/body.jpg?raw=true")))),
                                       ],
                                     ))
                       ],
@@ -247,7 +286,11 @@ class _AciddetailState extends State<Aciddetail> {
           ),
         Scaffold(
             appBar: AppBar(
-              title: Text("Short Quiz before Proceeding"),
+              backgroundColor: Colors.black,
+              title: Text(
+                "Short Quiz before Proceeding",
+                style: TextStyle(fontFamily: "Odibee Sans"),
+              ),
             ),
             body: SingleChildScrollView(
               child: Column(
@@ -255,7 +298,7 @@ class _AciddetailState extends State<Aciddetail> {
                   for (var ii = 0; ii < qs.length; ii++)
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                      height: _screenH / 1.2,
+                      height: _screenH / 1.32,
                       child: Column(
                         children: [
                           SizedBox(
@@ -277,13 +320,17 @@ class _AciddetailState extends State<Aciddetail> {
                             ),
                           ),
                           Container(
-                            height: _screenH / 1.4,
+                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.grey, width: 3)),
+                            height: _screenH / 1.5,
                             child: ListView.separated(
                                 itemCount: 3,
                                 padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                                 separatorBuilder: (context, index) {
                                   return Divider(
-                                    height: 10,
+                                    height: 12,
                                   );
                                 },
                                 itemBuilder: (
@@ -291,14 +338,16 @@ class _AciddetailState extends State<Aciddetail> {
                                   int index,
                                 ) {
                                   return Container(
+                                    height: _screenH / 5,
                                     color:
                                         settleColor(_selectedIndex, index, ii),
-                                    child: ListTile(
+                                    child: FlatButton(
                                       shape: RoundedRectangleBorder(
                                         side: BorderSide(
-                                            color: Colors.red, width: 3),
+                                            color: Colors.blueAccent[100],
+                                            width: 3),
                                       ),
-                                      onTap: () {
+                                      onPressed: () {
                                         _onSelected(index, ii);
                                         if (index == cs[ii]) {
                                           setState(() {
@@ -311,7 +360,7 @@ class _AciddetailState extends State<Aciddetail> {
                                           });
                                         }
                                       },
-                                      title: Text(whole[qs[ii]][index]),
+                                      child: Text(whole[qs[ii]][index]),
                                     ),
                                   );
                                 }),
@@ -326,14 +375,23 @@ class _AciddetailState extends State<Aciddetail> {
                       children: [
                         for (var jj = 0; jj < 3; jj++)
                           Container(
-                            padding: EdgeInsets.fromLTRB(
-                                _screenWidth / 10, 5, 15, 5),
+                            padding: EdgeInsets.fromLTRB(_screenWidth / 20,
+                                _screenH / 45, 15, _screenH / 55),
                             height: _screenH / 12,
                             width: _screenWidth / 6,
                             child: answs[jj]
-                                ? Text(code[jj].toString())
+                                ? Text(
+                                    code[jj].toString(),
+                                    style: TextStyle(
+                                        fontSize: _screenH / 33,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: "Sigmar One"),
+                                  )
                                 : Container(),
-                            decoration: BoxDecoration(color: Colors.grey[100]),
+                            decoration: BoxDecoration(
+                                color: Colors.grey[200],
+                                border: Border.all(
+                                    color: Colors.blueGrey[800], width: 2)),
                           ),
                         SizedBox(
                           width: 5,
@@ -351,9 +409,9 @@ class _AciddetailState extends State<Aciddetail> {
   settleColor(List select, int index, int ii) {
     if (select[ii][0] == index) {
       if (select[ii][1] == 1) {
-        return Colors.green;
+        return Colors.lightGreenAccent;
       } else {
-        return Colors.red;
+        return Colors.redAccent[100];
       }
     } else {
       return Colors.grey[100];

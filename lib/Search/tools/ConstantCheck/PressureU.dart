@@ -34,25 +34,33 @@ class _unitCState extends State<unitC> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: _screenH / 1.5,
-      decoration: BoxDecoration(color: Colors.white.withOpacity(0.8)),
+      height: _screenH / 2,
+      width: _screenWidth / 1.15,
+      decoration: BoxDecoration(color: Colors.white.withOpacity(0.7)),
       child: Stack(
         children: [
           Positioned(
-              top: _screenH / 20,
+              top: _screenH / 35,
+              left: _screenWidth / 9,
+              child: Text("Pressure unit conversion",
+                  style: TextStyle(
+                    fontSize: _screenH / 30,
+                    fontWeight: FontWeight.bold,
+                  ))),
+          Positioned(
+              top: _screenH / 9,
               left: _screenWidth / 20,
               child: Container(
                 height: _screenH / 10,
-                width: _screenWidth / 1.5,
+                width: _screenWidth / 2.2,
                 child: TextField(
                   controller: before,
-                  decoration: InputDecoration(
-                      hintText: "Please put the value you want to convert"),
+                  decoration: InputDecoration(hintText: "Value Before"),
                 ),
               )),
           Positioned(
-              top: _screenH / 15,
-              left: _screenWidth / 1.3,
+              top: _screenH / 9,
+              left: _screenWidth / 1.8,
               child: Container(
                 height: 30,
                 width: 80,
@@ -79,8 +87,8 @@ class _unitCState extends State<unitC> {
                 ),
               )),
           Positioned(
-              top: _screenH / 7,
-              left: _screenWidth / 1.3,
+              top: _screenH / 5,
+              left: _screenWidth / 1.8,
               child: Container(
                 height: 30,
                 width: 80,
@@ -105,7 +113,7 @@ class _unitCState extends State<unitC> {
                 ),
               )),
           Positioned(
-              top: _screenH / 6,
+              top: _screenH / 4,
               left: _screenWidth / 20,
               child: RaisedButton.icon(
                   onPressed: () {
@@ -132,9 +140,14 @@ class _unitCState extends State<unitC> {
                   icon: Icon(Icons.explicit_rounded),
                   label: Text("Convert"))),
           Positioned(
-              top: _screenH / 3.5,
+              top: _screenH / 2.8,
               left: _screenWidth / 20,
-              child: Text(finalV.toString()))
+              child: Text(
+                "The converted value is:" +
+                    (finalV != null ? finalV.toString() : " --"),
+                style: TextStyle(
+                    fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+              ))
         ],
       ),
     );

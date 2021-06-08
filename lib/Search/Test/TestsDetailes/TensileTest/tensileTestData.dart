@@ -48,9 +48,9 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Case Introduction",
+          title: "Model Introduction",
           content:
-              "Vertebra has the same structure as state before and it is usually got fracture in a car accident. When a vehicle stops suddenly, the waistband of the seat belt restricts the motion of the lumbar spine (force 2) while the body’s inertia propels it forward. In this experiment we will make comparison between the sandwich structure with the single material structure. \nThus, the best way to simulate damage caused by car accident to driver’s vertebra is by performing the 3-point test in Tensile machine and making comparison on the elastic modulus of the two different structure. ",
+              "With applying the chemical composition of the Al alloy 6061, the tension tests would be performed and the dimensions of tensile specimens and the load vs. tension data would be collected. The T6 conduction is rapidly cooled down. The anneal condition is slowly cooling down and quenched at certain temperature. The two conditions will be tested by calculating the stress vs. strain curve and determined fracture point to predict the properties as well the tensile stress and tensile yield stress. ",
           backImg: bImg,
           height: 1.7,
           top: 3,

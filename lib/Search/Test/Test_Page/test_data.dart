@@ -6,6 +6,7 @@ import 'package:mma_mse/Search/Test/TestsDetailes/metullrigicalAnalysis/MetAnaMa
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/tensileTestMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/ACLTest/ACLMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/CreepTest/CreepMain.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/alMicroStre/alMain.dart';
 
 class HeroType {
   String title;
@@ -64,6 +65,13 @@ class HeroType {
       ..add(HeroType(
           title: 'Creep Test',
           pageTo: CreepTest(),
+          subTitle: 'Find the resistance to creep for alloy and pure material',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
+          materialColor: Colors.orangeAccent[100]))
+      ..add(HeroType(
+          title: 'Microstructure',
+          pageTo: AlStrengthTest(),
           subTitle: 'Find the resistance to creep for alloy and pure material',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
