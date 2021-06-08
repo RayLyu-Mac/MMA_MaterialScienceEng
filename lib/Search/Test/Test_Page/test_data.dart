@@ -75,7 +75,14 @@ class HeroType {
           subTitle: 'Find the resistance to creep for alloy and pure material',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
-          materialColor: Colors.orangeAccent[100]));
+          materialColor: Colors.orangeAccent[100]))
+      ..add(HeroType(
+          title: 'Fast Fracture',
+          pageTo: AlStrengthTest(),
+          subTitle: 'Find the resistance to creep for alloy and pure material',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
+          materialColor: Colors.lightBlueAccent[100]));
   }
 }
 

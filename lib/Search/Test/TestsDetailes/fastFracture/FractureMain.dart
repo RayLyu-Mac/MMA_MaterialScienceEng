@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/Test/testDetailMode.dart';
-import 'ACLData.dart';
+import 'FractureData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
 
-class ACLTest extends StatefulWidget {
-  ACLTest({Key key}) : super(key: key);
+class FractureTest extends StatefulWidget {
+  FractureTest({Key key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
-  _ACLTestState createState() => _ACLTestState();
+  _FractureTestState createState() => _FractureTestState();
 }
 
-class _ACLTestState extends State<ACLTest> {
-  double _screenWidth;
-  double _screenH;
+class _FractureTestState extends State<FractureTest> {
   List<testdetailData> testBGdetail = testdetailData().detailL();
   List<Widget> pages = [];
   List listtile = [];
+  double _screenWidth;
+  double _screenH;
   double adjust;
 
   @override

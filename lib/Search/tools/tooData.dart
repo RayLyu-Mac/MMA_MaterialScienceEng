@@ -30,7 +30,7 @@ class ToolData {
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
-          name: "Acid Safty Sheet",
+          name: "Phase Diagram Check",
           posCode: "c",
           pageTo: AcidSafty(),
           backImg:
