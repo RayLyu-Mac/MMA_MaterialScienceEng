@@ -31,7 +31,6 @@ class _floor1State extends State<floor1> {
 
   @override
   void goToPage(qr_result) {
-    print(to["Automatic Bulk Abrasive Cutter"]);
     Navigator.push(
         context,
         PageTransition(
