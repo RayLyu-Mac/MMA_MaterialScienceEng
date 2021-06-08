@@ -48,6 +48,6 @@ class testdetailData {
           content:
               "P: Load\nL: Span of the support\nd:Height of the sample\nD: Deflection of the sample",
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/formula.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/flexureStrain.jpg?raw=true"));
   }
 }
