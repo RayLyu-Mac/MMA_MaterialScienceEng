@@ -6,12 +6,13 @@ class ZoomInPhaseD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
+    return InteractiveViewer(
+        child: FittedBox(
       child: Image(
         image: NetworkImage(imgPD ??
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feCRight.png?raw=true"),
       ),
       fit: BoxFit.fitWidth,
-    );
+    ));
   }
 }

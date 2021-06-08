@@ -34,7 +34,7 @@ class testdetailData {
       ..add(testdetailData(
           title: "Carbon-Steel Phase Diagram",
           content:
-              "Carbon-Steel Phase Diagram:\nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
+              "Carbon-Steel Phase Diagram:\n \nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
           backImg: bImg,
           addonImgLft:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feCLeft.png?raw=true",

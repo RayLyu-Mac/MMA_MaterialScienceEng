@@ -84,7 +84,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: NetworkImage(
-                                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.jpg?raw=true"),
+                                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true"),
                                   fit: BoxFit.cover),
                             ),
                           ),

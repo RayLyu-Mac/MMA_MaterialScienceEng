@@ -5,7 +5,7 @@ class IntroButtonMode extends StatefulWidget {
   IntroButtonMode(
       {@required this.pageTo,
       @required this.backImg,
-      @required this.title,
+      @optionalTypeArgs this.title,
       @optionalTypeArgs this.top,
       @optionalTypeArgs this.left,
       @optionalTypeArgs this.fontsize,
@@ -83,11 +83,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
-                    gradient: SweepGradient(colors: [
-                      Color(0xFFFFFF00),
-                      Color(0xFF00FF00),
-                      Color(0xFF00FFFF)
-                    ], startAngle: 0.0, endAngle: 3 * 3.14),
+                    color: Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                         image: NetworkImage(widget.backImg),
@@ -111,7 +107,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
               constraints: BoxConstraints.expand(
                   width: _screenWidth / 2.7, height: _screenH / 2.8),
               child: Text(
-                widget.title,
+                widget.title ?? "_",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: widget.fontsize != null
