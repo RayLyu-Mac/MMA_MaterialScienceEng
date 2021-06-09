@@ -74,7 +74,6 @@ class _equb_mainState extends State<equb_main> {
             color: Colors.grey[600],
           ),
           ExpansionTile(
-            leading: Icon(Icons.fastfood),
             backgroundColor: Colors.amber[800].withOpacity(co),
             title: Text(
               "Tensile Machine",

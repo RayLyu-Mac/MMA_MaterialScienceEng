@@ -216,21 +216,50 @@ class _AciddetailState extends State<Aciddetail> {
                                         SizedBox(
                                           height: _screenH / 30,
                                         ),
-                                        FlatButton.icon(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  PageTransition(
-                                                      duration: const Duration(
-                                                          milliseconds: 500),
-                                                      child:
-                                                          ChemicalShowerEyeWasher(),
-                                                      type: PageTransitionType
-                                                          .leftToRight));
-                                            },
-                                            icon: Icon(Icons.shower_rounded),
-                                            label: Text(
-                                                "Eye wash station & Chemical Shower")),
+                                        Container(
+                                          constraints: BoxConstraints.expand(
+                                              width: _screenWidth / 1.6,
+                                              height: _screenWidth / 7.7),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                      _screenH / 16),
+                                              border: Border.all(
+                                                  color: Colors.grey[200],
+                                                  width: 5)),
+                                          child: FlatButton.icon(
+                                              splashColor:
+                                                  Colors.redAccent[100],
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        _screenH / 16),
+                                              ),
+                                              color:
+                                                  Colors.grey.withOpacity(0.7),
+                                              onPressed: () {
+                                                Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                        duration:
+                                                            const Duration(
+                                                                milliseconds:
+                                                                    500),
+                                                        child:
+                                                            ChemicalShowerEyeWasher(),
+                                                        type: PageTransitionType
+                                                            .rightToLeft));
+                                              },
+                                              icon: Icon(
+                                                Icons.shower,
+                                                color: Colors.white,
+                                              ),
+                                              label: Text(
+                                                  "Eye wash & Chemical shower")),
+                                        ),
+                                        SizedBox(
+                                          height: _screenH / 40,
+                                        ),
                                         Container(
                                           constraints: BoxConstraints.expand(
                                               width: _screenWidth / 2.2,
