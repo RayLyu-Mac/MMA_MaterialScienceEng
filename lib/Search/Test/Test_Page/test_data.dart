@@ -7,6 +7,7 @@ import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/tensileTestMain.da
 import 'package:mma_mse/Search/Test/TestsDetailes/ACLTest/ACLMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/CreepTest/CreepMain.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/alMicroStre/alMain.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/fastFracture/FractureMain.dart';
 
 class HeroType {
   String title;
@@ -77,11 +78,12 @@ class HeroType {
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
           materialColor: Colors.orangeAccent[100]))
       ..add(HeroType(
-          title: 'Fast Fracture',
-          pageTo: AlStrengthTest(),
-          subTitle: 'Find the resistance to creep for alloy and pure material',
+          title: 'Crack resistant case',
+          pageTo: FractureTest(),
+          subTitle:
+              'Find the resistance to crack for material with different heat treatment',
           image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/showPic.jpg?raw=true',
           materialColor: Colors.lightBlueAccent[100]));
   }
 }
