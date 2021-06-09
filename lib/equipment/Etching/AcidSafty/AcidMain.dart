@@ -235,8 +235,8 @@ class _AciddetailState extends State<Aciddetail> {
                                                     BorderRadius.circular(
                                                         _screenH / 16),
                                               ),
-                                              color:
-                                                  Colors.grey.withOpacity(0.7),
+                                              color: Colors.grey[600]
+                                                  .withOpacity(0.7),
                                               onPressed: () {
                                                 Navigator.push(
                                                     context,
@@ -255,7 +255,12 @@ class _AciddetailState extends State<Aciddetail> {
                                                 color: Colors.white,
                                               ),
                                               label: Text(
-                                                  "Eye wash & Chemical shower")),
+                                                "Eye wash & Chemical shower",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              )),
                                         ),
                                         SizedBox(
                                           height: _screenH / 40,
@@ -279,8 +284,8 @@ class _AciddetailState extends State<Aciddetail> {
                                                     BorderRadius.circular(
                                                         _screenH / 16),
                                               ),
-                                              color:
-                                                  Colors.grey.withOpacity(0.7),
+                                              color: Colors.grey[600]
+                                                  .withOpacity(0.7),
                                               onPressed: () {
                                                 Navigator.push(
                                                     context,
@@ -294,8 +299,17 @@ class _AciddetailState extends State<Aciddetail> {
                                                         type: PageTransitionType
                                                             .rightToLeft));
                                               },
-                                              icon: Icon(Icons.search),
-                                              label: Text("MSDS Data Sheet")),
+                                              icon: Icon(
+                                                Icons.search,
+                                                color: Colors.white,
+                                              ),
+                                              label: Text(
+                                                "MSDS Data Sheet",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              )),
                                         )
                                       ],
                                     ))
