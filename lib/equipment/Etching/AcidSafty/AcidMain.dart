@@ -231,21 +231,43 @@ class _AciddetailState extends State<Aciddetail> {
                                             icon: Icon(Icons.shower_rounded),
                                             label: Text(
                                                 "Eye wash station & Chemical Shower")),
-                                        FlatButton.icon(
-                                            color: Colors.grey.withOpacity(0.7),
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  PageTransition(
-                                                      duration: const Duration(
-                                                          milliseconds: 500),
-                                                      child:
-                                                          SearchListExample(),
-                                                      type: PageTransitionType
-                                                          .rightToLeft));
-                                            },
-                                            icon: Icon(Icons.search),
-                                            label: Text("MSDS Data Sheet"))
+                                        Container(
+                                          constraints: BoxConstraints.expand(
+                                              width: _screenWidth / 2.2,
+                                              height: _screenWidth / 7.7),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                      _screenH / 16),
+                                              border: Border.all(
+                                                  color: Colors.grey[200],
+                                                  width: 5)),
+                                          child: FlatButton.icon(
+                                              splashColor:
+                                                  Colors.redAccent[100],
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        _screenH / 16),
+                                              ),
+                                              color:
+                                                  Colors.grey.withOpacity(0.7),
+                                              onPressed: () {
+                                                Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                        duration:
+                                                            const Duration(
+                                                                milliseconds:
+                                                                    500),
+                                                        child:
+                                                            SearchListExample(),
+                                                        type: PageTransitionType
+                                                            .rightToLeft));
+                                              },
+                                              icon: Icon(Icons.search),
+                                              label: Text("MSDS Data Sheet")),
+                                        )
                                       ],
                                     ))
                                 : Positioned(

@@ -105,18 +105,46 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mts.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Data Collected and Processing ",
+          title: "Data Collected",
+          top: 2.1,
+          height: 3.2,
           content:
-              "The data collected in this experiment are extension and load. To get the elastic modulus of the sample we need to transfer the load to stress and extension to strain. \nThe attached plots shows the result after the processing. To get the elastic modulus of the sample, we need to draw a parallel line to the linear region of the stress strain curve and find the intersection between the line and the curve. Finally, for the ultimate tensile strength is the peak of the whole curve. \n \nYou can find the detail sample on the last page. ",
+              "The data collected in this experiment are stress in (MPa) versus time (s). By ploting those data we can know the stress that need to hold the sample at certain strain rate",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/ACL/data.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/Raw.png?raw=true"))
       ..add(testdetailData(
-          title: "Conclusion",
+          title: "Data Normalized and Comparison",
+          top: 2.1,
+          height: 3.2,
           content:
-              "The sample we tested has lower UTM (9.33% lower) and higher elastic modulus(16.26% higher) than expected. Thus, the PTFE still need to be enhanced to reach the requirement for replacement of ACL. The cross section before and after the fracture is quite similar which demonstrates that the necking process is not significant for this material.",
+              "The data we collected will be normalized by dividing the maximum value of each curve. By plotting two curves together we can compare the stress relexation rate by observing the % of stress drop over time.",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/ACL/conclu.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/Normalized.png?raw=true"))
+      ..add(testdetailData(
+          title: "Stress Term Plot",
+          top: 2.1,
+          height: 3.2,
+          content:
+              "After normalization we will calculate the stress term of the sample, before that we need to choose a proper n value from the previous section. The plot for the stress term should looks similar to the plot below",
+          backImg: bImg,
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/stressterm.png?raw=true"))
+      ..add(testdetailData(
+          title: "Linear region",
+          top: 2.1,
+          height: 3.2,
+          content:
+              "After we have the stress term vs time plot, we will be focus on the linear region of the plot, then we used the slope of this region and use that to calculate the B constant for the sample and make comparison between two samples",
+          backImg: bImg,
+          addOnImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/Linear.png?raw=true"))
+      ..add(testdetailData(
+        title: "Conclusion",
+        content:
+            "In this lab we investigate on two different material sample, one is pure Al and the other is 6061 Al alloy. The experiment measures the stress for keeping the strain rate at 1.2% for certain time and use that value to calculate the constant B. \nBy comparing this constant, we can know how two sample resist to creep. The result shows that the alloy sample has a creep constant 13% higher than the pure sample. This can be explained by the different composition of the two samples, due to the exist of different element in the alloy, the structure of the material will be much more compact than the pure material and that will decrease the diffusion rate, increasing it’s resistant to creep. ",
+        backImg: bImg,
+      ));
   }
 }
