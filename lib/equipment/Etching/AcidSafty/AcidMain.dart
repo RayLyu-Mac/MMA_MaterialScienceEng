@@ -2,12 +2,10 @@ import 'dart:math';
 import 'package:mma_mse/Search/safty/ShowerWasher/ShowerMain.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/equipment/safty%20sheet/MSDSdata.dart';
+import 'package:mma_mse/fancyButton.dart';
 import 'AcidData.dart';
-import 'package:mma_mse/customTileScroll.dart';
 import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/equipment/Etching/acidSafyFinal.dart';
 
 class Aciddetail extends StatefulWidget {
   Aciddetail({Key key}) : super(key: key);
@@ -183,20 +181,13 @@ class _AciddetailState extends State<Aciddetail> {
                                     SizedBox(
                                       height: _screenH / 40,
                                     ),
-                                    FlatButton.icon(
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              PageTransition(
-                                                  duration: const Duration(
-                                                      milliseconds: 500),
-                                                  child: WhimsSymbols(),
-                                                  type: PageTransitionType
-                                                      .leftToRight));
-                                        },
-                                        icon: Icon(Icons.file_copy_rounded),
-                                        label:
-                                            Text("Check the whole WHIMS List"))
+                                    fancyBut(
+                                      pageTo: WhimsSymbols(),
+                                      width: _screenWidth / 1.6,
+                                      height: _screenWidth / 7.7,
+                                      icon: Icons.follow_the_signs,
+                                      buttonName: "Check Whims SYmbol",
+                                    ),
                                   ],
                                 ))
                             : index == 3
@@ -216,101 +207,24 @@ class _AciddetailState extends State<Aciddetail> {
                                         SizedBox(
                                           height: _screenH / 30,
                                         ),
-                                        Container(
-                                          constraints: BoxConstraints.expand(
-                                              width: _screenWidth / 1.6,
-                                              height: _screenWidth / 7.7),
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                      _screenH / 16),
-                                              border: Border.all(
-                                                  color: Colors.grey[200],
-                                                  width: 5)),
-                                          child: FlatButton.icon(
-                                              splashColor:
-                                                  Colors.redAccent[100],
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        _screenH / 16),
-                                              ),
-                                              color: Colors.grey[600]
-                                                  .withOpacity(0.7),
-                                              onPressed: () {
-                                                Navigator.push(
-                                                    context,
-                                                    PageTransition(
-                                                        duration:
-                                                            const Duration(
-                                                                milliseconds:
-                                                                    500),
-                                                        child:
-                                                            ChemicalShowerEyeWasher(),
-                                                        type: PageTransitionType
-                                                            .rightToLeft));
-                                              },
-                                              icon: Icon(
-                                                Icons.shower,
-                                                color: Colors.white,
-                                              ),
-                                              label: Text(
-                                                "Eye wash & Chemical shower",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              )),
+                                        fancyBut(
+                                          pageTo: ChemicalShowerEyeWasher(),
+                                          width: _screenWidth / 1.6,
+                                          height: _screenWidth / 7.7,
+                                          icon: Icons.shower,
+                                          buttonName:
+                                              "Eye wash & Chemical shower",
                                         ),
                                         SizedBox(
                                           height: _screenH / 40,
                                         ),
-                                        Container(
-                                          constraints: BoxConstraints.expand(
-                                              width: _screenWidth / 2.2,
-                                              height: _screenWidth / 7.7),
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                      _screenH / 16),
-                                              border: Border.all(
-                                                  color: Colors.grey[200],
-                                                  width: 5)),
-                                          child: FlatButton.icon(
-                                              splashColor:
-                                                  Colors.redAccent[100],
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        _screenH / 16),
-                                              ),
-                                              color: Colors.grey[600]
-                                                  .withOpacity(0.7),
-                                              onPressed: () {
-                                                Navigator.push(
-                                                    context,
-                                                    PageTransition(
-                                                        duration:
-                                                            const Duration(
-                                                                milliseconds:
-                                                                    500),
-                                                        child:
-                                                            SearchListExample(),
-                                                        type: PageTransitionType
-                                                            .rightToLeft));
-                                              },
-                                              icon: Icon(
-                                                Icons.search,
-                                                color: Colors.white,
-                                              ),
-                                              label: Text(
-                                                "MSDS Data Sheet",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              )),
-                                        )
+                                        fancyBut(
+                                          pageTo: SearchListExample(),
+                                          width: _screenWidth / 2.2,
+                                          height: _screenWidth / 7.7,
+                                          icon: Icons.search,
+                                          buttonName: "MSDS Data Sheet",
+                                        ),
                                       ],
                                     ))
                                 : Positioned(

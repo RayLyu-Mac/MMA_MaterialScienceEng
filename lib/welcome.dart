@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/layout_overview.dart';
-import 'floors/floor1.dart';
+import 'fancyButton.dart';
 import 'terms&Cond.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key key}) : super(key: key);
@@ -66,29 +67,35 @@ class _welcomeState extends State<welcome> {
                       fontSize: _screenH / 30, fontWeight: FontWeight.bold),
                 )),
             Positioned(
-                top: _screenH / 5.5,
-                left: _screenWidth / 1.85,
-                child: Text(
-                  "Student",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                )),
+              top: _screenH / 5.5,
+              left: _screenWidth / 1.85,
+              child: fancyBut(
+                  pageTo: layout_overview(),
+                  width: _screenWidth / 2.5,
+                  height: _screenH / 10,
+                  icon: FontAwesomeIcons.graduationCap,
+                  buttonName: "Student"),
+            ),
             Positioned(
-                top: _screenH / 1.6,
-                left: _screenWidth / 1.85,
-                child: Text(
-                  "Maintainer",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                )),
+              top: _screenH / 1.6,
+              left: _screenWidth / 1.85,
+              child: fancyBut(
+                  pageTo: layout_overview(),
+                  width: _screenWidth / 2.5,
+                  height: _screenH / 10,
+                  icon: FontAwesomeIcons.tools,
+                  buttonName: "Maintainer"),
+            ),
             Positioned(
-                top: _screenH / 2.4,
-                left: 80,
-                child: Text(
-                  "Faculty",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                )),
+              top: _screenH / 2.6,
+              left: _screenWidth / 30,
+              child: fancyBut(
+                  pageTo: layout_overview(),
+                  width: _screenWidth / 2.5,
+                  height: _screenH / 10,
+                  icon: FontAwesomeIcons.chalkboardTeacher,
+                  buttonName: "Faculty"),
+            ),
             Positioned(
                 top: _screenH / 8,
                 left: _screenWidth / 11,

@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
+import 'package:mma_mse/fancyButton.dart';
 import 'equb_ava_data.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -83,36 +83,20 @@ class _equb_avaState extends State<equb_ava> {
                               fontWeight: FontWeight.bold,
                             ))))),
             Positioned(
-                top: _screenH / 1.3 / adjust,
-                left: 25,
-                width: _screenWidth - 64.0,
-                child: Hero(
-                  tag: 'pageTo',
-                  child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                              offset: const Offset(4, 4), color: Colors.white24)
-                        ],
-                      ),
-                      child: FlatButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                PageTransition(
-                                    duration: Duration(milliseconds: 600),
-                                    child: _heroType.pageTo,
-                                    type: PageTransitionType.scale,
-                                    alignment: Alignment.centerLeft));
-                          },
-                          hoverColor: Colors.white,
-                          color: _heroType.materialColor.withOpacity(0.1),
-                          child: Text(
-                            "Go to the equipment page",
-                            style: TextStyle(fontSize: _screenH / 40),
-                          ))),
-                ))
+              top: _screenH / 1.3 / adjust,
+              left: 25,
+              width: _screenWidth - 64.0,
+              child: Hero(
+                tag: 'pageTo',
+                child: fancyBut(
+                  pageTo: _heroType.pageTo,
+                  width: _screenWidth / 1.7,
+                  height: _screenWidth / 7.7,
+                  icon: Icons.follow_the_signs_rounded,
+                  buttonName: "Go to the equipment page",
+                ),
+              ),
+            )
           ],
         ),
       ),

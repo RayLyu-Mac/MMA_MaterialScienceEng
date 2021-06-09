@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:mma_mse/equipment/Etching/acidSafyFinal.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'FireSafty/FireMain.dart';
 import 'Whims/WhimsMain.dart';
 import 'ShowerWasher/ShowerMain.dart';
+import 'package:mma_mse/equipment/Etching/AcidSafty/AcidMain.dart';
 
 class ToolData {
   String posCode;
@@ -56,7 +58,7 @@ class ToolData {
       ..add(ToolData(
           name: "Personal Protection Equipment",
           posCode: "c",
-          pageTo: AcidSafty(),
+          pageTo: acidQuiz(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
       ..add(ToolData(
