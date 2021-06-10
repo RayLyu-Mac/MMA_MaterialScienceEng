@@ -83,7 +83,7 @@ class _EtchinginstructionState extends State<Etchinginstruction> {
                   child: Stack(
                     children: [
                       Positioned(
-                          top: 250,
+                          top: 260,
                           left: 5,
                           child: Text(
                             _instructionList[index].title,
@@ -101,7 +101,7 @@ class _EtchinginstructionState extends State<Etchinginstruction> {
                       Positioned(
                           top: 0,
                           child: Container(
-                            height: 245,
+                            height: 255,
                             child: YoutubePlayer(
                               controller:
                                   _instructionList[index].videoController,

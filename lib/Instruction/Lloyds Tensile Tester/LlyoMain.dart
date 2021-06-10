@@ -68,7 +68,7 @@ class _LlyoTensileinstructionState extends State<LlyoTensileinstruction> {
         drawer: charpyInstruc(),
         body: SafeArea(
           child: ListView.builder(
-            itemExtent: 325,
+            itemExtent: 340,
             controller: controller,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
@@ -92,7 +92,7 @@ class _LlyoTensileinstructionState extends State<LlyoTensileinstruction> {
                                 fontWeight: FontWeight.bold),
                           )),
                       Positioned(
-                          top: 280,
+                          top: 287,
                           left: 5,
                           child: Text(
                             _instructionList[index].subtitle,
@@ -101,7 +101,7 @@ class _LlyoTensileinstructionState extends State<LlyoTensileinstruction> {
                       Positioned(
                           top: 0,
                           child: Container(
-                            height: 260,
+                            height: 265,
                             child: YoutubePlayer(
                               controller:
                                   _instructionList[index].videoController,

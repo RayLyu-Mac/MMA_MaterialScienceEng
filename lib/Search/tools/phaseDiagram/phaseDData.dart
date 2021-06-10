@@ -32,9 +32,9 @@ class testdetailData {
     List detail = List<testdetailData>();
     return detail
       ..add(testdetailData(
-          title: "Carbon-Steel Phase Diagram",
+          title: "Carbon-Steel",
           content:
-              "Carbon-Steel Phase Diagram:\n \nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
+              "Carbon-Steel Phase Diagram:\n \nα: Ferrite\nFe3C: Cementite\nGamma: Austenite\nL: Liquid Phase",
           backImg: bImg,
           addonImgLft:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feCLeft.png?raw=true",
@@ -43,9 +43,8 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feC.png?raw=true"))
       ..add(testdetailData(
-          title: "Aluminum-Copper Phase Diagram",
-          content:
-              "Carbon-Steel Phase Diagram:\n \nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
+          title: "Aluminum-Copper",
+          content: "Aluminum-Copper Phase Diagram",
           backImg: bImg,
           addonImgLft:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alcuLeft.jpg?raw=true",
@@ -54,51 +53,30 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alcu.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Model Introduction",
-          content:
-              "With applying the chemical composition of the Al alloy 6061, the tension tests would be performed and the dimensions of tensile specimens and the load vs. tension data would be collected. The T6 conduction is rapidly cooled down. The anneal condition is slowly cooling down and quenched at certain temperature. The two conditions will be tested by calculating the stress vs. strain curve and determined fracture point to predict the properties as well the tensile stress and tensile yield stress. ",
+          title: "Zinc-Copper",
+          content: "Zinc-Copper Phase Diagram",
           backImg: bImg,
-          height: 1.7,
-          top: 3,
-          width: 1.9,
-          left: 4,
+          addonImgLft:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/cuznLeft.png?raw=true",
+          addonImgRht:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/cuznRight.png?raw=true",
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/tensileBg.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/cuzn.png?raw=true"))
       ..add(testdetailData(
-          title: "Material Properties Involved",
-          content:
-              "When using a 3-point bend test, the material properties found are referred to as ‘flexural’ properties meaning the material was resisting bend forces when the values were measured. As the samples in this lab will be under bending conditions, we will focus on the flexural properties.\nThe flexural elastic modulus is calculated by finding the slope of the linear region of the load vs. deflection or stress vs. strain graph.",
+          title: "Aluminum-Silicon",
+          content: "Aluminum-Silicon Phase Diagram",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/models.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alsi.jpg?raw=true"))
       ..add(testdetailData(
-          title: "Procedure",
-          content:
-              "1.	Record dimensions of the specimen (b, d) and setup (L). \n2. Load the sample \n3. Execute ‘3-point bend test’ algorithm to collect load vs displacement data. Note that the crosshead displacement stored in the output file does not directly represent the deflection D in Eqs. (1) and (2). To obtain the deflection, the crosshead displacement needs to be adjusted for any distance the load pit traversed before establishing a firm contact with a surface of the sample. \n4. Plot the load vs. deflection and stress vs. strain curves to determine the elastic modulus from the linear region. Also, determine the load and stress at fracture. \n5. Repeat steps 1–4 for all samples.",
+          title: "Zrconia-Yttrium oxide",
+          content: "Zrconia-Yttrium oxide (ZrO2-Y2O3) Phase Diagram",
           backImg: bImg,
-          pageTo: tensile_test(),
+          addonImgLft:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/cuznLeft.png?raw=true",
+          addonImgRht:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/ZrOyRight.png?raw=true",
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mts.jpg?raw=true"))
-      ..add(testdetailData(
-          title: "Raw Data: Load versus Deflection",
-          content:
-              "Directly from tensile test machine we can get the data for load versus deflection, this is the data which directly reflect the changes in this experiment.\n \nClick the picture to see the actual process!",
-          backImg: bImg,
-          addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/load.png?raw=true"))
-      ..add(testdetailData(
-          title: "Processed Data: Stress Versus Strain",
-          content:
-              "We need to further processed data to stress versus strain so we can use that to investigate the material property.\n \nFor load to stress: 3PL/2d^2b (Need formula) (MPa=1N/mm^2)\n For Strain: Deflection/Length (mm/mm)",
-          backImg: bImg,
-          addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/stress.png?raw=true"))
-      ..add(testdetailData(
-          title: "Comparison",
-          content:
-              "After we calculated the material property of the sample we can start to compare the difference of two samples.",
-          backImg: bImg,
-          addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/result.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/zroy.png?raw=true"));
   }
 }
