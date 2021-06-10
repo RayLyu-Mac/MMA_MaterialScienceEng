@@ -246,12 +246,12 @@ class _equb_mainState extends State<equb_main> {
                     pageTo: 18,
                     fonts: 13,
                     controller: controller),
+                ScrollcustomListTile(
+                    name: equipments[19],
+                    pageTo: 19,
+                    fonts: 13,
+                    controller: controller),
               ]),
-          ScrollcustomListTile(
-              name: equipments[19],
-              pageTo: 19,
-              fonts: 13,
-              controller: controller),
           ScrollcustomListTile(
               name: equipments[20],
               pageTo: 20,
@@ -265,6 +265,11 @@ class _equb_mainState extends State<equb_main> {
           ScrollcustomListTile(
               name: equipments[22],
               pageTo: 22,
+              fonts: 13,
+              controller: controller),
+          ScrollcustomListTile(
+              name: equipments[23],
+              pageTo: 23,
               fonts: 13,
               controller: controller),
         ]));

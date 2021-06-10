@@ -22,6 +22,9 @@ import 'package:mma_mse/equipment/polisher/manualPolisher/manual_polisher_MainPa
 import 'package:mma_mse/equipment/cutter/Buehler Precision Cutter/BuehlerMain.dart';
 import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
 import 'package:mma_mse/equipment/Etching/EtchingMain.dart';
+import 'package:mma_mse/equipment/Microwave Digestor/MicroDigMain.dart';
+import 'package:mma_mse/equipment/polisher/BeuAutoPolisher/BehAutoPolMain.dart';
+import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 
 class HeroType {
   String title;
@@ -198,26 +201,29 @@ class HeroType {
           pageTo: BuehlerPolisherMain(),
           materialColor: Colors.lightBlueAccent))
       ..add(HeroType(
+          title: 'Buehler Auto-Polisher',
+          subTitle:
+              'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
+          fText: 'Avaiable on JHE 129',
+          image:
+              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true',
+          pageTo: BuehlerAutoPolisherMain(),
+          materialColor: Colors.lightBlueAccent))
+      ..add(HeroType(
           title: 'Manual Polisher',
           subTitle:
               'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
           fText: 'Avaiable on JHE 245',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mpolisher.jpg?raw=true',
-          pageTo: BuehlerPolisherMain(),
+          pageTo: manual_polisher(),
           materialColor: Colors.lightBlueAccent))
-      ..add(HeroType(
-          title: 'ICP-OES',
-          subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
-          pageTo: ICP_OES_Main(),
-          fText:
-              'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true',
-          materialColor: Colors.redAccent[700]))
+      ..add(HeroType(title: 'ICP-OES', subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer', pageTo: ICP_OES_Main(), fText: 'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only', image: 'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true', materialColor: Colors.redAccent[700]))
       ..add(HeroType(title: 'Charpy Impact Tester', subTitle: 'Used to measure the relative toughness of a material', fText: 'Avaiable on JHE 242', image: 'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true', pageTo: charpy_test(), materialColor: Colors.grey))
       ..add(HeroType(title: 'Manual Grinder', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true', pageTo: ManualGrinder(), materialColor: Colors.blueGrey[400]))
-      ..add(HeroType(title: 'Etching', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true', pageTo: Etching(), materialColor: Colors.redAccent));
+      ..add(HeroType(title: 'Etching', subTitle: 'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.', fText: 'Avaiable on JHE 245', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true', pageTo: Etching(), materialColor: Colors.redAccent))
+      ..add(HeroType(title: 'Microwave Digestor', subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer', pageTo: MicroDigest(), fText: 'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Microwave%20Digestor%20.jpg?raw=true', materialColor: Colors.lightGreenAccent))
+      ..add(HeroType(title: 'Manual Compression Press', subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer', pageTo: ManualCompPress(), fText: 'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true', materialColor: Colors.indigoAccent));
   }
 }
 

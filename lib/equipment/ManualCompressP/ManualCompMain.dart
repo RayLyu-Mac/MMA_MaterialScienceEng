@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/user_note.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
-import 'package:mma_mse/Instruction/Polisher/buehlerPolisher/buePolisherMian.dart';
+import 'package:mma_mse/user_note.dart';
+import '../functionButtonMode.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
+import 'package:mma_mse/Instruction/manualGrinder/ManualGMain.dart';
 
-class BuehlerPolisherMain extends StatefulWidget {
+class ManualCompPress extends StatefulWidget {
   final String location;
   final String emailTo;
-  BuehlerPolisherMain(
+  ManualCompPress(
       {Key key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
 
   @override
-  _BuehlerPolisherMainState createState() => _BuehlerPolisherMainState();
+  _ManualCompPressState createState() => _ManualCompPressState();
 }
 
-class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
+class _ManualCompPressState extends State<ManualCompPress> {
   double _screenWidth;
   double _screenH;
 
@@ -33,7 +33,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buelher Polisher"),
+        title: Text("Manual Grinder"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
@@ -54,7 +54,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 2.2, height: 280),
                   child: Text(
-                    'Can find anything',
+                    'Used to measure the relative toughness of a material, more specifically, the energy absorbed by a standard notched specimen while breaking under an impact load. Has been used as an economical quality control method to determine the notch sensitivity. The standard size for specimen: 55 mm *10 mm* 10mm, having a notch machined across one of the larger dimensions.',
                     style: TextStyle(
                         fontSize: _screenH / 55, fontWeight: FontWeight.bold),
                   )),
@@ -69,7 +69,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -79,33 +79,34 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
               top: _screenH / 1.56,
               left: _screenWidth / 12,
               buttonName: "Instruction",
-              warnNote:
-                  "•Securely hold the sample as it could become a projectile if the polishing wheel catches the sample.",
-              pageTo: BehPolisherInstru(),
+              pageTo: ManualGrinderinstruction(),
+              warnNote: "Must wear safety Glasses, Must use Safety Shield",
             ),
             functionButtonMode(
               top: _screenH / 1.8,
               left: _screenWidth / 12,
-              buttonName: "Schedulling",
-              url: _launchURL,
+              buttonName: "Theory",
+              pageTo: ManualGrinderinstruction(),
             ),
             functionButtonMode(
-                top: _screenH / 1.8,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Dash Board Buttons",
-                pageTo: BehPolisherInstru()),
+              top: _screenH / 1.8,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Result",
+              pageTo: tensile_test_bg(),
+            ),
             functionButtonMode(
-                top: _screenH / 1.56,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Manager",
-                pageTo: EmailContent(
-                    locationOfEqup: widget.location != null
-                        ? widget.location
-                        : "Not Specificed",
-                    nameOfEqup: "Automatic Polisher",
-                    emailTo: widget.emailTo != null
-                        ? widget.emailTo
-                        : "Please enter the email address!")),
+              top: _screenH / 1.56,
+              left: _screenWidth / 2 + 16,
+              buttonName: "Manager",
+              pageTo: EmailContent(
+                  locationOfEqup: widget.location != null
+                      ? widget.location
+                      : "Not Specificed",
+                  nameOfEqup: "Manual MicroHardness Tester",
+                  emailTo: widget.emailTo != null
+                      ? widget.emailTo
+                      : "Please enter the email address!"),
+            ),
             Positioned(
                 top: _screenH / 1.33,
                 left: _screenWidth / 1.3,
@@ -117,22 +118,13 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => user_note(
-                                    loc: "JHE 236 automatic polisher",
-                                    themem_color: Colors.red[100],
+                                    loc: "ML Charpy Impact",
+                                    themem_color: Colors.green[100],
                                   )));
                     }))
           ],
         ),
       ),
     );
-  }
-}
-
-_launchURL() async {
-  const url = 'https://msebooking.mcmaster.ca/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }

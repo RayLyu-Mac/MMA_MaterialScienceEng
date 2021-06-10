@@ -5,20 +5,21 @@ import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/Polisher/buehlerPolisher/buePolisherMian.dart';
 
-class BuehlerPolisherMain extends StatefulWidget {
+class BuehlerAutoPolisherMain extends StatefulWidget {
   final String location;
   final String emailTo;
-  BuehlerPolisherMain(
+  BuehlerAutoPolisherMain(
       {Key key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
 
   @override
-  _BuehlerPolisherMainState createState() => _BuehlerPolisherMainState();
+  _BuehlerAutoPolisherMainState createState() =>
+      _BuehlerAutoPolisherMainState();
 }
 
-class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
+class _BuehlerAutoPolisherMainState extends State<BuehlerAutoPolisherMain> {
   double _screenWidth;
   double _screenH;
 
@@ -69,7 +70,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true"),
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true"),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -80,7 +81,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
               left: _screenWidth / 12,
               buttonName: "Instruction",
               warnNote:
-                  "•Securely hold the sample as it could become a projectile if the polishing wheel catches the sample.",
+                  "Must wear safety glasses, Long pants, closed toe shoes, no contact lenses",
               pageTo: BehPolisherInstru(),
             ),
             functionButtonMode(
