@@ -52,7 +52,7 @@ class testdetailData {
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/purpose.png?raw=true"))
       ..add(testdetailData(
           title: "Case Introduction",
-          top: 1.68,
+          top: 1.64,
           content:
               "Pressure vessels have high requirement in crack size. because of the stress concentration, the component which still in the useful service life, defects may grow in scale as a result of normal working stresses, even if these stresses are below the yield stress. However, during the production process defects are unavoidable, for example castings tend to contain pores as a result of gases entrained in the liquid metal during solidification. Welding often results in cracks as a result of the thermal stresses that develop during cooling. To understand the tolerable crack size can help engineer to improve the safety. ",
           backImg: bImg,
@@ -90,11 +90,11 @@ class testdetailData {
       ..add(testdetailData(
           title: "Conclusion",
           height: 8,
-          top: 2,
+          top: 1.8,
           content:
               "The tamper heat treatment which causes the tamper martensite formed, the tamper sample has the highest fracture toughness, which is 32% and 78% higher than the quench and anneal sample. the anneal sample has the highest tolerable crack size which is 86% and 7% higher than quench sample and tamper sample. the quench and tamper process will increase the fracture toughness of material but reduce in tolerable crack size. the anneal process will increase the tolerable crack size of material but reduce in fracture toughness and tensile strength.",
           backImg: bImg,
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/concl.emf?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/concl.png?raw=true"));
   }
 }
