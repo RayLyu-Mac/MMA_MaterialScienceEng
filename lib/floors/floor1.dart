@@ -7,6 +7,7 @@ import 'package:barcode_scan_fix/barcode_scan.dart';
 import '../equipment/saftyNoteText.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
+import 'package:mma_mse/Search/extramenu.dart';
 
 class floor1 extends StatefulWidget {
   floor1({Key key}) : super(key: key);
@@ -82,7 +83,8 @@ class _floor1State extends State<floor1> {
                 pageTo: mech_lab(),
                 fonts: _screenH / 45,
               ),
-            ])
+            ]),
+            extraMenu()
           ]),
         );
     return Scaffold(

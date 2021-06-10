@@ -8,6 +8,7 @@ import 'package:floatingpanel/floatingpanel.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'Search/extramenu.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
@@ -125,6 +126,7 @@ class _layout_overviewState extends State<layout_overview> {
               ],
             )
           ]),
+          extraMenu()
         ]));
     return Scaffold(
         appBar: AppBar(
