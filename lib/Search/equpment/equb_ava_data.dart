@@ -122,7 +122,7 @@ class HeroType {
           title: 'Blue Furnace',
           subTitle:
               'heat a sample to a high enough temperature to change the microstructure',
-          fText: 'Avaiable on JHE 245/ 246/ 246A',
+          fText: 'Avaiable on JHE 129',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true',
           pageTo: BlueFurnace(),
@@ -139,7 +139,7 @@ class HeroType {
           title: 'Buehler Precision Cutter',
           subTitle:
               'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
-          fText: 'Avaiable on JHE 245',
+          fText: 'Avaiable on JHE 129',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true',
           pageTo: BuehlerCutterMain(),
@@ -174,7 +174,7 @@ class HeroType {
           title: 'Mounting Press (METLAB)',
           subTitle:
               'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
-          fText: 'Avaiable on JHE 245',
+          fText: 'Avaiable on JHE 129',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
           pageTo: METPress(),
@@ -192,7 +192,7 @@ class HeroType {
           title: 'Buehler Manual Polisher',
           subTitle:
               'The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin); to make it easier to handle the sample.',
-          fText: 'Avaiable on JHE 245',
+          fText: 'Avaiable on JHE 129',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
           pageTo: BuehlerPolisherMain(),

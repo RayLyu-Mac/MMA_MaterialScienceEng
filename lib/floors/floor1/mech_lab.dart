@@ -3,7 +3,8 @@ import 'package:mma_mse/Search/Search_page/search_main.dart';
 import '../../equipment/UTM/universal_tensile_machine_MainPage.dart';
 import '../../equipment/CharpyImpact/Charpy.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/equipment/cutter/BulkAbrasiveCutter/BulkAbrasiveDashB.dart';
+import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
+import 'package:mma_mse/equipment/Hardness/digitalRW/digitalRWMain.dart';
 
 class mech_lab extends StatefulWidget {
   mech_lab({Key key}) : super(key: key);
@@ -109,7 +110,7 @@ class _mech_labState extends State<mech_lab> {
                 Navigator.push(
                     context,
                     PageTransition(
-                        child: automaticModeInterFaceButton(),
+                        child: DigitalRWMain(),
                         type: PageTransitionType.bottomToTop));
               },
             ),
