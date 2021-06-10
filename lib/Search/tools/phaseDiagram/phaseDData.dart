@@ -43,12 +43,16 @@ class testdetailData {
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/feC.png?raw=true"))
       ..add(testdetailData(
-          title: "Introduction",
+          title: "Aluminum-Copper Phase Diagram",
           content:
-              "Composites are a class of material formed when two or more constituent materials are combined to achieve desired mechanical properties. There are three main categories of composites; particle reinforced composites, fiber reinforced composites, and structural composites [3]. This investigation will focus on structural (sandwich) composites. It is clear that our bone structure consists with the sandwich model. \nTherefore this experiment will use the material that has similar material property to human bone to find the advantage of this structure by simulating the car accident situation.",
+              "Carbon-Steel Phase Diagram:\n \nα: Ferrite\nFe3C: Cementite\n│: Austenite\nL: Liquid Phase",
           backImg: bImg,
+          addonImgLft:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alcuLeft.jpg?raw=true",
+          addonImgRht:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alcuRight.jpg?raw=true",
           addOnImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/sandw.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/phaseDiagram/alcu.jpg?raw=true"))
       ..add(testdetailData(
           title: "Model Introduction",
           content:

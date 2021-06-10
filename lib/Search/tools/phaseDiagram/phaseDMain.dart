@@ -114,34 +114,38 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         fit: BoxFit.fitWidth,
                                         height: _screenH / 2.6,
                                       )),
-                                  Positioned(
-                                      top: 0,
-                                      left: 0,
-                                      child: Container(
-                                        width: _screenWidth / 2.2,
-                                        height: _screenH / 2.7,
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            transition(ZoomInPhaseD(
-                                                imgPD:
-                                                    result[index].addonImgLft));
-                                          },
-                                        ),
-                                      )),
-                                  Positioned(
-                                      top: 0,
-                                      left: _screenWidth / 1.1 / 2,
-                                      child: Container(
-                                        width: _screenWidth / 2.2,
-                                        height: _screenH / 2.7,
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            transition(ZoomInPhaseD(
-                                                imgPD:
-                                                    result[index].addonImgRht));
-                                          },
-                                        ),
-                                      )),
+                                  result[index].addonImgLft != null
+                                      ? Positioned(
+                                          top: 0,
+                                          left: 0,
+                                          child: Container(
+                                            width: _screenWidth / 2.2,
+                                            height: _screenH / 2.7,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                transition(ZoomInPhaseD(
+                                                    imgPD: result[index]
+                                                        .addonImgLft));
+                                              },
+                                            ),
+                                          ))
+                                      : Container(),
+                                  result[index].addonImgRht != null
+                                      ? Positioned(
+                                          top: 0,
+                                          left: _screenWidth / 1.1 / 2,
+                                          child: Container(
+                                            width: _screenWidth / 2.2,
+                                            height: _screenH / 2.7,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                transition(ZoomInPhaseD(
+                                                    imgPD: result[index]
+                                                        .addonImgRht));
+                                              },
+                                            ),
+                                          ))
+                                      : Container(),
                                 ],
                               ))),
                       Positioned(
