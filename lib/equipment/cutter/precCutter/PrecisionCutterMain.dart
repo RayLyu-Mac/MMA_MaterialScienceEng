@@ -27,6 +27,8 @@ class _PcutterMainState extends State<PcutterMain> {
   double adjust;
   @override
   void didChangeDependencies() {
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
     super.didChangeDependencies();
   }
 
@@ -43,7 +45,7 @@ class _PcutterMainState extends State<PcutterMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buehler Precision Cutter"),
+        title: Text("Precision Cutter"),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
@@ -71,8 +73,8 @@ class _PcutterMainState extends State<PcutterMain> {
             ),
             functionButtonMode(
               top: _screenH / 2.2,
-              left: _screenWidth / 1.25,
-              buttonName: "Background theory",
+              left: _screenWidth / 2 + 16,
+              buttonName: "Blade Intro",
               pageTo: precisionBlade(),
             ),
             Positioned(

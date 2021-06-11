@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:clay_containers/clay_containers.dart';
 import 'package:flutter/services.dart';
-import 'package:mma_mse/workingInPro.dart';
-import 'package:page_transition/page_transition.dart';
+import 'roomBut.dart';
+import 'floor2/room239.dart';
 
 class floor2 extends StatefulWidget {
   floor2({Key key}) : super(key: key);
@@ -58,119 +57,92 @@ class _floor2State extends State<floor2> {
               top: _screenH / 9,
               length: _screenH / 6,
               width: _screenWidth / 3,
-              name: "Room 243"),
+              name: "243"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 3.4,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              name: "Room 242"),
+              name: "242"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 2.5,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              name: "Room 241"),
+              name: "241"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 2,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              name: "Room 240"),
+              name: "240"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 1.66,
               length: _screenH / 7,
               width: _screenWidth / 3,
-              name: "Room 239"),
+              pageTo: room239(),
+              name: "239"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 1.3,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              name: "Room 238"),
+              name: "238"),
           roomButton(
               left: _screenWidth / 5.5,
               top: _screenH / 1.66,
               length: _screenH / 20,
               width: _screenWidth / 4,
               fontsize: 18,
-              name: "Room 239A"),
+              elevation: 4,
+              name: "239A"),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 35,
               length: _screenH / 10,
               width: _screenWidth / 3,
               backC: Colors.lightGreenAccent[100],
-              fontsize: 18,
-              name: "Room 244"),
+              name: "244"),
           roomButton(
-              left: _screenWidth / 1.94,
-              top: _screenH / 35,
-              length: _screenH / 20,
-              width: _screenWidth / 10,
-              backC: Colors.redAccent[100],
-              icon: Icons.fire_extinguisher,
-              name: "Room 244")
+            left: _screenWidth / 1.94,
+            top: _screenH / 35,
+            length: _screenH / 20,
+            width: _screenWidth / 10,
+            icon: Icons.fire_extinguisher,
+          ),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 7,
+              length: _screenH / 9,
+              width: _screenWidth / 3,
+              name: "245"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 3.73,
+              length: _screenH / 9,
+              width: _screenWidth / 3,
+              name: "246   246/A"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 2.54,
+              length: _screenH / 9,
+              width: _screenWidth / 3,
+              name: "246A"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 1.92,
+              length: _screenH / 6,
+              width: _screenWidth / 3,
+              name: "247"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 1.43,
+              length: _screenH / 6.4,
+              width: _screenWidth / 3,
+              name: "248"),
         ],
       ),
     );
-  }
-}
-
-class roomButton extends StatelessWidget {
-  final double left;
-  final double top;
-  final double length;
-  final double width;
-  final String name;
-  final Widget pageTo;
-  final double fontsize;
-  final Color backC;
-  final IconData icon;
-  const roomButton(
-      {@required this.left,
-      @optionalTypeArgs this.backC,
-      @required this.top,
-      @required this.length,
-      @optionalTypeArgs this.fontsize,
-      @optionalTypeArgs this.icon,
-      @required this.width,
-      @required this.name,
-      @optionalTypeArgs this.pageTo,
-      Key key})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-        top: top,
-        left: left,
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                PageTransition(
-                    duration: const Duration(milliseconds: 500),
-                    child: pageTo ?? workingInProg(),
-                    type: PageTransitionType.leftToRight));
-          },
-          child: Container(
-            height: length,
-            width: width,
-            child: ClayContainer(
-                parentColor: backC ?? Colors.blueGrey[100],
-                borderRadius: 4,
-                child: Center(
-                  child: icon != null
-                      ? Icon(icon)
-                      : ClayText(
-                          name,
-                          size: fontsize ?? 22,
-                          color: Colors.grey[500],
-                        ),
-                )),
-          ),
-        ));
   }
 }
