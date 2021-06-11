@@ -5,20 +5,30 @@ import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 
-class room239Main extends StatefulWidget {
+class roomMode extends StatefulWidget {
   final String emailTo;
   final String location;
-  room239Main(
+  final String roomName;
+  final String roomTi;
+  final String roomCont;
+  final Widget roomLayO;
+  final String roomImg;
+  roomMode(
       {@optionalTypeArgs this.emailTo,
+      @required this.roomName,
+      @required this.roomTi,
+      @required this.roomLayO,
+      @required this.roomCont,
       @optionalTypeArgs this.location,
+      @required this.roomImg,
       Key key})
       : super(key: key);
 
   @override
-  _room239MainState createState() => _room239MainState();
+  _roomModeState createState() => _roomModeState();
 }
 
-class _room239MainState extends State<room239Main> {
+class _roomModeState extends State<roomMode> {
   double _screenWidth;
   double _screenH;
   double adjust;
@@ -44,7 +54,7 @@ class _room239MainState extends State<room239Main> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Room 239: Chemical Analysis Lab"),
+        title: Text(widget.roomName),
         backgroundColor: Colors.black,
       ),
       body: Stack(
@@ -60,8 +70,7 @@ class _room239MainState extends State<room239Main> {
                     border: Border.all(width: 4, color: Colors.grey[300]),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(
-                            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/room239.jpg?raw=true"))),
+                        image: NetworkImage(widget.roomImg))),
               )),
           Positioned(
               top: _screenH / 30,
@@ -69,17 +78,17 @@ class _room239MainState extends State<room239Main> {
               child: Column(
                 children: [
                   Text(
-                    "Room 239: \nChemical Analysis Lab",
+                    widget.roomTi,
                     style: TextStyle(
-                        fontSize: _screenH / 40, fontWeight: FontWeight.bold),
+                        fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: _screenH / 30,
                   ),
                   Text(
-                    "The equipment avaiable: \n1.Scale\n2.Precision Cutter\n3.LCED\n4.Nitrogen gas Tank",
+                    widget.roomCont,
                     style: TextStyle(
-                        fontSize: _screenH / 45, fontWeight: FontWeight.bold),
+                        fontSize: _screenH / 43, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: _screenH / 20,
@@ -108,7 +117,7 @@ class _room239MainState extends State<room239Main> {
               top: _screenH / 1.7,
               left: _screenWidth / 2,
               child: fancyBut(
-                pageTo: room239(),
+                pageTo: widget.roomLayO,
                 icon: Icons.follow_the_signs_rounded,
                 buttonName: "Layout of the room",
                 height: _screenH / 8,

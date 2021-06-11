@@ -7,12 +7,14 @@ class fancyBut extends StatefulWidget {
   final double width;
   final double height;
   final String buttonName;
+  final double fontsize;
   fancyBut(
       {@required this.pageTo,
       @required this.width,
       @required this.height,
       @required this.icon,
       @required this.buttonName,
+      @optionalTypeArgs this.fontsize,
       Key key})
       : super(key: key);
 
@@ -49,7 +51,10 @@ class _fancyButState extends State<fancyBut> {
           ),
           label: Text(
             widget.buttonName,
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: widget.fontsize ?? 14),
           )),
     );
   }
