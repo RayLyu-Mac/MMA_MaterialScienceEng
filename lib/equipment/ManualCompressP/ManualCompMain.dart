@@ -4,6 +4,7 @@ import 'package:mma_mse/user_note.dart';
 import '../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/manualGrinder/ManualGMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 
 class ManualCompPress extends StatefulWidget {
   final String location;
@@ -79,7 +80,7 @@ class _ManualCompPressState extends State<ManualCompPress> {
               top: _screenH / 1.56,
               left: _screenWidth / 12,
               buttonName: "Instruction",
-              pageTo: ManualGrinderinstruction(),
+              pageTo: workingInProg(),
               warnNote: "Must wear safety Glasses, Must use Safety Shield",
             ),
             functionButtonMode(

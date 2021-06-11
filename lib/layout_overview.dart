@@ -4,11 +4,11 @@ import 'package:mma_mse/floors/floor1.dart';
 import 'Search/Search_page/search_main.dart';
 import 'floors/floor1.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:floatingpanel/floatingpanel.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'Search/extramenu.dart';
+import 'floors/floor2.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
@@ -70,6 +70,7 @@ class _layout_overviewState extends State<layout_overview> {
   double _screenWidth;
   double _screenH;
   double tra = 0.001;
+  List<Widget> floors = [floor1(), floor1(), floor2(), floor2()];
   List<Color> floorC = [
     Colors.orangeAccent,
     Colors.lightGreenAccent,
@@ -188,7 +189,7 @@ class _layout_overviewState extends State<layout_overview> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              child: floor1(),
+                              child: floors[ii],
                               type: PageTransitionType.scale,
                               alignment: Alignment.topCenter));
                     },
