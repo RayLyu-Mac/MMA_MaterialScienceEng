@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'safyNoteVideo.dart';
+import 'package:mma_mse/workingInPro.dart';
 
 class functionButtonMode extends StatefulWidget {
   final double top;
@@ -70,7 +71,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
                 context,
                 PageTransition(
                     duration: Duration(milliseconds: 700),
-                    child: widget.pageTo,
+                    child: widget.pageTo ?? workingInProg(),
                     type: PageTransitionType.scale,
                     alignment: Alignment.topCenter));
           }

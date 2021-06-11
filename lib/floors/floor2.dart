@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'roomBut.dart';
-import 'floor2/room239.dart';
+import 'package:mma_mse/floors/floor2/roomMain/239.dart';
 
 class floor2 extends StatefulWidget {
   floor2({Key key}) : super(key: key);
@@ -81,7 +81,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.66,
               length: _screenH / 7,
               width: _screenWidth / 3,
-              pageTo: room239(),
+              pageTo: room239Main(),
               name: "239"),
           roomButton(
               left: _screenWidth / 10,
