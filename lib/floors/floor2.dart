@@ -103,6 +103,14 @@ class _floor2State extends State<floor2> {
               width: _screenWidth / 3,
               backC: Colors.lightGreenAccent[100],
               fontsize: 18,
+              name: "Room 244"),
+          roomButton(
+              left: _screenWidth / 1.94,
+              top: _screenH / 35,
+              length: _screenH / 20,
+              width: _screenWidth / 10,
+              backC: Colors.redAccent[100],
+              icon: Icons.fire_extinguisher,
               name: "Room 244")
         ],
       ),
@@ -119,12 +127,14 @@ class roomButton extends StatelessWidget {
   final Widget pageTo;
   final double fontsize;
   final Color backC;
+  final IconData icon;
   const roomButton(
       {@required this.left,
       @optionalTypeArgs this.backC,
       @required this.top,
       @required this.length,
       @optionalTypeArgs this.fontsize,
+      @optionalTypeArgs this.icon,
       @required this.width,
       @required this.name,
       @optionalTypeArgs this.pageTo,
@@ -152,11 +162,13 @@ class roomButton extends StatelessWidget {
                 parentColor: backC ?? Colors.blueGrey[100],
                 borderRadius: 4,
                 child: Center(
-                  child: ClayText(
-                    name,
-                    size: fontsize ?? 22,
-                    color: Colors.grey[500],
-                  ),
+                  child: icon != null
+                      ? Icon(icon)
+                      : ClayText(
+                          name,
+                          size: fontsize ?? 22,
+                          color: Colors.grey[500],
+                        ),
                 )),
           ),
         ));
