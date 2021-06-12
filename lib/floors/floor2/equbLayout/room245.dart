@@ -67,6 +67,21 @@ class _room245LayOState extends State<room245LayO> {
                   name: "Press Machine",
                 )
               ],
+            ),
+            SizedBox(
+              width: _screenWidth / 20,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: _screenH / 30,
+                ),
+                roomButton(
+                  length: _screenH / 7,
+                  width: _screenWidth / 3.5,
+                  name: "Working Bench",
+                )
+              ],
             )
           ],
         ));
