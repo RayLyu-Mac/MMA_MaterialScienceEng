@@ -42,9 +42,22 @@ class _room239AState extends State<room239A> {
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 35,
-              length: _screenH / 8,
+              length: _screenH / 6,
               width: _screenWidth / 3,
               name: "Gloves"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 35,
+              length: _screenH / 2.5,
+              width: _screenWidth / 3,
+              pageTo: ICP_OES_Main(),
+              name: "ICP-OES"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 2,
+              length: _screenH / 4,
+              width: _screenWidth / 3,
+              name: "Computer"),
         ],
       ),
     );
