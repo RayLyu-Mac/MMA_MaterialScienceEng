@@ -8,6 +8,7 @@ import '../equipment/saftyNoteText.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/Search/extramenu.dart';
+import 'package:mma_mse/floors/roomBut.dart';
 
 class floor1 extends StatefulWidget {
   floor1({Key key}) : super(key: key);
@@ -88,78 +89,114 @@ class _floor1State extends State<floor1> {
           ]),
         );
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      child: search_main(),
-                      type: PageTransitionType.scale,
-                      alignment: Alignment.topCenter));
-            },
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-              size: 34,
-            ),
-          ),
-        ],
-        backgroundColor: Colors.black,
-        title: Text("Floor I",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.w700)),
-      ),
-      drawer: Theme(
-        data: ThemeData(
-          canvasColor: Colors.white.withOpacity(0.8),
-        ),
-        child: Container(width: 220, child: _floor1sidemenu()),
-      ),
-      body: Stack(
-        children: [
-          Positioned(
-              top: _screenH / 40,
-              left: _screenWidth / 15,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.2, height: _screenH / 1.3),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/floors/floor1/floor1.PNG?raw=true"),
-                        fit: BoxFit.cover)),
-              )),
-          Positioned(
-            top: _screenH / 2,
-            left: _screenWidth / 10,
-            child: GestureDetector(
-              child: Container(
-                color: Colors.black.withOpacity(tra),
-                height: _screenH / 9,
-                width: _screenWidth / 3.5,
-              ),
-              onTap: () {
-                warning(
-                    pageTo: mech_lab(),
-                    warning_note:
-                        "•Safty Glasses \n•Closed-toe shoes with sock \n•Long pants \n•Lab Coats \n•No Contact Lens");
+        appBar: AppBar(
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        child: search_main(),
+                        type: PageTransitionType.scale,
+                        alignment: Alignment.topCenter));
               },
-            ),
-          ),
-          floationPanel(
-              button: [
+              icon: Icon(
                 Icons.search,
-                Icons.qr_code_scanner,
-              ],
-              animationTime: 550,
-              buttonP: [EqupSearch(), scanQR])
-        ],
-      ),
-    );
+                color: Colors.white,
+                size: 34,
+              ),
+            ),
+          ],
+          backgroundColor: Colors.black,
+          title: Text("Floor I",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700)),
+        ),
+        drawer: Theme(
+          data: ThemeData(
+            canvasColor: Colors.white.withOpacity(0.8),
+          ),
+          child: Container(width: 220, child: _floor1sidemenu()),
+        ),
+        body: Stack(
+          children: [
+            roomButton(
+                top: _screenH / 40,
+                left: _screenWidth / 30,
+                length: _screenWidth / 8,
+                width: _screenH / 4,
+                name: "Stair"),
+            roomButton(
+                top: _screenH / 8.2,
+                left: _screenWidth / 30,
+                length: _screenWidth / 3,
+                width: _screenH / 4,
+                name: "130"),
+            roomButton(
+                top: _screenH / 2.85,
+                left: _screenWidth / 30,
+                length: _screenWidth / 5,
+                width: _screenH / 4,
+                name: "129"),
+            roomButton(
+                top: _screenH / 2,
+                left: _screenWidth / 30,
+                length: _screenWidth / 3.5,
+                width: _screenH / 4,
+                name: "128"),
+            roomButton(
+                top: _screenH / 1.43,
+                left: _screenWidth / 30,
+                length: _screenWidth / 5,
+                width: _screenH / 4,
+                name: "127"),
+            roomButton(
+                top: _screenH / 40,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 7,
+                width: _screenH / 4,
+                name: "131"),
+            roomButton(
+                top: _screenH / 8.2,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 7,
+                width: _screenH / 4,
+                name: "132"),
+            roomButton(
+                top: _screenH / 4.4,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 6,
+                width: _screenH / 4,
+                name: "133"),
+            roomButton(
+                top: _screenH / 2.88,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 3,
+                width: _screenH / 4,
+                name: "134"),
+            roomButton(
+                top: _screenH / 1.74,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 5,
+                width: _screenH / 4,
+                name: "135"),
+            roomButton(
+                top: _screenH / 1.38,
+                left: _screenWidth / 1.8,
+                length: _screenWidth / 6,
+                width: _screenH / 4,
+                name: "135A"),
+            floationPanel(
+                button: [
+                  Icons.search,
+                  Icons.qr_code_scanner,
+                ],
+                animationTime: 550,
+                buttonP: [EqupSearch(), scanQR])
+          ],
+        ));
   }
 
   scanQR() async {

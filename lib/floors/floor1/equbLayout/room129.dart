@@ -59,13 +59,13 @@ class _room244LayOState extends State<room244LayO> {
           title: Text("room 242"),
           backgroundColor: Colors.black,
         ),
-        body: Column(children: [
+        body: Row(children: [
           SizedBox(
-            height: _screenWidth / 40,
+            width: _screenWidth / 40,
           ),
-          Row(children: [
+          Column(children: [
             SizedBox(
-              width: _screenH / 30,
+              height: _screenH / 30,
             ),
           ])
         ]));
