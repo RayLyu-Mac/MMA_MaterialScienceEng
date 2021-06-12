@@ -17,7 +17,7 @@ class _room240State extends State<room240> {
         roomTi: "Room 240",
         roomLayO: room240LayO(),
         roomCont:
-            "The equipment in this room:\n1.Microwave Digestor\n2.Distiller for distilled water\n3. Fume hood\n4. Scale\n5. Storage for chemicals",
+            "Equipments:\n1.Microwave Digestor\n2.Distiller for distilled water\n3. Fume hood\n4. Scale\n5. Storage for chemicals",
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/240.jpg?raw=true");
   }

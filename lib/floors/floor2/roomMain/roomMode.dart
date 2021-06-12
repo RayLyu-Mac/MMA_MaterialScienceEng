@@ -42,7 +42,7 @@ class _roomModeState extends State<roomMode> {
       DeviceOrientation.portraitDown,
     ]);
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
+      _screenH = _screenH * 0.9;
       adjust = 0.83;
     } else {
       adjust = 1;
@@ -60,7 +60,7 @@ class _roomModeState extends State<roomMode> {
         children: [
           Positioned(
               top: _screenH / 40,
-              left: _screenWidth / 35,
+              left: _screenWidth / 55,
               child: Container(
                 constraints: BoxConstraints.expand(
                     width: _screenWidth / 2.1, height: _screenH / 1.9),
@@ -73,7 +73,7 @@ class _roomModeState extends State<roomMode> {
               )),
           Positioned(
               top: _screenH / 30,
-              left: _screenWidth / 1.9,
+              left: _screenWidth / 2,
               child: Column(
                 children: [
                   Text(
@@ -118,7 +118,7 @@ class _roomModeState extends State<roomMode> {
               child: fancyBut(
                 pageTo: widget.roomLayO,
                 icon: Icons.follow_the_signs_rounded,
-                buttonName: "Layout of the room",
+                buttonName: "Layout",
                 height: _screenH / 8,
                 width: _screenWidth / 2.1,
               ))

@@ -14,10 +14,10 @@ class _room242MainState extends State<room242Main> {
   Widget build(BuildContext context) {
     return roomMode(
         roomName: "Room 242: Undergraduate Lab",
-        roomTi: "Room 242: \nUndergraduate Lab       ",
+        roomTi: "Room 242: \nUndergrad Lab                 ",
         roomLayO: room242LayO(),
         roomCont:
-            "The equipment avaiable:\n1.Cutting Machine\n2.Belt Grinder\n3.Bulk Abrasive\n4.Manual Compression Press\n5.Cutting machine",
+            "Equipments:\n1.Cutting Machine\n2.Belt Grinder\n3.Bulk Abrasive\n4.Manual Compression Press\n5.Cutting machine",
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/242.jpg?raw=true");
   }

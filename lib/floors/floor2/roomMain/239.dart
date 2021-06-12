@@ -18,7 +18,7 @@ class _room239MainState extends State<room239Main> {
         roomTi: "Room 239: \nChemical Analysis Lab",
         roomLayO: room239(),
         roomCont:
-            "The equipment avaiable:\n1.Scale\n2.Precision Cutter\n3.LCED\n4.Nitrogen gas tank",
+            "Equipments:\n1.Scale\n2.Precision Cutter\n3.LCED\n4.Nitrogen gas tank              ",
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/room239.jpg?raw=true");
   }

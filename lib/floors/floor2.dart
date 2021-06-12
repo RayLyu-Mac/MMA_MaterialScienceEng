@@ -5,6 +5,7 @@ import 'package:mma_mse/floors/floor2/roomMain/239.dart';
 import 'floor2/roomMain/240.dart';
 import 'floor2/roomMain/239a.dart';
 import 'floor2/roomMain/242.dart';
+import 'floor2/roomMain/244.dart';
 
 class floor2 extends StatefulWidget {
   floor2({Key key}) : super(key: key);
@@ -28,8 +29,9 @@ class _floor2State extends State<floor2> {
       DeviceOrientation.portraitDown,
     ]);
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-      adjust = 0.83;
+      _screenH = _screenH * 0.9;
+      _screenWidth = _screenWidth * 0.93;
+      adjust = 0.9;
     } else {
       adjust = 1;
     }
@@ -108,6 +110,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 35,
               length: _screenH / 10,
               width: _screenWidth / 3,
+              pageTo: room244Main(),
               backC: Colors.lightGreenAccent[100],
               name: "244"),
           roomButton(

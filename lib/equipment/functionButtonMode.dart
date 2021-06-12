@@ -15,8 +15,8 @@ class functionButtonMode extends StatefulWidget {
   final String warnV;
 
   functionButtonMode(
-      {@required this.top,
-      @required this.left,
+      {@optionalTypeArgs this.top,
+      @optionalTypeArgs this.left,
       @required this.buttonName,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.fontSize,
@@ -43,56 +43,107 @@ class _functionButtonModeState extends State<functionButtonMode> {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: widget.top,
-      left: widget.left,
-      child: InkWell(
-        onTap: () {
-          if (widget.warnNote != null) {
-            showDialog<void>(
-                context: context,
-                barrierDismissible: false, // user must tap button!
-                builder: (BuildContext context) {
-                  return warning(
-                      pageTo: widget.pageTo, warning_note: widget.warnNote);
-                });
-          } else if (widget.url != null) {
-            return widget.url();
-          } else if (widget.warnV != null) {
-            showDialog<void>(
-                context: context,
-                barrierDismissible: false, // user must tap button!
-                builder: (BuildContext context) {
-                  return warningVideo(
-                      pageTo: widget.pageTo, videoID: widget.warnV);
-                });
-          } else {
-            Navigator.push(
-                context,
-                PageTransition(
-                    duration: Duration(milliseconds: 700),
-                    child: widget.pageTo ?? workingInProg(),
-                    type: PageTransitionType.scale,
-                    alignment: Alignment.topCenter));
-          }
-        },
-        splashColor: Colors.grey,
-        child: Container(
-          width: _screenWidth / 2.7,
-          height: _screenH / 15,
-          padding: EdgeInsets.all(6),
-          child: Text(
-            widget.buttonName,
-            style: TextStyle(
-                fontSize:
-                    widget.fontSize != null ? widget.fontSize : _screenH / 50,
-                fontWeight: FontWeight.bold),
-          ),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              border: Border.all(color: Colors.black, width: 4)),
-        ),
-      ),
-    );
+    return (widget.top != null || widget.left != null)
+        ? Positioned(
+            top: widget.top,
+            left: widget.left,
+            child: InkWell(
+              onTap: () {
+                if (widget.warnNote != null) {
+                  showDialog<void>(
+                      context: context,
+                      barrierDismissible: false, // user must tap button!
+                      builder: (BuildContext context) {
+                        return warning(
+                            pageTo: widget.pageTo,
+                            warning_note: widget.warnNote);
+                      });
+                } else if (widget.url != null) {
+                  return widget.url();
+                } else if (widget.warnV != null) {
+                  showDialog<void>(
+                      context: context,
+                      barrierDismissible: false, // user must tap button!
+                      builder: (BuildContext context) {
+                        return warningVideo(
+                            pageTo: widget.pageTo, videoID: widget.warnV);
+                      });
+                } else {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: Duration(milliseconds: 700),
+                          child: widget.pageTo ?? workingInProg(),
+                          type: PageTransitionType.scale,
+                          alignment: Alignment.topCenter));
+                }
+              },
+              splashColor: Colors.grey,
+              child: Container(
+                width: _screenWidth / 2.7,
+                height: _screenH / 15,
+                padding: EdgeInsets.all(6),
+                child: Text(
+                  widget.buttonName,
+                  style: TextStyle(
+                      fontSize: widget.fontSize != null
+                          ? widget.fontSize
+                          : _screenH / 50,
+                      fontWeight: FontWeight.bold),
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(color: Colors.black, width: 4)),
+              ),
+            ),
+          )
+        : InkWell(
+            onTap: () {
+              if (widget.warnNote != null) {
+                showDialog<void>(
+                    context: context,
+                    barrierDismissible: false, // user must tap button!
+                    builder: (BuildContext context) {
+                      return warning(
+                          pageTo: widget.pageTo, warning_note: widget.warnNote);
+                    });
+              } else if (widget.url != null) {
+                return widget.url();
+              } else if (widget.warnV != null) {
+                showDialog<void>(
+                    context: context,
+                    barrierDismissible: false, // user must tap button!
+                    builder: (BuildContext context) {
+                      return warningVideo(
+                          pageTo: widget.pageTo, videoID: widget.warnV);
+                    });
+              } else {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        duration: Duration(milliseconds: 700),
+                        child: widget.pageTo ?? workingInProg(),
+                        type: PageTransitionType.scale,
+                        alignment: Alignment.topCenter));
+              }
+            },
+            splashColor: Colors.grey,
+            child: Container(
+              width: _screenWidth / 2.7,
+              height: _screenH / 15,
+              padding: EdgeInsets.all(6),
+              child: Text(
+                widget.buttonName,
+                style: TextStyle(
+                    fontSize: widget.fontSize != null
+                        ? widget.fontSize
+                        : _screenH / 50,
+                    fontWeight: FontWeight.bold),
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: Colors.black, width: 4)),
+            ),
+          );
   }
 }

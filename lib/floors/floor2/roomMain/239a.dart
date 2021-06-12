@@ -16,8 +16,7 @@ class _room239AMainState extends State<room239AMain> {
         roomName: "239A ICP-OES",
         roomTi: "239A ICP-OES",
         roomLayO: room239A(),
-        roomCont:
-            "Equipment in this room:\n1.ICP-OES\n2.Computer and other protection",
+        roomCont: "Equipments:\n1.ICP-OES\n2.Computer and other protection",
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/239a.jpg?raw=true");
   }

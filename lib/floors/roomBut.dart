@@ -15,9 +15,9 @@ class roomButton extends StatelessWidget {
   final IconData icon;
   final int elevation;
   const roomButton(
-      {@required this.left,
+      {@optionalTypeArgs this.left,
       @optionalTypeArgs this.backC,
-      @required this.top,
+      @optionalTypeArgs this.top,
       @required this.length,
       @optionalTypeArgs this.fontsize,
       @optionalTypeArgs this.icon,
@@ -30,35 +30,63 @@ class roomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-        top: top,
-        left: left,
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                PageTransition(
-                    duration: const Duration(milliseconds: 500),
-                    child: pageTo ?? workingInProg(),
-                    type: PageTransitionType.leftToRight));
-          },
-          child: Container(
-            height: length,
-            width: width,
-            child: ClayContainer(
-                depth: elevation ?? 16,
-                parentColor: backC ?? Colors.blueGrey[100],
-                borderRadius: 4,
-                child: Center(
-                  child: icon != null
-                      ? Icon(icon)
-                      : ClayText(
-                          name,
-                          size: fontsize ?? 22,
-                          color: Colors.grey[500],
-                        ),
-                )),
-          ),
-        ));
+    return (left != null || top != null)
+        ? Positioned(
+            top: top,
+            left: left,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        duration: const Duration(milliseconds: 500),
+                        child: pageTo ?? workingInProg(),
+                        type: PageTransitionType.leftToRight));
+              },
+              child: Container(
+                height: length,
+                width: width,
+                child: ClayContainer(
+                    depth: elevation ?? 16,
+                    parentColor: backC ?? Colors.blueGrey[100],
+                    borderRadius: 4,
+                    child: Center(
+                      child: icon != null
+                          ? Icon(icon)
+                          : ClayText(
+                              name,
+                              size: fontsize ?? 22,
+                              color: Colors.grey[500],
+                            ),
+                    )),
+              ),
+            ))
+        : GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      duration: const Duration(milliseconds: 500),
+                      child: pageTo ?? workingInProg(),
+                      type: PageTransitionType.leftToRight));
+            },
+            child: Container(
+              height: length,
+              width: width,
+              child: ClayContainer(
+                  depth: elevation ?? 16,
+                  parentColor: backC ?? Colors.blueGrey[100],
+                  borderRadius: 4,
+                  child: Center(
+                    child: icon != null
+                        ? Icon(icon)
+                        : ClayText(
+                            name,
+                            size: fontsize ?? 22,
+                            color: Colors.grey[500],
+                          ),
+                  )),
+            ),
+          );
   }
 }
