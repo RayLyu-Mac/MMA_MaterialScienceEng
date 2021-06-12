@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
@@ -41,8 +40,51 @@ class _room246BLayOState extends State<room246BLayO> {
         ),
         body: Column(children: [
           SizedBox(
-            height: _screenWidth / 20,
+            height: _screenH / 25,
           ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenWidth / 15,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                name: "??",
+              ),
+              SizedBox(
+                width: _screenWidth / 5,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                name: "??",
+              ),
+            ],
+          ),
+          SizedBox(
+            height: _screenH / 5,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenWidth / 15,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                name: "??",
+              ),
+              SizedBox(
+                width: _screenWidth / 5,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                name: "??",
+              ),
+            ],
+          )
         ]));
   }
 }
