@@ -100,10 +100,15 @@ class _room244LayOState extends State<room244LayO> {
                 width: _screenH / 25,
               ),
               roomButton(
+                  length: _screenWidth / 8, width: _screenH / 3, name: "sink"),
+              SizedBox(
+                width: _screenH / 1.8,
+              ),
+              roomButton(
                   length: _screenWidth / 8,
-                  width: _screenH / 3,
+                  width: _screenH / 1.6,
                   pageTo: BlueFurnace(),
-                  name: "sink"),
+                  name: "Fume Hood"),
             ],
           )
         ]));
