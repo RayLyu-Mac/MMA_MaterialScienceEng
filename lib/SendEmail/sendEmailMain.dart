@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:core';
 import 'dart:async';
 import 'dart:io';
-
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
@@ -23,6 +23,15 @@ class EmailContent extends StatefulWidget {
 }
 
 class _EmailContentState extends State<EmailContent> {
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
+
   TextEditingController name = new TextEditingController();
   TextEditingController errorMessage = new TextEditingController();
 

@@ -33,14 +33,20 @@ class _roomHorizontalState extends State<roomHorizontal> {
   double adjust;
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
+  void initState() {
+    super.initState();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+
     if (_screenH / _screenWidth > 2) {
       _screenH = _screenH * 0.9;
       adjust = 0.83;
