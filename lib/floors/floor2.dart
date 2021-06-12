@@ -8,6 +8,7 @@ import 'floor2/roomMain/242.dart';
 import 'floor2/roomMain/244.dart';
 import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246.dart';
+import 'floor2/roomMain/246A.dart';
 
 class floor2 extends StatefulWidget {
   floor2({Key key}) : super(key: key);
@@ -147,7 +148,8 @@ class _floor2State extends State<floor2> {
               top: _screenH / 2.54,
               length: _screenH / 9,
               width: _screenWidth / 3,
-              name: "246A"),
+              pageTo: room246AMain(),
+              name: "246B"),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 1.92,
