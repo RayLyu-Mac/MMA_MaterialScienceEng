@@ -41,10 +41,20 @@ class _room244LayOState extends State<room244LayO> {
           backgroundColor: Colors.black,
         ),
         body: Column(children: [
-          roomButton(
-              length: _screenWidth / 7,
-              width: _screenH / 4,
-              name: "SiC Furnace"),
+          SizedBox(
+            height: _screenWidth / 40,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenH / 30,
+              ),
+              roomButton(
+                  length: _screenWidth / 7,
+                  width: _screenH / 4,
+                  name: "SiC Furnace"),
+            ],
+          )
         ]));
   }
 }
