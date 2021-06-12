@@ -42,20 +42,70 @@ class _room246LayOState extends State<room246LayO> {
           title: Text("room 246"),
           backgroundColor: Colors.black,
         ),
-        body: Row(children: [
+        body: Column(children: [
           SizedBox(
-            width: _screenWidth / 20,
+            height: _screenWidth / 20,
           ),
-          Column(children: [
+          Row(children: [
             SizedBox(
-              height: _screenH / 30,
+              width: _screenH / 30,
             ),
             roomButton(
-              length: _screenH / 2,
-              width: _screenWidth / 4,
+              length: _screenH / 5,
+              width: _screenWidth / 1.1,
               name: "Etching",
             ),
-          ])
+          ]),
+          SizedBox(
+            height: _screenH / 20,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenH / 30,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                pageTo: manual_polisher(),
+                name: "Manual Polisher",
+              ),
+              SizedBox(
+                width: _screenH / 7,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                pageTo: manual_polisher(),
+                name: "Manual Polisher",
+              )
+            ],
+          ),
+          SizedBox(
+            height: _screenH / 20,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenH / 30,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                pageTo: AutoPolisherMain(),
+                name: "Auto Polisher",
+              ),
+              SizedBox(
+                width: _screenH / 7,
+              ),
+              roomButton(
+                length: _screenH / 4,
+                width: _screenWidth / 3,
+                pageTo: manual_polisher(),
+                name: "Manual Polisher",
+              ),
+            ],
+          )
         ]));
   }
 }
