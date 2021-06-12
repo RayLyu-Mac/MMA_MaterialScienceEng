@@ -55,15 +55,15 @@ class _room245LayOState extends State<room245LayO> {
                 ),
                 roomButton(
                   length: _screenH / 2,
-                  width: _screenWidth / 3.5,
+                  width: _screenWidth / 4,
                   name: "Cabinet",
                 ),
                 SizedBox(
-                  height: _screenH / 30,
+                  height: _screenH / 15,
                 ),
                 roomButton(
-                  length: _screenH / 7,
-                  width: _screenWidth / 3.5,
+                  length: _screenH / 4,
+                  width: _screenWidth / 4,
                   name: "Press Machine",
                 )
               ],
@@ -80,7 +80,40 @@ class _room245LayOState extends State<room245LayO> {
                   length: _screenH / 7,
                   width: _screenWidth / 3.5,
                   name: "Working Bench",
-                )
+                ),
+                SizedBox(
+                  height: _screenH / 1.9,
+                ),
+                roomButton(
+                  length: _screenH / 7,
+                  width: _screenWidth / 3.5,
+                  name: "Microscope & Gloves",
+                ),
+              ],
+            ),
+            SizedBox(
+              width: _screenWidth / 20,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: _screenH / 30,
+                ),
+                roomButton(
+                  length: _screenH / 9,
+                  width: _screenWidth / 3.5,
+                  name: "MET",
+                  pageTo: METPress(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 9,
+                  width: _screenWidth / 3.5,
+                  name: "MET",
+                  pageTo: METPress(),
+                ),
               ],
             )
           ],
