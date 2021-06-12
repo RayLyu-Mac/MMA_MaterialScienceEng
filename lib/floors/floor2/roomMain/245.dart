@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor2/equbLayout/room244.dart';
 import 'package:flutter/services.dart';
 
-class room244Main extends StatefulWidget {
+class room245Main extends StatefulWidget {
   final String emailTo;
   final String location;
   final Widget pageTo;
-  room244Main(
+  room245Main(
       {@optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.location,
@@ -15,10 +15,10 @@ class room244Main extends StatefulWidget {
       : super(key: key);
 
   @override
-  _room244MainState createState() => _room244MainState();
+  _room245MainState createState() => _room245MainState();
 }
 
-class _room244MainState extends State<room244Main> {
+class _room245MainState extends State<room245Main> {
   double _screenWidth;
   double _screenH;
   double adjust;
@@ -43,11 +43,12 @@ class _room244MainState extends State<room244Main> {
   @override
   Widget build(BuildContext context) {
     return roomHorizontal(
-        roomName: "Room 244",
-        roomTi: "Room 244: Heat Treatment Facilities",
-        roomCont: "Equipments:\n1.Blue Furnace\n2.SiC Furnace",
+        roomName: "Room 245",
+        roomTi: "Room 245: Metallography Lab",
+        roomCont:
+            "Equipments:\n1.Mounting Machine\n(MET/Strues/Eco)\n2.Microscope\n3.Manual Grinder\n4.Auto Polisher",
         pageTo: room244LayO(),
         roomImg:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/244.jpg?raw=true");
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/245.jpg?raw=true");
   }
 }
