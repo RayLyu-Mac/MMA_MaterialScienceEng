@@ -71,7 +71,26 @@ class _room244LayOState extends State<room244LayO> {
                   ],
                 )
             ],
-          )
+          ),
+          SizedBox(
+            height: _screenWidth / 25,
+          ),
+          Row(children: [
+            SizedBox(width: _screenH / 3),
+            for (var i = 0; i < 3; i++)
+              Row(
+                children: [
+                  SizedBox(
+                    width: _screenH / 19,
+                  ),
+                  roomButton(
+                      length: _screenWidth / 8,
+                      width: _screenH / 3.5,
+                      pageTo: BlueFurnace(),
+                      name: "Blue Furnace"),
+                ],
+              )
+          ])
         ]));
   }
 }
