@@ -55,7 +55,7 @@ class _room244LayOState extends State<room244LayO> {
                   pageTo: SiCFurnace(),
                   name: "SiC Furnace"),
               SizedBox(
-                width: _screenH / 4,
+                width: _screenH / 5,
               ),
               for (var i = 0; i < 3; i++)
                 Row(
@@ -65,7 +65,7 @@ class _room244LayOState extends State<room244LayO> {
                     ),
                     roomButton(
                         length: _screenWidth / 8,
-                        width: _screenH / 3.5,
+                        width: _screenH / 3.4,
                         pageTo: BlueFurnace(),
                         name: "Blue Furnace"),
                   ],
@@ -73,7 +73,7 @@ class _room244LayOState extends State<room244LayO> {
             ],
           ),
           SizedBox(
-            height: _screenWidth / 25,
+            height: _screenWidth / 28,
           ),
           Row(children: [
             SizedBox(width: _screenH / 3),
@@ -85,12 +85,27 @@ class _room244LayOState extends State<room244LayO> {
                   ),
                   roomButton(
                       length: _screenWidth / 8,
-                      width: _screenH / 3.5,
+                      width: _screenH / 3.4,
                       pageTo: BlueFurnace(),
                       name: "Blue Furnace"),
                 ],
               )
-          ])
+          ]),
+          SizedBox(
+            height: _screenWidth / 35,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: _screenH / 25,
+              ),
+              roomButton(
+                  length: _screenWidth / 8,
+                  width: _screenH / 3,
+                  pageTo: BlueFurnace(),
+                  name: "sink"),
+            ],
+          )
         ]));
   }
 }
