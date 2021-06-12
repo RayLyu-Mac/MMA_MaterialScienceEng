@@ -50,22 +50,22 @@ class _room244LayOState extends State<room244LayO> {
                 width: _screenH / 30,
               ),
               roomButton(
-                  length: _screenWidth / 7,
-                  width: _screenH / 4,
+                  length: _screenWidth / 8,
+                  width: _screenH / 3,
                   pageTo: SiCFurnace(),
                   name: "SiC Furnace"),
               SizedBox(
-                width: _screenH / 10,
+                width: _screenH / 4,
               ),
               for (var i = 0; i < 3; i++)
                 Row(
                   children: [
                     SizedBox(
-                      width: _screenH / 25,
+                      width: _screenH / 19,
                     ),
                     roomButton(
-                        length: _screenWidth / 7,
-                        width: _screenH / 4,
+                        length: _screenWidth / 8,
+                        width: _screenH / 3.5,
                         pageTo: BlueFurnace(),
                         name: "Blue Furnace"),
                   ],
