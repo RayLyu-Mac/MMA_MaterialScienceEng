@@ -100,19 +100,71 @@ class _room245LayOState extends State<room245LayO> {
                   height: _screenH / 30,
                 ),
                 roomButton(
-                  length: _screenH / 9,
+                  length: _screenH / 10,
                   width: _screenWidth / 3.5,
-                  name: "MET",
+                  name: "MET Mounting Machine",
+                  fontsize: 16,
                   pageTo: METPress(),
                 ),
                 SizedBox(
                   height: _screenH / 50,
                 ),
                 roomButton(
-                  length: _screenH / 9,
+                  length: _screenH / 10,
                   width: _screenWidth / 3.5,
-                  name: "MET",
+                  fontsize: 16,
+                  name: "MET Mounting Machine",
                   pageTo: METPress(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 10,
+                  width: _screenWidth / 3.5,
+                  fontsize: 16,
+                  name: "Strues Mounting Machine",
+                  pageTo: StruesMain(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 10,
+                  width: _screenWidth / 3.5,
+                  fontsize: 16,
+                  name: "Eco Mounting Machine",
+                  pageTo: EcoPress(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 10,
+                  width: _screenWidth / 3.5,
+                  fontsize: 16,
+                  name: "Manual Grinder",
+                  pageTo: ManualGrinder(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 10,
+                  width: _screenWidth / 3.5,
+                  fontsize: 16,
+                  name: "Auto Polisher Machine",
+                  pageTo: AutoPolisherMain(),
+                ),
+                SizedBox(
+                  height: _screenH / 50,
+                ),
+                roomButton(
+                  length: _screenH / 10,
+                  width: _screenWidth / 3.5,
+                  fontsize: 16,
+                  name: "Manual Grinder",
+                  pageTo: ManualGrinder(),
                 ),
               ],
             )
