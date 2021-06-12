@@ -1,6 +1,6 @@
 import 'roomHorizonMode.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/floors/floor2/equbLayout/room245.dart';
+import 'package:mma_mse/floors/floor2/equbLayout/room246.dart';
 
 class room246Main extends StatefulWidget {
   final String emailTo;
@@ -41,9 +41,8 @@ class _room246MainState extends State<room246Main> {
     return roomHorizontal(
         roomName: "Room 246",
         roomTi: "Room 246: Polishing and Etching",
-        roomCont:
-            "Equipments:\n1.Mounting Machine\n(MET/Strues/Eco)\n2.Microscope\n3.Manual Grinder\n4.Auto Polisher",
-        pageTo: room245LayO(),
+        roomCont: "Equipments:\n1.Etching\n2.Auto Polisher\n3.Manual Polisher",
+        pageTo: room246LayO(),
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246.jpg?raw=true");
   }
