@@ -9,6 +9,8 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
+import 'floor1/room129.dart';
+import 'floor1/mech_lab.dart';
 
 class floor1 extends StatefulWidget {
   floor1({Key key}) : super(key: key);
@@ -139,6 +141,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 30,
                 length: _screenWidth / 5,
                 width: _screenH / 4,
+                pageTo: room129(),
                 name: "129"),
             roomButton(
                 top: _screenH / 2,
@@ -175,6 +178,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 3,
                 width: _screenH / 4,
+                pageTo: mech_lab(),
                 name: "134"),
             roomButton(
                 top: _screenH / 1.74,

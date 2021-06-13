@@ -4,40 +4,19 @@ import 'package:mma_mse/equipment/furnace/blue/blurFMain.dart';
 import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
 import 'package:mma_mse/equipment/polisher/BeuAutoPolisher/BehAutoPolMain.dart';
 import 'package:mma_mse/equipment/cutter/Buehler Precision Cutter/BuehlerMain.dart';
-import 'package:flutter/services.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 
-class room244LayO extends StatefulWidget {
-  room244LayO({Key key}) : super(key: key);
+class room129LayO extends StatefulWidget {
+  room129LayO({Key key}) : super(key: key);
 
   @override
-  _room244LayOState createState() => _room244LayOState();
+  _room129LayOState createState() => _room129LayOState();
 }
 
-class _room244LayOState extends State<room244LayO> {
+class _room129LayOState extends State<room129LayO> {
   double _screenWidth;
   double _screenH;
   double adjust;
-
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
-  @override
-  dispose() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-    super.dispose();
-  }
 
   @override
   void didChangeDependencies() {
@@ -56,7 +35,7 @@ class _room244LayOState extends State<room244LayO> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("room 242"),
+          title: Text("Room 129 Layout"),
           backgroundColor: Colors.black,
         ),
         body: Row(children: [
@@ -65,9 +44,69 @@ class _room244LayOState extends State<room244LayO> {
           ),
           Column(children: [
             SizedBox(
-              height: _screenH / 30,
+              height: _screenH / 40,
             ),
-          ])
+            roomButton(
+                length: _screenH / 7,
+                pageTo: BlueFurnace(),
+                width: _screenWidth / 3,
+                name: "Blue Furnace"),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            roomButton(
+                length: _screenH / 5.6,
+                pageTo: BuehlerAutoPolisherMain(),
+                width: _screenWidth / 3,
+                name: "Buehler Auto Polisher"),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            roomButton(
+                length: _screenH / 5.6,
+                pageTo: BuehlerPolisherMain(),
+                width: _screenWidth / 3,
+                name: "Buehler Manual Polisher"),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            roomButton(
+                length: _screenH / 4,
+                pageTo: BlueFurnace(),
+                width: _screenWidth / 3,
+                name: "Fume Hood"),
+          ]),
+          SizedBox(
+            width: _screenWidth / 4,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                height: _screenH / 10,
+              ),
+              roomButton(
+                  length: _screenH / 5,
+                  pageTo: METPress(),
+                  width: _screenWidth / 3,
+                  name: "Mounting Press MET"),
+              SizedBox(
+                height: _screenH / 17,
+              ),
+              roomButton(
+                  length: _screenH / 5,
+                  pageTo: BuehlerPolisherMain(),
+                  width: _screenWidth / 3,
+                  name: "Buehler Manual Polisher"),
+              SizedBox(
+                height: _screenH / 17,
+              ),
+              roomButton(
+                  length: _screenH / 5,
+                  pageTo: BuehlerCutterMain(),
+                  width: _screenWidth / 3,
+                  name: "Buehler Precision Cutter"),
+            ],
+          )
         ]));
   }
 }
