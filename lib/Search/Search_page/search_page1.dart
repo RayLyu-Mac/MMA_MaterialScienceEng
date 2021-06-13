@@ -11,6 +11,7 @@ import 'package:floatingpanel/floatingpanel.dart';
 import 'package:floatingpanel/floatingpanel.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class search_area extends StatefulWidget {
   search_area({Key key}) : super(key: key);
@@ -44,11 +45,15 @@ class _search_areaState extends State<search_area> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Do you want to search for...",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w700)),
+        title: DefaultTextStyle(
+            style: const TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Bobbers',
+            ),
+            child: AnimatedTextKit(animatedTexts: [
+              TyperAnimatedText("Do you want to search for...")
+            ])),
       ),
       body: SafeArea(
         child: Stack(

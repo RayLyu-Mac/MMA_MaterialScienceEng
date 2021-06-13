@@ -3,6 +3,7 @@ import 'package:mma_mse/layout_overview.dart';
 import 'fancyButton.dart';
 import 'terms&Cond.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key key}) : super(key: key);
@@ -38,18 +39,21 @@ class _welcomeState extends State<welcome> {
               SizedBox(
                 height: 30,
               ),
-              Text(
-                "Welcome",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w700),
+              AnimatedTextKit(
+                animatedTexts: [
+                  WavyAnimatedText(
+                    "Welcome to MSE",
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700),
+                  )
+                ],
+                totalRepeatCount: 4,
+                pause: const Duration(milliseconds: 1000),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
               ),
-              Text("Material Science and Engineering",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700)),
             ],
           ),
           backgroundColor: Colors.black,

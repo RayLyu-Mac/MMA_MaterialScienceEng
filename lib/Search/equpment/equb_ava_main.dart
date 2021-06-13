@@ -2,6 +2,7 @@ import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class equb_main extends StatefulWidget {
   final HeroType heroType;
@@ -53,7 +54,18 @@ class _equb_mainState extends State<equb_main> {
               Positioned(
                 top: 0,
                 left: 10,
-                child: Text("Equipment Avaiable in MSE"),
+                child: DefaultTextStyle(
+                  style: const TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Horizon',
+                      color: Colors.black),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      WavyAnimatedText("Equipment Avaiable in MSE")
+                    ],
+                    isRepeatingAnimation: true,
+                  ),
+                ),
               ),
               Positioned(
                   top: 25,
@@ -276,8 +288,15 @@ class _equb_mainState extends State<equb_main> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Equipment Availble in MSE",
-            style: TextStyle(color: Colors.white, fontSize: 18)),
+        title: DefaultTextStyle(
+          style: const TextStyle(
+              fontSize: 20.0, fontFamily: 'Horizon', color: Colors.white),
+          child: AnimatedTextKit(
+            animatedTexts: [WavyAnimatedText("Equipment Avaiable in MSE")],
+            isRepeatingAnimation: true,
+            totalRepeatCount: 4,
+          ),
+        ),
       ),
       drawer: searchEquipMain(),
       body: SafeArea(
