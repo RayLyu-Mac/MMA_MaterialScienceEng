@@ -71,14 +71,22 @@ class _layout_overviewState extends State<layout_overview> {
   double _screenH;
   double tra = 0.001;
   List<Widget> floors = [
-    floor1(),
-    floor1(),
+    floor1(
+      fire: false,
+    ),
+    floor1(
+      fire: false,
+    ),
     floor2(
       safty: false,
       eye: false,
       fire: false,
     ),
-    floor2()
+    floor2(
+      safty: false,
+      eye: false,
+      fire: false,
+    )
   ];
   List<Color> floorC = [
     Colors.orangeAccent,

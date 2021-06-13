@@ -11,27 +11,36 @@ import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'floor1/mech_lab.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class floor1 extends StatefulWidget {
-  floor1({Key key}) : super(key: key);
+  final bool fire;
+  floor1({@optionalTypeArgs this.fire, Key key}) : super(key: key);
 
   @override
   _floor1State createState() => _floor1State();
 }
 
-class _floor1State extends State<floor1> {
+class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
+  AnimationController _animationController;
+
+  @override
+  void initState() {
+    _animationController =
+        new AnimationController(vsync: this, duration: Duration(seconds: 4));
+    _animationController.repeat(reverse: true);
+    createList();
+    super.initState();
+  }
+
   String qr_result = "";
   double _screenWidth;
   double _screenH;
   double tra = 0.002;
   double adjust;
   int nu;
-
-  @override
-  void initState() {
-    super.initState();
-    createList();
-  }
+  double saftyI = -1;
+  double rwidth = 4.3;
 
   @override
   void goToPage(qr_result) {
@@ -128,70 +137,113 @@ class _floor1State extends State<floor1> {
                 top: _screenH / 40,
                 left: _screenWidth / 30,
                 length: _screenWidth / 8,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "Stair"),
             roomButton(
                 top: _screenH / 8.2,
                 left: _screenWidth / 30,
                 length: _screenWidth / 3,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "130"),
             roomButton(
                 top: _screenH / 2.85,
                 left: _screenWidth / 30,
                 length: _screenWidth / 5,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 pageTo: room129(),
                 name: "129"),
             roomButton(
                 top: _screenH / 2,
                 left: _screenWidth / 30,
                 length: _screenWidth / 3.5,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "128"),
+            widget.fire || saftyI > 0
+                ? roomButton(
+                    detailTitle: "Fire Extinguisher",
+                    details: "Emergency for fire situation",
+                    left: _screenWidth / 2.3,
+                    top: _screenH / 6,
+                    length: _screenH / 20,
+                    width: _screenWidth / 10,
+                    icon: Icons.fire_extinguisher,
+                  )
+                : Positioned(
+                    left: _screenWidth / 1.94,
+                    top: _screenH / 35,
+                    child: Container()),
             roomButton(
                 top: _screenH / 1.43,
                 left: _screenWidth / 30,
                 length: _screenWidth / 5,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "127"),
             roomButton(
                 top: _screenH / 40,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "131"),
             roomButton(
                 top: _screenH / 8.2,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "132"),
             roomButton(
                 top: _screenH / 4.4,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "133"),
             roomButton(
                 top: _screenH / 2.88,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 3,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 pageTo: mech_lab(),
                 name: "134"),
             roomButton(
                 top: _screenH / 1.74,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 5,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "135"),
             roomButton(
                 top: _screenH / 1.38,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
-                width: _screenH / 4,
+                width: _screenH / rwidth,
                 name: "135A"),
+            Positioned(
+                top: _screenH / 1.32,
+                left: _screenWidth / 45,
+                child: Container(
+                  height: _screenH / 9,
+                  width: _screenH / 9,
+                  child: FittedBox(
+                    child: FloatingActionButton(
+                      child: Icon(FontAwesomeIcons.solidLifeRing),
+                      backgroundColor: Colors.redAccent,
+                      onPressed: () {
+                        setState(() {
+                          saftyI = saftyI * -1;
+                        });
+                      },
+                    ),
+                  ),
+                )),
+            Positioned(
+                top: _screenH / 1.23,
+                left: _screenWidth / 1.4,
+                child: FadeTransition(
+                  opacity: _animationController,
+                  child: MaterialButton(
+                    onPressed: () => null,
+                    child: Text("Next Page"),
+                    color: Colors.green,
+                  ),
+                )),
             floationPanel(
                 button: [
                   Icons.search,

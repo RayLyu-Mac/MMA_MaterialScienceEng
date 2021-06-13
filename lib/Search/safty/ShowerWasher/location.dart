@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/floors/floor1.dart';
+import 'package:mma_mse/floors/floor2.dart';
 
 class eyewashStation extends StatefulWidget {
   eyewashStation({Key key}) : super(key: key);
@@ -8,12 +10,19 @@ class eyewashStation extends StatefulWidget {
 }
 
 class _eyewashStationState extends State<eyewashStation> {
+  final PageController controller = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Eyewash station avaibale in MSE"),
-      ),
+    return PageView(
+      controller: controller,
+      scrollDirection: Axis.horizontal,
+      children: [
+        floor1(fire: false),
+        floor2(
+          fire: false,
+          eye: true,
+        )
+      ],
     );
   }
 }
