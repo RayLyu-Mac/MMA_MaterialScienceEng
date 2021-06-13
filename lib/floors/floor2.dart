@@ -24,6 +24,7 @@ class _floor2State extends State<floor2> {
   double _screenWidth;
   double _screenH;
   double adjust;
+  double saftyI = -1;
 
   @override
   void initState() {
@@ -63,7 +64,7 @@ class _floor2State extends State<floor2> {
       ),
       body: Stack(
         children: [
-          widget.safty != null
+          widget.eye || widget.safty || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 10,
                   top: _screenH / 35,
@@ -97,7 +98,7 @@ class _floor2State extends State<floor2> {
               length: _screenH / 12,
               width: _screenWidth / 3,
               name: "241"),
-          widget.eye || widget.safty
+          widget.eye || widget.safty || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 15,
                   top: _screenH / 2,
@@ -175,7 +176,7 @@ class _floor2State extends State<floor2> {
               width: _screenWidth / 3,
               pageTo: room245Main(),
               name: "245"),
-          widget.eye || widget.safty
+          widget.eye || widget.safty || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 1.7,
                   top: _screenH / 3.54,
@@ -219,15 +220,33 @@ class _floor2State extends State<floor2> {
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 1.92,
-              length: _screenH / 6,
+              length: _screenH / 9,
               width: _screenWidth / 3,
               name: "247"),
           roomButton(
               left: _screenWidth / 1.6,
-              top: _screenH / 1.43,
-              length: _screenH / 6.4,
+              top: _screenH / 1.55,
+              length: _screenH / 4.7,
               width: _screenWidth / 3,
               name: "248"),
+          Positioned(
+              top: _screenH / 1.32,
+              width: _screenWidth / 0.57,
+              child: Container(
+                height: _screenH / 9,
+                width: _screenH / 9,
+                child: FittedBox(
+                  child: FloatingActionButton(
+                    child: Icon(Icons.kitchen),
+                    backgroundColor: Colors.redAccent,
+                    onPressed: () {
+                      setState(() {
+                        saftyI = saftyI * -1;
+                      });
+                    },
+                  ),
+                ),
+              ))
         ],
       ),
     );
