@@ -9,11 +9,17 @@ import 'floor2/roomMain/244.dart';
 import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246.dart';
 import 'floor2/roomMain/246A.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
   final bool eye;
-  floor2({@optionalTypeArgs this.eye, @optionalTypeArgs this.safty, Key key})
+  final bool fire;
+  floor2(
+      {@optionalTypeArgs this.eye,
+      @optionalTypeArgs this.safty,
+      @optionalTypeArgs this.fire,
+      Key key})
       : super(key: key);
 
   @override
@@ -64,13 +70,15 @@ class _floor2State extends State<floor2> {
       ),
       body: Stack(
         children: [
-          widget.eye || widget.safty || saftyI > 0
+          widget.eye || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 10,
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.red,
+                  backC: Colors.greenAccent[100].withOpacity(0.8),
+                  detailTitle: "Exit",
+                  details: "Emergency Exit for JHE Floor II",
                   icon: Icons.exit_to_app_rounded,
                 )
               : roomButton(
@@ -98,7 +106,7 @@ class _floor2State extends State<floor2> {
               length: _screenH / 12,
               width: _screenWidth / 3,
               name: "241"),
-          widget.eye || widget.safty || saftyI > 0
+          widget.eye || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 15,
                   top: _screenH / 2,
@@ -110,16 +118,20 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.red,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
+                          detailTitle: "Eye shower",
+                          details: "Emergency eye shower when chemical spills",
                         ),
                         SizedBox(
                           width: _screenWidth / 20,
                         ),
                         roomButton(
+                          detailTitle: "Chemical Shower",
+                          details: "Emergency body shower when chemical spills",
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.red,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.shower_rounded,
                         )
                       ],
@@ -160,15 +172,35 @@ class _floor2State extends State<floor2> {
               length: _screenH / 10,
               width: _screenWidth / 3,
               pageTo: room244Main(),
-              backC: Colors.lightGreenAccent[100],
               name: "244"),
-          roomButton(
-            left: _screenWidth / 1.94,
-            top: _screenH / 35,
-            length: _screenH / 20,
-            width: _screenWidth / 10,
-            icon: Icons.fire_extinguisher,
-          ),
+          widget.fire || saftyI > 0
+              ? roomButton(
+                  left: _screenWidth / 1.94,
+                  top: _screenH / 35,
+                  length: _screenH / 20,
+                  width: _screenWidth / 10,
+                  icon: Icons.fire_extinguisher,
+                  details: "Emergency for fire situation",
+                  detailTitle: "Fire Extinguisher",
+                )
+              : Positioned(
+                  left: _screenWidth / 1.94,
+                  top: _screenH / 35,
+                  child: Container()),
+          widget.fire || saftyI > 0
+              ? roomButton(
+                  detailTitle: "Fire Extinguisher",
+                  details: "Emergency for fire situation",
+                  left: _screenWidth / 1.94,
+                  top: _screenH / 6,
+                  length: _screenH / 20,
+                  width: _screenWidth / 10,
+                  icon: Icons.fire_extinguisher,
+                )
+              : Positioned(
+                  left: _screenWidth / 1.94,
+                  top: _screenH / 35,
+                  child: Container()),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 7,
@@ -176,7 +208,7 @@ class _floor2State extends State<floor2> {
               width: _screenWidth / 3,
               pageTo: room245Main(),
               name: "245"),
-          widget.eye || widget.safty || saftyI > 0
+          widget.eye || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 1.7,
                   top: _screenH / 3.54,
@@ -188,8 +220,10 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.red,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
+                          detailTitle: "Eye shower",
+                          details: "Emergency eye shower when chemical spills",
                         ),
                         SizedBox(
                           width: _screenWidth / 20,
@@ -197,8 +231,10 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.red,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.shower_rounded,
+                          detailTitle: "Chemical Shower",
+                          details: "Emergency body shower when chemical spills",
                         )
                       ],
                     ),
@@ -223,21 +259,81 @@ class _floor2State extends State<floor2> {
               length: _screenH / 9,
               width: _screenWidth / 3,
               name: "247"),
-          roomButton(
-              left: _screenWidth / 1.6,
-              top: _screenH / 1.55,
-              length: _screenH / 4.7,
-              width: _screenWidth / 3,
-              name: "248"),
+          saftyI > 0
+              ? Positioned(
+                  left: _screenWidth / 1.8,
+                  top: _screenH / 1.55,
+                  child: Container(
+                      width: _screenWidth / 2.5,
+                      height: _screenH / 4.5,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: _screenWidth / 25,
+                              ),
+                              roomButton(
+                                length: _screenH / 12,
+                                width: _screenWidth / 6,
+                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                icon: FontAwesomeIcons.firstAid,
+                                detailTitle: "First Aid Kit",
+                                details: "QRS kit for any emergency",
+                              ),
+                              SizedBox(
+                                height: _screenWidth / 25,
+                              ),
+                              roomButton(
+                                length: _screenH / 12,
+                                width: _screenWidth / 6,
+                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                icon: FontAwesomeIcons.burn,
+                                detailTitle: "Burn Kit",
+                                details: "QRS for burning situation",
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: _screenWidth / 40,
+                          ),
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: _screenH / 60,
+                              ),
+                              roomButton(
+                                length: _screenH / 5,
+                                width: _screenWidth / 5,
+                                fontsize: 10,
+                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                detailsFontS: 16,
+                                detailsTiFontS: 25,
+                                detailTitle: "Equipment Manager Contact Info",
+                                details:
+                                    "Ed McCaffery Ext:24985\nDoug Culley: Ext 24106\nXiaogang Li:Ext 21881",
+                                name:
+                                    "Contact Info:\nEd McCaffery: Ext:24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext 21881",
+                              )
+                            ],
+                          )
+                        ],
+                      )))
+              : roomButton(
+                  left: _screenWidth / 1.6,
+                  top: _screenH / 1.55,
+                  length: _screenH / 4.7,
+                  width: _screenWidth / 3,
+                  name: "248"),
           Positioned(
               top: _screenH / 1.32,
-              width: _screenWidth / 0.57,
+              left: _screenWidth / 45,
               child: Container(
                 height: _screenH / 9,
                 width: _screenH / 9,
                 child: FittedBox(
                   child: FloatingActionButton(
-                    child: Icon(Icons.kitchen),
+                    child: Icon(FontAwesomeIcons.solidLifeRing),
                     backgroundColor: Colors.redAccent,
                     onPressed: () {
                       setState(() {

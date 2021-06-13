@@ -76,6 +76,7 @@ class _layout_overviewState extends State<layout_overview> {
     floor2(
       safty: false,
       eye: false,
+      fire: false,
     ),
     floor2()
   ];

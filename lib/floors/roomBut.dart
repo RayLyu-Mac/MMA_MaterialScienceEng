@@ -14,9 +14,17 @@ class roomButton extends StatelessWidget {
   final Color backC;
   final IconData icon;
   final int elevation;
+  final String details;
+  final String detailTitle;
+  final double detailsFontS;
+  final double detailsTiFontS;
   const roomButton(
       {@optionalTypeArgs this.left,
+      @optionalTypeArgs this.detailTitle,
+      @optionalTypeArgs this.detailsFontS,
+      @optionalTypeArgs this.detailsTiFontS,
       @optionalTypeArgs this.backC,
+      @optionalTypeArgs this.details,
       @optionalTypeArgs this.top,
       @required this.length,
       @optionalTypeArgs this.fontsize,
@@ -36,12 +44,46 @@ class roomButton extends StatelessWidget {
             left: left,
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        duration: const Duration(milliseconds: 500),
-                        child: pageTo ?? workingInProg(),
-                        type: PageTransitionType.leftToRight));
+                details == null
+                    ? Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: const Duration(milliseconds: 500),
+                            child: pageTo ?? workingInProg(),
+                            type: PageTransitionType.leftToRight))
+                    : showGeneralDialog(
+                        barrierColor: Colors.black.withOpacity(0.5),
+                        transitionDuration: Duration(milliseconds: 300),
+                        barrierDismissible: true,
+                        barrierLabel: '',
+                        context: context,
+                        pageBuilder:
+                            (context, animation, secondaryAnimation) {},
+                        transitionBuilder: (context, a1, a2, widget) {
+                          return Transform.scale(
+                              scale: a1.value,
+                              child: Opacity(
+                                  opacity: a1.value,
+                                  child: SimpleDialog(
+                                    shape: Border.all(
+                                      width: 4,
+                                      style: BorderStyle.solid,
+                                      color: Colors.grey[300],
+                                    ),
+                                    contentPadding:
+                                        EdgeInsets.fromLTRB(20, 15, 25, 35),
+                                    title: Text(detailTitle,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: detailsTiFontS ?? 20)),
+                                    children: [
+                                      Text(details,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: detailsTiFontS ?? 15))
+                                    ],
+                                  )));
+                        });
               },
               child: Container(
                 height: length,
@@ -63,12 +105,45 @@ class roomButton extends StatelessWidget {
             ))
         : GestureDetector(
             onTap: () {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: pageTo ?? workingInProg(),
-                      type: PageTransitionType.leftToRight));
+              details == null
+                  ? Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: pageTo ?? workingInProg(),
+                          type: PageTransitionType.leftToRight))
+                  : showGeneralDialog(
+                      barrierColor: Colors.black.withOpacity(0.5),
+                      transitionDuration: Duration(milliseconds: 300),
+                      barrierDismissible: true,
+                      barrierLabel: '',
+                      context: context,
+                      pageBuilder: (context, animation, secondaryAnimation) {},
+                      transitionBuilder: (context, a1, a2, widget) {
+                        return Transform.scale(
+                            scale: a1.value,
+                            child: Opacity(
+                                opacity: a1.value,
+                                child: SimpleDialog(
+                                  shape: Border.all(
+                                    width: 4,
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey[300],
+                                  ),
+                                  contentPadding:
+                                      EdgeInsets.fromLTRB(20, 15, 25, 35),
+                                  title: Text(detailTitle,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: detailsTiFontS ?? 20)),
+                                  children: [
+                                    Text(details,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: detailsTiFontS ?? 15))
+                                  ],
+                                )));
+                      });
             },
             child: Container(
               height: length,

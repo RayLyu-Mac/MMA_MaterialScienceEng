@@ -105,20 +105,22 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                       SizedBox(
                         height: _screenH / 50,
                       ),
-                      FlatButton.icon(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                PageTransition(
-                                    duration: Duration(milliseconds: 700),
-                                    child: eyewashStation(),
-                                    type: PageTransitionType.scale,
-                                    alignment: Alignment.topCenter));
-                          },
-                          icon: Icon(Icons.wash_rounded),
-                          label: Text("Check the locations")),
                     ],
                   )),
+              FlatButton.icon(
+                  shape: Border.all(width: 5, color: Colors.grey[600]),
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            duration: Duration(milliseconds: 700),
+                            child: eyewashStation(),
+                            type: PageTransitionType.scale,
+                            alignment: Alignment.topCenter));
+                  },
+                  icon: Icon(Icons.wash_rounded),
+                  label: Text("Check the locations")),
               SizedBox(
                 height: _screenH / 25,
               ),
@@ -179,18 +181,6 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                       SizedBox(
                         height: _screenH / 50,
                       ),
-                      FlatButton.icon(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                PageTransition(
-                                    duration: Duration(milliseconds: 700),
-                                    child: eyewashStation(),
-                                    type: PageTransitionType.scale,
-                                    alignment: Alignment.topCenter));
-                          },
-                          icon: Icon(FontAwesomeIcons.shower),
-                          label: Text("Check the locations"))
                     ],
                   )),
             ],
