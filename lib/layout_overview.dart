@@ -70,7 +70,15 @@ class _layout_overviewState extends State<layout_overview> {
   double _screenWidth;
   double _screenH;
   double tra = 0.001;
-  List<Widget> floors = [floor1(), floor1(), floor2(), floor2()];
+  List<Widget> floors = [
+    floor1(),
+    floor1(),
+    floor2(
+      safty: true,
+      eye: true,
+    ),
+    floor2()
+  ];
   List<Color> floorC = [
     Colors.orangeAccent,
     Colors.lightGreenAccent,

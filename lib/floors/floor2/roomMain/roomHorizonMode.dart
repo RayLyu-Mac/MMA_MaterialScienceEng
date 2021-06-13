@@ -69,7 +69,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
               left: _screenWidth / 45,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.04, height: _screenH / 2.5),
+                    width: _screenWidth / 1.04, height: _screenH / 2.25),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(width: 4, color: Colors.grey[300]),

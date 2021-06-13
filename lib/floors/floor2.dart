@@ -11,7 +11,10 @@ import 'floor2/roomMain/246.dart';
 import 'floor2/roomMain/246A.dart';
 
 class floor2 extends StatefulWidget {
-  floor2({Key key}) : super(key: key);
+  final bool safty;
+  final bool eye;
+  floor2({@optionalTypeArgs this.eye, @optionalTypeArgs this.safty, Key key})
+      : super(key: key);
 
   @override
   _floor2State createState() => _floor2State();
@@ -60,12 +63,21 @@ class _floor2State extends State<floor2> {
       ),
       body: Stack(
         children: [
-          roomButton(
-              left: _screenWidth / 10,
-              top: _screenH / 35,
-              length: _screenH / 15,
-              width: _screenWidth / 3,
-              name: "Stairs"),
+          widget.safty != null
+              ? roomButton(
+                  left: _screenWidth / 10,
+                  top: _screenH / 35,
+                  length: _screenH / 15,
+                  width: _screenWidth / 3,
+                  backC: Colors.red,
+                  icon: Icons.exit_to_app_rounded,
+                )
+              : roomButton(
+                  left: _screenWidth / 10,
+                  top: _screenH / 35,
+                  length: _screenH / 15,
+                  width: _screenWidth / 3,
+                  name: "Stairs"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 9,
@@ -85,13 +97,40 @@ class _floor2State extends State<floor2> {
               length: _screenH / 12,
               width: _screenWidth / 3,
               name: "241"),
-          roomButton(
-              left: _screenWidth / 10,
-              top: _screenH / 2,
-              length: _screenH / 12,
-              width: _screenWidth / 3,
-              pageTo: room240(),
-              name: "240"),
+          widget.eye || widget.safty
+              ? Positioned(
+                  left: _screenWidth / 15,
+                  top: _screenH / 2,
+                  child: Container(
+                    width: _screenWidth / 2,
+                    height: _screenH / 12,
+                    child: Row(
+                      children: [
+                        roomButton(
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.red,
+                          icon: Icons.remove_red_eye_rounded,
+                        ),
+                        SizedBox(
+                          width: _screenWidth / 20,
+                        ),
+                        roomButton(
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.red,
+                          icon: Icons.shower_rounded,
+                        )
+                      ],
+                    ),
+                  ))
+              : roomButton(
+                  left: _screenWidth / 10,
+                  top: _screenH / 2,
+                  length: _screenH / 12,
+                  width: _screenWidth / 3,
+                  pageTo: room240(),
+                  name: "240"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 1.66,
@@ -136,13 +175,40 @@ class _floor2State extends State<floor2> {
               width: _screenWidth / 3,
               pageTo: room245Main(),
               name: "245"),
-          roomButton(
-              left: _screenWidth / 1.6,
-              top: _screenH / 3.73,
-              length: _screenH / 9,
-              width: _screenWidth / 3,
-              pageTo: room246Main(),
-              name: "246   246/A"),
+          widget.eye || widget.safty
+              ? Positioned(
+                  left: _screenWidth / 1.7,
+                  top: _screenH / 3.54,
+                  child: Container(
+                    width: _screenWidth / 2,
+                    height: _screenH / 12,
+                    child: Row(
+                      children: [
+                        roomButton(
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.red,
+                          icon: Icons.remove_red_eye_rounded,
+                        ),
+                        SizedBox(
+                          width: _screenWidth / 20,
+                        ),
+                        roomButton(
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.red,
+                          icon: Icons.shower_rounded,
+                        )
+                      ],
+                    ),
+                  ))
+              : roomButton(
+                  left: _screenWidth / 1.6,
+                  top: _screenH / 3.73,
+                  length: _screenH / 9,
+                  width: _screenWidth / 3,
+                  pageTo: room246Main(),
+                  name: "246   246/A"),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 2.54,

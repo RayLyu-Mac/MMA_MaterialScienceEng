@@ -27,6 +27,7 @@ class _room244MainState extends State<room244Main> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
       _screenH = _screenH * 0.9;
       adjust = 0.83;
