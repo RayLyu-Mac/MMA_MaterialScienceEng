@@ -61,7 +61,7 @@ class _equb_avaState extends State<equb_ava> {
                 top: 0.0,
                 left: 0.0,
                 width: _screenWidth,
-                height: _screenH / 2.3 / adjust,
+                height: _screenH / 2.7 / adjust,
                 child: Hero(
                     tag: 'image' + _heroType.title,
                     child: Image.network(
@@ -69,29 +69,29 @@ class _equb_avaState extends State<equb_ava> {
                       fit: BoxFit.fitWidth,
                     ))),
             Positioned(
-                top: _screenH / 2.3 / adjust,
-                left: 25,
-                width: _screenWidth - 64.0,
+                top: _screenH / 2.65 / adjust,
+                left: 10,
+                width: _screenWidth - 14.0,
                 child: Hero(
                     tag: 'fText' + _heroType.fText,
                     child: Material(
                         color: Colors.transparent,
                         child: Text(_heroType.fText,
                             style: TextStyle(
-                              fontSize: _screenH / 45,
+                              fontSize: _screenH / 48,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ))))),
             Positioned(
-              top: _screenH / 1.3 / adjust,
+              top: _screenH / 1.27 / adjust,
               left: 25,
               width: _screenWidth - 64.0,
               child: Hero(
                 tag: 'pageTo',
                 child: fancyBut(
                   pageTo: _heroType.pageTo,
-                  width: _screenWidth / 1.7,
-                  height: _screenWidth / 7.7,
+                  width: _screenWidth / 1.8,
+                  height: _screenWidth / 8.2,
                   icon: Icons.follow_the_signs_rounded,
                   buttonName: "Go to the equipment page",
                 ),

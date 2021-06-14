@@ -10,6 +10,11 @@ import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246.dart';
 import 'floor2/roomMain/246A.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:mma_mse/Search/SearchAll.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -31,6 +36,14 @@ class _floor2State extends State<floor2> {
   double _screenH;
   double adjust;
   double saftyI = -1;
+
+  @override
+  void goToPage(qr_result) {
+    Navigator.push(
+        context,
+        PageTransition(
+            child: to[qr_result], type: PageTransitionType.bottomToTop));
+  }
 
   @override
   void initState() {
@@ -325,6 +338,13 @@ class _floor2State extends State<floor2> {
                   length: _screenH / 4.7,
                   width: _screenWidth / 3,
                   name: "248"),
+          floationPanel(
+              button: [
+                Icons.search,
+                Icons.qr_code_scanner,
+              ],
+              animationTime: 550,
+              buttonP: [EqupSearch(), scanQR]),
           Positioned(
               top: _screenH / 1.32,
               left: _screenWidth / 45,
@@ -346,5 +366,12 @@ class _floor2State extends State<floor2> {
         ],
       ),
     );
+  }
+
+  scanQR() async {
+    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    setState(() {
+      goToPage(codeSanner);
+    });
   }
 }
