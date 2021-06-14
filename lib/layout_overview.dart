@@ -9,6 +9,7 @@ import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'Search/extramenu.dart';
 import 'floors/floor2.dart';
+import 'floors/floor3.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
@@ -82,10 +83,8 @@ class _layout_overviewState extends State<layout_overview> {
       eye: false,
       fire: false,
     ),
-    floor2(
-      safty: false,
+    floor3(
       eye: false,
-      fire: false,
     )
   ];
   List<Color> floorC = [
