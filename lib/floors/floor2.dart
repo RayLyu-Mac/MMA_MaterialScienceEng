@@ -22,10 +22,12 @@ class floor2 extends StatefulWidget {
   final bool safty;
   final bool eye;
   final bool fire;
+  final bool visitFromOhter;
   floor2(
       {@optionalTypeArgs this.eye,
       @optionalTypeArgs this.safty,
       @optionalTypeArgs this.fire,
+      @optionalTypeArgs this.visitFromOhter,
       Key key})
       : super(key: key);
 
@@ -384,6 +386,20 @@ class _floor2State extends State<floor2> {
                   length: _screenH / 4.7,
                   width: _screenWidth / 3,
                   name: "248"),
+          Positioned(
+              top: _screenH / 1.23,
+              left: _screenWidth / 1.4,
+              child: widget.visitFromOhter != null
+                  ? Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.grey[200],
+                          border: Border.all(width: 5, color: Colors.blueGrey)),
+                      height: _screenH / 15,
+                      width: _screenWidth / 4,
+                      child: Text("Swipe to see Floor III"),
+                    )
+                  : Container()),
           floationPanel(
               button: [
                 Icons.search,

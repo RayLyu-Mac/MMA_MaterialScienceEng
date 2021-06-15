@@ -15,7 +15,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class floor1 extends StatefulWidget {
   final bool fire;
   final bool eye;
-  floor1({@optionalTypeArgs this.fire, @optionalTypeArgs this.eye, Key key})
+  final bool visitFromOhter;
+  floor1(
+      {@optionalTypeArgs this.fire,
+      @optionalTypeArgs this.eye,
+      @optionalTypeArgs this.visitFromOhter,
+      Key key})
       : super(key: key);
 
   @override
@@ -243,15 +248,18 @@ class _floor1State extends State<floor1> {
             Positioned(
                 top: _screenH / 1.23,
                 left: _screenWidth / 1.4,
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.grey[200],
-                      border: Border.all(width: 5, color: Colors.blueGrey)),
-                  height: _screenH / 15,
-                  width: _screenWidth / 4,
-                  child: Text("Swipe to see Floor II"),
-                )),
+                child: widget.visitFromOhter != null
+                    ? Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.grey[200],
+                            border:
+                                Border.all(width: 5, color: Colors.blueGrey)),
+                        height: _screenH / 15,
+                        width: _screenWidth / 4,
+                        child: Text("Swipe to see Floor II"),
+                      )
+                    : Container()),
             floationPanel(
                 button: [
                   Icons.search,
