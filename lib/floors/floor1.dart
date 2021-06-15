@@ -10,7 +10,6 @@ import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
-import 'floor1/mech_lab.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class floor1 extends StatefulWidget {

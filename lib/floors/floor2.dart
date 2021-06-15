@@ -15,6 +15,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:mma_mse/Search/extramenu.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -71,9 +72,25 @@ class _floor2State extends State<floor2> {
 
   @override
   Widget build(BuildContext context) {
+    Drawer floor2D() => Drawer(
+          child: ListView(
+            children: [DrawerHeader(child: Text("JHE Floor II")), extraMenu()],
+          ),
+        );
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(0, 3, 15, 3),
+              iconSize: 32,
+              onPressed: () {
+                setState(() {
+                  saftyI = saftyI * -1;
+                });
+              },
+              icon: Icon(FontAwesomeIcons.exchangeAlt))
+        ],
         title: Text(
           "JHE Floor II",
           style:
@@ -81,6 +98,7 @@ class _floor2State extends State<floor2> {
         ),
         backgroundColor: Colors.black,
       ),
+      drawer: floor2D(),
       body: Stack(
         children: [
           widget.eye || saftyI > 0
@@ -235,7 +253,8 @@ class _floor2State extends State<floor2> {
                           width: _screenWidth / 6,
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
-                          detailTitle: "Eye shower",
+                          pageTo: room246AMain(),
+                          detailTitle: "Room 246A: Eye shower",
                           details: "Emergency eye shower when chemical spills",
                         ),
                         SizedBox(
@@ -246,7 +265,8 @@ class _floor2State extends State<floor2> {
                           width: _screenWidth / 6,
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.shower_rounded,
-                          detailTitle: "Chemical Shower",
+                          pageTo: room246AMain(),
+                          detailTitle: "Room 246A: Chemical Shower",
                           details: "Emergency body shower when chemical spills",
                         )
                       ],
@@ -345,24 +365,6 @@ class _floor2State extends State<floor2> {
               ],
               animationTime: 550,
               buttonP: [EqupSearch(), scanQR]),
-          Positioned(
-              top: _screenH / 1.32,
-              left: _screenWidth / 45,
-              child: Container(
-                height: _screenH / 9,
-                width: _screenH / 9,
-                child: FittedBox(
-                  child: FloatingActionButton(
-                    child: Icon(FontAwesomeIcons.solidLifeRing),
-                    backgroundColor: Colors.redAccent,
-                    onPressed: () {
-                      setState(() {
-                        saftyI = saftyI * -1;
-                      });
-                    },
-                  ),
-                ),
-              ))
         ],
       ),
     );

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:clay_containers/clay_containers.dart';
 import 'package:mma_mse/workingInPro.dart';
+import 'package:mma_mse/fancyButton.dart';
 
 class roomButton extends StatelessWidget {
   final double left;
@@ -80,7 +82,16 @@ class roomButton extends StatelessWidget {
                                       Text(details,
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: detailsTiFontS ?? 15))
+                                              fontSize: detailsTiFontS ?? 15)),
+                                      pageTo != null
+                                          ? fancyBut(
+                                              pageTo: pageTo,
+                                              width: width / 1.1,
+                                              height: length / 4,
+                                              icon: FontAwesomeIcons.restroom,
+                                              buttonName:
+                                                  "Check Facility iniside the Rood")
+                                          : Container()
                                     ],
                                   )));
                         });
@@ -140,7 +151,19 @@ class roomButton extends StatelessWidget {
                                     Text(details,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: detailsTiFontS ?? 15))
+                                            fontSize: detailsTiFontS ?? 15)),
+                                    SizedBox(
+                                      height: 25,
+                                    ),
+                                    pageTo != null
+                                        ? fancyBut(
+                                            pageTo: pageTo,
+                                            width: width / 1.2,
+                                            height: length / 1.3,
+                                            icon: FontAwesomeIcons.checkDouble,
+                                            buttonName:
+                                                "Check Facility iniside the Room")
+                                        : Container()
                                   ],
                                 )));
                       });
