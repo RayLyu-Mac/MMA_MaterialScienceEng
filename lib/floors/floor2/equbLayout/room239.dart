@@ -52,7 +52,7 @@ class _room239State extends State<room239> {
               top: _screenH / 6,
               length: _screenH / 3,
               width: _screenWidth / 3,
-              name: "Working Bench"),
+              name: "Oxygen / Nitrogen Determinator"),
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 1.7,

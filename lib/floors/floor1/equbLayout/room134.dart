@@ -64,7 +64,7 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              name: "??"),
+              name: "Torsion Tester"),
           roomButton(
               top: _screenWidth / 40,
               left: _screenH / 2.1,
@@ -90,7 +90,7 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              name: "??"),
+              name: "Furnace"),
           roomButton(
               top: _screenWidth / 7,
               left: _screenH / 0.77,
@@ -103,7 +103,7 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 0.77,
               length: _screenH / 3,
               width: _screenWidth / 5,
-              name: "??"),
+              name: "Compression Tester"),
           roomButton(
               top: _screenWidth / 4,
               left: _screenH / 20,
@@ -122,7 +122,7 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 2.2,
               length: _screenH / 6.5,
               width: _screenWidth / 6,
-              name: "??"),
+              name: "Inert Gas Furnace"),
           roomButton(
               top: _screenWidth / 2.7,
               left: _screenH / 1.3,

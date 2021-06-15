@@ -102,20 +102,14 @@ class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
         appBar: AppBar(
           actions: [
             IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        child: search_main(),
-                        type: PageTransitionType.scale,
-                        alignment: Alignment.topCenter));
-              },
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
-                size: 34,
-              ),
-            ),
+                padding: EdgeInsets.fromLTRB(0, 3, 15, 3),
+                iconSize: 32,
+                onPressed: () {
+                  setState(() {
+                    saftyI = saftyI * -1;
+                  });
+                },
+                icon: Icon(FontAwesomeIcons.exchangeAlt))
           ],
           backgroundColor: Colors.black,
           title: Text("Floor I",
@@ -214,24 +208,6 @@ class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
                 length: _screenWidth / 6,
                 width: _screenH / rwidth,
                 name: "135A"),
-            Positioned(
-                top: _screenH / 1.32,
-                left: _screenWidth / 45,
-                child: Container(
-                  height: _screenH / 9,
-                  width: _screenH / 9,
-                  child: FittedBox(
-                    child: FloatingActionButton(
-                      child: Icon(FontAwesomeIcons.solidLifeRing),
-                      backgroundColor: Colors.redAccent,
-                      onPressed: () {
-                        setState(() {
-                          saftyI = saftyI * -1;
-                        });
-                      },
-                    ),
-                  ),
-                )),
             Positioned(
                 top: _screenH / 1.23,
                 left: _screenWidth / 1.4,

@@ -81,7 +81,7 @@ class _room240LayOState extends State<room240LayO> {
               top: _screenH / 6.5,
               length: _screenH / 3,
               width: _screenWidth / 3,
-              name: "Cabinet"),
+              name: "Cabinet: Chemical Storage"),
           roomButton(
               left: _screenWidth / 1.64,
               top: _screenH / 1.8,

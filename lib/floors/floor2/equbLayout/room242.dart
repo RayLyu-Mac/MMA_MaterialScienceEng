@@ -45,18 +45,24 @@ class _room242LayOState extends State<room242LayO> {
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 35,
-              length: _screenH / 10,
+              length: _screenH / 8,
               width: _screenWidth / 3,
-              name: "Cutting machine"),
+              name: "Belt Grinder"),
           roomButton(
               left: _screenWidth / 13,
-              top: _screenH / 5.5,
+              top: _screenH / 6,
+              length: _screenH / 8,
+              width: _screenWidth / 3,
+              name: "Vice & Floor Grinder & Drill Pressor"),
+          roomButton(
+              left: _screenWidth / 13,
+              top: _screenH / 3.3,
               length: _screenH / 4,
               width: _screenWidth / 3,
               name: "working bench"),
           roomButton(
               left: _screenWidth / 13,
-              top: _screenH / 2,
+              top: _screenH / 1.7,
               length: _screenH / 5.5,
               width: _screenWidth / 3,
               name: "Sink"),

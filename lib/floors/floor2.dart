@@ -78,7 +78,11 @@ class _floor2State extends State<floor2> {
               DrawerHeader(
                   child: Column(
                 children: [
-                  Text("JHE Floor II"),
+                  Text(
+                    "JHE Floor II",
+                    style: TextStyle(
+                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                  ),
                   Container(
                     constraints: BoxConstraints.expand(
                         width: _screenWidth / 1.5, height: _screenWidth / 4),
@@ -166,16 +170,18 @@ class _floor2State extends State<floor2> {
                           width: _screenWidth / 6,
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
-                          detailTitle: "Eye shower",
+                          detailTitle: "Room 240: Eye shower",
+                          pageTo: room240(),
                           details: "Emergency eye shower when chemical spills",
                         ),
                         SizedBox(
                           width: _screenWidth / 20,
                         ),
                         roomButton(
-                          detailTitle: "Chemical Shower",
+                          detailTitle: "Room 240: Chemical Shower",
                           details: "Emergency body shower when chemical spills",
                           length: _screenH / 12,
+                          pageTo: room240(),
                           width: _screenWidth / 6,
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.shower_rounded,
@@ -326,7 +332,7 @@ class _floor2State extends State<floor2> {
                                 width: _screenWidth / 6,
                                 backC: Colors.redAccent[100].withOpacity(0.8),
                                 icon: FontAwesomeIcons.firstAid,
-                                detailTitle: "First Aid Kit",
+                                detailTitle: "Room 248: First Aid Kit",
                                 details: "QRS kit for any emergency",
                               ),
                               SizedBox(
@@ -337,7 +343,7 @@ class _floor2State extends State<floor2> {
                                 width: _screenWidth / 6,
                                 backC: Colors.redAccent[100].withOpacity(0.8),
                                 icon: FontAwesomeIcons.burn,
-                                detailTitle: "Burn Kit",
+                                detailTitle: "Room 248: Burn Kit",
                                 details: "QRS for burning situation",
                               )
                             ],
