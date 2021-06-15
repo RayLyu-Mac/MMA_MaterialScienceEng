@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/floors/floor2/equbLayout/room240.dart';
 import 'roomBut.dart';
 import 'package:mma_mse/floors/floor2/roomMain/239.dart';
 import 'floor2/roomMain/240.dart';
@@ -171,7 +172,9 @@ class _floor2State extends State<floor2> {
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           detailTitle: "Room 240: Eye shower",
-                          pageTo: room240(),
+                          pageTo: room240LayO(
+                            eye: true,
+                          ),
                           details: "Emergency eye shower when chemical spills",
                         ),
                         SizedBox(
@@ -181,7 +184,9 @@ class _floor2State extends State<floor2> {
                           detailTitle: "Room 240: Chemical Shower",
                           details: "Emergency body shower when chemical spills",
                           length: _screenH / 12,
-                          pageTo: room240(),
+                          pageTo: room240LayO(
+                            eye: true,
+                          ),
                           width: _screenWidth / 6,
                           backC: Colors.redAccent[100].withOpacity(0.8),
                           icon: Icons.shower_rounded,

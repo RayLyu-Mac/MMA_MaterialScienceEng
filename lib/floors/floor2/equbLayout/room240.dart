@@ -3,7 +3,8 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room240LayO extends StatefulWidget {
-  room240LayO({Key key}) : super(key: key);
+  final bool eye;
+  room240LayO({@optionalTypeArgs this.eye, Key key}) : super(key: key);
 
   @override
   _room240LayOState createState() => _room240LayOState();
@@ -58,12 +59,43 @@ class _room240LayOState extends State<room240LayO> {
               length: _screenH / 10,
               width: _screenWidth / 3,
               name: "Distiller for distilled water"),
-          roomButton(
-              left: _screenWidth / 13,
-              top: _screenH / 2.47,
-              length: _screenH / 10,
-              width: _screenWidth / 3,
-              name: "Water Sink"),
+          widget.eye != null && widget.eye
+              ? Positioned(
+                  left: _screenWidth / 13,
+                  top: _screenH / 2.47,
+                  child: Container(
+                    width: _screenWidth / 2,
+                    height: _screenH / 12,
+                    child: Row(
+                      children: [
+                        roomButton(
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          icon: Icons.remove_red_eye_rounded,
+                          detailTitle: "Room 240: Eye shower",
+                          details: "Emergency eye shower when chemical spills",
+                        ),
+                        SizedBox(
+                          width: _screenWidth / 20,
+                        ),
+                        roomButton(
+                          detailTitle: "Room 240: Chemical Shower",
+                          details: "Emergency body shower when chemical spills",
+                          length: _screenH / 12,
+                          width: _screenWidth / 6,
+                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          icon: Icons.shower_rounded,
+                        )
+                      ],
+                    ),
+                  ))
+              : roomButton(
+                  left: _screenWidth / 13,
+                  top: _screenH / 2.47,
+                  length: _screenH / 10,
+                  width: _screenWidth / 3,
+                  name: "Water Sink"),
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 1.9,

@@ -22,14 +22,9 @@ class floor1 extends StatefulWidget {
   _floor1State createState() => _floor1State();
 }
 
-class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-
+class _floor1State extends State<floor1> {
   @override
   void initState() {
-    _animationController =
-        new AnimationController(vsync: this, duration: Duration(seconds: 4));
-    _animationController.repeat(reverse: true);
     createList();
     super.initState();
   }
@@ -248,13 +243,14 @@ class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
             Positioned(
                 top: _screenH / 1.23,
                 left: _screenWidth / 1.4,
-                child: FadeTransition(
-                  opacity: _animationController,
-                  child: MaterialButton(
-                    onPressed: () => null,
-                    child: Text("Next Page"),
-                    color: Colors.green,
-                  ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.grey[200],
+                      border: Border.all(width: 5, color: Colors.blueGrey)),
+                  height: _screenH / 15,
+                  width: _screenWidth / 4,
+                  child: Text("Swipe to see Floor II"),
                 )),
             floationPanel(
                 button: [
