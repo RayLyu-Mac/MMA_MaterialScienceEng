@@ -20,8 +20,10 @@ class _eyewashStationState extends State<eyewashStation> {
         floor1(
           fire: false,
           eye: true,
+          visitFromOhter: true,
         ),
         floor2(
+          visitFromOhter: true,
           fire: false,
           eye: true,
         )

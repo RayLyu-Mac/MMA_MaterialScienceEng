@@ -114,6 +114,9 @@ class _floor3State extends State<floor3> {
               top: _screenH / 1.3,
               length: _screenH / 11,
               width: _screenWidth / 3,
+              detailTitle: "Dr. Hatem Zurob's Office",
+              details:
+                  "Professor, MSE chair\nResearch Interest:Manufacturing & Infrastructure\nExtension:+1 905.525.9140 x 23515\n:)",
               name: "357D"),
           roomButton(
               left: _screenWidth / 1.62,
