@@ -56,7 +56,7 @@ class HeroType {
           pageTo: tensile_test()))
       ..add(HeroType(
           title: 'Llyods Tensile Tester',
-          subTitle: 'Apply tensile test to find according aterial property',
+          subTitle: 'Test for material mechanical property',
           fText: 'Avaiable on JHE 245/ 246/ 246A',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
