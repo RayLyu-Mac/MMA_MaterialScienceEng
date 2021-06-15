@@ -74,7 +74,22 @@ class _floor2State extends State<floor2> {
   Widget build(BuildContext context) {
     Drawer floor2D() => Drawer(
           child: ListView(
-            children: [DrawerHeader(child: Text("JHE Floor II")), extraMenu()],
+            children: [
+              DrawerHeader(
+                  child: Column(
+                children: [
+                  Text("JHE Floor II"),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.5, height: _screenWidth / 4),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assest/logocolor.png"))),
+                  )
+                ],
+              )),
+              extraMenu()
+            ],
           ),
         );
     return Scaffold(

@@ -75,8 +75,7 @@ class _equb_mainState extends State<equb_main> {
                         width: _screenWidth / 1.5, height: _screenWidth / 4),
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(
-                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/logocolor.png?raw=true"))),
+                            image: AssetImage("assest/logocolor.png"))),
                   ))
             ],
           )),
