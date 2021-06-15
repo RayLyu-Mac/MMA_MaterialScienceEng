@@ -40,15 +40,15 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                 borderRadius: BorderRadius.circular(6.0),
                 border: Border.all(
                   width: 8,
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.grey[200].withOpacity(0.8),
                 )),
             child: AlertDialog(
                 insetPadding: EdgeInsets.zero,
                 contentPadding: EdgeInsets.fromLTRB(
-                    _screenWidth / 45, 0, _screenWidth / 45, 0),
+                    _screenWidth / 20, 0, _screenWidth / 45, 0),
                 buttonPadding:
                     EdgeInsets.fromLTRB(0, _screenH / 20, 0, _screenH / 30),
-                backgroundColor: Colors.redAccent[100].withOpacity(0.9),
+                backgroundColor: Colors.redAccent[100].withOpacity(0.8),
                 elevation: 5,
                 title: Text(
                   "Before Start",
@@ -61,36 +61,62 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                         Icons.pan_tool,
                         size: _screenH / 15,
                       ),
-                      Text(
-                        widget.warning_note,
-                        style: TextStyle(fontSize: _screenH / 40),
+                      SizedBox(
+                        height: _screenH / 20,
+                      ),
+                      Container(
+                        width: _screenWidth / 1.15,
+                        child: Text(
+                          widget.warning_note,
+                          style: TextStyle(
+                              fontSize: _screenH / 38,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                       SizedBox(
-                        height: _screenH / 55,
+                        height: _screenH / 15,
                       ),
                       FlatButton.icon(
-                          splashColor: Colors.white30,
+                          padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
+                          splashColor: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withOpacity(0.1),
+                          shape: Border.all(
+                            width: 3,
+                            color: Colors.grey[200],
+                          ),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 PageTransition(
                                     child: widget.pageTo,
-                                    duration: Duration(milliseconds: 550),
+                                    duration: Duration(milliseconds: 650),
                                     type: PageTransitionType.scale,
                                     alignment: Alignment.centerLeft));
                           },
                           icon: Icon(Icons.forward),
-                          label: Text("Forward")),
+                          label: Text(
+                            "Forward",
+                            style: TextStyle(fontSize: _screenH / 40),
+                          )),
                       SizedBox(
-                        height: _screenH / 90,
+                        height: _screenH / 70,
                       ),
                       FlatButton.icon(
-                          splashColor: Colors.white30,
+                          padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
+                          splashColor: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withOpacity(0.1),
+                          shape: Border.all(
+                            width: 3,
+                            color: Colors.grey[200],
+                          ),
                           onPressed: () {
                             Navigator.pop(context);
                           },
                           icon: Icon(Icons.backspace),
-                          label: Text("Cancel"))
+                          label: Text(
+                            "Cancel",
+                            style: TextStyle(fontSize: _screenH / 40),
+                          ))
                     ]))));
   }
 }

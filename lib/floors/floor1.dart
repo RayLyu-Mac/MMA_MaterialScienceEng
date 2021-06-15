@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/Search/safty/saftyMain.dart';
 import 'floor1/mech_lab.dart';
-import '../Search/Search_page/search_main.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
@@ -180,7 +180,11 @@ class _floor1State extends State<floor1> {
                     left: _screenWidth / 30,
                     length: _screenWidth / 5,
                     width: _screenH / rwidth,
-                    pageTo: room129(),
+                    pageTo: warning(
+                      pageTo: room129(),
+                      warning_note:
+                          "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lens",
+                    ),
                     name: "129"),
             roomButton(
                 top: _screenH / 2,
@@ -231,7 +235,11 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 3,
                 width: _screenH / rwidth,
-                pageTo: mech_lab(),
+                pageTo: warning(
+                  pageTo: mech_lab(),
+                  warning_note:
+                      "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lens",
+                ),
                 name: "134"),
             roomButton(
                 top: _screenH / 1.74,
