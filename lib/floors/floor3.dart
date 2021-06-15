@@ -46,6 +46,17 @@ class _floor3State extends State<floor3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(0, 3, 15, 3),
+              iconSize: 32,
+              onPressed: () {
+                setState(() {
+                  saftyI = saftyI * -1;
+                });
+              },
+              icon: Icon(FontAwesomeIcons.exchangeAlt))
+        ],
         title: Text("JHE Floor III"),
         backgroundColor: Colors.black,
       ),

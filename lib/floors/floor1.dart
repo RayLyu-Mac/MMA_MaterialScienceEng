@@ -14,7 +14,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class floor1 extends StatefulWidget {
   final bool fire;
-  floor1({@optionalTypeArgs this.fire, Key key}) : super(key: key);
+  final bool eye;
+  floor1({@optionalTypeArgs this.fire, @optionalTypeArgs this.eye, Key key})
+      : super(key: key);
 
   @override
   _floor1State createState() => _floor1State();
@@ -138,13 +140,48 @@ class _floor1State extends State<floor1> with SingleTickerProviderStateMixin {
                 length: _screenWidth / 3,
                 width: _screenH / rwidth,
                 name: "130"),
-            roomButton(
-                top: _screenH / 2.85,
-                left: _screenWidth / 30,
-                length: _screenWidth / 5,
-                width: _screenH / rwidth,
-                pageTo: room129(),
-                name: "129"),
+            widget.eye || saftyI > 0
+                ? Positioned(
+                    top: _screenH / 2.75,
+                    left: _screenWidth / 30,
+                    child: Container(
+                      width: _screenWidth / 2,
+                      height: _screenH / 12,
+                      child: Row(
+                        children: [
+                          roomButton(
+                            length: _screenH / 12,
+                            width: _screenWidth / 6,
+                            backC: Colors.redAccent[100].withOpacity(0.8),
+                            icon: Icons.remove_red_eye_rounded,
+                            detailTitle: "Room 129: Eye shower",
+                            pageTo: room129(),
+                            details:
+                                "Emergency eye shower when chemical spills",
+                          ),
+                          SizedBox(
+                            width: _screenWidth / 20,
+                          ),
+                          roomButton(
+                            detailTitle: "Room 129: Chemical Shower",
+                            details:
+                                "Emergency body shower when chemical spills",
+                            length: _screenH / 12,
+                            pageTo: room129(),
+                            width: _screenWidth / 6,
+                            backC: Colors.redAccent[100].withOpacity(0.8),
+                            icon: Icons.shower_rounded,
+                          )
+                        ],
+                      ),
+                    ))
+                : roomButton(
+                    top: _screenH / 2.85,
+                    left: _screenWidth / 30,
+                    length: _screenWidth / 5,
+                    width: _screenH / rwidth,
+                    pageTo: room129(),
+                    name: "129"),
             roomButton(
                 top: _screenH / 2,
                 left: _screenWidth / 30,

@@ -74,9 +74,11 @@ class _layout_overviewState extends State<layout_overview> {
   List<Widget> floors = [
     floor1(
       fire: false,
+      eye: false,
     ),
     floor1(
       fire: false,
+      eye: false,
     ),
     floor2(
       safty: false,

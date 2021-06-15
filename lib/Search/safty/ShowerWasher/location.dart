@@ -17,7 +17,10 @@ class _eyewashStationState extends State<eyewashStation> {
       controller: controller,
       scrollDirection: Axis.horizontal,
       children: [
-        floor1(fire: false),
+        floor1(
+          fire: false,
+          eye: true,
+        ),
         floor2(
           fire: false,
           eye: true,

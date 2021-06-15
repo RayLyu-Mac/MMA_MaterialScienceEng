@@ -56,7 +56,7 @@ class _room245LayOState extends State<room245LayO> {
                 roomButton(
                   length: _screenH / 2,
                   width: _screenWidth / 4,
-                  name: "Cabinet",
+                  name: "Cabinet, Storage Locker",
                 ),
                 SizedBox(
                   height: _screenH / 15,

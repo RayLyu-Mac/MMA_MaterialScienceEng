@@ -124,7 +124,7 @@ class _room244LayOState extends State<room244LayO> {
                   length: _screenWidth / 8,
                   width: _screenH / 1.6,
                   pageTo: BlueFurnace(),
-                  name: "Fume Hood,Salt Pots used for heat treating"),
+                  name: "Fume Hood, Salt Pots used for heat treating"),
             ],
           )
         ]));
