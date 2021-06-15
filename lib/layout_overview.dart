@@ -208,6 +208,7 @@ class _layout_overviewState extends State<layout_overview> {
                           context,
                           PageTransition(
                               child: floors[ii],
+                              duration: Duration(milliseconds: 1000),
                               type: PageTransitionType.scale,
                               alignment: Alignment.topCenter));
                     },
