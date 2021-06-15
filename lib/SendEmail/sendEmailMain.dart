@@ -107,7 +107,7 @@ class _EmailContentState extends State<EmailContent> {
               left: _screenWidth / 15,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.15, height: _screenH / 2.5),
+                    width: _screenWidth / 1.15, height: _screenH / 3.5),
                 child: TextField(
                   controller: errorMessage,
                   maxLines: null,
@@ -137,10 +137,10 @@ class _EmailContentState extends State<EmailContent> {
               )),
           Positioned(
               top: _screenH / 1.3,
-              left: _screenWidth / 11,
+              left: _screenWidth / 15,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.15, height: _screenH / 16),
+                    width: _screenWidth / 1.15, height: _screenH / 13),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.black, width: 4)),
@@ -152,7 +152,7 @@ class _EmailContentState extends State<EmailContent> {
                         label: Text("Contact Manager"))),
               )),
           Positioned(
-              top: _screenH / 1.8,
+              top: _screenH / 2.2,
               left: _screenWidth / 50,
               child: Padding(
                 padding: EdgeInsets.all(3.0),
@@ -181,7 +181,7 @@ class _EmailContentState extends State<EmailContent> {
                 ),
               )),
           Positioned(
-            top: _screenH / 1.7,
+            top: _screenH / 2.1,
             left: _screenWidth / 1.2,
             child: IconButton(
               icon: Icon(
@@ -190,7 +190,21 @@ class _EmailContentState extends State<EmailContent> {
               ),
               onPressed: _openImagePicker,
             ),
-          )
+          ),
+          Positioned(
+              top: _screenH / 1.7,
+              left: _screenWidth / 15,
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 5, color: Colors.grey[200])),
+                child: Text(
+                  "Call:\nEd McCaffery: Ext: 24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext: 21881",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent[700],
+                      fontSize: _screenH / 35),
+                ),
+              ))
         ],
       ),
     );

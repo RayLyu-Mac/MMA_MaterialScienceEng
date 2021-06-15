@@ -17,6 +17,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/extramenu.dart';
+import 'package:mma_mse/equipment/saftyNoteText.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -151,7 +152,11 @@ class _floor2State extends State<floor2> {
               top: _screenH / 3.4,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              pageTo: room242Main(),
+              pageTo: warning(
+                pageTo: room242Main(),
+                warning_note:
+                    "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Wearing Protection (optional)",
+              ),
               name: "242"),
           roomButton(
               left: _screenWidth / 10,
@@ -208,7 +213,11 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.66,
               length: _screenH / 7,
               width: _screenWidth / 3,
-              pageTo: room239Main(),
+              pageTo: warning(
+                pageTo: room239Main(),
+                warning_note:
+                    "•No PPE required\n•No food or drink allowed in this room",
+              ),
               name: "239"),
           roomButton(
               left: _screenWidth / 10,
@@ -230,7 +239,11 @@ class _floor2State extends State<floor2> {
               top: _screenH / 35,
               length: _screenH / 10,
               width: _screenWidth / 3,
-              pageTo: room244Main(),
+              pageTo: warning(
+                pageTo: room244Main(),
+                warning_note:
+                    "1. Safety glasses\n2. Thermal gloves\n3. Tongs to handle hot samples\n4. Closed toe shoes with socks\n5. Long pants(No shorts)\n6. Face shield\n7. Aluminized hear resistant jacket",
+              ),
               name: "244"),
           widget.fire || saftyI > 0
               ? roomButton(
@@ -265,7 +278,11 @@ class _floor2State extends State<floor2> {
               top: _screenH / 7,
               length: _screenH / 9,
               width: _screenWidth / 3,
-              pageTo: room245Main(),
+              pageTo: warning(
+                pageTo: room245Main(),
+                warning_note:
+                    "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens",
+              ),
               name: "245"),
           widget.eye || saftyI > 0
               ? Positioned(
@@ -305,7 +322,11 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 3.73,
                   length: _screenH / 9,
                   width: _screenWidth / 3,
-                  pageTo: room246Main(),
+                  pageTo: warning(
+                    pageTo: room246AMain(),
+                    warning_note:
+                        "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens\n6. Nitrile Gloves Must be worn for Etching",
+                  ),
                   name: "246   246/A"),
           roomButton(
               left: _screenWidth / 1.6,
