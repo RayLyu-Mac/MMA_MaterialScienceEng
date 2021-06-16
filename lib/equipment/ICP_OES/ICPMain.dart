@@ -18,16 +18,6 @@ class ICP_OES_Main extends StatefulWidget {
 }
 
 class _ICP_OES_MainState extends State<ICP_OES_Main> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(

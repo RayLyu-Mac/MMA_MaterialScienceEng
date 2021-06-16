@@ -20,16 +20,6 @@ class PcutterMain extends StatefulWidget {
 }
 
 class _PcutterMainState extends State<PcutterMain> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
-  @override
-  void didChangeDependencies() {
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-    super.didChangeDependencies();
-  }
-
   @override
   void initState() {
     super.initState();

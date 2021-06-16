@@ -16,16 +16,6 @@ class DigitalRWMain extends StatefulWidget {
 }
 
 class _DigitalRWMainState extends State<DigitalRWMain> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(

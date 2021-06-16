@@ -19,16 +19,6 @@ class BlueFurnace extends StatefulWidget {
 }
 
 class _BlueFurnaceState extends State<BlueFurnace> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(

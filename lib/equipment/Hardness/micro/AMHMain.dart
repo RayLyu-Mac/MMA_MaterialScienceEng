@@ -14,16 +14,6 @@ class AutomaticMicroHardnessMain extends StatefulWidget {
 
 class _AutomaticMicroHardnessMainState
     extends State<AutomaticMicroHardnessMain> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(

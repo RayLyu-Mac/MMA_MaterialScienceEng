@@ -24,16 +24,6 @@ class SiCFurnace extends StatefulWidget {
 }
 
 class _SiCFurnaceState extends State<SiCFurnace> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
