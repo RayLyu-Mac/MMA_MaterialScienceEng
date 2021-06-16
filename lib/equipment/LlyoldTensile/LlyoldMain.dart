@@ -20,7 +20,7 @@ class _LlyoldTensileTesterState extends State<LlyoldTensileTester> {
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
-        title: "llyold Tensile Tester",
+        title: "Llyold Tensile Tester",
         warnVido: "bdunyatEEG0",
         instruction: LlyoTensileinstruction(),
         theory: tensile_test_bg(),
