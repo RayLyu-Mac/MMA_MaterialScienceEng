@@ -47,8 +47,9 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
       backC: Colors.green[50],
       instruction: BulkAbraCutterInstru(),
       dash: true,
-      extraIcon: FontAwesomeIcons.fantasyFlightGames,
+      extraIcon: FontAwesomeIcons.fan,
       extraPage: BulkAbrasiveCutter(),
+      toolTip: "Gear Intro",
       warnNote:
           "•Ensure the sample is securely fastened \n•Cutting wheel is completely stoped before opening the canopy\n•Do not have the blade the touching the sample prior engaging the motor\n•Cut the sample slowly\n•Sample size should be smaller than 2 inches",
       img:

@@ -43,6 +43,14 @@ class HeroType {
   String purpCutting = "Machine for sectioning the sample";
   String purpoMountg = "Machine for preparaing meturllgical analysis sample";
   String purpPolishg = "Machine for polishing the meturllgical analysis sample";
+  Color tensile = Colors.amber[100];
+
+  Color hardness = Colors.blueGrey[100];
+  Color microsco = Colors.purple[100];
+  Color furnace = Colors.red[100];
+  Color cutter = Colors.greenAccent[100];
+  Color mountP = Colors.teal[100];
+  Color polish = Colors.lightBlue[100];
   HeroType(
       {this.title,
       this.subTitle,
@@ -60,7 +68,7 @@ class HeroType {
               'Avaiable on:JHE 134\nManufacturer: MTS\nMaximum Rated: 30\nForce Capacity Options: 100/250/500/1k/2.5k/5k/10k/20k/30kN\nTest Zone: Single\nMaximum Test Speed: 1020mm/min\nPosition Resolution: 0.00006mm\nPower: 200 - 230 V AC, 12 Amps, 50 / 60 Hz, 2400 W\nSpace Between Columns: 420 mm\nVertical Test Space: 1200mm (standard)\nFrame Height: 1752mm(standard) \n Frame Width:826mm\nFrame Depth: 768mm\nFrame Weight: 305 kg',
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true',
-          materialColor: Colors.amber[800],
+          materialColor: tensile,
           pageTo: tensile_test()))
       ..add(HeroType(
           title: 'Llyods Tensile Tester',
@@ -69,7 +77,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
           pageTo: LlyoldTensileTester(),
-          materialColor: Colors.amber[800]))
+          materialColor: tensile))
       ..add(HeroType(
           title: 'Manual Rockwell Hardness Tester',
           subTitle: purposeRW,
@@ -78,7 +86,7 @@ class HeroType {
               'Device Needed: Rockwell machine.\n \nMaterial property can be tested: hardness ',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true',
-          materialColor: Colors.blueGrey[600]))
+          materialColor: hardness))
       ..add(HeroType(
           title: 'Automatic Micro-Hardness Tester',
           subTitle: purposeRW,
@@ -86,7 +94,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true',
           pageTo: AutomaticMicroHardnessMain(),
-          materialColor: Colors.blueGrey[600]))
+          materialColor: hardness))
       ..add(HeroType(
           title: 'Digital Rockwell Hardness Tester',
           subTitle: purposeRW,
@@ -94,7 +102,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
           pageTo: DigitalRWMain(),
-          materialColor: Colors.blueGrey[600]))
+          materialColor: hardness))
       ..add(HeroType(
           title: 'Manual MicroHardness tester',
           subTitle: purposeRW,
@@ -102,7 +110,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
           pageTo: ManualMicroHardness(),
-          materialColor: Colors.blueGrey[600]))
+          materialColor: hardness))
       ..add(HeroType(
           title: 'Keyence Microscope',
           subTitle: purpmicrosco,
@@ -111,7 +119,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true',
           pageTo: KeyenceMMain(),
-          materialColor: Colors.purpleAccent))
+          materialColor: microsco))
       ..add(HeroType(
           title: 'Nikon Microscope',
           subTitle: purpmicrosco,
@@ -119,7 +127,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true',
           pageTo: NikonMicro(),
-          materialColor: Colors.purpleAccent))
+          materialColor: microsco))
       ..add(HeroType(
           title: 'Silicon Carbide Furnace',
           subTitle: purpfurnace,
@@ -127,7 +135,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true',
           pageTo: SiCFurnace(),
-          materialColor: Colors.redAccent))
+          materialColor: furnace))
       ..add(HeroType(
           title: 'Blue Furnace',
           subTitle: purpfurnace,
@@ -136,7 +144,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true',
           pageTo: BlueFurnace(),
-          materialColor: Colors.redAccent))
+          materialColor: furnace))
       ..add(HeroType(
           title: 'Automatic Bulk Abrasive Cutter',
           subTitle: purpCutting,
@@ -145,7 +153,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true',
           pageTo: BulkAbrasive_Main(),
-          materialColor: Colors.greenAccent[400]))
+          materialColor: cutter))
       ..add(HeroType(
           title: 'Buehler Precision Cutter',
           subTitle: purpCutting,
@@ -154,7 +162,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true',
           pageTo: BuehlerCutterMain(),
-          materialColor: Colors.greenAccent[400]))
+          materialColor: cutter))
       ..add(HeroType(
           title: 'Precision cutter',
           subTitle: purpCutting,
@@ -163,7 +171,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true',
           pageTo: PcutterMain(),
-          materialColor: Colors.greenAccent[400]))
+          materialColor: cutter))
       ..add(HeroType(
           title: 'Mounting Press ECOPRESS 200',
           subTitle: purpoMountg,
@@ -172,7 +180,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true',
           pageTo: EcoPress(),
-          materialColor: Colors.grey[600]))
+          materialColor: mountP))
       ..add(HeroType(
           title: 'Mounting Press (Struers)',
           subTitle: purpoMountg,
@@ -180,7 +188,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true',
           pageTo: StruesMain(),
-          materialColor: Colors.grey[600]))
+          materialColor: mountP))
       ..add(HeroType(
           title: 'Mounting Press (METLAB)',
           subTitle: purpoMountg,
@@ -189,7 +197,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
           pageTo: METPress(),
-          materialColor: Colors.grey[600]))
+          materialColor: mountP))
       ..add(HeroType(
           title: 'Automatic Polisher',
           subTitle: purpPolishg,
@@ -197,7 +205,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true',
           pageTo: AutoPolisherMain(),
-          materialColor: Colors.lightBlueAccent))
+          materialColor: polish))
       ..add(HeroType(
           title: 'Buehler Manual Polisher',
           subTitle: purpPolishg,
@@ -205,7 +213,7 @@ class HeroType {
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
           pageTo: BuehlerPolisherMain(),
-          materialColor: Colors.lightBlueAccent))
+          materialColor: polish))
       ..add(HeroType(
           title: 'Buehler Auto-Polisher',
           subTitle: purpPolishg,

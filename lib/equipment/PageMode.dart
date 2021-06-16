@@ -145,7 +145,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     warnNote: widget.warnNote,
                     pageTo: widget.instruction)
                 : functionButtonMode(
-                    top: _screenH / 1.56,
+                    top: _screenH / 1.5,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnV: widget.warnVido,

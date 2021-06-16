@@ -79,7 +79,7 @@ class _equb_avaState extends State<equb_ava> {
                         child: Text(_heroType.fText,
                             style: TextStyle(
                               fontSize: _screenH / 48,
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ))))),
             Positioned(

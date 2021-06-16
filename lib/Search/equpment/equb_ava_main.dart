@@ -26,7 +26,13 @@ class _equb_mainState extends State<equb_main> {
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
-
+  Color hardness = Colors.blueGrey[100];
+  Color microsco = Colors.purple[100];
+  Color furnace = Colors.red[100];
+  Color cutter = Colors.greenAccent[100];
+  Color mountP = Colors.teal[100];
+  Color polish = Colors.lightBlue[100];
+  Color tensile = Colors.amber[100];
   @override
   void initState() {
     super.initState();
@@ -85,7 +91,7 @@ class _equb_mainState extends State<equb_main> {
             color: Colors.grey[600],
           ),
           ExpansionTile(
-            backgroundColor: Colors.amber[800].withOpacity(co),
+            backgroundColor: tensile,
             title: Text(
               "Tensile Machine",
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -107,7 +113,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-            backgroundColor: Colors.blueGrey[600].withOpacity(co),
+            backgroundColor: hardness,
             title: Text(
               "Hardness Tester",
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -139,7 +145,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-            backgroundColor: Colors.purpleAccent.withOpacity(co),
+            backgroundColor: microsco,
             title: Text(
               "Microscope",
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -161,7 +167,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-            backgroundColor: Colors.redAccent.withOpacity(co),
+            backgroundColor: furnace,
             title: Text(
               "Furnace",
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -183,7 +189,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-            backgroundColor: Colors.greenAccent[400].withOpacity(co),
+            backgroundColor: cutter,
             title: Text(
               "Cutter",
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -210,7 +216,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-              backgroundColor: Colors.grey[600].withOpacity(co),
+              backgroundColor: mountP,
               title: Text(
                 "Mounting Press",
                 style: TextStyle(color: Colors.black, fontSize: 15),
@@ -236,7 +242,7 @@ class _equb_mainState extends State<equb_main> {
             height: 5,
           ),
           ExpansionTile(
-              backgroundColor: Colors.lightBlueAccent.withOpacity(co),
+              backgroundColor: polish,
               title: Text(
                 "Polisher",
                 style: TextStyle(color: Colors.black, fontSize: 15),
