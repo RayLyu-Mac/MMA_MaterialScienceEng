@@ -21,16 +21,6 @@ class BulkAbrasive_Main extends StatefulWidget {
 }
 
 class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
-  double _screenWidth;
-  double _screenH;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   void initState() {
     super.initState();
