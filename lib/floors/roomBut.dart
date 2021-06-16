@@ -82,7 +82,7 @@ class roomButton extends StatelessWidget {
                                       Text(details,
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: detailsTiFontS ?? 15)),
+                                              fontSize: detailsTiFontS ?? 17)),
                                       pageTo != null
                                           ? fancyBut(
                                               pageTo: pageTo,
@@ -108,7 +108,7 @@ class roomButton extends StatelessWidget {
                           ? Icon(icon)
                           : ClayText(
                               name,
-                              size: fontsize ?? 22,
+                              size: fontsize ?? 26,
                               color: Colors.grey[500],
                             ),
                     )),
