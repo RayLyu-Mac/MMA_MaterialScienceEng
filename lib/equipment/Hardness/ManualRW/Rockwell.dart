@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
-import 'package:mma_mse/user_note.dart';
-import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/rockwell/manual/manualRWMain.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:mma_mse/equipment/PageMode.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class hardness_test extends StatefulWidget {
   hardness_test(
@@ -33,118 +30,16 @@ class _hardness_testState extends State<hardness_test> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("RockWell Hardness Test Machine"),
-        backgroundColor: Colors.black,
-      ),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned(
-                top: _screenH / 45,
-                left: _screenWidth / 2 + 2,
-                child: Text(
-                  'Introduction',
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                )),
-            Positioned(
-              top: _screenH / 16,
-              left: _screenWidth / 2 + 2,
-              child: Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 2.2, height: 280),
-                  child: Text(
-                    'A universal testing machine (UTM), also known as a universal tester,[1] materials testing machine or materials test frame, is used to test the tensile strength and compressive strength of materials. An earlier name for a tensile testing machine is a tensometer. The "universal" part of the name reflects that it can perform many standard tensile and compression tests on materials, components, and structures (in other words, that it is versatile).',
-                    style: TextStyle(
-                        fontSize: _screenH / 55, fontWeight: FontWeight.bold),
-                  )),
-            ),
-            Positioned(
-              top: _screenH / 30,
-              left: _screenWidth / 30 + 2,
-              child: GestureDetector(
-                child: Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 2.5, height: _screenH / 2),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true"),
-                          fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-              ),
-            ),
-            Positioned(
-                top: _screenH / 2.2,
-                left: _screenWidth / 1.25,
-                child: IconButton(
-                  tooltip: "Hardness Conversion",
-                  iconSize: _screenH / 17,
-                  icon: Icon(Icons.file_present),
-                  color: Colors.lightBlueAccent,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            duration: Duration(milliseconds: 700),
-                            child: hardnessData(),
-                            type: PageTransitionType.scale,
-                            alignment: Alignment.topCenter));
-                  },
-                )),
-            functionButtonMode(
-              top: _screenH / 1.56,
-              left: _screenWidth / 12,
-              buttonName: "Instruction",
-              pageTo: ManualRWInstr(),
-              warnV: "t-4WN785oxM",
-            ),
-            functionButtonMode(
-              top: _screenH / 1.8,
-              left: _screenWidth / 12,
-              buttonName: "Theory",
-              pageTo: hardness_test_bg(),
-            ),
-            functionButtonMode(
-              top: _screenH / 1.8,
-              left: _screenWidth / 2 + 16,
-              buttonName: "Result",
-              pageTo: hardness_test(),
-            ),
-            functionButtonMode(
-              top: _screenH / 1.56,
-              left: _screenWidth / 2 + 16,
-              buttonName: "Manager",
-              pageTo: EmailContent(
-                  locationOfEqup: widget.location != null
-                      ? widget.location
-                      : "Not Specificed",
-                  nameOfEqup: "Llyods Tensile Tester",
-                  emailTo: widget.emailTo != null
-                      ? widget.emailTo
-                      : "Please enter the email address!"),
-            ),
-            Positioned(
-                top: _screenH / 1.33,
-                left: _screenWidth / 1.3,
-                child: FloatingActionButton(
-                    backgroundColor: Colors.black,
-                    child: Icon(Icons.add),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => user_note(
-                                    loc: "ML Rock Well Machine",
-                                    themem_color: Colors.pink[100],
-                                  )));
-                    }))
-          ],
-        ),
-      ),
-    );
+    return EqubPageMode(
+        title: "Analog RockWell Tester",
+        warnVido: "t-4WN785oxM",
+        extraIcon: FontAwesomeIcons.fileCsv,
+        extraPage: hardnessData(),
+        toolTip: "Hardness Conversion Sheet",
+        instruction: ManualRWInstr(),
+        backC: Colors.blueGrey[50],
+        img:
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true",
+        intro: "Needed");
   }
 }
