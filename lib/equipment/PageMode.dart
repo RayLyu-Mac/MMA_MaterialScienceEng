@@ -9,6 +9,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:mma_mse/Search/extramenu.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
@@ -57,9 +58,35 @@ class _EqubPageModeState extends State<EqubPageMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         title: Text(widget.title),
         backgroundColor: Colors.black,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+                child: Column(
+              children: [
+                Text(
+                  widget.title,
+                  style: TextStyle(
+                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 1.5, height: _screenWidth / 4),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assest/logocolor.png"))),
+                )
+              ],
+            )),
+            floorMenu(),
+            extraMenu()
+          ],
+        ),
       ),
       body: SafeArea(
         child: Stack(
@@ -85,16 +112,20 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   )),
             ),
             Positioned(
-              top: _screenH / 30,
-              left: _screenWidth / 30 + 2,
+              top: _screenH / 45,
+              left: _screenWidth / 35,
               child: GestureDetector(
                 child: Container(
                     constraints: BoxConstraints.expand(
-                        width: _screenWidth / 2.5, height: _screenH / 2),
+                        width: _screenWidth / 2.3, height: _screenH / 1.9),
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        width: 6,
+                        color: Colors.grey[200],
+                      ),
                       image: DecorationImage(
                           image: NetworkImage(widget.img), fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(10),
                     )),
               ),
             ),

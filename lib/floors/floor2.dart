@@ -96,6 +96,7 @@ class _floor2State extends State<floor2> {
                   )
                 ],
               )),
+              floorMenu(),
               extraMenu()
             ],
           ),
