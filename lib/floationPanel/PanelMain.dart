@@ -1,3 +1,4 @@
+import 'package:mma_mse/button.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:floatingpanel/floatingpanel.dart';
 import 'package:flutter/material.dart';
@@ -38,10 +39,7 @@ class _floationPanelState extends State<floationPanel> {
         dockAnimCurve: Curves.easeOut, // Auto dock animation curve
         panelOpenOffset:
             20.0, // Offset from the edge of screen when panel is open
-        buttons: [
-          Icons.search,
-          Icons.qr_code_scanner,
-        ],
+        buttons: widget.button,
         onPressed: (numbers) {
           if (widget.buttonP[numbers] is Widget) {
             Navigator.push(

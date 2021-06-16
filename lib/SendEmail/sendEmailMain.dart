@@ -72,7 +72,8 @@ class _EmailContentState extends State<EmailContent> {
               left: _screenWidth / 15,
               child: Text(
                 "*Please make sure the error report is valid",
-                style: TextStyle(color: Colors.redAccent),
+                style:
+                    TextStyle(color: Colors.redAccent, fontSize: _screenH / 43),
               )),
           Positioned(
             top: _screenH / 15,
@@ -195,10 +196,13 @@ class _EmailContentState extends State<EmailContent> {
               top: _screenH / 1.7,
               left: _screenWidth / 15,
               child: Container(
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 1.15, height: _screenH / 6.5),
                 decoration: BoxDecoration(
-                    border: Border.all(width: 5, color: Colors.grey[200])),
+                    border: Border.all(width: 5, color: Colors.grey[300])),
                 child: Text(
                   "Call:\nEd McCaffery: Ext: 24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext: 21881",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.redAccent[700],
