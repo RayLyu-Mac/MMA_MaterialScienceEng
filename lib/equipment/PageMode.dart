@@ -19,9 +19,13 @@ class EqubPageMode extends StatefulWidget {
   final String warnVido;
   final Widget instruction;
   final Widget theory;
+  final Color backC;
+  final bool dash;
   EqubPageMode(
       {Key key,
       @required this.title,
+      @optionalTypeArgs this.dash,
+      @required this.backC,
       @optionalTypeArgs this.theory,
       @required this.instruction,
       @optionalTypeArgs this.warnNote,
@@ -58,7 +62,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[50],
+      backgroundColor: widget.backC,
       appBar: AppBar(
         title: Text(widget.title),
         backgroundColor: Colors.black,
@@ -131,7 +135,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
             ),
             widget.warnNote != null
                 ? functionButtonMode(
-                    top: _screenH / 1.56,
+                    top: _screenH / 1.5,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnNote: widget.warnNote,
@@ -143,24 +147,25 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     warnV: widget.warnVido,
                     pageTo: widget.instruction),
             functionButtonMode(
-              top: _screenH / 1.8,
+              top: _screenH / 1.7,
               left: _screenWidth / 12,
               buttonName: "Schedulling",
               url: _launchURL,
             ),
             widget.theory != null
                 ? functionButtonMode(
-                    top: _screenH / 1.8,
+                    top: _screenH / 1.7,
                     left: _screenWidth / 2 + 16,
-                    buttonName: "Theory",
+                    buttonName:
+                        widget.dash == null ? "Theory" : "Dash Board Button",
                     pageTo: widget.theory)
                 : functionButtonMode(
-                    top: _screenH / 1.8,
+                    top: _screenH / 1.7,
                     left: _screenWidth / 2 + 16,
                     buttonName: "Theory",
                     pageTo: workingInProg()),
             functionButtonMode(
-                top: _screenH / 1.56,
+                top: _screenH / 1.5,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(

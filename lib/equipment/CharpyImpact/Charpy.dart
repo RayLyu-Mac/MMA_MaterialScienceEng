@@ -34,6 +34,7 @@ class _charpy_testState extends State<charpy_test> {
         warnVido: "eS8gsOCzugY",
         instruction: RockWellinstruction(),
         theory: CharpyBackG(),
+        backC: Colors.blue[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true",
         intro:
