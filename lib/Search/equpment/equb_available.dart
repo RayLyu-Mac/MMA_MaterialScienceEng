@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'equb_ava_data.dart';
@@ -45,6 +44,7 @@ class _equb_avaState extends State<equb_ava> {
         title: Text('${_heroType.title}',
             style: TextStyle(
                 fontSize: _screenH / 35,
+                color: Colors.grey[800],
                 fontFamily: 'Raleway',
                 fontWeight: FontWeight.bold)),
       ),

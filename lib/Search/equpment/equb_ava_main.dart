@@ -30,7 +30,7 @@ class _equb_mainState extends State<equb_main> {
   Color microsco = Colors.purple[100];
   Color furnace = Colors.red[100];
   Color cutter = Colors.greenAccent[100];
-  Color mountP = Colors.teal[100];
+  Color mountP = Colors.indigo[100];
   Color polish = Colors.lightBlue[100];
   Color tensile = Colors.amber[100];
   @override
@@ -349,9 +349,10 @@ class _equb_mainState extends State<equb_main> {
                                 child: Text(
                                   '${_heroTypeList[index].title}',
                                   style: TextStyle(
-                                      fontSize: _screenWidth / 21,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
+                                    color: Colors.grey[800],
+                                    fontSize: _screenWidth / 21,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               )),
                         ),
@@ -367,6 +368,7 @@ class _equb_mainState extends State<equb_main> {
                                       _heroTypeList[index].subTitle,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
+                                          color: Colors.grey[800],
                                           fontSize: _screenWidth / 33,
                                           fontWeight: FontWeight.bold),
                                     )))),
