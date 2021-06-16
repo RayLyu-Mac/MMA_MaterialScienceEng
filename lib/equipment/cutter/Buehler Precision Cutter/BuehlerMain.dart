@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/user_note.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/Cutter/BuehlerCutter/BcutterMain.dart';
 import 'DashBorad.dart';
 import 'package:mma_mse/equipment/PageMode.dart';

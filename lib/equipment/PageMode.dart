@@ -21,9 +21,15 @@ class EqubPageMode extends StatefulWidget {
   final Widget theory;
   final Color backC;
   final bool dash;
+  final IconData extraIcon;
+  final Widget extraPage;
+  final String toolTip;
   EqubPageMode(
       {Key key,
       @required this.title,
+      @optionalTypeArgs this.toolTip,
+      @optionalTypeArgs this.extraIcon,
+      @optionalTypeArgs this.extraPage,
       @optionalTypeArgs this.dash,
       @required this.backC,
       @optionalTypeArgs this.theory,
@@ -118,20 +124,18 @@ class _EqubPageModeState extends State<EqubPageMode> {
             Positioned(
               top: _screenH / 45,
               left: _screenWidth / 35,
-              child: GestureDetector(
-                child: Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 2.3, height: _screenH / 1.9),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                        width: 6,
-                        color: Colors.grey[200],
-                      ),
-                      image: DecorationImage(
-                          image: NetworkImage(widget.img), fit: BoxFit.cover),
-                    )),
-              ),
+              child: Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 2.3, height: _screenH / 1.9),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(
+                      width: 6,
+                      color: Colors.grey[200],
+                    ),
+                    image: DecorationImage(
+                        image: NetworkImage(widget.img), fit: BoxFit.cover),
+                  )),
             ),
             widget.warnNote != null
                 ? functionButtonMode(
@@ -176,6 +180,24 @@ class _EqubPageModeState extends State<EqubPageMode> {
                       widget.location != null ? widget.location : "NUll",
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
+            Positioned(
+              top: _screenH / 2.2,
+              left: _screenWidth / 1.25,
+              child: widget.extraPage != null
+                  ? IconButton(
+                      tooltip: widget.toolTip,
+                      iconSize: _screenH / 20,
+                      icon: Icon(widget.extraIcon),
+                      color: Colors.redAccent,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                child: widget.extraPage,
+                                type: PageTransitionType.bottomToTop));
+                      })
+                  : Container(),
+            ),
             floationPanel(
                 button: [Icons.search, Icons.qr_code_scanner, Icons.note_add],
                 animationTime: 550,
