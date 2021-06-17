@@ -20,8 +20,10 @@ class roomButton extends StatelessWidget {
   final String detailTitle;
   final double detailsFontS;
   final double detailsTiFontS;
+  final IconData titleIcon;
   const roomButton(
       {@optionalTypeArgs this.left,
+      @optionalTypeArgs this.titleIcon,
       @optionalTypeArgs this.detailTitle,
       @optionalTypeArgs this.detailsFontS,
       @optionalTypeArgs this.detailsTiFontS,
@@ -50,7 +52,7 @@ class roomButton extends StatelessWidget {
                     ? Navigator.push(
                         context,
                         PageTransition(
-                            duration: const Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 550),
                             child: pageTo ?? workingInProg(),
                             type: PageTransitionType.leftToRight))
                     : showGeneralDialog(
@@ -100,17 +102,34 @@ class roomButton extends StatelessWidget {
                 height: length,
                 width: width,
                 child: ClayContainer(
-                    depth: elevation ?? 16,
+                    depth: elevation ?? (length / 2).round(),
                     parentColor: backC ?? Colors.blueGrey[100],
                     borderRadius: 4,
                     child: Center(
                       child: icon != null
                           ? Icon(icon)
-                          : ClayText(
-                              name,
-                              size: fontsize ?? 26,
-                              color: Colors.grey[500],
-                            ),
+                          : titleIcon != null
+                              ? Row(
+                                  children: [
+                                    SizedBox(
+                                      width: width / 6,
+                                    ),
+                                    ClayText(
+                                      name,
+                                      size: fontsize ?? 22,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(
+                                      width: width / 6,
+                                    ),
+                                    Icon(titleIcon),
+                                  ],
+                                )
+                              : ClayText(
+                                  name,
+                                  size: fontsize ?? 26,
+                                  color: Colors.grey,
+                                ),
                     )),
               ),
             ))
@@ -120,12 +139,12 @@ class roomButton extends StatelessWidget {
                   ? Navigator.push(
                       context,
                       PageTransition(
-                          duration: const Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 600),
                           child: pageTo ?? workingInProg(),
                           type: PageTransitionType.leftToRight))
                   : showGeneralDialog(
                       barrierColor: Colors.black.withOpacity(0.5),
-                      transitionDuration: Duration(milliseconds: 300),
+                      transitionDuration: Duration(milliseconds: 400),
                       barrierDismissible: true,
                       barrierLabel: '',
                       context: context,
@@ -178,11 +197,22 @@ class roomButton extends StatelessWidget {
                   child: Center(
                     child: icon != null
                         ? Icon(icon)
-                        : ClayText(
-                            name,
-                            size: fontsize ?? 22,
-                            color: Colors.grey[500],
-                          ),
+                        : titleIcon != null
+                            ? Row(
+                                children: [
+                                  Icon(titleIcon),
+                                  ClayText(
+                                    name,
+                                    size: fontsize ?? 22,
+                                    color: Colors.grey[600],
+                                  ),
+                                ],
+                              )
+                            : ClayText(
+                                name,
+                                size: fontsize ?? 22,
+                                color: Colors.grey[500],
+                              ),
                   )),
             ),
           );

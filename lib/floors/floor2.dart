@@ -8,7 +8,6 @@ import 'floor2/roomMain/239a.dart';
 import 'floor2/roomMain/242.dart';
 import 'floor2/roomMain/244.dart';
 import 'floor2/roomMain/245.dart';
-import 'floor2/roomMain/246.dart';
 import 'floor2/roomMain/246A.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
@@ -18,6 +17,7 @@ import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -207,6 +207,7 @@ class _floor2State extends State<floor2> {
                   length: _screenH / 12,
                   width: _screenWidth / 3,
                   pageTo: room240(),
+                  titleIcon: FontAwesomeIcons.microscope,
                   name: "240"),
           roomButton(
               left: _screenWidth / 10,
@@ -224,6 +225,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.3,
               length: _screenH / 12,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.briefcase,
               name: "238"),
           roomButton(
               left: _screenWidth / 5.5,
