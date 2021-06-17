@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'PressureU.dart';
 import 'thermalU.dart';
+import 'lengthU.dart';
+import 'volumeU.dart';
+import 'package:mma_mse/customTileScroll.dart';
 
 class UnitCOnverMain extends StatefulWidget {
   UnitCOnverMain({Key key}) : super(key: key);
@@ -34,10 +37,64 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
       backgroundColor: Colors.lightGreenAccent[100],
       appBar: AppBar(
         title: Text("Unit Conversion Tools"),
+        backgroundColor: Colors.black,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+                child: Column(
+              children: [
+                Text(
+                  "Unit Conversion Tool",
+                  style: TextStyle(
+                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 1.5, height: _screenWidth / 4),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assest/logocolor.png"))),
+                )
+              ],
+            )),
+            ScrollcustomListTile(
+                name: "Common unit check",
+                pageTo: 0,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Pressure unit conversion",
+                pageTo: 1,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Theramal unit conversion",
+                pageTo: 2,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Temperature unit conversion",
+                pageTo: 3,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Length unit conversion",
+                pageTo: 4,
+                fonts: 13,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Volumne unit conversion",
+                pageTo: 5,
+                fonts: 13,
+                controller: controller),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(
-            _screenWidth / 25, _screenH / 20, 5, _screenH / 20),
+            _screenWidth / 20, _screenH / 30, 5, _screenH / 20),
         controller: controller,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +135,15 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
             SizedBox(
               height: _screenH / 40,
             ),
-            thermalUC()
+            thermalUC(),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            LengthUC(),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            VolumeUC()
           ],
         ),
       ),

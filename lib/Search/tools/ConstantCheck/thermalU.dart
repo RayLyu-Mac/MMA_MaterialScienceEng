@@ -139,13 +139,20 @@ class _thermalUCState extends State<thermalUC> {
               Positioned(
                   top: _screenH / 2.8,
                   left: _screenWidth / 20,
-                  child: Text(
-                    "The converted value is:" +
-                        (finalV != null
-                            ? finalV.toStringAsExponential(3)
-                            : " --"),
-                    style: TextStyle(
-                        fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                  child: Container(
+                    width: _screenWidth / 1.3,
+                    child: Text(
+                      "The converted value is:" +
+                          (finalV != null
+                              ? "\n" +
+                                  finalV.toStringAsExponential(3) +
+                                  "  " +
+                                  dropdownValueb
+                              : " --"),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                    ),
                   ))
             ],
           ),
@@ -258,13 +265,20 @@ class _thermalUCState extends State<thermalUC> {
               Positioned(
                   top: _screenH / 2.8,
                   left: _screenWidth / 20,
-                  child: Text(
-                    "The converted value is:" +
-                        (finalVt != null
-                            ? finalVt.toStringAsExponential(3)
-                            : " --"),
-                    style: TextStyle(
-                        fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                  child: Container(
+                    width: _screenWidth / 1.3,
+                    child: Text(
+                      "The converted value is:" +
+                          (finalVt != null
+                              ? "\n" +
+                                  finalVt.toStringAsExponential(3) +
+                                  "  " +
+                                  dropdownValuebt
+                              : " --"),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                    ),
                   ))
             ],
           ),
