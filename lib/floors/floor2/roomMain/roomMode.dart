@@ -74,25 +74,28 @@ class _roomModeState extends State<roomMode> {
           Positioned(
               top: _screenH / 30,
               left: _screenWidth / 2,
-              child: Column(
-                children: [
-                  Text(
-                    widget.roomTi,
-                    style: TextStyle(
-                        fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: _screenH / 30,
-                  ),
-                  Text(
-                    widget.roomCont,
-                    style: TextStyle(
-                        fontSize: _screenH / 43, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: _screenH / 20,
-                  ),
-                ],
+              child: Container(
+                width: _screenWidth / 2.1,
+                child: Column(
+                  children: [
+                    Text(
+                      widget.roomTi,
+                      style: TextStyle(
+                          fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: _screenH / 30,
+                    ),
+                    Text(
+                      widget.roomCont,
+                      style: TextStyle(
+                          fontSize: _screenH / 43, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: _screenH / 20,
+                    ),
+                  ],
+                ),
               )),
           functionButtonMode(
               top: _screenH / 1.7,

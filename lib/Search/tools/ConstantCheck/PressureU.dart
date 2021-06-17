@@ -44,7 +44,7 @@ class _unitCState extends State<unitC> {
         children: [
           Positioned(
               top: _screenH / 35,
-              left: _screenWidth / 9,
+              left: _screenWidth / 15,
               child: Text("Pressure unit conversion",
                   style: TextStyle(
                     fontSize: _screenH / 30,
@@ -120,36 +120,47 @@ class _unitCState extends State<unitC> {
               left: _screenWidth / 20,
               child: RaisedButton.icon(
                   onPressed: () {
-                    double valuebef = double.parse(before.text);
-                    if (dropdownValuea == "atm") {
-                      valuea = valuebef * 101325 / 1000;
-                    } else if (dropdownValuea == "bar") {
-                      valuea = valuebef * 100;
-                    } else if (dropdownValuea == "Psi") {
-                      valuea = valuebef * 6894.76 / 1000;
-                    } else {
-                      valuea = valuebef;
-                    }
-                    if (dropdownValueb == "atm") {
-                      finalV = valuea / 101325 * 1000;
-                    } else if (dropdownValueb == "bar") {
-                      finalV = valuea / 100;
-                    } else if (dropdownValueb == "Psi") {
-                      finalV = valuea / 6894.76 * 1000;
-                    } else {
-                      finalV = valuea;
-                    }
+                    setState(() {
+                      double valuebef = double.parse(before.text);
+                      if (dropdownValuea == "atm") {
+                        valuea = valuebef * 101325 / 1000;
+                      } else if (dropdownValuea == "bar") {
+                        valuea = valuebef * 100;
+                      } else if (dropdownValuea == "Psi") {
+                        valuea = valuebef * 6894.76 / 1000;
+                      } else {
+                        valuea = valuebef;
+                      }
+                      if (dropdownValueb == "atm") {
+                        finalV = valuea / 101325 * 1000;
+                      } else if (dropdownValueb == "bar") {
+                        finalV = valuea / 100;
+                      } else if (dropdownValueb == "Psi") {
+                        finalV = valuea / 6894.76 * 1000;
+                      } else {
+                        finalV = valuea;
+                      }
+                    });
                   },
                   icon: Icon(Icons.explicit_rounded),
                   label: Text("Convert"))),
           Positioned(
               top: _screenH / 2.8,
               left: _screenWidth / 20,
-              child: Text(
-                "The converted value is:" +
-                    (finalV != null ? finalV.toStringAsExponential(3) : " --"),
-                style: TextStyle(
-                    fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+              child: Container(
+                width: _screenWidth / 1.3,
+                child: Text(
+                  "The converted value is:" +
+                      (finalV != null
+                          ? "\n" +
+                              finalV.toStringAsExponential(3) +
+                              "  " +
+                              dropdownValueb
+                          : " --"),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                ),
               ))
         ],
       ),

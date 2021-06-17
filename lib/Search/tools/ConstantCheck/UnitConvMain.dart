@@ -102,7 +102,7 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
           children: [
             Container(
               constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.1, height: _screenH / 2),
+                  width: _screenWidth / 1.1, height: _screenH / 1.7),
               child: Card(
                 color: Colors.white.withOpacity(0.7),
                 child: Column(

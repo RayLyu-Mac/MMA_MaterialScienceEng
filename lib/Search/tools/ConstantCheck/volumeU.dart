@@ -44,7 +44,7 @@ class _VolumeUCState extends State<VolumeUC> {
         children: [
           Positioned(
               top: _screenH / 35,
-              left: _screenWidth / 9,
+              left: _screenWidth / 15,
               child: Text("Volume unit conversion",
                   style: TextStyle(
                     fontSize: _screenH / 30,
@@ -126,34 +126,36 @@ class _VolumeUCState extends State<VolumeUC> {
               left: _screenWidth / 20,
               child: RaisedButton.icon(
                   onPressed: () {
-                    double valuebef = double.parse(before.text);
-                    if (dropdownValuea == "cm^3") {
-                      valuea = valuebef / 1000;
-                    } else if (dropdownValuea == "m^3") {
-                      valuea = valuebef * 1000;
-                    } else if (dropdownValuea == "oz") {
-                      valuea = valuebef * 0.02957;
-                    } else if (dropdownValuea == "pt") {
-                      valuea = valuebef * 0.47318;
-                    } else if (dropdownValuea == "gal (American)") {
-                      valuea = valuebef * 3.78541178;
-                    } else {
-                      valuea = valuebef;
-                    }
+                    setState(() {
+                      double valuebef = double.parse(before.text);
+                      if (dropdownValuea == "cm^3") {
+                        valuea = valuebef / 1000;
+                      } else if (dropdownValuea == "m^3") {
+                        valuea = valuebef * 1000;
+                      } else if (dropdownValuea == "oz") {
+                        valuea = valuebef * 0.02957;
+                      } else if (dropdownValuea == "pt") {
+                        valuea = valuebef * 0.47318;
+                      } else if (dropdownValuea == "gal (American)") {
+                        valuea = valuebef * 3.78541178;
+                      } else {
+                        valuea = valuebef;
+                      }
 
-                    if (dropdownValueb == "cm^3") {
-                      finalV = valuea * 1000;
-                    } else if (dropdownValueb == "m^3") {
-                      finalV = valuea / 1000;
-                    } else if (dropdownValueb == "oz") {
-                      finalV = valuea / 0.02957;
-                    } else if (dropdownValueb == "pt") {
-                      finalV = valuea / 0.47318;
-                    } else if (dropdownValueb == "gal (American)") {
-                      finalV = valuea / 3.78541178;
-                    } else {
-                      finalV = valuea;
-                    }
+                      if (dropdownValueb == "cm^3") {
+                        finalV = valuea * 1000;
+                      } else if (dropdownValueb == "m^3") {
+                        finalV = valuea / 1000;
+                      } else if (dropdownValueb == "oz") {
+                        finalV = valuea / 0.02957;
+                      } else if (dropdownValueb == "pt") {
+                        finalV = valuea / 0.47318;
+                      } else if (dropdownValueb == "gal (American)") {
+                        finalV = valuea / 3.78541178;
+                      } else {
+                        finalV = valuea;
+                      }
+                    });
                   },
                   icon: Icon(Icons.explicit_rounded),
                   label: Text("Convert"))),

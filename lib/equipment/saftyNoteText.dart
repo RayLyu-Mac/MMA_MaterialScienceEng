@@ -51,7 +51,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                 backgroundColor: Colors.redAccent[100].withOpacity(0.8),
                 elevation: 5,
                 title: Text(
-                  "Before Start",
+                  "Before Enter",
                   style: TextStyle(fontSize: _screenH / 27),
                 ),
                 content: Column(

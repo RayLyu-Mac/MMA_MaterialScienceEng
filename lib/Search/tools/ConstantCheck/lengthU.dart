@@ -44,7 +44,7 @@ class _LengthUCCState extends State<LengthUC> {
         children: [
           Positioned(
               top: _screenH / 35,
-              left: _screenWidth / 9,
+              left: _screenWidth / 15,
               child: Text("Length unit conversion",
                   style: TextStyle(
                     fontSize: _screenH / 30,
@@ -120,38 +120,40 @@ class _LengthUCCState extends State<LengthUC> {
               left: _screenWidth / 20,
               child: RaisedButton.icon(
                   onPressed: () {
-                    double valuebef = double.parse(before.text);
-                    if (dropdownValuea == "mm") {
-                      valuea = valuebef / 1000;
-                    } else if (dropdownValuea == "km") {
-                      valuea = valuebef * 1000;
-                    } else if (dropdownValuea == "in") {
-                      valuea = valuebef / 39.37;
-                    } else if (dropdownValuea == "ft") {
-                      valuea = valuebef * 0.3048;
-                    } else if (dropdownValuea == "yd") {
-                      valuea = valuebef * 0.9144;
-                    } else if (dropdownValuea == "mile") {
-                      valuea = valuebef * 1609.34;
-                    } else {
-                      valuea = valuebef;
-                    }
+                    setState(() {
+                      double valuebef = double.parse(before.text);
+                      if (dropdownValuea == "mm") {
+                        valuea = valuebef / 1000;
+                      } else if (dropdownValuea == "km") {
+                        valuea = valuebef * 1000;
+                      } else if (dropdownValuea == "in") {
+                        valuea = valuebef / 39.37;
+                      } else if (dropdownValuea == "ft") {
+                        valuea = valuebef * 0.3048;
+                      } else if (dropdownValuea == "yd") {
+                        valuea = valuebef * 0.9144;
+                      } else if (dropdownValuea == "mile") {
+                        valuea = valuebef * 1609.34;
+                      } else {
+                        valuea = valuebef;
+                      }
 
-                    if (dropdownValueb == "mm") {
-                      finalV = valuea * 1000;
-                    } else if (dropdownValueb == "km") {
-                      finalV = valuea / 1000;
-                    } else if (dropdownValueb == "in") {
-                      finalV = valuea * 39.37;
-                    } else if (dropdownValueb == "ft") {
-                      finalV = valuea / 0.3048;
-                    } else if (dropdownValueb == "yd") {
-                      finalV = valuea / 0.9144;
-                    } else if (dropdownValueb == "mile") {
-                      finalV = valuea / 1609.34;
-                    } else {
-                      finalV = valuea;
-                    }
+                      if (dropdownValueb == "mm") {
+                        finalV = valuea * 1000;
+                      } else if (dropdownValueb == "km") {
+                        finalV = valuea / 1000;
+                      } else if (dropdownValueb == "in") {
+                        finalV = valuea * 39.37;
+                      } else if (dropdownValueb == "ft") {
+                        finalV = valuea / 0.3048;
+                      } else if (dropdownValueb == "yd") {
+                        finalV = valuea / 0.9144;
+                      } else if (dropdownValueb == "mile") {
+                        finalV = valuea / 1609.34;
+                      } else {
+                        finalV = valuea;
+                      }
+                    });
                   },
                   icon: Icon(Icons.explicit_rounded),
                   label: Text("Convert"))),

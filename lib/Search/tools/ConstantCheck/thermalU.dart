@@ -125,17 +125,19 @@ class _thermalUCState extends State<thermalUC> {
                   left: _screenWidth / 20,
                   child: RaisedButton.icon(
                       onPressed: () {
-                        double valuebef = double.parse(before.text);
-                        if (dropdownValuea == "cal") {
-                          valuea = valuebef * 0.239005736;
-                        } else {
-                          valuea = valuebef;
-                        }
-                        if (dropdownValueb == "cal") {
-                          finalV = valuea / 0.239005736;
-                        } else {
-                          finalV = valuea;
-                        }
+                        setState(() {
+                          double valuebef = double.parse(before.text);
+                          if (dropdownValuea == "cal") {
+                            valuea = valuebef * 0.239005736;
+                          } else {
+                            valuea = valuebef;
+                          }
+                          if (dropdownValueb == "cal") {
+                            finalV = valuea / 0.239005736;
+                          } else {
+                            finalV = valuea;
+                          }
+                        });
                       },
                       icon: Icon(Icons.explicit_rounded),
                       label: Text("Convert"))),
@@ -174,8 +176,8 @@ class _thermalUCState extends State<thermalUC> {
             children: [
               Positioned(
                   top: _screenH / 35,
-                  left: _screenWidth / 9,
-                  child: Text("Temperature unit conversion",
+                  left: _screenWidth / 15,
+                  child: Text("Temp unit conversion",
                       style: TextStyle(
                         fontSize: _screenH / 30,
                         fontWeight: FontWeight.bold,
@@ -250,21 +252,23 @@ class _thermalUCState extends State<thermalUC> {
                   left: _screenWidth / 20,
                   child: RaisedButton.icon(
                       onPressed: () {
-                        double valuebef = double.parse(after.text);
-                        if (dropdownValueat == "Kelvin") {
-                          valuea = valuebef - 273.15;
-                        } else if (dropdownValueat == "Fahrenheit") {
-                          valuea = (valuebef - 32) / 1.8;
-                        } else {
-                          valuea = valuebef;
-                        }
-                        if (dropdownValuebt == "Kelvin") {
-                          finalVt = valuea + 273.15;
-                        } else if (dropdownValueat == "Fahrenheit") {
-                          finalVt = valuea * 1.8 + 32;
-                        } else {
-                          finalVt = valuea;
-                        }
+                        setState(() {
+                          double valuebef = double.parse(after.text);
+                          if (dropdownValueat == "Kelvin") {
+                            valuea = valuebef - 273.15;
+                          } else if (dropdownValueat == "Fahrenheit") {
+                            valuea = (valuebef - 32) / 1.8;
+                          } else {
+                            valuea = valuebef;
+                          }
+                          if (dropdownValuebt == "Kelvin") {
+                            finalVt = valuea + 273.15;
+                          } else if (dropdownValueat == "Fahrenheit") {
+                            finalVt = valuea * 1.8 + 32;
+                          } else {
+                            finalVt = valuea;
+                          }
+                        });
                       },
                       icon: Icon(Icons.explicit_rounded),
                       label: Text("Convert"))),
