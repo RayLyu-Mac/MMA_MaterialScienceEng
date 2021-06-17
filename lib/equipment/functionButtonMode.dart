@@ -85,6 +85,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
                 padding: EdgeInsets.all(6),
                 child: Text(
                   widget.buttonName,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: widget.fontSize != null
                           ? widget.fontSize
@@ -92,7 +93,8 @@ class _functionButtonModeState extends State<functionButtonMode> {
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.black, width: 4)),
               ),
             ),

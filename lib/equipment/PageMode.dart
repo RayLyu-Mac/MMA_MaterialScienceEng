@@ -10,6 +10,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/extramenu.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
@@ -70,7 +71,19 @@ class _EqubPageModeState extends State<EqubPageMode> {
     return Scaffold(
       backgroundColor: widget.backC,
       appBar: AppBar(
-        title: Text(widget.title),
+        toolbarHeight: _screenH / 10,
+        title: TextLiquidFill(
+          text: widget.title,
+          loadDuration: Duration(milliseconds: 1500),
+          waveDuration: Duration(
+            milliseconds: 850,
+          ),
+          waveColor: widget.backC,
+          textStyle: TextStyle(
+            fontSize: _screenH / 27,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         backgroundColor: Colors.black,
       ),
       drawer: Drawer(

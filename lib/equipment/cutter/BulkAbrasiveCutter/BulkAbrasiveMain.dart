@@ -33,7 +33,7 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
-      title: "Bulk Abrasive Cutter",
+      title: "Auto-Bulk Abrasive Cutter",
       backC: Colors.green[50],
       instruction: BulkAbraCutterInstru(),
       dash: true,

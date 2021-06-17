@@ -20,7 +20,7 @@ class _tensile_testState extends State<tensile_test> {
         instruction: utm_instruction(),
         backC: Colors.amber[50],
         img:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true",
+            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true",
         intro:
             "A universal testing machine (UTM), also known as a universal tester,[1] materials testing machine or materials test frame, is used to test the tensile strength and compressive strength of materials. An earlier name for a tensile testing machine is a tensometer. The universal part of the name reflects that it can perform many standard tensile and compression tests on materials, components, and structures (in other words, that it is versatile).");
   }

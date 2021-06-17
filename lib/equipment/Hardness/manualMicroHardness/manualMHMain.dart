@@ -21,7 +21,7 @@ class _ManualMicroHardnessState extends State<ManualMicroHardness> {
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
-        title: "Manual Micro-Hardness Tester",
+        title: "Manual MicroHardness Test",
         warnVido: "t-4WN785oxM",
         extraIcon: FontAwesomeIcons.fileCsv,
         extraPage: hardnessData(),

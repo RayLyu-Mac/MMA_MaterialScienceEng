@@ -17,7 +17,7 @@ class _AutomaticMicroHardnessMainState
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
-        title: "Automatic-Micro-Hardness Tester",
+        title: "Auto MicroHardness Tester",
         warnNote:
             "•Ask Technical Staff for Holder \n•Ensure the Magnification is at 100X\n•Damage will occur to the indenter if the indenter comes in contact with holder\n•Cut the sample slowly\n•Ensure the sample is in focus before move to 400X",
         extraIcon: FontAwesomeIcons.fileCsv,
