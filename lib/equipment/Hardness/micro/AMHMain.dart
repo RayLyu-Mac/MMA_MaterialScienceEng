@@ -27,6 +27,7 @@ class _AutomaticMicroHardnessMainState
         backC: Colors.blueGrey[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true",
-        intro: "Needed");
+        intro:
+            "An indent is made on the surface of the material to measure the material's hardness. The sample has to be polished prior to experiement. \n \nFor Auto Tester: It can be programmed to run multi indents and measure these indents");
   }
 }

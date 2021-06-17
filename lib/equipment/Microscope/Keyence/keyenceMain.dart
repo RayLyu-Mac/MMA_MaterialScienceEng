@@ -21,6 +21,6 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
         backC: Colors.purple[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true",
-        intro: "Needed");
+        intro: "Both Keyence and Nikon Microscope perform same function");
   }
 }

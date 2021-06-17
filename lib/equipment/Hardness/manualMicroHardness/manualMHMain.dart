@@ -30,6 +30,7 @@ class _ManualMicroHardnessState extends State<ManualMicroHardness> {
         backC: Colors.blueGrey[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true",
-        intro: "Needed");
+        intro:
+            "An indent is made on the surface of the material to measure the material's hardness. The sample has to be polished prior to experiement.\n\nFor Manual tester: each indent is done manually and either the software measures or the user measures the indent");
   }
 }

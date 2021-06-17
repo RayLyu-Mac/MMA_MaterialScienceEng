@@ -116,7 +116,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
           children: [
             Positioned(
                 top: _screenH / 45,
-                left: _screenWidth / 2 + 2,
+                left: _screenWidth / 1.9,
                 child: Text(
                   'Introduction',
                   style: TextStyle(
@@ -124,10 +124,10 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 )),
             Positioned(
               top: _screenH / 16,
-              left: _screenWidth / 2 + 2,
+              left: _screenWidth / 1.95,
               child: Container(
                   constraints: BoxConstraints.expand(
-                      width: _screenWidth / 2.2, height: 280),
+                      width: _screenWidth / 2.2, height: _screenH / 1.85),
                   child: Text(
                     widget.intro,
                     style: TextStyle(
@@ -135,13 +135,13 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   )),
             ),
             Positioned(
-              top: _screenH / 45,
-              left: _screenWidth / 35,
+              top: _screenH / 55,
+              left: _screenWidth / 55,
               child: Container(
                   constraints: BoxConstraints.expand(
-                      width: _screenWidth / 2.3, height: _screenH / 1.9),
+                      width: _screenWidth / 2.1, height: _screenH / 1.85),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       width: 6,
                       color: Colors.grey[200],
@@ -152,37 +152,37 @@ class _EqubPageModeState extends State<EqubPageMode> {
             ),
             widget.warnNote != null
                 ? functionButtonMode(
-                    top: _screenH / 1.5,
+                    top: _screenH / 1.4,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnNote: widget.warnNote,
                     pageTo: widget.instruction)
                 : functionButtonMode(
-                    top: _screenH / 1.5,
+                    top: _screenH / 1.4,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnV: widget.warnVido,
                     pageTo: widget.instruction),
             functionButtonMode(
-              top: _screenH / 1.7,
+              top: _screenH / 1.6,
               left: _screenWidth / 12,
               buttonName: "Schedulling",
               url: _launchURL,
             ),
             widget.theory != null
                 ? functionButtonMode(
-                    top: _screenH / 1.7,
+                    top: _screenH / 1.6,
                     left: _screenWidth / 2 + 16,
                     buttonName:
                         widget.dash == null ? "Theory" : "Dash Board Button",
                     pageTo: widget.theory)
                 : functionButtonMode(
-                    top: _screenH / 1.7,
+                    top: _screenH / 1.6,
                     left: _screenWidth / 2 + 16,
                     buttonName: "Theory",
                     pageTo: workingInProg()),
             functionButtonMode(
-                top: _screenH / 1.5,
+                top: _screenH / 1.4,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(
@@ -194,12 +194,12 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
             Positioned(
-              top: _screenH / 2.2,
-              left: _screenWidth / 1.25,
+              top: _screenH / 2.1,
+              left: _screenWidth / 1.2,
               child: widget.extraPage != null
                   ? IconButton(
                       tooltip: widget.toolTip,
-                      iconSize: _screenH / 20,
+                      iconSize: _screenH / 17,
                       icon: Icon(widget.extraIcon),
                       color: Colors.redAccent,
                       onPressed: () {

@@ -28,6 +28,6 @@ class _LlyoldTensileTesterState extends State<LlyoldTensileTester> {
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true",
         intro:
-            "'Used to measure the relative toughness of a material, more specifically, the energy absorbed by a standard notched specimen while breaking under an impact load. Has been used as an economical quality control method to determine the notch sensitivity. The standard size for specimen: 55 mm *10 mm* 10mm, having a notch machined across one of the larger dimensions.'");
+            "A universal testing machine (UTM), also known as a universal tester,[1] materials testing machine or materials test frame, is used to test the tensile strength and compressive strength of materials. An earlier name for a tensile testing machine is a tensometer. The universal part of the name reflects that it can perform many standard tensile and compression tests on materials, components, and structures (in other words, that it is versatile).\n \nThere are three UTM in MSE: Which as load capacity of 50kN/10kN/30kN(Lloyds Tensile Tester) Choose appropriate load capacity based on the material and the size");
   }
 }

@@ -26,6 +26,6 @@ class _NikonMicroState extends State<NikonMicro> {
         backC: Colors.purple[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true",
-        intro: "Needed");
+        intro: "Both Keyence and Nikon Microscope perform same function");
   }
 }

@@ -22,6 +22,6 @@ class _tensile_testState extends State<tensile_test> {
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true",
         intro:
-            "A universal testing machine (UTM), also known as a universal tester,[1] materials testing machine or materials test frame, is used to test the tensile strength and compressive strength of materials. An earlier name for a tensile testing machine is a tensometer. The universal part of the name reflects that it can perform many standard tensile and compression tests on materials, components, and structures (in other words, that it is versatile).");
+            "A universal testing machine (UTM), also known as a universal tester,[1] materials testing machine or materials test frame, is used to test the tensile strength and compressive strength of materials. An earlier name for a tensile testing machine is a tensometer. The universal part of the name reflects that it can perform many standard tensile and compression tests on materials, components, and structures (in other words, that it is versatile).\n \nThere are three UTM in MSE: Which as load capacity of 50kN/10kN/30kN(Lloyds Tensile Tester) Choose appropriate load capacity based on the material and the size");
   }
 }

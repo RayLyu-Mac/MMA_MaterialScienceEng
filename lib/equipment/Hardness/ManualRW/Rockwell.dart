@@ -30,6 +30,7 @@ class _hardness_testState extends State<hardness_test> {
         backC: Colors.blueGrey[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true",
-        intro: "Needed");
+        intro:
+            "The machine measures the ability of the material to resist peneration, the sample can be in any reasonable size. \nFor Analog machine you need to read number from a gauge and convert it to kPsi using icon button below");
   }
 }

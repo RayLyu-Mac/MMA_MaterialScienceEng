@@ -33,7 +33,8 @@ class _BlueFurnaceState extends State<BlueFurnace> {
           "•Make sure the furnace is properly grounded and no loose wires are connected to furnace\n•Extra cautios need to be taken since material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occues leave the room and contact technicians",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "SiC Furnace has the maximum temp of 1450 C for Blur furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
       theory: PhaseDiag(),
     );
   }
