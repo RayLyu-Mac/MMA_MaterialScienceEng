@@ -66,40 +66,6 @@ class _floor1State extends State<floor1> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer _floor1sidemenu() => Drawer(
-          child: ListView(children: <Widget>[
-            DrawerHeader(
-                child: Text(
-              'JHE 1st Floor',
-              style: TextStyle(fontSize: _screenH / 30),
-            )),
-            ExpansionTile(title: Text("Mechanical Lab"), children: [
-              floor1customListTile(
-                name: "UTM Machine",
-                pageTo: mech_lab(),
-                fonts: _screenH / 45,
-              ),
-              floor1customListTile(
-                name: "Rockwell",
-                pageTo: mech_lab(),
-                fonts: _screenH / 45,
-              ),
-            ]),
-            ExpansionTile(title: Text("Thermo Lab"), children: [
-              floor1customListTile(
-                name: "UTM Machine",
-                pageTo: mech_lab(),
-                fonts: _screenH / 45,
-              ),
-              floor1customListTile(
-                name: "Rockwell",
-                pageTo: mech_lab(),
-                fonts: _screenH / 45,
-              ),
-            ]),
-            extraMenu()
-          ]),
-        );
     return Scaffold(
         appBar: AppBar(
           actions: [
@@ -120,11 +86,30 @@ class _floor1State extends State<floor1> {
                   fontSize: 30,
                   fontWeight: FontWeight.w700)),
         ),
-        drawer: Theme(
-          data: ThemeData(
-            canvasColor: Colors.white.withOpacity(0.8),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  child: Column(
+                children: [
+                  Text(
+                    "JHE Floor I",
+                    style: TextStyle(
+                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.5, height: _screenWidth / 4),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assest/logocolor.png"))),
+                  )
+                ],
+              )),
+              floorMenu(),
+              extraMenu()
+            ],
           ),
-          child: Container(width: 220, child: _floor1sidemenu()),
         ),
         body: Stack(
           children: [

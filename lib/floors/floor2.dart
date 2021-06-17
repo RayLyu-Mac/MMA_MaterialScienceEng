@@ -76,31 +76,6 @@ class _floor2State extends State<floor2> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer floor2D() => Drawer(
-          child: ListView(
-            children: [
-              DrawerHeader(
-                  child: Column(
-                children: [
-                  Text(
-                    "JHE Floor II",
-                    style: TextStyle(
-                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                  ),
-                  Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.5, height: _screenWidth / 4),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assest/logocolor.png"))),
-                  )
-                ],
-              )),
-              floorMenu(),
-              extraMenu()
-            ],
-          ),
-        );
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
@@ -122,7 +97,31 @@ class _floor2State extends State<floor2> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: floor2D(),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+                child: Column(
+              children: [
+                Text(
+                  "JHE Floor II",
+                  style: TextStyle(
+                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  constraints: BoxConstraints.expand(
+                      width: _screenWidth / 1.5, height: _screenWidth / 4),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assest/logocolor.png"))),
+                )
+              ],
+            )),
+            floorMenu(),
+            extraMenu()
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           widget.eye || saftyI > 0
