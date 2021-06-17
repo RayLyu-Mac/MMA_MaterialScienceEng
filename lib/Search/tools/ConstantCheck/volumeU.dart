@@ -36,7 +36,10 @@ class _VolumeUCState extends State<VolumeUC> {
     return Container(
       height: _screenH / 2,
       width: _screenWidth / 1.15,
-      decoration: BoxDecoration(color: Colors.white.withOpacity(0.7)),
+      decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.7),
+          border: Border.all(width: 5, color: Colors.grey[100]),
+          borderRadius: BorderRadius.circular(15)),
       child: Stack(
         children: [
           Positioned(
