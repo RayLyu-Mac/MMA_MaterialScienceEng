@@ -144,7 +144,7 @@ class _unitCState extends State<unitC> {
               left: _screenWidth / 20,
               child: Text(
                 "The converted value is:" +
-                    (finalV != null ? finalV.toString() : " --"),
+                    (finalV != null ? finalV.toStringAsExponential(3) : " --"),
                 style: TextStyle(
                     fontSize: _screenH / 35, fontWeight: FontWeight.bold),
               ))

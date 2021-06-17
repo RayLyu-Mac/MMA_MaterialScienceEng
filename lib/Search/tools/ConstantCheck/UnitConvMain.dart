@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PressureU.dart';
+import 'thermalU.dart';
 
 class UnitCOnverMain extends StatefulWidget {
   UnitCOnverMain({Key key}) : super(key: key);
@@ -73,7 +74,11 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
             SizedBox(
               height: _screenH / 40,
             ),
-            unitC()
+            unitC(),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            thermalUC()
           ],
         ),
       ),
