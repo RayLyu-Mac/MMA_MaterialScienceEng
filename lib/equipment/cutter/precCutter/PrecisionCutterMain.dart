@@ -42,7 +42,8 @@ class _PcutterMainState extends State<PcutterMain> {
       warnVido: "gPepaJjjSRg",
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "The precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
       theory: PrecisonCutterDashB(),
     );
   }

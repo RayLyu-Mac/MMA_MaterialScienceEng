@@ -44,7 +44,8 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
           "•Ensure the sample is securely fastened \n•Cutting wheel is completely stoped before opening the canopy\n•Do not have the blade the touching the sample prior engaging the motor\n•Cut the sample slowly\n•Sample size should be smaller than 2 inches",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "The bulk abrasive cutter are used for big sample sectioning, if you are looking for small and delicated cutting please use precision cutter.",
       theory: automaticModeInterFaceButton(),
     );
   }

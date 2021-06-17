@@ -27,7 +27,8 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
           "When using the Precision Cutter although there is a safety shield; safety glasses are required.\nPlease be familiar with the parameter you are going to set",
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "The Buehler precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
       theory: BueDashBoard(),
     );
   }
