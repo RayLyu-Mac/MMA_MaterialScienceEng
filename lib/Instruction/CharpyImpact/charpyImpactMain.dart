@@ -72,44 +72,41 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
             controller: controller,
             itemCount: _instructionList.length,
             itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                child: Card(
-                  color: _instructionList[index].materialcolor,
-                  margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0)),
-                  clipBehavior: Clip.antiAlias,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                          top: 265,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].title,
-                            style: TextStyle(
-                                fontSize: _screenH / 47,
-                                fontWeight: FontWeight.bold),
-                          )),
-                      Positioned(
-                          top: 280,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].subtitle,
-                            style: TextStyle(fontSize: _screenH / 58),
-                          )),
-                      Positioned(
-                          top: 0,
-                          child: Container(
-                            height: 260,
-                            child: YoutubePlayer(
-                              controller:
-                                  _instructionList[index].videoController,
-                              liveUIColor: Colors.amber,
-                            ),
-                          ))
-                    ],
-                  ),
+              return Card(
+                color: _instructionList[index].materialcolor,
+                margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0)),
+                clipBehavior: Clip.antiAlias,
+                child: Stack(
+                  children: [
+                    Positioned(
+                        top: 265,
+                        left: 5,
+                        child: Text(
+                          _instructionList[index].title,
+                          style: TextStyle(
+                              fontSize: _screenH / 47,
+                              fontWeight: FontWeight.bold),
+                        )),
+                    Positioned(
+                        top: 280,
+                        left: 5,
+                        child: Text(
+                          _instructionList[index].subtitle,
+                          style: TextStyle(fontSize: _screenH / 58),
+                        )),
+                    Positioned(
+                        top: 0,
+                        child: Container(
+                          height: 260,
+                          child: YoutubePlayer(
+                            controller: _instructionList[index].videoController,
+                            liveUIColor: Colors.amber,
+                          ),
+                        ))
+                  ],
                 ),
               );
             },

@@ -39,8 +39,6 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth < 0.5) {
       _screenH = _screenH * 1.35;
       adjust = 0.75;

@@ -1,7 +1,6 @@
-import 'roomMode.dart';
+import 'roomHorizonMode.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/floors/floor2/room239A.dart';
-import 'package:mma_mse/floors/floor2/equbLayout/room246B.dart';
+import 'package:mma_mse/floors/floor2/equbLayout/room246.dart';
 
 class room246AMain extends StatefulWidget {
   room246AMain({Key key}) : super(key: key);
@@ -13,12 +12,12 @@ class room246AMain extends StatefulWidget {
 class _room246AMainState extends State<room246AMain> {
   @override
   Widget build(BuildContext context) {
-    return roomMode(
-        roomName: "Room 246B",
-        roomTi: "246B Microscope Room",
-        roomLayO: room246BLayO(),
-        roomCont: "Equipments:\n1.ICP-OES\n2.Computer and other protection",
+    return roomHorizontal(
+        roomName: "Room 246A",
+        roomTi: "246A Polishing Room",
+        pageTo: room246LayO(),
+        roomCont: "Equipments:\n1.Auto Polisher\n2.Manual Polisher\n3. Etching",
         roomImg:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246b.jpg?raw=true");
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246.jpg?raw=true");
   }
 }

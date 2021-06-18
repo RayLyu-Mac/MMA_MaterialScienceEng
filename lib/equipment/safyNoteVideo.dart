@@ -51,7 +51,7 @@ class _warningVideoState extends State<warningVideo>
                 backgroundColor: Colors.redAccent[100].withOpacity(0.9),
                 elevation: 5,
                 title: Text(
-                  "Before Start",
+                  "Before Enter",
                   style: TextStyle(fontSize: _screenH / 30),
                 ),
                 content: Column(

@@ -11,6 +11,7 @@ import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/services.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
@@ -51,6 +52,14 @@ class EqubPageMode extends StatefulWidget {
 class _EqubPageModeState extends State<EqubPageMode> {
   double _screenWidth;
   double _screenH;
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   void didChangeDependencies() {
@@ -74,14 +83,14 @@ class _EqubPageModeState extends State<EqubPageMode> {
         toolbarHeight: _screenH / 10,
         title: TextLiquidFill(
           text: widget.title,
-          loadDuration: Duration(milliseconds: 1500),
+          loadDuration: Duration(milliseconds: 1650),
           waveDuration: Duration(
             milliseconds: 850,
           ),
           waveColor: widget.backC,
           textStyle: TextStyle(
-            fontSize: _screenH / 27,
-            fontWeight: FontWeight.bold,
+            fontSize: _screenH / 26,
+            fontWeight: FontWeight.w900,
           ),
         ),
         backgroundColor: Colors.black,
@@ -95,7 +104,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 Text(
                   widget.title,
                   style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                      fontSize: _screenH / 30, fontWeight: FontWeight.w800),
                 ),
                 Container(
                   constraints: BoxConstraints.expand(
