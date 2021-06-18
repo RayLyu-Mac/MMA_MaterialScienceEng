@@ -42,8 +42,9 @@ class _room134LayOState extends State<room134LayO> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
+    if (_screenWidth / _screenH > 1.8) {
+      _screenWidth = _screenWidth * 0.95;
+      _screenH = _screenH * 1.15;
       adjust = 0.83;
     } else {
       adjust = 1;
@@ -52,9 +53,11 @@ class _room134LayOState extends State<room134LayO> {
 
   @override
   Widget build(BuildContext context) {
+    print(_screenWidth / _screenH);
     return Scaffold(
       appBar: AppBar(
         title: Text("Room 134 Layout"),
+        toolbarHeight: _screenWidth / 20,
         backgroundColor: Colors.black,
       ),
       body: Stack(
@@ -92,7 +95,7 @@ class _room134LayOState extends State<room134LayO> {
               width: _screenWidth / 5,
               name: "Furnace"),
           roomButton(
-              top: _screenWidth / 7,
+              top: _screenWidth / 8,
               left: _screenH / 0.77,
               length: _screenH / 6.5,
               width: _screenWidth / 5,

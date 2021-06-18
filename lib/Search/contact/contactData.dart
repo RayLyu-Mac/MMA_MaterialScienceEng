@@ -44,13 +44,6 @@ class testdetailData {
           researchA: ["Smart Materials & Devices"],
           extention: "+1 905.525.9140 x 23515"))
       ..add(testdetailData(
-        name: "Dr. Hatem Zurob",
-        jobTitle: "Professor, Chair",
-        eamil: "zurobh@mcmaster.ca",
-        officeLoc: "JHE 357/D",
-        researchA: ["Manufacturing & Infrastructure"],
-      ))
-      ..add(testdetailData(
           name: "Dr. Neslihan Dogan",
           jobTitle: "Associate Professor",
           eamil: "dogann@mcmaster.ca",
@@ -67,13 +60,6 @@ class testdetailData {
           officeLoc: "ABB C305",
           researchA: ["Biomaterials", "Smart Materials & Devices"],
           extention: "+1 905.525.9140 x 23515"))
-      ..add(testdetailData(
-          name: "Dr. Hatem Zurob",
-          jobTitle: "Professor, Chair",
-          eamil: "zurobh@mcmaster.ca",
-          officeLoc: "JHE 357/D",
-          researchA: ["Manufacturing & Infrastructure"],
-          extention: "+1 905.525.9140 x 23573"))
       ..add(testdetailData(
           name: "Dr. Joey Kish",
           jobTitle: "Professor, Associate Chair - Graduate",

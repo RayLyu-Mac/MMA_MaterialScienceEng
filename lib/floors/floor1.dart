@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/safty/saftyMain.dart';
+import 'package:mma_mse/customTile.dart';
 import 'floor1/mech_lab.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
@@ -11,6 +11,7 @@ import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/Search/contact/contactMain.dart';
 
 class floor1 extends StatefulWidget {
   final bool fire;
@@ -107,7 +108,9 @@ class _floor1State extends State<floor1> {
                 ],
               )),
               floorMenu(),
-              extraMenu()
+              extraMenu(),
+              floor1customListTile(
+                  name: "Contact Info", pageTo: ContactMSE(), fonts: 13)
             ],
           ),
         ),
