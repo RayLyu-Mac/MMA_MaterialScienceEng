@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class roomMode extends StatefulWidget {
   final String emailTo;
@@ -56,6 +57,7 @@ class _roomModeState extends State<roomMode> {
         title: Text(widget.roomName),
         backgroundColor: Colors.black,
       ),
+      drawer: standardDrawer(header: widget.roomName),
       body: Stack(
         children: [
           Positioned(

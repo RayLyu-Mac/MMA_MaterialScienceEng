@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class roomHorizontal extends StatefulWidget {
   final String emailTo;
@@ -61,6 +62,9 @@ class _roomHorizontalState extends State<roomHorizontal> {
       appBar: AppBar(
         title: Text(widget.roomTi),
         backgroundColor: Colors.black,
+      ),
+      drawer: standardDrawer(
+        header: widget.roomName,
       ),
       body: Stack(
         children: [

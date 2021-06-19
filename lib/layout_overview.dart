@@ -10,6 +10,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'Search/extramenu.dart';
 import 'floors/floor2.dart';
 import 'floors/floor3.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
@@ -114,39 +115,6 @@ class _layout_overviewState extends State<layout_overview> {
 
   @override
   Widget build(BuildContext context) {
-    Drawer _layoutsidemenu() => Drawer(
-            child: ListView(children: <Widget>[
-          DrawerHeader(
-              child: Text(
-            'JHE Material Department',
-            style: TextStyle(fontSize: _screenH / 30),
-          )),
-          ExpansionTile(title: Text("floor 1"), children: [
-            ExpansionTile(
-              title: Text("Mechanical Lab"),
-              children: [
-                customListTile(
-                  name: "UTM Machine",
-                  pageTo: floor1(),
-                  fonts: _screenH / 45,
-                ),
-              ],
-            )
-          ]),
-          ExpansionTile(title: Text("floor 2"), children: [
-            ExpansionTile(
-              title: Text("Mechanical Lab"),
-              children: [
-                customListTile(
-                  name: "UTM Machine",
-                  pageTo: floor1(),
-                  fonts: _screenH / 45,
-                ),
-              ],
-            )
-          ]),
-          extraMenu()
-        ]));
     return Scaffold(
         appBar: AppBar(
           actions: [
@@ -176,7 +144,8 @@ class _layout_overviewState extends State<layout_overview> {
           data: ThemeData(
             canvasColor: Colors.white.withOpacity(0.8),
           ),
-          child: Container(width: 220, child: _layoutsidemenu()),
+          child: Container(
+              width: 220, child: standardDrawer(header: "JHE Layout")),
         ),
         body: SafeArea(
             child: Stack(
