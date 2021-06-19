@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/customTile.dart';
 import 'floor1/mech_lab.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
@@ -11,6 +10,7 @@ import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class floor1 extends StatefulWidget {
   final bool fire;
@@ -86,32 +86,7 @@ class _floor1State extends State<floor1> {
                   fontSize: 30,
                   fontWeight: FontWeight.w700)),
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              DrawerHeader(
-                  child: Column(
-                children: [
-                  Text(
-                    "JHE Floor I",
-                    style: TextStyle(
-                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                  ),
-                  Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.5, height: _screenWidth / 4),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assest/logocolor.png"))),
-                  )
-                ],
-              )),
-              floorMenu(),
-              extraMenu(),
-              contact()
-            ],
-          ),
-        ),
+        drawer: standardDrawer(header: "JHE Floor I"),
         body: Stack(
           children: [
             roomButton(

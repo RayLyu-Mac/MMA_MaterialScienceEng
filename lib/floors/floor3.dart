@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'roomBut.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/extramenu.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class floor3 extends StatefulWidget {
   final bool eye;
@@ -61,32 +62,7 @@ class _floor3State extends State<floor3> {
         title: Text("JHE Floor III"),
         backgroundColor: Colors.black,
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                child: Column(
-              children: [
-                Text(
-                  "JHE Floor III",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                ),
-                Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.5, height: _screenWidth / 4),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assest/logocolor.png"))),
-                )
-              ],
-            )),
-            floorMenu(),
-            extraMenu(),
-            contact()
-          ],
-        ),
-      ),
+      drawer: standardDrawer(header: "JHE Floor III"),
       body: Stack(
         children: [
           widget.eye || saftyI > 0

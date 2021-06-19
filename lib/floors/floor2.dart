@@ -18,6 +18,7 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -97,32 +98,7 @@ class _floor2State extends State<floor2> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                child: Column(
-              children: [
-                Text(
-                  "JHE Floor II",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                ),
-                Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.5, height: _screenWidth / 4),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assest/logocolor.png"))),
-                )
-              ],
-            )),
-            floorMenu(),
-            extraMenu(),
-            contact()
-          ],
-        ),
-      ),
+      drawer: standardDrawer(header: "JHE Floor II"),
       body: Stack(
         children: [
           widget.eye || saftyI > 0

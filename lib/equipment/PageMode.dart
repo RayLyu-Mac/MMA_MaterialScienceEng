@@ -9,9 +9,9 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
-import 'package:mma_mse/Search/extramenu.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/Drawer.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
@@ -95,32 +95,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                child: Column(
-              children: [
-                Text(
-                  widget.title,
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.w800),
-                ),
-                Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.5, height: _screenWidth / 4),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assest/logocolor.png"))),
-                )
-              ],
-            )),
-            floorMenu(),
-            extraMenu(),
-            contact()
-          ],
-        ),
-      ),
+      drawer: standardDrawer(header: widget.title),
       body: SafeArea(
         child: Stack(
           children: [
