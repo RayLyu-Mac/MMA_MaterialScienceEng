@@ -20,7 +20,11 @@ class _extraMenuState extends State<extraMenu> {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      title: Text("Menu"),
+      leading: Icon(Icons.menu_book_rounded),
+      title: Text(
+        "Menu",
+        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+      ),
       children: [
         floor1customListTile(name: "Equipment", pageTo: equb_main(), fonts: 13),
         floor1customListTile(name: "Case Study", pageTo: test_ava(), fonts: 13),
@@ -38,7 +42,11 @@ class floorMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      title: Text("Floors"),
+      leading: Icon(Icons.stairs_rounded),
+      title: Text(
+        "Floors",
+        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+      ),
       children: [
         floor1customListTile(
             name: "Floor I",
@@ -68,6 +76,9 @@ class contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return floor1customListTile(
-        name: "Contact Info", pageTo: ContactMSE(), fonts: 13);
+        name: "Contact Info",
+        pageTo: ContactMSE(),
+        fonts: 20,
+        leadIcon: Icons.contact_page);
   }
 }

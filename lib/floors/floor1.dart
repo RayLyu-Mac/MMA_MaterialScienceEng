@@ -41,7 +41,7 @@ class _floor1State extends State<floor1> {
   double adjust;
   int nu;
   double saftyI = -1;
-  double rwidth = 4.3;
+  double rwidth = 5;
 
   @override
   void goToPage(qr_result) {
@@ -275,11 +275,16 @@ class _floor1State extends State<floor1> {
 
 class floor1customListTile extends StatelessWidget {
   const floor1customListTile(
-      {@required this.name, @required this.pageTo, @required this.fonts, key})
+      {@required this.name,
+      @required this.pageTo,
+      @required this.fonts,
+      @optionalTypeArgs this.leadIcon,
+      key})
       : super(key: key);
   final String name;
   final Widget pageTo;
   final double fonts;
+  final IconData leadIcon;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -302,6 +307,7 @@ class floor1customListTile extends StatelessWidget {
               children: [
                 Row(
                   children: [
+                    leadIcon != null ? Icon(leadIcon) : Container(),
                     Padding(
                       padding: EdgeInsets.all(8),
                       child: Text(
