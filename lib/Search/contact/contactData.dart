@@ -169,7 +169,43 @@ class testdetailData {
             "Smart Materials & Devices",
             "Biomaterials"
           ],
-          extention: "+1 905.525.9140 x 23914"));
+          extention: "+1 905.525.9140 x 23914"))
+      ..add(testdetailData(
+          name: "Mary-Anne Bechamp",
+          jobTitle: "Graduate Administrative Assistant",
+          eamil: "bechamma@mcmaster.ca",
+          officeLoc: "JHE 357",
+          extention: "None"))
+      ..add(testdetailData(
+          name: "Doug Culley",
+          jobTitle: "Technologist",
+          eamil: "culleyd@mcmaster.ca",
+          officeLoc: "JHE 248",
+          extention: "+1 905.525.9140 x 24106"))
+      ..add(testdetailData(
+          name: "Samantha Kandilas",
+          jobTitle: "Administrator",
+          eamil: "samkandilas@mcmaster.ca",
+          officeLoc: "JHE 357C",
+          extention: "None"))
+      ..add(testdetailData(
+          name: "Xiaogang Li",
+          jobTitle: "Technologist",
+          eamil: "None",
+          officeLoc: "JHE 248",
+          extention: "+1 905.525.9140 x 21811"))
+      ..add(testdetailData(
+          name: "Ed McCaffery",
+          jobTitle: "Laboratory Manager",
+          eamil: "mccaffer@mcmaster.ca",
+          officeLoc: "JHE 248",
+          extention: "+1 905.525.9140 x 24985"))
+      ..add(testdetailData(
+          name: "Diane Siv-Parr",
+          jobTitle: "Undergraduate Administrative Assistant",
+          eamil: "sivakdn@mcmaster.ca",
+          officeLoc: "JHE 357",
+          extention: "None"));
   }
 
   Map<String, String> areaPic = {

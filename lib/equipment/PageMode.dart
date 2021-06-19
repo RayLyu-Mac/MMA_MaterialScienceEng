@@ -6,7 +6,7 @@ import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
