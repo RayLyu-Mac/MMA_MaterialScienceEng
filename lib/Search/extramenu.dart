@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor1.dart';
 import 'package:mma_mse/floors/floor2.dart';
 import 'package:mma_mse/floors/floor3.dart';
+import 'package:mma_mse/Search/contact/contactMain.dart';
 
 class extraMenu extends StatefulWidget {
   extraMenu({Key key}) : super(key: key);
@@ -58,5 +59,15 @@ class floorMenu extends StatelessWidget {
             fonts: 13),
       ],
     );
+  }
+}
+
+class contact extends StatelessWidget {
+  const contact({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return floor1customListTile(
+        name: "Contact Info", pageTo: ContactMSE(), fonts: 13);
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'contactData.dart';
+import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/fancyButton.dart';
 
 class ContactMSE extends StatefulWidget {
   @override
@@ -127,16 +129,53 @@ class _ContactMSEState extends State<ContactMSE> {
                                               _screenH / 30,
                                               _screenWidth / 50,
                                               _screenH / 25),
-                                          title: Text(property[index].name),
+                                          title: Text(
+                                            property[index].name,
+                                            style: TextStyle(
+                                                fontSize: _screenH / 30,
+                                                fontWeight: FontWeight.bold),
+                                          ),
                                           children: [
-                                            Text("Job Title: " +
-                                                property[index].jobTitle),
-                                            Text("Email: " +
-                                                property[index].eamil),
-                                            Text("extension: " +
-                                                property[index].extention),
-                                            Text("Office: " +
-                                                property[index].officeLoc)
+                                            Text(
+                                              "Title: " +
+                                                  property[index].jobTitle,
+                                              style: TextStyle(
+                                                  fontSize: _screenH / 40,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            Text(
+                                              "Email: " + property[index].eamil,
+                                              style: TextStyle(
+                                                  fontSize: _screenH / 40,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            Text(
+                                              "extension: " +
+                                                  property[index].extention,
+                                              style: TextStyle(
+                                                  fontSize: _screenH / 40,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            Text(
+                                              "Office: " +
+                                                  property[index].officeLoc,
+                                              style: TextStyle(
+                                                  fontSize: _screenH / 40,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            SizedBox(
+                                              height: _screenH / 20,
+                                            ),
+                                            fancyBut(
+                                                pageTo: EmailContent(
+                                                  emailTo:
+                                                      property[index].eamil,
+                                                  prof: property[index].name,
+                                                ),
+                                                width: _screenWidth / 1.4,
+                                                height: _screenH / 15,
+                                                icon: Icons.email_rounded,
+                                                buttonName: "Send An Email")
                                           ],
                                         );
                                       });

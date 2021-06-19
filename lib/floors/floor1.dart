@@ -11,7 +11,6 @@ import 'package:mma_mse/Search/extramenu.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/Search/contact/contactMain.dart';
 
 class floor1 extends StatefulWidget {
   final bool fire;
@@ -109,8 +108,7 @@ class _floor1State extends State<floor1> {
               )),
               floorMenu(),
               extraMenu(),
-              floor1customListTile(
-                  name: "Contact Info", pageTo: ContactMSE(), fonts: 13)
+              contact()
             ],
           ),
         ),

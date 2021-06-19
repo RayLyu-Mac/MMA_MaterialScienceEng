@@ -82,7 +82,8 @@ class _floor3State extends State<floor3> {
               ],
             )),
             floorMenu(),
-            extraMenu()
+            extraMenu(),
+            contact()
           ],
         ),
       ),

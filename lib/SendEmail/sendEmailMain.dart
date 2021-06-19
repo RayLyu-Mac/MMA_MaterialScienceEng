@@ -8,14 +8,16 @@ import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class EmailContent extends StatefulWidget {
   EmailContent(
-      {@required this.locationOfEqup,
-      @required this.nameOfEqup,
+      {@optionalTypeArgs this.locationOfEqup,
+      @optionalTypeArgs this.nameOfEqup,
       @required this.emailTo,
+      @optionalTypeArgs this.prof,
       Key key})
       : super(key: key);
   final String locationOfEqup;
   final String nameOfEqup;
   final String emailTo;
+  final String prof;
   final DateTime now = DateTime.now();
 
   @override
@@ -52,6 +54,9 @@ class _EmailContentState extends State<EmailContent> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.83;
+    }
   }
 
   @override
@@ -71,7 +76,9 @@ class _EmailContentState extends State<EmailContent> {
               top: _screenH / 45,
               left: _screenWidth / 15,
               child: Text(
-                "*Please make sure the error report is valid",
+                widget.prof == null
+                    ? "*Please make sure the error report is valid"
+                    : " ",
                 style:
                     TextStyle(color: Colors.redAccent, fontSize: _screenH / 43),
               )),
@@ -148,7 +155,7 @@ class _EmailContentState extends State<EmailContent> {
                 child: InkWell(
                     splashColor: Colors.blueGrey,
                     child: FlatButton.icon(
-                        onPressed: () => send(),
+                        onPressed: () => send(widget.prof),
                         icon: Icon(Icons.email_rounded),
                         label: Text("Contact Manager"))),
               )),
@@ -195,20 +202,23 @@ class _EmailContentState extends State<EmailContent> {
           Positioned(
               top: _screenH / 1.7,
               left: _screenWidth / 15,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.15, height: _screenH / 6.5),
-                decoration: BoxDecoration(
-                    border: Border.all(width: 5, color: Colors.grey[300])),
-                child: Text(
-                  "Call:\nEd McCaffery: Ext: 24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext: 21881",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent[700],
-                      fontSize: _screenH / 35),
-                ),
-              ))
+              child: widget.prof == null
+                  ? Container(
+                      constraints: BoxConstraints.expand(
+                          width: _screenWidth / 1.15, height: _screenH / 6.5),
+                      decoration: BoxDecoration(
+                          border:
+                              Border.all(width: 5, color: Colors.grey[300])),
+                      child: Text(
+                        "Call:\nEd McCaffery: Ext: 24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext: 21881",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent[700],
+                            fontSize: _screenH / 35),
+                      ),
+                    )
+                  : Container())
         ],
       ),
     );
@@ -229,26 +239,29 @@ class _EmailContentState extends State<EmailContent> {
     });
   }
 
-  Future<void> send() async {
+  Future<void> send(prof) async {
     final Email email = Email(
-      body: "Dear Manager:\nMy name is " +
-          name.text +
-          " " +
-          "The" +
-          " " +
-          widget.nameOfEqup +
-          " " +
-          "in" +
-          " " +
-          widget.locationOfEqup +
-          " " +
-          "met " +
-          errorMessage.text +
-          "\nCould you please come over and help me to fix this?\nReally appreciate your time and help\n \nSincerely\n" +
-          name.text +
-          ":)",
-      subject:
-          "Issue Relate to " + widget.locationOfEqup + " " + widget.nameOfEqup,
+      body: prof == null
+          ? "Dear Manager:\nMy name is " +
+              name.text +
+              " " +
+              "The" +
+              " " +
+              widget.nameOfEqup +
+              " " +
+              "in" +
+              " " +
+              widget.locationOfEqup +
+              " " +
+              "met " +
+              errorMessage.text +
+              "\nCould you please come over and help me to fix this?\nReally appreciate your time and help\n \nSincerely\n" +
+              name.text +
+              ":)"
+          : "Dear ",
+      subject: prof == null
+          ? "Issue Relate to " + widget.locationOfEqup + " " + widget.nameOfEqup
+          : " ",
       recipients: [widget.emailTo],
       attachmentPaths: attachments,
     );

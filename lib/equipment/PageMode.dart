@@ -116,7 +116,8 @@ class _EqubPageModeState extends State<EqubPageMode> {
               ],
             )),
             floorMenu(),
-            extraMenu()
+            extraMenu(),
+            contact()
           ],
         ),
       ),
