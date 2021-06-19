@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'FireData.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:mma_mse/Search/safty/ShowerWasher/location.dart';
+import 'package:page_transition/page_transition.dart';
 
 class ExtingshSymbols extends StatefulWidget {
   ExtingshSymbols({Key key}) : super(key: key);
@@ -44,7 +46,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
     Drawer tensileResult() => Drawer(
           child: ListView(
             children: [
-              DrawerHeader(child: Text("Whims Symbols for Potential Hazard")),
+              DrawerHeader(child: Text("Fire Class")),
               for (var j = 0; j < result.length; j++)
                 ScrollcustomListTile(
                   name: result[j].title,
@@ -62,7 +64,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Whims Symbols for Potential Hazard",
+            "Fire Class",
             style: TextStyle(fontSize: _screenH / 40),
           ),
         ),
@@ -72,7 +74,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
         ),
         body: ListView.builder(
             itemCount: result.length,
-            itemExtent: 385,
+            itemExtent: 445,
             controller: controller,
             itemBuilder: (BuildContext context, int index) {
               return Card(
@@ -83,45 +85,44 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                   clipBehavior: Clip.antiAlias,
-                  child: Stack(
+                  child: Column(
                     children: [
-                      Positioned(
-                        top: 5.0,
-                        left: 10.0,
-                        child: Text(
-                          result[index].title,
-                          style: TextStyle(
-                              fontSize: result[index].titleFontsize ?? 15,
-                              fontWeight: FontWeight.bold),
-                        ),
+                      Text(
+                        result[index].title,
+                        style: TextStyle(
+                            fontSize: result[index].titleFontsize ?? 15,
+                            fontWeight: FontWeight.bold),
                       ),
-                      Positioned(
-                          top: 20,
-                          left: _screenWidth / (result[index].picLeft ?? 70),
-                          child: Image.network(
-                            result[index].addOnImg,
-                            fit: BoxFit.fitWidth,
-                            height: 205,
-                            width: _screenWidth / 1.17,
+                      Image.network(
+                        result[index].addOnImg,
+                        fit: BoxFit.fitWidth,
+                        height: 205,
+                        width: _screenWidth / 1.17,
+                      ),
+                      Container(
+                          width: _screenWidth / 1.2,
+                          child: Text(
+                            result[index].content,
+                            style: TextStyle(
+                                fontSize: result[index].contentFontsize ??
+                                    _screenH / 45),
                           )),
-                      Positioned(
-                          top: 235,
-                          left: 5,
-                          child: Container(
-                              width: _screenWidth / 1.2,
-                              child: Text(
-                                result[index].content,
-                                style: TextStyle(
-                                    fontSize: result[index].contentFontsize ??
-                                        _screenH / 45),
-                              ))),
-                      Positioned(
-                          top: 300,
-                          left: 5,
-                          child: FlatButton.icon(
-                              onPressed: () {},
-                              icon: Icon(Icons.location_city_outlined),
-                              label: Text("Location of the extinguisher")))
+                      SizedBox(
+                        height: _screenH / 40,
+                      ),
+                      FlatButton.icon(
+                          padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                          shape: Border.all(width: 5, color: Colors.grey[200]),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    duration: Duration(milliseconds: 700),
+                                    child: eyewashStation(
+                                        eye: false, fire: true)));
+                          },
+                          icon: Icon(Icons.location_city_outlined),
+                          label: Text("Location of the extinguisher"))
                     ],
                   ));
             }));

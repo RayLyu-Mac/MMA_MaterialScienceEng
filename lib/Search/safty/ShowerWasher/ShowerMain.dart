@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'location.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChemicalShowerEyeWasher extends StatefulWidget {
   ChemicalShowerEyeWasher({Key key}) : super(key: key);
@@ -115,7 +114,10 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                         context,
                         PageTransition(
                             duration: Duration(milliseconds: 700),
-                            child: eyewashStation(),
+                            child: eyewashStation(
+                              eye: true,
+                              fire: false,
+                            ),
                             type: PageTransitionType.scale,
                             alignment: Alignment.topCenter));
                   },
