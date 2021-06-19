@@ -29,7 +29,7 @@ class _ICP_OES_MainState extends State<ICP_OES_Main> {
       toolTip: "Gear Intro",
       warnNote: "•Ensure you pass the acid quiz before going further",
       img:
-          "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true",
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/ICP.png?raw=true",
       intro:
           "ICP-OES (Inductively coupled plasma - optical emission spectrometry) is a technique in which the composition of elements in (mostly water-dissolved) samples can be determined using plasma and a spectrometer. The technique has been commercially available since 1974 and thanks to its reliability, multi-element options and high throughput, it has become a widely applied in both routine research as in more specific analysis purposes.",
       theory: acidQuiz(),

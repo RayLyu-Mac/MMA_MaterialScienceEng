@@ -20,7 +20,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
         instruction: KeyenceMicroInstru(),
         backC: Colors.purple[50],
         img:
-            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true",
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",
         intro: "Both Keyence and Nikon Microscope perform same function");
   }
 }
