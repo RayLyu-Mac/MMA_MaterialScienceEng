@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'floor1/mech_lab.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:mma_mse/wholeQR.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import '../equipment/saftyNoteText.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';

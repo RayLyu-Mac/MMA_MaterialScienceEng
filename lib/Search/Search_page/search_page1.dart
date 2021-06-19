@@ -6,7 +6,7 @@ import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
-import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:mma_mse/wholeQR.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class search_area extends StatefulWidget {

@@ -255,12 +255,3 @@ class HeroType {
       ..add(HeroType(title: 'Manual Compression Press', subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer', pageTo: ManualCompPress(), fText: 'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only', image: 'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true', materialColor: Colors.indigoAccent));
   }
 }
-
-Map<String, Widget> to = {};
-var qrd = HeroType().createSampleList();
-createList() {
-  for (var eq = 0; eq < qrd.length; eq++) {
-    to.addAll({qrd[eq].title: qrd[eq].pageTo});
-  }
-  return to;
-}

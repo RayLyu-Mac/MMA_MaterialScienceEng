@@ -12,12 +12,10 @@ import 'floor2/roomMain/246A.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
-import 'package:mma_mse/Search/extramenu.dart';
+import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
 
 class floor2 extends StatefulWidget {
