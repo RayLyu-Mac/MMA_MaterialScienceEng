@@ -253,18 +253,22 @@ class floor1customListTile extends StatelessWidget {
       @required this.pageTo,
       @required this.fonts,
       @optionalTypeArgs this.leadIcon,
+      @optionalTypeArgs this.backC,
       key})
       : super(key: key);
   final String name;
+  final Color backC;
   final Widget pageTo;
   final double fonts;
   final IconData leadIcon;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
       child: Container(
+          height: 45,
           decoration: BoxDecoration(
+              color: backC ?? Colors.grey[100],
               border: Border(top: BorderSide(color: Colors.grey[100]))),
           child: InkWell(
             splashColor: Colors.blue[100],
@@ -281,9 +285,18 @@ class floor1customListTile extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    leadIcon != null ? Icon(leadIcon) : Container(),
+                    leadIcon != null
+                        ? Row(
+                            children: [
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Icon(leadIcon)
+                            ],
+                          )
+                        : Container(),
                     Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.fromLTRB(22, 5, 5, 5),
                       child: Text(
                         name,
                         style: TextStyle(

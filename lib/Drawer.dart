@@ -28,6 +28,7 @@ class _standardDrawerState extends State<standardDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      elevation: 25,
       child: ListView(
         children: [
           DrawerHeader(
@@ -51,7 +52,13 @@ class _standardDrawerState extends State<standardDrawer> {
             height: _screenH / 40,
           ),
           floorMenu(),
+          SizedBox(
+            height: 3,
+          ),
           extraMenu(),
+          SizedBox(
+            height: 3,
+          ),
           contact(),
         ],
       ),

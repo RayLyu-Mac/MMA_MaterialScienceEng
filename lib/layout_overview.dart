@@ -140,9 +140,7 @@ class _layout_overviewState extends State<layout_overview> {
                   fontWeight: FontWeight.w700)),
         ),
         drawer: Theme(
-          data: ThemeData(
-            canvasColor: Colors.white.withOpacity(0.8),
-          ),
+          data: ThemeData(canvasColor: Colors.white),
           child: Container(
               width: 220, child: standardDrawer(header: "JHE Layout")),
         ),
