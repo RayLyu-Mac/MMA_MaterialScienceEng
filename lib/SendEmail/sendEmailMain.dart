@@ -64,7 +64,7 @@ class _EmailContentState extends State<EmailContent> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Report Issue to Equipment Manager",
+          "Contact Info",
           style: TextStyle(fontSize: _screenH / 40),
         ),
         backgroundColor: Colors.black,
@@ -200,12 +200,12 @@ class _EmailContentState extends State<EmailContent> {
             ),
           ),
           Positioned(
-              top: _screenH / 1.7,
+              top: _screenH / 1.8,
               left: _screenWidth / 15,
               child: widget.prof == null
                   ? Container(
                       constraints: BoxConstraints.expand(
-                          width: _screenWidth / 1.15, height: _screenH / 6.5),
+                          width: _screenWidth / 1.15, height: _screenH / 5.5),
                       decoration: BoxDecoration(
                           border:
                               Border.all(width: 5, color: Colors.grey[300])),
@@ -215,7 +215,7 @@ class _EmailContentState extends State<EmailContent> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.redAccent[700],
-                            fontSize: _screenH / 35),
+                            fontSize: _screenH / 33),
                       ),
                     )
                   : Container())
