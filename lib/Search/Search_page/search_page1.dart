@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import '../room/room_main.dart';
@@ -8,6 +9,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/wholeQR.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:mma_mse/fancyButton.dart';
 
 class search_area extends StatefulWidget {
   search_area({Key key}) : super(key: key);
@@ -74,13 +76,15 @@ class _search_areaState extends State<search_area> {
               ),
             ),
             Positioned(
-              top: _screenWidth / 10 + 80,
-              left: 20,
-              child: Text(
-                "Available Equipment \nIn MSE Department",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 8,
+                left: _screenWidth / 45,
+                child: fancyBut(
+                    pageTo: equb_main(),
+                    width: _screenWidth / 2,
+                    height: _screenH / 8,
+                    fontsize: 16,
+                    icon: FontAwesomeIcons.microscope,
+                    buttonName: "Equipment\nIn MSE")),
             Positioned(
               top: _screenH / 2.75,
               left: 20,
@@ -91,7 +95,7 @@ class _search_areaState extends State<search_area> {
                 },
                 child: Container(
                   constraints: BoxConstraints.expand(
-                      width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
+                      width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
@@ -101,16 +105,18 @@ class _search_areaState extends State<search_area> {
               ),
             ),
             Positioned(
-              top: _screenH / 2.75 + 50,
-              left: _screenWidth / 2 + 30,
-              child: Text(
-                "Case Study",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 2.5,
+                left: _screenWidth / 2 + 30,
+                child: fancyBut(
+                    pageTo: test_ava(),
+                    width: _screenWidth / 2.5,
+                    height: _screenH / 8,
+                    fontsize: 16,
+                    icon: FontAwesomeIcons.flask,
+                    buttonName: "Case Study")),
             Positioned(
               top: _screenH / 1.65 + 10,
-              left: _screenWidth / 2.1,
+              left: _screenWidth / 2,
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
@@ -118,7 +124,7 @@ class _search_areaState extends State<search_area> {
                 },
                 child: Container(
                   constraints: BoxConstraints.expand(
-                      width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
+                      width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
@@ -128,13 +134,15 @@ class _search_areaState extends State<search_area> {
               ),
             ),
             Positioned(
-              top: _screenH / 1.65 + 70,
-              left: 15,
-              child: Text(
-                "Available Room \nIn MSE Department",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 1.5,
+                left: 15,
+                child: fancyBut(
+                    pageTo: room_main(),
+                    width: _screenWidth / 2.4,
+                    height: _screenH / 8,
+                    fontsize: 16,
+                    icon: FontAwesomeIcons.book,
+                    buttonName: "Room in MSE")),
             floationPanel(
                 button: [
                   Icons.search,

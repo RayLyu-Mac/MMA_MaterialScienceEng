@@ -34,7 +34,7 @@ class _WeightUCState extends State<WeightUC> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: _screenH / 2,
+      height: _screenH / 1.9,
       width: _screenWidth / 1.15,
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.7),
@@ -168,12 +168,15 @@ class _WeightUCState extends State<WeightUC> {
                 ),
               )),
           Positioned(
-              top: _screenH / 2,
+              top: _screenH / 2.2,
               left: _screenWidth / 20,
               child: Container(
                 width: _screenWidth / 1.3,
                 child: Text(
-                    "Mass for an electron: 9.109e-31kg\nMass for a proton: 1.673e-27kg"),
+                  "Mass for an electron: 9.109e-31kg\nMass for a proton: 1.673e-27kg",
+                  style: TextStyle(
+                      fontSize: _screenH / 45, fontWeight: FontWeight.bold),
+                ),
               ))
         ],
       ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/safty/saftyMain.dart';
 import 'package:mma_mse/Search/tools/toolsMain.dart';
 import 'package:mma_mse/Search/direction/dir_main.dart';
+import 'package:mma_mse/fancyButton.dart';
 
 class search_p2 extends StatefulWidget {
   search_p2({Key key}) : super(key: key);
@@ -57,21 +59,27 @@ class _search_p2State extends State<search_p2> {
               ),
             ),
             Positioned(
-              top: _screenWidth / 10 + 80,
-              left: 20,
-              child: Text(
-                "Career Direction \nIn MSE Department",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 10,
+                left: 20,
+                child: fancyBut(
+                  pageTo: direction_main(),
+                  width: _screenWidth / 2.3,
+                  height: _screenH / 8,
+                  icon: FontAwesomeIcons.paperPlane,
+                  buttonName: "Directions \nin MSE",
+                  fontsize: 20,
+                )),
             Positioned(
-              top: _screenH / 2.75 + 50,
-              left: _screenWidth / 2 + 30,
-              child: Text(
-                "Useful Tools",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 2.5,
+                left: _screenWidth / 2 + 30,
+                child: fancyBut(
+                  pageTo: toolMain(),
+                  width: _screenWidth / 2.3,
+                  height: _screenH / 8,
+                  icon: FontAwesomeIcons.tools,
+                  buttonName: "Tools",
+                  fontsize: 20,
+                )),
             Positioned(
               top: _screenH / 2.75,
               left: 20,
@@ -92,13 +100,16 @@ class _search_p2State extends State<search_p2> {
               ),
             ),
             Positioned(
-              top: _screenH / 1.45,
-              left: _screenWidth / 8,
-              child: Text(
-                "Safety",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+                top: _screenH / 1.5,
+                left: _screenWidth / 45,
+                child: fancyBut(
+                  pageTo: toolMain(),
+                  width: _screenWidth / 2.3,
+                  height: _screenH / 8,
+                  icon: FontAwesomeIcons.lifeRing,
+                  buttonName: "Safety",
+                  fontsize: 20,
+                )),
             Positioned(
               top: _screenH / 1.6,
               left: _screenWidth / 2.2,
