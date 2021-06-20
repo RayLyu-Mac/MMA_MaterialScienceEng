@@ -364,15 +364,14 @@ class _floor2State extends State<floor2> {
                               roomButton(
                                 length: _screenH / 5,
                                 width: _screenWidth / 5,
-                                fontsize: 10,
+                                fontsize: 22,
                                 backC: Colors.redAccent[100].withOpacity(0.8),
                                 detailsFontS: 16,
                                 detailsTiFontS: 25,
                                 detailTitle: "Equipment Manager Contact Info",
                                 details:
                                     "Ed McCaffery Ext:24985\nDoug Culley: Ext 24106\nXiaogang Li:Ext 21881",
-                                name:
-                                    "Contact Info:\nEd McCaffery: Ext:24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext 21881",
+                                name: "Contact Info",
                               )
                             ],
                           )

@@ -52,6 +52,8 @@ class _search_p2State extends State<search_p2> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 2.4, height: _screenH / 4.3),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: AssetImage("assest/search/dir.jpg"),
                           fit: BoxFit.cover)),
@@ -92,6 +94,8 @@ class _search_p2State extends State<search_p2> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"),
@@ -122,6 +126,8 @@ class _search_p2State extends State<search_p2> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 2, height: _screenH / 5),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/main.jpg?raw=truee"),

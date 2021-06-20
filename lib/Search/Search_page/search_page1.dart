@@ -68,6 +68,8 @@ class _search_areaState extends State<search_area> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 3 - 10, height: _screenH / 4 - 5),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/e.png?raw=true"),
@@ -97,6 +99,8 @@ class _search_areaState extends State<search_area> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/T.jpg?raw=true"),
@@ -126,6 +130,8 @@ class _search_areaState extends State<search_area> {
                   constraints: BoxConstraints.expand(
                       width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(width: 5, color: Colors.grey[350]),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/s.png?raw=true"),
