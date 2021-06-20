@@ -4,6 +4,7 @@ import 'thermalU.dart';
 import 'lengthU.dart';
 import 'volumeU.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'weightU.dart';
 
 class UnitCOnverMain extends StatefulWidget {
   UnitCOnverMain({Key key}) : super(key: key);
@@ -62,32 +63,37 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
             ScrollcustomListTile(
                 name: "Common unit check",
                 pageTo: 0,
-                fonts: 13,
+                fonts: 14,
                 controller: controller),
             ScrollcustomListTile(
                 name: "Pressure unit conversion",
                 pageTo: 1,
-                fonts: 13,
+                fonts: 14,
                 controller: controller),
             ScrollcustomListTile(
                 name: "Theramal unit conversion",
                 pageTo: 2,
-                fonts: 13,
+                fonts: 14,
                 controller: controller),
             ScrollcustomListTile(
                 name: "Temperature unit conversion",
                 pageTo: 3,
-                fonts: 13,
+                fonts: 14,
                 controller: controller),
             ScrollcustomListTile(
                 name: "Length unit conversion",
                 pageTo: 4,
-                fonts: 13,
+                fonts: 14,
                 controller: controller),
             ScrollcustomListTile(
                 name: "Volumne unit conversion",
                 pageTo: 5,
-                fonts: 13,
+                fonts: 14,
+                controller: controller),
+            ScrollcustomListTile(
+                name: "Weight unit conversion",
+                pageTo: 6,
+                fonts: 14,
                 controller: controller),
           ],
         ),
@@ -143,7 +149,11 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
             SizedBox(
               height: _screenH / 40,
             ),
-            VolumeUC()
+            VolumeUC(),
+            SizedBox(
+              height: _screenH / 40,
+            ),
+            WeightUC()
           ],
         ),
       ),

@@ -74,34 +74,27 @@ class _ContactMSEState extends State<ContactMSE> {
         appBar: buildAppBar(context),
         body: Column(
           children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
-                  height: 55,
-                  width: 245,
-                  child: TextField(
-                    expands: true,
-                    maxLines: null,
-                    controller: _controller,
-                    style: TextStyle(
-                      fontSize: _screenH / 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                    decoration: new InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
-                      border: OutlineInputBorder(),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2.5, color: Colors.black)),
-                    ),
-                    onChanged: searchOperation,
-                  ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
+              height: 55,
+              width: 245,
+              child: TextField(
+                expands: true,
+                maxLines: null,
+                controller: _controller,
+                style: TextStyle(
+                  fontSize: _screenH / 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
-              ],
+                decoration: new InputDecoration(
+                  contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(width: 2.5, color: Colors.black)),
+                ),
+                onChanged: searchOperation,
+              ),
             ),
             name.length != 0
                 ? Expanded(
@@ -187,12 +180,14 @@ class _ContactMSEState extends State<ContactMSE> {
                     },
                   ))
                 : Container(
+                    padding: EdgeInsets.fromLTRB(_screenWidth / 4, _screenH / 5,
+                        _screenWidth / 4, _screenH / 5),
                     constraints: BoxConstraints.expand(
                         width: _screenWidth / 1.5, height: _screenH / 1.5),
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
-                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/searchChem.png?raw=true"))),
+                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/peopleS.png?raw=true"))),
                   )
           ],
         ));
