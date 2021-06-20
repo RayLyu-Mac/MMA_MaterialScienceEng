@@ -5,6 +5,7 @@ import 'package:mma_mse/Search/safty/ShowerWasher/location.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 
 class ExtingshSymbols extends StatefulWidget {
   ExtingshSymbols({Key key}) : super(key: key);
@@ -132,7 +133,11 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                               label: Text("Location of the extinguisher"))
                         ],
                       ));
-                }))
+                })),
+        ZoomInPhaseD(
+          imgPD:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/extinguisher/exting.jpg?raw=true",
+        )
       ],
     );
   }
@@ -154,7 +159,7 @@ class fireProcedure extends StatelessWidget {
         "Leave the room and contact technical Staff, pull fire alarm if you can't contact"
       ],
       [
-        "Fire Our of Control",
+        "Fire Out of Control",
         "Pull fire alarm and dial 88 then EOHSS (Extension: 24352) Stay nearby and try not use extinguisher"
       ],
       [
