@@ -139,11 +139,7 @@ class _layout_overviewState extends State<layout_overview> {
                   fontSize: _screenH / 37,
                   fontWeight: FontWeight.w700)),
         ),
-        drawer: Theme(
-          data: ThemeData(canvasColor: Colors.white),
-          child: Container(
-              width: 220, child: standardDrawer(header: "JHE Layout")),
-        ),
+        drawer: standardDrawer(header: "JHE Layout"),
         body: SafeArea(
             child: Stack(
           children: [

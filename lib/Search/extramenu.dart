@@ -20,8 +20,6 @@ class _extraMenuState extends State<extraMenu> {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      collapsedBackgroundColor: Colors.blue[50],
-      backgroundColor: Colors.blue[50],
       leading: Icon(Icons.menu_book_rounded),
       title: Text(
         "Menu",
@@ -44,8 +42,6 @@ class floorMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      collapsedBackgroundColor: Colors.red[50],
-      backgroundColor: Colors.red[50],
       leading: Icon(Icons.stairs_rounded),
       title: Text(
         "Floors",
@@ -81,7 +77,6 @@ class contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return floor1customListTile(
         name: "Contact Info",
-        backC: Colors.green[50],
         pageTo: ContactMSE(),
         fonts: 20,
         leadIcon: Icons.contact_page);
