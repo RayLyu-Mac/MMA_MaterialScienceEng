@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'data.dart';
 
 class STDCheck extends StatefulWidget {
   STDCheck({Key key}) : super(key: key);
@@ -41,6 +42,12 @@ class _STDCheckState extends State<STDCheck> {
                   double input = double.parse(before.text);
                   if (input > 3.4 || input < -3.4) {
                     output = "Please correct your input";
+                  } else {
+                    output = stdNum[input
+                                .toString()
+                                .substring(0, input.toString().length - 1)]
+                            [input.toString().length]
+                        .toString();
                   }
                 });
               },
