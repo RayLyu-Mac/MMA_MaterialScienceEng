@@ -40,7 +40,10 @@ class _STDCheckState extends State<STDCheck> {
               onPressed: () {
                 setState(() {
                   double input = double.parse(before.text);
-                  if (input > 3.4 || input < -3.4) {
+                  if (input > 3.4 ||
+                      input < -3.4 ||
+                      input.toString().length < 3 ||
+                      input.toString().length > 5) {
                     output = "Please correct your input";
                   } else {
                     output = stdNum[input
