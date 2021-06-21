@@ -26,31 +26,43 @@ class _STDCheckState extends State<STDCheck> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue[100],
       appBar: AppBar(
         title: Text("STD value check"),
         backgroundColor: Colors.black,
       ),
       body: Column(
         children: [
-          TextField(
-            controller: before,
-            decoration: InputDecoration(hintText: "Z value:"),
+          Container(
+            padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 30,
+                _screenWidth / 10, _screenH / 30),
+            width: _screenWidth / 1.1,
+            height: _screenH / 10,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              border: Border.all(width: 5, color: Colors.grey[200]),
+            ),
+            child: TextField(
+              controller: before,
+              decoration: InputDecoration(hintText: "Z value:"),
+            ),
           ),
           RaisedButton.icon(
               onPressed: () {
                 setState(() {
                   double input = double.parse(before.text);
-                  if (input > 3.4 ||
-                      input < -3.4 ||
-                      input.toString().length < 3 ||
-                      input.toString().length > 5) {
+                  if (stdNum[input
+                          .toString()
+                          .substring(0, input.toString().length - 1)] ==
+                      null) {
                     output = "Please correct your input";
                   } else {
                     output = stdNum[input
-                                .toString()
-                                .substring(0, input.toString().length - 1)]
-                            [input.toString().length]
-                        .toString();
+                                    .toString()
+                                    .substring(0, input.toString().length - 1)]
+                                [input.toString().length]
+                            .toString() ??
+                        "Please correct your input";
                   }
                 });
               },
