@@ -9,6 +9,7 @@ import 'floor2/roomMain/242.dart';
 import 'floor2/roomMain/244.dart';
 import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246A.dart';
+import 'floor2/roomMain/246.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:page_transition/page_transition.dart';
@@ -300,7 +301,7 @@ class _floor2State extends State<floor2> {
                   length: _screenH / 9,
                   width: _screenWidth / 3,
                   pageTo: warning(
-                    pageTo: room246AMain(),
+                    pageTo: room246Main(),
                     warning_note:
                         "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens\n6. Nitrile Gloves Must be worn for Etching",
                   ),

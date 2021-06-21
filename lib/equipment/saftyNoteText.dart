@@ -37,9 +37,9 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                 width: _screenWidth / 1.21, height: _screenH / 1.25 / adjust),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
-                borderRadius: BorderRadius.circular(6.0),
+                borderRadius: BorderRadius.circular(12.0),
                 border: Border.all(
-                  width: 8,
+                  width: 9,
                   color: Colors.grey[200].withOpacity(0.8),
                 )),
             child: AlertDialog(
