@@ -140,6 +140,7 @@ class _floor1State extends State<floor1> {
                     left: _screenWidth / 30,
                     length: _screenWidth / 5,
                     width: _screenH / rwidth,
+                    titleIcon: FontAwesomeIcons.microscope,
                     pageTo: warning(
                       pageTo: room129(),
                       warning_note:
@@ -195,6 +196,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 3,
                 width: _screenH / rwidth,
+                titleIcon: FontAwesomeIcons.microscope,
                 pageTo: warning(
                   pageTo: mech_lab(),
                   warning_note:

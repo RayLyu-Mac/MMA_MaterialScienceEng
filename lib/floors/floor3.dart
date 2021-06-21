@@ -117,6 +117,7 @@ class _floor3State extends State<floor3> {
               top: _screenH / 1.3,
               length: _screenH / 11,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.briefcase,
               detailTitle: "Dr. Hatem Zurob's Office",
               details:
                   "Professor, MSE chair\nResearch Interest:Manufacturing & Infrastructure\nExtension:+1 905.525.9140 x 23515\n:)",
@@ -126,18 +127,30 @@ class _floor3State extends State<floor3> {
               top: _screenH / 1.52,
               length: _screenH / 11,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.briefcase,
+              detailTitle: "Samantha Kandilas Office",
+              details:
+                  "Title: Administrator\nEmail:samkandilas@mcmaster.ca\nExtension:None",
               name: "357C"),
           roomButton(
               left: _screenWidth / 1.62,
               top: _screenH / 1.85,
               length: _screenH / 11,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.briefcase,
+              detailTitle: "Dr. Dmitri V. Malakhov Office",
+              details:
+                  "Title: Professor\nEmail:malakhov@mcmaster.ca\nExtension:24308",
               name: "357B"),
           roomButton(
               left: _screenWidth / 1.62,
               top: _screenH / 2.38,
               length: _screenH / 11,
+              titleIcon: FontAwesomeIcons.briefcase,
               width: _screenWidth / 3,
+              detailTitle: "Dr. Gu Xu Office",
+              details:
+                  "Title: Professor\nEmail:guxu@mcmaster.ca\nExtension:27341",
               name: "357A"),
           roomButton(
               left: _screenWidth / 1.62,

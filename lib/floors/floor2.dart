@@ -128,6 +128,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 3.4,
               length: _screenH / 12,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: warning(
                 pageTo: room242Main(),
                 warning_note:
@@ -190,6 +191,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.66,
               length: _screenH / 7,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: warning(
                 pageTo: room239Main(),
                 warning_note:
@@ -208,6 +210,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.66,
               length: _screenH / 20,
               width: _screenWidth / 4,
+              titleIcon: FontAwesomeIcons.microscope,
               fontsize: 18,
               elevation: 4,
               pageTo: room239AMain(),
@@ -217,6 +220,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 35,
               length: _screenH / 10,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: warning(
                 pageTo: room244Main(),
                 warning_note:
@@ -256,6 +260,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 7,
               length: _screenH / 9,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: warning(
                 pageTo: room245Main(),
                 warning_note:
@@ -300,17 +305,19 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 3.73,
                   length: _screenH / 9,
                   width: _screenWidth / 3,
+                  titleIcon: FontAwesomeIcons.microscope,
                   pageTo: warning(
                     pageTo: room246Main(),
                     warning_note:
                         "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens\n6. Nitrile Gloves Must be worn for Etching",
                   ),
-                  name: "246   246/A"),
+                  name: "246/A"),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 2.54,
               length: _screenH / 9,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: room246AMain(),
               name: "246B"),
           roomButton(

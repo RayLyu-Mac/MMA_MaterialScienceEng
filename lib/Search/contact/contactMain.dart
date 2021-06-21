@@ -30,22 +30,6 @@ class _ContactMSEState extends State<ContactMSE> {
   List<testdetailData> property = List();
   final ScrollController controller = ScrollController();
 
-  _SearchListExampleState() {
-    _controller.addListener(() {
-      if (_controller.text.isEmpty) {
-        setState(() {
-          _isSearching = false;
-          _searchText = "";
-        });
-      } else {
-        setState(() {
-          _isSearching = true;
-          _searchText = _controller.text;
-        });
-      }
-    });
-  }
-
   @override
   void initState() {
     super.initState();
@@ -75,9 +59,10 @@ class _ContactMSEState extends State<ContactMSE> {
         body: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
-              height: 55,
-              width: 245,
+              padding:
+                  EdgeInsets.fromLTRB(_screenWidth / 25, _screenH / 40, 5, 2),
+              height: _screenH / 10,
+              width: _screenWidth / 1.033,
               child: TextField(
                 expands: true,
                 maxLines: null,
@@ -90,6 +75,7 @@ class _ContactMSEState extends State<ContactMSE> {
                 decoration: new InputDecoration(
                   contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
                   border: OutlineInputBorder(),
+                  hintText: "Search Names...",
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2.5, color: Colors.black)),
                 ),
@@ -195,53 +181,22 @@ class _ContactMSEState extends State<ContactMSE> {
 
   Widget buildAppBar(BuildContext context) {
     return new AppBar(
-        backgroundColor: Colors.black,
-        toolbarHeight: 60,
-        centerTitle: true,
-        title: Column(
-          children: [
-            Text("Contact Info"),
-            SizedBox(
-              height: 10,
-            ),
-          ],
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: icon,
-            onPressed: () {
-              setState(() {
-                if (this.icon.icon == Icons.search) {
-                  this.icon = new Icon(
-                    Icons.close,
-                    color: Colors.white,
-                  );
-
-                  _handleSearchStart();
-                } else {
-                  _handleSearchEnd();
-                }
-              });
-            },
+      backgroundColor: Colors.black,
+      toolbarHeight: 60,
+      centerTitle: true,
+      title: Column(
+        children: [
+          Text(
+            "Contact Info",
+            style:
+                TextStyle(fontSize: _screenH / 28, fontWeight: FontWeight.bold),
           ),
-        ]);
-  }
-
-  void _handleSearchStart() {
-    setState(() {
-      _isSearching = true;
-    });
-  }
-
-  void _handleSearchEnd() {
-    setState(() {
-      this.icon = new Icon(
-        Icons.search,
-        color: Colors.white,
-      );
-      _isSearching = false;
-      _controller.clear();
-    });
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
+    );
   }
 
   void searchOperation(String searchText) {
