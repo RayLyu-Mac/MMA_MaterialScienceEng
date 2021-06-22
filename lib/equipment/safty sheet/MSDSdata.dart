@@ -9,6 +9,7 @@ Color redD = Colors.redAccent;
 Color white = Colors.white70;
 String locJHE240246A = "JHE-240 /246/A";
 String acidLoc = "JHE 240 & 246A";
+String gas239 = "JHE 239";
 Map<Color, String> saftyLevel = {
   green: "General Storage can be stored on higher shelves",
   yellow:
@@ -479,6 +480,21 @@ class msdsData {
       ..add(msdsData(location: acidLoc, name: "Phosphoric Acid", level: white, type: "Acid", short: "H3PO4"))
       ..add(msdsData(location: acidLoc, name: "Sulphuric Acid", level: white, type: "Acid", short: "H2SO4"))
       ..add(msdsData(location: acidLoc, name: "Tartaric Acid", level: white, type: "Acid", short: "C4H6O6"))
-      ..add(msdsData(location: acidLoc, name: "Trimethylacetic Acid", level: green, type: "Acid", short: "C5H10O2"));
+      ..add(msdsData(location: acidLoc, name: "Trimethylacetic Acid", level: green, type: "Acid", short: "C5H10O2"))
+      ..add(msdsData(location: gas239, name: "Alumina Powder", level: green, type: "Gases/Meturllgical", short: "Al"))
+      ..add(msdsData(location: gas239, name: "AP-A,D, OP-AA, OP-An Suspension", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Clips", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Carbon dioxide", level: green, type: "Gases/Meturllgical", short: "CO2"))
+      ..add(msdsData(location: gas239, name: "Saw Blade", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Diapro", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "DP-Lubricant Blue", level: green, type: "Lubricant", short: "Blue"))
+      ..add(msdsData(location: gas239, name: "DP-Lubricant Red", level: green, type: "Lubricant", short: "Red"))
+      ..add(msdsData(location: gas239, name: "DP-Suspension A", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Epofic Hardener", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Epofix Resin", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Krestopol", level: green, type: "Gases/Meturllgical", short: "N/A"))
+      ..add(msdsData(location: gas239, name: "Nitrogen", level: green, type: "Gases", short: "N2"))
+      ..add(msdsData(location: gas239, name: "Silicon Carbide Paper 2400-4000", level: green, type: "Grounding/Polishing Paper", short: "SiC"))
+      ..add(msdsData(location: gas239, name: "Silicon Carbide Paper 80-1200", level: green, type: "Grounding/Polishing Paper", short: "SiC"));
   }
 }
