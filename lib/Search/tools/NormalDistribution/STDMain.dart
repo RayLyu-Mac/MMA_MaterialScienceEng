@@ -10,9 +10,13 @@ class STDCheck extends StatefulWidget {
 
 class _STDCheckState extends State<STDCheck> {
   TextEditingController before = TextEditingController();
+  TextEditingController meu = TextEditingController();
+  TextEditingController sigma = TextEditingController();
+  TextEditingController x = TextEditingController();
   double _screenWidth;
   double _screenH;
   String output;
+  String mz;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -28,7 +32,7 @@ class _STDCheckState extends State<STDCheck> {
     return Scaffold(
         backgroundColor: Colors.lightBlue[100],
         appBar: AppBar(
-          title: Text("STD value check"),
+          title: Text("Stats Tool"),
           backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
@@ -40,8 +44,8 @@ class _STDCheckState extends State<STDCheck> {
                 ),
                 Container(
                   width: _screenWidth / 1.1,
-                  height: _screenH / 2,
-                  padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 30,
+                  height: _screenH / 1.6,
+                  padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 40,
                       _screenWidth / 10, _screenH / 30),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.8),
@@ -50,15 +54,72 @@ class _STDCheckState extends State<STDCheck> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: _screenH / 45,
+                        height: _screenH / 55,
                       ),
                       Text(
                         "Convert Z value to Standard Normal Distribution",
                         style: TextStyle(
-                            fontSize: _screenH / 35,
+                            fontSize: _screenH / 45,
                             fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(_screenWidth / 10,
+                            _screenH / 30, _screenWidth / 10, _screenH / 30),
+                        width: _screenWidth / 1.1,
+                        height: _screenH / 10,
+                        child: TextField(
+                          controller: meu,
+                          decoration: InputDecoration(hintText: "meu: Mean"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(_screenWidth / 10,
+                            _screenH / 30, _screenWidth / 10, _screenH / 30),
+                        width: _screenWidth / 1.1,
+                        height: _screenH / 10,
+                        child: TextField(
+                          controller: x,
+                          decoration: InputDecoration(
+                              hintText: "X: Value you want to convert to"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(_screenWidth / 10,
+                            _screenH / 30, _screenWidth / 10, _screenH / 30),
+                        width: _screenWidth / 1.1,
+                        height: _screenH / 10,
+                        child: TextField(
+                          controller: sigma,
+                          decoration: InputDecoration(
+                              hintText: "Sigma: Standard Deviation"),
+                        ),
+                      ),
+                      RaisedButton.icon(
+                          onPressed: () {
+                            setState(() {
+                              double meuv = double.parse(meu.text);
+                              double sigmav = double.parse(sigma.text);
+                              double xv = double.parse(x.text);
+                              mz = ((xv - meuv) / sigmav).toString();
+                            });
+                          },
+                          icon: Icon(Icons.calculate_sharp),
+                          label: Text("Calculate the Z value")),
+                      SizedBox(
+                        height: _screenH / 45,
+                      ),
+                      Container(
+                        child: Text(
+                          "The Z score after standardized" +
+                                  before.text.toString() ??
+                              "--" + " is " + mz ??
+                              "--",
+                          style: TextStyle(
+                              fontSize: _screenH / 50,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
                     ],
                   ),
                 ),

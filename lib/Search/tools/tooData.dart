@@ -19,7 +19,7 @@ class ToolData {
     List toolD = List<ToolData>();
     return toolD
       ..add(ToolData(
-          name: "MSDS Sheet",
+          name: "Stats Tool",
           pageTo: STDCheck(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",

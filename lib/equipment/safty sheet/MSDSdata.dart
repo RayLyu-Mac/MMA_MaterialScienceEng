@@ -8,6 +8,7 @@ Color red = Colors.red[300];
 Color redD = Colors.redAccent;
 Color white = Colors.white70;
 String locJHE240246A = "JHE-240 /246/A";
+String acidLoc = "JHE 240 & 246A";
 Map<Color, String> saftyLevel = {
   green: "General Storage can be stored on higher shelves",
   yellow:
@@ -454,6 +455,30 @@ class msdsData {
       ..add(msdsData(location: locJHE240246A, name: "Zinc Oxide", level: green, type: "Solid", short: "ZnO"))
       ..add(msdsData(location: locJHE240246A, name: "Zinc Selenide", level: yellow, type: "Solid", short: "ZnSe"))
       ..add(msdsData(location: locJHE240246A, name: "Zinc Sulphate heptahydrate", level: green, type: "Solid", short: "ZnSO4 7H2O"))
-      ..add(msdsData(location: locJHE240246A, name: "Zinc Sulphide", level: green, type: "Solid", short: "ZnS"));
+      ..add(msdsData(location: locJHE240246A, name: "Zinc Sulphide", level: green, type: "Solid", short: "ZnS"))
+      ..add(msdsData(location: acidLoc, name: "Acetic Acid", level: white, type: "Acid", short: "CH₃COOH"))
+      ..add(msdsData(location: acidLoc, name: "Acetic Anhydride (glacial)", level: white, type: "Acid", short: " C4H6O3"))
+      ..add(msdsData(location: acidLoc, name: "Anhydrous Citric Acid", level: green, type: "Acid", short: "C₆H₈O₇"))
+      ..add(msdsData(location: acidLoc, name: "Benzenesulfonic acid", level: white, type: "Acid", short: "C6H6O3S"))
+      ..add(msdsData(location: acidLoc, name: "Boric acid", level: green, type: "Acid", short: "H3BO3"))
+      ..add(msdsData(location: acidLoc, name: "Bromine", level: grey, type: "Acid", short: "Br"))
+      ..add(msdsData(location: acidLoc, name: "Chromium Trioxide (Chromic Acid)", level: yellow, type: "Acid", short: "CrO3"))
+      ..add(msdsData(location: acidLoc, name: "Diphenylamine Sulfonic Acid", level: green, type: "Acid", short: "(C6H5)2NH"))
+      ..add(msdsData(location: acidLoc, name: "Citric Acid", level: white, type: "Acid", short: "C₆H₈O₇"))
+      ..add(msdsData(location: acidLoc, name: "Colloidal silica OPS", level: white, type: "Acid", short: "N/A"))
+      ..add(msdsData(location: acidLoc, name: "Ethylenediamine Tetraacetic Acid", level: white, type: "Acid", short: "C10H16N2O8"))
+      ..add(msdsData(location: acidLoc, name: "Fluoro-Boric Acid", level: white, type: "Acid", short: "HBF4"))
+      ..add(msdsData(location: acidLoc, name: "Hydrofluoric Acid", level: white, type: "Acid", short: "HF"))
+      ..add(msdsData(location: acidLoc, name: "Hydrochloride Acid", level: white, type: "Acid", short: "HCl"))
+      ..add(msdsData(location: acidLoc, name: "Hydrogen Peroxide", level: white, type: "Oxidant", short: "H2O2"))
+      ..add(msdsData(location: acidLoc, name: "Latic Acid", level: white, type: "Acid", short: "C3H6O3"))
+      ..add(msdsData(location: acidLoc, name: "Maleic Acid", level: white, type: "Acid", short: "C4H4O4"))
+      ..add(msdsData(location: acidLoc, name: "Nitric Acid", level: white, type: "Acid", short: "HNO3"))
+      ..add(msdsData(location: acidLoc, name: "Orthophosophoric Acid", level: white, type: "Acid", short: "H3PO4"))
+      ..add(msdsData(location: acidLoc, name: "Oxalic Acid", level: white, type: "Acid", short: "C2H2O4"))
+      ..add(msdsData(location: acidLoc, name: "Phosphoric Acid", level: white, type: "Acid", short: "H3PO4"))
+      ..add(msdsData(location: acidLoc, name: "Sulphuric Acid", level: white, type: "Acid", short: "H2SO4"))
+      ..add(msdsData(location: acidLoc, name: "Tartaric Acid", level: white, type: "Acid", short: "C4H6O6"))
+      ..add(msdsData(location: acidLoc, name: "Trimethylacetic Acid", level: green, type: "Acid", short: "C5H10O2"));
   }
 }
