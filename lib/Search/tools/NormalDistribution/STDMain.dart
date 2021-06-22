@@ -19,6 +19,7 @@ class _STDCheckState extends State<STDCheck> {
   double _screenH;
   String output;
   String mz;
+  String pc;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -113,8 +114,7 @@ class _STDCheckState extends State<STDCheck> {
                       ),
                       Container(
                         child: Text(
-                          "The Z score after standardized" +
-                                  before.text.toString() ??
+                          "The Z score after standardized" + mz.toString() ??
                               "--" + " is " + mz ??
                               "--",
                           style: TextStyle(
@@ -130,7 +130,7 @@ class _STDCheckState extends State<STDCheck> {
                 ),
                 Container(
                     width: _screenWidth / 1.1,
-                    height: _screenH / 1.3,
+                    height: _screenH / 1.2,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.8),
                       border: Border.all(width: 7, color: Colors.grey[200]),
@@ -149,6 +149,95 @@ class _STDCheckState extends State<STDCheck> {
                       SizedBox(
                         height: _screenH / 25,
                       ),
+                      Image(
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/PC.png?raw=true")),
+                      SizedBox(
+                        height: _screenH / 25,
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(_screenWidth / 10,
+                            _screenH / 30, _screenWidth / 10, _screenH / 30),
+                        width: _screenWidth / 1.1,
+                        height: _screenH / 10,
+                        child: TextField(
+                          controller: pcn,
+                          decoration:
+                              InputDecoration(hintText: "n value (Sample #):"),
+                        ),
+                      ),
+                      SizedBox(
+                        height: _screenH / 45,
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(_screenWidth / 10,
+                            _screenH / 30, _screenWidth / 10, _screenH / 30),
+                        width: _screenWidth / 1.1,
+                        height: _screenH / 10,
+                        child: TextField(
+                          controller: pck,
+                          decoration: InputDecoration(
+                              hintText: "K value(Picking Value):"),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: _screenWidth / 18,
+                          ),
+                          RaisedButton.icon(
+                              onPressed: () {
+                                double nv = double.parse(pcn.text);
+                                double kv = double.parse(pck.text);
+                                double up = 1;
+                                double below = 1;
+                                for (var i = 1; i < nv + 1; i++) {
+                                  up = up * i;
+                                }
+                                for (var i = 1; i < (nv - kv) + 1; i++) {
+                                  below = below * i;
+                                }
+                                pc = (up / below).toString();
+                              },
+                              icon: Icon(Icons.calculate),
+                              label: Text("Permutation")),
+                          SizedBox(
+                            width: _screenWidth / 10,
+                          ),
+                          RaisedButton.icon(
+                              onPressed: () {
+                                double nv = double.parse(pcn.text);
+                                double kv = double.parse(pck.text);
+                                double up = 1;
+                                double below = 1;
+                                double add = 1;
+                                for (var i = 1; i < nv + 1; i++) {
+                                  up = up * i;
+                                }
+                                for (var i = 1; i < (nv - kv) + 1; i++) {
+                                  below = below * i;
+                                }
+                                for (var i = 1; i < kv + 1; i++) {
+                                  add = add * i;
+                                }
+                                pc = (up / below / add).toString();
+                                print(pc);
+                              },
+                              icon: Icon(Icons.calculate),
+                              label: Text("Combination"))
+                        ],
+                      ),
+                      SizedBox(
+                        height: _screenH / 45,
+                      ),
+                      Container(
+                        child: Text(
+                          "The value" + " is " + pc,
+                          style: TextStyle(
+                              fontSize: _screenH / 50,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
                     ])),
                 SizedBox(
                   height: _screenH / 45,
