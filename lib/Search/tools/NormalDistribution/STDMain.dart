@@ -13,6 +13,8 @@ class _STDCheckState extends State<STDCheck> {
   TextEditingController meu = TextEditingController();
   TextEditingController sigma = TextEditingController();
   TextEditingController x = TextEditingController();
+  TextEditingController pcn = TextEditingController();
+  TextEditingController pck = TextEditingController();
   double _screenWidth;
   double _screenH;
   String output;
@@ -125,6 +127,31 @@ class _STDCheckState extends State<STDCheck> {
                 ),
                 SizedBox(
                   height: _screenH / 25,
+                ),
+                Container(
+                    width: _screenWidth / 1.1,
+                    height: _screenH / 1.3,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8),
+                      border: Border.all(width: 7, color: Colors.grey[200]),
+                    ),
+                    child: Column(children: [
+                      SizedBox(
+                        height: _screenH / 45,
+                      ),
+                      Text(
+                        "Permutation and Combination",
+                        style: TextStyle(
+                            fontSize: _screenH / 35,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: _screenH / 25,
+                      ),
+                    ])),
+                SizedBox(
+                  height: _screenH / 45,
                 ),
                 Container(
                   width: _screenWidth / 1.1,
