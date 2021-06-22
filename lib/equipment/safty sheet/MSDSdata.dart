@@ -495,6 +495,19 @@ class msdsData {
       ..add(msdsData(location: gas239, name: "Krestopol", level: green, type: "Gases/Meturllgical", short: "N/A"))
       ..add(msdsData(location: gas239, name: "Nitrogen", level: green, type: "Gases", short: "N2"))
       ..add(msdsData(location: gas239, name: "Silicon Carbide Paper 2400-4000", level: green, type: "Grounding/Polishing Paper", short: "SiC"))
-      ..add(msdsData(location: gas239, name: "Silicon Carbide Paper 80-1200", level: green, type: "Grounding/Polishing Paper", short: "SiC"));
+      ..add(msdsData(location: gas239, name: "Silicon Carbide Paper 80-1200", level: green, type: "Grounding/Polishing Paper", short: "SiC"))
+      ..add(msdsData(location: acidLoc, name: "Propanol", level: red, type: "Solvent", short: "C₃H₈O"))
+      ..add(msdsData(location: acidLoc, name: "Butanol", level: red, type: "Solvent", short: "C₄H₉OH"))
+      ..add(msdsData(location: acidLoc, name: "Champhene", level: red, type: "Solvent", short: "N/A"))
+      ..add(msdsData(location: acidLoc, name: "Chloroform", level: red, type: "Solvent", short: "CHCl₃"))
+      ..add(msdsData(location: acidLoc, name: "Cyclohexane", level: red, type: "Solvent", short: "C6H12"))
+      ..add(msdsData(location: acidLoc, name: "Dichloromethane", level: red, type: "Solvent", short: "CH2Cl2"))
+      ..add(msdsData(location: acidLoc, name: "Dieethylenetriamine", level: red, type: "Solvent", short: "C4H13N3"))
+      ..add(msdsData(location: acidLoc, name: "Di-Methyl Methane", level: red, type: "Solvent", short: "CH3OCH2CH2OCH3"))
+      ..add(msdsData(location: acidLoc, name: "Dimethyl Sulfoxide", level: red, type: "Solvent", short: "C2H6OS"))
+      ..add(msdsData(location: acidLoc, name: "Ethanol", level: red, type: "Solvent", short: "C2H5OH"))
+      ..add(msdsData(location: acidLoc, name: "Glycerin", level: red, type: "Solvent", short: "C3H8O3"))
+      ..add(msdsData(location: acidLoc, name: "Glycerol", level: red, type: "Solvent", short: "C3H8O3"))
+      ..add(msdsData(location: acidLoc, name: "Glycerol Anhydrous", level: red, type: "Solvent", short: "C3H8O3"));
   }
 }
