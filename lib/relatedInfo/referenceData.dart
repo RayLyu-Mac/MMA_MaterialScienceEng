@@ -27,6 +27,37 @@ Map<String, List<String>> refernce = {
     "https://acuteservices.com/whmis-symbols-7-changes-canada/"
   ],
   "MSDS Sheet": [
-    "https://cloud.ebsco.com/apps/chemical-abstracts-service-search"
+    "https://cloud.ebsco.com/apps/chemical-abstracts-service-search",
+  ],
+  "Quick Search": [
+    "https://sokogskriv.no/images/illustrasjoner_sok_500x450.png"
+  ],
+  "Chemical SHower/eye washer": [
+    "http://clipart-library.com/clipart/107121.htm",
+    "https://www.selectsafetysales.com/t-emergency-eyewash-stations-quick-facts.aspx"
+  ],
+  "People Search": [
+    "https://www.ilovefreesoftware.com/27/webware/best-free-people-search-engines.html"
+  ],
+  "Three Point Test": [
+    "https://en.wikipedia.org/wiki/Universal_testing_machine",
+    "https://www.freepik.com/premium-vector/car-accident-vector-cartoon-illustration-crash-two-vehicle-road_5768674.htm",
+    "https://www.fishersci.ca/shop/products/sartorius-ptfe-polytetrafluorethylene-membrane-filters-22/p-4301128",
+    "https://byjus.com/biology/difference-between-compact-and-spongy-bones/"
+  ],
+  "Elastic Modulus": [
+    "https://www.metengr.com/testing-services/mechanical-testing/tensile",
+    "https://www.belfasttelegraph.co.uk/sport/rugby/ulster-rugby/i-feared-my-acl-injury-would-end-my-career-luke-marshall-37213579.html",
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedlineplus.gov%2Fency%2Farticle%2F001074.htm&psig=AOvVaw1KhEfaQceTRvsAaGu_msgG&ust=1622925243199000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNix8Orp_vACFQAAAAAdAAAAABAD",
+    "http://static1.squarespace.com/static/5563c664e4b08d56a3488aed/t/5f2b64a123dbc01e7fd7c9fd/1596679335523/acl-graft-types.jpg?format=1500w"
+  ],
+  "Crack Resistant": [
+    "https://lh3.googleusercontent.com/proxy/n16W8SE8UZhNWbldudfBs5_6IvIckKMqm_xV4Aw9ed--QViS34TPgbY3efN3BdTWKk0YhNXzZ9_N2Gqg1yhjl5b3qAjnXRRvmPt1Sed29e6XJUXJRKrR1WwUBI32UzyqYLi_TWOjpHNn_eUqDCp8MqBIb0Fma_EuD5w9oTMYLVX74JH2YtSVog",
+    "https://www.mdpi.com/metals/metals-10-01022/article_deploy/html/images/metals-10-01022-g001.png",
+    "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2020/07/Fotothek_df_n-08_0000320.jpg",
+    "https://media.istockphoto.com/photos/pressure-vessel-of-the-storage-tanks-a-pressure-vessel-constructed-of-picture-id1131913712?k=6&m=1131913712&s=612x612&w=0&h=W8JbbC14XwyMO8bMhk8tHjjL1st-3KKXigeGFAr1TTI=",
+    "http://www.daksystem.com/wp-content/uploads/2014/12/3-point_new.png",
+    "https://mishkametalcast.com/wp-content/uploads/2019/07/WELCOME-TO.png",
+    "https://www.freewaymetals.com/wp-content/uploads/2018/05/AdobeStock_187683420-400x700.jpeg"
   ]
 };
