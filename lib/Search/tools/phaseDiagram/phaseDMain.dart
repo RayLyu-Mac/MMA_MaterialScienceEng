@@ -113,6 +113,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         result[index].addOnImg,
                                         fit: BoxFit.fitWidth,
                                         height: _screenH / 2.6,
+                                        width: _screenWidth / 1.15,
                                       )),
                                   result[index].addonImgLft != null
                                       ? Positioned(

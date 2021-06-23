@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
-import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
+import 'errorFunction/main.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'NormalDistribution/STDMain.dart';
 import 'ConstantCheck/UnitConvMain.dart';
@@ -20,7 +19,7 @@ class ToolData {
     return toolD
       ..add(ToolData(
           name: "Stats Tool",
-          pageTo: STDCheck(),
+          pageTo: errorFunction(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
