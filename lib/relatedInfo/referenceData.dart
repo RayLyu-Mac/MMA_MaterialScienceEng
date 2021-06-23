@@ -1,4 +1,4 @@
-Map<String, List<String>> refernce = {
+Map<String, List<String>> refernceD = {
   "Stats Toolo": [
     "https://www.youtube.com/watch?v=2tuBREK_mgE&t=90s",
     "https://www.thoughtco.com/combinations-vs-permutations-3126548"

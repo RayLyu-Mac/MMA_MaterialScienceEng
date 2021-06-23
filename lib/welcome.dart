@@ -4,6 +4,7 @@ import 'fancyButton.dart';
 import 'terms&Cond.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'relatedInfo/reference.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key key}) : super(key: key);
@@ -143,6 +144,19 @@ class _welcomeState extends State<welcome> {
                 },
               ),
             ),
+            Positioned(
+                top: _screenH / 1.35,
+                left: _screenWidth / 1.8,
+                child: RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => reference(),
+                          ));
+                    },
+                    icon: Icon(Icons.refresh_outlined),
+                    label: Text("Check Reference"))),
             Positioned(
                 top: _screenH / 1.8,
                 left: _screenWidth / 11,

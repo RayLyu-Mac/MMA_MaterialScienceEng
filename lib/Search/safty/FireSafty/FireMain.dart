@@ -17,7 +17,6 @@ class ExtingshSymbols extends StatefulWidget {
 class _ExtingshSymbolsState extends State<ExtingshSymbols> {
   double _screenWidth;
   double _screenH;
-  double adjust;
   List tiles = [];
 
   @override
@@ -28,9 +27,6 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
     _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
       _screenH = _screenH * 0.85;
-      adjust = 0.85;
-    } else {
-      adjust = 1;
     }
   }
 
