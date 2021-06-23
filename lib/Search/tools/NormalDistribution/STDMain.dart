@@ -33,6 +33,7 @@ class _STDCheckState extends State<STDCheck> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.lightBlue[100],
         appBar: AppBar(
           title: Text("Stats Tool"),
@@ -114,11 +115,9 @@ class _STDCheckState extends State<STDCheck> {
                       ),
                       Container(
                         child: Text(
-                          "The Z score after standardized" + mz.toString() ??
-                              "--" + " is " + mz ??
-                              "--",
+                          "Z Value after modified: " + (mz ?? "--"),
                           style: TextStyle(
-                              fontSize: _screenH / 50,
+                              fontSize: _screenH / 45,
                               fontWeight: FontWeight.bold),
                         ),
                       )
@@ -183,7 +182,7 @@ class _STDCheckState extends State<STDCheck> {
                       Row(
                         children: [
                           SizedBox(
-                            width: _screenWidth / 18,
+                            width: _screenWidth / 35,
                           ),
                           RaisedButton.icon(
                               onPressed: () {
@@ -202,7 +201,7 @@ class _STDCheckState extends State<STDCheck> {
                               icon: Icon(Icons.calculate),
                               label: Text("Permutation")),
                           SizedBox(
-                            width: _screenWidth / 10,
+                            width: _screenWidth / 18,
                           ),
                           RaisedButton.icon(
                               onPressed: () {
@@ -221,7 +220,6 @@ class _STDCheckState extends State<STDCheck> {
                                   add = add * i;
                                 }
                                 pc = (up / below / add).toString();
-                                print(pc);
                               },
                               icon: Icon(Icons.calculate),
                               label: Text("Combination"))
@@ -232,9 +230,9 @@ class _STDCheckState extends State<STDCheck> {
                       ),
                       Container(
                         child: Text(
-                          "The value" + " is " + pc,
+                          "The value is: " + (pc ?? "--"),
                           style: TextStyle(
-                              fontSize: _screenH / 50,
+                              fontSize: _screenH / 45,
                               fontWeight: FontWeight.bold),
                         ),
                       )
@@ -315,18 +313,19 @@ class _STDCheckState extends State<STDCheck> {
                       ),
                       Container(
                         child: Text(
-                          "The Probabalilty Density with Z score " +
-                                  before.text.toString() ??
-                              "--" + " is " + output ??
-                              "--",
+                          "The probablity density for Z value is: " +
+                              (output ?? "--"),
                           style: TextStyle(
                               fontSize: _screenH / 40,
                               fontWeight: FontWeight.bold),
                         ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: _screenH / 35,
+                ),
               ],
             ),
           ),

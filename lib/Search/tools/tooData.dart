@@ -19,7 +19,7 @@ class ToolData {
     return toolD
       ..add(ToolData(
           name: "Stats Tool",
-          pageTo: errorFunction(),
+          pageTo: STDCheck(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
           posCode: "a"))
@@ -39,6 +39,12 @@ class ToolData {
           name: "Unit Conversion",
           posCode: "d",
           pageTo: UnitCOnverMain(),
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
+      ..add(ToolData(
+          name: "Error function",
+          posCode: "e",
+          pageTo: errorFunction(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
   }
