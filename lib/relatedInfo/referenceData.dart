@@ -43,7 +43,8 @@ Map<String, List<String>> refernce = {
     "https://en.wikipedia.org/wiki/Universal_testing_machine",
     "https://www.freepik.com/premium-vector/car-accident-vector-cartoon-illustration-crash-two-vehicle-road_5768674.htm",
     "https://www.fishersci.ca/shop/products/sartorius-ptfe-polytetrafluorethylene-membrane-filters-22/p-4301128",
-    "https://byjus.com/biology/difference-between-compact-and-spongy-bones/"
+    "https://byjus.com/biology/difference-between-compact-and-spongy-bones/",
+    "https://ugc.futurelearn.com/uploads/images/0c/73/0c732aa5-f9f4-49cc-b5a0-b52799e36610.jpg"
   ],
   "Elastic Modulus": [
     "https://www.metengr.com/testing-services/mechanical-testing/tensile",
@@ -59,5 +60,17 @@ Map<String, List<String>> refernce = {
     "http://www.daksystem.com/wp-content/uploads/2014/12/3-point_new.png",
     "https://mishkametalcast.com/wp-content/uploads/2019/07/WELCOME-TO.png",
     "https://www.freewaymetals.com/wp-content/uploads/2018/05/AdobeStock_187683420-400x700.jpeg"
-  ]
+  ],
+  "Creep Test": [
+    "https://www.doitpoms.ac.uk/tlplib/creep/printall.php",
+    "https://www.google.com/search?q=alloy+vs+pure+metal&tbm=isch&ved=2ahUKEwjLltmC24DxAhUCcqwKHZhRBd8Q2-cCegQIABAA&oq=alloy+vs+&gs_lcp=CgNpbWcQARgCMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATOgQIIxAnOgIIAFDCgCVYzJElYO6lJWgAcAB4AIABUogBpAWSAQE5mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=K4u7YIvVNYLksQWYo5X4DQ&bih=689&biw=1280&rlz=1C1VDKB_enCA933CA933#imgrc=udGqbQLYUT5BWM",
+    "https://www.theengineer.co.uk/rolls-royce-single-crystal-turbine-blade/",
+    "https://www.pipingmart.com/blog/other/what-is-the-creep-in-material/",
+    "https://www.substech.com/dokuwiki/doku.php?id=creep"
+  ],
+  "Meturllgical Analysis": [
+    "https://suzannewrightyoga.files.wordpress.com/2019/03/strike-iron-yates-3-6-19.jpg?w=1200",
+    "https://www.lucideon.com/testing-characterization/microstructural-analysis"
+  ],
+  "Safety": ["https://www.rotochopper.com/resources/safety-rules/"]
 };
