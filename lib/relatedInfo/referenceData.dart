@@ -11,6 +11,22 @@ Map<String, List<String>> refernce = {
   ],
   "Fire Safety": [
     "https://bidfiresafety.com/fire-extinguisher-types/",
-    "https://fhs.mcmaster.ca/safetyoffice/documents/FireFHSinfosheetJanuary2020V2.pdf"
+    "https://fhs.mcmaster.ca/safetyoffice/documents/FireFHSinfosheetJanuary2020V2.pdf",
+    "https://www.oshawa.ca/residents/fire-extinguishers.asp"
   ],
+  "Acid Safety": [
+    "https://www.emsworld.com/article/173379/hydrofluoric-acid-what-you-need-know",
+    "https://www.bradyid.com/signs/danger-nitric-acid-improper-contact-will-cause-severe-burns-death-sign-cps-brus-10502?part-number=145186",
+    "https://sciencenotes.org/physical-property-of-matter-definition-and-examples/",
+    "https://sciencenotes.org/chemical-property-definition-and-examples/",
+    "https://www.bioworld.com/articles/496365-transparency-of-both-supply-and-demand-for-ppe-seen-as-critical-in-senate-hearing?v=preview",
+    "https://selecthealth.org/blog/2020/02/15-interesting-facts-about-the-human-body"
+  ],
+  "WHIMS Symbol": [
+    "https://advancedct.com/whmis-2015-ghs-symbols-their-meanings/",
+    "https://acuteservices.com/whmis-symbols-7-changes-canada/"
+  ],
+  "MSDS Sheet": [
+    "https://cloud.ebsco.com/apps/chemical-abstracts-service-search"
+  ]
 };
