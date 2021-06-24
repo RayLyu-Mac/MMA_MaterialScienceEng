@@ -31,7 +31,8 @@ class _EtchingState extends State<Etching> {
       warnNote: "•Ensure you pass the acid quiz before going further",
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "Etching process which after the polishing process can remove the element between the gain and make the gain boundary clearer and more obvious which can make the sample much brighter in microscope level. ",
       theory: acidQuiz(),
     );
   }

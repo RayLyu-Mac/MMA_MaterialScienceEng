@@ -76,7 +76,7 @@ flutter:
    - assest/equipment/theory/fdc.png
    - assest/search/dir.jpg
    - assest/logocolor.png
-   - assest/bg.png
+   - assest/bglay.png
    - assest/equipment/theory/automatic_cutter/posserabracut.png
    
   # To add assets to your application, add an assets section, like this:

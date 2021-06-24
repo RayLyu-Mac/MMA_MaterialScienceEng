@@ -28,7 +28,8 @@ class _AutoPolisherMainState extends State<AutoPolisherMain> {
           "•Make sure you are familiar with the grinding protocol \n•The grinding paper used for different hardness \n•Please try the virtual dashboard",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true",
-      intro: "Needed",
+      intro:
+          "Polishers are used to remove the mechanical damage from the surface of the sample such as notch and scratch. The mirror finished surface are required for the further observation and analysis. \nThere are three polishers in MSE faculty, which are automatic polisher, manual polisher and Buehler Manual Polisher. ",
       theory: autoPolishDashBoard(),
     );
   }

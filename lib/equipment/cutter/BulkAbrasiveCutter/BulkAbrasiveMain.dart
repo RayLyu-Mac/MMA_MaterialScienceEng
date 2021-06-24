@@ -45,7 +45,7 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true",
       intro:
-          "The bulk abrasive cutter are used for big sample sectioning, if you are looking for small and delicated cutting please use precision cutter.",
+          "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\nThe bulk abrasive cutter are used for big sample sectioning, if you are looking for small and delicated cutting please use precision cutter.",
       theory: automaticModeInterFaceButton(),
     );
   }

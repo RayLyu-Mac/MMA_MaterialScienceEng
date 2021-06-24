@@ -34,7 +34,7 @@ class _SiCFurnaceState extends State<SiCFurnace> {
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
       intro:
-          "SiC Furnace has the maximum temp of 1450 C for Blur furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
+          "Furnace is used to heat the sample in order to change the microstructure of the samples, during the cooling down process, changing the cooling rate can produce sample with different microstructure and characteristic.\nSiC Furnace has the maximum temp of 1450 C for Blur furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
       theory: PhaseDiag(),
     );
   }

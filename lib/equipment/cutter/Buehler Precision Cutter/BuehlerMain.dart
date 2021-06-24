@@ -28,7 +28,7 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
       intro:
-          "The Buehler precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
+          "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\nThe Buehler precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
       theory: BueDashBoard(),
     );
   }

@@ -25,7 +25,7 @@ class _manual_polisherState extends State<manual_polisher> {
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
       intro:
-          "To remove any mechanical damage from the grinding steps.  To ensure that the sample has a mirror finished that there are no scratches on the surface.  The finished sample is ready to be etched and viewed under a microscope to observe the microstructure. ).",
+          "Polishers are used to remove the mechanical damage from the surface of the sample such as notch and scratch. The mirror finished surface are required for the further observation and analysis. \nThere are three polishers in MSE faculty, which are automatic polisher, manual polisher and Buehler Manual Polisher. ",
       theory: manualPolisherDashBoard(),
     );
   }

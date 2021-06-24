@@ -31,6 +31,6 @@ class _hardness_testState extends State<hardness_test> {
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true",
         intro:
-            "The machine measures the ability of the material to resist peneration, the sample can be in any reasonable size. \nFor Analog machine you need to read number from a gauge and convert it to kPsi using icon button below");
+            "The hardness tester is used to measure the penetration resistance ability of material. Hardness test is do not have strict requirement in sharp and size. But the result of hardness test may vary depend on different format. \nFor Analog machine you need to read number from a gauge and convert it to kPsi using icon button below");
   }
 }

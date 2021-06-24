@@ -29,6 +29,6 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true",
         intro:
-            "The machine measures the ability of the material to resist peneration, the sample can be in any reasonable size.\nFor digital tester you can read the hardness number from the display directly, you can change the number to preferred one by using the button below");
+            "The hardness tester is used to measure the penetration resistance ability of material. Hardness test is do not have strict requirement in sharp and size. But the result of hardness test may vary depend on different format.\nFor digital tester you can read the hardness number from the display directly, you can change the number to preferred one by using the button below");
   }
 }
