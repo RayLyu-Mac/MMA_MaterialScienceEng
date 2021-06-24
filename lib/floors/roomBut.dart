@@ -112,7 +112,7 @@ class roomButton extends StatelessWidget {
                               ? Row(
                                   children: [
                                     SizedBox(
-                                      width: width / 7,
+                                      width: width / 10,
                                     ),
                                     ClayText(
                                       name,
@@ -120,7 +120,7 @@ class roomButton extends StatelessWidget {
                                       color: Colors.grey,
                                     ),
                                     SizedBox(
-                                      width: width / 8,
+                                      width: width / 15,
                                     ),
                                     Icon(
                                       titleIcon,
