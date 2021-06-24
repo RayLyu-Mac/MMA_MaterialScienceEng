@@ -60,7 +60,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-   - assest/layout/layout.png
    - assest/csv/Rockwell/RockWellC.csv
    - assest/csv/Rockwell/RockwellB.csv
    - assest/csv/Rockwell/A.csv
@@ -71,14 +70,13 @@ flutter:
    - assest/csv/Brinell500.csv
    - assest/csv/Rockwell/superf30.csv
    - assest/csv/vicker.csv
-   - assest/layout/sci.png
-   - assest/equipment/theory/HT.png
    - assest/test/hdtbg1.jpg
    - assest/test/ttbg1.jpg
    - assest/equipment/theory/IH.png
    - assest/equipment/theory/fdc.png
    - assest/search/dir.jpg
    - assest/logocolor.png
+   - assest/bg.png
    - assest/equipment/theory/automatic_cutter/posserabracut.png
    
   # To add assets to your application, add an assets section, like this:

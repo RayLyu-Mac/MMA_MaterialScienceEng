@@ -206,10 +206,10 @@ class _floor2State extends State<floor2> {
               titleIcon: FontAwesomeIcons.briefcase,
               name: "238"),
           roomButton(
-              left: _screenWidth / 5.5,
+              left: _screenWidth / 6,
               top: _screenH / 1.66,
               length: _screenH / 20,
-              width: _screenWidth / 4,
+              width: _screenWidth / 3.7,
               titleIcon: FontAwesomeIcons.microscope,
               fontsize: 18,
               elevation: 4,

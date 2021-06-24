@@ -187,7 +187,8 @@ class _layout_overviewState extends State<layout_overview> {
                   ),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assest/layout/sci.png"),
+                          image: NetworkImage(
+                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/layout/sci.PNG?raw=true"),
                           fit: BoxFit.cover)),
                 )),
             floationPanel(button: [

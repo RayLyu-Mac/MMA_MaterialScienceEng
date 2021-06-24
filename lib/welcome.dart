@@ -5,6 +5,7 @@ import 'terms&Cond.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'relatedInfo/reference.dart';
+import 'layoutOverview.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key key}) : super(key: key);
@@ -174,7 +175,7 @@ class _welcomeState extends State<welcome> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => layout_overview(),
+                          builder: (context) => layout(),
                         ));
                   },
                 )),

@@ -99,44 +99,43 @@ class roomButton extends StatelessWidget {
                         });
               },
               child: Container(
-                  height: length,
-                  width: width,
-                  child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(width: 5, color: Colors.grey[200]),
-                          color: Colors.grey),
-                      child: Center(
-                        child: icon != null
-                            ? Icon(icon)
-                            : titleIcon != null
-                                ? Row(
-                                    children: [
-                                      SizedBox(
-                                        width: width / 10,
-                                      ),
-                                      ClayText(
-                                        name,
-                                        size: fontsize ?? 22,
-                                        color: Colors.grey[100],
-                                      ),
-                                      SizedBox(
-                                        width: width / 25,
-                                      ),
-                                      Icon(
-                                        titleIcon,
-                                        size: 16,
-                                      ),
-                                    ],
-                                  )
-                                : ClayText(
-                                    name,
-                                    size: fontsize ?? 26,
-                                    color: Colors.grey[100],
-                                  ),
-                      ))),
-            ),
-          )
+                height: length,
+                width: width,
+                child: ClayContainer(
+                    depth: elevation ?? (length / 2).round(),
+                    parentColor: backC ?? Colors.blueGrey[100],
+                    borderRadius: 4,
+                    child: Center(
+                      child: icon != null
+                          ? Icon(icon)
+                          : titleIcon != null
+                              ? Row(
+                                  children: [
+                                    SizedBox(
+                                      width: width / 10,
+                                    ),
+                                    ClayText(
+                                      name,
+                                      size: fontsize ?? 22,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(
+                                      width: width / 15,
+                                    ),
+                                    Icon(
+                                      titleIcon,
+                                      size: 20,
+                                    ),
+                                  ],
+                                )
+                              : ClayText(
+                                  name,
+                                  size: fontsize ?? 26,
+                                  color: Colors.grey,
+                                ),
+                    )),
+              ),
+            ))
         : GestureDetector(
             onTap: () {
               details == null
@@ -208,7 +207,7 @@ class roomButton extends StatelessWidget {
                                   ClayText(
                                     name,
                                     size: fontsize ?? 22,
-                                    color: Colors.grey[100],
+                                    color: Colors.grey[600],
                                   ),
                                 ],
                               )
