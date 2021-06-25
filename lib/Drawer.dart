@@ -61,7 +61,8 @@ class _standardDrawerState extends State<standardDrawer> {
             height: 3,
           ),
           contact(),
-          refer()
+          refer(),
+          aboutUs()
         ],
       ),
     );

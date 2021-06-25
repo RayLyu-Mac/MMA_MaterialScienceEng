@@ -192,33 +192,33 @@ class roomButton extends StatelessWidget {
                       });
             },
             child: Container(
-              height: length,
-              width: width,
-              child: ClayContainer(
-                  depth: elevation ?? 16,
-                  parentColor: backC ?? Colors.blueGrey[100],
-                  borderRadius: 4,
-                  child: Center(
-                    child: icon != null
-                        ? Icon(icon)
-                        : titleIcon != null
-                            ? Row(
-                                children: [
-                                  Icon(titleIcon),
-                                  ClayText(
-                                    name,
-                                    size: fontsize ?? 22,
-                                    color: Colors.grey[100],
-                                  ),
-                                ],
-                              )
-                            : ClayText(
-                                name,
-                                size: fontsize ?? 22,
-                                color: Colors.grey[500],
-                              ),
-                  )),
-            ),
+                height: length,
+                width: width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    border:
+                        Border.all(width: 6, color: backC ?? Colors.grey[300]),
+                    color: Colors.grey),
+                child: Center(
+                  child: icon != null
+                      ? Icon(icon)
+                      : titleIcon != null
+                          ? Row(
+                              children: [
+                                Icon(titleIcon),
+                                ClayText(
+                                  name,
+                                  size: fontsize ?? 22,
+                                  color: Colors.grey[100],
+                                ),
+                              ],
+                            )
+                          : ClayText(
+                              name,
+                              size: fontsize ?? 22,
+                              color: Colors.grey[500],
+                            ),
+                )),
           );
   }
 }

@@ -9,6 +9,7 @@ import 'package:mma_mse/floors/floor2.dart';
 import 'package:mma_mse/floors/floor3.dart';
 import 'package:mma_mse/Search/contact/contactMain.dart';
 import 'package:mma_mse/relatedInfo/reference.dart';
+import 'package:mma_mse/relatedInfo/AboutUsMain.dart';
 
 class extraMenu extends StatefulWidget {
   extraMenu({Key key}) : super(key: key);
@@ -91,5 +92,15 @@ class refer extends StatelessWidget {
   Widget build(BuildContext context) {
     return floor1customListTile(
         name: "Reference", pageTo: reference(), fonts: 18);
+  }
+}
+
+class aboutUs extends StatelessWidget {
+  const aboutUs({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return floor1customListTile(
+        name: "About Team", pageTo: AboutTeam(), fonts: 13);
   }
 }
