@@ -8,6 +8,7 @@ import 'package:mma_mse/floors/floor1.dart';
 import 'package:mma_mse/floors/floor2.dart';
 import 'package:mma_mse/floors/floor3.dart';
 import 'package:mma_mse/Search/contact/contactMain.dart';
+import 'package:mma_mse/relatedInfo/reference.dart';
 
 class extraMenu extends StatefulWidget {
   extraMenu({Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class _extraMenuState extends State<extraMenu> {
       leading: Icon(Icons.menu_book_rounded),
       title: Text(
         "Menu",
-        style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 23),
       ),
       children: [
         floor1customListTile(name: "Equipment", pageTo: equb_main(), fonts: 16),
@@ -45,7 +46,7 @@ class floorMenu extends StatelessWidget {
       leading: Icon(Icons.stairs_rounded),
       title: Text(
         "Floors",
-        style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 23),
       ),
       children: [
         floor1customListTile(
@@ -78,7 +79,17 @@ class contact extends StatelessWidget {
     return floor1customListTile(
         name: "Contact Info",
         pageTo: ContactMSE(),
-        fonts: 20,
+        fonts: 18,
         leadIcon: Icons.contact_page);
+  }
+}
+
+class refer extends StatelessWidget {
+  const refer({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return floor1customListTile(
+        name: "Reference", pageTo: reference(), fonts: 18);
   }
 }

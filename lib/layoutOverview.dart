@@ -35,7 +35,7 @@ class _layoutState extends State<layout> {
       body: Stack(
         children: [
           Positioned(
-              top: _screenH / 20,
+              top: _screenH / 50,
               left: _screenWidth / 25,
               child: Container(
                 constraints: BoxConstraints.expand(
@@ -48,7 +48,7 @@ class _layoutState extends State<layout> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 1.68,
+              top: _screenH / 1.74,
               left: _screenWidth / 20,
               child: fancyBut(
                   fontsize: 19,
@@ -61,7 +61,7 @@ class _layoutState extends State<layout> {
                   icon: Icons.stairs,
                   buttonName: "Floor I")),
           Positioned(
-              top: _screenH / 2.5,
+              top: _screenH / 2.7,
               left: _screenWidth / 1.7,
               child: fancyBut(
                   fontsize: 19,
@@ -74,7 +74,7 @@ class _layoutState extends State<layout> {
                   icon: Icons.stairs,
                   buttonName: "Floor II")),
           Positioned(
-              top: _screenH / 4.5,
+              top: _screenH / 5,
               left: _screenWidth / 2.4,
               child: fancyBut(
                   fontsize: 19,
@@ -87,12 +87,12 @@ class _layoutState extends State<layout> {
                   icon: Icons.stairs,
                   buttonName: "Floor III")),
           Positioned(
-              top: _screenH / 1.25,
-              left: _screenWidth / 1.6,
+              top: _screenH / 1.45,
+              left: _screenWidth / 1.4,
               child: Container(
                 constraints: BoxConstraints.expand(
-                  width: _screenWidth / 3,
-                  height: _screenH / 4,
+                  width: _screenWidth / 4,
+                  height: _screenH / 5.5,
                 ),
                 decoration: BoxDecoration(
                     image: DecorationImage(
