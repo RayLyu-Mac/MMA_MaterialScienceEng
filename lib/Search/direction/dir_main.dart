@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/Search_page/search_main.dart';
 import 'biomat/BioMatCourseList.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 import '../buttonMode.dart';
 
 class direction_main extends StatefulWidget {
@@ -62,7 +62,10 @@ class _direction_mainState extends State<direction_main> {
               ),
               IntroButtonMode(
                   str: false,
-                  pageTo: biomatCourseList(),
+                  pageTo: ZoomInPhaseD(
+                    imgPD:
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/direction/biomatC%20(1).png?raw=true",
+                  ),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/biomat.jpg?raw=true",
                   title: "Biomaterial"),
@@ -71,7 +74,10 @@ class _direction_mainState extends State<direction_main> {
               ),
               IntroButtonMode(
                   str: false,
-                  pageTo: biomatCourseList(),
+                  pageTo: ZoomInPhaseD(
+                    imgPD:
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/direction/biomatC%20(2).png?raw=true",
+                  ),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/data.jpg?raw=true",
                   title: "Data Managment"),
@@ -87,7 +93,10 @@ class _direction_mainState extends State<direction_main> {
               ),
               IntroButtonMode(
                   str: false,
-                  pageTo: biomatCourseList(),
+                  pageTo: ZoomInPhaseD(
+                    imgPD:
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/direction/biomatC%20(4).png?raw=true",
+                  ),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/smart.jpg?raw=true",
                   title: "Smart Material"),
@@ -96,7 +105,10 @@ class _direction_mainState extends State<direction_main> {
               ),
               IntroButtonMode(
                   str: false,
-                  pageTo: biomatCourseList(),
+                  pageTo: ZoomInPhaseD(
+                    imgPD:
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/direction/biomatC%20(3).png?raw=true",
+                  ),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/direction/emaf.jpg?raw=true",
                   title: "Manufacutring"),
