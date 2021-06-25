@@ -95,7 +95,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                                 width: _screenWidth / 2.3,
                                 height: _screenH / 2.5),
                             child: Text(
-                              "Emergency showers are designed to flush the user's head and body. They should not be used to flush the user's eyes because the high rate or pressure of water flow could damage the eyes in some instances. Eyewash stations are designed to flush the eye and face area only. There are combination units available that contain both features: a shower and an eyewash.",
+                              "Eyewash stations are designed to flush the eye and face area only. Use eye wash station when chemical accidentally spills to eye",
                               style: TextStyle(fontSize: _screenH / 48),
                             ),
                           )

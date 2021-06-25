@@ -146,19 +146,6 @@ class _welcomeState extends State<welcome> {
               ),
             ),
             Positioned(
-                top: _screenH / 1.35,
-                left: _screenWidth / 1.8,
-                child: RaisedButton.icon(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => reference(),
-                          ));
-                    },
-                    icon: Icon(Icons.refresh_outlined),
-                    label: Text("Check Reference"))),
-            Positioned(
                 top: _screenH / 1.8,
                 left: _screenWidth / 11,
                 child: GestureDetector(

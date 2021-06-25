@@ -1,3 +1,5 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'safty/saftyMain.dart';
 import 'equpment/equb_ava_main.dart';
 import 'tools/toolsMain.dart';
@@ -25,7 +27,7 @@ class _extraMenuState extends State<extraMenu> {
       leading: Icon(Icons.menu_book_rounded),
       title: Text(
         "Menu",
-        style: TextStyle(fontSize: 23),
+        style: TextStyle(fontSize: 22),
       ),
       children: [
         floor1customListTile(name: "Equipment", pageTo: equb_main(), fonts: 16),
@@ -47,7 +49,7 @@ class floorMenu extends StatelessWidget {
       leading: Icon(Icons.stairs_rounded),
       title: Text(
         "Floors",
-        style: TextStyle(fontSize: 23),
+        style: TextStyle(fontSize: 22),
       ),
       children: [
         floor1customListTile(
@@ -91,7 +93,11 @@ class refer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return floor1customListTile(
-        name: "Reference", pageTo: reference(), fonts: 18);
+      name: "Reference",
+      pageTo: reference(),
+      fonts: 18,
+      leadIcon: FontAwesomeIcons.checkCircle,
+    );
   }
 }
 
@@ -101,6 +107,9 @@ class aboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return floor1customListTile(
-        name: "About Team", pageTo: AboutTeam(), fonts: 13);
+        name: "About the Team",
+        pageTo: AboutTeam(),
+        fonts: 17,
+        leadIcon: FontAwesomeIcons.peopleCarry);
   }
 }
