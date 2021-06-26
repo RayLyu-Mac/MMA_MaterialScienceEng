@@ -12,6 +12,7 @@ import 'package:mma_mse/floors/floor3.dart';
 import 'package:mma_mse/Search/contact/contactMain.dart';
 import 'package:mma_mse/relatedInfo/reference.dart';
 import 'package:mma_mse/relatedInfo/AboutUsMain.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class extraMenu extends StatefulWidget {
   extraMenu({Key key}) : super(key: key);
@@ -111,5 +112,28 @@ class aboutUs extends StatelessWidget {
         pageTo: AboutTeam(),
         fonts: 17,
         leadIcon: FontAwesomeIcons.peopleCarry);
+  }
+}
+
+_launchURL() async {
+  const url = 'https://www.instagram.com/macmatlssociety/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+class Activity extends StatelessWidget {
+  const Activity({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return floor1customListTile(
+      name: "Activities",
+      web: _launchURL,
+      fonts: 17,
+      leadIcon: FontAwesomeIcons.democrat,
+    );
   }
 }

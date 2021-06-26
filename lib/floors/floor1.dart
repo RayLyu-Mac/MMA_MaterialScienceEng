@@ -256,6 +256,7 @@ class floor1customListTile extends StatelessWidget {
       @required this.fonts,
       @optionalTypeArgs this.leadIcon,
       @optionalTypeArgs this.backC,
+      @optionalTypeArgs this.web,
       key})
       : super(key: key);
   final String name;
@@ -263,6 +264,7 @@ class floor1customListTile extends StatelessWidget {
   final Widget pageTo;
   final double fonts;
   final IconData leadIcon;
+  final Function web;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -274,13 +276,15 @@ class floor1customListTile extends StatelessWidget {
               border: Border(top: BorderSide(color: Colors.grey[100]))),
           child: InkWell(
             splashColor: Colors.blue[100],
-            onTap: () => {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: pageTo,
-                      type: PageTransitionType.leftToRight))
+            onTap:web != null
+                  ? web
+                  : () => {
+               Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: pageTo,
+                          type: PageTransitionType.leftToRight))
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

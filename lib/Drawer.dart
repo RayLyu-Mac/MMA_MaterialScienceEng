@@ -1,6 +1,5 @@
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:flutter/material.dart';
-import 'relatedInfo/referenceData.dart';
 
 class standardDrawer extends StatefulWidget {
   final String header;
@@ -61,8 +60,9 @@ class _standardDrawerState extends State<standardDrawer> {
             height: 3,
           ),
           contact(),
+          Activity(),
           refer(),
-          aboutUs()
+          aboutUs(),
         ],
       ),
     );
