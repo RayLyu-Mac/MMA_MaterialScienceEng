@@ -66,6 +66,7 @@ class _floor1State extends State<floor1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey[200].withOpacity(0.9),
         appBar: AppBar(
           actions: [
             IconButton(

@@ -72,7 +72,7 @@ class roomButton extends StatelessWidget {
                                     shape: Border.all(
                                       width: 4,
                                       style: BorderStyle.solid,
-                                      color: Colors.grey[300],
+                                      color: Colors.white,
                                     ),
                                     contentPadding:
                                         EdgeInsets.fromLTRB(20, 15, 25, 35),
@@ -104,7 +104,7 @@ class roomButton extends StatelessWidget {
                   child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
-                          border: Border.all(width: 5, color: Colors.grey[200]),
+                          border: Border.all(width: 5, color: Colors.grey[50]),
                           color: Colors.grey),
                       child: Center(
                         child: icon != null
@@ -162,7 +162,7 @@ class roomButton extends StatelessWidget {
                                   shape: Border.all(
                                     width: 4,
                                     style: BorderStyle.solid,
-                                    color: Colors.grey[300],
+                                    color: Colors.grey[50],
                                   ),
                                   contentPadding:
                                       EdgeInsets.fromLTRB(20, 15, 25, 35),
@@ -197,7 +197,7 @@ class roomButton extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     border:
-                        Border.all(width: 6, color: backC ?? Colors.grey[300]),
+                        Border.all(width: 6, color: backC ?? Colors.grey[50]),
                     color: Colors.grey),
                 child: Center(
                   child: icon != null
