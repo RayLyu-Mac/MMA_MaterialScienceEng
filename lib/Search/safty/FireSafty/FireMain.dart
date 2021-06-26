@@ -121,6 +121,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                                 Navigator.push(
                                     context,
                                     PageTransition(
+                                        type: PageTransitionType.leftToRight,
                                         duration: Duration(milliseconds: 700),
                                         child: eyewashStation(
                                             eye: false, fire: true)));
