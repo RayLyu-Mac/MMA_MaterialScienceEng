@@ -50,10 +50,10 @@ class _STDCheckState extends State<STDCheck> {
           ),
           Container(
               width: _screenWidth / 1.1,
-              height: _screenH / 1.2,
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.8),
                 border: Border.all(width: 7, color: Colors.grey[200]),
+                borderRadius: BorderRadius.circular(15),
               ),
               child: Column(children: [
                 SizedBox(
@@ -161,13 +161,12 @@ class _STDCheckState extends State<STDCheck> {
           ),
           Container(
             width: _screenWidth / 1.1,
-            height: _screenH / 0.8,
             padding: EdgeInsets.fromLTRB(_screenWidth / 12, _screenH / 40,
                 _screenWidth / 12, _screenH / 30),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              border: Border.all(width: 7, color: Colors.grey[200]),
-            ),
+                color: Colors.white.withOpacity(0.8),
+                border: Border.all(width: 10, color: Colors.grey[200]),
+                borderRadius: BorderRadius.circular(15)),
             child: Column(
               children: [
                 SizedBox(
@@ -304,10 +303,10 @@ class _STDCheckState extends State<STDCheck> {
           ),
           Container(
             width: _screenWidth / 1.1,
-            height: _screenH / 1.25,
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.8),
               border: Border.all(width: 7, color: Colors.grey[200]),
+              borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
               children: [
