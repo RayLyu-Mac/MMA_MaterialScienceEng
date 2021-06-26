@@ -31,6 +31,7 @@ class _toolMainState extends State<toolMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           title: Text("Tools Main"),
           backgroundColor: Colors.black,

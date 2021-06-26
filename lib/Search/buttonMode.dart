@@ -47,8 +47,8 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
     Map<String, List> position = {
       "a": [_screenWidth / 19, _screenH / 50, _screenH / 2.8],
       "b": [_screenWidth / 1.9, _screenH / 50, _screenH / 5],
-      "c": [_screenWidth / 1.9, _screenH / 4.3, _screenH / 2.8],
-      "d": [_screenWidth / 19, _screenH / 2.6, _screenH / 5],
+      "c": [_screenWidth / 1.9, _screenH / 4.2, _screenH / 2.8],
+      "d": [_screenWidth / 19, _screenH / 2.5, _screenH / 5],
       "e": [_screenWidth / 1.9, _screenH / 1.6, _screenH / 5],
       "f": [_screenWidth / 19, _screenH / 2.6, _screenH / 5]
     };
@@ -84,7 +84,8 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                 ),
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(25),
+                    border: Border.all(width: 5, color: Colors.grey[600]),
                     image: DecorationImage(
                         image: NetworkImage(widget.backImg),
                         fit: BoxFit.cover)),
