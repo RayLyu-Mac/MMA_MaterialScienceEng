@@ -1,5 +1,6 @@
 import 'AboutUSData.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class AboutTeam extends StatefulWidget {
   AboutTeam({Key key}) : super(key: key);
@@ -34,7 +35,18 @@ class _AboutTeamState extends State<AboutTeam> {
     return Scaffold(
       backgroundColor: Colors.indigo[50],
       appBar: AppBar(
-        title: Text("About the team"),
+        title: TextLiquidFill(
+          text: "About the team",
+          loadDuration: Duration(milliseconds: 1650),
+          waveDuration: Duration(
+            milliseconds: 850,
+          ),
+          waveColor: Colors.grey[200],
+          textStyle: TextStyle(
+            fontSize: _screenH / 23,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
         backgroundColor: Colors.black,
       ),
       body: Container(
