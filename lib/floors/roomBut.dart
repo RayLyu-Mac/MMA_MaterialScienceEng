@@ -92,7 +92,7 @@ class roomButton extends StatelessWidget {
                                               height: length / 4,
                                               icon: FontAwesomeIcons.restroom,
                                               buttonName:
-                                                  "Check Facility iniside the Rood")
+                                                  "Check Facility iniside the Room")
                                           : Container()
                                     ],
                                   )));
@@ -105,10 +105,13 @@ class roomButton extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
                           border: Border.all(width: 5, color: Colors.grey[50]),
-                          color: Colors.grey),
+                          color: backC ?? Colors.grey),
                       child: Center(
                         child: icon != null
-                            ? Icon(icon)
+                            ? Icon(
+                                icon,
+                                size: 27,
+                              )
                             : titleIcon != null
                                 ? Row(
                                     children: [
@@ -196,12 +199,14 @@ class roomButton extends StatelessWidget {
                 width: width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    border:
-                        Border.all(width: 6, color: backC ?? Colors.grey[50]),
-                    color: Colors.grey),
+                    border: Border.all(width: 6, color: Colors.grey[50]),
+                    color: backC ?? Colors.grey),
                 child: Center(
                   child: icon != null
-                      ? Icon(icon)
+                      ? Icon(
+                          icon,
+                          size: 27,
+                        )
                       : titleIcon != null
                           ? Row(
                               children: [
@@ -216,7 +221,7 @@ class roomButton extends StatelessWidget {
                           : ClayText(
                               name,
                               size: fontsize ?? 22,
-                              color: Colors.grey[500],
+                              color: Colors.grey[100],
                             ),
                 )),
           );

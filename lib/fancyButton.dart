@@ -30,13 +30,13 @@ class _fancyButState extends State<fancyBut> {
           BoxConstraints.expand(width: widget.width, height: widget.height),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(widget.height / 2),
-          border: Border.all(color: Colors.grey[200], width: 5)),
+          border: Border.all(color: Colors.grey[300], width: 5)),
       child: FlatButton.icon(
           splashColor: Colors.redAccent[100],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(widget.height / 2),
           ),
-          color: Colors.grey[600].withOpacity(0.7),
+          color: Colors.grey[600].withOpacity(0.8),
           onPressed: () {
             Navigator.push(
                 context,

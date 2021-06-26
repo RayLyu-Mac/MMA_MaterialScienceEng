@@ -103,16 +103,16 @@ class _floor1State extends State<floor1> {
                 name: "130"),
             widget.eye || saftyI > 0
                 ? Positioned(
-                    top: _screenH / 2.75,
-                    left: _screenWidth / 30,
+                    top: _screenH / 2.9,
+                    left: _screenWidth / 35,
                     child: Container(
-                      width: _screenWidth / 2,
-                      height: _screenH / 12,
+                      width: _screenWidth / 1.8,
+                      height: _screenH / 9,
                       child: Row(
                         children: [
                           roomButton(
-                            length: _screenH / 12,
-                            width: _screenWidth / 6,
+                            length: _screenH / 9,
+                            width: _screenWidth / 5.5,
                             backC: Colors.redAccent[100].withOpacity(0.8),
                             icon: Icons.remove_red_eye_rounded,
                             detailTitle: "Room 129: Eye shower",
@@ -121,15 +121,15 @@ class _floor1State extends State<floor1> {
                                 "Emergency eye shower when chemical spills",
                           ),
                           SizedBox(
-                            width: _screenWidth / 20,
+                            width: _screenWidth / 35,
                           ),
                           roomButton(
                             detailTitle: "Room 129: Chemical Shower",
                             details:
                                 "Emergency body shower when chemical spills",
-                            length: _screenH / 12,
+                            length: _screenH / 9,
                             pageTo: room129(),
-                            width: _screenWidth / 6,
+                            width: _screenWidth / 5.5,
                             backC: Colors.redAccent[100].withOpacity(0.8),
                             icon: Icons.shower_rounded,
                           )
@@ -159,9 +159,10 @@ class _floor1State extends State<floor1> {
                     detailTitle: "Fire Extinguisher",
                     details: "Emergency for fire situation",
                     left: _screenWidth / 2.3,
-                    top: _screenH / 6,
-                    length: _screenH / 20,
-                    width: _screenWidth / 10,
+                    top: _screenH / 8,
+                    length: _screenH / 13,
+                    width: _screenWidth / 8.5,
+                    backC: Colors.redAccent[100],
                     icon: Icons.fire_extinguisher,
                   )
                 : Positioned(
