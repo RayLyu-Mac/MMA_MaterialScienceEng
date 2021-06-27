@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'data.dart';
 
@@ -13,12 +15,14 @@ class _STDCheckState extends State<STDCheck> {
   TextEditingController meu = TextEditingController();
   TextEditingController sigma = TextEditingController();
   TextEditingController x = TextEditingController();
+  TextEditingController sampn = TextEditingController();
+  TextEditingController sampmean = TextEditingController();
   TextEditingController pcn = TextEditingController();
   TextEditingController pck = TextEditingController();
   double _screenWidth;
   double _screenH;
   String output;
-  String mz;
+  double mz;
   String pc;
   double ci95;
   double ci99;
@@ -210,32 +214,65 @@ class _STDCheckState extends State<STDCheck> {
                         InputDecoration(hintText: "Sigma: Standard Deviation"),
                   ),
                 ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 30,
+                      _screenWidth / 10, _screenH / 30),
+                  width: _screenWidth / 1.1,
+                  height: _screenH / 10,
+                  child: TextField(
+                    controller: sampn,
+                    decoration:
+                        InputDecoration(hintText: "Sample Number: optional"),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 30,
+                      _screenWidth / 10, _screenH / 30),
+                  width: _screenWidth / 1.1,
+                  height: _screenH / 10,
+                  child: TextField(
+                    controller: sampmean,
+                    decoration:
+                        InputDecoration(hintText: "Sample Mean: optional"),
+                  ),
+                ),
                 RaisedButton.icon(
                     onPressed: () {
                       setState(() {
                         double meuv = double.parse(meu.text);
                         double sigmav = double.parse(sigma.text);
                         double xv = double.parse(x.text);
-                        mz = ((xv - meuv) / sigmav).toString();
-                        ci68 = sigmav * 0.47;
-                        ci95 = sigmav * 1.96;
-                        ci99 = sigmav * 2.33;
+
+                        double sn = double.parse(sampn.text);
+                        double sm = double.parse(sampmean.text);
+                        if (sn != null) {
+                          mz = ((sm - xv) / sigmav / sqrt(sn));
+                          ci68 = sigmav * 0.47 / sqrt(sn);
+                          ci95 = sigmav * 1.96 / sqrt(sn);
+                          ci99 = sigmav * 2.33 / sqrt(sn);
+                        } else {
+                          mz = ((xv - meuv) / sigmav);
+                          ci68 = sigmav * 0.47;
+                          ci95 = sigmav * 1.96;
+                          ci99 = sigmav * 2.33;
+                        }
                       });
                     },
                     icon: Icon(Icons.calculate_sharp),
                     label: Text("Calculate the Z value")),
                 SizedBox(
-                  height: _screenH / 45,
+                  height: _screenH / 35,
                 ),
                 Container(
                   child: Text(
-                    "Z Value after modified: " + (mz ?? "--"),
+                    "Z Value after modified: " +
+                        ((mz ?? 99999).toStringAsExponential(2) ?? "--"),
                     style: TextStyle(
                         fontSize: _screenH / 45, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
-                  height: _screenH / 55,
+                  height: _screenH / 35,
                 ),
                 Container(
                   width: _screenWidth / 1.3,
