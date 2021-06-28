@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/buttonMode.dart';
 
 import 'tooData.dart';
@@ -32,13 +33,24 @@ class _toolMainState extends State<toolMain> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          title: Text("Tools Main"),
-          backgroundColor: Colors.black,
-        ),
         body: SafeArea(
           child: Stack(
             children: [
+              Positioned(
+                  top: _screenH / 20,
+                  left: _screenWidth / 15,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Material \nTool Boxs",
+                        style: TextStyle(
+                            fontSize: _screenH / 22,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                      Icon(FontAwesomeIcons.toolbox)
+                    ],
+                  )),
               for (var i = 0; i < toolDataList.length; i++)
                 IntroButtonMode(
                   str: true,
