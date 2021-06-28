@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/Search_page/search_main.dart';
-import 'biomat/BioMatCourseList.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 import '../buttonMode.dart';
 
@@ -26,6 +25,7 @@ class _direction_mainState extends State<direction_main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: [

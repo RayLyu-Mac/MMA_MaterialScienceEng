@@ -56,9 +56,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
         ? Positioned(
             left: position[widget.positionCode][0] ?? widget.top,
             top: position[widget.positionCode][1] ?? widget.left,
-            child: InkWell(
-              hoverColor: Colors.white.withOpacity(0.4),
-              splashColor: Colors.white.withOpacity(0.2),
+            child: GestureDetector(
               onTap: () {
                 Navigator.push(
                     context,
@@ -94,42 +92,38 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                         fit: BoxFit.cover)),
               ),
             ))
-        : Container(
-            alignment: Alignment.center,
-            constraints: BoxConstraints.expand(
-                width: _screenWidth / 2.7, height: _screenH / 2.8),
-            decoration: BoxDecoration(
-                color: const Color(0xff7c94b6),
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(offset: const Offset(4, 4), color: Colors.blue[100])
-                ],
-                image: DecorationImage(
-                    colorFilter: new ColorFilter.mode(
-                        Colors.black.withOpacity(0.4), BlendMode.dstATop),
-                    image: NetworkImage(widget.backImg),
-                    fit: BoxFit.cover)),
-            child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                        duration: const Duration(milliseconds: 500),
-                        child: widget.pageTo,
-                        type: PageTransitionType.leftToRight,
-                      ));
-                },
-                child: Container(
-                  decoration: BoxDecoration(color: Colors.green),
-                  child: Text(
-                    widget.title ?? "_",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: widget.fontsize != null
-                          ? widget.fontsize
-                          : _screenH / 35,
-                      fontWeight: FontWeight.bold,
-                    ),
+        : GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                    duration: const Duration(milliseconds: 700),
+                    child: widget.pageTo,
+                    type: PageTransitionType.scale,
+                    alignment: Alignment.bottomCenter,
+                  ));
+            },
+            child: Container(
+                alignment: Alignment.center,
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 2.7, height: _screenH / 2.8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(width: 6, color: Colors.grey[200]),
+                    image: DecorationImage(
+                        colorFilter: new ColorFilter.mode(
+                            Colors.white.withOpacity(0.6), BlendMode.dstATop),
+                        image: NetworkImage(widget.backImg),
+                        fit: BoxFit.cover)),
+                child: Text(
+                  widget.title ?? "_",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: widget.fontsize != null
+                        ? widget.fontsize
+                        : _screenH / 35,
+                    fontWeight: FontWeight.bold,
                   ),
                 )),
           );

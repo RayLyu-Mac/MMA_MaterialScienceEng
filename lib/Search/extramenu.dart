@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'safty/saftyMain.dart';
 import 'equpment/equb_ava_main.dart';
 import 'tools/toolsMain.dart';
-import 'room/room_main.dart';
+import 'direction/dir_main.dart';
 import 'Test/Test_Page/test_main.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor1.dart';
@@ -47,7 +47,13 @@ class _extraMenuState extends State<extraMenu> {
           name: "   Tools",
           pageTo: toolMain(),
           fonts: 16,
-          leadIcon: FontAwesomeIcons.toolbox,
+          leadIcon: FontAwesomeIcons.tools,
+        ),
+        floor1customListTile(
+          name: "   Tech Elective",
+          pageTo: direction_main(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.paperPlane,
         ),
         floor1customListTile(
           name: "   Safety",
