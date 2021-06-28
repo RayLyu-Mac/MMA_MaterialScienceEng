@@ -18,9 +18,11 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
         warnNote:
             "•Make Sure the smaples used have been properly polished and etched",
         instruction: KeyenceMicroInstru(),
+        fontSize: 46,
         backC: Colors.purple[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",
-        intro: "Both Keyence and Nikon Microscope perform same function");
+        intro:
+            "Microscope which can help the zoom in the sample so that the sample can be observe the microstructure then doing the further analysis.  In MSE faculty, there are two microscope which are Nikon and Keyence microscope.\n \nBoth Keyence and Nikon Microscope perform same function");
   }
 }

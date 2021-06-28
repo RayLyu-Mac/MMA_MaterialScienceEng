@@ -37,6 +37,7 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
       backC: Colors.green[50],
       instruction: BulkAbraCutterInstru(),
       dash: true,
+      fontSize: 46,
       extraIcon: FontAwesomeIcons.fan,
       extraPage: BulkAbrasiveCutter(),
       toolTip: "Gear Intro",
@@ -48,14 +49,5 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
           "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\nThe bulk abrasive cutter are used for big sample sectioning, if you are looking for small and delicated cutting please use precision cutter.",
       theory: automaticModeInterFaceButton(),
     );
-  }
-}
-
-_launchURL() async {
-  const url = 'https://msebooking.mcmaster.ca/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }

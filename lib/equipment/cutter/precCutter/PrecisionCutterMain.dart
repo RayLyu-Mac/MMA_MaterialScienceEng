@@ -38,6 +38,7 @@ class _PcutterMainState extends State<PcutterMain> {
       dash: true,
       extraIcon: FontAwesomeIcons.fan,
       extraPage: precisionBlade(),
+      fontSize: 44,
       toolTip: "Gear Intro",
       warnVido: "gPepaJjjSRg",
       img:

@@ -25,6 +25,7 @@ class _StruesMainState extends State<StruesMain> {
             "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
         instruction: struesinstruction(),
         theory: mountPressBackG(),
+        fontSize: 46,
         backC: Colors.indigo[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true",

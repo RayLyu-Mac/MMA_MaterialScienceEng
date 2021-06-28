@@ -23,12 +23,13 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
       backC: Colors.green[50],
       instruction: BuehlerCutterInstru(),
       dash: true,
+      fontSize: 44,
       warnNote:
           "When using the Precision Cutter although there is a safety shield; safety glasses are required.\nPlease be familiar with the parameter you are going to set",
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
       intro:
-          "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\nThe Buehler precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
+          "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\n\nThe Buehler precision cutter is used for small and delicate cut, if you are looking for sectioning machine for bigger sample please use abrasive cutter",
       theory: BueDashBoard(),
     );
   }

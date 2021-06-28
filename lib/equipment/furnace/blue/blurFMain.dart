@@ -25,16 +25,16 @@ class _BlueFurnaceState extends State<BlueFurnace> {
       title: "Blue Furnace",
       backC: Colors.red[50],
       instruction: BlueFurnaceInstr(),
-      dash: true,
       extraIcon: FontAwesomeIcons.fire,
       extraPage: ExtingshSymbols(),
       toolTip: "Fire Safety",
+      fontSize: 50,
       warnNote:
           "•Make sure the furnace is properly grounded and no loose wires are connected to furnace\n•Extra cautios need to be taken since material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occues leave the room and contact technicians",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
       intro:
-          "Furnace is used to heat the sample in order to change the microstructure of the samples, during the cooling down process, changing the cooling rate can produce sample with different microstructure and characteristic.\nSiC Furnace has the maximum temp of 1450 C for Blur furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
+          "Furnace is used to heat the sample in order to change the microstructure of the samples, during the cooling down process, changing the cooling rate can produce sample with different microstructure and characteristic.\nSiC Furnace has the maximum temp of 1450 C for Blue furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
       theory: PhaseDiag(),
     );
   }
