@@ -28,14 +28,33 @@ class _extraMenuState extends State<extraMenu> {
       leading: Icon(Icons.menu_book_rounded),
       title: Text(
         "Menu",
-        style: TextStyle(fontSize: 22),
+        style: TextStyle(fontSize: 20),
       ),
       children: [
-        floor1customListTile(name: "Equipment", pageTo: equb_main(), fonts: 16),
-        floor1customListTile(name: "Case Study", pageTo: test_ava(), fonts: 16),
-        floor1customListTile(name: "Tools", pageTo: toolMain(), fonts: 16),
-        floor1customListTile(name: "Safety", pageTo: saftyMain(), fonts: 16),
-        floor1customListTile(name: "Rooms", pageTo: room_main(), fonts: 16)
+        floor1customListTile(
+          name: "   Equipment",
+          pageTo: equb_main(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.microscope,
+        ),
+        floor1customListTile(
+          name: "   Case Study",
+          pageTo: test_ava(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.briefcase,
+        ),
+        floor1customListTile(
+          name: "   Tools",
+          pageTo: toolMain(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.toolbox,
+        ),
+        floor1customListTile(
+          name: "   Safety",
+          pageTo: saftyMain(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.lifeRing,
+        ),
       ],
     );
   }
@@ -50,22 +69,25 @@ class floorMenu extends StatelessWidget {
       leading: Icon(Icons.stairs_rounded),
       title: Text(
         "Floors",
-        style: TextStyle(fontSize: 22),
+        style: TextStyle(fontSize: 20),
       ),
       children: [
         floor1customListTile(
-            name: "Floor I",
+            name: "   Floor I",
+            leadIcon: Icons.stairs_rounded,
             pageTo: floor1(
               fire: false,
               eye: false,
             ),
             fonts: 16),
         floor1customListTile(
-            name: "Floor II",
+            name: "   Floor II",
+            leadIcon: Icons.stairs_rounded,
             pageTo: floor2(fire: false, eye: false),
             fonts: 16),
         floor1customListTile(
-            name: "Floor III",
+            name: "   Floor III",
+            leadIcon: Icons.stairs_rounded,
             pageTo: floor3(
               eye: false,
             ),
@@ -81,24 +103,10 @@ class contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return floor1customListTile(
-        name: "Contact Info",
+        name: " Contact Info",
         pageTo: ContactMSE(),
-        fonts: 18,
+        fonts: 20,
         leadIcon: Icons.contact_page);
-  }
-}
-
-class refer extends StatelessWidget {
-  const refer({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return floor1customListTile(
-      name: "Reference",
-      pageTo: reference(),
-      fonts: 18,
-      leadIcon: FontAwesomeIcons.checkCircle,
-    );
   }
 }
 
@@ -107,11 +115,26 @@ class aboutUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return floor1customListTile(
-        name: "About the Team",
-        pageTo: AboutTeam(),
-        fonts: 17,
-        leadIcon: FontAwesomeIcons.peopleCarry);
+    return ExpansionTile(
+      leading: Icon(FontAwesomeIcons.infoCircle),
+      title: Text(
+        "Other Info",
+        style: TextStyle(fontSize: 20),
+      ),
+      children: [
+        floor1customListTile(
+            name: "   About the Team",
+            pageTo: AboutTeam(),
+            fonts: 19,
+            leadIcon: FontAwesomeIcons.peopleCarry),
+        floor1customListTile(
+          name: "   Reference",
+          pageTo: reference(),
+          fonts: 19,
+          leadIcon: FontAwesomeIcons.checkCircle,
+        )
+      ],
+    );
   }
 }
 
@@ -130,9 +153,9 @@ class Activity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return floor1customListTile(
-      name: "Activities",
+      name: "  Activities",
       web: _launchURL,
-      fonts: 17,
+      fonts: 21,
       leadIcon: FontAwesomeIcons.democrat,
     );
   }

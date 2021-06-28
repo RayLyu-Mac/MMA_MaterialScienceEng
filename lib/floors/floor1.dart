@@ -307,8 +307,7 @@ class floor1customListTile extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(22, 5, 5, 5),
                       child: Text(
                         name,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: fonts),
+                        style: TextStyle(fontSize: fonts),
                       ),
                     )
                   ],

@@ -32,37 +32,37 @@ class _standardDrawerState extends State<standardDrawer> {
       child: ListView(
         children: [
           DrawerHeader(
+              padding: EdgeInsets.fromLTRB(16.0, 8, 16.0, 4),
               child: Column(
-            children: [
-              Text(
-                widget.header,
-                style: TextStyle(
-                    fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-              ),
-              Container(
-                constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.5, height: _screenWidth / 4),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assest/logocolor.png"))),
-              )
-            ],
-          )),
+                children: [
+                  Text(
+                    widget.header,
+                    style: TextStyle(
+                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.5, height: _screenWidth / 4.4),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assest/logocolor.png"))),
+                  )
+                ],
+              )),
           SizedBox(
-            height: _screenH / 40,
+            height: _screenH / 35,
           ),
           floorMenu(),
           SizedBox(
             height: 3,
           ),
           extraMenu(),
+          aboutUs(),
           SizedBox(
             height: 3,
           ),
           contact(),
           Activity(),
-          refer(),
-          aboutUs(),
         ],
       ),
     );
