@@ -1,5 +1,8 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'layout_overview.dart';
 
 class standardDrawer extends StatefulWidget {
   final String header;
@@ -63,6 +66,29 @@ class _standardDrawerState extends State<standardDrawer> {
           ),
           contact(),
           Activity(),
+          SizedBox(
+            height: _screenH / 10,
+          ),
+          Container(
+            constraints: BoxConstraints.expand(
+                width: _screenWidth / 8, height: _screenH / 10),
+            child: RaisedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: layout_overview(),
+                          type: PageTransitionType.leftToRight));
+                },
+                icon: Icon(FontAwesomeIcons.signOutAlt),
+                color: Colors.grey[200],
+                label: Text(
+                  "Back to Layout",
+                  style: TextStyle(
+                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                )),
+          ),
         ],
       ),
     );
