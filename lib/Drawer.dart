@@ -67,7 +67,7 @@ class _standardDrawerState extends State<standardDrawer> {
           contact(),
           Activity(),
           SizedBox(
-            height: _screenH / 10,
+            height: _screenH / 5,
           ),
           Container(
             constraints: BoxConstraints.expand(
