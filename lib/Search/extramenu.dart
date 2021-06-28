@@ -56,6 +56,17 @@ class _extraMenuState extends State<extraMenu> {
           leadIcon: FontAwesomeIcons.paperPlane,
         ),
         floor1customListTile(
+          name: "   Activities",
+          web: _launchURL,
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.democrat,
+        ),
+        floor1customListTile(
+            name: "   Contact Info",
+            pageTo: ContactMSE(),
+            fonts: 16,
+            leadIcon: Icons.contact_page),
+        floor1customListTile(
           name: "   Safety",
           pageTo: saftyMain(),
           fonts: 16,
@@ -103,19 +114,6 @@ class floorMenu extends StatelessWidget {
   }
 }
 
-class contact extends StatelessWidget {
-  const contact({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return floor1customListTile(
-        name: " Contact Info",
-        pageTo: ContactMSE(),
-        fonts: 20,
-        leadIcon: Icons.contact_page);
-  }
-}
-
 class aboutUs extends StatelessWidget {
   const aboutUs({Key key}) : super(key: key);
 
@@ -150,19 +148,5 @@ _launchURL() async {
     await launch(url);
   } else {
     throw 'Could not launch $url';
-  }
-}
-
-class Activity extends StatelessWidget {
-  const Activity({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return floor1customListTile(
-      name: "  Activities",
-      web: _launchURL,
-      fonts: 21,
-      leadIcon: FontAwesomeIcons.democrat,
-    );
   }
 }

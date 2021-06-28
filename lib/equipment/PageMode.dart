@@ -26,9 +26,11 @@ class EqubPageMode extends StatefulWidget {
   final IconData extraIcon;
   final Widget extraPage;
   final String toolTip;
+  final double fontSize;
   EqubPageMode(
       {Key key,
       @required this.title,
+      @optionalTypeArgs this.fontSize,
       @optionalTypeArgs this.toolTip,
       @optionalTypeArgs this.extraIcon,
       @optionalTypeArgs this.extraPage,
@@ -101,14 +103,14 @@ class _EqubPageModeState extends State<EqubPageMode> {
           children: [
             Positioned(
                 top: _screenH / 45,
-                left: _screenWidth / 1.9,
+                left: _screenWidth / 1.95,
                 child: Text(
                   'Introduction',
                   style: TextStyle(
                       fontSize: _screenH / 30, fontWeight: FontWeight.bold),
                 )),
             Positioned(
-              top: _screenH / 16,
+              top: _screenH / 13,
               left: _screenWidth / 1.95,
               child: Container(
                   constraints: BoxConstraints.expand(
@@ -116,7 +118,8 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   child: Text(
                     widget.intro,
                     style: TextStyle(
-                        fontSize: _screenH / 55, fontWeight: FontWeight.bold),
+                        fontSize: _screenH / (widget.fontSize ?? 55),
+                        fontWeight: FontWeight.bold),
                   )),
             ),
             Positioned(

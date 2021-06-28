@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 
 class DigitalRWMain extends StatefulWidget {
   DigitalRWMain(
@@ -22,8 +23,10 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
         title: "Digital Rockwell Hardness Tester",
         warnVido: "gPepaJjjSRg",
         extraIcon: FontAwesomeIcons.fileCsv,
+        theory: hardness_test_bg(),
         extraPage: hardnessData(),
         toolTip: "Hardness Conversion Sheet",
+        fontSize: 48,
         instruction: DigitalRWMain(),
         backC: Colors.blueGrey[50],
         img:

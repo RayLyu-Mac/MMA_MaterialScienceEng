@@ -24,6 +24,7 @@ class _AutomaticMicroHardnessMainState
         extraPage: hardnessData(),
         toolTip: "Hardness Conversion Sheet",
         instruction: MHTinstruction(),
+        fontSize: 46,
         backC: Colors.blueGrey[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true",

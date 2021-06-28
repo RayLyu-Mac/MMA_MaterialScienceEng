@@ -24,6 +24,7 @@ class _LlyoldTensileTesterState extends State<LlyoldTensileTester> {
         warnVido: "bdunyatEEG0",
         instruction: LlyoTensileinstruction(),
         theory: tensile_test_bg(),
+        fontSize: 47,
         backC: Colors.amber[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Llyold.png?raw=true",
