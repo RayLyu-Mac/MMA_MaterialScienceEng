@@ -64,12 +64,16 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/1.png?raw=true",
               name: "Torsion Tester"),
           roomButton(
               top: _screenWidth / 40,
               left: _screenH / 2.1,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true",
               pageTo: tensile_test(
                 ori: true,
               ),
@@ -79,6 +83,8 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 1.2,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true",
               pageTo: tensile_test(
                 ori: true,
               ),
@@ -94,12 +100,16 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/f.png?raw=true",
               name: "Furnace"),
           roomButton(
               top: _screenWidth / 8,
               left: _screenH / 0.77,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true",
               pageTo: DigitalRWMain(
                 ori: true,
               ),
@@ -109,18 +119,24 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 0.77,
               length: _screenH / 3,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/3.png?raw=true",
               name: "Compression Tester"),
           roomButton(
               top: _screenWidth / 4,
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/f.png?raw=true",
               name: "Furnace"),
           roomButton(
               top: _screenWidth / 2.7,
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true",
               pageTo: charpy_test(
                 ori: true,
               ),
@@ -130,12 +146,16 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 2.2,
               length: _screenH / 6.5,
               width: _screenWidth / 6,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/2.png?raw=true",
               name: "Inert Gas Furnace"),
           roomButton(
               top: _screenWidth / 2.7,
               left: _screenH / 1.3,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Llyold.png?raw=true",
               pageTo: LlyoldTensileTester(
                 ori: true,
               ),
