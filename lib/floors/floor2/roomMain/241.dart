@@ -12,11 +12,13 @@ class room241Main extends StatefulWidget {
 class _room241MainState extends State<room241Main> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Room 240"),
-        backgroundColor: Colors.black,
-      ),
-    );
+    return roomMode(
+        roomName: "Room 241: Microscope Room",
+        roomTi: "Room 241: \nMicroscope Room",
+        roomLayO: room241(),
+        roomCont:
+            "Equipments:\n1. Manual Micro Hardness Tester\n2. Nikon Microscope\n3. Keyence Microscope",
+        roomImg:
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/241.png?raw=true");
   }
 }

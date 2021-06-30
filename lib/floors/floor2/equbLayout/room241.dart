@@ -40,10 +40,75 @@ class _room241State extends State<room241> {
       ),
       body: Row(
         children: [
+          SizedBox(
+            width: _screenWidth / 20,
+          ),
           Column(
             children: [
+              SizedBox(
+                height: _screenH / 15,
+              ),
               roomButton(
-                length: _screenH / 8,
+                length: _screenH / 5,
+                width: _screenWidth / 2.6,
+                name: "Nikon Microscope",
+                pageTo: NikonMicro(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
+              ),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              roomButton(
+                length: _screenH / 5,
+                width: _screenWidth / 2.6,
+                name: "Light Microscope",
+              ),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              roomButton(
+                length: _screenH / 5,
+                width: _screenWidth / 2.6,
+                name: "Nikon Microscope",
+                pageTo: NikonMicro(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
+              ),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+            ],
+          ),
+          SizedBox(
+            width: _screenWidth / 8,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              roomButton(
+                length: _screenH / 5,
+                width: _screenWidth / 2.6,
+                name: "Light Microscope",
+              ),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              roomButton(
+                length: _screenH / 5,
+                width: _screenWidth / 2.6,
+                name: "Keyence Microscope",
+                pageTo: KeyenceMMain(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",
+              ),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              roomButton(
+                length: _screenH / 5,
                 width: _screenWidth / 2.6,
                 name: "Manual Micro Hardness",
                 pageTo: ManualMicroHardness(),
