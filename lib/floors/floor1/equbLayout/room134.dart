@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/tensileTestMain.dart';
+import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
 import 'package:mma_mse/equipment/CharpyImpact/Charpy.dart';
 import 'package:mma_mse/equipment/Hardness/digitalRW/digitalRWMain.dart';
 import 'package:mma_mse/floors/roomBut.dart';
@@ -15,15 +15,14 @@ class room134LayO extends StatefulWidget {
 class _room134LayOState extends State<room134LayO> {
   double _screenWidth;
   double _screenH;
-  double adjust;
 
   @override
   void initState() {
-    super.initState();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
+    super.initState();
   }
 
   @override
@@ -45,15 +44,11 @@ class _room134LayOState extends State<room134LayO> {
     if (_screenWidth / _screenH > 1.8) {
       _screenWidth = _screenWidth * 0.95;
       _screenH = _screenH * 1.15;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    print(_screenWidth / _screenH);
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
@@ -74,14 +69,14 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 2.1,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: TensileTest(),
+              pageTo: tensile_test(),
               name: "UTM I"),
           roomButton(
               top: _screenWidth / 40,
               left: _screenH / 1.2,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: TensileTest(),
+              pageTo: tensile_test(),
               name: "UTM II"),
           roomButton(
               top: _screenWidth / 5.5,

@@ -27,9 +27,11 @@ class EqubPageMode extends StatefulWidget {
   final Widget extraPage;
   final String toolTip;
   final double fontSize;
+  final bool oritation;
   EqubPageMode(
       {Key key,
       @required this.title,
+      @optionalTypeArgs this.oritation,
       @optionalTypeArgs this.fontSize,
       @optionalTypeArgs this.toolTip,
       @optionalTypeArgs this.extraIcon,
@@ -61,6 +63,20 @@ class _EqubPageModeState extends State<EqubPageMode> {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+  }
+
+  @override
+  dispose() {
+    widget.oritation != null
+        ? SystemChrome.setPreferredOrientations([
+            DeviceOrientation.landscapeRight,
+            DeviceOrientation.landscapeLeft,
+          ])
+        : SystemChrome.setPreferredOrientations([
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown,
+          ]);
+    super.dispose();
   }
 
   @override

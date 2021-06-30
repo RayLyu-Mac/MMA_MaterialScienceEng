@@ -1,6 +1,6 @@
 import 'roomMode.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/floors/floor2/room239A.dart';
+import 'package:mma_mse/floors/floor2/equbLayout/room239A.dart';
 
 class room239AMain extends StatefulWidget {
   room239AMain({Key key}) : super(key: key);

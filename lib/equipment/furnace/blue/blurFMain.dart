@@ -8,9 +8,11 @@ import 'package:mma_mse/Search/tools/phaseDiagram/phaseDMain.dart';
 class BlueFurnace extends StatefulWidget {
   final String location;
   final String emailTo;
+  final bool ori;
   BlueFurnace(
       {Key key,
       @optionalTypeArgs this.location,
+      @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
 
@@ -23,6 +25,7 @@ class _BlueFurnaceState extends State<BlueFurnace> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Blue Furnace",
+      oritation: widget.ori,
       backC: Colors.red[50],
       instruction: BlueFurnaceInstr(),
       extraIcon: FontAwesomeIcons.fire,
