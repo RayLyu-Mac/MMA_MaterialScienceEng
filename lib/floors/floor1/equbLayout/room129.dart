@@ -51,6 +51,8 @@ class _room129LayOState extends State<room129LayO> {
                 length: _screenH / 7,
                 pageTo: BlueFurnace(),
                 width: _screenWidth / 3,
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
                 name: "Blue Furnace"),
             SizedBox(
               height: _screenH / 40,
@@ -58,6 +60,8 @@ class _room129LayOState extends State<room129LayO> {
             roomButton(
                 length: _screenH / 5.6,
                 pageTo: BuehlerAutoPolisherMain(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true",
                 width: _screenWidth / 3,
                 name: "Buehler Auto Polisher"),
             SizedBox(
@@ -66,6 +70,8 @@ class _room129LayOState extends State<room129LayO> {
             roomButton(
                 length: _screenH / 5.6,
                 pageTo: BuehlerPolisherMain(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true",
                 width: _screenWidth / 3,
                 name: "Buehler Manual Polisher"),
             SizedBox(
@@ -73,7 +79,8 @@ class _room129LayOState extends State<room129LayO> {
             ),
             roomButton(
                 length: _screenH / 4,
-                pageTo: BlueFurnace(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
                 width: _screenWidth / 3,
                 name: "Fume Hood"),
           ]),
@@ -89,6 +96,8 @@ class _room129LayOState extends State<room129LayO> {
                   length: _screenH / 5,
                   pageTo: METPress(),
                   width: _screenWidth / 3,
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
                   name: "Mounting Press MET"),
               SizedBox(
                 height: _screenH / 17,
@@ -97,6 +106,8 @@ class _room129LayOState extends State<room129LayO> {
                   length: _screenH / 5,
                   pageTo: BuehlerPolisherMain(),
                   width: _screenWidth / 3,
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true",
                   name: "Buehler Manual Polisher"),
               SizedBox(
                 height: _screenH / 17,
@@ -104,6 +115,8 @@ class _room129LayOState extends State<room129LayO> {
               roomButton(
                   length: _screenH / 5,
                   pageTo: BuehlerCutterMain(),
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
                   width: _screenWidth / 3,
                   name: "Buehler Precision Cutter"),
             ],
