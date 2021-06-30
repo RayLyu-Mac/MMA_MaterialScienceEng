@@ -18,6 +18,7 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:mma_mse/Drawer.dart';
+import 'floor2/roomMain/241.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -142,7 +143,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 2.5,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              backC: Colors.grey[800],
+              pageTo: room241Main(),
               name: "241"),
           widget.eye || saftyI > 0
               ? Positioned(

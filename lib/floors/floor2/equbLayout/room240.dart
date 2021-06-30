@@ -13,7 +13,6 @@ class room240LayO extends StatefulWidget {
 class _room240LayOState extends State<room240LayO> {
   double _screenWidth;
   double _screenH;
-  double adjust;
 
   @override
   void didChangeDependencies() {
@@ -26,9 +25,6 @@ class _room240LayOState extends State<room240LayO> {
     ]);
     if (_screenH / _screenWidth > 2) {
       _screenH = _screenH * 0.83;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
     }
   }
 
