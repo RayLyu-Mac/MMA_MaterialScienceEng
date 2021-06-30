@@ -53,12 +53,16 @@ class _room239State extends State<room239> {
               top: _screenH / 6,
               length: _screenH / 3,
               width: _screenWidth / 3,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LECO.png?raw=true",
               name: "Oxygen / Nitrogen Determinator"),
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 1.7,
               length: _screenH / 7,
               width: _screenWidth / 3,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
               name: "Scale"),
           roomButton(
               left: _screenWidth / 1.6,
@@ -72,6 +76,8 @@ class _room239State extends State<room239> {
               length: _screenH / 5,
               width: _screenWidth / 3,
               pageTo: PcutterMain(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true",
               name: "Precision Cutter"),
         ],
       ),

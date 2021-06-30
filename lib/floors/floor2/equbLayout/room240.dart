@@ -37,7 +37,7 @@ class _room240LayOState extends State<room240LayO> {
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
-        title: Text("room 240"),
+        title: Text("Room 240"),
         backgroundColor: Colors.black,
       ),
       body: Stack(
@@ -96,18 +96,24 @@ class _room240LayOState extends State<room240LayO> {
                   top: _screenH / 2.47,
                   length: _screenH / 10,
                   width: _screenWidth / 3,
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.png?raw=true",
                   name: "Water Sink"),
           roomButton(
               left: _screenWidth / 13,
               top: _screenH / 1.9,
               length: _screenH / 4,
               width: _screenWidth / 3,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
               name: "Fume Hood"),
           roomButton(
               left: _screenWidth / 4.9,
               top: _screenH / 1.45,
               length: _screenH / 12,
               width: _screenWidth / 5,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
               name: "Scale"),
           roomButton(
               left: _screenWidth / 1.64,
@@ -120,6 +126,8 @@ class _room240LayOState extends State<room240LayO> {
               top: _screenH / 1.8,
               length: _screenH / 9,
               width: _screenWidth / 3,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
               name: "Scale"),
         ],
       ),

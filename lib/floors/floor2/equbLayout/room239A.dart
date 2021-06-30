@@ -14,8 +14,6 @@ class _room239AState extends State<room239A> {
   double _screenWidth;
   double _screenH;
   double adjust;
-
-  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
@@ -35,12 +33,35 @@ class _room239AState extends State<room239A> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
-        title: Text("Room 239A ICP-OES"),
+        title: Text("Room 239A"),
         backgroundColor: Colors.black,
       ),
       body: Stack(
-        children: [],
+        children: [
+          roomButton(
+              left: _screenWidth / 13,
+              top: _screenH / 35,
+              length: _screenH / 6,
+              width: _screenWidth / 3,
+              name: "Gloves"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 35,
+              length: _screenH / 2.5,
+              width: _screenWidth / 3,
+              pageTo: ICP_OES_Main(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/ICP.png?raw=true",
+              name: "ICP-OES"),
+          roomButton(
+              left: _screenWidth / 1.6,
+              top: _screenH / 2,
+              length: _screenH / 4,
+              width: _screenWidth / 3,
+              name: "Computer"),
+        ],
       ),
     );
   }
