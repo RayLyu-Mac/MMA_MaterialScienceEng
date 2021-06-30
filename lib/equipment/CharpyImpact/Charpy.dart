@@ -6,9 +6,11 @@ import 'package:mma_mse/equipment/PageMode.dart';
 class charpy_test extends StatefulWidget {
   final String location;
   final String emailTo;
+  final bool ori;
   charpy_test(
       {Key key,
       @optionalTypeArgs this.location,
+      @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
 
@@ -24,6 +26,7 @@ class _charpy_testState extends State<charpy_test> {
         warnVido: "eS8gsOCzugY",
         instruction: RockWellinstruction(),
         theory: CharpyBackG(),
+        oritation: widget.ori,
         backC: Colors.blue[50],
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true",

@@ -8,9 +8,11 @@ import 'package:mma_mse/Search/tools/phaseDiagram/phaseDMain.dart';
 class SiCFurnace extends StatefulWidget {
   final String location;
   final String emailTo;
+  final bool ori;
   SiCFurnace(
       {Key key,
       @optionalTypeArgs this.location,
+      @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
 
@@ -24,6 +26,7 @@ class _SiCFurnaceState extends State<SiCFurnace> {
     return EqubPageMode(
       title: "Silicon Carbide Furnace",
       backC: Colors.red[50],
+      oritation: widget.ori,
       instruction: SiCFurnaceInstr(),
       extraIcon: FontAwesomeIcons.fire,
       extraPage: ExtingshSymbols(),

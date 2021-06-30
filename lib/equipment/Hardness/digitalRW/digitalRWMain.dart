@@ -8,10 +8,12 @@ class DigitalRWMain extends StatefulWidget {
   DigitalRWMain(
       {Key key,
       @optionalTypeArgs this.emailTo,
+      @optionalTypeArgs this.ori,
       @optionalTypeArgs this.location})
       : super(key: key);
   final String location;
   final String emailTo;
+  final bool ori;
   @override
   _DigitalRWMainState createState() => _DigitalRWMainState();
 }
@@ -27,6 +29,7 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
         extraPage: hardnessData(),
         toolTip: "Hardness Conversion Sheet",
         fontSize: 48,
+        oritation: widget.ori,
         instruction: DigitalRWMain(),
         backC: Colors.blueGrey[50],
         img:

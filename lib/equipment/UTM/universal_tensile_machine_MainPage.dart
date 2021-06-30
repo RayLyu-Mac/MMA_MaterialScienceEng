@@ -4,7 +4,8 @@ import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class tensile_test extends StatefulWidget {
-  tensile_test({Key key}) : super(key: key);
+  final ori;
+  tensile_test({@optionalTypeArgs this.ori, Key key}) : super(key: key);
 
   @override
   _tensile_testState createState() => _tensile_testState();
@@ -20,6 +21,7 @@ class _tensile_testState extends State<tensile_test> {
         instruction: utm_instruction(),
         backC: Colors.amber[50],
         fontSize: 47,
+        oritation: widget.ori,
         theory: tensileTResult(),
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true",

@@ -69,7 +69,9 @@ class _room244LayOState extends State<room244LayO> {
               roomButton(
                   length: _screenWidth / 8,
                   width: _screenH / 3,
-                  pageTo: SiCFurnace(),
+                  pageTo: SiCFurnace(
+                    ori: true,
+                  ),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
                   name: "SiC Furnace"),

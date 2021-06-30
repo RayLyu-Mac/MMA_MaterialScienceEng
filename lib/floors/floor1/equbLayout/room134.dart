@@ -4,6 +4,7 @@ import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
 import 'package:mma_mse/equipment/CharpyImpact/Charpy.dart';
 import 'package:mma_mse/equipment/Hardness/digitalRW/digitalRWMain.dart';
 import 'package:mma_mse/floors/roomBut.dart';
+import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 
 class room134LayO extends StatefulWidget {
   room134LayO({Key key}) : super(key: key);
@@ -69,14 +70,18 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 2.1,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: tensile_test(),
+              pageTo: tensile_test(
+                ori: true,
+              ),
               name: "UTM I"),
           roomButton(
               top: _screenWidth / 40,
               left: _screenH / 1.2,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: tensile_test(),
+              pageTo: tensile_test(
+                ori: true,
+              ),
               name: "UTM II"),
           roomButton(
               top: _screenWidth / 5.5,
@@ -95,7 +100,9 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 0.77,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: DigitalRWMain(),
+              pageTo: DigitalRWMain(
+                ori: true,
+              ),
               name: "Digital Rock Well"),
           roomButton(
               top: _screenWidth / 4,
@@ -114,7 +121,9 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 20,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
-              pageTo: charpy_test(),
+              pageTo: charpy_test(
+                ori: true,
+              ),
               name: "Charpy Impact Tester"),
           roomButton(
               top: _screenWidth / 2.7,
@@ -127,6 +136,9 @@ class _room134LayOState extends State<room134LayO> {
               left: _screenH / 1.3,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
+              pageTo: LlyoldTensileTester(
+                ori: true,
+              ),
               name: "Llyold Tensile Machine"),
         ],
       ),
