@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
@@ -53,6 +54,7 @@ class _roomModeState extends State<roomMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
         title: Text(widget.roomName),
         backgroundColor: Colors.black,
@@ -99,33 +101,33 @@ class _roomModeState extends State<roomMode> {
                   ],
                 ),
               )),
-          functionButtonMode(
-              top: _screenH / 1.7,
-              left: _screenWidth / 15,
-              fontSize: 20,
-              buttonName: "Test"),
-          functionButtonMode(
-              top: _screenH / 1.45,
-              fontSize: 20,
-              left: _screenWidth / 15,
-              buttonName: "Manager",
-              pageTo: EmailContent(
-                emailTo: widget.emailTo != null
-                    ? widget.emailTo
-                    : "Please enter the email",
-                locationOfEqup:
-                    widget.location != null ? widget.location : "NUll",
-                nameOfEqup: "Buehler Precision Cutter",
-              )),
+          Positioned(
+              top: _screenH / 1.37,
+              left: _screenWidth / 10,
+              child: fancyBut(
+                  pageTo: EmailContent(
+                    emailTo: widget.emailTo != null
+                        ? widget.emailTo
+                        : "Please enter the email",
+                    locationOfEqup:
+                        widget.location != null ? widget.location : "NUll",
+                    nameOfEqup: "Buehler Precision Cutter",
+                  ),
+                  width: _screenWidth / 1.3,
+                  fontsize: 28,
+                  height: _screenH / 9,
+                  icon: Icons.email,
+                  buttonName: "Manager")),
           Positioned(
               top: _screenH / 1.7,
-              left: _screenWidth / 2,
+              left: _screenWidth / 10,
               child: fancyBut(
                 pageTo: widget.roomLayO,
-                icon: Icons.follow_the_signs_rounded,
+                icon: Icons.layers_outlined,
                 buttonName: "Layout",
-                height: _screenH / 8,
-                width: _screenWidth / 2.1,
+                height: _screenH / 9,
+                fontsize: 28,
+                width: _screenWidth / 1.3,
               ))
         ],
       ),

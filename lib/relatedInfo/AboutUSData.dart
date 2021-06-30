@@ -25,7 +25,7 @@ class testdetailData {
       ..add(testdetailData(
           name: "Ray Lyu",
           jTitle: "Team Leader",
-          eamil: "emmm",
+          eamil: "lyuz11@mcmaster.ca",
           program: "Material & Biomedical Engineering",
           img:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/zl.jpg?raw=true",

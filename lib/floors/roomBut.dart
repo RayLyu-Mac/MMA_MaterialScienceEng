@@ -104,7 +104,7 @@ class roomButton extends StatelessWidget {
                   child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
-                          border: Border.all(width: 5, color: Colors.grey[50]),
+                          border: Border.all(width: 6, color: Colors.grey[50]),
                           color: backC ?? Colors.grey),
                       child: Center(
                         child: icon != null
@@ -118,24 +118,31 @@ class roomButton extends StatelessWidget {
                                       SizedBox(
                                         width: width / 10,
                                       ),
-                                      ClayText(
+                                      Text(
                                         name,
-                                        size: fontsize ?? 22,
-                                        color: Colors.grey[100],
+                                        style: TextStyle(
+                                            fontSize: fontsize ?? 23,
+                                            color: Colors.grey[100],
+                                            fontWeight: FontWeight.w500),
+                                        textAlign: TextAlign.center,
                                       ),
                                       SizedBox(
-                                        width: width / 25,
+                                        width: width / 18,
                                       ),
                                       Icon(
                                         titleIcon,
-                                        size: 16,
+                                        size: 18,
+                                        color: Colors.white,
                                       ),
                                     ],
                                   )
-                                : ClayText(
+                                : Text(
                                     name,
-                                    size: fontsize ?? 26,
-                                    color: Colors.grey[100],
+                                    style: TextStyle(
+                                        fontSize: fontsize ?? 23,
+                                        color: Colors.grey[100],
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center,
                                   ),
                       ))),
             ),
@@ -163,7 +170,7 @@ class roomButton extends StatelessWidget {
                                 opacity: a1.value,
                                 child: SimpleDialog(
                                   shape: Border.all(
-                                    width: 4,
+                                    width: 5,
                                     style: BorderStyle.solid,
                                     color: Colors.grey[50],
                                   ),
@@ -211,17 +218,23 @@ class roomButton extends StatelessWidget {
                           ? Row(
                               children: [
                                 Icon(titleIcon),
-                                ClayText(
+                                Text(
                                   name,
-                                  size: fontsize ?? 22,
-                                  color: Colors.grey[100],
+                                  style: TextStyle(
+                                      fontSize: fontsize ?? 22,
+                                      color: Colors.grey[100],
+                                      fontWeight: FontWeight.w500),
+                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             )
-                          : ClayText(
+                          : Text(
                               name,
-                              size: fontsize ?? 22,
-                              color: Colors.grey[100],
+                              style: TextStyle(
+                                  fontSize: fontsize ?? 22,
+                                  color: Colors.grey[100],
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.center,
                             ),
                 )),
           );

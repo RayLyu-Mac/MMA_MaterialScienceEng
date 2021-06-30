@@ -35,6 +35,7 @@ class _room239State extends State<room239> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
         title: Text("Room 239"),
         backgroundColor: Colors.black,
