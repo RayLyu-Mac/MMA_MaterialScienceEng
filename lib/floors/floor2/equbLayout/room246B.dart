@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/equipment/Microscope/Nikon/NikonMicroMain.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/equipment/Microscope/Keyence/keyenceMain.dart';
+import 'package:mma_mse/equipment/Hardness/manualMicroHardness/manualMHMain.dart';
 
 class room246BLayO extends StatefulWidget {
   room246BLayO({Key key}) : super(key: key);
@@ -51,7 +54,8 @@ class _room246BLayOState extends State<room246BLayO> {
               roomButton(
                 length: _screenH / 4,
                 width: _screenWidth / 3,
-                name: "??",
+                pageTo: NikonMicro(),
+                name: "Nikon Microscope",
               ),
               SizedBox(
                 width: _screenWidth / 5,
@@ -59,7 +63,8 @@ class _room246BLayOState extends State<room246BLayO> {
               roomButton(
                 length: _screenH / 4,
                 width: _screenWidth / 3,
-                name: "??",
+                pageTo: NikonMicro(),
+                name: "Nikon Microscope",
               ),
             ],
           ),
@@ -74,7 +79,8 @@ class _room246BLayOState extends State<room246BLayO> {
               roomButton(
                 length: _screenH / 4,
                 width: _screenWidth / 3,
-                name: "??",
+                pageTo: ManualMicroHardness(),
+                name: "Manual Micro-Hardness Tester",
               ),
               SizedBox(
                 width: _screenWidth / 5,
@@ -82,7 +88,7 @@ class _room246BLayOState extends State<room246BLayO> {
               roomButton(
                 length: _screenH / 4,
                 width: _screenWidth / 3,
-                name: "??",
+                name: "Gloves",
               ),
             ],
           )

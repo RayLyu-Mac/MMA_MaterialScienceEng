@@ -91,7 +91,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
-                        height: _screenH / 40,
+                        height: _screenH / 70,
                       ),
                       Container(
                         child: Text(
@@ -101,13 +101,21 @@ class _roomHorizontalState extends State<roomHorizontal> {
                               fontWeight: FontWeight.bold),
                         ),
                         constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2, height: _screenH / 12),
+                            width: _screenWidth / 2, height: _screenH / 14),
                       ),
                       Container(
                         constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2, height: _screenH / 6),
-                        child: Text(widget.roomCont),
-                      )
+                            width: _screenWidth / 2.2, height: _screenH / 5.5),
+                        child: Text(
+                          widget.roomCont,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: _screenH / 40),
+                        ),
+                      ),
+                      SizedBox(
+                        height: _screenH / 50,
+                      ),
                     ],
                   ),
                   Column(

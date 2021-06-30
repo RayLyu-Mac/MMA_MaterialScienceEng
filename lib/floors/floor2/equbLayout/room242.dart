@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/cutter/BulkAbrasiveCutter/BulkAbrasiveMain.dart';
-// Two unkown machine
 import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 
 class room242LayO extends StatefulWidget {
   room242LayO({Key key}) : super(key: key);
@@ -78,12 +78,18 @@ class _room242LayOState extends State<room242LayO> {
               top: _screenH / 2.2,
               length: _screenH / 6,
               width: _screenWidth / 3,
+              pageTo: ManualCompPress(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true",
               name: "Manual Compression Press"),
           roomButton(
               left: _screenWidth / 1.6,
               top: _screenH / 4.2,
               length: _screenH / 5,
               width: _screenWidth / 3,
+              pageTo: BulkAbrasive_Main(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/abc.jpg?raw=true",
               name: "Bulk Abrasive Cutter"),
           roomButton(
               left: _screenWidth / 1.6,

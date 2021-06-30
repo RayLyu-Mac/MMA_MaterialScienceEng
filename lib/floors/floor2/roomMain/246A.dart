@@ -16,7 +16,8 @@ class _room246AMainState extends State<room246AMain> {
         roomName: "Room 246B",
         roomTi: "246B Microscope Room",
         pageTo: room246BLayO(),
-        roomCont: "Equipments:\n1.??\n2.Manual Polisher\n3. Etching",
+        roomCont:
+            "Equipments:\n1.Nikon Microscope\n2.Manual Micro-Hardness\nTester",
         roomImg:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246b.jpg?raw=true");
   }

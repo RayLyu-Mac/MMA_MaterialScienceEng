@@ -21,6 +21,7 @@ class roomButton extends StatelessWidget {
   final double detailsFontS;
   final double detailsTiFontS;
   final IconData titleIcon;
+  final String backImg;
   const roomButton(
       {@optionalTypeArgs this.left,
       @optionalTypeArgs this.titleIcon,
@@ -31,6 +32,7 @@ class roomButton extends StatelessWidget {
       @optionalTypeArgs this.details,
       @optionalTypeArgs this.top,
       @required this.length,
+      @optionalTypeArgs this.backImg,
       @optionalTypeArgs this.fontsize,
       @optionalTypeArgs this.icon,
       @required this.width,
@@ -102,10 +104,22 @@ class roomButton extends StatelessWidget {
                   height: length,
                   width: width,
                   child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(width: 6, color: Colors.grey[50]),
-                          color: backC ?? Colors.grey),
+                      decoration: backImg != null
+                          ? BoxDecoration(
+                              image: DecorationImage(
+                                  colorFilter: new ColorFilter.mode(
+                                      Colors.black.withOpacity(0.4),
+                                      BlendMode.dstATop),
+                                  image: NetworkImage(backImg)),
+                              borderRadius: BorderRadius.circular(25),
+                              border:
+                                  Border.all(width: 6, color: Colors.grey[50]),
+                              color: backC ?? Colors.grey)
+                          : BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              border:
+                                  Border.all(width: 6, color: Colors.grey[50]),
+                              color: backC ?? Colors.grey),
                       child: Center(
                         child: icon != null
                             ? Icon(

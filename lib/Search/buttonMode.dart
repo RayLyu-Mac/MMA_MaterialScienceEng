@@ -87,7 +87,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                     border: Border.all(width: 5, color: Colors.grey[600]),
                     image: DecorationImage(
                         colorFilter: new ColorFilter.mode(
-                            Colors.black.withOpacity(0.4), BlendMode.dstATop),
+                            Colors.black.withOpacity(0.5), BlendMode.dstATop),
                         image: NetworkImage(widget.backImg),
                         fit: BoxFit.cover)),
               ),
