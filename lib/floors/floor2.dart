@@ -93,7 +93,7 @@ class _floor2State extends State<floor2> {
         title: Text(
           "JHE Floor II",
           style:
-              TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+              TextStyle(fontSize: _screenH / 33, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.black,
       ),
@@ -116,13 +116,14 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
+                  backC: Colors.grey[800],
                   name: "Stairs"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 9,
               length: _screenH / 6,
               width: _screenWidth / 3,
-              backC: Colors.grey[850],
+              backC: Colors.grey[800],
               name: "243"),
           roomButton(
               left: _screenWidth / 10,
@@ -141,7 +142,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 2.5,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              backC: Colors.grey[850],
+              backC: Colors.grey[800],
               name: "241"),
           widget.eye || saftyI > 0
               ? Positioned(
@@ -205,7 +206,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.3,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              backC: Colors.grey[850],
+              backC: Colors.grey[800],
               titleIcon: FontAwesomeIcons.briefcase,
               name: "238"),
           roomButton(
@@ -330,7 +331,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.92,
               length: _screenH / 9,
               width: _screenWidth / 3,
-              backC: Colors.grey[850],
+              backC: Colors.grey[800],
               name: "247"),
           saftyI > 0
               ? Positioned(
@@ -396,6 +397,7 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 1.55,
                   length: _screenH / 4.7,
                   width: _screenWidth / 3,
+                  backC: Colors.grey[800],
                   name: "248"),
           Positioned(
               top: _screenH / 1.23,

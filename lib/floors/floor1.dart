@@ -80,11 +80,11 @@ class _floor1State extends State<floor1> {
                 icon: Icon(FontAwesomeIcons.exchangeAlt))
           ],
           backgroundColor: Colors.black,
-          title: Text("Floor I",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700)),
+          title: Text(
+            "JHE Floor I",
+            style:
+                TextStyle(fontSize: _screenH / 33, fontWeight: FontWeight.bold),
+          ),
         ),
         drawer: standardDrawer(header: "JHE Floor I"),
         body: Stack(
@@ -93,6 +93,7 @@ class _floor1State extends State<floor1> {
                 top: _screenH / 40,
                 left: _screenWidth / 30,
                 length: _screenWidth / 8,
+                backC: Colors.grey[800],
                 width: _screenH / rwidth,
                 name: "Stair"),
             roomButton(
@@ -100,6 +101,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 30,
                 length: _screenWidth / 3,
                 width: _screenH / rwidth,
+                backC: Colors.grey[800],
                 name: "130"),
             widget.eye || saftyI > 0
                 ? Positioned(
@@ -153,6 +155,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 30,
                 length: _screenWidth / 3.5,
                 width: _screenH / rwidth,
+                backC: Colors.grey[800],
                 name: "128"),
             widget.fire || saftyI > 0
                 ? roomButton(
@@ -173,18 +176,21 @@ class _floor1State extends State<floor1> {
                 top: _screenH / 1.43,
                 left: _screenWidth / 30,
                 length: _screenWidth / 5,
+                backC: Colors.grey[800],
                 width: _screenH / rwidth,
                 name: "127"),
             roomButton(
                 top: _screenH / 40,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
+                backC: Colors.grey[800],
                 width: _screenH / rwidth,
                 name: "131"),
             roomButton(
                 top: _screenH / 8.2,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
+                backC: Colors.grey[800],
                 width: _screenH / rwidth,
                 name: "132"),
             roomButton(
@@ -192,6 +198,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
                 width: _screenH / rwidth,
+                backC: Colors.grey[800],
                 name: "133"),
             roomButton(
                 top: _screenH / 2.88,
@@ -210,11 +217,13 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 5,
                 width: _screenH / rwidth,
+                backC: Colors.grey[800],
                 name: "135"),
             roomButton(
                 top: _screenH / 1.38,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
+                backC: Colors.grey[800],
                 width: _screenH / rwidth,
                 name: "135A"),
             Positioned(

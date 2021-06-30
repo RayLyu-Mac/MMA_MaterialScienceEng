@@ -60,7 +60,11 @@ class _floor3State extends State<floor3> {
               },
               icon: Icon(FontAwesomeIcons.exchangeAlt))
         ],
-        title: Text("JHE Floor III"),
+        title: Text(
+          "JHE Floor III",
+          style:
+              TextStyle(fontSize: _screenH / 33, fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.black,
       ),
       drawer: standardDrawer(header: "JHE Floor III"),
