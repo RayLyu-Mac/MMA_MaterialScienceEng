@@ -66,6 +66,8 @@ class _room242LayOState extends State<room242LayO> {
               top: _screenH / 1.7,
               length: _screenH / 5.5,
               width: _screenWidth / 3,
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.png?raw=true",
               name: "Sink"),
           roomButton(
               left: _screenWidth / 1.6,

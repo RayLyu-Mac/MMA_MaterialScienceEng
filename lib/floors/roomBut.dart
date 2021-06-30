@@ -218,10 +218,20 @@ class roomButton extends StatelessWidget {
             child: Container(
                 height: length,
                 width: width,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    border: Border.all(width: 6, color: Colors.grey[50]),
-                    color: backC ?? Colors.grey),
+                decoration: backImg != null
+                    ? BoxDecoration(
+                        image: DecorationImage(
+                            colorFilter: new ColorFilter.mode(
+                                Colors.black.withOpacity(0.4),
+                                BlendMode.dstATop),
+                            image: NetworkImage(backImg)),
+                        borderRadius: BorderRadius.circular(25),
+                        border: Border.all(width: 6, color: Colors.grey[50]),
+                        color: backC ?? Colors.grey)
+                    : BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        border: Border.all(width: 6, color: Colors.grey[50]),
+                        color: backC ?? Colors.grey),
                 child: Center(
                   child: icon != null
                       ? Icon(
