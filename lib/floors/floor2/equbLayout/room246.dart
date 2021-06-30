@@ -40,7 +40,7 @@ class _room246LayOState extends State<room246LayO> {
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.8),
         appBar: AppBar(
-          title: Text("room 246"),
+          title: Text("Room 246"),
           backgroundColor: Colors.black,
         ),
         body: Column(children: [
@@ -55,6 +55,8 @@ class _room246LayOState extends State<room246LayO> {
               length: _screenH / 5,
               width: _screenWidth / 1.1,
               pageTo: Etching(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true",
               name: "Etching",
             ),
           ]),
@@ -70,6 +72,8 @@ class _room246LayOState extends State<room246LayO> {
                 length: _screenH / 4,
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               ),
               SizedBox(
@@ -79,6 +83,8 @@ class _room246LayOState extends State<room246LayO> {
                 length: _screenH / 4,
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               )
             ],
@@ -95,6 +101,8 @@ class _room246LayOState extends State<room246LayO> {
                 length: _screenH / 4,
                 width: _screenWidth / 3,
                 pageTo: AutoPolisherMain(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true",
                 name: "Auto Polisher",
               ),
               SizedBox(
@@ -104,6 +112,8 @@ class _room246LayOState extends State<room246LayO> {
                 length: _screenH / 4,
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
+                backImg:
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               ),
             ],
