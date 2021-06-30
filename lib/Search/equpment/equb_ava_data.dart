@@ -38,8 +38,7 @@ class HeroType {
   String purposeRW = "Machine for testing material hardness";
   String purptensileT = "Test for material mechanical property";
   String purpmicrosco = "Machine for investigating material microstructure";
-  String purpfurnace =
-      "Machine for providing higher temperature (>950C) environment";
+  String purpfurnace = "Use High Temp Env to change material's microstructure";
   String purpCutting = "Machine for sectioning the sample";
   String purpoMountg = "Machine for preparaing meturllgical analysis sample";
   String purpPolishg = "Machine for polishing the meturllgical analysis sample";
