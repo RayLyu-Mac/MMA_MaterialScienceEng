@@ -54,7 +54,7 @@ class _room244LayOState extends State<room244LayO> {
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.8),
         appBar: AppBar(
-          title: Text("room 242"),
+          title: Text("room 244"),
           backgroundColor: Colors.black,
         ),
         body: Column(children: [
@@ -70,6 +70,8 @@ class _room244LayOState extends State<room244LayO> {
                   length: _screenWidth / 8,
                   width: _screenH / 3,
                   pageTo: SiCFurnace(),
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
                   name: "SiC Furnace"),
               SizedBox(
                 width: _screenH / 5,
@@ -84,6 +86,8 @@ class _room244LayOState extends State<room244LayO> {
                         length: _screenWidth / 8,
                         width: _screenH / 3.4,
                         pageTo: BlueFurnace(),
+                        backImg:
+                            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
                         name: "Blue Furnace"),
                   ],
                 )
@@ -104,6 +108,8 @@ class _room244LayOState extends State<room244LayO> {
                       length: _screenWidth / 8,
                       width: _screenH / 3.4,
                       pageTo: BlueFurnace(),
+                      backImg:
+                          "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
                       name: "Blue Furnace"),
                 ],
               )
@@ -125,6 +131,8 @@ class _room244LayOState extends State<room244LayO> {
                   length: _screenWidth / 8,
                   width: _screenH / 1.6,
                   pageTo: BlueFurnace(),
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/HTFume.png?raw=true",
                   name: "Fume Hood, Salt Pots used for heat treating"),
             ],
           )
