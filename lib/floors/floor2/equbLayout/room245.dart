@@ -88,6 +88,8 @@ class _room245LayOState extends State<room245LayO> {
                 roomButton(
                   length: _screenH / 7,
                   width: _screenWidth / 3.5,
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/245C.png?raw=true",
                   name: "Microscope & Gloves",
                 ),
               ],
@@ -105,6 +107,8 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   name: "MET Mounting Machine",
                   fontsize: 16,
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
                   pageTo: METPress(),
                 ),
                 SizedBox(
@@ -115,6 +119,8 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   fontsize: 16,
                   name: "MET Mounting Machine",
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
                   pageTo: METPress(),
                 ),
                 SizedBox(
@@ -125,6 +131,8 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   fontsize: 16,
                   name: "Strues Mounting Machine",
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true",
                   pageTo: StruesMain(),
                 ),
                 SizedBox(
@@ -135,6 +143,8 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   fontsize: 16,
                   name: "Eco Mounting Machine",
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true",
                   pageTo: EcoPress(),
                 ),
                 SizedBox(
@@ -145,6 +155,8 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   fontsize: 16,
                   name: "Manual Grinder",
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                   pageTo: ManualGrinder(),
                 ),
                 SizedBox(
@@ -155,18 +167,21 @@ class _room245LayOState extends State<room245LayO> {
                   width: _screenWidth / 3.5,
                   fontsize: 16,
                   name: "Auto Polisher Machine",
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true",
                   pageTo: AutoPolisherMain(),
                 ),
                 SizedBox(
                   height: _screenH / 50,
                 ),
                 roomButton(
-                  length: _screenH / 10,
-                  width: _screenWidth / 3.5,
-                  fontsize: 16,
-                  name: "Manual Grinder",
-                  pageTo: ManualGrinder(),
-                ),
+                    length: _screenH / 10,
+                    width: _screenWidth / 3.5,
+                    fontsize: 16,
+                    name: "Manual Grinder",
+                    pageTo: ManualGrinder(),
+                    backImg:
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"),
               ],
             )
           ],
