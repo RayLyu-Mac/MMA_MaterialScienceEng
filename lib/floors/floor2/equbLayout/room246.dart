@@ -38,6 +38,7 @@ class _room246LayOState extends State<room246LayO> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white.withOpacity(0.8),
         appBar: AppBar(
           title: Text("room 246"),
           backgroundColor: Colors.black,

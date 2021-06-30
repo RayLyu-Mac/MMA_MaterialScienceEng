@@ -55,6 +55,7 @@ class _room134LayOState extends State<room134LayO> {
   Widget build(BuildContext context) {
     print(_screenWidth / _screenH);
     return Scaffold(
+      backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
         title: Text("Room 134 Layout"),
         toolbarHeight: _screenWidth / 20,
