@@ -30,6 +30,8 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
   double j;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
+  TextEditingController mass = TextEditingController();
+  TextEditingController mol = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -281,6 +283,40 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                         fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                   ),
                 ),
+                Row(
+                  children: [
+                    Container(
+                      width: _screenWidth / 4,
+                      height: _screenH / 12,
+                      child: TextField(
+                        controller: mass,
+                        decoration: InputDecoration(hintText: "Mass"),
+                      ),
+                    ),
+                    SizedBox(
+                      width: _screenWidth / 20,
+                    ),
+                    Container(
+                      width: _screenWidth / 28,
+                      height: _screenH / 35,
+                      child: Text(
+                        "or",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      width: _screenWidth / 20,
+                    ),
+                    Container(
+                      width: _screenWidth / 4,
+                      height: _screenH / 12,
+                      child: TextField(
+                        controller: mol,
+                        decoration: InputDecoration(hintText: "Mol"),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
