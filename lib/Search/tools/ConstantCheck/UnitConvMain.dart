@@ -16,8 +16,6 @@ class UnitCOnverMain extends StatefulWidget {
 class _UnitCOnverMainState extends State<UnitCOnverMain> {
   double _screenWidth;
   double _screenH;
-  double adjust;
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -25,9 +23,6 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
     _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
       _screenH = _screenH * 0.83;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
     }
   }
 
