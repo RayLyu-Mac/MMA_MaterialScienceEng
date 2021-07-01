@@ -46,9 +46,15 @@ class ToolData {
       ..add(ToolData(
           name: "Error function",
           posCode: "e",
+          pageTo: errorFunction(),
+          backImg:
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true"))
+      ..add(ToolData(
+          name: "Enthalpy Calculator",
+          posCode: "f",
           pageTo: EnthalpyCal(),
           backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Picture2.jpg?raw=true"));
   }
 }
 

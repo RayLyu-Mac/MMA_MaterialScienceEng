@@ -31,6 +31,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.red[50],
         appBar: AppBar(
           title: Text("Enthalpy Calculation"),
@@ -168,12 +169,15 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                             if (higherB - lowerB == 0 ||
                                 higherB - lowerB == -1) {
                               if (tempMax == eleD[1][lowerB]) {
-                                output = (middleStage(eleD, lowerB) +
+                                output = (weirdStage(
+                                            eleD, lowerB, tempMin, tempMax) +
                                         eleD[5][lowerB])
-                                    .toString();
+                                    .toStringAsExponential(3);
                               } else {
-                                output = finalStage(eleD, lowerB, tempMax)
-                                    .toString();
+                                print("A");
+                                output =
+                                    weirdStage(eleD, lowerB, tempMin, tempMax)
+                                        .toStringAsExponential(3);
                               }
                             } else {
                               print("S1: " + lowerB.toString());
@@ -199,7 +203,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                                 sum = sum + finalStage(eleD, lowerB, tempMax);
                               }
 
-                              output = sum.toString();
+                              output = sum.toStringAsExponential(3);
                             }
                           }
                         });
@@ -212,7 +216,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 ),
                 Container(
                   child: Text(
-                    "The final Result is " + (output ?? "-- ") + "Cal",
+                    "The final Result is " + (output ?? "-- ") + " Cal",
                     style: TextStyle(
                         fontSize: _screenH / 40, fontWeight: FontWeight.bold),
                   ),
@@ -242,6 +246,11 @@ middleStage(List eleD, int stage) {
 iniStage(List eleD, int stage, double tmin) {
   return formula(
           eleD[2][stage], eleD[3][stage], eleD[4][stage], eleD[1][stage]) -
+      formula(eleD[2][stage], eleD[3][stage], eleD[4][stage], tmin);
+}
+
+weirdStage(List eleD, int stage, double tmin, double tmax) {
+  return formula(eleD[2][stage], eleD[3][stage], eleD[4][stage], tmax) -
       formula(eleD[2][stage], eleD[3][stage], eleD[4][stage], tmin);
 }
 
