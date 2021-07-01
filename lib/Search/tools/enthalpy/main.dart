@@ -1,7 +1,8 @@
 import 'dart:math';
-
+import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
+import 'package:page_transition/page_transition.dart';
 
 class EnthalpyCal extends StatefulWidget {
   EnthalpyCal({Key key}) : super(key: key);
@@ -25,7 +26,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
 
   String element;
   List eleD = [];
-  String phase;
+  String phase = '';
   String output;
   double finalRe;
   TextEditingController tmin = TextEditingController();
@@ -239,7 +240,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 Container(
                   child: Text(
                     "The phase the " +
-                        element +
+                        (element ?? "-") +
                         " going through:" +
                         (phase ?? '--'),
                     style: TextStyle(
@@ -256,8 +257,8 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                         (output ?? "-- ") +
                         " kCal/mol" +
                         "\n" +
-                        (double.parse(output) * 4.1868)
-                            .toStringAsExponential(4) +
+                        (((double.parse(output ?? "10000") * 4.1868) ?? 1e5)
+                            .toStringAsExponential(4)) +
                         "kJ/mol",
                     style: TextStyle(
                         fontSize: _screenH / 40, fontWeight: FontWeight.bold),
@@ -321,6 +322,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                       setState(() {
                         double massc = double.parse(mass.text);
                         double molc = double.parse(mol.text);
+                        print(massc);
                         massc != null
                             ? finalRe = massc / eleD[7] * double.parse(output)
                             : finalRe = molc * double.parse(output);
@@ -334,7 +336,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 Container(
                   child: Text(
                     "The final Result is " +
-                        ((finalRe ?? 1e5).toStringAsExponential(4) ?? "-- ") +
+                        ((finalRe ?? 1e5).toStringAsExponential(4)) +
                         " kCal" +
                         "\n" +
                         ((finalRe ?? 1) * 4.1868).toStringAsExponential(4) +
@@ -344,6 +346,30 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                     textAlign: TextAlign.center,
                   ),
                 ),
+                SizedBox(
+                  height: _screenH / 10,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: _screenWidth / 1.6,
+                    ),
+                    FloatingActionButton(
+                      child: Icon(Icons.table_view_rounded),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                duration: Duration(milliseconds: 700),
+                                child: ZoomInPhaseD(
+                                  imgPD:
+                                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/table.png?raw=true",
+                                )));
+                      },
+                    )
+                  ],
+                )
               ],
             ),
           ),
