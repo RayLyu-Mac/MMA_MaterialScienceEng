@@ -25,7 +25,9 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
 
   String element;
   List eleD = [];
+  String phase;
   String output;
+  double j;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
   @override
@@ -38,9 +40,11 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
           backgroundColor: Colors.black,
         ),
         body: Center(
+            child: SingleChildScrollView(
           child: Container(
+            margin: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 20,
+                _screenWidth / 20, _screenH / 20),
             width: _screenWidth / 1.1,
-            height: _screenH / 1.3,
             padding: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 20,
                 _screenWidth / 20, _screenH / 20),
             decoration: BoxDecoration(
@@ -89,6 +93,15 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                       ),
                     )
                   ],
+                ),
+                SizedBox(
+                  height: _screenH / 15,
+                ),
+                Container(
+                  child: Image(
+                    image: NetworkImage(
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Formula.png?raw=true"),
+                  ),
                 ),
                 SizedBox(
                   height: _screenH / 15,
@@ -155,6 +168,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           List<double> difmax = [];
                           int lowerB = 0;
                           int higherB = 0;
+                          phase = '';
                           if (tempMin < eleD[0][0] ||
                               tempMax > eleD[1][eleD[1].length - 1]) {
                             output = "Please Check your value";
@@ -169,15 +183,24 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                             if (higherB - lowerB == 0 ||
                                 higherB - lowerB == -1) {
                               if (tempMax == eleD[1][lowerB]) {
-                                output = (weirdStage(
+                                output = ((weirdStage(eleD, lowerB, tempMin,
+                                                tempMax) +
+                                            eleD[5][lowerB]) /
+                                        1e3)
+                                    .toStringAsExponential(4);
+                                phase = phase + eleD[8][lowerB];
+                                j = (weirdStage(
                                             eleD, lowerB, tempMin, tempMax) +
-                                        eleD[5][lowerB])
-                                    .toStringAsExponential(3);
+                                        eleD[5][lowerB]) /
+                                    1e3;
                               } else {
-                                print("A");
-                                output =
-                                    weirdStage(eleD, lowerB, tempMin, tempMax)
-                                        .toStringAsExponential(3);
+                                j = (weirdStage(
+                                        eleD, lowerB, tempMin, tempMax) /
+                                    1e3);
+                                output = (weirdStage(
+                                            eleD, lowerB, tempMin, tempMax) /
+                                        1e3)
+                                    .toStringAsExponential(4);
                               }
                             } else {
                               print("S1: " + lowerB.toString());
@@ -185,25 +208,29 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                               sum = sum +
                                   iniStage(eleD, lowerB, tempMin) +
                                   eleD[5][lowerB];
+                              print(eleD[8][lowerB]);
+                              phase = phase + eleD[8][lowerB];
                               print("S1: " + sum.toString());
                               lowerB = lowerB + 1;
                               for (var k = 0; k < higherB - lowerB; k++) {
                                 sum = sum + eleD[5][lowerB];
-
+                                phase = phase + eleD[8][lowerB];
                                 sum = sum + middleStage(eleD, lowerB + k);
                                 lowerB = lowerB + 1;
                               }
                               print("S2: " + sum.toString());
                               print("S2: " + lowerB.toString());
+                              print(eleD[8]);
                               if (tempMax == eleD[1][lowerB]) {
                                 sum = sum +
                                     finalStage(eleD, lowerB, tempMax) +
                                     eleD[5][lowerB];
+                                phase = phase + eleD[8][lowerB];
                               } else {
                                 sum = sum + finalStage(eleD, lowerB, tempMax);
                               }
-
-                              output = sum.toStringAsExponential(3);
+                              j = sum;
+                              output = (sum / 1e3).toStringAsExponential(4);
                             }
                           }
                         });
@@ -216,15 +243,48 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 ),
                 Container(
                   child: Text(
-                    "The final Result is " + (output ?? "-- ") + " Cal",
+                    "The phase the " +
+                        element +
+                        " going through:" +
+                        (phase ?? '--'),
+                    style: TextStyle(
+                        fontSize: _screenH / 48, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(
+                  height: _screenH / 25,
+                ),
+                Container(
+                  child: Text(
+                    "The final Result is " +
+                        (output ?? "-- ") +
+                        " kCal/mol" +
+                        "\n" +
+                        (double.parse(output) * 4.1868)
+                            .toStringAsExponential(4) +
+                        "kJ/mol",
                     style: TextStyle(
                         fontSize: _screenH / 40, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
                   ),
-                )
+                ),
+                SizedBox(
+                  height: _screenH / 20,
+                ),
+                Container(
+                  width: _screenWidth / 1.2,
+                  height: _screenH / 12,
+                  child: Text(
+                    "Find the enthalpy",
+                    style: TextStyle(
+                        fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                  ),
+                ),
               ],
             ),
           ),
-        ));
+        )));
   }
 }
 
