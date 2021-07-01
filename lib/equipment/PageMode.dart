@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
@@ -198,23 +199,31 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
             Positioned(
-              top: _screenH / 2.1,
-              left: _screenWidth / 1.2,
-              child: widget.extraPage != null
-                  ? IconButton(
-                      tooltip: widget.toolTip,
-                      iconSize: _screenH / 17,
-                      icon: Icon(widget.extraIcon),
-                      color: Colors.redAccent,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            PageTransition(
-                                child: widget.extraPage,
-                                type: PageTransitionType.bottomToTop));
-                      })
-                  : Container(),
-            ),
+                top: _screenH / 2.1,
+                left: _screenWidth / 1.5,
+                child: Row(
+                  children: [
+                    widget.extraPage != null
+                        ? IconButton(
+                            tooltip: widget.toolTip,
+                            iconSize: _screenH / 17,
+                            icon: Icon(widget.extraIcon),
+                            color: Colors.redAccent,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      child: widget.extraPage,
+                                      type: PageTransitionType.bottomToTop));
+                            })
+                        : Container(),
+                    IconButton(
+                        tooltip: "Safety Sheet",
+                        iconSize: _screenH / 17,
+                        onPressed: _Safety,
+                        icon: Icon(FontAwesomeIcons.fileArchive))
+                  ],
+                )),
             floationPanel(
                 button: [Icons.search, Icons.qr_code_scanner, Icons.note_add],
                 animationTime: 550,
@@ -242,6 +251,16 @@ class _EqubPageModeState extends State<EqubPageMode> {
 
 _launchURL() async {
   const url = 'https://msebooking.mcmaster.ca/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_Safety() async {
+  const url =
+      'https://docs.google.com/forms/d/e/1FAIpQLSfxc4bqsI4koNBQBCsR02siKhGX-UFDzdNW8_LfxYkVoGuy3Q/viewform?usp=sf_link';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

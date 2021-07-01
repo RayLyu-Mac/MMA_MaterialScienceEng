@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:mma_mse/Search/tools/enthalpy/data.dart';
 import 'errorFunction/main.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'NormalDistribution/STDMain.dart';
 import 'ConstantCheck/UnitConvMain.dart';
 import 'phaseDiagram/phaseDMain.dart';
+import 'enthalpy/main.dart';
 
 class ToolData {
   String posCode;
@@ -44,7 +46,7 @@ class ToolData {
       ..add(ToolData(
           name: "Error function",
           posCode: "e",
-          pageTo: errorFunction(),
+          pageTo: EnthalpyCal(),
           backImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true"));
   }
