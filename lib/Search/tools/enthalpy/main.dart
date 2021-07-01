@@ -27,7 +27,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
   List eleD = [];
   String phase;
   String output;
-  double j;
+  double finalRe;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
   TextEditingController mass = TextEditingController();
@@ -191,14 +191,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                                         1e3)
                                     .toStringAsExponential(4);
                                 phase = phase + eleD[8][lowerB];
-                                j = (weirdStage(
-                                            eleD, lowerB, tempMin, tempMax) +
-                                        eleD[5][lowerB]) /
-                                    1e3;
                               } else {
-                                j = (weirdStage(
-                                        eleD, lowerB, tempMin, tempMax) /
-                                    1e3);
                                 output = (weirdStage(
                                             eleD, lowerB, tempMin, tempMax) /
                                         1e3)
@@ -231,7 +224,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                               } else {
                                 sum = sum + finalStage(eleD, lowerB, tempMax);
                               }
-                              j = sum;
+
                               output = (sum / 1e3).toStringAsExponential(4);
                             }
                           }
@@ -285,38 +278,72 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 ),
                 Row(
                   children: [
+                    SizedBox(
+                      width: _screenWidth / 25,
+                    ),
                     Container(
                       width: _screenWidth / 4,
                       height: _screenH / 12,
                       child: TextField(
                         controller: mass,
-                        decoration: InputDecoration(hintText: "Mass"),
+                        decoration: InputDecoration(hintText: "   Mass"),
                       ),
                     ),
                     SizedBox(
-                      width: _screenWidth / 20,
+                      width: _screenWidth / 15,
                     ),
                     Container(
-                      width: _screenWidth / 28,
+                      width: _screenWidth / 15,
                       height: _screenH / 35,
                       child: Text(
                         "or",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: _screenH / 40),
                       ),
                     ),
                     SizedBox(
-                      width: _screenWidth / 20,
+                      width: _screenWidth / 15,
                     ),
                     Container(
                       width: _screenWidth / 4,
                       height: _screenH / 12,
                       child: TextField(
                         controller: mol,
-                        decoration: InputDecoration(hintText: "Mol"),
+                        decoration: InputDecoration(
+                            hintText: "   Mol", alignLabelWithHint: true),
                       ),
                     ),
                   ],
-                )
+                ),
+                RaisedButton.icon(
+                    onPressed: () {
+                      setState(() {
+                        double massc = double.parse(mass.text);
+                        double molc = double.parse(mol.text);
+                        massc != null
+                            ? finalRe = massc / eleD[7] * double.parse(output)
+                            : finalRe = molc * double.parse(output);
+                      });
+                    },
+                    icon: Icon(Icons.calculate),
+                    label: Text("Calculate")),
+                SizedBox(
+                  height: _screenH / 25,
+                ),
+                Container(
+                  child: Text(
+                    "The final Result is " +
+                        ((finalRe ?? 1e5).toStringAsExponential(4) ?? "-- ") +
+                        " kCal" +
+                        "\n" +
+                        ((finalRe ?? 1) * 4.1868).toStringAsExponential(4) +
+                        "kJ",
+                    style: TextStyle(
+                        fontSize: _screenH / 40, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ],
             ),
           ),
