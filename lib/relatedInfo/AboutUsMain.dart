@@ -56,6 +56,7 @@ class _AboutTeamState extends State<AboutTeam> {
             itemCount: teamInfo.length,
             itemBuilder: (BuildContext context, int index) {
               return Container(
+                margin: EdgeInsets.fromLTRB(10, 16, 10, 8),
                 padding: EdgeInsets.fromLTRB(10, 16, 10, 8),
                 decoration: BoxDecoration(
                     border: Border.all(width: 5, color: Colors.grey),
@@ -68,30 +69,35 @@ class _AboutTeamState extends State<AboutTeam> {
                           TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.left,
                     ),
-                    Container(
-                      height: 130,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fitWidth,
-                              image: NetworkImage(
-                                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/zl.jpg?raw=true"))),
-                    ),
-                    Container(
-                      width: _screenWidth / 1.1,
-                      child: Text(
-                        "Program: " + teamInfo[index].program,
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                    ),
+                    teamInfo[index].img != null
+                        ? Container(
+                            height: 130,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fitWidth,
+                                    image: NetworkImage(teamInfo[index].img))),
+                          )
+                        : Container(),
+                    teamInfo[index].program != null
+                        ? Container(
+                            width: _screenWidth / 1.1,
+                            child: Text(
+                              "Program: " + teamInfo[index].program,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        : Container(),
                     SizedBox(
                       height: 10,
                     ),
-                    Container(
-                        width: _screenWidth / 1.1,
-                        child: Text("Email: " + teamInfo[index].eamil,
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold))),
+                    teamInfo[index].eamil != null
+                        ? Container(
+                            width: _screenWidth / 1.1,
+                            child: Text("Email: " + teamInfo[index].eamil,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold)))
+                        : Container(),
                     SizedBox(
                       height: 10,
                     ),
@@ -104,11 +110,23 @@ class _AboutTeamState extends State<AboutTeam> {
                     SizedBox(
                       height: 10,
                     ),
-                    Container(
-                        width: _screenWidth / 1.1,
-                        child: Text("Fun Fact:\n" + teamInfo[index].about,
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)))
+                    teamInfo[index].about != null
+                        ? Container(
+                            width: _screenWidth / 1.1,
+                            child: Text("Fun Fact:\n" + teamInfo[index].about,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold)))
+                        : Container(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    teamInfo[index].moto != null
+                        ? Container(
+                            width: _screenWidth / 1.1,
+                            child: Text("Motto:\n" + teamInfo[index].moto,
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold)))
+                        : Container(),
                   ],
                 ),
               );

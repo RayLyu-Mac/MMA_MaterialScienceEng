@@ -78,6 +78,7 @@ Map<String, List<String>> refernceD = {
     "https://chem.libretexts.org/Courses/Bellarmine_University/BU%3A_Chem_104_(Christianson)/Phase_1%3A_The_Phases_of_Matter/3%3A_Phase_Changes/3.4%3A_Phase_Diagrams",
     "https://msitesting.com/Mechanical-Testing/Hardness-Testing/ASTM-E18-Rockwell-Testing",
     "https://en.wikipedia.org/wiki/Error_function",
-    "https://www.civilenggnotes.com/unit-conversion-in-civil-engineering/"
+    "https://www.civilenggnotes.com/unit-conversion-in-civil-engineering/",
+    "https://www.linkedin.com/company/selas-heat-technology/",
   ]
 };
