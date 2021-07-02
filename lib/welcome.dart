@@ -15,29 +15,37 @@ class welcome extends StatefulWidget {
 class _welcomeState extends State<welcome> {
   double _screenWidth;
   double _screenH;
-  double _height = 150;
-  double _width = 150;
-
+  double adjust;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.85;
+      adjust = 0.85;
+    } else {
+      adjust = 1;
+    }
   }
+
+  double _height = 150;
+  double _width = 150;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
+        preferredSize: Size.fromHeight(80.0),
         child: AppBar(
-          toolbarHeight: 100,
+          toolbarHeight: 85,
           titleSpacing: 5.0,
           centerTitle: true,
           title: Column(
             children: [
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               AnimatedTextKit(
                 animatedTexts: [
@@ -49,7 +57,7 @@ class _welcomeState extends State<welcome> {
                         fontWeight: FontWeight.w700),
                   )
                 ],
-                totalRepeatCount: 4,
+                totalRepeatCount: 2,
                 pause: const Duration(milliseconds: 1000),
                 displayFullTextOnTap: true,
                 stopPauseOnTap: true,
@@ -62,6 +70,18 @@ class _welcomeState extends State<welcome> {
       body: SafeArea(
         child: Stack(
           children: [
+            Positioned(
+                top: 0,
+                left: 0,
+                child: Container(
+                  child: Image(
+                    fit: BoxFit.cover,
+                    height: _screenH / adjust,
+                    width: _screenWidth,
+                    alignment: Alignment.center,
+                    image: AssetImage("assest/picture2.png"),
+                  ),
+                )),
             Positioned(
                 top: _screenH / 30,
                 left: _screenWidth / 4.3,
@@ -85,18 +105,20 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-                top: _screenH / 1.8,
-                left: _screenWidth / 6,
+                top: _screenH / 1.7,
+                left: _screenWidth / 8.5,
                 child: Container(
                   child: Text(
-                    "MMA System: \nThe APP for Material Eng Student",
+                    "MMA System \nThe APP for Material Eng Student",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: _screenH / 40),
+                        fontWeight: FontWeight.bold,
+                        fontSize: _screenH / 35,
+                        color: Colors.grey[300]),
                   ),
                 )),
             Positioned(
-                top: _screenH / 7.2,
+                top: _screenH / 6.3,
                 left: _screenWidth / 3.8,
                 child: Container(
                   constraints: BoxConstraints.expand(
@@ -110,7 +132,7 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-              top: _screenH / 1.5,
+              top: _screenH / 1.46,
               left: _screenWidth / 12,
               child: fancyBut(
                   pageTo: conditionTerms(pageTo: layout_overview()),
@@ -118,7 +140,7 @@ class _welcomeState extends State<welcome> {
                   height: _screenH / 10,
                   fontsize: 25,
                   icon: FontAwesomeIcons.thumbsUp,
-                  buttonName: "Let's Start : )"),
+                  buttonName: " Let's Start : )"),
             ),
           ],
         ),
