@@ -32,7 +32,7 @@ class roomMode extends StatefulWidget {
 class _roomModeState extends State<roomMode> {
   double _screenWidth;
   double _screenH;
-  double adjust;
+  double adjust = 1;
 
   @override
   void didChangeDependencies() {
@@ -43,16 +43,14 @@ class _roomModeState extends State<roomMode> {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.9;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.9;
+      adjust = 0.83;
+    }
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(

@@ -15,26 +15,22 @@ class welcome extends StatefulWidget {
 class _welcomeState extends State<welcome> {
   double _screenWidth;
   double _screenH;
-  double adjust;
+  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
 
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.85;
-      adjust = 0.85;
-    } else {
-      adjust = 1;
-    }
+    print(_screenH / _screenWidth);
   }
-
-  double _height = 150;
-  double _width = 150;
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 1.7) {
+      _screenH = _screenH * 0.83;
+      adjust = 0.8;
+    }
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70.0),
@@ -95,7 +91,7 @@ class _welcomeState extends State<welcome> {
                     "McMaster University",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: _screenH / 30),
+                        fontWeight: FontWeight.bold, fontSize: _screenH / 32),
                   ),
                 )),
             Positioned(
@@ -110,7 +106,7 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-                top: _screenH / 1.63,
+                top: _screenH / 1.63 / adjust,
                 left: _screenWidth / 9.5,
                 child: Container(
                   child: Text(
@@ -127,8 +123,8 @@ class _welcomeState extends State<welcome> {
                 left: _screenWidth / 3.8,
                 child: Container(
                   constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.2,
-                    height: _screenH / 2.8,
+                    width: _screenWidth / 2,
+                    height: _screenH / 2.8 / adjust,
                   ),
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -137,7 +133,7 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-              top: _screenH / 1.4,
+              top: _screenH / 1.4 / adjust,
               left: _screenWidth / 12,
               child: fancyBut(
                   pageTo: conditionTerms(pageTo: layout_overview()),

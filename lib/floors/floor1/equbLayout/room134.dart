@@ -42,14 +42,15 @@ class _room134LayOState extends State<room134LayO> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenWidth / _screenH > 1.8) {
-      _screenWidth = _screenWidth * 0.95;
-      _screenH = _screenH * 1.15;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenWidth / _screenH > 1.5) {
+      _screenWidth = _screenWidth * 0.81;
+      _screenH = _screenH * 1.25;
+    }
+    print(_screenWidth / _screenH);
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
@@ -104,7 +105,7 @@ class _room134LayOState extends State<room134LayO> {
                   "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/f.png?raw=true",
               name: "Furnace"),
           roomButton(
-              top: _screenWidth / 8,
+              top: _screenWidth / 8.5,
               left: _screenH / 0.77,
               length: _screenH / 6.5,
               width: _screenWidth / 5,
@@ -115,7 +116,7 @@ class _room134LayOState extends State<room134LayO> {
               ),
               name: "Digital Rock Well"),
           roomButton(
-              top: _screenWidth / 4,
+              top: _screenWidth / 4.2,
               left: _screenH / 0.77,
               length: _screenH / 3,
               width: _screenWidth / 5,
@@ -142,7 +143,7 @@ class _room134LayOState extends State<room134LayO> {
               ),
               name: "Charpy Impact Tester"),
           roomButton(
-              top: _screenWidth / 2.7,
+              top: _screenWidth / 2.9,
               left: _screenH / 2.2,
               length: _screenH / 6.5,
               width: _screenWidth / 6,
@@ -150,7 +151,7 @@ class _room134LayOState extends State<room134LayO> {
                   "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/2.png?raw=true",
               name: "Inert Gas Furnace"),
           roomButton(
-              top: _screenWidth / 2.7,
+              top: _screenWidth / 2.9,
               left: _screenH / 1.3,
               length: _screenH / 6.5,
               width: _screenWidth / 5,

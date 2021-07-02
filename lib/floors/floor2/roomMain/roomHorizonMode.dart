@@ -31,7 +31,7 @@ class roomHorizontal extends StatefulWidget {
 class _roomHorizontalState extends State<roomHorizontal> {
   double _screenWidth;
   double _screenH;
-  double adjust;
+  double adjust = 1;
 
   @override
   void initState() {
@@ -47,17 +47,14 @@ class _roomHorizontalState extends State<roomHorizontal> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.9;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.85;
+      adjust = 0.8;
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.roomTi),
@@ -101,11 +98,13 @@ class _roomHorizontalState extends State<roomHorizontal> {
                               fontWeight: FontWeight.bold),
                         ),
                         constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2, height: _screenH / 14),
+                            width: _screenWidth / 2,
+                            height: _screenH / 14 / adjust),
                       ),
                       Container(
                         constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2.2, height: _screenH / 5.5),
+                            width: _screenWidth / 2.2,
+                            height: _screenH / 5.2 / adjust),
                         child: Text(
                           widget.roomCont,
                           style: TextStyle(
