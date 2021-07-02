@@ -37,9 +37,9 @@ class _welcomeState extends State<welcome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80.0),
+        preferredSize: Size.fromHeight(70.0),
         child: AppBar(
-          toolbarHeight: 85,
+          toolbarHeight: 65,
           titleSpacing: 5.0,
           centerTitle: true,
           title: Column(
@@ -74,13 +74,17 @@ class _welcomeState extends State<welcome> {
                 top: 0,
                 left: 0,
                 child: Container(
-                  child: Image(
-                    fit: BoxFit.cover,
-                    height: _screenH / adjust,
-                    width: _screenWidth,
-                    alignment: Alignment.center,
-                    image: AssetImage("assest/picture2.png"),
+                  constraints: BoxConstraints.expand(
+                    width: _screenWidth / 1,
+                    height: _screenH / 1 / adjust,
                   ),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                    colorFilter: new ColorFilter.mode(
+                        Colors.black.withOpacity(0.8), BlendMode.dstATop),
+                    image: AssetImage("assest/picture2.png"),
+                    fit: BoxFit.cover,
+                  )),
                 )),
             Positioned(
                 top: _screenH / 30,
@@ -105,20 +109,20 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-                top: _screenH / 1.7,
-                left: _screenWidth / 8.5,
+                top: _screenH / 1.63,
+                left: _screenWidth / 9.5,
                 child: Container(
                   child: Text(
                     "MMA System \nThe APP for Material Eng Student",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: _screenH / 35,
-                        color: Colors.grey[300]),
+                        fontSize: _screenH / 33,
+                        color: Colors.grey[50]),
                   ),
                 )),
             Positioned(
-                top: _screenH / 6.3,
+                top: _screenH / 6,
                 left: _screenWidth / 3.8,
                 child: Container(
                   constraints: BoxConstraints.expand(
@@ -132,7 +136,7 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-              top: _screenH / 1.46,
+              top: _screenH / 1.4,
               left: _screenWidth / 12,
               child: fancyBut(
                   pageTo: conditionTerms(pageTo: layout_overview()),
