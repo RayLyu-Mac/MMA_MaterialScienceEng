@@ -46,6 +46,11 @@ class _floor3State extends State<floor3> {
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.97;
+
+      adjust = 0.9;
+    }
     return Scaffold(
       backgroundColor: Colors.grey[200].withOpacity(0.9),
       appBar: AppBar(

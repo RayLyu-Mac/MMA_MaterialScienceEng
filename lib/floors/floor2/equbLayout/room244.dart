@@ -51,12 +51,12 @@ class _room244LayOState extends State<room244LayO> {
 
   @override
   Widget build(BuildContext context) {
+    if (_screenWidth / _screenH > 1.5) {
+      _screenWidth = _screenWidth * 0.82;
+      _screenH = _screenH * 1.25;
+    }
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.8),
-        appBar: AppBar(
-          title: Text("room 244"),
-          backgroundColor: Colors.black,
-        ),
         body: Column(children: [
           SizedBox(
             height: _screenWidth / 40,

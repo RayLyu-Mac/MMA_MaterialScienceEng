@@ -70,7 +70,7 @@ class _floor2State extends State<floor2> {
   @override
   Widget build(BuildContext context) {
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.95;
+      _screenH = _screenH * 0.96;
 
       adjust = 0.9;
     }
@@ -140,6 +140,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 2.5,
               length: _screenH / 12,
               width: _screenWidth / 3,
+              titleIcon: FontAwesomeIcons.microscope,
               pageTo: room241Main(),
               name: "241"),
           widget.eye || saftyI > 0

@@ -37,7 +37,7 @@ class _floor1State extends State<floor1> {
   double _screenWidth;
   double _screenH;
   double tra = 0.002;
-  double adjust;
+  double adjust = 1;
   int nu;
   double saftyI = -1;
   double rwidth = 5;
@@ -55,16 +55,15 @@ class _floor1State extends State<floor1> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 2) {
+      _screenH = _screenH * 0.95;
+
+      adjust = 0.9;
+    }
     return Scaffold(
         backgroundColor: Colors.grey[200].withOpacity(0.9),
         appBar: AppBar(
