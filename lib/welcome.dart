@@ -89,7 +89,7 @@ class _welcomeState extends State<welcome> {
                 left: _screenWidth / 6,
                 child: Container(
                   child: Text(
-                    "MMA System: \nThe APP for material Eng Student",
+                    "MMA System: \nThe APP for Material Eng Student",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold, fontSize: _screenH / 40),
