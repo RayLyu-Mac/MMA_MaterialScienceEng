@@ -30,12 +30,10 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
   String phase = '';
   String output;
   double finalRe;
-  String transE;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
   TextEditingController mass = TextEditingController();
   TextEditingController mol = TextEditingController();
-  TextEditingController tbefore = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

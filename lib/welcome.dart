@@ -81,7 +81,8 @@ class _welcomeState extends State<welcome> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                     colorFilter: new ColorFilter.mode(
-                        Colors.black.withOpacity(0.8), BlendMode.dstATop),
+                        Colors.blueAccent[400].withOpacity(0.8),
+                        BlendMode.dstATop),
                     image: AssetImage("assest/picture2.png"),
                     fit: BoxFit.cover,
                   )),
