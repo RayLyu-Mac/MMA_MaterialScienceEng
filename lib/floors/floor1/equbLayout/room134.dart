@@ -47,8 +47,8 @@ class _room134LayOState extends State<room134LayO> {
   @override
   Widget build(BuildContext context) {
     if (_screenWidth / _screenH > 1.5) {
-      _screenWidth = _screenWidth * 0.85;
-      _screenH = _screenH * 1.25;
+      _screenWidth = _screenWidth * 0.93;
+      _screenH = _screenH * 1.16;
     }
     print(_screenWidth / _screenH);
     return Scaffold(

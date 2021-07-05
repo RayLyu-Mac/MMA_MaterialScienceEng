@@ -199,7 +199,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
             Positioned(
-                top: _screenH / 2.1,
+                top: _screenH / 1.9,
                 left: _screenWidth / 1.5,
                 child: Row(
                   children: [

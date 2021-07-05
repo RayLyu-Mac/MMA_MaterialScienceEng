@@ -12,8 +12,10 @@ class conditionTerms extends StatefulWidget {
 class _conditionTermsState extends State<conditionTerms> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Container(
+      height: 300,
       child: AlertDialog(
+        buttonPadding: EdgeInsets.fromLTRB(15, 30, 10, 20),
         title: Text("Terms and Conditions: Please Read Before Using this App"),
         content: Column(
           children: [

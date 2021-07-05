@@ -87,24 +87,19 @@ class _roomHorizontalState extends State<roomHorizontal> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        height: _screenH / 70,
-                      ),
                       Container(
+                        margin: EdgeInsets.fromLTRB(10, 1, 5, 5),
                         child: Text(
                           widget.roomTi ?? widget.roomName,
                           style: TextStyle(
                               fontSize: _screenH / 40,
                               fontWeight: FontWeight.bold),
                         ),
-                        constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2,
-                            height: _screenH / 14 / adjust),
+                        width: _screenWidth / 2.2,
                       ),
                       Container(
-                        constraints: BoxConstraints.expand(
-                            width: _screenWidth / 2.2,
-                            height: _screenH / 5.2 / adjust),
+                        margin: EdgeInsets.fromLTRB(10, 1, 5, 5),
+                        width: _screenWidth / 2.2,
                         child: Text(
                           widget.roomCont,
                           style: TextStyle(
