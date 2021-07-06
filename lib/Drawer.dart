@@ -18,18 +18,19 @@ class standardDrawer extends StatefulWidget {
 class _standardDrawerState extends State<standardDrawer> {
   double _screenWidth;
   double _screenH;
+  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 1.7) {
+      adjust = 1.55;
+    }
     return Drawer(
       elevation: 25,
       child: ListView(
@@ -65,7 +66,7 @@ class _standardDrawerState extends State<standardDrawer> {
             height: 3,
           ),
           SizedBox(
-            height: _screenH / 2.7,
+            height: _screenH / 3.6 * adjust,
           ),
           Container(
             constraints: BoxConstraints.expand(
