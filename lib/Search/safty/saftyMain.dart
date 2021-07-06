@@ -32,38 +32,33 @@ class _saftyMainState extends State<saftyMain> {
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Safety"),
-          backgroundColor: Colors.black,
-        ),
         body: SafeArea(
-          child: Stack(
-            children: [
-              Positioned(
-                  top: _screenH / 20,
-                  left: _screenWidth / 15,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Safety",
-                        style: TextStyle(
-                            fontSize: _screenH / 22,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ),
-                      Icon(FontAwesomeIcons.lifeRing)
-                    ],
-                  )),
-              for (var i = 0; i < toolDataList.length; i++)
-                IntroButtonMode(
-                  str: true,
-                  pageTo: toolDataList[i].pageTo,
-                  backImg: toolDataList[i].backImg,
-                  title: toolDataList[i].name,
-                  positionCode: toolDataList[i].posCode,
-                ),
-            ],
-          ),
-        ));
+      child: Stack(
+        children: [
+          Positioned(
+              top: _screenH / 20,
+              left: _screenWidth / 15,
+              child: Column(
+                children: [
+                  Text(
+                    "Safety",
+                    style: TextStyle(
+                        fontSize: _screenH / 22, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  Icon(FontAwesomeIcons.lifeRing)
+                ],
+              )),
+          for (var i = 0; i < toolDataList.length; i++)
+            IntroButtonMode(
+              str: true,
+              pageTo: toolDataList[i].pageTo,
+              backImg: toolDataList[i].backImg,
+              title: toolDataList[i].name,
+              positionCode: toolDataList[i].posCode,
+            ),
+        ],
+      ),
+    ));
   }
 }

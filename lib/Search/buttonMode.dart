@@ -54,7 +54,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
       "d": [_screenWidth / 1.9, _screenH / 1.42, _screenH / 4.4],
       "e": [_screenWidth / 19, _screenH / 1.42, _screenH / 4.4],
       "f": [_screenWidth / 19, _screenH / 2.2, _screenH / 4.4],
-      "g": [_screenWidth / 19, _screenH / 2.1, _screenH / 2.6],
+      "g": [_screenWidth / 19, _screenH / 2.1, _screenH / 2.2],
     };
     return widget.str != false
         ? Positioned(

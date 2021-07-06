@@ -120,10 +120,10 @@ class _welcomeState extends State<welcome> {
                 )),
             Positioned(
                 top: _screenH / 6,
-                left: _screenWidth / 3.8,
+                left: _screenWidth / 4.2,
                 child: Container(
                   constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2,
+                    width: _screenWidth / 1.8,
                     height: _screenH / 2.8 / adjust,
                   ),
                   decoration: BoxDecoration(
