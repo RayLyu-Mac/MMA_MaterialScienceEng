@@ -26,7 +26,7 @@ class _layout_overviewState extends State<layout_overview> {
   @override
   Widget build(BuildContext context) {
     if (_screenH / _screenWidth > 1.7) {
-      _screenH = _screenH * 0.83;
+      _screenH = _screenH * 0.8;
       adjust = 0.78;
     }
     return Scaffold(

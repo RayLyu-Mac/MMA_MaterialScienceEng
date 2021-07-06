@@ -35,37 +35,19 @@ class ToolData {
           posCode: "c",
           pageTo: Aciddetail(),
           backImg:
-              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
-      ..add(ToolData(
-          name: "WHIMS Symbol",
-          posCode: "d",
-          pageTo: WhimsSymbols(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/WHIMS.jpg?raw=true"))
-      ..add(ToolData(
-          name: "Chemical Safty",
-          pageTo: SearchListExample(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true",
-          posCode: "a"))
+              "https://cdn.shopify.com/s/files/1/1456/4892/products/WAR-20-ANSI_-_Warning_Acid_large.png?v=1520011003"))
       ..add(ToolData(
           name: "Chemical Shower/ Eye washer",
-          posCode: "b",
+          posCode: "g",
           pageTo: ChemicalShowerEyeWasher(),
           backImg:
-              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
-      ..add(ToolData(
-          name: "Personal Protection Equipment",
-          posCode: "c",
-          pageTo: acidQuiz(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"))
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true"))
       ..add(ToolData(
           name: "WHIMS Symbol",
           posCode: "d",
           pageTo: WhimsSymbols(),
           backImg:
-              "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"));
+              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/whims/bioharzard.jpg?raw=true"));
   }
 }
 

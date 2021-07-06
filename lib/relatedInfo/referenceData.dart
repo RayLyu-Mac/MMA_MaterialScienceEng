@@ -72,7 +72,10 @@ Map<String, List<String>> refernceD = {
     "https://suzannewrightyoga.files.wordpress.com/2019/03/strike-iron-yates-3-6-19.jpg?w=1200",
     "https://www.lucideon.com/testing-characterization/microstructural-analysis"
   ],
-  "Safety": ["https://www.rotochopper.com/resources/safety-rules/"],
+  "Safety": [
+    "https://www.rotochopper.com/resources/safety-rules/",
+    "https://cdn.shopify.com/s/files/1/1456/4892/products/WAR-20-ANSI_-_Warning_Acid_large.png?v=1520011003"
+  ],
   "Tool": [
     "https://www.omgubuntu.co.uk/2018/10/ubuntu-user-statistics-revealed",
     "https://chem.libretexts.org/Courses/Bellarmine_University/BU%3A_Chem_104_(Christianson)/Phase_1%3A_The_Phases_of_Matter/3%3A_Phase_Changes/3.4%3A_Phase_Diagrams",
