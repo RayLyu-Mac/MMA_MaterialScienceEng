@@ -66,7 +66,7 @@ class _standardDrawerState extends State<standardDrawer> {
             height: 3,
           ),
           SizedBox(
-            height: _screenH / 3.6 * adjust,
+            height: _screenH / 3.8 * adjust,
           ),
           Container(
             constraints: BoxConstraints.expand(
@@ -83,7 +83,7 @@ class _standardDrawerState extends State<standardDrawer> {
                 icon: Icon(FontAwesomeIcons.signOutAlt),
                 color: Colors.grey[200],
                 label: Text(
-                  "Back to Layout",
+                  "  Back to Layout",
                   style: TextStyle(
                       fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                 )),

@@ -27,7 +27,8 @@ class _welcomeState extends State<welcome> {
 
   @override
   Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
+    print(_screenH / _screenWidth);
+    if (_screenH / _screenWidth > 1.7 && _screenH / _screenWidth < 2) {
       _screenH = _screenH * 0.83;
       adjust = 0.8;
     }

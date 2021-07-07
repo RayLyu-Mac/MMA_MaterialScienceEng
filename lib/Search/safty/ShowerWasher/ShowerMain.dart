@@ -51,7 +51,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                   padding: EdgeInsets.fromLTRB(_screenWidth / 40, _screenH / 50,
                       _screenWidth / 60, _screenH / 40),
                   constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.03, height: _screenH / 1.6),
+                      width: _screenWidth / 1.03, height: _screenH / 2.2),
                   decoration: BoxDecoration(
                       border: Border(
                     top: BorderSide(
@@ -67,10 +67,10 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                         "Eye Washer Station",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: _screenH / 35),
+                            fontSize: _screenH / 33),
                       ),
                       SizedBox(
-                        height: _screenH / 40,
+                        height: _screenH / 50,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +79,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                           Container(
                             constraints: BoxConstraints.expand(
                                 width: _screenWidth / 2.5,
-                                height: _screenH / 2.5),
+                                height: _screenH / 3.2),
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: NetworkImage(
@@ -93,7 +93,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                           Container(
                             constraints: BoxConstraints.expand(
                                 width: _screenWidth / 2.3,
-                                height: _screenH / 2.5),
+                                height: _screenH / 3.3),
                             child: Text(
                               "Eyewash stations are designed to flush the eye and face area only. Use eye wash station when chemical accidentally spills to eye",
                               style: TextStyle(fontSize: _screenH / 48),

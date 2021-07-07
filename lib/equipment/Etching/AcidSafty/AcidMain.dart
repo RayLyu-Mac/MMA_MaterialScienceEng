@@ -121,7 +121,7 @@ class _AciddetailState extends State<Aciddetail> {
             ),
             body: ListView.builder(
                 itemCount: 6,
-                itemExtent: 430,
+                itemExtent: 500,
                 controller: controller,
                 itemBuilder: (BuildContext context, int index) {
                   Map<String, dynamic> tiles = {
@@ -277,7 +277,6 @@ class _AciddetailState extends State<Aciddetail> {
                   for (var ii = 0; ii < qs.length; ii++)
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                      height: _screenH / 1.32,
                       child: Column(
                         children: [
                           SizedBox(
@@ -285,7 +284,6 @@ class _AciddetailState extends State<Aciddetail> {
                           ),
                           Container(
                             width: _screenWidth / 1.2,
-                            height: _screenH / 18,
                             child: Text(
                               "Question #" +
                                   (ii + 1).toString() +

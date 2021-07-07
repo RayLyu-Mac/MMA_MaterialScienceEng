@@ -25,9 +25,6 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
 
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.85;
-    }
   }
 
   @override
@@ -41,6 +38,9 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
   List<testdetailData> result = testdetailData().detailL();
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 1.7) {
+      _screenH = _screenH * 0.85;
+    }
     final ScrollController controller = ScrollController();
 
     Drawer tensileResult() => Drawer(
@@ -182,7 +182,7 @@ class fireProcedure extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                  itemExtent: 133,
+                  itemExtent: 165,
                   itemCount: content.length,
                   controller: controller,
                   itemBuilder: (BuildContext context, int index1) {
@@ -204,7 +204,7 @@ class fireProcedure extends StatelessWidget {
                               ),
                               Text(
                                 content[index1][1],
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 16),
                               ),
                             ],
                           ),
