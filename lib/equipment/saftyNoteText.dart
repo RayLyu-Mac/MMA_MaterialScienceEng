@@ -21,20 +21,17 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 1.7) {
+      adjust = 0.855;
+    }
     return Center(
         child: Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 1.21, height: _screenH / 1.25 / adjust),
+                width: _screenWidth / 1.21, height: _screenH / 1.15 / adjust),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(12.0),
@@ -62,22 +59,22 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                         size: _screenH / 15,
                       ),
                       SizedBox(
-                        height: _screenH / 20,
+                        height: _screenH / 27 * adjust,
                       ),
                       Container(
                         width: _screenWidth / 1.15,
                         child: Text(
                           widget.warning_note,
                           style: TextStyle(
-                              fontSize: _screenH / 38,
+                              fontSize: _screenH / 42 * adjust,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
                       SizedBox(
-                        height: _screenH / 15,
+                        height: _screenH / 22 * adjust,
                       ),
                       FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
+                          padding: EdgeInsets.fromLTRB(37, 10, 37, 10),
                           splashColor: Colors.white.withOpacity(0.7),
                           color: Colors.white.withOpacity(0.1),
                           shape: Border.all(
@@ -102,7 +99,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                         height: _screenH / 70,
                       ),
                       FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
+                          padding: EdgeInsets.fromLTRB(42, 10, 42, 10),
                           splashColor: Colors.white.withOpacity(0.7),
                           color: Colors.white.withOpacity(0.1),
                           shape: Border.all(

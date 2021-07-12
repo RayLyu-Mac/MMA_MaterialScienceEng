@@ -33,7 +33,7 @@ class _equb_avaState extends State<equb_ava> {
   @override
   Widget build(BuildContext context) {
     if (_screenH / _screenWidth > 1.7) {
-      adjust = 0.86;
+      adjust = 0.875;
     }
     return Scaffold(
       appBar: AppBar(
