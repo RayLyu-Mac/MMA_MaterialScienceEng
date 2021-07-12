@@ -18,7 +18,6 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
         warnNote:
             "•Make Sure the smaples used have been properly polished and etched",
         instruction: KeyenceMicroInstru(),
-        fontSize: 46,
         backC: Colors.purple[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",

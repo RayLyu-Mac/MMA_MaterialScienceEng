@@ -31,7 +31,6 @@ class _SiCFurnaceState extends State<SiCFurnace> {
       extraIcon: FontAwesomeIcons.fire,
       extraPage: ExtingshSymbols(),
       toolTip: "Fire Safety",
-      fontSize: 50,
       warnNote:
           "•If a fire occurs, follow the “McMaster University Fire Instructions” leave the room and contact a technical staff\n \n•if the fire is out of control engage the fire alarm for the building; and contact emergency response 88, then EOHSS at 24352, stay nearby to provide information to responders.\n \n•DO NOT TRY to extinguish the fire because of serious health hazard. \n \n•If you accidentally drop the sample on your self Don’t panic! Remain calm. Immediately go to the sink and rinse with cold water to try and reduce the burn, seek medical help.",
       img:

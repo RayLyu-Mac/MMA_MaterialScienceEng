@@ -57,6 +57,7 @@ class EqubPageMode extends StatefulWidget {
 class _EqubPageModeState extends State<EqubPageMode> {
   double _screenWidth;
   double _screenH;
+  double adjust;
   @override
   void initState() {
     super.initState();
@@ -96,6 +97,9 @@ class _EqubPageModeState extends State<EqubPageMode> {
 
   @override
   Widget build(BuildContext context) {
+    if (_screenH / _screenWidth > 1.7) {
+      adjust = 0.86;
+    }
     return Scaffold(
       backgroundColor: widget.backC,
       appBar: AppBar(
@@ -108,7 +112,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
           ),
           waveColor: widget.backC,
           textStyle: TextStyle(
-            fontSize: _screenH / 26,
+            fontSize: _screenH / 26 * adjust,
             fontWeight: FontWeight.w900,
           ),
         ),
@@ -124,7 +128,8 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 child: Text(
                   'Introduction',
                   style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                      fontSize: _screenH / 30 * adjust,
+                      fontWeight: FontWeight.bold),
                 )),
             Positioned(
               top: _screenH / 13,
@@ -135,7 +140,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   child: Text(
                     widget.intro,
                     style: TextStyle(
-                        fontSize: _screenH / (widget.fontSize ?? 55),
+                        fontSize: _screenH / (widget.fontSize ?? 55 / adjust),
                         fontWeight: FontWeight.bold),
                   )),
             ),

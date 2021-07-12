@@ -31,7 +31,6 @@ class _BlueFurnaceState extends State<BlueFurnace> {
       extraIcon: FontAwesomeIcons.fire,
       extraPage: ExtingshSymbols(),
       toolTip: "Fire Safety",
-      fontSize: 50,
       warnNote:
           "•Make sure the furnace is properly grounded and no loose wires are connected to furnace\n•Extra cautios need to be taken since material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occues leave the room and contact technicians",
       img:

@@ -24,7 +24,6 @@ class _NikonMicroState extends State<NikonMicro> {
             "•Make Sure the smaples used have been properly polished and etched",
         instruction: NikonMicroInstru(),
         backC: Colors.purple[50],
-        fontSize: 47,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
         intro:
