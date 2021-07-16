@@ -49,7 +49,7 @@ class _conditionTermsState extends State<conditionTerms> {
               "Terms and Conditions",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                  fontSize: _screenWidth / 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 10,
@@ -58,7 +58,7 @@ class _conditionTermsState extends State<conditionTerms> {
               "\n Please Read Before Using this App",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: _screenH / 50,
+                  fontSize: _screenWidth / 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.redAccent),
             ),
@@ -67,7 +67,8 @@ class _conditionTermsState extends State<conditionTerms> {
             ),
             Text(
               "1. Training",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: _screenWidth / 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
             SizedBox(
@@ -76,18 +77,18 @@ class _conditionTermsState extends State<conditionTerms> {
             Text(
                 "Please note you still need to pass the McMaster Assigned training before using the equipment. \nYou must be famailar with the SOPs of the machine you are going to operate"),
             SizedBox(
-              height: _screenH / 45,
+              height: _screenH / 35,
             ),
             Text(
               "2. Reference Intellectual Property rights",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: _screenWidth / 20,
                 fontWeight: FontWeight.bold,
               ),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: _screenH / 45,
+              height: _screenH / 35,
             ),
             Text(
                 "Please view the reference list for the pictures and words used in this app"),

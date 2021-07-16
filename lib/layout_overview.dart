@@ -4,6 +4,11 @@ import 'floors/floor2.dart';
 import 'floors/floor3.dart';
 import 'floors/floor1.dart';
 import 'Drawer.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:mma_mse/Search/SearchAll.dart';
+import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:mma_mse/wholeQR.dart';
 
 class layout_overview extends StatefulWidget {
   layout_overview({Key key}) : super(key: key);
@@ -21,6 +26,14 @@ class _layout_overviewState extends State<layout_overview> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
+  }
+
+  @override
+  void goToPage(qr_result) {
+    Navigator.push(
+        context,
+        PageTransition(
+            child: to[qr_result], type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -103,8 +116,22 @@ class _layout_overviewState extends State<layout_overview> {
                             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/layout/sci.PNG?raw=true"),
                         fit: BoxFit.cover)),
               )),
+          floationPanel(
+              button: [
+                Icons.search,
+                Icons.qr_code_scanner,
+              ],
+              animationTime: 550,
+              buttonP: [EqupSearch(), scanQR])
         ],
       ),
     );
+  }
+
+  scanQR() async {
+    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    setState(() {
+      goToPage(codeSanner);
+    });
   }
 }

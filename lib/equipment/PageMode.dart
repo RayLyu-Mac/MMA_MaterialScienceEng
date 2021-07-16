@@ -112,7 +112,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
           ),
           waveColor: widget.backC,
           textStyle: TextStyle(
-            fontSize: _screenH / 26 * adjust,
+            fontSize: _screenWidth / 16,
             fontWeight: FontWeight.w900,
           ),
         ),
@@ -128,8 +128,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 child: Text(
                   'Introduction',
                   style: TextStyle(
-                      fontSize: _screenH / 30 * adjust,
-                      fontWeight: FontWeight.bold),
+                      fontSize: _screenWidth / 15, fontWeight: FontWeight.bold),
                 )),
             Positioned(
               top: _screenH / 13,
@@ -140,7 +139,9 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   child: Text(
                     widget.intro,
                     style: TextStyle(
-                        fontSize: _screenH / (widget.fontSize ?? 55 / adjust),
+                        fontSize: _screenWidth *
+                            1.8 /
+                            (widget.fontSize ?? 55 / adjust),
                         fontWeight: FontWeight.bold),
                   )),
             ),

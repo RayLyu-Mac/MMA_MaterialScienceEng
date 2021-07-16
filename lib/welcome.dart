@@ -22,7 +22,6 @@ class _welcomeState extends State<welcome> {
 
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    print(_screenH / _screenWidth);
   }
 
   @override
@@ -86,13 +85,14 @@ class _welcomeState extends State<welcome> {
                 )),
             Positioned(
                 top: _screenH / 30,
-                left: _screenWidth / 4.3,
+                left: _screenWidth / 4.6,
                 child: Container(
                   child: Text(
                     "McMaster University",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: _screenH / 32),
+                        fontWeight: FontWeight.bold,
+                        fontSize: _screenWidth / 16),
                   ),
                 )),
             Positioned(
@@ -103,7 +103,8 @@ class _welcomeState extends State<welcome> {
                     "Department of Materials Science and Engineering",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: _screenH / 40),
+                        fontWeight: FontWeight.bold,
+                        fontSize: _screenWidth / 25),
                   ),
                 )),
             Positioned(
@@ -115,7 +116,7 @@ class _welcomeState extends State<welcome> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: _screenH / 33,
+                        fontSize: _screenWidth / 19,
                         color: Colors.grey[50]),
                   ),
                 )),

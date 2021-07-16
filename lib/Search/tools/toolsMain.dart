@@ -21,9 +21,6 @@ class _toolMainState extends State<toolMain> {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.86;
-    }
   }
 
   @override
