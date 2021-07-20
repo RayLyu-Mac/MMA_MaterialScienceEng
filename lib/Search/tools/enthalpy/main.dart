@@ -261,7 +261,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           (output ?? "-- ") +
                           " kCal/mol" +
                           "\n" +
-                          (((double.parse(output ?? "10000") * 4.1868) ?? 1e5)
+                          (((double.parse(output ?? "10000") * 4.1868) ?? 0)
                               .toStringAsExponential(4)) +
                           "kJ/mol",
                       style: TextStyle(
@@ -340,7 +340,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                   Container(
                     child: Text(
                       "The final Result is " +
-                          ((finalRe ?? 1e5).toStringAsExponential(4)) +
+                          ((finalRe ?? 0).toStringAsExponential(4)) +
                           " kCal" +
                           "\n" +
                           ((finalRe ?? 1) * 4.1868).toStringAsExponential(4) +
