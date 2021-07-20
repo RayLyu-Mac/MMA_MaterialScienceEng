@@ -95,17 +95,21 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(
-            _screenWidth / 20, _screenH / 30, 5, _screenH / 20),
+            _screenWidth / 15, _screenH / 40, _screenWidth / 20, _screenH / 15),
         controller: controller,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.1, height: _screenH / 1.7),
-              child: Card(
-                color: Colors.white.withOpacity(0.7),
+              width: _screenWidth / 1.15,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.7),
+                    border: Border.all(width: 5, color: Colors.grey[200]),
+                    borderRadius: BorderRadius.circular(15)),
+                padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 20,
+                    _screenWidth / 10, _screenH / 20),
                 child: Column(
                   children: [
                     Text("Common Letter Means (Big) \n(Take Pa as example)",

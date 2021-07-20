@@ -13,7 +13,7 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '10'
+    flutterVersionCode = '11'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
@@ -45,7 +45,7 @@ android {
         applicationId "com.MMA_MSE.myapp"
         minSdkVersion 17
         targetSdkVersion 30
-        versionCode 10
+        versionCode 11
         versionName "1.0"
     }
 

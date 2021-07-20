@@ -62,7 +62,6 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                     children: [
                       Container(
                         width: _screenWidth / 3,
-                        height: _screenH / 12,
                         child: Text(
                           "Step 1: Choose the element",
                           style: TextStyle(
@@ -116,7 +115,6 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                     children: [
                       Container(
                         width: _screenWidth / 3,
-                        height: _screenH / 12,
                         child: Text(
                           "Step 2: Set Temp Range",
                           style: TextStyle(
@@ -261,7 +259,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           (output ?? "-- ") +
                           " kCal/mol" +
                           "\n" +
-                          (((double.parse(output ?? "10000") * 4.1868) ?? 0)
+                          (((double.parse(output ?? "0") * 4.1868) ?? 0)
                               .toStringAsExponential(4)) +
                           "kJ/mol",
                       style: TextStyle(
@@ -343,7 +341,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           ((finalRe ?? 0).toStringAsExponential(4)) +
                           " kCal" +
                           "\n" +
-                          ((finalRe ?? 1) * 4.1868).toStringAsExponential(4) +
+                          ((finalRe ?? 0) * 4.1868).toStringAsExponential(4) +
                           "kJ",
                       style: TextStyle(
                           fontSize: _screenH / 40, fontWeight: FontWeight.bold),

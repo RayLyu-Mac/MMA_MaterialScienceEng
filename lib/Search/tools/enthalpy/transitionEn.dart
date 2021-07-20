@@ -50,18 +50,19 @@ class _TransEnthalpyState extends State<TransEnthalpy> {
             ),
             Container(
               width: _screenWidth / 1.5,
-              height: _screenH / 4,
               child: Text(
                 "During material processing, it is possible that the material will melt under the melting point. If that happens, the material will become liquid even below the melting temperature but the enthalpy it needed for phase transformation will be different in the normal melting condition.",
                 style: TextStyle(
                     fontSize: _screenH / 45, fontWeight: FontWeight.bold),
               ),
             ),
+            SizedBox(
+              height: _screenH / 20,
+            ),
             Row(
               children: [
                 Container(
                   width: _screenWidth / 3,
-                  height: _screenH / 12,
                   child: Text(
                     "Step 1: Choose the element",
                     style: TextStyle(
