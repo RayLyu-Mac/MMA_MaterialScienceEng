@@ -26,7 +26,6 @@ class _welcomeState extends State<welcome> {
 
   @override
   Widget build(BuildContext context) {
-    print(_screenH / _screenWidth);
     if (_screenH / _screenWidth > 1.7) {
       _screenH = _screenH * 0.83;
       adjust = 0.8;
@@ -121,12 +120,12 @@ class _welcomeState extends State<welcome> {
                   ),
                 )),
             Positioned(
-                top: _screenH / 6,
+                top: _screenH / 5.7,
                 left: _screenWidth / 4.2,
                 child: Container(
                   constraints: BoxConstraints.expand(
                     width: _screenWidth / 1.8,
-                    height: _screenH / 2.8 / adjust,
+                    height: _screenH / 3 / adjust,
                   ),
                   decoration: BoxDecoration(
                     image: DecorationImage(

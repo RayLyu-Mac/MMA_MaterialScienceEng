@@ -36,13 +36,9 @@ class _conditionTermsState extends State<conditionTerms> {
             color: Colors.white.withOpacity(0.7),
             border: Border.all(width: 6, color: Colors.grey[300])),
         margin: EdgeInsets.fromLTRB(
-            _screenWidth / 12, _screenH / 5, _screenWidth / 13, _screenH / 12),
+            _screenWidth / 14, _screenH / 11, _screenWidth / 15, _screenH / 18),
         padding: EdgeInsets.fromLTRB(
             _screenWidth / 12, _screenH / 30, _screenWidth / 13, _screenH / 30),
-        constraints: BoxConstraints.expand(
-          width: _screenWidth / 1.2,
-          height: _screenH / 1.3 / adjust,
-        ),
         child: Column(
           children: [
             Text(
@@ -92,6 +88,20 @@ class _conditionTermsState extends State<conditionTerms> {
             ),
             Text(
                 "Please view the reference list for the pictures and words used in this app"),
+            SizedBox(
+              height: _screenH / 25,
+            ),
+            Text(
+              "3. Update",
+              style: TextStyle(
+                  fontSize: _screenWidth / 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+            SizedBox(
+              height: _screenH / 35,
+            ),
+            Text(
+                "The information provided in this app is up to date. However, this app is not responsible for renewing some information constantly. Please refer to McMaster University Website for most recent update."),
             SizedBox(
               height: _screenH / 15,
             ),
