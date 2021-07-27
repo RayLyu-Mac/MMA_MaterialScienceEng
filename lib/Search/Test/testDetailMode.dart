@@ -70,6 +70,8 @@ class _pageModeState extends State<pageMode> {
           top: _screenH / 12.5,
           left: _screenWidth / 13,
           child: Container(
+              padding: EdgeInsets.fromLTRB(
+                  _screenWidth / 15, 35, _screenWidth / 25, 25),
               constraints: BoxConstraints.expand(
                   width: _screenWidth / 1.15, height: _screenH / 1.15 / adjust),
               decoration: BoxDecoration(
@@ -79,48 +81,42 @@ class _pageModeState extends State<pageMode> {
                     width: 1.5,
                     color: Colors.white.withOpacity(0.4),
                   )),
-              child: Column(children: [
-                Flexible(
-                  flex: 3,
-                  child: Text(
-                    widget.title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: _screenH / 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontFamily: "Raleway",
-                        decoration: TextDecoration.none),
-                  ),
+              child: SingleChildScrollView(
+                  child: Column(children: [
+                Text(
+                  widget.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: _screenH / 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontFamily: "Raleway",
+                      decoration: TextDecoration.none),
                 ),
                 SizedBox(
                   height: _screenH / 50,
                 ),
-                Flexible(
-                  flex: 20,
-                  fit: FlexFit.loose,
-                  child: Text(
-                    widget.content != null ? widget.content : "Error",
-                    style: TextStyle(
-                        fontSize: _screenH / 39,
-                        color: Colors.black,
-                        fontFamily: "Raleway",
-                        decoration: TextDecoration.none),
-                  ),
+                Text(
+                  widget.content != null ? widget.content : "Error",
+                  style: TextStyle(
+                      fontSize: _screenH / 39,
+                      color: Colors.black,
+                      fontFamily: "Raleway",
+                      decoration: TextDecoration.none),
+                ),
+                SizedBox(
+                  height: _screenH / 20,
+                ),
+                imgAddOn(
+                  screenH: _screenH,
+                  width: widget.width,
+                  length: widget.length,
+                  screenW: _screenWidth,
+                  img: widget.addOnImg,
+                  pageTo: widget.pageTo,
                 )
-              ])),
+              ]))),
         ),
-        Positioned(
-            top: _screenH / (widget.height ?? 1.5) / adjust,
-            left: _screenWidth / (widget.left ?? 7),
-            child: imgAddOn(
-              screenH: _screenH,
-              width: widget.width,
-              length: widget.length,
-              screenW: _screenWidth,
-              img: widget.addOnImg,
-              pageTo: widget.pageTo,
-            ))
       ],
     );
   }

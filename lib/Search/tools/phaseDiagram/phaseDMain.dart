@@ -78,90 +78,77 @@ class _PhaseDiagState extends State<PhaseDiag> {
                   transition(ZoomInPhaseD(imgPD: result[index].addOnImg));
                 },
                 child: Card(
-                  color: Colors.white.withOpacity(0.7),
-                  semanticContainer: true,
-                  margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
-                  elevation: 8,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  clipBehavior: Clip.antiAlias,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: 7.0,
-                        left: 10.0,
-                        child: Text(
-                          result[index].title,
-                          style: TextStyle(
-                              fontSize: _screenH / 35,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Positioned(
-                          top: 35,
-                          left: 0,
-                          child: Container(
-                              constraints: BoxConstraints.expand(
-                                  width: _screenWidth / 1.1, height: 300),
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                      top: 0,
-                                      left: 0,
-                                      child: Image.network(
-                                        result[index].addOnImg,
-                                        fit: BoxFit.fitWidth,
-                                        height: _screenH / 2.6,
-                                        width: _screenWidth / 1.15,
-                                      )),
-                                  result[index].addonImgLft != null
-                                      ? Positioned(
-                                          top: 0,
-                                          left: 0,
-                                          child: Container(
-                                            width: _screenWidth / 2.2,
-                                            height: _screenH / 2.7,
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                transition(ZoomInPhaseD(
-                                                    imgPD: result[index]
-                                                        .addonImgLft));
-                                              },
-                                            ),
-                                          ))
-                                      : Container(),
-                                  result[index].addonImgRht != null
-                                      ? Positioned(
-                                          top: 0,
-                                          left: _screenWidth / 1.1 / 2,
-                                          child: Container(
-                                            width: _screenWidth / 2.2,
-                                            height: _screenH / 2.7,
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                transition(ZoomInPhaseD(
-                                                    imgPD: result[index]
-                                                        .addonImgRht));
-                                              },
-                                            ),
-                                          ))
-                                      : Container(),
-                                ],
-                              ))),
-                      Positioned(
-                          top: 335,
-                          left: 5,
-                          child: Container(
+                    color: Colors.white.withOpacity(0.7),
+                    semanticContainer: true,
+                    margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    clipBehavior: Clip.antiAlias,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Container(
+                            child: Text(
+                              result[index].title,
+                              style: TextStyle(
+                                  fontSize: _screenH / 35,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          SizedBox(
+                            height: _screenH / 30,
+                          ),
+                          Container(
+                              child: Column(
+                            children: [
+                              Container(
+                                  child: Image.network(
+                                result[index].addOnImg,
+                                fit: BoxFit.fitWidth,
+                                height: _screenH / 3,
+                                width: _screenWidth / 1.15,
+                              )),
+                              result[index].addonImgLft != null
+                                  ? Container(
+                                      child: Container(
+                                      width: _screenWidth / 2.2,
+                                      height: _screenH / 20,
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          transition(ZoomInPhaseD(
+                                              imgPD:
+                                                  result[index].addonImgLft));
+                                        },
+                                      ),
+                                    ))
+                                  : Container(),
+                              result[index].addonImgRht != null
+                                  ? Container(
+                                      width: _screenWidth / 2.2,
+                                      height: _screenH / 20,
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          transition(ZoomInPhaseD(
+                                              imgPD:
+                                                  result[index].addonImgRht));
+                                        },
+                                      ),
+                                    )
+                                  : Container(),
+                            ],
+                          )),
+                          Container(
                               width: _screenWidth / 1.2,
                               child: Text(
                                 result[index].content,
                                 style: TextStyle(
                                     fontSize: _screenH / 44,
                                     fontWeight: FontWeight.bold),
-                              )))
-                    ],
-                  ),
-                ),
+                              ))
+                        ],
+                      ),
+                    )),
               );
             }));
   }
