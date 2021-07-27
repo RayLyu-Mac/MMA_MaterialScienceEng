@@ -70,7 +70,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
         ),
         body: ListView.builder(
             itemCount: result.length,
-            itemExtent: 455,
+            itemExtent: 475,
             controller: controller,
             itemBuilder: (BuildContext context, int index) {
               return InkWell(
@@ -93,17 +93,16 @@ class _PhaseDiagState extends State<PhaseDiag> {
                         child: Text(
                           result[index].title,
                           style: TextStyle(
-                              fontSize: _screenH / 30,
+                              fontSize: _screenH / 35,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
                       Positioned(
-                          top: 45,
+                          top: 35,
                           left: 0,
                           child: Container(
                               constraints: BoxConstraints.expand(
-                                  width: _screenWidth / 1.1,
-                                  height: _screenH / 2.7),
+                                  width: _screenWidth / 1.1, height: 300),
                               child: Stack(
                                 children: [
                                   Positioned(
@@ -150,7 +149,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                 ],
                               ))),
                       Positioned(
-                          top: 305,
+                          top: 335,
                           left: 5,
                           child: Container(
                               width: _screenWidth / 1.2,
