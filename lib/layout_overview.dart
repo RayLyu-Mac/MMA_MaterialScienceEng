@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'fancyButton.dart';
 import 'floors/floor2.dart';
@@ -9,6 +11,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
 import 'package:mma_mse/wholeQR.dart';
+import 'pop.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class layout_overview extends StatefulWidget {
   layout_overview({Key key}) : super(key: key);
@@ -18,9 +22,47 @@ class layout_overview extends StatefulWidget {
 }
 
 class _layout_overviewState extends State<layout_overview> {
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  @override
+  void initState() {
+    super.initState();
+
+    flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
+    var android = AndroidInitializationSettings('@mipmap/ic_launcher');
+    var initialSet = InitializationSettings(android: android);
+    flutterLocalNotificationsPlugin.initialize(initialSet,
+        onSelectNotification: onSelectN);
+
+    showNote();
+  }
+
   double _screenWidth;
   double _screenH;
   double adjust = 1;
+  final random = Random();
+
+  List<String> tip = [
+    "If you want to find the technical elective for your direction in MSE, open the side drawer under menu section and click the Tech Elective Button. \n*Please view most updated information on McMaster Website",
+    "If you are trapped by the enthalpy calculation in 3F, you can find the enthalpy calculator under tool section. Go to tool section by open the side drawer under menu section",
+    "If you just finished the hardness test and want to transfer the experiment data to data you can understand, you can find the hardness conversion tool under tool section. Go to tool section by open the side drawer under menu section",
+    "If you want to find the location of chemical shower and eye washer and be preparaed for the experiment tomorrow, you can find all those information under safety section. Go to safety section by open the side drawer under menu section",
+    "If you want to find specific equipment, you can find them under equipment on side drawer under menu section, or click the button on floation panel and type the name of the equipment in quick search button",
+    "If you want to find the location of fire distinguisher and familiar yourself with fire code,you can find all those information under safety section. Go to safety section by open the side drawer under menu section.",
+    "If you want to use the QR scanner to scan the QR code on equipment or the room, you can find this on floation panel, click the QR code button",
+    "If you want to find the layout of the building and the room, follow the page and click the floor you want and find the room you are interested. Or you can find them on side drawer under floors",
+    "If you want to check the safety equipment layout for each floor, after entering the floor plan page, click the switch button on the right top corner, you can see those equipment and click them you can see the information for those equipment."
+  ];
+
+  Future onSelectN(String message) {
+    debugPrint("Message : $message");
+    showDialog(
+        context: context,
+        builder: (_) => AlertDialog(
+              title: Text("Tip of the day"),
+              content: Text(tip[random.nextInt(tip.length)]),
+            ));
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -133,5 +175,13 @@ class _layout_overviewState extends State<layout_overview> {
     setState(() {
       goToPage(codeSanner);
     });
+  }
+
+  showNote() async {
+    var android =
+        AndroidNotificationDetails('C ID', "C Name", "channelDescription");
+    var platform = NotificationDetails(android: android);
+    await flutterLocalNotificationsPlugin.show(
+        0, "Tip for the day", tip[random.nextInt(tip.length)], platform);
   }
 }
