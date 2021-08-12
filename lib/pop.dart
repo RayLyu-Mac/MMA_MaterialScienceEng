@@ -1,54 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:http/http.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:web_scraper/web_scraper.dart';
+import 'package:http/http.dart' as http;
+import 'package:html/dom.dart' as dom;
+import 'package:html/parser.dart' as parser;
 
-class popW extends StatefulWidget {
-  popW({Key key}) : super(key: key);
+List<String> post = List();
 
-  @override
-  _popWState createState() => _popWState();
-}
-
-class _popWState extends State<popW> {
-  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
-  @override
-  void initState() {
-    super.initState();
-    flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
-    var android = AndroidInitializationSettings('@mipmap/ic_launcher');
-    var initialSet = InitializationSettings(android: android);
-    flutterLocalNotificationsPlugin.initialize(initialSet,
-        onSelectNotification: onSelectN);
-  }
-
-  Future onSelectN(String message) {
-    debugPrint("Message : $message");
-    showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-              title: Text("Notification"),
-              content: Text(message),
-            ));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: FlatButton(
-          child: Text("Press"),
-          onPressed: showNote,
-        ),
-      ),
-    );
-    ;
-  }
-
-  showNote() async {
-    var android = AndroidNotificationDetails(
-        'C ID', "C Name", "channelDescription",
-        importance: Importance.max, priority: Priority.high, ongoing: true);
-    var platform = NotificationDetails(android: android);
-    await flutterLocalNotificationsPlugin.show(0, "Tip for the day",
-        "Choose Ray, the most trustworthy guy you could find!", platform);
-  }
+void getData() async {
+  final res =
+      await http.get(Uri.parse('https://www.instagram.com/macmatlssociety/'));
+  dom.Document document = parser.parse(res.body);
+  print(document);
 }

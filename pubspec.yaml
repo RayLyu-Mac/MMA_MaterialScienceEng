@@ -44,6 +44,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   flutter_local_notifications: ^8.0.0
   flutter_native_timezone: ^2.0.0
+  web_scraper: ^0.1.4
   
   
 
