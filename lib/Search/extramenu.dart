@@ -58,7 +58,7 @@ class _extraMenuState extends State<extraMenu> {
         ),
         floor1customListTile(
           name: "   Activities",
-          web: _launchURL(),
+          web: _launchURL,
           fonts: 16,
           leadIcon: FontAwesomeIcons.democrat,
         ),

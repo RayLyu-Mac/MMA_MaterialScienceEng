@@ -62,7 +62,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
         backgroundColor: Colors.lightBlueAccent[100],
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text("Test Result for tensile test"),
+          title: Text("Phase Diagram Check"),
         ),
         drawer: Container(
           width: _screenWidth / 1.7,
