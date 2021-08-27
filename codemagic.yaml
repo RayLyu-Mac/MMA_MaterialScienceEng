@@ -28,6 +28,11 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
     publishing:
+  app_store_connect:                  # For iOS or macOS app
+    api_key: Ray           # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
+    key_id: 5B3RGV345J                # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
+    issuer_id: 6c07076c-aac2-4830-b38a-0be127e029dd     # Alphanumeric value that identifies who created the API key, can also reference environment variable such as $APP_STORE_CONNECT_ISSUER_ID
+    submit_to_testflight: true        
       email:
         recipients:
           - raylyu11@gmail.com
