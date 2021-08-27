@@ -17,9 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>Camera is used for scanning barcode</string>
-	<key>NSCameraUsageDescription</key>
+	
+
 	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera is used for scanning barcode</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
