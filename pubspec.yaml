@@ -45,6 +45,7 @@ dependencies:
   flutter_local_notifications: ^8.0.0
   flutter_native_timezone: ^2.0.0
   web_scraper: ^0.1.4
+  permission_handler: ^8.1.4+2
   
   
 
