@@ -28,7 +28,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>Shows your location on the map and helps improve the map</string>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
