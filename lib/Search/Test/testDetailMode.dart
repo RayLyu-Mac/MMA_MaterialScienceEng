@@ -52,72 +52,78 @@ class _pageModeState extends State<pageMode> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Positioned(
-            top: 0,
-            left: 0,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Stack(
+        children: [
+          Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                child: Image(
+                  fit: BoxFit.cover,
+                  height: _screenH / adjust,
+                  width: _screenWidth,
+                  alignment: Alignment.center,
+                  image: NetworkImage(widget.back_img),
+                ),
+              )),
+          Positioned(
+            top: _screenH / 12.5,
+            left: _screenWidth / 13,
             child: Container(
-              child: Image(
-                fit: BoxFit.cover,
-                height: _screenH / adjust,
-                width: _screenWidth,
-                alignment: Alignment.center,
-                image: NetworkImage(widget.back_img),
-              ),
-            )),
-        Positioned(
-          top: _screenH / 12.5,
-          left: _screenWidth / 13,
-          child: Container(
-              padding: EdgeInsets.fromLTRB(
-                  _screenWidth / 15, 35, _screenWidth / 25, 25),
-              constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.15, height: _screenH / 1.15 / adjust),
-              decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.8),
-                  borderRadius: BorderRadius.circular(16.0),
-                  border: Border.all(
-                    width: 1.5,
-                    color: Colors.white.withOpacity(0.4),
-                  )),
-              child: SingleChildScrollView(
-                  child: Column(children: [
-                Text(
-                  widget.title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: _screenH / 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontFamily: "Raleway",
-                      decoration: TextDecoration.none),
-                ),
-                SizedBox(
-                  height: _screenH / 50,
-                ),
-                Text(
-                  widget.content != null ? widget.content : "Error",
-                  style: TextStyle(
-                      fontSize: _screenH / 39,
-                      color: Colors.black,
-                      fontFamily: "Raleway",
-                      decoration: TextDecoration.none),
-                ),
-                SizedBox(
-                  height: _screenH / 20,
-                ),
-                imgAddOn(
-                  screenH: _screenH,
-                  width: widget.width,
-                  length: widget.length,
-                  screenW: _screenWidth,
-                  img: widget.addOnImg,
-                  pageTo: widget.pageTo,
-                )
-              ]))),
-        ),
-      ],
+                padding: EdgeInsets.fromLTRB(
+                    _screenWidth / 15, 35, _screenWidth / 25, 25),
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 1.15,
+                    height: _screenH / 1.15 / adjust),
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    borderRadius: BorderRadius.circular(16.0),
+                    border: Border.all(
+                      width: 1.5,
+                      color: Colors.white.withOpacity(0.4),
+                    )),
+                child: SingleChildScrollView(
+                    child: Column(children: [
+                  Text(
+                    widget.title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: _screenH / 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontFamily: "Raleway",
+                        decoration: TextDecoration.none),
+                  ),
+                  SizedBox(
+                    height: _screenH / 50,
+                  ),
+                  Text(
+                    widget.content != null ? widget.content : "Error",
+                    style: TextStyle(
+                        fontSize: _screenH / 39,
+                        color: Colors.black,
+                        fontFamily: "Raleway",
+                        decoration: TextDecoration.none),
+                  ),
+                  SizedBox(
+                    height: _screenH / 20,
+                  ),
+                  imgAddOn(
+                    screenH: _screenH,
+                    width: widget.width,
+                    length: widget.length,
+                    screenW: _screenWidth,
+                    img: widget.addOnImg,
+                    pageTo: widget.pageTo,
+                  )
+                ]))),
+          ),
+        ],
+      ),
     );
   }
 }
