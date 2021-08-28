@@ -25,8 +25,6 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
     ]);
     super.dispose();
   }

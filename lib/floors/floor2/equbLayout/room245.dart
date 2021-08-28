@@ -28,12 +28,6 @@ class _room245LayOState extends State<room245LayO> {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-      adjust = 0.83;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
