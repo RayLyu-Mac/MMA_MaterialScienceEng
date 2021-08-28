@@ -40,8 +40,9 @@ class _errorFunctionState extends State<errorFunction> {
             width: _screenWidth / 1.1,
             height: _screenH / 1.3,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              border: Border.all(width: 7, color: Colors.grey[200]),
+              borderRadius: BorderRadius.circular(25),
+              color: Colors.blueGrey.withOpacity(0.75),
+              border: Border.all(width: 8, color: Colors.grey[200]),
             ),
             child: Column(
               children: [
@@ -71,8 +72,9 @@ class _errorFunctionState extends State<errorFunction> {
                   height: _screenH / 45,
                 ),
                 RaisedButton.icon(
-                    padding: EdgeInsets.fromLTRB(_screenWidth / 20,
-                        _screenH / 50, _screenWidth / 20, _screenH / 50),
+                    elevation: 10,
+                    padding: EdgeInsets.fromLTRB(_screenWidth / 17,
+                        _screenH / 45, _screenWidth / 17, _screenH / 45),
                     shape: Border.all(width: 5, color: Colors.grey[700]),
                     onPressed: () {
                       setState(() {
@@ -90,7 +92,7 @@ class _errorFunctionState extends State<errorFunction> {
                                       input +
                                   erf[round] -
                                   (erf[round] - erf[round - mod]) / mod * round)
-                              .toString();
+                              .toStringAsExponential(4);
                         } else {
                           print(round + mod);
                           output =
@@ -99,7 +101,7 @@ class _errorFunctionState extends State<errorFunction> {
                                       (erf[round + mod] - erf[round]) /
                                           mod *
                                           (round + mod))
-                                  .toString();
+                                  .toStringAsExponential(4);
                         }
                       });
                     },
@@ -107,16 +109,16 @@ class _errorFunctionState extends State<errorFunction> {
                     label: Text(
                       "Find erf value",
                       style: TextStyle(
-                          fontSize: _screenH / 45, fontWeight: FontWeight.bold),
+                          fontSize: _screenH / 43, fontWeight: FontWeight.bold),
                     )),
                 SizedBox(
-                  height: _screenH / 25,
+                  height: _screenH / 20,
                 ),
                 Container(
                   child: Text(
                     "The output for erf function is: \n" + (output ?? "--"),
                     style: TextStyle(
-                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                        fontSize: _screenH / 29, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 )
