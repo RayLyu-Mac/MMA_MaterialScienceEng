@@ -6,6 +6,10 @@ class workingInProg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("404"),
+      ),
       body: Center(
         child: Container(
             width: 300,

@@ -114,13 +114,16 @@ class _STDCheckState extends State<STDCheck> {
                           double kv = double.parse(pck.text);
                           double up = 1;
                           double below = 1;
-                          for (var i = 1; i < nv + 1; i++) {
-                            up = up * i;
-                          }
-                          for (var i = 1; i < (nv - kv) + 1; i++) {
-                            below = below * i;
-                          }
-                          pc = (up / below).toString();
+
+                          setState(() {
+                            for (var i = 1; i < nv + 1; i++) {
+                              up = up * i;
+                            }
+                            for (var i = 1; i < (nv - kv) + 1; i++) {
+                              below = below * i;
+                            }
+                            pc = (up / below).toString();
+                          });
                         },
                         icon: Icon(Icons.calculate),
                         label: Text("Permutation")),
@@ -134,16 +137,19 @@ class _STDCheckState extends State<STDCheck> {
                           double up = 1;
                           double below = 1;
                           double add = 1;
-                          for (var i = 1; i < nv + 1; i++) {
-                            up = up * i;
-                          }
-                          for (var i = 1; i < (nv - kv) + 1; i++) {
-                            below = below * i;
-                          }
-                          for (var i = 1; i < kv + 1; i++) {
-                            add = add * i;
-                          }
-                          pc = (up / below / add).toString();
+
+                          setState(() {
+                            for (var i = 1; i < nv + 1; i++) {
+                              up = up * i;
+                            }
+                            for (var i = 1; i < (nv - kv) + 1; i++) {
+                              below = below * i;
+                            }
+                            for (var i = 1; i < kv + 1; i++) {
+                              add = add * i;
+                            }
+                            pc = (up / below / add).toString();
+                          });
                         },
                         icon: Icon(Icons.calculate),
                         label: Text("Combination"))

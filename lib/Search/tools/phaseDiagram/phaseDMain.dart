@@ -106,7 +106,6 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                   child: Image.network(
                                 result[index].addOnImg,
                                 fit: BoxFit.fitWidth,
-                                height: _screenH / 3,
                                 width: _screenWidth / 1.15,
                               )),
                               result[index].addonImgLft != null
