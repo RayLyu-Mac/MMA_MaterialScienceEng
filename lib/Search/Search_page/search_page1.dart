@@ -6,7 +6,7 @@ import '../room/room_main.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:mma_mse/fancyButton.dart';
@@ -163,7 +163,7 @@ class _search_areaState extends State<search_area> {
   }
 
   scanQR() async {
-    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

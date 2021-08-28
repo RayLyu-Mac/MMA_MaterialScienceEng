@@ -9,9 +9,8 @@ import 'Drawer.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
-import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
-import 'pop.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class layout_overview extends StatefulWidget {
@@ -171,7 +170,7 @@ class _layout_overviewState extends State<layout_overview> {
   }
 
   scanQR() async {
-    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

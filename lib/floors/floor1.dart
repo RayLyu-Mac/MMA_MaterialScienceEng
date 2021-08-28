@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'floor1/mech_lab.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
-import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 import '../equipment/saftyNoteText.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
@@ -252,7 +252,7 @@ class _floor1State extends State<floor1> {
   }
 
   scanQR() async {
-    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

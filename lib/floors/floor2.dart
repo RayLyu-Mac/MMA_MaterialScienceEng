@@ -11,7 +11,7 @@ import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246A.dart';
 import 'floor2/roomMain/246.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:barcode_scan_fix/barcode_scan.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
@@ -425,7 +425,7 @@ class _floor2State extends State<floor2> {
   }
 
   scanQR() async {
-    String codeSanner = await BarcodeScanner.scan(); //barcode scnner
+    String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });
