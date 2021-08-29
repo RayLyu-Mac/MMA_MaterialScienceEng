@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'phaseDData.dart';
 import 'package:mma_mse/customTileScroll.dart';
 import 'zoomIn.dart';
+import 'package:mma_mse/Search/tools/toolsMain.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PhaseDiag extends StatefulWidget {
   PhaseDiag({Key key}) : super(key: key);
@@ -14,6 +17,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
   double _screenWidth;
   double _screenH;
   double adjust;
+
   List tiles = [];
   @override
   void didChangeDependencies() {
@@ -53,7 +57,27 @@ class _PhaseDiagState extends State<PhaseDiag> {
                   fonts: 13,
                   controller: controller,
                   offset: 385,
-                )
+                ),
+              Container(
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 8, height: _screenH / 10),
+                child: RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              duration: const Duration(milliseconds: 500),
+                              child: toolMain(),
+                              type: PageTransitionType.leftToRight));
+                    },
+                    icon: Icon(FontAwesomeIcons.signOutAlt),
+                    color: Colors.grey[200],
+                    label: Text(
+                      "  Back to Tools",
+                      style: TextStyle(
+                          fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                    )),
+              ),
             ],
           ),
         );

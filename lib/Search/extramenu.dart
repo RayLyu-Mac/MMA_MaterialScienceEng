@@ -1,5 +1,4 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/pop.dart';
 
 import 'safty/saftyMain.dart';
 import 'equpment/equb_ava_main.dart';
