@@ -30,7 +30,7 @@ class testdetailData {
           eamil: "lyuz11@mcmaster.ca",
           program: "Material & Biomedical Engineering",
           img:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/zl.jpg?raw=true",
+              "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/personal%20Pic/38.png?raw=true",
           contribution:
               "•Design the structure for the App\n•Create useful tools and features\n•Cut the instruction video and post\n•Safety Features\n•Test case\n•Side drawer design",
           about:

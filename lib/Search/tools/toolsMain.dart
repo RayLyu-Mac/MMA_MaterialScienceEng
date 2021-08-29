@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/buttonMode.dart';
-
+import 'package:mma_mse/Drawer.dart';
 import 'tooData.dart';
 
 class toolMain extends StatefulWidget {
@@ -33,6 +33,7 @@ class _toolMainState extends State<toolMain> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
+        drawer: standardDrawer(header: "Matls Tool Box"),
         body: SafeArea(
           child: Stack(
             children: [

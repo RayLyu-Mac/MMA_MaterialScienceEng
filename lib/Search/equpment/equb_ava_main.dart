@@ -3,6 +3,9 @@ import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/layout_overview.dart';
+import 'package:page_transition/page_transition.dart';
 
 class equb_main extends StatefulWidget {
   final HeroType heroType;
@@ -22,7 +25,7 @@ class _equb_mainState extends State<equb_main> {
   List code = [];
   String titleForCsv;
   List<Widget> pT = [];
-
+  double _screenH = 0;
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
@@ -48,6 +51,7 @@ class _equb_mainState extends State<equb_main> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
   }
 
   @override
@@ -289,6 +293,26 @@ class _equb_mainState extends State<equb_main> {
               pageTo: 23,
               fonts: 13,
               controller: controller),
+          Container(
+            constraints: BoxConstraints.expand(
+                width: _screenWidth / 8, height: _screenH / 10),
+            child: RaisedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: layout_overview(),
+                          type: PageTransitionType.leftToRight));
+                },
+                icon: Icon(FontAwesomeIcons.signOutAlt),
+                color: Colors.grey[200],
+                label: Text(
+                  "  Back to Layout Overview",
+                  style: TextStyle(
+                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                )),
+          ),
         ]));
     return Scaffold(
       appBar: AppBar(

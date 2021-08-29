@@ -96,10 +96,11 @@ class _welcomeState extends State<welcome> {
                 )),
             Positioned(
                 top: _screenH / 12,
-                left: _screenWidth / 25,
+                left: _screenWidth / 27,
                 child: Container(
+                  width: _screenWidth / 1.08,
                   child: Text(
-                    "Department of Materials Science and Engineering",
+                    "Department of Material Science and Engineering",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -108,7 +109,7 @@ class _welcomeState extends State<welcome> {
                 )),
             Positioned(
                 top: _screenH / 1.63 / adjust,
-                left: _screenWidth / 9.5,
+                left: _screenWidth / 11.5,
                 child: Container(
                   child: Text(
                     "MMA System \nThe APP for Material Eng Student",
@@ -125,7 +126,7 @@ class _welcomeState extends State<welcome> {
                 child: Container(
                   constraints: BoxConstraints.expand(
                     width: _screenWidth / 1.8,
-                    height: _screenH / 3 / adjust,
+                    height: _screenH / 2.75 / adjust,
                   ),
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -142,7 +143,7 @@ class _welcomeState extends State<welcome> {
                   height: _screenH / 10,
                   fontsize: 25,
                   icon: FontAwesomeIcons.thumbsUp,
-                  buttonName: " Let's Start : )"),
+                  buttonName: "   Let's Start : )"),
             ),
           ],
         ),
