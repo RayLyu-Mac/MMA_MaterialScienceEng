@@ -324,10 +324,16 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                         setState(() {
                           double massc = double.parse(mass.text);
                           double molc = double.parse(mol.text);
-                          print(massc);
-                          massc != null
-                              ? finalRe = massc / eleD[7] * double.parse(output)
-                              : finalRe = molc * double.parse(output);
+                          if (massc > 0) {
+                            finalRe = massc / eleD[7] * double.parse(output);
+                          } else {
+                            finalRe = 0;
+                          }
+                          if (molc > 0) {
+                            finalRe = molc * double.parse(output);
+                          } else {
+                            finalRe = 0;
+                          }
                         });
                       },
                       icon: Icon(Icons.calculate),
