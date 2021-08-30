@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'fancyButton.dart';
 import 'floors/floor2.dart';
@@ -169,7 +169,8 @@ class _layout_overviewState extends State<layout_overview> {
     );
   }
 
-  scanQR() async {
+  Future scanQR() async {
+    await Permission.camera.request();
     String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);

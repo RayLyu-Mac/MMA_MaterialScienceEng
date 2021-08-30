@@ -10,6 +10,7 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class floor1 extends StatefulWidget {
   final bool fire;
@@ -251,7 +252,8 @@ class _floor1State extends State<floor1> {
         ));
   }
 
-  scanQR() async {
+  Future scanQR() async {
+    await Permission.camera.request();
     String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);

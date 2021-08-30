@@ -12,6 +12,7 @@ import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/services.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/Drawer.dart';
 
 class EqubPageMode extends StatefulWidget {
@@ -247,7 +248,8 @@ class _EqubPageModeState extends State<EqubPageMode> {
     );
   }
 
-  scanQR() async {
+  Future scanQR() async {
+    await Permission.camera.request();
     String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);

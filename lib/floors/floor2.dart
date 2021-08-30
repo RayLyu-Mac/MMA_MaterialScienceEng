@@ -19,6 +19,7 @@ import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'floor2/roomMain/241.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class floor2 extends StatefulWidget {
   final bool safty;
@@ -424,7 +425,8 @@ class _floor2State extends State<floor2> {
     );
   }
 
-  scanQR() async {
+  Future scanQR() async {
+    await Permission.camera.request();
     String codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
