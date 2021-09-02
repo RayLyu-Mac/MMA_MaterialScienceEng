@@ -142,122 +142,113 @@ class _AciddetailState extends State<Aciddetail> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
                     clipBehavior: Clip.antiAlias,
-                    child: Stack(
+                    child: Column(
                       children: [
-                        Positioned(
-                            top: 12,
-                            left: 10,
-                            child: Text(partName,
-                                style: TextStyle(
-                                    fontSize: _screenH / 28,
-                                    fontWeight: FontWeight.bold))),
+                        SizedBox(
+                          height: _screenH / 35,
+                        ),
+                        Text(partName,
+                            style: TextStyle(
+                                fontSize: _screenH / 28,
+                                fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          height: _screenH / 45,
+                        ),
                         index == 5
-                            ? Positioned(
-                                top: 50,
-                                left: 5,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        for (var img = 0;
-                                            img < prop.length;
-                                            img++)
-                                          Container(
-                                            height: _screenH / 5,
+                            ? Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      for (var img = 0;
+                                          img < prop.length;
+                                          img++)
+                                        Container(
+                                            height: _screenH / 5.2,
                                             width: _screenWidth /
                                                 1.2 /
                                                 prop.length,
                                             decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                     image: NetworkImage(
-                                                        prop[img]))),
-                                          )
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: _screenH / 40,
-                                    ),
-                                    fancyBut(
-                                      pageTo: WhimsSymbols(),
-                                      width: _screenWidth / 1.6,
-                                      height: _screenWidth / 7.7,
-                                      icon: Icons.follow_the_signs,
-                                      buttonName: "Check Whims SYmbol",
-                                    ),
-                                  ],
-                                ))
+                                                        prop[img])))),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: _screenH / 40,
+                                  ),
+                                  fancyBut(
+                                    pageTo: WhimsSymbols(),
+                                    width: _screenWidth / 1.6,
+                                    height: _screenWidth / 7.7,
+                                    icon: Icons.follow_the_signs,
+                                    buttonName: "Check Whims Symbol",
+                                  ),
+                                ],
+                              )
                             : index == 3
-                                ? Positioned(
-                                    top: 40,
-                                    left: 5,
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          width: _screenWidth / 1.2,
-                                          child: Text(
-                                            prop,
-                                            style: TextStyle(
-                                                fontSize: _screenH / 35),
-                                          ),
+                                ? Column(
+                                    children: [
+                                      Container(
+                                        width: _screenWidth / 1.2,
+                                        child: Text(
+                                          prop,
+                                          style: TextStyle(
+                                              fontSize: _screenH / 35),
                                         ),
-                                        SizedBox(
-                                          height: _screenH / 30,
+                                      ),
+                                      SizedBox(
+                                        height: _screenH / 30,
+                                      ),
+                                      fancyBut(
+                                        pageTo: ChemicalShowerEyeWasher(),
+                                        width: _screenWidth / 1.6,
+                                        height: _screenWidth / 7.7,
+                                        icon: Icons.shower,
+                                        buttonName:
+                                            "Eye wash & Chemical shower",
+                                      ),
+                                      SizedBox(
+                                        height: _screenH / 40,
+                                      ),
+                                      fancyBut(
+                                        pageTo: SearchListExample(),
+                                        width: _screenWidth / 2.2,
+                                        height: _screenWidth / 7.7,
+                                        icon: Icons.search,
+                                        buttonName: "MSDS Data Sheet",
+                                      ),
+                                    ],
+                                  )
+                                : Column(
+                                    children: [
+                                      Container(
+                                        width: _screenWidth / 1.2,
+                                        child: Text(
+                                          prop,
+                                          style: TextStyle(
+                                              fontSize: _screenH / 35),
                                         ),
-                                        fancyBut(
-                                          pageTo: ChemicalShowerEyeWasher(),
-                                          width: _screenWidth / 1.6,
-                                          height: _screenWidth / 7.7,
-                                          icon: Icons.shower,
-                                          buttonName:
-                                              "Eye wash & Chemical shower",
-                                        ),
-                                        SizedBox(
-                                          height: _screenH / 40,
-                                        ),
-                                        fancyBut(
-                                          pageTo: SearchListExample(),
-                                          width: _screenWidth / 2.2,
-                                          height: _screenWidth / 7.7,
-                                          icon: Icons.search,
-                                          buttonName: "MSDS Data Sheet",
-                                        ),
-                                      ],
-                                    ))
-                                : Positioned(
-                                    top: 40,
-                                    left: 5,
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          width: _screenWidth / 1.2,
-                                          child: Text(
-                                            prop,
-                                            style: TextStyle(
-                                                fontSize: _screenH / 35),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: _screenH / 20,
-                                        ),
-                                        Container(
-                                            width: _screenWidth / 1.5,
-                                            height: _screenH / 4.3,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(index ==
-                                                            0
-                                                        ? chemPimg
-                                                        : index == 1
-                                                            ? phyP
-                                                            : index == 4
-                                                                ? ppeImg
-                                                                : "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/body.jpg?raw=true")))),
-                                      ],
-                                    ))
+                                      ),
+                                      SizedBox(
+                                        height: _screenH / 20,
+                                      ),
+                                      Container(
+                                          width: _screenWidth / 1.5,
+                                          height: _screenH / 4.8,
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: NetworkImage(index == 0
+                                                      ? chemPimg
+                                                      : index == 1
+                                                          ? phyP
+                                                          : index == 4
+                                                              ? ppeImg
+                                                              : "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/Acid/body.jpg?raw=true")))),
+                                    ],
+                                  )
                       ],
                     ),
                   );
@@ -360,9 +351,9 @@ class _AciddetailState extends State<Aciddetail> {
                                 ? Text(
                                     code[jj].toString(),
                                     style: TextStyle(
-                                        fontSize: _screenH / 33,
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: "Sigmar One"),
+                                      fontSize: _screenH / 33,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   )
                                 : Container(),
                             decoration: BoxDecoration(

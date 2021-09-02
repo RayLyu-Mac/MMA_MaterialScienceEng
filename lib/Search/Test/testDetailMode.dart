@@ -42,12 +42,6 @@ class _pageModeState extends State<pageMode> {
 
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.85;
-      adjust = 0.85;
-    } else {
-      adjust = 1;
-    }
   }
 
   @override
@@ -71,14 +65,13 @@ class _pageModeState extends State<pageMode> {
                 ),
               )),
           Positioned(
-            top: _screenH / 12.5,
+            top: _screenH / 30,
             left: _screenWidth / 13,
             child: Container(
                 padding: EdgeInsets.fromLTRB(
                     _screenWidth / 15, 35, _screenWidth / 25, 25),
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.15,
-                    height: _screenH / 1.15 / adjust),
+                    width: _screenWidth / 1.15, height: _screenH / 1.2),
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(16.0),

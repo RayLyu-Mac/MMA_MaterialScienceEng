@@ -14,7 +14,7 @@ class TensileTest extends StatefulWidget {
 }
 
 class _TensileTestState extends State<TensileTest> {
-  double _screenWidth;
+  double _screenWidt;
   double _screenH;
   List<testdetailData> testBGdetail = testdetailData().detailL();
   List<Widget> pages = [];
@@ -22,7 +22,7 @@ class _TensileTestState extends State<TensileTest> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
+    _screenWidt = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
   }
 

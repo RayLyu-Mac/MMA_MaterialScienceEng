@@ -44,7 +44,7 @@ class _welcomeState extends State<welcome> {
               ),
               AnimatedTextKit(
                 animatedTexts: [
-                  WavyAnimatedText(
+                  TyperAnimatedText(
                     "Welcome to MSE",
                     textStyle: TextStyle(
                         color: Colors.white,

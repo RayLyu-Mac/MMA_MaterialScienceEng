@@ -118,6 +118,14 @@ class _EqubPageModeState extends State<EqubPageMode> {
           ),
         ),
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              tooltip: "Back to last page",
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back))
+        ],
       ),
       drawer: standardDrawer(header: widget.title),
       body: SafeArea(

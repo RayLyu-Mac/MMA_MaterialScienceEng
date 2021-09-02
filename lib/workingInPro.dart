@@ -8,7 +8,7 @@ class workingInProg extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("404"),
+        title: Text("404 Not Found"),
       ),
       body: Center(
         child: Container(
