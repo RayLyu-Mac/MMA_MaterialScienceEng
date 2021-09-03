@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
@@ -62,21 +64,16 @@ class _equb_mainState extends State<equb_main> {
               child: Stack(
             children: [
               Positioned(
-                top: 0,
-                left: 10,
-                child: DefaultTextStyle(
-                  style: const TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Horizon',
-                      color: Colors.black),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      WavyAnimatedText("Equipment Avaiable in MSE")
-                    ],
-                    isRepeatingAnimation: true,
-                  ),
-                ),
-              ),
+                  top: _screenH / 60,
+                  left: _screenWidth / 45,
+                  child: Text(
+                    "Equipment Avaiable in MSE",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: _screenWidth / 20,
+                        fontWeight: FontWeight.bold),
+                  )),
               Positioned(
                   top: 25,
                   left: 0,
@@ -293,9 +290,11 @@ class _equb_mainState extends State<equb_main> {
               pageTo: 23,
               fonts: 13,
               controller: controller),
+          SizedBox(
+            height: _screenH / 20,
+          ),
           Container(
-            constraints: BoxConstraints.expand(
-                width: _screenWidth / 8, height: _screenH / 10),
+            padding: EdgeInsets.symmetric(vertical: _screenH / 20),
             child: RaisedButton.icon(
                 onPressed: () {
                   Navigator.push(
@@ -308,7 +307,7 @@ class _equb_mainState extends State<equb_main> {
                 icon: Icon(FontAwesomeIcons.signOutAlt),
                 color: Colors.grey[200],
                 label: Text(
-                  "  Back to Layout Overview",
+                  "\n Back to \nLayout Overview\n",
                   style: TextStyle(
                       fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                 )),

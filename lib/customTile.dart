@@ -29,20 +29,15 @@ class customListTile extends StatelessWidget {
                   duration: Duration(milliseconds: 500),
                   curve: Curves.easeInOut)
             },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Wrap(
               children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        name,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: fonts),
-                      ),
-                    )
-                  ],
+                Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text(
+                    name,
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: fonts),
+                  ),
                 ),
                 Icon(Icons.arrow_right)
               ],

@@ -55,7 +55,7 @@ class video {
             )),
       )
       ..add(video(
-          title: "Test Under Boiling Temperature (100 degree C)",
+          title: "Test Under Boiling Temperature (100 C)",
           subtitle: "Sample heat up to 100 degree C for testing",
           materialcolor: Colors.red[600],
           videoController: YoutubePlayerController(
@@ -66,7 +66,7 @@ class video {
             ),
           )))
       ..add(video(
-          title: "Test Under Room Temperature (25 degree C)",
+          title: "Test Under Room Temperature (25 C)",
           subtitle: "Sample under room temperature for testing",
           materialcolor: Colors.green[400],
           videoController: YoutubePlayerController(
@@ -77,7 +77,7 @@ class video {
             ),
           )))
       ..add(video(
-          title: "Test Under Ice Water (0 degree C)",
+          title: "Test Under Ice Water (0 C)",
           subtitle: "Sample cool down to 0 degree C for testing",
           materialcolor: Colors.blue[400],
           videoController: YoutubePlayerController(

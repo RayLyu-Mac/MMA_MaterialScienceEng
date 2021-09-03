@@ -16,39 +16,32 @@ class ScrollcustomListTile extends StatelessWidget {
   final ScrollController controller;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-      child: Container(
-          decoration: BoxDecoration(
-              border: Border(top: BorderSide(color: Colors.grey[100]))),
-          child: InkWell(
-            splashColor: Colors.blue[100],
-            onTap: () => {
-              controller.animateTo(pageTo * (offset != null ? offset : 320.0),
-                  duration: Duration(milliseconds: 500),
-                  curve: Curves.easeInOut)
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        name,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: fonts,
-                            color: Colors.grey[800]),
-                      ),
-                    )
-                  ],
-                ),
-                Icon(Icons.arrow_right)
-              ],
+      decoration: BoxDecoration(
+          border: Border(top: BorderSide(color: Colors.grey[100]))),
+      child: InkWell(
+        splashColor: Colors.blue[100],
+        onTap: () => {
+          controller.animateTo(pageTo * (offset != null ? offset : 320.0),
+              duration: Duration(milliseconds: 500), curve: Curves.easeInOut)
+        },
+        child: Wrap(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              child: Text(
+                name,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: fonts,
+                    color: Colors.grey[800]),
+              ),
             ),
-          )),
+            Icon(Icons.arrow_right)
+          ],
+        ),
+      ),
     );
   }
 }

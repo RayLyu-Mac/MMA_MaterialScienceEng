@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'MSDSdata.dart';
 
@@ -73,6 +74,9 @@ class _SearchListExampleState extends State<SearchListExample> {
         appBar: buildAppBar(context),
         body: Column(
           children: [
+            SizedBox(
+              height: _screenH / 45,
+            ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +84,7 @@ class _SearchListExampleState extends State<SearchListExample> {
                 Container(
                   padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
                   height: 55,
-                  width: 245,
+                  width: _screenWidth / 1.3,
                   child: TextField(
                     expands: true,
                     maxLines: null,
@@ -141,9 +145,14 @@ class _SearchListExampleState extends State<SearchListExample> {
                     items: <String>["Name", "Location", "Chemical Formula"]
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
+                          value: value,
+                          child: Text(
+                            value + '\n \n \n ',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: _screenH / 45,
+                            ),
+                          ));
                     }).toList(),
                   ),
                 )

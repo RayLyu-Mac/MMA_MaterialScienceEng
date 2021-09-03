@@ -42,75 +42,69 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
   @override
   Widget build(BuildContext context) {
     Drawer charpyInstruc() => Drawer(
-          child: ListView(
-            children: [
-              DrawerHeader(
-                child: Text("Instruction For CHarpy Imp[act Tester"),
-              ),
-              for (var i = 0; i < titles.length; i++)
-                ScrollcustomListTile(
-                    name: titles[i],
-                    pageTo: i - 1,
-                    fonts: 13,
-                    controller: controller),
-            ],
+          elevation: 25,
+          child: Container(
+            width: _screenWidth / 2,
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  child: Text("Instruction For Charpy Impact Tester"),
+                ),
+                for (var i = 0; i < titles.length; i++)
+                  ScrollcustomListTile(
+                      name: titles[i],
+                      pageTo: i - 1,
+                      fonts: 13,
+                      controller: controller),
+              ],
+            ),
           ),
         );
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text(
-            "Charpy Impact Test instruction",
-            style:
-                TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          "Charpy Impact Test instruction",
+          style:
+              TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
         ),
-        drawer: charpyInstruc(),
-        body: SafeArea(
-          child: ListView.builder(
-            itemExtent: 325,
-            controller: controller,
-            itemCount: _instructionList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Card(
-                color: _instructionList[index].materialcolor,
-                margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0)),
-                clipBehavior: Clip.antiAlias,
-                child: Stack(
-                  children: [
-                    Positioned(
-                        top: 265,
-                        left: 5,
-                        child: Text(
-                          _instructionList[index].title,
-                          style: TextStyle(
-                              fontSize: _screenH / 47,
-                              fontWeight: FontWeight.bold),
-                        )),
-                    Positioned(
-                        top: 280,
-                        left: 5,
-                        child: Text(
-                          _instructionList[index].subtitle,
-                          style: TextStyle(fontSize: _screenH / 58),
-                        )),
-                    Positioned(
-                        top: 0,
-                        child: Container(
-                          height: 260,
-                          child: YoutubePlayer(
-                            controller: _instructionList[index].videoController,
-                            liveUIColor: Colors.amber,
-                          ),
-                        ))
-                  ],
+      ),
+      drawer: charpyInstruc(),
+      body: ListView.builder(
+        itemExtent: 335,
+        controller: controller,
+        itemCount: _instructionList.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            color: _instructionList[index].materialcolor,
+            margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0)),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                Container(
+                  height: 250,
+                  child: YoutubePlayer(
+                    controller: _instructionList[index].videoController,
+                    liveUIColor: Colors.amber,
+                  ),
                 ),
-              );
-            },
-          ),
-        ));
+                Text(
+                  _instructionList[index].title,
+                  style: TextStyle(
+                      fontSize: _screenH / 47, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  _instructionList[index].subtitle,
+                  style: TextStyle(fontSize: _screenH / 58),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 }
