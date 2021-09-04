@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'charpyImpact.dart';
 import 'package:flutter/services.dart';
@@ -63,6 +64,15 @@ class _RockWellinstructionState extends State<RockWellinstruction> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
         title: Text(
           "Charpy Impact Test instruction",
           style:

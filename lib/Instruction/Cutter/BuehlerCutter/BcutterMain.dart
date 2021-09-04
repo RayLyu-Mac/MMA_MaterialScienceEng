@@ -3,6 +3,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'BcutterData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BuehlerCutterInstru extends StatefulWidget {
   final video videoType;
@@ -57,6 +58,15 @@ class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
           title: Text(
             "Buehler Precision Cutter instruction",
             style:

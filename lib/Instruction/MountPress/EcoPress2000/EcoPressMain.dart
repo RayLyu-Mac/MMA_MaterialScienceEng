@@ -3,6 +3,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'EcoPressData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class EcoPressinstruction extends StatefulWidget {
   final video videoType;
@@ -59,6 +60,15 @@ class _EcoPressinstructionState extends State<EcoPressinstruction> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
           title: Text(
             "Mounting Press ECOPRESS 200 instruction",
             style:
