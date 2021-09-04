@@ -13,7 +13,6 @@ class test_ava extends StatefulWidget {
 
 class _test_avaState extends State<test_ava> {
   HeroType _heroType;
-  double _screenWidth;
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
   final ScrollController controller = ScrollController();
@@ -22,12 +21,6 @@ class _test_avaState extends State<test_ava> {
   void initState() {
     super.initState();
     _heroTypeList = HeroType().test_data_list();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
   }
 
   @override

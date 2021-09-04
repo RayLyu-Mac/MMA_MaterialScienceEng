@@ -29,13 +29,13 @@ class ScrollcustomListTile extends StatelessWidget {
         child: Wrap(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 9),
               child: Text(
                 name,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: fonts,
-                    color: Colors.grey[800]),
+                    color: Colors.grey[700]),
               ),
             ),
             Icon(Icons.arrow_right)

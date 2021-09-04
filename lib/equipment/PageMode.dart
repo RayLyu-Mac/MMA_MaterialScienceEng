@@ -58,7 +58,7 @@ class EqubPageMode extends StatefulWidget {
 class _EqubPageModeState extends State<EqubPageMode> {
   double _screenWidth;
   double _screenH;
-  double adjust;
+  double adjust = 1;
   @override
   void initState() {
     super.initState();

@@ -27,7 +27,7 @@ class _equb_mainState extends State<equb_main> {
   List code = [];
   String titleForCsv;
   List<Widget> pT = [];
-  double _screenH = 0;
+  double _screenH;
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();

@@ -40,15 +40,6 @@ class _room239State extends State<room239> {
       appBar: AppBar(
         title: Text("Room 239"),
         backgroundColor: Colors.black,
-        actions: [
-          IconButton(
-              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-              iconSize: 32,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(Icons.stop_circle))
-        ],
       ),
       body: Stack(
         children: [

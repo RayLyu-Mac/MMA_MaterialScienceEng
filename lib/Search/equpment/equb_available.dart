@@ -26,15 +26,14 @@ class _equb_avaState extends State<equb_ava> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
     _screenWidth = MediaQuery.of(context).size.width;
+
     _screenH = MediaQuery.of(context).size.height;
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
-      adjust = 0.875;
-    }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: _heroType.materialColor,
@@ -42,7 +41,6 @@ class _equb_avaState extends State<equb_ava> {
             style: TextStyle(
                 fontSize: _screenH / 35,
                 color: Colors.grey[800],
-                fontFamily: 'Raleway',
                 fontWeight: FontWeight.bold)),
       ),
       body: SafeArea(
@@ -58,7 +56,7 @@ class _equb_avaState extends State<equb_ava> {
                 top: 0.0,
                 left: 0.0,
                 width: _screenWidth,
-                height: _screenH / 2.7 * adjust,
+                height: _screenH / 2.7,
                 child: Hero(
                     tag: 'image' + _heroType.title,
                     child: Image.network(
@@ -66,7 +64,7 @@ class _equb_avaState extends State<equb_ava> {
                       fit: BoxFit.fitWidth,
                     ))),
             Positioned(
-                top: _screenH / 2.65 * adjust,
+                top: _screenH / 2.65,
                 left: 10,
                 width: _screenWidth - 14.0,
                 child: Hero(
@@ -75,12 +73,12 @@ class _equb_avaState extends State<equb_ava> {
                         color: Colors.transparent,
                         child: Text(_heroType.fText,
                             style: TextStyle(
-                              fontSize: _screenH / (48 / adjust),
+                              fontSize: _screenH / (48),
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ))))),
             Positioned(
-              top: _screenH / 1.1 * adjust,
+              top: _screenH / 1.1,
               left: 25,
               width: _screenWidth - 64.0,
               child: Hero(
