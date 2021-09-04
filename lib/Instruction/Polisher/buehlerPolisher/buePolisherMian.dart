@@ -3,6 +3,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'buePolisherData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BehPolisherInstru extends StatefulWidget {
   final video videoType;
@@ -59,6 +60,15 @@ class _BehPolisherInstruState extends State<BehPolisherInstru> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
           title: Text(
             "Automatic Polisher Instruction",
             style:
