@@ -68,28 +68,49 @@ class _warningVideoState extends State<warningVideo>
                         ),
                       )),
                       FlatButton.icon(
-                          splashColor: Colors.white30,
+                          padding: EdgeInsets.fromLTRB(43, 15, 43, 15),
+                          splashColor: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withOpacity(0.1),
+                          shape: Border.all(
+                            width: 5,
+                            color: Colors.grey[200],
+                          ),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 PageTransition(
                                     child: widget.pageTo,
-                                    duration: Duration(milliseconds: 550),
+                                    duration: Duration(milliseconds: 650),
                                     type: PageTransitionType.scale,
                                     alignment: Alignment.centerLeft));
                           },
                           icon: Icon(Icons.forward),
-                          label: Text("Forward")),
+                          label: Text(
+                            "Forward",
+                            style: TextStyle(fontSize: _screenH / 38),
+                          )),
                       SizedBox(
-                        height: _screenH / 80,
+                        height: _screenH / 45,
                       ),
                       FlatButton.icon(
-                          splashColor: Colors.white30,
+                          padding: EdgeInsets.fromLTRB(48, 15, 48, 15),
+                          splashColor: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withOpacity(0.1),
+                          shape: Border.all(
+                            width: 5,
+                            color: Colors.grey[200],
+                          ),
                           onPressed: () {
                             Navigator.pop(context);
                           },
                           icon: Icon(Icons.backspace),
-                          label: Text("Cancel"))
+                          label: Text(
+                            "Cancel",
+                            style: TextStyle(fontSize: _screenH / 38),
+                          )),
+                      SizedBox(
+                        height: _screenH / 45,
+                      ),
                     ]))));
   }
 }

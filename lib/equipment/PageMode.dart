@@ -120,11 +120,12 @@ class _EqubPageModeState extends State<EqubPageMode> {
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-              tooltip: "Back to last page",
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back))
+              icon: Icon(FontAwesomeIcons.timesCircle))
         ],
       ),
       drawer: standardDrawer(header: widget.title),
