@@ -290,32 +290,19 @@ class _equb_mainState extends State<equb_main> {
               pageTo: 23,
               fonts: 13,
               controller: controller),
-          SizedBox(
-            height: _screenH / 20,
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: _screenH / 20),
-            child: RaisedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                          duration: const Duration(milliseconds: 500),
-                          child: layout_overview(),
-                          type: PageTransitionType.leftToRight));
-                },
-                icon: Icon(FontAwesomeIcons.signOutAlt),
-                color: Colors.grey[200],
-                label: Text(
-                  "\n Back to \nLayout Overview\n",
-                  style: TextStyle(
-                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-                )),
-          ),
         ]));
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
         title: DefaultTextStyle(
           style: const TextStyle(
               fontSize: 20.0, fontFamily: 'Horizon', color: Colors.white),

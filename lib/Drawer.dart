@@ -71,7 +71,7 @@ class _standardDrawerState extends State<standardDrawer> {
           ),
           Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 8, height: _screenH / 10),
+                width: _screenWidth / 3, height: _screenH / 6),
             child: RaisedButton.icon(
                 onPressed: () {
                   Navigator.push(

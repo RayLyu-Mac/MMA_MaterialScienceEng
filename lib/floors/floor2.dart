@@ -80,14 +80,21 @@ class _floor2State extends State<floor2> {
       appBar: AppBar(
         actions: [
           IconButton(
-              padding: EdgeInsets.fromLTRB(0, 3, 15, 3),
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
               iconSize: 32,
               onPressed: () {
                 setState(() {
                   saftyI = saftyI * -1;
                 });
               },
-              icon: Icon(FontAwesomeIcons.exchangeAlt))
+              icon: Icon(FontAwesomeIcons.exchangeAlt)),
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
         ],
         title: Text(
           "JHE Floor II",

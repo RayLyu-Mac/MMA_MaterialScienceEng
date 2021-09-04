@@ -77,7 +77,14 @@ class _floor1State extends State<floor1> {
                     saftyI = saftyI * -1;
                   });
                 },
-                icon: Icon(FontAwesomeIcons.exchangeAlt))
+                icon: Icon(FontAwesomeIcons.exchangeAlt)),
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
           ],
           backgroundColor: Colors.black,
           title: Text(

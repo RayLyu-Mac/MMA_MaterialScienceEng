@@ -69,7 +69,14 @@ class _floor3State extends State<floor3> {
                   saftyI = saftyI * -1;
                 });
               },
-              icon: Icon(FontAwesomeIcons.exchangeAlt))
+              icon: Icon(FontAwesomeIcons.exchangeAlt)),
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
         ],
         title: Text(
           "JHE Floor III",

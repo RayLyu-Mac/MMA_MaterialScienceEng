@@ -1,6 +1,7 @@
 import 'test_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class test_ava extends StatefulWidget {
   final HeroType heroType;
@@ -51,6 +52,15 @@ class _test_avaState extends State<test_ava> {
         backgroundColor: Colors.black,
         title: Text("Test Availble in MSE",
             style: TextStyle(color: Colors.white, fontSize: 18)),
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
       ),
       drawer: testCase(),
       body: SafeArea(

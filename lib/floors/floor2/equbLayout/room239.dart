@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/cutter/precCutter/PrecisionCutterMain.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class room239 extends StatefulWidget {
   room239({Key key}) : super(key: key);
@@ -39,6 +40,15 @@ class _room239State extends State<room239> {
       appBar: AppBar(
         title: Text("Room 239"),
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.stop_circle))
+        ],
       ),
       body: Stack(
         children: [

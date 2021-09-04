@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Drawer.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class roomHorizontal extends StatefulWidget {
   final String emailTo;
@@ -59,6 +60,15 @@ class _roomHorizontalState extends State<roomHorizontal> {
       appBar: AppBar(
         title: Text(widget.roomTi),
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
       ),
       drawer: standardDrawer(
         header: widget.roomName,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'PressureU.dart';
 import 'thermalU.dart';
 import 'lengthU.dart';
@@ -34,6 +35,13 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
       appBar: AppBar(
         title: Text("Unit Conversion Tools"),
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.cross))
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -52,7 +60,10 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("assest/logocolor.png"))),
-                )
+                ),
+                SizedBox(
+                  height: _screenH / 35,
+                ),
               ],
             )),
             ScrollcustomListTile(
