@@ -67,6 +67,9 @@ class _warningVideoState extends State<warningVideo>
                           ),
                         ),
                       )),
+                      SizedBox(
+                        height: _screenH / 40,
+                      ),
                       FlatButton.icon(
                           padding: EdgeInsets.fromLTRB(43, 15, 43, 15),
                           splashColor: Colors.white.withOpacity(0.7),
