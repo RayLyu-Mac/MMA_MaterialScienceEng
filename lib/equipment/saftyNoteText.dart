@@ -77,7 +77,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                       height: _screenH / 20,
                     ),
                     FlatButton.icon(
-                        padding: EdgeInsets.fromLTRB(42, 15, 42, 15),
+                        padding: EdgeInsets.fromLTRB(43, 15, 43, 15),
                         splashColor: Colors.white.withOpacity(0.7),
                         color: Colors.white.withOpacity(0.1),
                         shape: Border.all(
@@ -102,7 +102,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                       height: _screenH / 45,
                     ),
                     FlatButton.icon(
-                        padding: EdgeInsets.fromLTRB(47, 15, 47, 15),
+                        padding: EdgeInsets.fromLTRB(48, 15, 48, 15),
                         splashColor: Colors.white.withOpacity(0.7),
                         color: Colors.white.withOpacity(0.1),
                         shape: Border.all(
