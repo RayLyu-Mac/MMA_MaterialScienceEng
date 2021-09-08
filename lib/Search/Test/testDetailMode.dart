@@ -35,7 +35,7 @@ class pageMode extends StatefulWidget {
 class _pageModeState extends State<pageMode> {
   double _screenWidth;
   double _screenH;
-  double adjust;
+  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

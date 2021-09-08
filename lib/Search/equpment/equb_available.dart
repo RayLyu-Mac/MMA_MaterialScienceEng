@@ -43,56 +43,68 @@ class _equb_avaState extends State<equb_ava> {
                 color: Colors.grey[800],
                 fontWeight: FontWeight.bold)),
       ),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Hero(
-              tag: 'background' + _heroType.title,
-              child: Container(
-                color: _heroType.materialColor.withOpacity(0.9),
-              ),
-            ),
-            Positioned(
-                top: 0.0,
-                left: 0.0,
-                width: _screenWidth,
-                height: _screenH / 2.7,
-                child: Hero(
-                    tag: 'image' + _heroType.title,
-                    child: Image.network(
-                      _heroType.image,
-                      fit: BoxFit.fitWidth,
-                    ))),
-            Positioned(
-                top: _screenH / 2.65,
-                left: 10,
-                width: _screenWidth - 14.0,
-                child: Hero(
-                    tag: 'fText' + _heroType.fText,
-                    child: Material(
-                        color: Colors.transparent,
-                        child: Text(_heroType.fText,
-                            style: TextStyle(
-                              fontSize: _screenH / (48),
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ))))),
-            Positioned(
-              top: _screenH / 1.1,
-              left: 25,
-              width: _screenWidth - 64.0,
-              child: Hero(
-                tag: 'pageTo',
-                child: fancyBut(
-                  pageTo: _heroType.pageTo,
-                  width: _screenWidth / 1.8,
-                  height: _screenWidth / 8.2,
-                  icon: Icons.follow_the_signs_rounded,
-                  buttonName: "Go to the equipment page",
+      body: Container(
+        height: _screenH / 0.85,
+        decoration: BoxDecoration(
+          color: _heroType.materialColor.withAlpha(85),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Hero(
+                tag: 'background' + _heroType.title,
+                child: Container(
+                  color: _heroType.materialColor.withOpacity(0.9),
                 ),
               ),
-            )
-          ],
+              Container(
+                  height: _screenH / 2.5,
+                  width: _screenWidth,
+                  child: Hero(
+                      tag: 'image' + _heroType.title,
+                      child: Image.network(
+                        _heroType.image,
+                        fit: BoxFit.fitWidth,
+                      ))),
+              SizedBox(
+                height: _screenH / 30,
+              ),
+              Container(
+                  width: _screenWidth - 14.0,
+                  child: Hero(
+                      tag: 'fText' + _heroType.fText,
+                      child: Material(
+                          color: Colors.transparent,
+                          child: Text(_heroType.fText,
+                              style: TextStyle(
+                                fontSize: _screenH / (46),
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ))))),
+              SizedBox(
+                height: _screenH / 15,
+              ),
+              Container(
+                width: _screenWidth - 64.0,
+                child: Hero(
+                  tag: 'pageTo',
+                  child: fancyBut(
+                    pageTo: _heroType.pageTo,
+                    width: _screenWidth / 1.4,
+                    height: _screenWidth / 5.5,
+                    fontsize: _screenH / 35,
+                    icon: Icons.follow_the_signs_rounded,
+                    buttonName: "Go to the equipment page",
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: _screenH / 25,
+              ),
+            ],
+          ),
         ),
       ),
     );

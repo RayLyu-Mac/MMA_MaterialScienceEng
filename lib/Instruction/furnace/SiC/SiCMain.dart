@@ -46,7 +46,7 @@ class _SiCFurnaceInstrState extends State<SiCFurnaceInstr> {
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For Blue Furnace"),
+                child: Text("Instruction For SiC Furnace"),
               ),
               for (var i = 0; i < _instructionList.length; i++)
                 ScrollcustomListTile(
@@ -70,7 +70,7 @@ class _SiCFurnaceInstrState extends State<SiCFurnaceInstr> {
                 icon: Icon(FontAwesomeIcons.timesCircle))
           ],
           title: Text(
-            "Blue Furnace Instruction",
+            "SiC Furnace Instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
