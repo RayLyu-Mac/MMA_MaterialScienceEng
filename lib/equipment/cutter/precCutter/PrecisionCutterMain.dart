@@ -40,7 +40,8 @@ class _PcutterMainState extends State<PcutterMain> {
       extraPage: precisionBlade(),
       fontSize: 44,
       toolTip: "Gear Intro",
-      warnVido: "gPepaJjjSRg",
+      warnNote:
+          "When using the Precision Cutter although there is a safety shield; safety glasses are required.\nPlease be familiar with the parameter you are going to set",
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true",
       intro:

@@ -23,7 +23,7 @@ class ScrollcustomListTile extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.blue[100],
         onTap: () => {
-          controller.animateTo(pageTo * (offset != null ? offset : 320.0),
+          controller.animateTo(pageTo * (offset != null ? offset : 300.0),
               duration: Duration(milliseconds: 500), curve: Curves.easeInOut)
         },
         child: Wrap(

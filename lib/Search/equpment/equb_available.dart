@@ -72,6 +72,7 @@ class _equb_avaState extends State<equb_ava> {
                 height: _screenH / 30,
               ),
               Container(
+                  padding: EdgeInsets.only(left: _screenWidth / 45),
                   width: _screenWidth - 14.0,
                   child: Hero(
                       tag: 'fText' + _heroType.fText,
@@ -79,12 +80,12 @@ class _equb_avaState extends State<equb_ava> {
                           color: Colors.transparent,
                           child: Text(_heroType.fText,
                               style: TextStyle(
-                                fontSize: _screenH / (46),
+                                fontSize: _screenH / (44),
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ))))),
               SizedBox(
-                height: _screenH / 15,
+                height: _screenH / 17,
               ),
               Container(
                 width: _screenWidth - 64.0,
@@ -101,7 +102,7 @@ class _equb_avaState extends State<equb_ava> {
                 ),
               ),
               SizedBox(
-                height: _screenH / 25,
+                height: _screenH / 30,
               ),
             ],
           ),
