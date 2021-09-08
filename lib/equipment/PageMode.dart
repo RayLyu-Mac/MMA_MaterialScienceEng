@@ -143,17 +143,19 @@ class _EqubPageModeState extends State<EqubPageMode> {
             Positioned(
               top: _screenH / 13,
               left: _screenWidth / 1.95,
-              child: Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 2.2, height: _screenH / 1.85),
-                  child: Text(
-                    widget.intro,
-                    style: TextStyle(
-                        fontSize: _screenWidth *
-                            1.8 /
-                            (widget.fontSize ?? 55 / adjust),
-                        fontWeight: FontWeight.bold),
-                  )),
+              child: SingleChildScrollView(
+                child: Container(
+                    height: _screenH / 2,
+                    width: _screenWidth / 2.3,
+                    child: Text(
+                      widget.intro,
+                      style: TextStyle(
+                          fontSize: _screenWidth *
+                              1.8 /
+                              (widget.fontSize ?? 55 / adjust),
+                          fontWeight: FontWeight.bold),
+                    )),
+              ),
             ),
             Positioned(
               top: _screenH / 55,

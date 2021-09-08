@@ -17,6 +17,7 @@ class ScrollcustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
       decoration: BoxDecoration(
           border: Border(top: BorderSide(color: Colors.grey[100]))),
@@ -35,10 +36,9 @@ class ScrollcustomListTile extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: fonts,
-                    color: Colors.grey[700]),
+                    color: Colors.grey[800]),
               ),
             ),
-            Icon(Icons.arrow_right)
           ],
         ),
       ),
