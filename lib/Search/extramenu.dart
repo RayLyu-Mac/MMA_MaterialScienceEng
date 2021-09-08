@@ -50,6 +50,17 @@ class _extraMenuState extends State<extraMenu> {
           leadIcon: FontAwesomeIcons.tools,
         ),
         floor1customListTile(
+          name: "   Safety",
+          pageTo: saftyMain(),
+          fonts: 16,
+          leadIcon: FontAwesomeIcons.lifeRing,
+        ),
+        floor1customListTile(
+            name: "   Contact Info",
+            pageTo: ContactMSE(),
+            fonts: 16,
+            leadIcon: Icons.contact_page),
+        floor1customListTile(
           name: "   Tech Elective",
           pageTo: direction_main(),
           fonts: 16,
@@ -60,17 +71,6 @@ class _extraMenuState extends State<extraMenu> {
           web: _launchURL,
           fonts: 16,
           leadIcon: FontAwesomeIcons.democrat,
-        ),
-        floor1customListTile(
-            name: "   Contact Info",
-            pageTo: ContactMSE(),
-            fonts: 16,
-            leadIcon: Icons.contact_page),
-        floor1customListTile(
-          name: "   Safety",
-          pageTo: saftyMain(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.lifeRing,
         ),
       ],
     );

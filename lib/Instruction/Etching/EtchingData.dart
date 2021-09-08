@@ -56,7 +56,7 @@ class video {
             )),
       )
       ..add(video(
-          title: "Finish the experiment I",
+          title: "Finish the experiment I: Clean Up",
           subtitle: "Clean the container and pour into the waste backet",
           materialcolor: Colors.green[400],
           videoController: YoutubePlayerController(
@@ -67,7 +67,7 @@ class video {
             ),
           )))
       ..add(video(
-          title: "Finish the experiment II",
+          title: "Finish the experiment II: Organize Equipment",
           subtitle: "Place all used tools back into place",
           materialcolor: Colors.green[400],
           videoController: YoutubePlayerController(

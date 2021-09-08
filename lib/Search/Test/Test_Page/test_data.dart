@@ -31,13 +31,6 @@ class HeroType {
     List _heroType = List<HeroType>();
     return _heroType
       ..add(HeroType(
-          title: 'Hardness Test',
-          subTitle: 'Test for material mechanical property',
-          pageTo: hardness_test_bg(),
-          image:
-              'https://github.com/RayLyu-Mac/MMA/blob/master/assest/search/s.png?raw=true',
-          materialColor: Colors.amber[700]))
-      ..add(HeroType(
           title: 'UTM Case: Three Point Test',
           titleFontSize: 22,
           contentFontsize: 14,

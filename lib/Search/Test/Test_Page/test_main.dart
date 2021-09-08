@@ -12,6 +12,15 @@ class test_ava extends StatefulWidget {
 }
 
 class _test_avaState extends State<test_ava> {
+  double _screenWidth;
+  double _screenH;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+  }
+
   HeroType _heroType;
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
@@ -28,7 +37,26 @@ class _test_avaState extends State<test_ava> {
     Drawer testCase() => Drawer(
           child: ListView(
             children: [
-              DrawerHeader(child: Text("Case Study of Using those Equipments")),
+              DrawerHeader(
+                  child: Column(
+                children: [
+                  Text(
+                    "Case Studies in MSE",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: _screenWidth / 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenWidth / 1.5, height: _screenWidth / 4),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assest/logocolor.png"))),
+                  )
+                ],
+              )),
               for (var tc = 0; tc < _heroTypeList.length; tc++)
                 ScrollcustomListTile(
                   name: _heroTypeList[tc].title,

@@ -48,7 +48,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
       _screenH = _screenH * 0.96;
     }
     Map<String, List> position = {
-      "a": [_screenWidth / 19, _screenH / 4.3, _screenH / 5],
+      "a": [_screenWidth / 19, _screenH / 50, _screenH / 2.4],
       "b": [_screenWidth / 1.9, _screenH / 50, _screenH / 4.4],
       "c": [_screenWidth / 1.9, _screenH / 3.8, _screenH / 2.4],
       "d": [_screenWidth / 1.9, _screenH / 1.42, _screenH / 4.4],

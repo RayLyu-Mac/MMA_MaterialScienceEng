@@ -46,7 +46,7 @@ class _EtchinginstructionState extends State<Etchinginstruction> {
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For Mounting Press ECOPRESS 200"),
+                child: Text("Instruction For Etching"),
               ),
               for (var i = 0; i < titles.length; i++)
                 ScrollcustomListTile(
@@ -70,7 +70,7 @@ class _EtchinginstructionState extends State<Etchinginstruction> {
                 icon: Icon(FontAwesomeIcons.timesCircle))
           ],
           title: Text(
-            "Mounting Press ECOPRESS 200 instruction",
+            "Etching instruction",
             style:
                 TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
           ),
@@ -90,34 +90,25 @@ class _EtchinginstructionState extends State<Etchinginstruction> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0)),
                   clipBehavior: Clip.antiAlias,
-                  child: Stack(
+                  child: Column(
                     children: [
-                      Positioned(
-                          top: 260,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].title,
-                            style: TextStyle(
-                                fontSize: _screenH / 47,
-                                fontWeight: FontWeight.bold),
-                          )),
-                      Positioned(
-                          top: 270,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].subtitle,
-                            style: TextStyle(fontSize: _screenH / 58),
-                          )),
-                      Positioned(
-                          top: 0,
-                          child: Container(
-                            height: 255,
-                            child: YoutubePlayer(
-                              controller:
-                                  _instructionList[index].videoController,
-                              liveUIColor: Colors.amber,
-                            ),
-                          ))
+                      Container(
+                        height: 255,
+                        child: YoutubePlayer(
+                          controller: _instructionList[index].videoController,
+                          liveUIColor: Colors.amber,
+                        ),
+                      ),
+                      Text(
+                        _instructionList[index].title,
+                        style: TextStyle(
+                            fontSize: _screenH / 47,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        _instructionList[index].subtitle,
+                        style: TextStyle(fontSize: _screenH / 58),
+                      ),
                     ],
                   ),
                 ),

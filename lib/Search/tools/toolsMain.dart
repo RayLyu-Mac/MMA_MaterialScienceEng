@@ -32,26 +32,15 @@ class _toolMainState extends State<toolMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.grey[500],
+          title: Text("Malts Eng Tool Box"),
+        ),
         backgroundColor: Colors.grey[200],
         drawer: standardDrawer(header: "Matls Tool Box"),
         body: SafeArea(
           child: Stack(
             children: [
-              Positioned(
-                  top: _screenH / 20,
-                  left: _screenWidth / 15,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Material \nTool Boxs",
-                        style: TextStyle(
-                            fontSize: _screenH / 22,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ),
-                      Icon(FontAwesomeIcons.toolbox)
-                    ],
-                  )),
               for (var i = 0; i < toolDataList.length; i++)
                 IntroButtonMode(
                   str: true,

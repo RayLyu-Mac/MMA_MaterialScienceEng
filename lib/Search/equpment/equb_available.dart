@@ -80,7 +80,7 @@ class _equb_avaState extends State<equb_ava> {
                           color: Colors.transparent,
                           child: Text(_heroType.fText,
                               style: TextStyle(
-                                fontSize: _screenH / (44),
+                                fontSize: _screenH / (40),
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ))))),

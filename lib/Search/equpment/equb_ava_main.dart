@@ -61,29 +61,23 @@ class _equb_mainState extends State<equb_main> {
     Drawer searchEquipMain() => Drawer(
             child: ListView(children: [
           DrawerHeader(
-              child: Stack(
+              child: Column(
             children: [
-              Positioned(
-                  top: _screenH / 60,
-                  left: _screenWidth / 45,
-                  child: Text(
-                    "Equipment Avaiable in MSE",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontSize: _screenWidth / 20,
-                        fontWeight: FontWeight.bold),
-                  )),
-              Positioned(
-                  top: 25,
-                  left: 0,
-                  child: Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.5, height: _screenWidth / 4),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assest/logocolor.png"))),
-                  ))
+              Text(
+                "Equipment Avaiable in MSE",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.grey.shade700,
+                    fontSize: _screenWidth / 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                constraints: BoxConstraints.expand(
+                    width: _screenWidth / 1.5, height: _screenWidth / 4),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assest/logocolor.png"))),
+              )
             ],
           )),
           Divider(

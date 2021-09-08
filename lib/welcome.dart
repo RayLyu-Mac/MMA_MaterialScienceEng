@@ -38,6 +38,8 @@ class _welcomeState extends State<welcome> {
           titleSpacing: 5.0,
           centerTitle: true,
           title: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 height: 20,
@@ -53,7 +55,7 @@ class _welcomeState extends State<welcome> {
                   )
                 ],
                 totalRepeatCount: 2,
-                pause: const Duration(milliseconds: 1000),
+                pause: const Duration(milliseconds: 1500),
                 displayFullTextOnTap: true,
                 stopPauseOnTap: true,
               ),
@@ -126,7 +128,7 @@ class _welcomeState extends State<welcome> {
                 child: Container(
                   constraints: BoxConstraints.expand(
                     width: _screenWidth / 1.8,
-                    height: _screenH / 2.75 / adjust,
+                    height: _screenH / 2.6 / adjust,
                   ),
                   decoration: BoxDecoration(
                     image: DecorationImage(
