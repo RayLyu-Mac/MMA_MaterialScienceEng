@@ -19,7 +19,7 @@ class _manual_polisherState extends State<manual_polisher> {
       title: "Manual Polisher",
       backC: Colors.blue[50],
       instruction: manual_polisher_instruction(),
-      dash: true,
+      dash: "Dashboard",
       fontSize: 46,
       warnNote:
           "•Make sure you are familiar with the grinding protocol \n•The grinding paper used for different hardness \n•Please try the virtual dashboard",

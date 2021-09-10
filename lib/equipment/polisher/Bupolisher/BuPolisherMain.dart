@@ -23,7 +23,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
       title: "Buehler Manual Polisher",
       backC: Colors.blue[50],
       instruction: BehPolisherInstru(),
-      dash: true,
+      dash: "Dashboard",
       fontSize: 46,
       warnNote:
           "•Securely hold the sample as it could become a projectile if the polishing wheel catches the sample.",

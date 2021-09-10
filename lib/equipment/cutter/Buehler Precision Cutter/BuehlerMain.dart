@@ -22,7 +22,7 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
       title: "Buehler Precision Cutter",
       backC: Colors.green[50],
       instruction: BuehlerCutterInstru(),
-      dash: true,
+      dash: "Dash Board Button",
       fontSize: 44,
       warnNote:
           "When using the Precision Cutter although there is a safety shield; safety glasses are required.\nPlease be familiar with the parameter you are going to set",

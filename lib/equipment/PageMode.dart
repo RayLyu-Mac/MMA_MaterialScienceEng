@@ -24,7 +24,7 @@ class EqubPageMode extends StatefulWidget {
   final Widget instruction;
   final Widget theory;
   final Color backC;
-  final bool dash;
+  final String dash;
   final IconData extraIcon;
   final Widget extraPage;
   final String toolTip;
@@ -195,8 +195,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 ? functionButtonMode(
                     top: _screenH / 1.6,
                     left: _screenWidth / 2 + 16,
-                    buttonName:
-                        widget.dash == null ? "Theory" : "Dash Board Button",
+                    buttonName: widget.dash ?? "Theory",
                     pageTo: widget.theory)
                 : functionButtonMode(
                     top: _screenH / 1.6,
