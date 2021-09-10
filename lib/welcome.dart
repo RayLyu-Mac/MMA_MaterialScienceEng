@@ -55,7 +55,7 @@ class _welcomeState extends State<welcome> {
                   )
                 ],
                 totalRepeatCount: 2,
-                pause: const Duration(milliseconds: 1500),
+                pause: const Duration(milliseconds: 2200),
                 displayFullTextOnTap: true,
                 stopPauseOnTap: true,
               ),

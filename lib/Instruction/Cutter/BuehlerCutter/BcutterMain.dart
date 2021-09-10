@@ -77,44 +77,72 @@ class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
       body: SingleChildScrollView(
           child: Column(children: [
         for (var index = 0; index < _instructionList.length; index++)
-          GestureDetector(
-            child: Card(
-              color: _instructionList[index].materialcolor.withOpacity(0.85),
-              margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14.0)),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Container(
-                    height: 245,
-                    width: double.infinity,
-                    child: YoutubePlayer(
-                      controller: _instructionList[index].videoController,
-                      liveUIColor: Colors.amber,
+          _instructionList[index].type == "ins"
+              ? GestureDetector(
+                  child: Card(
+                    color:
+                        _instructionList[index].materialcolor.withOpacity(0.85),
+                    margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.0)),
+                    clipBehavior: Clip.antiAlias,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 245,
+                          width: double.infinity,
+                          child: YoutubePlayer(
+                            controller: _instructionList[index].videoController,
+                            liveUIColor: Colors.amber,
+                          ),
+                        ),
+                        SizedBox(
+                          height: _screenH / 70,
+                        ),
+                        Text(
+                          _instructionList[index].title,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: _screenH / 39,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          _instructionList[index].subtitle,
+                          style: TextStyle(fontSize: _screenH / 55),
+                        ),
+                        SizedBox(
+                          height: _screenH / 55,
+                        ),
+                      ],
                     ),
                   ),
-                  SizedBox(
-                    height: _screenH / 70,
+                )
+              : Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 6, color: Colors.grey.shade100))),
+                        child: Text(
+                          _instructionList[index].title,
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      SizedBox(
+                        height: _screenH / 50,
+                      ),
+                      Container(
+                        child: Text(
+                          _instructionList[index].subtitle,
+                          textAlign: TextAlign.left,
+                        ),
+                      )
+                    ],
                   ),
-                  Text(
-                    _instructionList[index].title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: _screenH / 39, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    _instructionList[index].subtitle,
-                    style: TextStyle(fontSize: _screenH / 55),
-                  ),
-                  SizedBox(
-                    height: _screenH / 55,
-                  ),
-                ],
-              ),
-            ),
-          )
+                )
       ])),
     );
   }

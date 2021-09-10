@@ -6,10 +6,12 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
@@ -17,6 +19,13 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "How to place the component in place",
+        materialcolor: Colors.amber[300],
+      ))
+      ..add(video(
+          type: "ins",
           title: "Secure the blade",
           subtitle:
               "Be careful, the blade is easily break during put on and take off",
@@ -30,19 +39,7 @@ class video {
           )))
       ..add(
         video(
-            title: "Precision Control",
-            subtitle: "Precision control of the position of the samples",
-            materialcolor: Colors.amber[400],
-            videoController: YoutubePlayerController(
-              initialVideoId: '1eGMt-H2CNU',
-              flags: YoutubePlayerFlags(
-                autoPlay: true,
-                mute: false,
-              ),
-            )),
-      )
-      ..add(
-        video(
+            type: "ins",
             title: "Placing an Abrasive Blade onto to the Motor Shaft",
             subtitle: "Alignment shaft, washer, blade",
             materialcolor: Colors.orange[400],
@@ -55,6 +52,7 @@ class video {
             )),
       )
       ..add(video(
+          type: "ins",
           title: "Assembling Vise",
           subtitle: "Process of secure sample into the cutter",
           materialcolor: Colors.orangeAccent,
@@ -66,6 +64,7 @@ class video {
             ),
           )))
       ..add(video(
+          type: "ins",
           title: "Assemble for round sample",
           subtitle: "Process of secure round sample into the cutter",
           materialcolor: Colors.orangeAccent,
@@ -77,9 +76,30 @@ class video {
             ),
           )))
       ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the cutter",
+        materialcolor: Colors.green[300],
+      ))
+      ..add(
+        video(
+            type: "ins",
+            title: "Precision Control",
+            subtitle: "Precision control of the position of the samples",
+            materialcolor: Colors.green[400],
+            videoController: YoutubePlayerController(
+              initialVideoId: '1eGMt-H2CNU',
+              flags: YoutubePlayerFlags(
+                autoPlay: true,
+                mute: false,
+              ),
+            )),
+      )
+      ..add(video(
+          type: "ins",
           title: "Running for automated cut",
           subtitle: "Process of automated cut",
-          materialcolor: Colors.red,
+          materialcolor: Colors.green,
           videoController: YoutubePlayerController(
             initialVideoId: 'cploFTTCrig',
             flags: YoutubePlayerFlags(
@@ -88,9 +108,10 @@ class video {
             ),
           )))
       ..add(video(
+          type: "ins",
           title: "Serial cut",
           subtitle: "Process of making a serial cut",
-          materialcolor: Colors.redAccent,
+          materialcolor: Colors.greenAccent,
           videoController: YoutubePlayerController(
             initialVideoId: 'PDkmYVFGIjM',
             flags: YoutubePlayerFlags(
@@ -99,9 +120,16 @@ class video {
             ),
           )))
       ..add(video(
-          title: "FInish the experiment",
+        type: "tit",
+        title: "Finish and Clean Up",
+        subtitle: "How to clean and organize after experiment finished",
+        materialcolor: Colors.blue[300],
+      ))
+      ..add(video(
+          type: "ins",
+          title: "Finish the experiment",
           subtitle: "Dissemble the chuck and clean the cutter",
-          materialcolor: Colors.green,
+          materialcolor: Colors.blue,
           videoController: YoutubePlayerController(
             initialVideoId: 'k9TSrAnF9dg',
             flags: YoutubePlayerFlags(
