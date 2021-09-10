@@ -27,6 +27,7 @@ class _METPressState extends State<METPress> {
         theory: mountPressBackG(),
         backC: Colors.indigo[50],
         fontSize: 46,
+        dash: "Component & Tools",
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
         intro:

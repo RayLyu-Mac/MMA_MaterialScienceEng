@@ -27,6 +27,7 @@ class _StruesMainState extends State<StruesMain> {
         theory: mountPressBackG(),
         fontSize: 46,
         backC: Colors.indigo[50],
+        dash: "Component & Tools",
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true",
         intro:

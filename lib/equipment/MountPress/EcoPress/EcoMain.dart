@@ -26,6 +26,7 @@ class _EcoPressState extends State<EcoPress> {
         theory: mountPressBackG(),
         fontSize: 46,
         backC: Colors.indigo[50],
+        dash: "Component & Tools",
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true",
         intro:
