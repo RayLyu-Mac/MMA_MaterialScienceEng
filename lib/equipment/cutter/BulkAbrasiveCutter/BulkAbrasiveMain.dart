@@ -36,7 +36,7 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
       title: "Auto-Bulk Abrasive Cutter",
       backC: Colors.green[50],
       instruction: BulkAbraCutterInstru(),
-      dash: true,
+      dash: "Dashboard",
       fontSize: 46,
       extraIcon: FontAwesomeIcons.fan,
       extraPage: BulkAbrasiveCutter(),

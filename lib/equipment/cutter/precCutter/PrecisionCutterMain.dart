@@ -35,7 +35,7 @@ class _PcutterMainState extends State<PcutterMain> {
       title: "Precision Cutter",
       backC: Colors.green[50],
       instruction: PCutterinstruction(),
-      dash: true,
+      dash: "Dashboard",
       extraIcon: FontAwesomeIcons.fan,
       extraPage: precisionBlade(),
       fontSize: 44,

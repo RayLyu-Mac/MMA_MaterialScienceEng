@@ -56,72 +56,66 @@ class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
           ),
         );
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          actions: [
-            IconButton(
-                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-                iconSize: 32,
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(FontAwesomeIcons.timesCircle))
-          ],
-          title: Text(
-            "Buehler Precision Cutter instruction",
-            style:
-                TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
+        title: Text(
+          "Buehler Precision Cutter instruction",
+          style:
+              TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
         ),
-        drawer: buehlerCInstr(),
-        body: SafeArea(
-          child: ListView.builder(
-            itemExtent: 330,
-            controller: controller,
-            itemCount: _instructionList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                child: Card(
-                  color: _instructionList[index].materialcolor,
-                  margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0)),
-                  clipBehavior: Clip.antiAlias,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                          top: 250,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].title,
-                            style: TextStyle(
-                                fontSize: _screenH / 47,
-                                fontWeight: FontWeight.bold),
-                          )),
-                      Positioned(
-                          top: 270,
-                          left: 5,
-                          child: Text(
-                            _instructionList[index].subtitle,
-                            style: TextStyle(fontSize: _screenH / 58),
-                          )),
-                      Positioned(
-                          top: 0,
-                          child: Container(
-                            height: 245,
-                            child: YoutubePlayer(
-                              controller:
-                                  _instructionList[index].videoController,
-                              liveUIColor: Colors.amber,
-                            ),
-                          ))
-                    ],
+      ),
+      drawer: buehlerCInstr(),
+      body: SingleChildScrollView(
+          child: Column(children: [
+        for (var index = 0; index < _instructionList.length; index++)
+          GestureDetector(
+            child: Card(
+              color: _instructionList[index].materialcolor.withOpacity(0.85),
+              margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14.0)),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  Container(
+                    height: 245,
+                    width: double.infinity,
+                    child: YoutubePlayer(
+                      controller: _instructionList[index].videoController,
+                      liveUIColor: Colors.amber,
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-        ));
+                  SizedBox(
+                    height: _screenH / 70,
+                  ),
+                  Text(
+                    _instructionList[index].title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: _screenH / 39, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    _instructionList[index].subtitle,
+                    style: TextStyle(fontSize: _screenH / 55),
+                  ),
+                  SizedBox(
+                    height: _screenH / 55,
+                  ),
+                ],
+              ),
+            ),
+          )
+      ])),
+    );
   }
 }

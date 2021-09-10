@@ -23,7 +23,7 @@ class _AutoPolisherMainState extends State<AutoPolisherMain> {
       title: "Automatic Polisher",
       backC: Colors.blue[50],
       instruction: AutoPolisherinstruction(),
-      dash: true,
+      dash: "Dashboard",
       fontSize: 46,
       warnNote:
           "•Make sure you are familiar with the grinding protocol \n•The grinding paper used for different hardness \n•Please try the virtual dashboard",
