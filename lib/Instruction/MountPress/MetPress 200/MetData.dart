@@ -6,16 +6,24 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
   List<video> videoList() {
     List videoData = List<video>();
     return videoData
+      ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "Ready the mount press machine",
+        materialcolor: Colors.amber[600],
+      ))
       ..add(video(
           title: "Introduction to Mold 1/2",
           subtitle:
@@ -28,11 +36,17 @@ class video {
               mute: false,
             ),
           )))
+      ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the mount press",
+        materialcolor: Colors.green[600],
+      ))
       ..add(
         video(
             title: "Making a Metallurgical Mount I",
             subtitle: "Set the program and load the sample",
-            materialcolor: Colors.pinkAccent,
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: '9LTU5AuLjsM',
               flags: YoutubePlayerFlags(
@@ -45,7 +59,7 @@ class video {
         video(
             title: "Making a Metallurgical Mount II",
             subtitle: "Load resin, close the screw cap and press start",
-            materialcolor: Colors.pink[400],
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'avUQcGp4mg0',
               flags: YoutubePlayerFlags(
@@ -55,9 +69,15 @@ class video {
             )),
       )
       ..add(video(
+        type: "tit",
+        title: "Finish and Clean Up",
+        subtitle: "Clean and organize after experiment finished",
+        materialcolor: Colors.blue[600],
+      ))
+      ..add(video(
           title: "Finish the experiment",
           subtitle: "Remove sample from the mold",
-          materialcolor: Colors.greenAccent[400],
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'lD1g-3Ys1ck',
             flags: YoutubePlayerFlags(
