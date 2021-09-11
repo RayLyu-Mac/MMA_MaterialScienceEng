@@ -6,10 +6,12 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
@@ -17,9 +19,15 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
-          title: "Step 1A: Flat Sample Measurement",
+        type: "tit",
+        title: "Sample Measurement",
+        subtitle: "Method for measure sample in different size",
+        materialcolor: Colors.amber,
+      ))
+      ..add(video(
+          title: "Flat Sample Measurement",
           subtitle: "Flat Sample Measurement",
-          materialcolor: Colors.amber,
+          materialcolor: Colors.amber[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'YI4dj70oLuM',
             flags: YoutubePlayerFlags(
@@ -29,9 +37,9 @@ class video {
           )))
       ..add(
         video(
-            title: "Step 1B: Round Sample Measurement",
+            title: "Round Sample Measurement",
             subtitle: "Round Sample Measurement",
-            materialcolor: Colors.amber,
+            materialcolor: Colors.amber[300],
             videoController: YoutubePlayerController(
               initialVideoId: '10VL1ZBDe_4',
               flags: YoutubePlayerFlags(
@@ -40,37 +48,17 @@ class video {
               ),
             )),
       )
-      ..add(
-        video(
-            title: "Step 2: Set Up Machine",
-            subtitle: "Activate the machine and sofrware",
-            materialcolor: Colors.orange[400],
-            videoController: YoutubePlayerController(
-              initialVideoId: 'bO1Y0nYougA',
-              flags: YoutubePlayerFlags(
-                autoPlay: true,
-                mute: false,
-              ),
-            )),
-      )
-      ..add(
-        video(
-            title: "Step 3: Load Sample",
-            subtitle: "Make Sure to keep your hands out from the pich hole",
-            materialcolor: Colors.orangeAccent[700],
-            videoController: YoutubePlayerController(
-              initialVideoId: 'NW2WctbMRSM',
-              flags: YoutubePlayerFlags(
-                autoPlay: true,
-                mute: false,
-              ),
-            )),
-      )
+      ..add(video(
+        type: "tit",
+        title: "Extensometer",
+        subtitle: "Intro and how to use",
+        materialcolor: Colors.deepOrange[600],
+      ))
       ..add(
         video(
             title: "Introduction to Extensometer",
             subtitle: "Component and placement",
-            materialcolor: Colors.blueGrey[400],
+            materialcolor: Colors.deepOrange[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'TaYvrKsKB2E',
               flags: YoutubePlayerFlags(
@@ -83,9 +71,41 @@ class video {
         video(
             title: "Extensometer used for round /flat sample and installing",
             subtitle: "Usage for extensometer",
-            materialcolor: Colors.blueGrey,
+            materialcolor: Colors.deepOrange[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'td-n2COgNOc',
+              flags: YoutubePlayerFlags(
+                autoPlay: true,
+                mute: false,
+              ),
+            )),
+      )
+      ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "Set Up the machine & Component",
+        materialcolor: Colors.pink[600],
+      ))
+      ..add(
+        video(
+            title: "Set Up Machine",
+            subtitle: "Activate the machine and sofrware",
+            materialcolor: Colors.pink[300],
+            videoController: YoutubePlayerController(
+              initialVideoId: 'bO1Y0nYougA',
+              flags: YoutubePlayerFlags(
+                autoPlay: true,
+                mute: false,
+              ),
+            )),
+      )
+      ..add(
+        video(
+            title: "Load Sample",
+            subtitle: "Make Sure to keep your hands out from the pich hole",
+            materialcolor: Colors.pink[300],
+            videoController: YoutubePlayerController(
+              initialVideoId: 'NW2WctbMRSM',
               flags: YoutubePlayerFlags(
                 autoPlay: true,
                 mute: false,
@@ -96,7 +116,7 @@ class video {
         video(
             title: "Round Grid Installation",
             subtitle: "How to use a round grip in MTS test frame",
-            materialcolor: Colors.lightGreen,
+            materialcolor: Colors.pink[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'KP5-aSmR_B0',
               flags: YoutubePlayerFlags(
@@ -105,11 +125,17 @@ class video {
               ),
             )),
       )
+      ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the cutter",
+        materialcolor: Colors.green[600],
+      ))
       ..add(
         video(
-            title: "Step 4: Begin the Test",
+            title: "Begin the Test",
             subtitle: "Action needed for both machine and the software",
-            materialcolor: Colors.red,
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: '6FTRWy_q2-k',
               flags: YoutubePlayerFlags(
@@ -120,9 +146,9 @@ class video {
       )
       ..add(
         video(
-            title: "Step 5: Observation and Save the data",
+            title: "Observation and Save the data",
             subtitle: "Observing the stress strength curve and save the data",
-            materialcolor: Colors.redAccent,
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'NRk7PDQJ_O0',
               flags: YoutubePlayerFlags(
@@ -131,11 +157,17 @@ class video {
               ),
             )),
       )
+      ..add(video(
+        type: "tit",
+        title: "Finish and Clean Up",
+        subtitle: "Clean and organize after experiment finished",
+        materialcolor: Colors.blue[600],
+      ))
       ..add(
         video(
-            title: "Step 6: Finish the test",
+            title: " Finish the test",
             subtitle: "Turn off the machine and the software",
-            materialcolor: Colors.greenAccent,
+            materialcolor: Colors.blue[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'hLD1NP6XWz8',
               flags: YoutubePlayerFlags(

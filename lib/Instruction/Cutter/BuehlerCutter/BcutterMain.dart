@@ -24,6 +24,5 @@ class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
   Widget build(BuildContext context) {
     return InstructionMode(
         instructionList: _instructionList, name: "Buehler Precision Cutter");
-    ;
   }
 }
