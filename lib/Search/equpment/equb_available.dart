@@ -95,7 +95,7 @@ class _equb_avaState extends State<equb_ava> {
                     pageTo: _heroType.pageTo,
                     width: _screenWidth / 1.4,
                     height: _screenWidth / 5.5,
-                    fontsize: _screenH / 35,
+                    fontsize: _screenWidth / 22,
                     icon: Icons.follow_the_signs_rounded,
                     buttonName: "Go to the equipment page",
                   ),

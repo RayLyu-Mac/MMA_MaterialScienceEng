@@ -39,7 +39,7 @@ class _InstructionModeState extends State<InstructionMode> {
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For" + widget.name),
+                child: Text("Instruction For " + widget.name),
               ),
               for (var i = 0; i < widget.instructionList.length; i++)
                 ScrollcustomListTile(
@@ -50,7 +50,7 @@ class _InstructionModeState extends State<InstructionMode> {
                             ? 0.95
                             : 0.2),
                     pageTo: i - 1,
-                    fonts: 13,
+                    fonts: widget.instructionList[i].type == "tit" ? 22 : 14,
                     controller: widget.controller),
               SizedBox(
                 height: _screenH / 30,
@@ -72,7 +72,7 @@ class _InstructionModeState extends State<InstructionMode> {
               icon: Icon(FontAwesomeIcons.timesCircle))
         ],
         title: Text(
-          widget.name + "instruction",
+          widget.name + " Instruction",
           style:
               TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
         ),
