@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/Instruction/rockwell/digital/digiRWMain.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
@@ -30,7 +31,7 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
         toolTip: "Hardness Conversion Sheet",
         fontSize: 48,
         oritation: widget.ori,
-        instruction: DigitalRWMain(),
+        instruction: DigiRWInstr(),
         backC: Colors.blueGrey[50],
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true",
