@@ -22,7 +22,7 @@ class video {
         type: "tit",
         title: "Preparation",
         subtitle: "How to place the component in place",
-        materialcolor: Colors.amber[300],
+        materialcolor: Colors.amber[600],
       ))
       ..add(video(
           type: "ins",
@@ -79,7 +79,7 @@ class video {
         type: "tit",
         title: "Operation",
         subtitle: "How to operate the cutter",
-        materialcolor: Colors.green[300],
+        materialcolor: Colors.green[600],
       ))
       ..add(
         video(
@@ -123,13 +123,13 @@ class video {
         type: "tit",
         title: "Finish and Clean Up",
         subtitle: "Clean and organize after experiment finished",
-        materialcolor: Colors.blue[300],
+        materialcolor: Colors.blue[600],
       ))
       ..add(video(
           type: "ins",
           title: "Finish the experiment",
           subtitle: "Dissemble the chuck and clean the cutter",
-          materialcolor: Colors.blue,
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'k9TSrAnF9dg',
             flags: YoutubePlayerFlags(

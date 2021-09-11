@@ -14,6 +14,7 @@ class BuehlerCutterInstru extends StatefulWidget {
 
 class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
   List _instructionList = List<video>();
+  final ScrollController controller = ScrollController();
 
   void initState() {
     super.initState();
@@ -23,6 +24,9 @@ class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
   @override
   Widget build(BuildContext context) {
     return InstructionMode(
-        instructionList: _instructionList, name: "Buehler Precision Cutter");
+      instructionList: _instructionList,
+      name: "Buehler Precision Cutter",
+      controller: controller,
+    );
   }
 }
