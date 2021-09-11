@@ -122,7 +122,7 @@ class video {
       ..add(video(
         type: "tit",
         title: "Finish and Clean Up",
-        subtitle: "How to clean and organize after experiment finished",
+        subtitle: "Clean and organize after experiment finished",
         materialcolor: Colors.blue[300],
       ))
       ..add(video(

@@ -7,20 +7,26 @@ class ScrollcustomListTile extends StatelessWidget {
       @required this.fonts,
       @required this.controller,
       @optionalTypeArgs this.offset,
+      @optionalTypeArgs this.tileColor,
+      @optionalTypeArgs this.padTop,
       key})
       : super(key: key);
   final String name;
   final int pageTo;
   final double fonts;
   final double offset;
+  final double padTop;
+  final Color tileColor;
   final ScrollController controller;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+      margin: EdgeInsets.only(top: padTop ?? 0),
       decoration: BoxDecoration(
-          border: Border(top: BorderSide(color: Colors.grey[100]))),
+        color: tileColor ?? Colors.transparent,
+      ),
       child: InkWell(
         splashColor: Colors.blue[100],
         onTap: () => {
