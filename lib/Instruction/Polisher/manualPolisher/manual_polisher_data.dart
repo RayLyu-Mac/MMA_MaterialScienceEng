@@ -7,10 +7,12 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
@@ -18,10 +20,16 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the polisher",
+        materialcolor: Colors.green[600],
+      ))
+      ..add(video(
           title: "Polish Sample in 3-Micro",
           subtitle:
               "Cover the sample with lubricant and polish the sample in circular motion",
-          materialcolor: Colors.pink,
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'PB-dDLVnx-s', //时间在Main file里
             flags: YoutubePlayerFlags(
@@ -33,7 +41,7 @@ class video {
         video(
             title: "Clean sample after polished",
             subtitle: "Rinse the surface with water and dry the sample",
-            materialcolor: Colors.red,
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'cJO8wPSWNLs',
               flags: YoutubePlayerFlags(
@@ -46,7 +54,7 @@ class video {
         video(
             title: "Polish sample using 1-micro",
             subtitle: "Same steps as the using 3-micro",
-            materialcolor: Colors.redAccent,
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: '9mvZTPFO3dQ',
               flags: YoutubePlayerFlags(
@@ -55,11 +63,17 @@ class video {
               ),
             )),
       )
+      ..add(video(
+        type: "tit",
+        title: "Finish and Clean Up",
+        subtitle: "Clean and organize after experiment finished",
+        materialcolor: Colors.blue[600],
+      ))
       ..add(
         video(
-            title: "FInish the experiment",
+            title: "Finish the experiment",
             subtitle: "Clean the machine and cover it with dust cover",
-            materialcolor: Colors.green,
+            materialcolor: Colors.blue[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'eMZLKuC715I',
               flags: YoutubePlayerFlags(
