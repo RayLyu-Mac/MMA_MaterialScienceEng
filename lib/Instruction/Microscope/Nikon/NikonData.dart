@@ -6,16 +6,24 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
   List<video> videoList() {
     List videoData = List<video>();
     return videoData
+      ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "Ready the Microscope",
+        materialcolor: Colors.amber[600],
+      ))
       ..add(video(
           title: "Start the machine",
           subtitle:
@@ -42,11 +50,17 @@ class video {
               ),
             )),
       )
+      ..add(video(
+        type: "tit",
+        title: "Camera Setting",
+        subtitle: "Camera setting for better inspection",
+        materialcolor: Colors.indigo[600],
+      ))
       ..add(
         video(
             title: "LV PAD EPI",
             subtitle: "Control the power to the light source",
-            materialcolor: Colors.amberAccent[400],
+            materialcolor: Colors.indigo[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'GlAKbw35zr0',
               flags: YoutubePlayerFlags(
@@ -58,55 +72,67 @@ class video {
       ..add(video(
           title: "Camera setting",
           subtitle: "Parameters involved in getting a cleaer image",
-          materialcolor: Colors.yellow[600],
+          materialcolor: Colors.indigo[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'Dr1v9o1ytxc',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
       ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "SOPs for microscope inspection",
+        materialcolor: Colors.green[600],
+      ))
+      ..add(video(
           title: "Annotation and measurement",
           subtitle: "Making annotation and measurement in the picture",
-          materialcolor: Colors.blueAccent,
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'TF60cBFXxRA',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
       ..add(video(
           title: "Taking a simple picture",
           subtitle: "Process of taking a simple image",
-          materialcolor: Colors.pink[400],
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'jMWjklrbv0w',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
       ..add(video(
           title: "Adjusting picture when sample is not flat",
           subtitle: "adjust the picture when the sample is not flat",
-          materialcolor: Colors.redAccent,
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: '2zF7Mig1ATg',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
       ..add(video(
+        type: "tit",
+        title: "Finish and Clean Up",
+        subtitle: "Clean and organize after experiment finished",
+        materialcolor: Colors.blue[600],
+      ))
+      ..add(video(
           title: "Finish the experiment",
           subtitle: "Turn off the machine",
-          materialcolor: Colors.green[700],
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'hR6wQXvV0w0',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )));

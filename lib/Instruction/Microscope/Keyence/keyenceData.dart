@@ -117,7 +117,7 @@ class video {
           videoController: YoutubePlayerController(
             initialVideoId: 'SvwAnZuChzA',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
@@ -128,7 +128,7 @@ class video {
           videoController: YoutubePlayerController(
             initialVideoId: 'IzNETDmhF9I',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
@@ -139,7 +139,7 @@ class video {
           videoController: YoutubePlayerController(
             initialVideoId: '9TYFOn23E_8',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )))
@@ -156,7 +156,7 @@ class video {
           videoController: YoutubePlayerController(
             initialVideoId: '6_7OJJNYE_M',
             flags: YoutubePlayerFlags(
-              autoPlay: true,
+              autoPlay: false,
               mute: false,
             ),
           )));
