@@ -6,10 +6,12 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
@@ -17,9 +19,15 @@ class video {
     List videoData = List<video>();
     return videoData
       ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "Necessary tools needed for operation",
+        materialcolor: Colors.amber[600],
+      ))
+      ..add(video(
           title: "Assemble Blade",
           subtitle: "Put the blade into postion and use screw driver",
-          materialcolor: Colors.yellow[300],
+          materialcolor: Colors.amber[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'pdIl5KIRY7o',
             flags: YoutubePlayerFlags(
@@ -38,12 +46,18 @@ class video {
               mute: false,
             ),
           )))
+      ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the furnace",
+        materialcolor: Colors.green[600],
+      ))
       ..add(
         video(
             title: "Position sample for cutting",
             subtitle:
                 "Press X to move sample and Press Y to move sample closer to the blade",
-            materialcolor: Colors.amber[400],
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: '2kJGtB1n4Sc',
               flags: YoutubePlayerFlags(
@@ -56,7 +70,7 @@ class video {
         video(
             title: "Cutting a sample",
             subtitle: "Set the cutting distance",
-            materialcolor: Colors.pink[400],
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'Vrnl9qqsdis',
               flags: YoutubePlayerFlags(
@@ -68,7 +82,7 @@ class video {
       ..add(video(
           title: "Sectioning the Sample",
           subtitle: "Way to Sectioning the Sample",
-          materialcolor: Colors.red[400],
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: '76jcSgLCns0',
             flags: YoutubePlayerFlags(
@@ -77,9 +91,15 @@ class video {
             ),
           )))
       ..add(video(
+        type: "tit",
+        title: "Finish the experiment and clean up",
+        subtitle: "How to operate the furnace",
+        materialcolor: Colors.blue[600],
+      ))
+      ..add(video(
           title: "Removing the sample and the blade",
           subtitle: "Move sample away and use screwer driver",
-          materialcolor: Colors.blueAccent,
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'xRCRBQCEGYs',
             flags: YoutubePlayerFlags(
@@ -91,7 +111,7 @@ class video {
           title: "Cleaning the Instrument",
           subtitle:
               "Wipe: Interface button, inside the safty shield, inside of chamber. Place all tools back on top of the instrument",
-          materialcolor: Colors.green,
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'BZiXUXT22dI',
             flags: YoutubePlayerFlags(
