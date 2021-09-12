@@ -34,7 +34,7 @@ class _warningVideoState extends State<warningVideo>
     return Center(
         child: Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 1.18, height: _screenH / 1.7),
+                width: _screenWidth / 1.18, height: _screenH / 1.45),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(6.0),
@@ -57,6 +57,9 @@ class _warningVideoState extends State<warningVideo>
                 content: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      SizedBox(
+                        height: _screenH / 50,
+                      ),
                       Container(
                           child: YoutubePlayer(
                         controller: YoutubePlayerController(
@@ -68,10 +71,10 @@ class _warningVideoState extends State<warningVideo>
                         ),
                       )),
                       SizedBox(
-                        height: _screenH / 40,
+                        height: _screenH / 30,
                       ),
                       FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(43, 15, 43, 15),
+                          padding: EdgeInsets.fromLTRB(46, 15, 46, 15),
                           splashColor: Colors.white.withOpacity(0.7),
                           color: Colors.white.withOpacity(0.1),
                           shape: Border.all(
@@ -96,7 +99,7 @@ class _warningVideoState extends State<warningVideo>
                         height: _screenH / 45,
                       ),
                       FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(48, 15, 48, 15),
+                          padding: EdgeInsets.fromLTRB(51, 15, 51, 15),
                           splashColor: Colors.white.withOpacity(0.7),
                           color: Colors.white.withOpacity(0.1),
                           shape: Border.all(

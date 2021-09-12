@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'package:mma_mse/customTileScroll.dart';
@@ -39,8 +40,24 @@ class _InstructionModeState extends State<InstructionMode> {
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Instruction For " + widget.name),
-              ),
+                  child: Column(
+                children: [
+                  Text(
+                    "Instruction For " + widget.name,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: _screenW / 22,
+                    ),
+                  ),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                        width: _screenW / 1.5, height: _screenH / 6.4),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assest/logocolor.png"))),
+                  )
+                ],
+              )),
               for (var i = 0; i < widget.instructionList.length; i++)
                 ScrollcustomListTile(
                     padTop: widget.instructionList[i].type == "tit" ? 15 : 0,
@@ -74,7 +91,7 @@ class _InstructionModeState extends State<InstructionMode> {
         title: Text(
           widget.name + " Instruction",
           style:
-              TextStyle(fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+              TextStyle(fontSize: _screenW / 18, fontWeight: FontWeight.bold),
         ),
       ),
       drawer: buehlerCInstr(),
@@ -110,7 +127,7 @@ class _InstructionModeState extends State<InstructionMode> {
                               widget.instructionList[index].title,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: _screenH / 34,
+                                  fontSize: _screenW / 21,
                                   fontWeight: FontWeight.bold),
                             ),
                             Container(
@@ -119,7 +136,9 @@ class _InstructionModeState extends State<InstructionMode> {
                               child: Text(
                                 widget.instructionList[index].subtitle,
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: _screenH / 40),
+                                style: TextStyle(
+                                  fontSize: _screenW / 27,
+                                ),
                               ),
                             ),
                             SizedBox(
@@ -142,7 +161,7 @@ class _InstructionModeState extends State<InstructionMode> {
                       margin: EdgeInsets.symmetric(
                           horizontal: _screenW / 20, vertical: _screenH / 25),
                       padding: EdgeInsets.symmetric(
-                          horizontal: _screenW / 30, vertical: _screenH / 40),
+                          horizontal: _screenW / 30, vertical: _screenH / 37),
                       child: Column(
                         children: [
                           Container(
@@ -156,8 +175,9 @@ class _InstructionModeState extends State<InstructionMode> {
                               widget.instructionList[index].title,
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: _screenH / 30),
+                                fontWeight: FontWeight.bold,
+                                fontSize: _screenW / 20,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -168,7 +188,7 @@ class _InstructionModeState extends State<InstructionMode> {
                             child: Text(
                               widget.instructionList[index].subtitle,
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: _screenH / 36),
+                              style: TextStyle(fontSize: _screenW / 27),
                             ),
                           )
                         ],

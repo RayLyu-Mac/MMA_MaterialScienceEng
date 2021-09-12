@@ -113,7 +113,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
           ),
           waveColor: widget.backC,
           textStyle: TextStyle(
-            fontSize: _screenWidth / 16,
+            fontSize: _screenWidth / 18,
             fontWeight: FontWeight.w900,
           ),
         ),
@@ -144,7 +144,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
               top: _screenH / 13,
               left: _screenWidth / 1.95,
               child: Container(
-                height: _screenH / 2.4,
+                height: _screenH / 2.2,
                 width: _screenWidth / 2.3,
                 child: SingleChildScrollView(
                     child: Text(
@@ -174,36 +174,31 @@ class _EqubPageModeState extends State<EqubPageMode> {
             ),
             widget.warnNote != null
                 ? functionButtonMode(
-                    top: _screenH / 1.4,
+                    top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnNote: widget.warnNote,
                     pageTo: widget.instruction)
                 : functionButtonMode(
-                    top: _screenH / 1.4,
+                    top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
                     warnV: widget.warnVido,
                     pageTo: widget.instruction),
             functionButtonMode(
-              top: _screenH / 1.6,
+              top: _screenH / 1.51,
               left: _screenWidth / 12,
               buttonName: "Schedulling",
               url: _launchURL,
             ),
-            widget.theory != null
-                ? functionButtonMode(
-                    top: _screenH / 1.6,
-                    left: _screenWidth / 2 + 16,
-                    buttonName: widget.dash ?? "Theory",
-                    pageTo: widget.theory)
-                : functionButtonMode(
-                    top: _screenH / 1.6,
-                    left: _screenWidth / 2 + 16,
-                    buttonName: "Theory",
-                    pageTo: workingInProg()),
             functionButtonMode(
-                top: _screenH / 1.4,
+                top: _screenH / 1.51,
+                left: _screenWidth / 2 + 16,
+                buttonName: widget.dash ?? "Theory",
+                pageTo:
+                    widget.theory != null ? widget.theory : workingInProg()),
+            functionButtonMode(
+                top: _screenH / 1.33,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(
@@ -215,7 +210,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
             Positioned(
-                top: _screenH / 1.9,
+                top: _screenH / 1.8,
                 left: _screenWidth / 1.5,
                 child: Row(
                   children: [
