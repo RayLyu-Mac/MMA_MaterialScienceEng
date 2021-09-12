@@ -6,16 +6,24 @@ class video {
   String subtitle;
   YoutubePlayerController videoController;
   Color materialcolor;
+  String type;
 
   video({
     this.title,
     this.subtitle,
+    this.type,
     this.materialcolor,
     this.videoController,
   });
   List<video> videoList() {
     List videoData = List<video>();
     return videoData
+      ..add(video(
+        type: "tit",
+        title: "Preparation",
+        subtitle: "Get ready for the cutter",
+        materialcolor: Colors.amber[600],
+      ))
       ..add(video(
           title: "Preparing: Install the blade",
           subtitle: "Install the proper blade for the cutting",
@@ -31,7 +39,7 @@ class video {
         video(
             title: "Secure the sample I",
             subtitle: "Clamping Samples in the T-Slot Table",
-            materialcolor: Colors.amber[400],
+            materialcolor: Colors.amber[300],
             videoController: YoutubePlayerController(
               initialVideoId: 'QNFyPMo75wc',
               flags: YoutubePlayerFlags(
@@ -44,7 +52,7 @@ class video {
         video(
             title: "Secure the sample II",
             subtitle: "Using the Universal Clamps to Secure a Sample",
-            materialcolor: Colors.amber[600],
+            materialcolor: Colors.amber[300],
             videoController: YoutubePlayerController(
               initialVideoId: '65OIC64QjP0',
               flags: YoutubePlayerFlags(
@@ -53,11 +61,17 @@ class video {
               ),
             )),
       )
+      ..add(video(
+        type: "tit",
+        title: "Operation",
+        subtitle: "How to operate the furnace",
+        materialcolor: Colors.green[600],
+      ))
       ..add(
         video(
             title: "Cutting sample I",
             subtitle: "Cutting a Sample in Automatic Mode",
-            materialcolor: Colors.pink[400],
+            materialcolor: Colors.green[300],
             videoController: YoutubePlayerController(
               initialVideoId: '8N6aS5wIjDM',
               flags: YoutubePlayerFlags(
@@ -69,7 +83,7 @@ class video {
       ..add(video(
           title: "Cutting sample II",
           subtitle: "Cutting a Sample in Manual Mode",
-          materialcolor: Colors.pink[600],
+          materialcolor: Colors.green[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'ouymWr2ASmw',
             flags: YoutubePlayerFlags(
@@ -78,9 +92,15 @@ class video {
             ),
           )))
       ..add(video(
+        type: "tit",
+        title: "Finish the experiment and clean up",
+        subtitle: "How to operate the furnace",
+        materialcolor: Colors.blue[600],
+      ))
+      ..add(video(
           title: "Finish and Clean Up",
           subtitle: "Cleaning the Chamber",
-          materialcolor: Colors.green,
+          materialcolor: Colors.blue[300],
           videoController: YoutubePlayerController(
             initialVideoId: 'V1voTiBDT_o',
             flags: YoutubePlayerFlags(
