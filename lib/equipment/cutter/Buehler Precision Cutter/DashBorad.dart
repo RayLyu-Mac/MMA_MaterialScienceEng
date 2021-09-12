@@ -98,6 +98,11 @@ class _BueDashBoardState extends State<BueDashBoard> {
                     left: _screenWidth / 20,
                     child: Text(
                         "Click the Feed Rate button in the main page \nset the new Feed Rate using number pad")),
+                Positioned(
+                    top: _screenH / 1.3,
+                    left: _screenWidth / 2,
+                    child: Text(
+                        "Swipe to next page to see more about the buttons!")),
               ],
             ),
           ),
