@@ -30,13 +30,13 @@ class testdetailData {
       ..add(testdetailData(
         title: " Declaration",
         content:
-            "In this section you are going to learn about the UTM used in three-point test. \n \nThe content of this sections comes from Matls 3M03: Mechanical Behavior of Material Demo 1b\n \nReference:\nRubel, O. Material 3M03, Lab 4: CREEP AND HIGH TEMPERATURE DEFORMATION, McMaster University.",
+            "In this section you are going to learn about the UTM used in three-point test. \n \nThe content of this sections comes from Matls 3M03: Mechanical Behavior of Material Demo 1b\n \nReference:\nRubel, O. Material 3M03, Lab 1: Laminated Structure analysis, McMaster University.",
         backImg: bImg,
       ))
       ..add(testdetailData(
           title: "Background",
           content:
-              "Bones are complex materials necessary for daily function and keeping us alive. They allow our bodies to move by providing a framework for muscles and tendons to attach, protect organs such as our heart and lungs, and even produce blood cells. Therefore, two types of bones exist in our body.\n \nCorticol Bone: Stiff with high elastic modulus. \n \nTrabecular bone: Porous and has low elastic modulus. \nThe common bone structure in human body is cortical bone forms the outside and the trabecular bone is sandwiched inside. ",
+              "Bones are complex materials necessary for daily function and keeping us alive. They allow our bodies to move by providing a framework for muscles and tendons to attach, protect organs such as our heart and lungs, and even produce blood cells. Therefore, two types of bones exist in our body.\n \nCorticol Bone: Stiff with high elastic modulus. \n Trabecular bone: Porous and has low elastic modulus. \n\nThe common bone structure in human body is cortical bone forms the outside and the trabecular bone is sandwiched inside. ",
           backImg: bImg,
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/bones.png?raw=true"))
@@ -50,7 +50,7 @@ class testdetailData {
       ..add(testdetailData(
           title: "Model Introduction",
           content:
-              "With applying the chemical composition of the Al alloy 6061, the tension tests would be performed and the dimensions of tensile specimens and the load vs. tension data would be collected. The T6 conduction is rapidly cooled down. The anneal condition is slowly cooling down and quenched at certain temperature. The two conditions will be tested by calculating the stress vs. strain curve and determined fracture point to predict the properties as well the tensile stress and tensile yield stress. ",
+              "The Al alloy 6061 are used to mimic the properties for cortical bone and pure Al are used to mimic the trabecular bone. \nThe two conditions (Laminated structure (Pure Al sandwiched by 6061 alloy), pure Al) will be tested by calculating the stress vs. strain curve and determined fracture point to predict the properties as well the tensile stress and tensile yield stress. ",
           backImg: bImg,
           height: 1.7,
           top: 3,

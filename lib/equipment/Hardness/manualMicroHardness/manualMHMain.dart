@@ -23,7 +23,8 @@ class _ManualMicroHardnessState extends State<ManualMicroHardness> {
   Widget build(BuildContext context) {
     return EqubPageMode(
         title: "Manual MicroHardness Test",
-        warnVido: "t-4WN785oxM",
+        warnNote:
+            "•Ask Technical Staff for Holder \n•Ensure the Magnification is at 100X\n•Damage will occur to the indenter if the indenter comes in contact with holder\n•Cut the sample slowly\n•Ensure the sample is in focus before move to 400X",
         extraIcon: FontAwesomeIcons.fileCsv,
         extraPage: hardnessData(),
         theory: hardness_test_bg(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'testRData.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class tensileTResult extends StatefulWidget {
   tensileTResult({Key key}) : super(key: key);
@@ -77,6 +78,15 @@ class _tensileTResultState extends State<tensileTResult> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text("Test Result for tensile test"),
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
         ),
         drawer: Container(
           width: _screenWidth / 1.7,
@@ -109,10 +119,13 @@ class _tensileTResultState extends State<tensileTResult> {
                       Positioned(
                           top: 30,
                           left: 0,
-                          child: Image.network(
-                            result[index].addOnImg,
-                            fit: BoxFit.fitWidth,
-                            height: 225,
+                          child: Container(
+                            width: double.infinity,
+                            child: Image.network(
+                              result[index].addOnImg,
+                              fit: BoxFit.fitWidth,
+                              height: 225,
+                            ),
                           )),
                       Positioned(
                           top: 265,

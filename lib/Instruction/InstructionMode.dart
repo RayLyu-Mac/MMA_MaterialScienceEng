@@ -67,7 +67,7 @@ class _InstructionModeState extends State<InstructionMode> {
                             ? 0.95
                             : 0.2),
                     pageTo: i - 1,
-                    fonts: widget.instructionList[i].type == "tit" ? 22 : 14,
+                    fonts: widget.instructionList[i].type == "tit" ? 22 : 15,
                     controller: widget.controller),
               SizedBox(
                 height: _screenH / 30,
@@ -127,7 +127,7 @@ class _InstructionModeState extends State<InstructionMode> {
                               widget.instructionList[index].title,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: _screenW / 21,
+                                  fontSize: _screenW / 22.5,
                                   fontWeight: FontWeight.bold),
                             ),
                             Container(
@@ -137,7 +137,7 @@ class _InstructionModeState extends State<InstructionMode> {
                                 widget.instructionList[index].subtitle,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: _screenW / 27,
+                                  fontSize: _screenW / 33,
                                 ),
                               ),
                             ),
@@ -176,7 +176,7 @@ class _InstructionModeState extends State<InstructionMode> {
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: _screenW / 20,
+                                fontSize: _screenW / 25,
                               ),
                             ),
                           ),
@@ -188,7 +188,7 @@ class _InstructionModeState extends State<InstructionMode> {
                             child: Text(
                               widget.instructionList[index].subtitle,
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: _screenW / 27),
+                              style: TextStyle(fontSize: _screenW / 36),
                             ),
                           )
                         ],

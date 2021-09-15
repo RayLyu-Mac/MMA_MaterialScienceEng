@@ -48,6 +48,7 @@ class _welcomeState extends State<welcome> {
                 animatedTexts: [
                   TyperAnimatedText(
                     "Welcome to MSE",
+                    speed: const Duration(milliseconds: 1200),
                     textStyle: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -86,7 +87,7 @@ class _welcomeState extends State<welcome> {
                 )),
             Positioned(
                 top: _screenH / 30,
-                left: _screenWidth / 4.6,
+                left: _screenWidth / 4.8,
                 child: Container(
                   child: Text(
                     "McMaster University",
@@ -127,7 +128,7 @@ class _welcomeState extends State<welcome> {
                 left: _screenWidth / 4.2,
                 child: Container(
                   constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.8,
+                    width: _screenWidth / 2,
                     height: _screenH / 2.6 / adjust,
                   ),
                   decoration: BoxDecoration(
