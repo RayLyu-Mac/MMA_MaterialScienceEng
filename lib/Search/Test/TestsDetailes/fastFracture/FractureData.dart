@@ -30,7 +30,7 @@ class testdetailData {
       ..add(testdetailData(
         title: " Declaration",
         content:
-            "In this section you are going to learn about the UTM used in measuring the maximum allowable crack length of the sample. \n \nThe content of this sections comes from Matls 3M03: Mechanical Behavior of Material Demo 2b\n \nReference:\nRubel, O. Material 3M03, Lab 3: Measuring the Toughness of a Medium Carbon Steel, McMaster University.",
+            "In this section you are going to learn about the UTM used in measuring the maximum allowable crack length of the sample. \n \nThe content of this sections comes from Matls 3M03: Mechanical Behavior of Material Demo 3\n \nReference:\nRubel, O. Material 3M03, Lab 3: Measuring the Toughness of a Medium Carbon Steel, McMaster University.",
         backImg: bImg,
       ))
       ..add(testdetailData(
@@ -46,7 +46,7 @@ class testdetailData {
           title: "Purpose",
           top: 1.62,
           content:
-              "The propose of this case study is to understand the conditions under which flaws already present in a component will grow by observing how does the fracture toughness change depending on the microstructure of the material by subjecting samples to different heat treatments.",
+              "The purpose of this case study is to understand the conditions under which flaws already present in a component will grow by observing how does the fracture toughness change depending on the microstructure of the material by subjecting samples to different heat treatments.",
           backImg: bImg,
           addOnImg:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/purpose.png?raw=true"))
