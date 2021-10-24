@@ -56,7 +56,7 @@ class _welcomeState extends State<welcome> {
                   )
                 ],
                 totalRepeatCount: 2,
-                pause: const Duration(milliseconds: 800),
+                pause: const Duration(milliseconds: 600),
                 displayFullTextOnTap: true,
                 stopPauseOnTap: true,
               ),
@@ -65,89 +65,73 @@ class _welcomeState extends State<welcome> {
           backgroundColor: Colors.black,
         ),
       ),
-      body: SafeArea(
-        child: Stack(
+      body: Container(
+        constraints: BoxConstraints.expand(
+          width: _screenWidth / 1,
+          height: _screenH / 1 / adjust,
+        ),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          colorFilter: new ColorFilter.mode(
+              Colors.blueAccent[400].withOpacity(0.7), BlendMode.dstATop),
+          image: AssetImage("assest/picture2.png"),
+          fit: BoxFit.cover,
+        )),
+        child: Column(
           children: [
-            Positioned(
-                top: 0,
-                left: 0,
-                child: Container(
-                  constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1,
-                    height: _screenH / 1 / adjust,
-                  ),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                    colorFilter: new ColorFilter.mode(
-                        Colors.blueAccent[400].withOpacity(0.8),
-                        BlendMode.dstATop),
-                    image: AssetImage("assest/picture2.png"),
-                    fit: BoxFit.cover,
-                  )),
-                )),
-            Positioned(
-                top: _screenH / 30,
-                left: _screenWidth / 4.8,
-                child: Container(
-                  child: Text(
-                    "McMaster University",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: _screenWidth / 16),
-                  ),
-                )),
-            Positioned(
-                top: _screenH / 12,
-                left: _screenWidth / 27,
-                child: Container(
-                  width: _screenWidth / 1.08,
-                  child: Text(
-                    "Department of Material Science and Engineering",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: _screenWidth / 25),
-                  ),
-                )),
-            Positioned(
-                top: _screenH / 1.63 / adjust,
-                left: _screenWidth / 11.5,
-                child: Container(
-                  child: Text(
-                    "MMA System \nThe APP for Material Eng Student",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: _screenWidth / 19,
-                        color: Colors.grey[50]),
-                  ),
-                )),
-            Positioned(
-                top: _screenH / 5.7,
-                left: _screenWidth / 4.2,
-                child: Container(
-                  constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2,
-                    height: _screenH / 2.6 / adjust,
-                  ),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assest/picture1.png"),
-                        fit: BoxFit.cover),
-                  ),
-                )),
-            Positioned(
-              top: _screenH / 1.4 / adjust,
-              left: _screenWidth / 12,
-              child: fancyBut(
-                  pageTo: conditionTerms(pageTo: layout_overview()),
-                  width: _screenWidth / 1.2,
-                  height: _screenH / 10,
-                  fontsize: 25,
-                  icon: FontAwesomeIcons.thumbsUp,
-                  buttonName: "   Let's Start : )"),
+            SizedBox(
+              height: _screenH / 25,
             ),
+            Text(
+              "McMaster University",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, fontSize: _screenWidth / 16),
+            ),
+            SizedBox(
+              height: _screenH / 80,
+            ),
+            Text(
+              "Department of Material Science and Engineering",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, fontSize: _screenWidth / 25),
+            ),
+            SizedBox(
+              height: _screenH / 20,
+            ),
+            Container(
+              constraints: BoxConstraints.expand(
+                width: _screenWidth / 2,
+                height: _screenH / 2.6 / adjust,
+              ),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assest/picture1.png"),
+                    fit: BoxFit.cover),
+              ),
+            ),
+            SizedBox(
+              height: _screenH / 25,
+            ),
+            Text(
+              "MMA System \nThe APP for Material Eng Student",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: _screenWidth / 19,
+                  color: Colors.grey[50]),
+            ),
+            SizedBox(
+              height: _screenH / 35,
+            ),
+            fancyBut(
+                pageTo: conditionTerms(pageTo: layout_overview()),
+                width: _screenWidth / 1.2,
+                height: _screenH / 10,
+                fontsize: 25,
+                icon: FontAwesomeIcons.thumbsUp,
+                buttonName: "   Let's Start : )"),
           ],
         ),
       ),

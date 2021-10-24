@@ -36,7 +36,7 @@ class HeroType {
           contentFontsize: 14,
           pageTo: TensileTest(),
           subTitle:
-              'Find the advantage of composite material from human bone structure',
+              'Use Elastic Modulus to compare advantage over \ndifferent structure (Compression)',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Tensile/3p.jpg?raw=true',
           materialColor: Colors.green[400]))
@@ -45,7 +45,8 @@ class HeroType {
           titleFontSize: 22,
           contentFontsize: 14,
           pageTo: ACLTest(),
-          subTitle: 'Test the material strength for synthetic ACL graft',
+          subTitle:
+              'Use Elastic Modulus to compare advantage over \ndifferent structure (Tension)',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
           materialColor: Colors.greenAccent))
@@ -57,15 +58,8 @@ class HeroType {
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/ms.jpg?raw=true',
           materialColor: Colors.redAccent[700]))
       ..add(HeroType(
-          title: 'Creep Test',
+          title: 'Creep Test (UTM + Heat Coil)',
           pageTo: CreepTest(),
-          subTitle: 'Find the resistance to creep for alloy and pure material',
-          image:
-              'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
-          materialColor: Colors.orangeAccent[100]))
-      ..add(HeroType(
-          title: 'Microstructure',
-          pageTo: AlStrengthTest(),
           subTitle: 'Find the resistance to creep for alloy and pure material',
           image:
               'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',

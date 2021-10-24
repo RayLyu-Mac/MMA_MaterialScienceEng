@@ -86,15 +86,15 @@ class _test_avaState extends State<test_ava> {
       drawer: testCase(),
       body: SafeArea(
           child: ListView.builder(
-              itemExtent: 285.0,
+              itemExtent: 295.0,
               itemCount: _heroTypeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
-                    margin: EdgeInsets.fromLTRB(18, 12, 18, 8),
+                    margin: EdgeInsets.fromLTRB(18, 18, 18, 14),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0)),
+                        borderRadius: BorderRadius.circular(16.0)),
                     clipBehavior: Clip.antiAlias,
                     child: Stack(
                       children: [
@@ -124,14 +124,17 @@ class _test_avaState extends State<test_ava> {
                               tag: 'text' + _heroTypeList[index].title,
                               child: Material(
                                 color: Colors.transparent,
-                                child: Text(
-                                  '${_heroTypeList[index].title}',
-                                  style: TextStyle(
-                                      fontSize:
-                                          _heroTypeList[index].titleFontSize ??
-                                              25.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
+                                child: Container(
+                                  width: _screenWidth / 1.1,
+                                  child: Text(
+                                    '${_heroTypeList[index].title}',
+                                    style: TextStyle(
+                                        fontSize: _heroTypeList[index]
+                                                .titleFontSize ??
+                                            25.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
                                 ),
                               )),
                         ),

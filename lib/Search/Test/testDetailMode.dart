@@ -48,6 +48,7 @@ class _pageModeState extends State<pageMode> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueAccent[100],
         title: Text(widget.title),
       ),
       body: Stack(
@@ -73,47 +74,50 @@ class _pageModeState extends State<pageMode> {
                 constraints: BoxConstraints.expand(
                     width: _screenWidth / 1.15, height: _screenH / 1.2),
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(16.0),
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius: BorderRadius.circular(22.0),
                     border: Border.all(
                       width: 1.5,
                       color: Colors.white.withOpacity(0.4),
                     )),
                 child: SingleChildScrollView(
-                    child: Column(children: [
-                  Text(
-                    widget.title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: _screenH / 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontFamily: "Raleway",
-                        decoration: TextDecoration.none),
-                  ),
-                  SizedBox(
-                    height: _screenH / 50,
-                  ),
-                  Text(
-                    widget.content != null ? widget.content : "Error",
-                    style: TextStyle(
-                        fontSize: _screenH / 39,
-                        color: Colors.black,
-                        fontFamily: "Raleway",
-                        decoration: TextDecoration.none),
-                  ),
-                  SizedBox(
-                    height: _screenH / 20,
-                  ),
-                  imgAddOn(
-                    screenH: _screenH,
-                    width: widget.width,
-                    length: widget.length,
-                    screenW: _screenWidth,
-                    img: widget.addOnImg,
-                    pageTo: widget.pageTo,
-                  )
-                ]))),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                      Text(
+                        widget.title,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: _screenH / 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontFamily: "Raleway",
+                            decoration: TextDecoration.none),
+                      ),
+                      SizedBox(
+                        height: _screenH / 35,
+                      ),
+                      Text(
+                        widget.content != null ? widget.content : "Error",
+                        style: TextStyle(
+                            fontSize: _screenH / 38,
+                            color: Colors.black,
+                            fontFamily: "Raleway",
+                            decoration: TextDecoration.none),
+                      ),
+                      SizedBox(
+                        height: _screenH / 18,
+                      ),
+                      imgAddOn(
+                        screenH: _screenH,
+                        width: widget.width,
+                        length: widget.length,
+                        screenW: _screenWidth,
+                        img: widget.addOnImg,
+                        pageTo: widget.pageTo,
+                      )
+                    ]))),
           ),
         ],
       ),
@@ -154,9 +158,9 @@ class imgAddOn extends StatelessWidget {
             },
             child: Container(
                 constraints: BoxConstraints.expand(
-                    width: screenW / 1.3, height: screenH / 3.6),
+                    width: screenW / 1.2, height: screenH / 2.8),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(14),
                     color: Colors.black,
                     image: DecorationImage(
                         image: NetworkImage(img), fit: BoxFit.cover))));
