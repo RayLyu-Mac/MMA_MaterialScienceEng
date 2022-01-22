@@ -6,6 +6,7 @@ import 'lengthU.dart';
 import 'volumeU.dart';
 import 'package:mma_mse/customTileScroll.dart';
 import 'weightU.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class UnitCOnverMain extends StatefulWidget {
   UnitCOnverMain({Key key}) : super(key: key);
@@ -17,6 +18,7 @@ class UnitCOnverMain extends StatefulWidget {
 class _UnitCOnverMainState extends State<UnitCOnverMain> {
   double _screenWidth;
   double _screenH;
+  final _drawerController = ZoomDrawerController();
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
