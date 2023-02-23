@@ -5,15 +5,15 @@ import 'fancyButton.dart';
 
 class conditionTerms extends StatefulWidget {
   final Widget pageTo;
-  conditionTerms({@required this.pageTo, Key key}) : super(key: key);
+  conditionTerms({required this.pageTo, Key? key}) : super(key: key);
 
   @override
   _conditionTermsState createState() => _conditionTermsState();
 }
 
 class _conditionTermsState extends State<conditionTerms> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   @override
   void didChangeDependencies() {
@@ -35,7 +35,7 @@ class _conditionTermsState extends State<conditionTerms> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white.withOpacity(0.7),
-                border: Border.all(width: 6, color: Colors.grey[300])),
+                border: Border.all(width: 6, color: Colors.grey.shade300)),
             margin: EdgeInsets.fromLTRB(_screenWidth / 14, _screenH / 14,
                 _screenWidth / 15, _screenH / 20),
             padding: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 25,

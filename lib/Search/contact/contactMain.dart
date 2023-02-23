@@ -19,29 +19,28 @@ class _ContactMSEState extends State<ContactMSE> {
   );
   final globalKey = new GlobalKey<ScaffoldState>();
   final TextEditingController _controller = new TextEditingController();
-  List _list = List();
-  bool _isSearching;
+  List _list = [];
+  bool _isSearching = false;
   bool searchChem = false;
   bool searchLoc = false;
   bool searchName = false;
   String _searchText = "";
-  List total = new List();
-  List name = new List();
-  List<testdetailData> property = List();
+  List total = [];
+  List name = [];
+  List<testdetailData> property = [];
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
     _isSearching = false;
-    total = testdetailData().detailL();
-    for (var i = 0; i < total.length; i++) {
+    for (var i = 0; i < detailL.length; i++) {
       _list.add(total[i].name);
     }
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -55,7 +54,6 @@ class _ContactMSEState extends State<ContactMSE> {
     return new Scaffold(
         resizeToAvoidBottomInset: false,
         key: globalKey,
-        appBar: buildAppBar(context),
         body: Column(
           children: [
             Container(

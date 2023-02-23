@@ -6,15 +6,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class welcome extends StatefulWidget {
-  welcome({Key key}) : super(key: key);
+  welcome({Key? key}) : super(key: key);
 
   @override
   _welcomeState createState() => _welcomeState();
 }
 
 class _welcomeState extends State<welcome> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   @override
   void didChangeDependencies() {
@@ -73,7 +73,7 @@ class _welcomeState extends State<welcome> {
         decoration: BoxDecoration(
             image: DecorationImage(
           colorFilter: new ColorFilter.mode(
-              Colors.blueAccent[400].withOpacity(0.7), BlendMode.dstATop),
+              Colors.blueAccent.withOpacity(0.7), BlendMode.dstATop),
           image: AssetImage("assest/picture2.png"),
           fit: BoxFit.cover,
         )),

@@ -12,39 +12,37 @@ import 'package:page_transition/page_transition.dart';
 class equb_main extends StatefulWidget {
   final HeroType heroType;
 
-  const equb_main({Key key, this.heroType}) : super(key: key);
+  const equb_main({Key? key, required this.heroType}) : super(key: key);
 
   @override
   _equb_mainState createState() => _equb_mainState();
 }
 
 class _equb_mainState extends State<equb_main> {
-  HeroType _heroType;
-  double _screenWidth;
-  List _heroTypeList = List<HeroType>();
-  double _screenWidthAdjustment;
+  late HeroType _heroType;
+  double _screenWidth = 0;
+  List _heroTypeList = [];
+  double _screenWidthAdjustment = 0;
   List equipments = [];
   List code = [];
-  String titleForCsv;
+  String titleForCsv = '';
   List<Widget> pT = [];
-  double _screenH;
+  double _screenH = 0;
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
-  Color hardness = Colors.blueGrey[100];
-  Color microsco = Colors.purple[100];
-  Color furnace = Colors.red[100];
-  Color cutter = Colors.greenAccent[100];
-  Color mountP = Colors.indigo[100];
-  Color polish = Colors.lightBlue[100];
-  Color tensile = Colors.amber[100];
+  Color tensile = Colors.amber.shade100;
+  Color hardness = Colors.blueGrey.shade100;
+  Color microsco = Colors.purple.shade100;
+  Color furnace = Colors.redAccent.shade100;
+  Color cutter = Colors.greenAccent.shade100;
+  Color mountP = Colors.indigo.shade100;
+  Color polish = Colors.lightBlue.shade100;
   @override
   void initState() {
     super.initState();
 
-    _heroTypeList = HeroType().createSampleList();
-
-    for (var eq = 0; eq < _heroTypeList.length; eq++) {
+    for (var eq = 0; eq < equipmentList.length; eq++) {
       equipments.add(_heroTypeList[eq].title);
     }
   }

@@ -4,15 +4,15 @@ import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 import '../buttonMode.dart';
 
 class direction_main extends StatefulWidget {
-  direction_main({Key key}) : super(key: key);
+  direction_main({Key? key}) : super(key: key);
 
   @override
   _direction_mainState createState() => _direction_mainState();
 }
 
 class _direction_mainState extends State<direction_main> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   // (page1(),page2(),page3(),page4()) //
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override

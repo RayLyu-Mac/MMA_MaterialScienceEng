@@ -5,28 +5,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
 
 class saftyMain extends StatefulWidget {
-  saftyMain({Key key}) : super(key: key);
+  saftyMain({Key? key}) : super(key: key);
 
   @override
   _saftyMainState createState() => _saftyMainState();
 }
 
 class _saftyMainState extends State<saftyMain> {
-  double _screenWidth;
-  double _screenH;
-  List toolDataList = List<ToolData>();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List toolDataList = safetyData;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    toolDataList = ToolData().createToolList();
   }
 
   @override

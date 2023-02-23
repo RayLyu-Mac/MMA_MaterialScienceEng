@@ -4,23 +4,16 @@ import 'package:flutter/material.dart';
 
 class room_main extends StatefulWidget {
   final HeroType heroType;
-  const room_main({Key key, this.heroType}) : super(key: key);
+  const room_main({Key? key, required this.heroType}) : super(key: key);
 
   @override
   _room_mainState createState() => _room_mainState();
 }
 
 class _room_mainState extends State<room_main> {
-  HeroType _heroType;
-  double _screenWidth;
-  List _heroTypeList = List<HeroType>();
-  double _screenWidthAdjustment;
-
-  @override
-  void initState() {
-    super.initState();
-    _heroTypeList = HeroType().createSampleList();
-  }
+  double _screenWidth = 0;
+  List _heroTypeList = [];
+  double _screenWidthAdjustment = 0;
 
   @override
   void didChangeDependencies() {

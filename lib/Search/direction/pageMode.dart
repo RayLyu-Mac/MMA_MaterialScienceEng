@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class bio_mat_model extends StatefulWidget {
   const bio_mat_model(
-      {@required this.course_name,
-      @required this.back_img,
-      @required this.course_description,
-      @required this.other_info,
-      Key key})
+      {required this.course_name,
+      required this.back_img,
+      required this.course_description,
+      required this.other_info,
+      Key? key})
       : super(key: key);
 
   final String course_name;
@@ -19,8 +19,8 @@ class bio_mat_model extends StatefulWidget {
 }
 
 class _bio_mat_modelState extends State<bio_mat_model> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

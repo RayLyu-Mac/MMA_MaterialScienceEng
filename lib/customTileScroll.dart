@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class ScrollcustomListTile extends StatelessWidget {
   const ScrollcustomListTile(
-      {@required this.name,
-      @required this.pageTo,
-      @required this.fonts,
-      @required this.controller,
+      {required this.name,
+      required this.pageTo,
+      required this.fonts,
+      required this.controller,
       @optionalTypeArgs this.offset,
       @optionalTypeArgs this.tileColor,
       @optionalTypeArgs this.padTop,
@@ -14,9 +14,9 @@ class ScrollcustomListTile extends StatelessWidget {
   final String name;
   final int pageTo;
   final double fonts;
-  final double offset;
-  final double padTop;
-  final Color tileColor;
+  final double? offset;
+  final double? padTop;
+  final Color? tileColor;
   final ScrollController controller;
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ScrollcustomListTile extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.blue[100],
         onTap: () => {
-          controller.animateTo(pageTo * (offset != null ? offset : 300.0),
+          controller.animateTo(pageTo * (offset! != null ? offset! : 300.0),
               duration: Duration(milliseconds: 500), curve: Curves.easeInOut)
         },
         child: Wrap(

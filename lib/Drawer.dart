@@ -7,9 +7,9 @@ import 'floors/floor1.dart';
 
 class standardDrawer extends StatefulWidget {
   final String header;
-  final List<ListTile> others;
+  final List<ListTile>? others;
   standardDrawer(
-      {@required this.header, @optionalTypeArgs this.others, Key key})
+      {required this.header, @optionalTypeArgs this.others, Key? key})
       : super(key: key);
 
   @override
@@ -17,8 +17,8 @@ class standardDrawer extends StatefulWidget {
 }
 
 class _standardDrawerState extends State<standardDrawer> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   @override
   void didChangeDependencies() {
@@ -72,7 +72,7 @@ class _standardDrawerState extends State<standardDrawer> {
           Container(
             constraints: BoxConstraints.expand(
                 width: _screenWidth / 3, height: _screenH / 6),
-            child: RaisedButton.icon(
+            child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -82,7 +82,6 @@ class _standardDrawerState extends State<standardDrawer> {
                           type: PageTransitionType.leftToRight));
                 },
                 icon: Icon(FontAwesomeIcons.signOutAlt),
-                color: Colors.grey[200],
                 label: Text(
                   "  Back to Layout",
                   style: TextStyle(

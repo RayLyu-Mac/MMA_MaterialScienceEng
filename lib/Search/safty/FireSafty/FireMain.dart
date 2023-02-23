@@ -8,15 +8,15 @@ import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 
 class ExtingshSymbols extends StatefulWidget {
-  ExtingshSymbols({Key key}) : super(key: key);
+  ExtingshSymbols({Key? key}) : super(key: key);
 
   @override
   _ExtingshSymbolsState createState() => _ExtingshSymbolsState();
 }
 
 class _ExtingshSymbolsState extends State<ExtingshSymbols> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   List tiles = [];
 
   @override
@@ -35,7 +35,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
     }
   }
 
-  List<testdetailData> result = testdetailData().detailL();
+  List<testdetailData> result = fireData;
   @override
   Widget build(BuildContext context) {
     if (_screenH / _screenWidth > 1.7) {
@@ -113,10 +113,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                           SizedBox(
                             height: _screenH / 40,
                           ),
-                          FlatButton.icon(
-                              padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-                              shape:
-                                  Border.all(width: 5, color: Colors.grey[200]),
+                          TextButton.icon(
                               onPressed: () {
                                 Navigator.push(
                                     context,
@@ -141,7 +138,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
 }
 
 class fireProcedure extends StatelessWidget {
-  const fireProcedure({Key key}) : super(key: key);
+  const fireProcedure({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -189,7 +186,7 @@ class fireProcedure extends StatelessWidget {
                     return Card(
                         margin: EdgeInsets.fromLTRB(25, 16, 25, 8),
                         elevation: 8,
-                        color: Colors.grey[100].withOpacity(0.8),
+                        color: Colors.grey.shade100.withOpacity(0.8),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                         child: Container(

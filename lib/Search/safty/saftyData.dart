@@ -13,46 +13,49 @@ class ToolData {
   double top;
   Widget pageTo;
 
-  ToolData({this.posCode, this.name, this.backImg, this.pageTo, this.top});
-
-  List<ToolData> createToolList() {
-    List toolD = List<ToolData>();
-    return toolD
-      ..add(ToolData(
-          name: "MSDS Sheet",
-          pageTo: SearchListExample(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/MSDS.png?raw=true",
-          posCode: "a"))
-      ..add(ToolData(
-          name: "Fire Safty",
-          posCode: "b",
-          pageTo: ExtingshSymbols(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/fire.png?raw=true"))
-      ..add(ToolData(
-          name: "Acids Safty",
-          posCode: "c",
-          pageTo: Aciddetail(),
-          backImg:
-              "https://cdn.shopify.com/s/files/1/1456/4892/products/WAR-20-ANSI_-_Warning_Acid_large.png?v=1520011003"))
-      ..add(ToolData(
-          name: "Chemical Shower/ Eye washer",
-          posCode: "g",
-          pageTo: ChemicalShowerEyeWasher(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true"))
-      ..add(ToolData(
-          name: "WHIMS Symbol",
-          posCode: "d",
-          pageTo: WhimsSymbols(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/whims/bioharzard.jpg?raw=true"));
-  }
+  ToolData(
+      {required this.posCode,
+      required this.name,
+      required this.backImg,
+      required this.pageTo,
+      this.top = 5});
 }
 
+List<ToolData> safetyData = [
+  (ToolData(
+      name: "MSDS Sheet",
+      pageTo: SearchListExample(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/MSDS.png?raw=true",
+      posCode: "a")),
+  (ToolData(
+      name: "Fire Safty",
+      posCode: "b",
+      pageTo: ExtingshSymbols(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/fire.png?raw=true")),
+  (ToolData(
+      name: "Acids Safty",
+      posCode: "c",
+      pageTo: Aciddetail(),
+      backImg:
+          "https://cdn.shopify.com/s/files/1/1456/4892/products/WAR-20-ANSI_-_Warning_Acid_large.png?v=1520011003")),
+  (ToolData(
+      name: "Chemical Shower/ Eye washer",
+      posCode: "g",
+      pageTo: ChemicalShowerEyeWasher(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true")),
+  (ToolData(
+      name: "WHIMS Symbol",
+      posCode: "d",
+      pageTo: WhimsSymbols(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/whims/bioharzard.jpg?raw=true")),
+];
+
 Map<String, Widget> to = {};
-var sft = ToolData().createToolList();
+var sft = safetyData;
 createSaftyList() {
   for (var eq = 0; eq < sft.length; eq++) {
     to.addAll({sft[eq].name: sft[eq].pageTo});

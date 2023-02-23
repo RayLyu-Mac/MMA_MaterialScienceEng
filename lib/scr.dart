@@ -14,8 +14,8 @@ class _WebScraperAppState extends State<WebScraperApp> {
   final webScraper = WebScraper('https://www.eng.mcmaster.ca');
 
   // Response of getElement is always List<Map<String, dynamic>>
-  List<Map<String, dynamic>> productNames;
-  String productDescriptions;
+  List<Map<String, dynamic>> productNames = [];
+  String productDescriptions = '';
 
   void fetchProducts() async {
     // Loads web page and downloads into local state of library

@@ -7,15 +7,15 @@ class fancyBut extends StatefulWidget {
   final double width;
   final double height;
   final String buttonName;
-  final double fontsize;
+  final double? fontsize;
   fancyBut(
-      {@required this.pageTo,
-      @required this.width,
-      @required this.height,
-      @required this.icon,
-      @required this.buttonName,
+      {required this.pageTo,
+      required this.width,
+      required this.height,
+      required this.icon,
+      required this.buttonName,
       @optionalTypeArgs this.fontsize,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -30,13 +30,8 @@ class _fancyButState extends State<fancyBut> {
           BoxConstraints.expand(width: widget.width, height: widget.height),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(widget.height / 2),
-          border: Border.all(color: Colors.grey[300], width: 5)),
-      child: FlatButton.icon(
-          splashColor: Colors.redAccent[100],
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(widget.height / 2),
-          ),
-          color: Colors.grey[600].withOpacity(0.8),
+          border: Border.all(color: Colors.grey.shade300, width: 5)),
+      child: TextButton.icon(
           onPressed: () {
             Navigator.push(
                 context,

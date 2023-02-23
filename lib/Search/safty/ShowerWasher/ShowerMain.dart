@@ -3,7 +3,7 @@ import 'package:page_transition/page_transition.dart';
 import 'location.dart';
 
 class ChemicalShowerEyeWasher extends StatefulWidget {
-  ChemicalShowerEyeWasher({Key key}) : super(key: key);
+  ChemicalShowerEyeWasher({Key? key}) : super(key: key);
 
   @override
   _ChemicalShowerEyeWasherState createState() =>
@@ -11,9 +11,9 @@ class ChemicalShowerEyeWasher extends StatefulWidget {
 }
 
 class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   List tiles = [];
   @override
   void didChangeDependencies() {
@@ -106,9 +106,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                       ),
                     ],
                   )),
-              FlatButton.icon(
-                  shape: Border.all(width: 5, color: Colors.grey[600]),
-                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+              TextButton.icon(
                   onPressed: () {
                     Navigator.push(
                         context,

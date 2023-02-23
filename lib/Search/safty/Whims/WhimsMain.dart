@@ -3,16 +3,16 @@ import 'WhimsData.dart';
 import 'package:mma_mse/customTileScroll.dart';
 
 class WhimsSymbols extends StatefulWidget {
-  WhimsSymbols({Key key}) : super(key: key);
+  WhimsSymbols({Key? key}) : super(key: key);
 
   @override
   _WhimsSymbolsState createState() => _WhimsSymbolsState();
 }
 
 class _WhimsSymbolsState extends State<WhimsSymbols> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   List tiles = [];
   @override
   void didChangeDependencies() {
@@ -36,7 +36,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
     }
   }
 
-  List<testdetailData> result = testdetailData().detailL();
+  List<testdetailData> result = whims;
   @override
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();

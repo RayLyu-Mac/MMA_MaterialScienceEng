@@ -10,14 +10,14 @@ class EmailContent extends StatefulWidget {
   EmailContent(
       {@optionalTypeArgs this.locationOfEqup,
       @optionalTypeArgs this.nameOfEqup,
-      @required this.emailTo,
+      required this.emailTo,
       @optionalTypeArgs this.prof,
-      Key key})
+      Key? key})
       : super(key: key);
-  final String locationOfEqup;
-  final String nameOfEqup;
+  final String? locationOfEqup;
+  final String? nameOfEqup;
   final String emailTo;
-  final String prof;
+  final String? prof;
   final DateTime now = DateTime.now();
 
   @override
@@ -44,8 +44,8 @@ class _EmailContentState extends State<EmailContent> {
     super.dispose();
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   List<String> attachments = [];
   bool isHTML = false;
 
@@ -154,7 +154,7 @@ class _EmailContentState extends State<EmailContent> {
                     border: Border.all(color: Colors.black, width: 4)),
                 child: InkWell(
                     splashColor: Colors.blueGrey,
-                    child: FlatButton.icon(
+                    child: TextButton.icon(
                         onPressed: () => send(widget.prof),
                         icon: Icon(Icons.email_rounded),
                         label: Text("Contact Manager"))),
@@ -207,8 +207,8 @@ class _EmailContentState extends State<EmailContent> {
                       constraints: BoxConstraints.expand(
                           width: _screenWidth / 1.15, height: _screenH / 5.5),
                       decoration: BoxDecoration(
-                          border:
-                              Border.all(width: 5, color: Colors.grey[300])),
+                          border: Border.all(
+                              width: 5, color: Colors.grey.shade300)),
                       child: Text(
                         "Call:\nEd McCaffery: Ext: 24985\nDoug Culley: Ext 24106\nXiaogang Li: Ext: 21881",
                         textAlign: TextAlign.center,
@@ -247,11 +247,11 @@ class _EmailContentState extends State<EmailContent> {
               " " +
               "The" +
               " " +
-              widget.nameOfEqup +
+              widget.nameOfEqup! +
               " " +
               "in" +
               " " +
-              widget.locationOfEqup +
+              widget.locationOfEqup! +
               " " +
               "met " +
               errorMessage.text +
@@ -260,7 +260,10 @@ class _EmailContentState extends State<EmailContent> {
               ":)"
           : "Dear ",
       subject: prof == null
-          ? "Issue Relate to " + widget.locationOfEqup + " " + widget.nameOfEqup
+          ? "Issue Relate to " +
+              widget.locationOfEqup! +
+              " " +
+              widget.nameOfEqup!
           : " ",
       recipients: [widget.emailTo],
       attachmentPaths: attachments,
@@ -277,9 +280,5 @@ class _EmailContentState extends State<EmailContent> {
     }
 
     if (!mounted) return;
-
-    _scaffoldKey.currentState.showSnackBar(SnackBar(
-      content: Text(platformResponse),
-    ));
   }
 }

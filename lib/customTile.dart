@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
-      {@required this.name,
-      @required this.pageTo,
-      @required this.fonts,
-      @required this.controller,
+      {required this.name,
+      required this.pageTo,
+      required this.fonts,
+      required this.controller,
       @optionalTypeArgs this.bgColor,
       key})
       : super(key: key);
@@ -13,7 +13,7 @@ class customListTile extends StatelessWidget {
   final int pageTo;
   final double fonts;
   final PageController controller;
-  final Color bgColor;
+  final Color? bgColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +21,7 @@ class customListTile extends StatelessWidget {
       child: Container(
           color: bgColor,
           decoration: BoxDecoration(
-              border: Border(top: BorderSide(color: Colors.grey[100]))),
+              border: Border(top: BorderSide(color: Colors.grey.shade100))),
           child: InkWell(
             splashColor: Colors.blue[100],
             onTap: () => {
