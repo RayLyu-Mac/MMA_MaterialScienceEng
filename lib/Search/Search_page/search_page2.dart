@@ -6,15 +6,15 @@ import 'package:mma_mse/Search/direction/dir_main.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class search_p2 extends StatefulWidget {
-  search_p2({Key key}) : super(key: key);
+  search_p2({Key? key}) : super(key: key);
 
   @override
   _search_p2State createState() => _search_p2State();
 }
 
 class _search_p2State extends State<search_p2> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   final PageController controller = PageController(initialPage: 0);
 
   @override
@@ -53,7 +53,7 @@ class _search_p2State extends State<search_p2> {
                       width: _screenWidth / 2.4, height: _screenH / 4.3),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: AssetImage("assest/search/dir.jpg"),
                           fit: BoxFit.cover)),
@@ -95,7 +95,7 @@ class _search_p2State extends State<search_p2> {
                       width: _screenWidth / 3 + 60, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA/blob/master/assest/tool.jpg?raw=true"),
@@ -127,7 +127,7 @@ class _search_p2State extends State<search_p2> {
                       width: _screenWidth / 2, height: _screenH / 5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/main.jpg?raw=truee"),

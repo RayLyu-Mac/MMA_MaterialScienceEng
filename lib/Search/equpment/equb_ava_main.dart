@@ -10,9 +10,7 @@ import 'package:mma_mse/layout_overview.dart';
 import 'package:page_transition/page_transition.dart';
 
 class equb_main extends StatefulWidget {
-  final HeroType heroType;
-
-  const equb_main({Key? key, required this.heroType}) : super(key: key);
+  const equb_main({Key? key}) : super(key: key);
 
   @override
   _equb_mainState createState() => _equb_mainState();

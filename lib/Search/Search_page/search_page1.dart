@@ -12,7 +12,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class search_area extends StatefulWidget {
-  search_area({Key key}) : super(key: key);
+  search_area({Key? key}) : super(key: key);
 
   @override
   _search_areaState createState() => _search_areaState();
@@ -24,11 +24,12 @@ class _search_areaState extends State<search_area> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   final PageController controller = PageController(initialPage: 0);
 
   @override
@@ -69,7 +70,7 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 - 10, height: _screenH / 4 - 5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/e.png?raw=true"),
@@ -100,7 +101,7 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/T.jpg?raw=true"),
@@ -131,7 +132,7 @@ class _search_areaState extends State<search_area> {
                       width: _screenWidth / 3 + 50, height: _screenH / 4 - 45),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 5, color: Colors.grey[350]),
+                      border: Border.all(width: 5, color: Colors.grey.shade300),
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/s.png?raw=true"),
@@ -163,7 +164,7 @@ class _search_areaState extends State<search_area> {
   }
 
   scanQR() async {
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

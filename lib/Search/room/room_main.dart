@@ -3,8 +3,7 @@ import 'room_detail.dart';
 import 'package:flutter/material.dart';
 
 class room_main extends StatefulWidget {
-  final HeroType heroType;
-  const room_main({Key? key, required this.heroType}) : super(key: key);
+  const room_main({Key? key}) : super(key: key);
 
   @override
   _room_mainState createState() => _room_mainState();
