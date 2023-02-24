@@ -8,10 +8,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InstructionMode extends StatefulWidget {
   InstructionMode({
-    @required this.instructionList,
-    @required this.name,
-    @required this.controller,
-    Key key,
+    required this.instructionList,
+    required this.name,
+    required this.controller,
+    Key? key,
   }) : super(key: key);
   final List instructionList;
   final String name;
@@ -22,8 +22,8 @@ class InstructionMode extends StatefulWidget {
 }
 
 class _InstructionModeState extends State<InstructionMode> {
-  double _screenH;
-  double _screenW;
+  double _screenH = 0;
+  double _screenW = 0;
 
   List titles = [];
 

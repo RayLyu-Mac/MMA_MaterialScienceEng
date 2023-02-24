@@ -1,17 +1,19 @@
+import 'package:mma_mse/Search/extramenu.dart';
+
 import 'AboutUSData.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class AboutTeam extends StatefulWidget {
-  AboutTeam({Key key}) : super(key: key);
+  AboutTeam({Key? key}) : super(key: key);
 
   @override
   _AboutTeamState createState() => _AboutTeamState();
 }
 
 class _AboutTeamState extends State<AboutTeam> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -26,7 +28,7 @@ class _AboutTeamState extends State<AboutTeam> {
   @override
   void initState() {
     super.initState();
-    teamInfo = testdetailData().detailL();
+    teamInfo = aboutUsData;
   }
 
   @override
@@ -41,7 +43,7 @@ class _AboutTeamState extends State<AboutTeam> {
           waveDuration: Duration(
             milliseconds: 850,
           ),
-          waveColor: Colors.grey[200],
+          waveColor: Colors.grey.shade200,
           textStyle: TextStyle(
             fontSize: _screenH / 23,
             fontWeight: FontWeight.w900,
@@ -75,7 +77,7 @@ class _AboutTeamState extends State<AboutTeam> {
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     fit: BoxFit.fitWidth,
-                                    image: NetworkImage(teamInfo[index].img))),
+                                    image: NetworkImage(teamInfo[index].img!))),
                           )
                         : Container(),
                     teamInfo[index].program != null
@@ -94,7 +96,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].eamil != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Email: " + teamInfo[index].eamil,
+                            child: Text("Email: " + teamInfo[index].eamil!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),
@@ -113,7 +115,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].about != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Fun Fact:\n" + teamInfo[index].about,
+                            child: Text("Fun Fact:\n" + teamInfo[index].about!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),
@@ -123,7 +125,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].moto != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Motto:\n" + teamInfo[index].moto,
+                            child: Text("Motto:\n" + teamInfo[index].moto!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),

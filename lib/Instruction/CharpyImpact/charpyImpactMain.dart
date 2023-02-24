@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class RockWellinstruction extends StatefulWidget {
-  final video videoType;
-  const RockWellinstruction({Key key, this.videoType}) : super(key: key);
+  const RockWellinstruction({Key? key}) : super(key: key);
 
   @override
   _RockWellinstructionState createState() => _RockWellinstructionState();
 }
 
 class _RockWellinstructionState extends State<RockWellinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = charpyInst;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
