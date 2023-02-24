@@ -6,7 +6,7 @@ import 'package:mma_mse/Instruction/Polisher/manualPolisher/manualpolisherinstru
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class manual_polisher extends StatefulWidget {
-  manual_polisher({Key key}) : super(key: key);
+  manual_polisher({Key? key}) : super(key: key);
 
   @override
   _manual_polisherState createState() => _manual_polisherState();
@@ -17,7 +17,7 @@ class _manual_polisherState extends State<manual_polisher> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Manual Polisher",
-      backC: Colors.blue[50],
+      backC: Colors.blue.shade100,
       instruction: manual_polisher_instruction(),
       dash: "Dashboard",
       fontSize: 46,

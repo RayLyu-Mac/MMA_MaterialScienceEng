@@ -4,10 +4,10 @@ import 'package:mma_mse/Instruction/Polisher/automatic%20Polisher/autoPolisherMa
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class AutoPolisherMain extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   AutoPolisherMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -21,7 +21,7 @@ class _AutoPolisherMainState extends State<AutoPolisherMain> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Automatic Polisher",
-      backC: Colors.blue[50],
+      backC: Colors.blue.shade100,
       instruction: AutoPolisherinstruction(),
       dash: "Dashboard",
       fontSize: 46,

@@ -4,10 +4,10 @@ import 'package:mma_mse/Instruction/Polisher/buehlerPolisher/buePolisherMian.dar
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class BuehlerPolisherMain extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   BuehlerPolisherMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -21,7 +21,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Buehler Manual Polisher",
-      backC: Colors.blue[50],
+      backC: Colors.blue.shade100,
       instruction: BehPolisherInstru(),
       dash: "Dashboard",
       fontSize: 46,

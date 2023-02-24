@@ -18,15 +18,15 @@ class _SearchListExampleState extends State<SearchListExample> {
   );
   final globalKey = new GlobalKey<ScaffoldState>();
   final TextEditingController _controller = new TextEditingController();
-  List _list = List();
-  bool _isSearching;
+  List _list = [];
+  bool _isSearching = false;
   bool searchChem = false;
   bool searchLoc = false;
   bool searchName = false;
   String _searchText = "";
-  List total = new List();
-  List name = new List();
-  List<msdsData> property = List();
+  List total = [];
+  List name = [];
+  List<msdsData> property = [];
   final ScrollController controller = ScrollController();
 
   _SearchListExampleState() {
@@ -49,14 +49,14 @@ class _SearchListExampleState extends State<SearchListExample> {
   void initState() {
     super.initState();
     _isSearching = false;
-    total = msdsData().msDataList();
+    total = msDataList;
     for (var i = 0; i < total.length; i++) {
       _list.add(total[i].name);
     }
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -71,7 +71,6 @@ class _SearchListExampleState extends State<SearchListExample> {
     return new Scaffold(
         resizeToAvoidBottomInset: false,
         key: globalKey,
-        appBar: buildAppBar(context),
         body: Column(
           children: [
             SizedBox(
@@ -116,7 +115,7 @@ class _SearchListExampleState extends State<SearchListExample> {
                     style: const TextStyle(color: Colors.deepPurple),
                     onChanged: (value) {
                       setState(() {
-                        dropdownValue = value;
+                        dropdownValue = value!;
                         switch (value) {
                           case "Name":
                             searchName = true;
@@ -199,7 +198,7 @@ class _SearchListExampleState extends State<SearchListExample> {
                                                 property[index].type),
                                             Text("The level of harzard is: " +
                                                 saftyLevel[
-                                                    property[index].level])
+                                                    property[index].level]!)
                                           ],
                                         );
                                       });

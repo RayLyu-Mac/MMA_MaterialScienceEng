@@ -6,10 +6,10 @@ import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Instruction/Polisher/buehlerPolisher/buePolisherMian.dart';
 
 class BuehlerAutoPolisherMain extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   BuehlerAutoPolisherMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -20,8 +20,8 @@ class BuehlerAutoPolisherMain extends StatefulWidget {
 }
 
 class _BuehlerAutoPolisherMainState extends State<BuehlerAutoPolisherMain> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -104,8 +104,8 @@ class _BuehlerAutoPolisherMainState extends State<BuehlerAutoPolisherMain> {
                         ? widget.location
                         : "Not Specificed",
                     nameOfEqup: "Automatic Polisher",
-                    emailTo: widget.emailTo != null
-                        ? widget.emailTo
+                    emailTo: widget.emailTo! != null
+                        ? widget.emailTo!
                         : "Please enter the email address!")),
             Positioned(
                 top: _screenH / 1.33,
@@ -119,7 +119,7 @@ class _BuehlerAutoPolisherMainState extends State<BuehlerAutoPolisherMain> {
                           MaterialPageRoute(
                               builder: (context) => user_note(
                                     loc: "JHE 236 automatic polisher",
-                                    themem_color: Colors.red[100],
+                                    themem_color: Colors.red.shade100,
                                   )));
                     }))
           ],

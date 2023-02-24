@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/Dash_borad_button.dart';
 
 class manualPolisherDashBoard extends StatefulWidget {
-  manualPolisherDashBoard({Key key}) : super(key: key);
+  manualPolisherDashBoard({Key? key}) : super(key: key);
 
   @override
   _manualPolisherDashBoardState createState() =>
@@ -11,8 +11,8 @@ class manualPolisherDashBoard extends StatefulWidget {
 }
 
 class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double firstLine = 9.5;
   double secondLine = 4.7;
   double thirdLine = 2.5;
@@ -40,14 +40,15 @@ class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
-                BoxShadow(offset: const Offset(4, 4), color: Colors.grey[400])
+                BoxShadow(
+                    offset: const Offset(4, 4), color: Colors.grey.shade400)
               ],
             ),
           ),
         ),
         DashButton(
           buttonName: "Green Button",
-          cardColor: Colors.green[400].withOpacity(0.9),
+          cardColor: Colors.green.shade400.withOpacity(0.9),
           instruction:
               "The Green button is Power which turns the grinder On/Off",
           left: _screenWidth / 6,
@@ -56,7 +57,7 @@ class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
         ),
         DashButton(
           buttonName: "Pink Button",
-          cardColor: Colors.pink[400].withOpacity(0.9),
+          cardColor: Colors.pink.shade400.withOpacity(0.9),
           instruction: "F2: \n•Edit Mode: Insert Step \n•Run Mode: Next Step",
           left: _screenWidth / 2.9,
           stepTitle: "Normal speed for polsihing is 150 RPM",
@@ -64,7 +65,7 @@ class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
         ),
         DashButton(
           buttonName: "Yellow Button",
-          cardColor: Colors.yellow[400].withOpacity(0.9),
+          cardColor: Colors.yellow.shade400.withOpacity(0.9),
           instruction:
               "The Yellow directional button changes the direction (Forward/Reverse)",
           left: _screenWidth / 6,
@@ -73,7 +74,7 @@ class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
         ),
         DashButton(
           buttonName: "Orange Button",
-          cardColor: Colors.orange[400].withOpacity(0.9),
+          cardColor: Colors.orange.shade400.withOpacity(0.9),
           instruction: "The Orange Negative Button decrease the RPM",
           left: _screenWidth / 2.9,
           stepTitle: "Normal speed for polsihing is 150 RPM",
@@ -81,7 +82,7 @@ class _manualPolisherDashBoardState extends State<manualPolisherDashBoard> {
         ),
         DashButton(
           buttonName: "Blue Button",
-          cardColor: Colors.blue[400].withOpacity(0.9),
+          cardColor: Colors.blue.shade400.withOpacity(0.9),
           instruction: "The Blue Positive Button increases the RPM",
           left: _screenWidth / 2.9,
           stepTitle: "Normal speed for polsihing is 150 RPM",
