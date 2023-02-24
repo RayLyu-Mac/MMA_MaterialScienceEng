@@ -4,9 +4,10 @@ import 'CreepData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class CreepTest extends StatefulWidget {
-  CreepTest({Key key}) : super(key: key);
+  CreepTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -14,9 +15,9 @@ class CreepTest extends StatefulWidget {
 }
 
 class _CreepTestState extends State<CreepTest> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = creepData;
   List<Widget> pages = [];
   List listtile = [];
   @override

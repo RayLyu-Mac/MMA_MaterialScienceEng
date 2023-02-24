@@ -4,9 +4,10 @@ import 'alData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class AlStrengthTest extends StatefulWidget {
-  AlStrengthTest({Key key}) : super(key: key);
+  AlStrengthTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -14,9 +15,9 @@ class AlStrengthTest extends StatefulWidget {
 }
 
 class _AlStrengthTestState extends State<AlStrengthTest> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = alData;
   List<Widget> pages = [];
   List listtile = [];
   @override

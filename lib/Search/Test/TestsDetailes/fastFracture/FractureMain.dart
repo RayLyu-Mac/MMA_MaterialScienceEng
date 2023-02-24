@@ -4,9 +4,10 @@ import 'FractureData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class FractureTest extends StatefulWidget {
-  FractureTest({Key key}) : super(key: key);
+  FractureTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -14,12 +15,12 @@ class FractureTest extends StatefulWidget {
 }
 
 class _FractureTestState extends State<FractureTest> {
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  List<testdetailData> testBGdetail = fractureData;
   List<Widget> pages = [];
   List listtile = [];
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

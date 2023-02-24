@@ -4,9 +4,10 @@ import 'ACLData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class ACLTest extends StatefulWidget {
-  ACLTest({Key key}) : super(key: key);
+  ACLTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -14,12 +15,12 @@ class ACLTest extends StatefulWidget {
 }
 
 class _ACLTestState extends State<ACLTest> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = aclData;
   List<Widget> pages = [];
   List listtile = [];
-  double adjust;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

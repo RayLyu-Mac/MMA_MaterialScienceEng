@@ -4,16 +4,15 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class test_ava extends StatefulWidget {
-  final HeroType heroType;
-  const test_ava({Key key, this.heroType}) : super(key: key);
+  const test_ava({Key? key}) : super(key: key);
 
   @override
   _test_avaState createState() => _test_avaState();
 }
 
 class _test_avaState extends State<test_ava> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -21,16 +20,9 @@ class _test_avaState extends State<test_ava> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  HeroType _heroType;
-  List _heroTypeList = List<HeroType>();
-  double _screenWidthAdjustment;
+  List _heroTypeList = test_data_list;
+  double _screenWidthAdjustment = 0;
   final ScrollController controller = ScrollController();
-
-  @override
-  void initState() {
-    super.initState();
-    _heroTypeList = HeroType().test_data_list();
-  }
 
   @override
   Widget build(BuildContext context) {
