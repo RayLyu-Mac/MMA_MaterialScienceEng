@@ -7,16 +7,16 @@ import 'package:mma_mse/equipment/cutter/Buehler Precision Cutter/BuehlerMain.da
 import 'package:mma_mse/floors/roomBut.dart';
 
 class room129LayO extends StatefulWidget {
-  room129LayO({Key key}) : super(key: key);
+  room129LayO({Key? key}) : super(key: key);
 
   @override
   _room129LayOState createState() => _room129LayOState();
 }
 
 class _room129LayOState extends State<room129LayO> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

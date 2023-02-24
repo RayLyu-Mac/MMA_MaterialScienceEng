@@ -3,29 +3,29 @@ import 'package:page_transition/page_transition.dart';
 
 class DashButton extends StatefulWidget {
   final Color cardColor;
-  final String stepTitle;
+  final String? stepTitle;
   final double top;
   final double left;
-  final String instruction;
-  final String buttonName;
-  final Icon button_icon;
-  final double width;
-  final double height;
-  final double fontsize;
-  final Widget pageTo;
+  final String? instruction;
+  final String? buttonName;
+  final Icon? button_icon;
+  final double? width;
+  final double? height;
+  final double? fontsize;
+  final Widget? pageTo;
   const DashButton(
       {@optionalTypeArgs this.buttonName,
       @optionalTypeArgs this.height,
       @optionalTypeArgs this.width,
-      @required this.cardColor,
+      required this.cardColor,
       @optionalTypeArgs this.pageTo,
-      @required this.left,
-      @required this.top,
+      required this.left,
+      required this.top,
       @optionalTypeArgs this.stepTitle,
       @optionalTypeArgs this.instruction,
       @optionalTypeArgs this.button_icon,
       @optionalTypeArgs this.fontsize,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -33,8 +33,8 @@ class DashButton extends StatefulWidget {
 }
 
 class _DashButtonState extends State<DashButton> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -53,7 +53,7 @@ class _DashButtonState extends State<DashButton> {
               Navigator.push(
                   context,
                   PageTransition(
-                      child: widget.pageTo,
+                      child: widget.pageTo!,
                       type: PageTransitionType.scale,
                       alignment: Alignment.topCenter));
             } else {
@@ -65,7 +65,7 @@ class _DashButtonState extends State<DashButton> {
                       contentPadding: EdgeInsets.fromLTRB(_screenWidth / 30,
                           _screenH / 30, _screenWidth / 50, _screenH / 25),
                       title: Text(
-                        widget.stepTitle,
+                        widget.stepTitle!,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: _screenWidth / 24),
@@ -75,7 +75,7 @@ class _DashButtonState extends State<DashButton> {
                           height: _screenWidth / 50,
                         ),
                         Text(
-                          widget.instruction,
+                          widget.instruction!,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: _screenWidth / 33),
@@ -87,13 +87,13 @@ class _DashButtonState extends State<DashButton> {
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(
-                widget.width != null ? widget.width / 9 : _screenWidth / 60,
-                widget.width != null ? widget.width / 10 : _screenH / 27,
+                widget.width != null ? widget.width! / 9 : _screenWidth / 60,
+                widget.width != null ? widget.width! / 10 : _screenH / 27,
                 _screenWidth / 80,
-                widget.height != null ? widget.height / 10 : _screenH / 60),
+                widget.height != null ? widget.height! / 10 : _screenH / 60),
             child: swtich(
-                iconButton: widget.button_icon,
-                iconName: widget.buttonName,
+                iconButton: widget.button_icon!,
+                iconName: widget.buttonName!,
                 fontSize: widget.fontsize,
                 screenH: _screenH),
             constraints: BoxConstraints.expand(
@@ -114,13 +114,13 @@ class swtich extends StatelessWidget {
   final double screenH;
   final Icon iconButton;
   final String iconName;
-  final double fontSize;
+  final double? fontSize;
   const swtich(
-      {@required this.iconButton,
-      @required this.iconName,
-      @required this.screenH,
+      {required this.iconButton,
+      required this.iconName,
+      required this.screenH,
       @optionalTypeArgs this.fontSize,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override

@@ -5,7 +5,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 
 class tensile_test extends StatefulWidget {
   final ori;
-  tensile_test({@optionalTypeArgs this.ori, Key key}) : super(key: key);
+  tensile_test({@optionalTypeArgs this.ori, Key? key}) : super(key: key);
 
   @override
   _tensile_testState createState() => _tensile_testState();
@@ -19,7 +19,7 @@ class _tensile_testState extends State<tensile_test> {
         warnNote:
             "\n•Safty Glass!  \n•Place the plastic shield \n•Make sure when placing a sample into the grips that only the person placing the sample into the grip is in control of the handset",
         instruction: utm_instruction(),
-        backC: Colors.amber[50],
+        backC: Colors.amber.shade100,
         fontSize: 47,
         oritation: widget.ori,
         theory: tensileTResult(),
