@@ -6,8 +6,8 @@ import 'package:mma_mse/customTile.dart';
 import 'acidSafyFinal.dart';
 
 class AcidSafty extends StatefulWidget {
-  final Widget pageTo;
-  AcidSafty({@optionalTypeArgs this.pageTo, Key key}) : super(key: key);
+  final Widget? pageTo;
+  AcidSafty({@optionalTypeArgs this.pageTo, Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -15,9 +15,9 @@ class AcidSafty extends StatefulWidget {
 }
 
 class _AcidSaftyState extends State<AcidSafty> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = acidData;
   List<Widget> pages = [];
   List listtile = [];
   @override

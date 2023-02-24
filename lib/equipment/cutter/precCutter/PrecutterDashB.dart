@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/equipment/Dash_borad_button.dart';
 
 class PrecisonCutterDashB extends StatefulWidget {
-  PrecisonCutterDashB({Key key}) : super(key: key);
+  PrecisonCutterDashB({Key? key}) : super(key: key);
 
   @override
   _PrecisonCutterDashBState createState() => _PrecisonCutterDashBState();
@@ -29,9 +29,9 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
     super.dispose();
   }
 
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

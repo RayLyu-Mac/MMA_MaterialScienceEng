@@ -3,7 +3,7 @@ import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'package:mma_mse/customTile.dart';
 
 class BulkAbrasiveCutter extends StatefulWidget {
-  BulkAbrasiveCutter({Key key}) : super(key: key);
+  BulkAbrasiveCutter({Key? key}) : super(key: key);
 
   @override
   _BulkAbrasiveCutterState createState() => _BulkAbrasiveCutterState();
@@ -131,15 +131,15 @@ class _BulkAbrasiveCutterState extends State<BulkAbrasiveCutter> {
 }
 
 class PossErBulkAbraCut extends StatefulWidget {
-  PossErBulkAbraCut({Key key}) : super(key: key);
+  PossErBulkAbraCut({Key? key}) : super(key: key);
 
   @override
   _PossErBulkAbraCutState createState() => _PossErBulkAbraCutState();
 }
 
 class _PossErBulkAbraCutState extends State<PossErBulkAbraCut> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {

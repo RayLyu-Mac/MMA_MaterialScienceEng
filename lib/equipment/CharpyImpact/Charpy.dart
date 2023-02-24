@@ -4,11 +4,11 @@ import 'charpyImpactBackG.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class charpy_test extends StatefulWidget {
-  final String location;
-  final String emailTo;
-  final bool ori;
+  final String? location;
+  final String? emailTo;
+  final bool? ori;
   charpy_test(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
@@ -27,7 +27,7 @@ class _charpy_testState extends State<charpy_test> {
         instruction: RockWellinstruction(),
         theory: CharpyBackG(),
         oritation: widget.ori,
-        backC: Colors.blue[50],
+        backC: Colors.blue.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true",
         intro:

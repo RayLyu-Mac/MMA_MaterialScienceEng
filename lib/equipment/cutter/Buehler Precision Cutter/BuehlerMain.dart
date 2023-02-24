@@ -5,12 +5,12 @@ import 'package:mma_mse/equipment/PageMode.dart';
 
 class BuehlerCutterMain extends StatefulWidget {
   BuehlerCutterMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   @override
   _BuehlerCutterMainState createState() => _BuehlerCutterMainState();
 }
@@ -20,7 +20,7 @@ class _BuehlerCutterMainState extends State<BuehlerCutterMain> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Buehler Precision Cutter",
-      backC: Colors.green[50],
+      backC: Colors.green.shade100,
       instruction: BuehlerCutterInstru(),
       dash: "Dashboard",
       fontSize: 44,

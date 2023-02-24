@@ -7,14 +7,14 @@ import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.d
 
 class DigitalRWMain extends StatefulWidget {
   DigitalRWMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.ori,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
-  final bool ori;
+  final String? location;
+  final String? emailTo;
+  final bool? ori;
   @override
   _DigitalRWMainState createState() => _DigitalRWMainState();
 }
@@ -32,7 +32,7 @@ class _DigitalRWMainState extends State<DigitalRWMain> {
         fontSize: 48,
         oritation: widget.ori,
         instruction: DigiRWInstr(),
-        backC: Colors.blueGrey[50],
+        backC: Colors.blueGrey.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true",
         intro:

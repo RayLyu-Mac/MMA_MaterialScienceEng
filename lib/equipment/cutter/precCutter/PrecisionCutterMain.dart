@@ -8,12 +8,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PcutterMain extends StatefulWidget {
   PcutterMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
 
   @override
   _PcutterMainState createState() => _PcutterMainState();
@@ -33,7 +33,7 @@ class _PcutterMainState extends State<PcutterMain> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Precision Cutter",
-      backC: Colors.green[50],
+      backC: Colors.green.shade100,
       instruction: PCutterinstruction(),
       dash: "Dashboard",
       extraIcon: FontAwesomeIcons.fan,

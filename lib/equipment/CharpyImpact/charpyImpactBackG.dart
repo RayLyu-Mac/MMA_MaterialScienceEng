@@ -3,7 +3,7 @@ import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'package:mma_mse/customTile.dart';
 
 class CharpyBackG extends StatefulWidget {
-  CharpyBackG({Key key}) : super(key: key);
+  CharpyBackG({Key? key}) : super(key: key);
 
   @override
   _CharpyBackGState createState() => _CharpyBackGState();

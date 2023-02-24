@@ -8,10 +8,10 @@ import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BulkAbrasive_Main extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   BulkAbrasive_Main(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -34,7 +34,7 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Auto-Bulk Abrasive Cutter",
-      backC: Colors.green[50],
+      backC: Colors.green.shade100,
       instruction: BulkAbraCutterInstru(),
       dash: "Dashboard",
       fontSize: 46,

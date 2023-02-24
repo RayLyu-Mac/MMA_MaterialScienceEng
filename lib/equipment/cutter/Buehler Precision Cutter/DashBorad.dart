@@ -4,16 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class BueDashBoard extends StatefulWidget {
-  BueDashBoard({Key key}) : super(key: key);
+  BueDashBoard({Key? key}) : super(key: key);
 
   @override
   _BueDashBoardState createState() => _BueDashBoardState();
 }
 
 class _BueDashBoardState extends State<BueDashBoard> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();

@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/equipment/Dash_borad_button.dart';
 
 class automaticModeInterFaceButton extends StatefulWidget {
-  automaticModeInterFaceButton({Key key}) : super(key: key);
+  automaticModeInterFaceButton({Key? key}) : super(key: key);
 
   @override
   _automaticModeInterFaceButtonState createState() =>
@@ -33,9 +33,9 @@ class _automaticModeInterFaceButtonState
     super.dispose();
   }
 
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -67,12 +67,12 @@ class _automaticModeInterFaceButtonState
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        offset: const Offset(4, 4), color: Colors.grey[300])
+                        offset: const Offset(4, 4), color: Colors.grey.shade300)
                   ],
                 ),
               )),
           DashButton(
-              cardColor: Colors.blue[300],
+              cardColor: Colors.blue.shade300,
               instruction: "•The Clamping bed is fed at a continuous speed",
               left: _screenH / 7 / adjust,
               stepTitle: "Rapid",
@@ -116,7 +116,7 @@ class _automaticModeInterFaceButtonState
             button_icon: Icon(FontAwesomeIcons.solidPlayCircle),
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             instruction:
                 "•Press Up or down will either increase or decrease the feed rate",
             left: _screenH / 1.7,
@@ -125,7 +125,7 @@ class _automaticModeInterFaceButtonState
             buttonName: "Feed Rate",
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             width: _screenWidth / 14,
             height: _screenH / 12,
             instruction: "•Press Up  will either increase the feed rate",
@@ -135,7 +135,7 @@ class _automaticModeInterFaceButtonState
             button_icon: Icon(Icons.arrow_upward),
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             left: _screenH / 1.03,
             top: _screenWidth / 9.2,
             width: _screenWidth / 14,
@@ -145,7 +145,7 @@ class _automaticModeInterFaceButtonState
             button_icon: Icon(Icons.arrow_downward),
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             left: _screenH / 1.7,
             top: _screenWidth / 6.6,
             stepTitle: "Cutting Length",
@@ -154,7 +154,7 @@ class _automaticModeInterFaceButtonState
             buttonName: "Cut Leng",
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             left: _screenH / 1.7,
             top: _screenWidth / 4,
             stepTitle: "Distance Remaining",
@@ -163,7 +163,7 @@ class _automaticModeInterFaceButtonState
             buttonName: "Dis Rema",
           ),
           DashButton(
-            cardColor: Colors.lightBlue[300],
+            cardColor: Colors.lightBlue.shade300,
             left: _screenH / 1.7,
             top: _screenWidth / 2.8,
             fontsize: _screenWidth / 40.5,
@@ -172,7 +172,7 @@ class _automaticModeInterFaceButtonState
             buttonName: "Samp Thickness",
           ),
           DashButton(
-            cardColor: Colors.orange[300],
+            cardColor: Colors.orange.shade300,
             left: _screenH / 0.85,
             top: _screenWidth / 20,
             stepTitle: "Light",

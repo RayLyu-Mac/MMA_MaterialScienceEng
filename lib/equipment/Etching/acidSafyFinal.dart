@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class acidQuiz extends StatefulWidget {
-  acidQuiz({Key key}) : super(key: key);
+  acidQuiz({Key? key}) : super(key: key);
 
   @override
   _acidQuizState createState() => _acidQuizState();

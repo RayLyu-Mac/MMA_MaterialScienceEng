@@ -6,10 +6,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 
 class ManualMicroHardness extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   ManualMicroHardness(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -31,7 +31,7 @@ class _ManualMicroHardnessState extends State<ManualMicroHardness> {
         fontSize: 46,
         toolTip: "Hardness Conversion Sheet",
         instruction: ManualMicHardnessInstru(),
-        backC: Colors.blueGrey[50],
+        backC: Colors.blueGrey.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/ManualHardness.png?raw=true",
         intro:

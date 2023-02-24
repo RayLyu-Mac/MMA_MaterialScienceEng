@@ -6,11 +6,11 @@ import 'package:mma_mse/Search/safty/FireSafty/FireMain.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/phaseDMain.dart';
 
 class BlueFurnace extends StatefulWidget {
-  final String location;
-  final String emailTo;
-  final bool ori;
+  final String? location;
+  final String? emailTo;
+  final bool? ori;
   BlueFurnace(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
@@ -26,7 +26,7 @@ class _BlueFurnaceState extends State<BlueFurnace> {
     return EqubPageMode(
       title: "Blue Furnace",
       oritation: widget.ori,
-      backC: Colors.red[50],
+      backC: Colors.red.shade100,
       instruction: BlueFurnaceInstr(),
       extraIcon: FontAwesomeIcons.fire,
       extraPage: ExtingshSymbols(),

@@ -8,24 +8,24 @@ import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Aciddetail extends StatefulWidget {
-  Aciddetail({Key key}) : super(key: key);
+  Aciddetail({Key? key}) : super(key: key);
 
   @override
   _AciddetailState createState() => _AciddetailState();
 }
 
 class _AciddetailState extends State<Aciddetail> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
-  int q1;
-  int q2;
-  int c1;
-  int c2;
-  int q3;
-  int c3;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
+  int q1 = 0;
+  int q2 = 0;
+  int c1 = 0;
+  int c2 = 0;
+  int q3 = 0;
+  int c3 = 0;
   bool checked = false;
-  Color bordC;
+  Color bordC = Colors.transparent;
 
   List<int> qs = [];
   List<int> cs = [];
@@ -70,7 +70,7 @@ class _AciddetailState extends State<Aciddetail> {
     answs = [choicea, choiceb, choicec];
   }
 
-  List<testdetailData> result = testdetailData().detailL();
+  List<testdetailData> result = acidPropData;
   @override
   void initState() {
     super.initState();
@@ -309,12 +309,7 @@ class _AciddetailState extends State<Aciddetail> {
                                     height: _screenH / 5,
                                     color:
                                         settleColor(_selectedIndex, index, ii),
-                                    child: FlatButton(
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(
-                                            color: Colors.blueAccent[100],
-                                            width: 3),
-                                      ),
+                                    child: ElevatedButton(
                                       onPressed: () {
                                         _onSelected(index, ii);
                                         if (index == cs[ii]) {
@@ -359,7 +354,7 @@ class _AciddetailState extends State<Aciddetail> {
                             decoration: BoxDecoration(
                                 color: Colors.grey[200],
                                 border: Border.all(
-                                    color: Colors.blueGrey[800], width: 2)),
+                                    color: Colors.blueGrey.shade800, width: 2)),
                           ),
                         SizedBox(
                           width: 5,
