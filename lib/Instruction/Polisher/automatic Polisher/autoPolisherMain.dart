@@ -6,8 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class AutoPolisherinstruction extends StatefulWidget {
-  final video videoType;
-  const AutoPolisherinstruction({Key key, this.videoType}) : super(key: key);
+  const AutoPolisherinstruction({Key? key}) : super(key: key);
 
   @override
   _AutoPolisherinstructionState createState() =>
@@ -15,14 +14,13 @@ class AutoPolisherinstruction extends StatefulWidget {
 }
 
 class _AutoPolisherinstructionState extends State<AutoPolisherinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = autoPoli;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

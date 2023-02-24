@@ -5,22 +5,22 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class ManualRWInstr extends StatefulWidget {
-  final video videoType;
-  const ManualRWInstr({Key key, this.videoType}) : super(key: key);
+  const ManualRWInstr({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _ManualRWInstrState createState() => _ManualRWInstrState();
 }
 
 class _ManualRWInstrState extends State<ManualRWInstr> {
-  List _instructionList = List<video>();
+  List _instructionList = manualRWData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

@@ -6,15 +6,16 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class DigiRWInstr extends StatefulWidget {
-  final video videoType;
-  const DigiRWInstr({Key key, this.videoType}) : super(key: key);
+  const DigiRWInstr({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _DigiRWInstrState createState() => _DigiRWInstrState();
 }
 
 class _DigiRWInstrState extends State<DigiRWInstr> {
-  List _instructionList = List<video>();
+  List _instructionList = digiRock;
 
   final ScrollController controller = ScrollController();
   List titles = [];
@@ -22,7 +23,6 @@ class _DigiRWInstrState extends State<DigiRWInstr> {
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
