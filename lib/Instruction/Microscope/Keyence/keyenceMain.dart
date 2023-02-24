@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class KeyenceMicroInstru extends StatefulWidget {
-  final video videoType;
-  const KeyenceMicroInstru({Key key, this.videoType}) : super(key: key);
+  const KeyenceMicroInstru({Key? key}) : super(key: key);
 
   @override
   _KeyenceMicroInstruState createState() => _KeyenceMicroInstruState();
 }
 
 class _KeyenceMicroInstruState extends State<KeyenceMicroInstru> {
-  List _instructionList = List<video>();
+  List _instructionList = keyenceData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

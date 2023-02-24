@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class video {
   String title;
   String subtitle;
-  YoutubePlayerController videoController;
+  YoutubePlayerController? videoController;
   Color materialcolor;
-  String type;
+  String? type;
 
   video({
     required this.title,
     required this.subtitle,
-    required this.type,
+    this.type,
     required this.materialcolor,
-    required this.videoController,
+    this.videoController,
   });
 }

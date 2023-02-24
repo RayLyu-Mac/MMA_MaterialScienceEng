@@ -23,7 +23,7 @@ List<video> manualRWData = [
   video(
       title: "Calibration II: Zero the dial and apply major load",
       subtitle: "Place sample into the holder and adjust the load",
-      materialcolor: Colors.amber[300],
+      materialcolor: Colors.amber,
       videoController: YoutubePlayerController(
         initialVideoId: '8ptfav5a_sY',
         flags: YoutubePlayerFlags(

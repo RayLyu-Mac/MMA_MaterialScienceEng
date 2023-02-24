@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/Instruction/Microscope/Keyence/keyenceData.dart';
 
 import 'NikonData.dart';
 import 'package:flutter/services.dart';
@@ -6,22 +7,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class NikonMicroInstru extends StatefulWidget {
-  final video videoType;
-  const NikonMicroInstru({Key key, this.videoType}) : super(key: key);
+  const NikonMicroInstru({Key? key}) : super(key: key);
 
   @override
   _NikonMicroInstruState createState() => _NikonMicroInstruState();
 }
 
 class _NikonMicroInstruState extends State<NikonMicroInstru> {
-  List _instructionList = List<video>();
+  List _instructionList = nikonData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

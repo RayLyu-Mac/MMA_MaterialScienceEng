@@ -7,12 +7,12 @@ List<video> burpoli = [
     type: "tit",
     title: "Operation",
     subtitle: "How to operate the polisher",
-    materialcolor: Colors.green[600],
+    materialcolor: Colors.green,
   )),
   (video(
       title: "Basic operation of buelher polisher",
       subtitle: "Button introducton and operation process",
-      materialcolor: Colors.green[300],
+      materialcolor: Colors.green,
       videoController: YoutubePlayerController(
         initialVideoId: 'ofjHQkHbeEY', //时间在Main file里
         flags: YoutubePlayerFlags(
@@ -23,7 +23,7 @@ List<video> burpoli = [
   video(
       title: "Polishing for meturllgical sample: Polishing",
       subtitle: "SOPs for meturllgical sample polishing",
-      materialcolor: Colors.green[300],
+      materialcolor: Colors.green,
       videoController: YoutubePlayerController(
         initialVideoId: 'd_KDtC-3exk',
         flags: YoutubePlayerFlags(
@@ -34,7 +34,7 @@ List<video> burpoli = [
   video(
       title: "Polishing for meturllgical sample: Clean Sample",
       subtitle: "Clean sample between polish including rinse and dry",
-      materialcolor: Colors.green[300],
+      materialcolor: Colors.green,
       videoController: YoutubePlayerController(
         initialVideoId: 'qirmCi2Eob4',
         flags: YoutubePlayerFlags(
@@ -45,7 +45,7 @@ List<video> burpoli = [
   video(
       title: "Polishing for meturllgical sample again",
       subtitle: "Whole process for polishing",
-      materialcolor: Colors.green[300],
+      materialcolor: Colors.green,
       videoController: YoutubePlayerController(
         initialVideoId: 'hhu2czLNItU',
         flags: YoutubePlayerFlags(
@@ -57,12 +57,12 @@ List<video> burpoli = [
     type: "tit",
     title: "Finish and Clean Up",
     subtitle: "Clean and organize after experiment finished",
-    materialcolor: Colors.blue[600],
+    materialcolor: Colors.blue,
   )),
   video(
       title: "Finish the experiment",
       subtitle: "Clean the polisher",
-      materialcolor: Colors.blue[300],
+      materialcolor: Colors.blue,
       videoController: YoutubePlayerController(
         initialVideoId: '_LYk24Cbouw',
         flags: YoutubePlayerFlags(
