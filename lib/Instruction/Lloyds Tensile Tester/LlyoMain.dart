@@ -6,15 +6,14 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class LlyoTensileinstruction extends StatefulWidget {
-  final video videoType;
-  const LlyoTensileinstruction({Key key, this.videoType}) : super(key: key);
+  const LlyoTensileinstruction({Key? key}) : super(key: key);
 
   @override
   _LlyoTensileinstructionState createState() => _LlyoTensileinstructionState();
 }
 
 class _LlyoTensileinstructionState extends State<LlyoTensileinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = llyoldTensile;
 
   final ScrollController controller = ScrollController();
   List titles = [];
@@ -22,7 +21,6 @@ class _LlyoTensileinstructionState extends State<LlyoTensileinstruction> {
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

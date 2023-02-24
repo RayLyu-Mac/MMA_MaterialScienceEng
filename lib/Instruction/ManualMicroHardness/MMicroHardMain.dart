@@ -6,8 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class ManualMicHardnessInstru extends StatefulWidget {
-  final video videoType;
-  const ManualMicHardnessInstru({Key key, this.videoType}) : super(key: key);
+  const ManualMicHardnessInstru({Key? key}) : super(key: key);
 
   @override
   _ManualMicHardnessInstruState createState() =>
@@ -15,14 +14,13 @@ class ManualMicHardnessInstru extends StatefulWidget {
 }
 
 class _ManualMicHardnessInstruState extends State<ManualMicHardnessInstru> {
-  List _instructionList = List<video>();
+  List _instructionList = manualMicroHardnessData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

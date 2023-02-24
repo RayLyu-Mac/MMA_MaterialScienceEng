@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class MHTinstruction extends StatefulWidget {
-  final video videoType;
-  const MHTinstruction({Key key, this.videoType}) : super(key: key);
+  const MHTinstruction({Key? key}) : super(key: key);
 
   @override
   _MHTinstructionState createState() => _MHTinstructionState();
 }
 
 class _MHTinstructionState extends State<MHTinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = microHardnessData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class icp_instruction extends StatefulWidget {
-  final video videoType;
-  const icp_instruction({Key key, this.videoType}) : super(key: key);
+  const icp_instruction({Key? key}) : super(key: key);
 
   @override
   _icp_instructionState createState() => _icp_instructionState();
 }
 
 class _icp_instructionState extends State<icp_instruction> {
-  List _instructionList = List<video>();
+  List _instructionList = icpData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
