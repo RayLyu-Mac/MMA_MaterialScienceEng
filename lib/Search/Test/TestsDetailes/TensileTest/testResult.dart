@@ -4,16 +4,16 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class tensileTResult extends StatefulWidget {
-  tensileTResult({Key key}) : super(key: key);
+  tensileTResult({Key? key}) : super(key: key);
 
   @override
   _tensileTResultState createState() => _tensileTResultState();
 }
 
 class _tensileTResultState extends State<tensileTResult> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   List tiles = [];
   @override
   void didChangeDependencies() {
@@ -37,7 +37,7 @@ class _tensileTResultState extends State<tensileTResult> {
     }
   }
 
-  List<testdetailData> result = testdetailData().detailL();
+  List<testdetailData> result = testResult;
   @override
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();

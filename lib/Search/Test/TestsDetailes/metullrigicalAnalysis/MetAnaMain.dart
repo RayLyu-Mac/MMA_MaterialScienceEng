@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardnessTBGData.dart';
 import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'metanaData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class metAnalysis extends StatefulWidget {
-  metAnalysis({Key key}) : super(key: key);
+  metAnalysis({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -13,9 +15,9 @@ class metAnalysis extends StatefulWidget {
 }
 
 class _metAnalysisState extends State<metAnalysis> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = hardnessData;
   List<Widget> pages = [];
   List listtile = [];
   @override
@@ -35,8 +37,8 @@ class _metAnalysisState extends State<metAnalysis> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg,
-        pageTo: testBGdetail[j].pageTo,
+        addOnImg: testBGdetail[j].addOnImg!,
+        pageTo: testBGdetail[j].pageTo!,
       ));
     }
     SystemChrome.setPreferredOrientations([

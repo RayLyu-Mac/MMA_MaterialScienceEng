@@ -4,18 +4,19 @@ import 'dart:core';
 import '../../testDetailMode.dart';
 import 'package:mma_mse/customTile.dart';
 import 'package:flutter/services.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class hardness_test_bg extends StatefulWidget {
-  hardness_test_bg({Key key}) : super(key: key);
+  hardness_test_bg({Key? key}) : super(key: key);
 
   @override
   _hardness_test_bgState createState() => _hardness_test_bgState();
 }
 
 class _hardness_test_bgState extends State<hardness_test_bg> {
-  double _screenWidth;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = hardnessData;
   List<Widget> pages = [];
   @override
   void didChangeDependencies() {
@@ -33,7 +34,7 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg,
+        addOnImg: testBGdetail[j].addOnImg!,
       ));
     }
     SystemChrome.setPreferredOrientations([

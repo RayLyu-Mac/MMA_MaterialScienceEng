@@ -3,27 +3,27 @@ import 'package:page_transition/page_transition.dart';
 
 class IntroButtonMode extends StatefulWidget {
   IntroButtonMode(
-      {@required this.pageTo,
-      @required this.backImg,
-      @optionalTypeArgs this.title,
-      @optionalTypeArgs this.top,
-      @optionalTypeArgs this.left,
-      @optionalTypeArgs this.fontsize,
-      @optionalTypeArgs this.length,
-      @optionalTypeArgs this.width,
-      @optionalTypeArgs this.positionCode,
-      @required this.str,
-      Key key})
+      {required this.pageTo,
+      required this.backImg,
+      this.title,
+      this.top,
+      this.left,
+      this.fontsize,
+      this.length,
+      this.width,
+      this.positionCode,
+      required this.str,
+      Key? key})
       : super(key: key);
   final Widget pageTo;
   final String backImg;
-  final String title;
-  final double fontsize;
-  final double top;
-  final double left;
-  final double width;
-  final double length;
-  final String positionCode;
+  final String? title;
+  final double? fontsize;
+  final double? top;
+  final double? left;
+  final double? width;
+  final double? length;
+  final String? positionCode;
   final bool str;
 
   @override
@@ -31,8 +31,8 @@ class IntroButtonMode extends StatefulWidget {
 }
 
 class _IntroButtonModeState extends State<IntroButtonMode> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   // (page1(),page2(),page3(),page4()) //
 
   @override
@@ -58,8 +58,8 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
     };
     return widget.str != false
         ? Positioned(
-            left: position[widget.positionCode][0] ?? widget.top,
-            top: position[widget.positionCode][1] ?? widget.left,
+            left: position[widget.positionCode]![0] ?? widget.top,
+            top: position[widget.positionCode]![1] ?? widget.left,
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -74,11 +74,11 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                 alignment: Alignment.center,
                 constraints: BoxConstraints.expand(
                     width: widget.width ?? _screenWidth / 2.7,
-                    height: position[widget.positionCode][2] ??
+                    height: position[widget.positionCode]![2] ??
                         widget.length ??
                         _screenH / 2.8),
                 child: Text(
-                  widget.title,
+                  widget.title!,
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: widget.fontsize ?? _screenH / 35,
@@ -88,7 +88,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(25),
-                    border: Border.all(width: 5, color: Colors.grey[600]),
+                    border: Border.all(width: 5, color: Colors.grey.shade600),
                     image: DecorationImage(
                         colorFilter: new ColorFilter.mode(
                             Colors.black.withOpacity(0.5), BlendMode.dstATop),
@@ -113,7 +113,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
                     width: _screenWidth / 2.7, height: _screenH / 2.8),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(width: 6, color: Colors.grey[200]),
+                    border: Border.all(width: 6, color: Colors.grey.shade200),
                     image: DecorationImage(
                         colorFilter: new ColorFilter.mode(
                             Colors.white.withOpacity(0.6), BlendMode.dstATop),

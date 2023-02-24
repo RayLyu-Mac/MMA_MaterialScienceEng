@@ -14,14 +14,14 @@ import 'package:mma_mse/wholeQR.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class layout_overview extends StatefulWidget {
-  layout_overview({Key key}) : super(key: key);
+  layout_overview({Key? key}) : super(key: key);
 
   @override
   _layout_overviewState createState() => _layout_overviewState();
 }
 
 class _layout_overviewState extends State<layout_overview> {
-  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
   @override
   void initState() {
     super.initState();
@@ -30,13 +30,13 @@ class _layout_overviewState extends State<layout_overview> {
     var android = AndroidInitializationSettings('@mipmap/ic_launcher');
     var initialSet = InitializationSettings(android: android);
     flutterLocalNotificationsPlugin.initialize(initialSet,
-        onSelectNotification: onSelectN);
+        onSelectNotification: onSelectN());
 
     showNote();
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   final random = Random();
 

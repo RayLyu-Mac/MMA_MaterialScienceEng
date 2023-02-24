@@ -8,7 +8,7 @@ import 'package:intl/intl.dart';
 class user_note extends StatefulWidget {
   final String loc;
   final Color themem_color;
-  const user_note({@required this.loc, @required this.themem_color, Key key})
+  const user_note({required this.loc, required this.themem_color, Key? key})
       : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class user_note extends StatefulWidget {
 class _user_noteState extends State<user_note> {
   TextEditingController keyInputController = new TextEditingController();
   int _counter = 0;
-  List notes = List();
+  List notes = [];
 
   File jsonFile;
   Directory dir;

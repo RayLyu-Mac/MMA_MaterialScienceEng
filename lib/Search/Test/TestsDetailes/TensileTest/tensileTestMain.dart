@@ -4,9 +4,10 @@ import 'tensileTestData.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/customTile.dart';
 import 'testResult.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class TensileTest extends StatefulWidget {
-  TensileTest({Key key}) : super(key: key);
+  TensileTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -14,9 +15,9 @@ class TensileTest extends StatefulWidget {
 }
 
 class _TensileTestState extends State<TensileTest> {
-  double _screenWidt;
-  double _screenH;
-  List<testdetailData> testBGdetail = testdetailData().detailL();
+  double _screenWidt = 0;
+  double _screenH = 0;
+  List<testdetailData> testBGdetail = tensile;
   List<Widget> pages = [];
   List listtile = [];
   @override
@@ -36,12 +37,12 @@ class _TensileTestState extends State<TensileTest> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg,
-        pageTo: testBGdetail[j].pageTo,
-        height: testBGdetail[j].height,
-        length: testBGdetail[j].top,
-        width: testBGdetail[j].width,
-        left: testBGdetail[j].left,
+        addOnImg: testBGdetail[j].addOnImg!,
+        pageTo: testBGdetail[j].pageTo!,
+        height: testBGdetail[j].height!,
+        length: testBGdetail[j].top!,
+        width: testBGdetail[j].width!,
+        left: testBGdetail[j].left!,
       ));
     }
     pages.add(tensileTResult());
