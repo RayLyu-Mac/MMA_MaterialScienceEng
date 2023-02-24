@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class SiCFurnaceInstr extends StatefulWidget {
-  final video videoType;
-  const SiCFurnaceInstr({Key key, this.videoType}) : super(key: key);
+  const SiCFurnaceInstr({Key? key}) : super(key: key);
 
   @override
   _SiCFurnaceInstrState createState() => _SiCFurnaceInstrState();
 }
 
 class _SiCFurnaceInstrState extends State<SiCFurnaceInstr> {
-  List _instructionList = List<video>();
+  List _instructionList = sicFData;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

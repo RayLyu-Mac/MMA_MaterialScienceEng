@@ -6,15 +6,14 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class PCutterinstruction extends StatefulWidget {
-  final video videoType;
-  const PCutterinstruction({Key key, this.videoType}) : super(key: key);
+  const PCutterinstruction({Key? key}) : super(key: key);
 
   @override
   _PCutterinstructionState createState() => _PCutterinstructionState();
 }
 
 class _PCutterinstructionState extends State<PCutterinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = precCutter;
 
   final ScrollController controller = ScrollController();
   List titles = [];
@@ -22,7 +21,6 @@ class _PCutterinstructionState extends State<PCutterinstruction> {
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

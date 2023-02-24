@@ -4,15 +4,14 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BulkAbraCutterInstru extends StatefulWidget {
-  final video videoType;
-  const BulkAbraCutterInstru({Key key, this.videoType}) : super(key: key);
+  const BulkAbraCutterInstru({Key? key}) : super(key: key);
 
   @override
   _BulkAbraCutterInstruState createState() => _BulkAbraCutterInstruState();
 }
 
 class _BulkAbraCutterInstruState extends State<BulkAbraCutterInstru> {
-  List _instructionList = List<video>();
+  List _instructionList = abraCutter;
 
   final ScrollController controller = ScrollController();
   List titles = [];
@@ -20,7 +19,6 @@ class _BulkAbraCutterInstruState extends State<BulkAbraCutterInstru> {
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
