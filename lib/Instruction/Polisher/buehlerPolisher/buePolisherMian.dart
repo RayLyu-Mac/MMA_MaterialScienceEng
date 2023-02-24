@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BehPolisherInstru extends StatefulWidget {
-  const BehPolisherInstru({Key? key, this.videoType}) : super(key: key);
+  const BehPolisherInstru({Key? key}) : super(key: key);
 
   @override
   _BehPolisherInstruState createState() => _BehPolisherInstruState();

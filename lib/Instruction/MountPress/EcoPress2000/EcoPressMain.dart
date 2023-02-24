@@ -6,22 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class EcoPressinstruction extends StatefulWidget {
-  final video videoType;
-  const EcoPressinstruction({Key key, this.videoType}) : super(key: key);
+  const EcoPressinstruction({Key? key}) : super(key: key);
 
   @override
   _EcoPressinstructionState createState() => _EcoPressinstructionState();
 }
 
 class _EcoPressinstructionState extends State<EcoPressinstruction> {
-  List _instructionList = List<video>();
+  List _instructionList = EcoPress;
 
   final ScrollController controller = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

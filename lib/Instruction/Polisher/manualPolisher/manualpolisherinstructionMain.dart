@@ -8,9 +8,7 @@ import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 // ignore: camel_case_types
 class manual_polisher_instruction extends StatefulWidget {
-  final video videoType;
-  const manual_polisher_instruction({Key key, this.videoType})
-      : super(key: key);
+  const manual_polisher_instruction({Key? key}) : super(key: key);
 
   @override
   _manual_polisher_instructionState createState() =>
@@ -19,13 +17,12 @@ class manual_polisher_instruction extends StatefulWidget {
 
 class _manual_polisher_instructionState
     extends State<manual_polisher_instruction> {
-  List _instructionList = List<video>();
+  List _instructionList = manualPoli;
 
   final ScrollController controller = ScrollController();
   @override
   void initState() {
     super.initState();
-    _instructionList = video().videoList();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
