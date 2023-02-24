@@ -7,22 +7,22 @@ import 'package:mma_mse/Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class roomHorizontal extends StatefulWidget {
-  final String emailTo;
-  final String location;
-  final Widget pageTo;
+  final String? emailTo;
+  final String? location;
+  final Widget? pageTo;
   final String roomName;
-  final String roomTi;
+  final String? roomTi;
   final String roomCont;
   final String roomImg;
   roomHorizontal(
       {@optionalTypeArgs this.emailTo,
-      @required this.roomName,
+      required this.roomName,
       @optionalTypeArgs this.roomTi,
       @optionalTypeArgs this.pageTo,
-      @required this.roomCont,
+      required this.roomCont,
       @optionalTypeArgs this.location,
-      @required this.roomImg,
-      Key key})
+      required this.roomImg,
+      Key? key})
       : super(key: key);
 
   @override
@@ -30,8 +30,8 @@ class roomHorizontal extends StatefulWidget {
 }
 
 class _roomHorizontalState extends State<roomHorizontal> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
 
   @override
@@ -58,7 +58,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.roomTi),
+        title: Text(widget.roomTi!),
         backgroundColor: Colors.black,
         actions: [
           IconButton(
@@ -83,7 +83,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
                     width: _screenWidth / 1.04, height: _screenH / 2.25),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(width: 4, color: Colors.grey[300]),
+                    border: Border.all(width: 4, color: Colors.grey.shade300),
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(widget.roomImg))),
@@ -139,8 +139,8 @@ class _roomHorizontalState extends State<roomHorizontal> {
                           width: _screenWidth / 2.2,
                           buttonName: "Manager",
                           pageTo: EmailContent(
-                            emailTo: widget.emailTo != null
-                                ? widget.emailTo
+                            emailTo: widget.emailTo! != null
+                                ? widget.emailTo!
                                 : "Please enter the email",
                             locationOfEqup: widget.location != null
                                 ? widget.location

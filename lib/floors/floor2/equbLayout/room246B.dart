@@ -5,16 +5,16 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/Hardness/manualMicroHardness/manualMHMain.dart';
 
 class room246BLayO extends StatefulWidget {
-  room246BLayO({Key key}) : super(key: key);
+  room246BLayO({Key? key}) : super(key: key);
 
   @override
   _room246BLayOState createState() => _room246BLayOState();
 }
 
 class _room246BLayOState extends State<room246BLayO> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

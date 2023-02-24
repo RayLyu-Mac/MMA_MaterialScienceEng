@@ -6,15 +6,15 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room241 extends StatefulWidget {
-  room241({Key key}) : super(key: key);
+  room241({Key? key}) : super(key: key);
 
   @override
   _room241State createState() => _room241State();
 }
 
 class _room241State extends State<room241> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {

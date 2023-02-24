@@ -5,16 +5,16 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 
 class room242LayO extends StatefulWidget {
-  room242LayO({Key key}) : super(key: key);
+  room242LayO({Key? key}) : super(key: key);
 
   @override
   _room242LayOState createState() => _room242LayOState();
 }
 
 class _room242LayOState extends State<room242LayO> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

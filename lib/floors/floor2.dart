@@ -22,16 +22,16 @@ import 'floor2/roomMain/241.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class floor2 extends StatefulWidget {
-  final bool safty;
-  final bool eye;
-  final bool fire;
-  final bool visitFromOhter;
+  final bool? safty;
+  final bool? eye;
+  final bool? fire;
+  final bool? visitFromOhter;
   floor2(
       {@optionalTypeArgs this.eye,
       @optionalTypeArgs this.safty,
       @optionalTypeArgs this.fire,
       @optionalTypeArgs this.visitFromOhter,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -39,8 +39,8 @@ class floor2 extends StatefulWidget {
 }
 
 class _floor2State extends State<floor2> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   double saftyI = -1;
 
@@ -49,7 +49,8 @@ class _floor2State extends State<floor2> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -76,7 +77,7 @@ class _floor2State extends State<floor2> {
       adjust = 0.9;
     }
     return Scaffold(
-      backgroundColor: Colors.grey[200].withOpacity(0.9),
+      backgroundColor: Colors.grey.shade200.withOpacity(0.9),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -106,13 +107,13 @@ class _floor2State extends State<floor2> {
       drawer: standardDrawer(header: "JHE Floor II"),
       body: Stack(
         children: [
-          widget.eye || saftyI > 0
+          widget.eye! || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 10,
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.greenAccent[100].withOpacity(0.8),
+                  backC: Colors.greenAccent.shade100.withOpacity(0.8),
                   detailTitle: "Exit",
                   details: "Emergency Exit for JHE Floor II",
                   icon: Icons.exit_to_app_rounded,
@@ -122,14 +123,14 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.grey[800],
+                  backC: Colors.grey.shade800,
                   name: "Stairs"),
           roomButton(
               left: _screenWidth / 10,
               top: _screenH / 9,
               length: _screenH / 6,
               width: _screenWidth / 3,
-              backC: Colors.grey[800],
+              backC: Colors.grey.shade800,
               name: "243"),
           roomButton(
               left: _screenWidth / 10,
@@ -151,7 +152,7 @@ class _floor2State extends State<floor2> {
               titleIcon: FontAwesomeIcons.microscope,
               pageTo: room241Main(),
               name: "241"),
-          widget.eye || saftyI > 0
+          widget.eye! || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 13,
                   top: _screenH / 2.05,
@@ -163,7 +164,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           detailTitle: "Room 240: Eye shower",
                           pageTo: room240LayO(
@@ -182,7 +183,7 @@ class _floor2State extends State<floor2> {
                             eye: true,
                           ),
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.shower_rounded,
                         )
                       ],
@@ -213,7 +214,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.3,
               length: _screenH / 12,
               width: _screenWidth / 3,
-              backC: Colors.grey[800],
+              backC: Colors.grey.shade800,
               titleIcon: FontAwesomeIcons.briefcase,
               name: "238"),
           roomButton(
@@ -238,14 +239,14 @@ class _floor2State extends State<floor2> {
                     "1. Safety glasses\n2. Thermal gloves\n3. Tongs to handle hot samples\n4. Closed toe shoes with socks\n5. Long pants(No shorts)\n6. Face shield\n7. Aluminized hear resistant jacket",
               ),
               name: "244"),
-          widget.fire || saftyI > 0
+          widget.fire! || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 2.05,
                   top: _screenH / 30,
                   length: _screenH / 13,
                   width: _screenWidth / 8.5,
                   icon: Icons.fire_extinguisher,
-                  backC: Colors.redAccent[100],
+                  backC: Colors.redAccent.shade100,
                   details: "Emergency for fire situation",
                   detailTitle: "Fire Extinguisher",
                 )
@@ -253,13 +254,13 @@ class _floor2State extends State<floor2> {
                   left: _screenWidth / 1.94,
                   top: _screenH / 35,
                   child: Container()),
-          widget.fire || saftyI > 0
+          widget.fire! || saftyI > 0
               ? roomButton(
                   detailTitle: "Fire Extinguisher",
                   details: "Emergency for fire situation",
                   left: _screenWidth / 2.05,
                   top: _screenH / 6.2,
-                  backC: Colors.redAccent[100],
+                  backC: Colors.redAccent.shade100,
                   length: _screenH / 13,
                   width: _screenWidth / 8.5,
                   icon: Icons.fire_extinguisher,
@@ -280,7 +281,7 @@ class _floor2State extends State<floor2> {
                     "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens",
               ),
               name: "245"),
-          widget.eye || saftyI > 0
+          widget.eye! || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 1.72,
                   top: _screenH / 3.75,
@@ -292,7 +293,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           pageTo: room246AMain(),
                           detailTitle: "Room 246A: Eye shower",
@@ -304,7 +305,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.shower_rounded,
                           pageTo: room246AMain(),
                           detailTitle: "Room 246A: Chemical Shower",
@@ -338,7 +339,7 @@ class _floor2State extends State<floor2> {
               top: _screenH / 1.92,
               length: _screenH / 9,
               width: _screenWidth / 3,
-              backC: Colors.grey[800],
+              backC: Colors.grey.shade800,
               name: "247"),
           saftyI > 0
               ? Positioned(
@@ -357,7 +358,8 @@ class _floor2State extends State<floor2> {
                               roomButton(
                                 length: _screenH / 10,
                                 width: _screenWidth / 6,
-                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                backC:
+                                    Colors.redAccent.shade100.withOpacity(0.8),
                                 icon: FontAwesomeIcons.firstAid,
                                 detailTitle: "Room 248: First Aid Kit",
                                 details: "QRS kit for any emergency",
@@ -368,7 +370,8 @@ class _floor2State extends State<floor2> {
                               roomButton(
                                 length: _screenH / 10,
                                 width: _screenWidth / 6,
-                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                backC:
+                                    Colors.redAccent.shade100.withOpacity(0.8),
                                 icon: FontAwesomeIcons.burn,
                                 detailTitle: "Room 248: Burn Kit",
                                 details: "QRS for burning situation",
@@ -387,7 +390,8 @@ class _floor2State extends State<floor2> {
                                 length: _screenH / 4.5,
                                 width: _screenWidth / 5,
                                 fontsize: 22,
-                                backC: Colors.redAccent[100].withOpacity(0.8),
+                                backC:
+                                    Colors.redAccent.shade100.withOpacity(0.8),
                                 detailsFontS: 16,
                                 detailsTiFontS: 25,
                                 detailTitle: "Equipment Manager Contact Info",
@@ -404,7 +408,7 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 1.55,
                   length: _screenH / 4.7,
                   width: _screenWidth / 3,
-                  backC: Colors.grey[800],
+                  backC: Colors.grey.shade800,
                   name: "248"),
           Positioned(
               top: _screenH / 1.23,
@@ -434,7 +438,7 @@ class _floor2State extends State<floor2> {
 
   Future scanQR() async {
     await Permission.camera.request();
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

@@ -14,16 +14,16 @@ import 'package:permission_handler/permission_handler.dart';
 class floor3 extends StatefulWidget {
   final bool eye;
 
-  floor3({@required this.eye, Key key}) : super(key: key);
+  floor3({required this.eye, Key? key}) : super(key: key);
 
   @override
   _floor3State createState() => _floor3State();
 }
 
 class _floor3State extends State<floor3> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   double saftyI = -1;
 
   @override
@@ -58,7 +58,7 @@ class _floor3State extends State<floor3> {
       adjust = 0.9;
     }
     return Scaffold(
-      backgroundColor: Colors.grey[200].withOpacity(0.9),
+      backgroundColor: Colors.grey.shade200.withOpacity(0.9),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -94,7 +94,7 @@ class _floor3State extends State<floor3> {
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.greenAccent[100].withOpacity(0.8),
+                  backC: Colors.greenAccent.shade100.withOpacity(0.8),
                   detailTitle: "Exit",
                   details: "Emergency Exit for JHE Floor II",
                   icon: Icons.exit_to_app_rounded,
@@ -215,12 +215,13 @@ class _floor3State extends State<floor3> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   Future scanQR() async {
     await Permission.camera.request();
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

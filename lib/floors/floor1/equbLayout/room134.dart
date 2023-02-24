@@ -7,15 +7,15 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:mma_mse/equipment/LlyoldTensile/LlyoldMain.dart';
 
 class room134LayO extends StatefulWidget {
-  room134LayO({Key key}) : super(key: key);
+  room134LayO({Key? key}) : super(key: key);
 
   @override
   _room134LayOState createState() => _room134LayOState();
 }
 
 class _room134LayOState extends State<room134LayO> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void initState() {

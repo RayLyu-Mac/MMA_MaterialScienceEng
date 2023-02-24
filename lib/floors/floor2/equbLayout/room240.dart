@@ -4,15 +4,16 @@ import 'package:flutter/services.dart';
 
 class room240LayO extends StatefulWidget {
   final bool eye;
-  room240LayO({@optionalTypeArgs this.eye, Key key}) : super(key: key);
+  room240LayO({@optionalTypeArgs required this.eye, Key? key})
+      : super(key: key);
 
   @override
   _room240LayOState createState() => _room240LayOState();
 }
 
 class _room240LayOState extends State<room240LayO> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -68,7 +69,7 @@ class _room240LayOState extends State<room240LayO> {
                         roomButton(
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           detailTitle: "Room 240: Eye shower",
                           details: "Emergency eye shower when chemical spills",
@@ -81,7 +82,7 @@ class _room240LayOState extends State<room240LayO> {
                           details: "Emergency body shower when chemical spills",
                           length: _screenH / 12,
                           width: _screenWidth / 6,
-                          backC: Colors.redAccent[100].withOpacity(0.8),
+                          backC: Colors.redAccent.shade100.withOpacity(0.8),
                           icon: Icons.shower_rounded,
                         )
                       ],

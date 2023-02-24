@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 class floationPanel extends StatefulWidget {
   final List<dynamic> buttonP;
   final List<IconData> button;
-  final IconData panelIcon;
-  final int animationTime;
+  final IconData? panelIcon;
+  final int? animationTime;
 
   floationPanel(
-      {@required this.button,
-      @required this.buttonP,
+      {required this.button,
+      required this.buttonP,
       @optionalTypeArgs this.animationTime,
       @optionalTypeArgs this.panelIcon,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override

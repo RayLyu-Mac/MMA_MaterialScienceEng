@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor2/equbLayout/room245.dart';
 
 class room245Main extends StatefulWidget {
-  final String emailTo;
-  final String location;
-  final Widget pageTo;
+  final String? emailTo;
+  final String? location;
+  final Widget? pageTo;
   room245Main(
       {@optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.location,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -18,9 +18,9 @@ class room245Main extends StatefulWidget {
 }
 
 class _room245MainState extends State<room245Main> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

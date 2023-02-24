@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor2/equbLayout/room239.dart';
 
 class room239Main extends StatefulWidget {
-  room239Main({Key key}) : super(key: key);
+  room239Main({Key? key}) : super(key: key);
 
   @override
   _room239MainState createState() => _room239MainState();

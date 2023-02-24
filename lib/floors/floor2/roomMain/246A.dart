@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor2/equbLayout/room246B.dart';
 
 class room246AMain extends StatefulWidget {
-  room246AMain({Key key}) : super(key: key);
+  room246AMain({Key? key}) : super(key: key);
 
   @override
   _room246AMainState createState() => _room246AMainState();

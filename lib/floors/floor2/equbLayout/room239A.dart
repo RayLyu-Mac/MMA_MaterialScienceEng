@@ -4,16 +4,16 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room239A extends StatefulWidget {
-  room239A({Key key}) : super(key: key);
+  room239A({Key? key}) : super(key: key);
 
   @override
   _room239AState createState() => _room239AState();
 }
 
 class _room239AState extends State<room239A> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;

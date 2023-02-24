@@ -4,14 +4,14 @@ import 'package:mma_mse/floors/floor2/equbLayout/room245.dart';
 import 'equbLayout/room134.dart';
 
 class mech_lab extends StatefulWidget {
-  final String emailTo;
-  final String location;
-  final Widget pageTo;
+  final String? emailTo;
+  final String? location;
+  final Widget? pageTo;
   mech_lab(
       {@optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.location,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -19,9 +19,9 @@ class mech_lab extends StatefulWidget {
 }
 
 class _mech_labState extends State<mech_lab> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {

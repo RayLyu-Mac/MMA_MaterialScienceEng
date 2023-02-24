@@ -6,8 +6,8 @@ import 'package:mma_mse/Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class roomMode extends StatefulWidget {
-  final String emailTo;
-  final String location;
+  final String? emailTo;
+  final String? location;
   final String roomName;
   final String roomTi;
   final String roomCont;
@@ -15,13 +15,13 @@ class roomMode extends StatefulWidget {
   final String roomImg;
   roomMode(
       {@optionalTypeArgs this.emailTo,
-      @required this.roomName,
-      @required this.roomTi,
-      @required this.roomLayO,
-      @required this.roomCont,
+      required this.roomName,
+      required this.roomTi,
+      required this.roomLayO,
+      required this.roomCont,
       @optionalTypeArgs this.location,
-      @required this.roomImg,
-      Key key})
+      required this.roomImg,
+      Key? key})
       : super(key: key);
 
   @override
@@ -29,8 +29,8 @@ class roomMode extends StatefulWidget {
 }
 
 class _roomModeState extends State<roomMode> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
 
   @override
@@ -76,7 +76,7 @@ class _roomModeState extends State<roomMode> {
                     width: _screenWidth / 2.1, height: _screenH / 1.9),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(width: 4, color: Colors.grey[300]),
+                    border: Border.all(width: 4, color: Colors.grey.shade300),
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(widget.roomImg))),
@@ -112,8 +112,8 @@ class _roomModeState extends State<roomMode> {
               left: _screenWidth / 10,
               child: fancyBut(
                   pageTo: EmailContent(
-                    emailTo: widget.emailTo != null
-                        ? widget.emailTo
+                    emailTo: widget.emailTo! != null
+                        ? widget.emailTo!
                         : "Please enter the email",
                     locationOfEqup:
                         widget.location != null ? widget.location : "NUll",

@@ -13,14 +13,14 @@ import 'package:mma_mse/Drawer.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class floor1 extends StatefulWidget {
-  final bool fire;
-  final bool eye;
-  final bool visitFromOhter;
+  final bool? fire;
+  final bool? eye;
+  final bool? visitFromOhter;
   floor1(
       {@optionalTypeArgs this.fire,
       @optionalTypeArgs this.eye,
       @optionalTypeArgs this.visitFromOhter,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -28,18 +28,12 @@ class floor1 extends StatefulWidget {
 }
 
 class _floor1State extends State<floor1> {
-  @override
-  void initState() {
-    createList();
-    super.initState();
-  }
-
   String qr_result = "";
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double tra = 0.002;
   double adjust = 1;
-  int nu;
+  int nu = 0;
   double saftyI = -1;
   double rwidth = 5;
 
@@ -48,7 +42,8 @@ class _floor1State extends State<floor1> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -66,7 +61,7 @@ class _floor1State extends State<floor1> {
       adjust = 0.9;
     }
     return Scaffold(
-        backgroundColor: Colors.grey[200].withOpacity(0.9),
+        backgroundColor: Colors.grey.shade200.withOpacity(0.9),
         appBar: AppBar(
           actions: [
             IconButton(
@@ -100,7 +95,7 @@ class _floor1State extends State<floor1> {
                 top: _screenH / 40,
                 left: _screenWidth / 30,
                 length: _screenWidth / 8,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade700,
                 width: _screenH / rwidth,
                 name: "Stair"),
             roomButton(
@@ -108,9 +103,9 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 30,
                 length: _screenWidth / 3,
                 width: _screenH / rwidth,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade700,
                 name: "130"),
-            widget.eye || saftyI > 0
+            widget.eye! || saftyI > 0
                 ? Positioned(
                     top: _screenH / 2.9,
                     left: _screenWidth / 35,
@@ -122,7 +117,7 @@ class _floor1State extends State<floor1> {
                           roomButton(
                             length: _screenH / 9,
                             width: _screenWidth / 5.5,
-                            backC: Colors.redAccent[100].withOpacity(0.8),
+                            backC: Colors.redAccent.shade100.withOpacity(0.8),
                             icon: Icons.remove_red_eye_rounded,
                             detailTitle: "Room 129: Eye shower",
                             pageTo: room129(),
@@ -139,7 +134,7 @@ class _floor1State extends State<floor1> {
                             length: _screenH / 9,
                             pageTo: room129(),
                             width: _screenWidth / 5.5,
-                            backC: Colors.redAccent[100].withOpacity(0.8),
+                            backC: Colors.redAccent.shade100.withOpacity(0.8),
                             icon: Icons.shower_rounded,
                           )
                         ],
@@ -162,9 +157,9 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 30,
                 length: _screenWidth / 3.5,
                 width: _screenH / rwidth,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade700,
                 name: "128"),
-            widget.fire || saftyI > 0
+            widget.fire! || saftyI > 0
                 ? roomButton(
                     detailTitle: "Fire Extinguisher",
                     details: "Emergency for fire situation",
@@ -172,7 +167,7 @@ class _floor1State extends State<floor1> {
                     top: _screenH / 8,
                     length: _screenH / 13,
                     width: _screenWidth / 8.5,
-                    backC: Colors.redAccent[100],
+                    backC: Colors.redAccent.shade100,
                     icon: Icons.fire_extinguisher,
                   )
                 : Positioned(
@@ -183,21 +178,21 @@ class _floor1State extends State<floor1> {
                 top: _screenH / 1.43,
                 left: _screenWidth / 30,
                 length: _screenWidth / 5,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 width: _screenH / rwidth,
                 name: "127"),
             roomButton(
                 top: _screenH / 40,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 width: _screenH / rwidth,
                 name: "131"),
             roomButton(
                 top: _screenH / 8.2,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 7,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 width: _screenH / rwidth,
                 name: "132"),
             roomButton(
@@ -205,7 +200,7 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
                 width: _screenH / rwidth,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 name: "133"),
             roomButton(
                 top: _screenH / 2.88,
@@ -224,13 +219,13 @@ class _floor1State extends State<floor1> {
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 5,
                 width: _screenH / rwidth,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 name: "135"),
             roomButton(
                 top: _screenH / 1.38,
                 left: _screenWidth / 1.8,
                 length: _screenWidth / 6,
-                backC: Colors.grey[800],
+                backC: Colors.grey.shade800,
                 width: _screenH / rwidth,
                 name: "135A"),
             Positioned(
@@ -261,7 +256,7 @@ class _floor1State extends State<floor1> {
 
   Future scanQR() async {
     await Permission.camera.request();
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });
@@ -270,20 +265,20 @@ class _floor1State extends State<floor1> {
 
 class floor1customListTile extends StatelessWidget {
   const floor1customListTile(
-      {@required this.name,
+      {required this.name,
       @optionalTypeArgs this.pageTo,
-      @required this.fonts,
+      required this.fonts,
       @optionalTypeArgs this.leadIcon,
       @optionalTypeArgs this.backC,
       @optionalTypeArgs this.web,
       key})
       : super(key: key);
   final String name;
-  final Color backC;
-  final Widget pageTo;
+  final Color? backC;
+  final Widget? pageTo;
   final double fonts;
-  final IconData leadIcon;
-  final Function web;
+  final IconData? leadIcon;
+  final Function? web;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -292,19 +287,17 @@ class floor1customListTile extends StatelessWidget {
           height: 45,
           decoration: BoxDecoration(
               color: backC ?? Colors.grey[100],
-              border: Border(top: BorderSide(color: Colors.grey[100]))),
+              border: Border(top: BorderSide(color: Colors.grey.shade100))),
           child: InkWell(
             splashColor: Colors.blue[100],
-            onTap: web != null
-                ? web
-                : () => {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              duration: const Duration(milliseconds: 500),
-                              child: pageTo,
-                              type: PageTransitionType.leftToRight))
-                    },
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      duration: const Duration(milliseconds: 500),
+                      child: pageTo!,
+                      type: PageTransitionType.leftToRight))
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
