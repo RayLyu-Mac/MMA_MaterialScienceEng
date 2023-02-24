@@ -5,21 +5,15 @@ import 'BcutterData.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BuehlerCutterInstru extends StatefulWidget {
-  final video videoType;
-  const BuehlerCutterInstru({Key key, this.videoType}) : super(key: key);
+  const BuehlerCutterInstru({Key? key}) : super(key: key);
 
   @override
   _BuehlerCutterInstruState createState() => _BuehlerCutterInstruState();
 }
 
 class _BuehlerCutterInstruState extends State<BuehlerCutterInstru> {
-  List _instructionList = List<video>();
+  List _instructionList = bueCutterData;
   final ScrollController controller = ScrollController();
-
-  void initState() {
-    super.initState();
-    _instructionList = video().videoList();
-  }
 
   @override
   Widget build(BuildContext context) {

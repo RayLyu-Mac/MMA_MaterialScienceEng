@@ -100,52 +100,50 @@ class _InstructionModeState extends State<InstructionMode> {
           child: Column(children: [
             for (var index = 0; index < widget.instructionList.length; index++)
               widget.instructionList[index].type != "tit"
-                  ? GestureDetector(
-                      child: Card(
-                        color: widget.instructionList[index].materialcolor
-                            .withOpacity(0.85),
-                        margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                        elevation: 5,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0)),
-                        clipBehavior: Clip.antiAlias,
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 245,
-                              width: double.infinity,
-                              child: YoutubePlayer(
-                                controller: widget
-                                    .instructionList[index].videoController,
-                                liveUIColor: Colors.amber,
-                              ),
+                  ? Card(
+                      color: widget.instructionList[index].materialcolor
+                          .withOpacity(0.85),
+                      margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0)),
+                      clipBehavior: Clip.antiAlias,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 245,
+                            width: double.infinity,
+                            child: YoutubePlayer(
+                              controller:
+                                  widget.instructionList[index].videoController,
+                              liveUIColor: Colors.amber,
                             ),
-                            SizedBox(
-                              height: _screenH / 70,
-                            ),
-                            Text(
-                              widget.instructionList[index].title,
+                          ),
+                          SizedBox(
+                            height: _screenH / 70,
+                          ),
+                          Text(
+                            widget.instructionList[index].title,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: _screenW / 22.5,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Container(
+                            padding:
+                                EdgeInsets.symmetric(horizontal: _screenW / 30),
+                            child: Text(
+                              widget.instructionList[index].subtitle,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: _screenW / 22.5,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: _screenW / 30),
-                              child: Text(
-                                widget.instructionList[index].subtitle,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: _screenW / 33,
-                                ),
+                                fontSize: _screenW / 33,
                               ),
                             ),
-                            SizedBox(
-                              height: _screenH / 65,
-                            ),
-                          ],
-                        ),
+                          ),
+                          SizedBox(
+                            height: _screenH / 65,
+                          ),
+                        ],
                       ),
                     )
                   : Container(

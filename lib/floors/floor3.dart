@@ -199,13 +199,6 @@ class _floor3State extends State<floor3> {
               length: _screenH / 14,
               width: _screenWidth / 3,
               name: "353"),
-          floationPanel(
-              button: [
-                Icons.search,
-                Icons.qr_code_scanner,
-              ],
-              animationTime: 550,
-              buttonP: [EqupSearch(), scanQR])
         ],
       ),
     );

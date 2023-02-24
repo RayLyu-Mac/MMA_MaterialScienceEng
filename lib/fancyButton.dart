@@ -42,12 +42,12 @@ class _fancyButState extends State<fancyBut> {
           },
           icon: Icon(
             widget.icon,
-            color: Colors.white,
+            color: Colors.black,
           ),
           label: Text(
             widget.buttonName,
             style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.w700,
                 fontSize: widget.fontsize ?? 14),
           )),

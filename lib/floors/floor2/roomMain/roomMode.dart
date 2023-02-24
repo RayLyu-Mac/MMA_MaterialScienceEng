@@ -6,20 +6,18 @@ import 'package:mma_mse/Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class roomMode extends StatefulWidget {
-  final String? emailTo;
-  final String? location;
+  final String location;
   final String roomName;
   final String roomTi;
   final String roomCont;
   final Widget roomLayO;
   final String roomImg;
   roomMode(
-      {@optionalTypeArgs this.emailTo,
-      required this.roomName,
+      {required this.roomName,
       required this.roomTi,
       required this.roomLayO,
       required this.roomCont,
-      @optionalTypeArgs this.location,
+      this.location = "Null",
       required this.roomImg,
       Key? key})
       : super(key: key);
@@ -29,6 +27,7 @@ class roomMode extends StatefulWidget {
 }
 
 class _roomModeState extends State<roomMode> {
+  String emailTo = "Null";
   double _screenWidth = 0;
   double _screenH = 0;
   double adjust = 1;
@@ -112,9 +111,8 @@ class _roomModeState extends State<roomMode> {
               left: _screenWidth / 10,
               child: fancyBut(
                   pageTo: EmailContent(
-                    emailTo: widget.emailTo! != null
-                        ? widget.emailTo!
-                        : "Please enter the email",
+                    emailTo:
+                        emailTo != null ? emailTo : "Please enter the email",
                     locationOfEqup:
                         widget.location != null ? widget.location : "NUll",
                     nameOfEqup: "Buehler Precision Cutter",

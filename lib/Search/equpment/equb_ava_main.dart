@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +18,7 @@ class equb_main extends StatefulWidget {
 class _equb_mainState extends State<equb_main> {
   late HeroType _heroType;
   double _screenWidth = 0;
-  List _heroTypeList = [];
-  double _screenWidthAdjustment = 0;
+
   List equipments = [];
   List code = [];
   String titleForCsv = '';
@@ -41,7 +39,7 @@ class _equb_mainState extends State<equb_main> {
     super.initState();
 
     for (var eq = 0; eq < equipmentList.length; eq++) {
-      equipments.add(_heroTypeList[eq].title);
+      equipments.add(equipmentList[eq].title);
     }
   }
 
@@ -296,11 +294,7 @@ class _equb_mainState extends State<equb_main> {
         title: DefaultTextStyle(
           style: const TextStyle(
               fontSize: 20.0, fontFamily: 'Horizon', color: Colors.white),
-          child: AnimatedTextKit(
-            animatedTexts: [WavyAnimatedText("Equipment Avaiable in MSE")],
-            isRepeatingAnimation: true,
-            totalRepeatCount: 4,
-          ),
+          child: Text("Equipment Avaiable in MSE"),
         ),
       ),
       drawer: searchEquipMain(),
@@ -308,7 +302,7 @@ class _equb_mainState extends State<equb_main> {
           child: ListView.builder(
               controller: controller,
               itemExtent: 305.0,
-              itemCount: _heroTypeList.length,
+              itemCount: equipmentList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
@@ -321,18 +315,18 @@ class _equb_mainState extends State<equb_main> {
                     child: Stack(
                       children: [
                         Hero(
-                            tag: 'background' + _heroTypeList[index].title,
+                            tag: 'background' + equipmentList[index].title,
                             child: Container(
-                              color: _heroTypeList[index].materialColor,
+                              color: equipmentList[index].materialColor,
                             )),
                         Positioned(
                           top: 0.0,
                           left: 0.0,
                           right: 0.0,
                           child: Hero(
-                            tag: 'image' + _heroTypeList[index].title,
+                            tag: 'image' + equipmentList[index].title,
                             child: Image.network(
-                              _heroTypeList[index].image,
+                              equipmentList[index].image,
                               fit: BoxFit.fitWidth,
                               height: 220,
                             ),
@@ -341,13 +335,13 @@ class _equb_mainState extends State<equb_main> {
                         Positioned(
                           top: 225.0,
                           left: 14.0,
-                          width: _screenWidthAdjustment,
+                          width: _screenWidth * 0.8,
                           child: Hero(
-                              tag: 'text' + _heroTypeList[index].title,
+                              tag: 'text' + equipmentList[index].title,
                               child: Material(
                                 color: Colors.transparent,
                                 child: Text(
-                                  '${_heroTypeList[index].title}',
+                                  '${equipmentList[index].title}',
                                   style: TextStyle(
                                     color: Colors.grey[800],
                                     fontSize: _screenWidth / 21,
@@ -359,13 +353,13 @@ class _equb_mainState extends State<equb_main> {
                         Positioned(
                             top: 253.0,
                             left: 14.0,
-                            width: _screenWidthAdjustment,
+                            width: _screenWidth * 0.8,
                             child: Hero(
-                                tag: 'subtitle' + _heroTypeList[index].title,
+                                tag: 'subtitle' + equipmentList[index].title,
                                 child: Material(
                                     color: Colors.transparent,
                                     child: Text(
-                                      _heroTypeList[index].subTitle,
+                                      equipmentList[index].subTitle,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           color: Colors.grey[800],
@@ -384,13 +378,13 @@ class _equb_mainState extends State<equb_main> {
                           Animation<double> secondaryAnimation) {
                         return equb_ava(
                             heroType: HeroType(
-                                title: _heroTypeList[index].title,
-                                subTitle: _heroTypeList[index].subTitle,
-                                fText: _heroTypeList[index].fText,
-                                image: _heroTypeList[index].image,
-                                pageTo: _heroTypeList[index].pageTo,
+                                title: equipmentList[index].title,
+                                subTitle: equipmentList[index].subTitle,
+                                fText: equipmentList[index].fText,
+                                image: equipmentList[index].image,
+                                pageTo: equipmentList[index].pageTo,
                                 materialColor:
-                                    _heroTypeList[index].materialColor));
+                                    equipmentList[index].materialColor));
                       },
                       transitionsBuilder: (BuildContext context,
                           Animation<double> animation,

@@ -13,7 +13,7 @@ class tensileTResult extends StatefulWidget {
 class _tensileTResultState extends State<tensileTResult> {
   double _screenWidth = 0;
   double _screenH = 0;
-  double adjust = 0;
+  double adjust = 1;
   List tiles = [];
   @override
   void didChangeDependencies() {
@@ -105,37 +105,27 @@ class _tensileTResultState extends State<tensileTResult> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                   clipBehavior: Clip.antiAlias,
-                  child: Stack(
+                  child: Column(
                     children: [
-                      Positioned(
-                        top: 7.0,
-                        left: 10.0,
-                        child: Text(
-                          result[index].title,
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
+                      Text(
+                        result[index].title,
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Image.network(
+                          result[index].addOnImg,
+                          fit: BoxFit.fitWidth,
+                          height: 225,
                         ),
                       ),
-                      Positioned(
-                          top: 30,
-                          left: 0,
-                          child: Container(
-                            width: double.infinity,
-                            child: Image.network(
-                              result[index].addOnImg,
-                              fit: BoxFit.fitWidth,
-                              height: 225,
-                            ),
-                          )),
-                      Positioned(
-                          top: 265,
-                          left: 5,
-                          child: Container(
-                              width: _screenWidth / 1.2,
-                              child: Text(
-                                result[index].content,
-                                style: TextStyle(fontSize: _screenH / 60),
-                              )))
+                      Container(
+                          width: _screenWidth / 1.2,
+                          child: Text(
+                            result[index].content,
+                            style: TextStyle(fontSize: _screenH / 60),
+                          ))
                     ],
                   ));
             }));

@@ -150,13 +150,6 @@ class _search_areaState extends State<search_area> {
                     fontsize: 16,
                     icon: FontAwesomeIcons.book,
                     buttonName: "Room in MSE")),
-            floationPanel(
-                button: [
-                  Icons.search,
-                  Icons.qr_code_scanner,
-                ],
-                animationTime: 550,
-                buttonP: [EqupSearch(), scanQR]),
           ],
         ),
       ),

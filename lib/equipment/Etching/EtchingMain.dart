@@ -6,10 +6,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'AcidSafty/AcidMain.dart';
 
 class Etching extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   Etching(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -23,7 +23,7 @@ class _EtchingState extends State<Etching> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "Etching",
-      backC: Colors.red[50],
+      backC: Colors.red.shade100,
       instruction: Etchinginstruction(),
       extraIcon: FontAwesomeIcons.flask,
       extraPage: AcidSafty(),

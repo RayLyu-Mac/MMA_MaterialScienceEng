@@ -243,13 +243,6 @@ class _floor1State extends State<floor1> {
                         child: Text("Swipe to see Floor II"),
                       )
                     : Container()),
-            floationPanel(
-                button: [
-                  Icons.search,
-                  Icons.qr_code_scanner,
-                ],
-                animationTime: 550,
-                buttonP: [EqupSearch(), scanQR])
           ],
         ));
   }

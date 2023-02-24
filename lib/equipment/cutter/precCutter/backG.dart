@@ -22,7 +22,7 @@ List img = [
 ];
 
 class precisionBlade extends StatefulWidget {
-  precisionBlade({Key key}) : super(key: key);
+  precisionBlade({Key? key}) : super(key: key);
 
   @override
   _precisionBladeState createState() => _precisionBladeState();

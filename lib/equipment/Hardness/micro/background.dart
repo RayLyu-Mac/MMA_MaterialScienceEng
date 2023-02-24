@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class auto_micro_HT_theory extends StatefulWidget {
-  auto_micro_HT_theory({Key key}) : super(key: key);
+  auto_micro_HT_theory({Key? key}) : super(key: key);
 
   @override
   _auto_micro_HT_theoryState createState() => _auto_micro_HT_theoryState();

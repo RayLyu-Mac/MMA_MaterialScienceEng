@@ -77,7 +77,7 @@ class _floor2State extends State<floor2> {
       adjust = 0.9;
     }
     return Scaffold(
-      backgroundColor: Colors.grey.shade200.withOpacity(0.9),
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -424,23 +424,16 @@ class _floor2State extends State<floor2> {
                       child: Text("Swipe to see Floor III"),
                     )
                   : Container()),
-          floationPanel(
-              button: [
-                Icons.search,
-                Icons.qr_code_scanner,
-              ],
-              animationTime: 550,
-              buttonP: [EqupSearch(), scanQR]),
         ],
       ),
     );
   }
 
-  Future scanQR() async {
-    await Permission.camera.request();
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // Future scanQR() async {
+  //   await Permission.camera.request();
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 }

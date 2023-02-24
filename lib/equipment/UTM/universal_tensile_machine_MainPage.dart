@@ -18,6 +18,8 @@ class _tensile_testState extends State<tensile_test> {
         title: "Universal Tensile Machine",
         warnNote:
             "\n•Safty Glass!  \n•Place the plastic shield \n•Make sure when placing a sample into the grips that only the person placing the sample into the grip is in control of the handset",
+        warnVido: "Null",
+        toolTip: "Null",
         instruction: utm_instruction(),
         backC: Colors.amber.shade100,
         fontSize: 47,

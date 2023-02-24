@@ -33,7 +33,7 @@ class EqubPageMode extends StatefulWidget {
   EqubPageMode(
       {Key? key,
       required this.title,
-      this.oritation,
+      this.oritation = true,
       this.fontSize,
       @optionalTypeArgs this.toolTip,
       @optionalTypeArgs this.extraIcon,
@@ -42,8 +42,8 @@ class EqubPageMode extends StatefulWidget {
       required this.backC,
       @optionalTypeArgs this.theory,
       required this.instruction,
-      @optionalTypeArgs this.warnNote,
-      @optionalTypeArgs this.warnVido,
+      @optionalTypeArgs this.warnNote = "None",
+      @optionalTypeArgs this.warnVido = "None",
       required this.img,
       required this.intro,
       @optionalTypeArgs this.emailTo,
@@ -149,7 +149,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 width: _screenWidth / 2.3,
                 child: SingleChildScrollView(
                     child: Text(
-                  widget.intro!,
+                  widget.intro ?? "None",
                   style: TextStyle(
                       fontSize:
                           _screenWidth * 2.3 / (widget.fontSize ?? 55 / adjust),
@@ -173,7 +173,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                         image: NetworkImage(widget.img), fit: BoxFit.cover),
                   )),
             ),
-            widget.warnNote != null
+            widget.warnNote != "None"
                 ? functionButtonMode(
                     top: _screenH / 1.33,
                     left: _screenWidth / 12,
@@ -196,18 +196,14 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 top: _screenH / 1.51,
                 left: _screenWidth / 2 + 16,
                 buttonName: widget.dash ?? "Theory",
-                pageTo:
-                    widget.theory! != null ? widget.theory! : workingInProg()),
+                pageTo: widget.theory ?? workingInProg()),
             functionButtonMode(
                 top: _screenH / 1.33,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(
-                  emailTo: widget.emailTo! != null
-                      ? widget.emailTo!
-                      : "Please enter the email",
-                  locationOfEqup:
-                      widget.location != null ? widget.location : "NUll",
+                  emailTo: widget.emailTo ?? "Please enter the email",
+                  locationOfEqup: widget.location ?? "NUll",
                   nameOfEqup: "Buehler Precision Cutter",
                 )),
             Positioned(
@@ -236,17 +232,6 @@ class _EqubPageModeState extends State<EqubPageMode> {
                         icon: Icon(FontAwesomeIcons.fileArchive))
                   ],
                 )),
-            floationPanel(
-                button: [Icons.search, Icons.qr_code_scanner, Icons.note_add],
-                animationTime: 550,
-                buttonP: [
-                  EqupSearch(),
-                  scanQR,
-                  user_note(
-                    loc: widget.location ?? "??",
-                    themem_color: Colors.red.shade100,
-                  )
-                ]),
           ],
         ),
       ),
