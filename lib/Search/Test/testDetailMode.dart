@@ -2,30 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class pageMode extends StatefulWidget {
-  final String content;
+  final String? content;
   final String back_img;
   final String title;
-  final String addOnImg;
-  final String docNumber;
-  final bool wholeImg;
-  final Widget pageTo;
-  final double height;
-  final double length;
-  final double width;
-  final double left;
+  final String? addOnImg;
+  final String? docNumber;
+  final bool? wholeImg;
+  final Widget? pageTo;
+  final double? height;
+  final double? length;
+  final double? width;
+  final double? left;
   pageMode(
-      {@required this.title,
+      {required this.title,
       @optionalTypeArgs this.wholeImg,
       @optionalTypeArgs this.height,
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.left,
-      @required this.back_img,
+      required this.back_img,
       @optionalTypeArgs this.width,
       @optionalTypeArgs this.content,
       @optionalTypeArgs this.docNumber,
       @optionalTypeArgs this.addOnImg,
       @optionalTypeArgs this.pageTo,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -33,8 +33,8 @@ class pageMode extends StatefulWidget {
 }
 
 class _pageModeState extends State<pageMode> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   @override
   void didChangeDependencies() {
@@ -99,7 +99,7 @@ class _pageModeState extends State<pageMode> {
                         height: _screenH / 35,
                       ),
                       Text(
-                        widget.content != null ? widget.content : "Error",
+                        widget.content != null ? widget.content! : "Error",
                         style: TextStyle(
                             fontSize: _screenH / 38,
                             color: Colors.black,
@@ -111,11 +111,11 @@ class _pageModeState extends State<pageMode> {
                       ),
                       imgAddOn(
                         screenH: _screenH,
-                        width: widget.width,
-                        length: widget.length,
+                        width: widget.width!,
+                        length: widget.length!,
                         screenW: _screenWidth,
-                        img: widget.addOnImg,
-                        pageTo: widget.pageTo,
+                        img: widget.addOnImg!,
+                        pageTo: widget.pageTo!,
                       )
                     ]))),
           ),
@@ -129,17 +129,17 @@ class imgAddOn extends StatelessWidget {
   final String img;
   final double screenW;
   final double screenH;
-  final Widget pageTo;
-  final double length;
-  final double width;
+  final Widget? pageTo;
+  final double? length;
+  final double? width;
   const imgAddOn(
-      {@required this.img,
+      {required this.img,
       @optionalTypeArgs this.width,
-      @required this.screenH,
+      required this.screenH,
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.pageTo,
-      @required this.screenW,
-      Key key})
+      required this.screenW,
+      Key? key})
       : super(key: key);
 
   @override
@@ -152,7 +152,7 @@ class imgAddOn extends StatelessWidget {
                   context,
                   PageTransition(
                       duration: Duration(milliseconds: 700),
-                      child: pageTo,
+                      child: pageTo!,
                       type: PageTransitionType.scale,
                       alignment: Alignment.topCenter));
             },

@@ -8,7 +8,7 @@ import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
 
 class EqupSearch extends StatefulWidget {
-  EqupSearch({Key key}) : super(key: key);
+  EqupSearch({Key? key}) : super(key: key);
 
   @override
   _EqupSearchState createState() => _EqupSearchState();
@@ -16,7 +16,7 @@ class EqupSearch extends StatefulWidget {
 
 class _EqupSearchState extends State<EqupSearch> {
   final TextEditingController _controller = new TextEditingController();
-  bool _isSearching;
+  bool _isSearching = false;
   String _searchText = "";
   List<List> property = [];
   List _list = [];
@@ -54,11 +54,8 @@ class _EqupSearchState extends State<EqupSearch> {
   void initState() {
     super.initState();
     _isSearching = false;
-    equipment = createList();
-    mseTest = createTestList();
-    tools = createToolList();
     safty = createSaftyList();
-    for (var equpN = 0; equpN < equipment.length; equpN++) {
+    for (var equpN = 0; equpN < test_data_list.length; equpN++) {
       List<dynamic> datatype = [];
       datatype.clear();
       datatype.add(equipment.values.toList()[equpN]);
@@ -67,22 +64,22 @@ class _EqupSearchState extends State<EqupSearch> {
       wholeSample.addAll({equipment.keys.toList()[equpN]: datatype});
     }
 
-    for (var mtest = 0; mtest < mseTest.length; mtest++) {
+    for (var mtest = 0; mtest < test_data_list.length; mtest++) {
       List<dynamic> datatype = [];
       datatype.clear();
-      datatype.add(mseTest.values.toList()[mtest]);
+      datatype.add(test_data_list[mtest].title);
       datatype.add(FontAwesomeIcons.fileContract);
-      datatype.add(Colors.lightBlueAccent[100]);
-      wholeSample.addAll({mseTest.keys.toList()[mtest]: datatype});
+      datatype.add(Colors.lightBlueAccent.shade100);
+      wholeSample.addAll({test_data_list[mtest].title: datatype});
     }
 
-    for (var mtool = 0; mtool < tools.length; mtool++) {
+    for (var mtool = 0; mtool < createToolList.length; mtool++) {
       List<dynamic> datatype = [];
       datatype.clear();
-      datatype.add(tools.values.toList()[mtool]);
+      datatype.add(createToolList[mtool].name);
       datatype.add(FontAwesomeIcons.tools);
-      datatype.add(Colors.blueGrey[100]);
-      wholeSample.addAll({tools.keys.toList()[mtool]: datatype});
+      datatype.add(createToolList[mtool].pageTo);
+      wholeSample.addAll({createToolList[mtool].name: datatype});
     }
 
     for (var sft = 0; sft < safty.length; sft++) {
@@ -96,8 +93,8 @@ class _EqupSearchState extends State<EqupSearch> {
     _list.addAll(wholeSample.keys.toList());
   }
 
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -110,7 +107,6 @@ class _EqupSearchState extends State<EqupSearch> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: buildAppBar(context),
         body: Column(children: [
           SizedBox(
             height: _screenH / 60,
@@ -221,7 +217,7 @@ class _EqupSearchState extends State<EqupSearch> {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           possibleResult.add(data);
-          property.add(wholeSample[data]);
+          property.add(wholeSample[data]!);
         }
       }
     }
