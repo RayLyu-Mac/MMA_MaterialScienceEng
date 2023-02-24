@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 class warningVideo extends StatefulWidget {
   final Widget pageTo;
   final String videoID;
-  const warningVideo({@required this.pageTo, @required this.videoID, Key key})
+  const warningVideo({required this.pageTo, required this.videoID, Key? key})
       : super(key: key);
 
   @override
@@ -15,8 +15,8 @@ class warningVideo extends StatefulWidget {
 
 class _warningVideoState extends State<warningVideo>
     with SingleTickerProviderStateMixin {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -48,7 +48,7 @@ class _warningVideoState extends State<warningVideo>
                     _screenWidth / 35, 0, _screenWidth / 40, 0),
                 buttonPadding:
                     EdgeInsets.fromLTRB(0, _screenH / 20, 0, _screenH / 30),
-                backgroundColor: Colors.redAccent[100].withOpacity(0.9),
+                backgroundColor: Colors.red.shade100.withOpacity(0.9),
                 elevation: 5,
                 title: Text(
                   "Before Enter",
@@ -73,14 +73,7 @@ class _warningVideoState extends State<warningVideo>
                       SizedBox(
                         height: _screenH / 30,
                       ),
-                      FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(46, 15, 46, 15),
-                          splashColor: Colors.white.withOpacity(0.7),
-                          color: Colors.white.withOpacity(0.1),
-                          shape: Border.all(
-                            width: 5,
-                            color: Colors.grey[200],
-                          ),
+                      ElevatedButton.icon(
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -98,14 +91,7 @@ class _warningVideoState extends State<warningVideo>
                       SizedBox(
                         height: _screenH / 45,
                       ),
-                      FlatButton.icon(
-                          padding: EdgeInsets.fromLTRB(51, 15, 51, 15),
-                          splashColor: Colors.white.withOpacity(0.7),
-                          color: Colors.white.withOpacity(0.1),
-                          shape: Border.all(
-                            width: 5,
-                            color: Colors.grey[200],
-                          ),
+                      ElevatedButton.icon(
                           onPressed: () {
                             Navigator.pop(context);
                           },

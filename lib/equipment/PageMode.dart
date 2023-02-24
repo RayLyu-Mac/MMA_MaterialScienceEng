@@ -17,47 +17,47 @@ import 'package:mma_mse/Drawer.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
-  final String intro;
+  final String? intro;
   final String img;
-  final String warnNote;
-  final String warnVido;
+  final String? warnNote;
+  final String? warnVido;
   final Widget instruction;
-  final Widget theory;
+  final Widget? theory;
   final Color backC;
-  final String dash;
-  final IconData extraIcon;
-  final Widget extraPage;
-  final String toolTip;
-  final double fontSize;
-  final bool oritation;
+  final String? dash;
+  final IconData? extraIcon;
+  final Widget? extraPage;
+  final String? toolTip;
+  final double? fontSize;
+  final bool? oritation;
   EqubPageMode(
-      {Key key,
-      @required this.title,
-      @optionalTypeArgs this.oritation,
-      @optionalTypeArgs this.fontSize,
+      {Key? key,
+      required this.title,
+      this.oritation,
+      this.fontSize,
       @optionalTypeArgs this.toolTip,
       @optionalTypeArgs this.extraIcon,
       @optionalTypeArgs this.extraPage,
       @optionalTypeArgs this.dash,
-      @required this.backC,
+      required this.backC,
       @optionalTypeArgs this.theory,
-      @required this.instruction,
+      required this.instruction,
       @optionalTypeArgs this.warnNote,
       @optionalTypeArgs this.warnVido,
-      @required this.img,
-      @required this.intro,
+      required this.img,
+      required this.intro,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   @override
   _EqubPageModeState createState() => _EqubPageModeState();
 }
 
 class _EqubPageModeState extends State<EqubPageMode> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double adjust = 1;
   @override
   void initState() {
@@ -93,7 +93,8 @@ class _EqubPageModeState extends State<EqubPageMode> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -148,7 +149,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 width: _screenWidth / 2.3,
                 child: SingleChildScrollView(
                     child: Text(
-                  widget.intro,
+                  widget.intro!,
                   style: TextStyle(
                       fontSize:
                           _screenWidth * 2.3 / (widget.fontSize ?? 55 / adjust),
@@ -166,7 +167,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       width: 6,
-                      color: Colors.grey[200],
+                      color: Colors.grey.shade200,
                     ),
                     image: DecorationImage(
                         image: NetworkImage(widget.img), fit: BoxFit.cover),
@@ -177,13 +178,13 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
-                    warnNote: widget.warnNote,
+                    warnNote: widget.warnNote!,
                     pageTo: widget.instruction)
                 : functionButtonMode(
                     top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
-                    warnV: widget.warnVido,
+                    warnV: widget.warnVido!,
                     pageTo: widget.instruction),
             functionButtonMode(
               top: _screenH / 1.51,
@@ -196,14 +197,14 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 left: _screenWidth / 2 + 16,
                 buttonName: widget.dash ?? "Theory",
                 pageTo:
-                    widget.theory != null ? widget.theory : workingInProg()),
+                    widget.theory! != null ? widget.theory! : workingInProg()),
             functionButtonMode(
                 top: _screenH / 1.33,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
                 pageTo: EmailContent(
-                  emailTo: widget.emailTo != null
-                      ? widget.emailTo
+                  emailTo: widget.emailTo! != null
+                      ? widget.emailTo!
                       : "Please enter the email",
                   locationOfEqup:
                       widget.location != null ? widget.location : "NUll",
@@ -224,7 +225,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      child: widget.extraPage,
+                                      child: widget.extraPage!,
                                       type: PageTransitionType.bottomToTop));
                             })
                         : Container(),
@@ -243,7 +244,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                   scanQR,
                   user_note(
                     loc: widget.location ?? "??",
-                    themem_color: Colors.red[100],
+                    themem_color: Colors.red.shade100,
                   )
                 ]),
           ],
@@ -254,7 +255,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
 
   Future scanQR() async {
     await Permission.camera.request();
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

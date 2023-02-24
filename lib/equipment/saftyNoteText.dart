@@ -4,7 +4,7 @@ import 'package:page_transition/page_transition.dart';
 class warning extends StatefulWidget {
   final Widget pageTo;
   final String warning_note;
-  const warning({@required this.pageTo, @required this.warning_note, Key key})
+  const warning({required this.pageTo, required this.warning_note, Key? key})
       : super(key: key);
 
   @override
@@ -12,9 +12,9 @@ class warning extends StatefulWidget {
 }
 
 class _warningState extends State<warning> with SingleTickerProviderStateMixin {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   @override
   void didChangeDependencies() {
@@ -36,7 +36,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
           borderRadius: BorderRadius.circular(18.0),
           border: Border.all(
             width: 9,
-            color: Colors.grey[200].withOpacity(0.8),
+            color: Colors.grey.shade200.withOpacity(0.8),
           )),
       child: SingleChildScrollView(
           child: AlertDialog(
@@ -45,7 +45,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                   _screenWidth / 18, 2, _screenWidth / 45, 10),
               buttonPadding:
                   EdgeInsets.fromLTRB(0, _screenH / 20, 0, _screenH / 30),
-              backgroundColor: Colors.redAccent[100].withOpacity(0.8),
+              backgroundColor: Colors.redAccent.shade100.withOpacity(0.8),
               elevation: 5,
               title: Text(
                 "Before Enter",
@@ -76,14 +76,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                     SizedBox(
                       height: _screenH / 20,
                     ),
-                    FlatButton.icon(
-                        padding: EdgeInsets.fromLTRB(43, 15, 43, 15),
-                        splashColor: Colors.white.withOpacity(0.7),
-                        color: Colors.white.withOpacity(0.1),
-                        shape: Border.all(
-                          width: 5,
-                          color: Colors.grey[200],
-                        ),
+                    ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
                               context,
@@ -101,14 +94,7 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                     SizedBox(
                       height: _screenH / 45,
                     ),
-                    FlatButton.icon(
-                        padding: EdgeInsets.fromLTRB(48, 15, 48, 15),
-                        splashColor: Colors.white.withOpacity(0.7),
-                        color: Colors.white.withOpacity(0.1),
-                        shape: Border.all(
-                          width: 5,
-                          color: Colors.grey[200],
-                        ),
+                    ElevatedButton.icon(
                         onPressed: () {
                           Navigator.pop(context);
                         },
