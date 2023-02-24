@@ -7,12 +7,12 @@ import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.d
 
 class hardness_test extends StatefulWidget {
   hardness_test(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
 
   @override
   _hardness_testState createState() => _hardness_testState();
@@ -30,7 +30,7 @@ class _hardness_testState extends State<hardness_test> {
         instruction: ManualRWInstr(),
         theory: hardness_test_bg(),
         fontSize: 46,
-        backC: Colors.blueGrey[50],
+        backC: Colors.blueGrey.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true",
         intro:

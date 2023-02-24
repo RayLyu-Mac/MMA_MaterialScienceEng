@@ -11,7 +11,7 @@ import 'package:mma_mse/equipment/Etching/acidProtocol.dart';
 import 'package:mma_mse/equipment/Etching/acidSafyFinal.dart';
 
 class ICP_OES_Main extends StatefulWidget {
-  ICP_OES_Main({Key key}) : super(key: key);
+  ICP_OES_Main({Key? key}) : super(key: key);
 
   @override
   _ICP_OES_MainState createState() => _ICP_OES_MainState();
@@ -22,7 +22,7 @@ class _ICP_OES_MainState extends State<ICP_OES_Main> {
   Widget build(BuildContext context) {
     return EqubPageMode(
       title: "ICP-OES",
-      backC: Colors.red[50],
+      backC: Colors.red.shade100,
       instruction: icp_instruction(),
       extraIcon: FontAwesomeIcons.flask,
       extraPage: AcidSafty(),

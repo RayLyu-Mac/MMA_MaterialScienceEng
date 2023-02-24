@@ -4,11 +4,11 @@ import 'package:mma_mse/Instruction/Lloyds Tensile Tester/LlyoMain.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class LlyoldTensileTester extends StatefulWidget {
-  final String location;
-  final String emailTo;
-  final bool ori;
+  final String? location;
+  final String? emailTo;
+  final bool? ori;
   LlyoldTensileTester(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.ori,
       @optionalTypeArgs this.emailTo})
@@ -28,7 +28,7 @@ class _LlyoldTensileTesterState extends State<LlyoldTensileTester> {
         theory: tensile_test_bg(),
         fontSize: 47,
         oritation: widget.ori,
-        backC: Colors.amber[50],
+        backC: Colors.amber.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Llyold.png?raw=true",
         intro:

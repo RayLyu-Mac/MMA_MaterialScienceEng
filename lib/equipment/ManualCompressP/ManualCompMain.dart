@@ -7,10 +7,10 @@ import 'package:mma_mse/Instruction/manualGrinder/ManualGMain.dart';
 import 'package:mma_mse/workingInPro.dart';
 
 class ManualCompPress extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   ManualCompPress(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -20,8 +20,8 @@ class ManualCompPress extends StatefulWidget {
 }
 
 class _ManualCompPressState extends State<ManualCompPress> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -104,8 +104,8 @@ class _ManualCompPressState extends State<ManualCompPress> {
                       ? widget.location
                       : "Not Specificed",
                   nameOfEqup: "Manual MicroHardness Tester",
-                  emailTo: widget.emailTo != null
-                      ? widget.emailTo
+                  emailTo: widget.emailTo! != null
+                      ? widget.emailTo!
                       : "Please enter the email address!"),
             ),
             Positioned(
@@ -120,7 +120,7 @@ class _ManualCompPressState extends State<ManualCompPress> {
                           MaterialPageRoute(
                               builder: (context) => user_note(
                                     loc: "ML Charpy Impact",
-                                    themem_color: Colors.green[100],
+                                    themem_color: Colors.green.shade100,
                                   )));
                     }))
           ],

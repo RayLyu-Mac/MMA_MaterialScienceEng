@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Instruction/MicroHardnessTester/MicroHardnessMain.dart';
 
 class AutomaticMicroHardnessMain extends StatefulWidget {
-  AutomaticMicroHardnessMain({Key key}) : super(key: key);
+  AutomaticMicroHardnessMain({Key? key}) : super(key: key);
 
   @override
   _AutomaticMicroHardnessMainState createState() =>
@@ -25,7 +25,7 @@ class _AutomaticMicroHardnessMainState
         toolTip: "Hardness Conversion Sheet",
         instruction: MHTinstruction(),
         fontSize: 46,
-        backC: Colors.blueGrey[50],
+        backC: Colors.blueGrey.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true",
         intro:

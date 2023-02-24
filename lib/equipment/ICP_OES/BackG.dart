@@ -3,7 +3,7 @@ import 'package:mma_mse/Search/Test/testDetailMode.dart';
 import 'package:mma_mse/customTile.dart';
 
 class ICP_OES_bg extends StatefulWidget {
-  ICP_OES_bg({Key key}) : super(key: key);
+  ICP_OES_bg({Key? key}) : super(key: key);
 
   @override
   _ICP_OES_bgState createState() => _ICP_OES_bgState();

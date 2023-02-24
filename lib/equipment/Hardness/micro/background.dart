@@ -8,8 +8,8 @@ class auto_micro_HT_theory extends StatefulWidget {
 }
 
 class _auto_micro_HT_theoryState extends State<auto_micro_HT_theory> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   double tra = 0.02;
   @override
   void didChangeDependencies() {
