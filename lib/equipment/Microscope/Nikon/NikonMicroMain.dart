@@ -3,10 +3,10 @@ import 'package:mma_mse/Instruction/Microscope/Nikon/NikonMain.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class NikonMicro extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   NikonMicro(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -23,7 +23,7 @@ class _NikonMicroState extends State<NikonMicro> {
         warnNote:
             "•Make Sure the smaples used have been properly polished and etched",
         instruction: NikonMicroInstru(),
-        backC: Colors.purple[50],
+        backC: Colors.purple.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
         intro:

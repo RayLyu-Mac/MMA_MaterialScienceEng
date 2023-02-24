@@ -6,12 +6,12 @@ import 'package:mma_mse/equipment/PageMode.dart';
 
 class StruesMain extends StatefulWidget {
   StruesMain(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   @override
   _StruesMainState createState() => _StruesMainState();
 }
@@ -26,7 +26,7 @@ class _StruesMainState extends State<StruesMain> {
         instruction: struesinstruction(),
         theory: mountPressBackG(),
         fontSize: 46,
-        backC: Colors.indigo[50],
+        backC: Colors.indigo.shade100,
         dash: "Component & Tools",
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true",

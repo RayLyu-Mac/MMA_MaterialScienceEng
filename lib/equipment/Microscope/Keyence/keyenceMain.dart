@@ -4,7 +4,7 @@ import 'package:mma_mse/Instruction/Microscope/Keyence/keyenceMain.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class KeyenceMMain extends StatefulWidget {
-  KeyenceMMain({Key key}) : super(key: key);
+  KeyenceMMain({Key? key}) : super(key: key);
 
   @override
   _KeyenceMMainState createState() => _KeyenceMMainState();
@@ -18,7 +18,7 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
         warnNote:
             "•Make Sure the smaples used have been properly polished and etched",
         instruction: KeyenceMicroInstru(),
-        backC: Colors.purple[50],
+        backC: Colors.purple.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",
         intro:

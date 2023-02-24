@@ -4,10 +4,10 @@ import 'MgrinderBackG.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class ManualGrinder extends StatefulWidget {
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   ManualGrinder(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.location,
       @optionalTypeArgs this.emailTo})
       : super(key: key);
@@ -25,7 +25,7 @@ class _ManualGrinderState extends State<ManualGrinder> {
             "•Securely hold the sample as it could become a projectile if the grinding wheel catches the sample.\n•The water is cold, and your hand can become numb, you may not realize that your finger is touching the grinding paper and you can grind your skin off your finger.",
         instruction: ManualGrinderinstruction(),
         theory: MgrinderBackg(),
-        backC: Colors.amber[50],
+        backC: Colors.amber.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
         intro:

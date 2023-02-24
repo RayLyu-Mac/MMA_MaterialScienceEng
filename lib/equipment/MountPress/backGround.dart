@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/customTile.dart';
 
 class mountPressBackG extends StatefulWidget {
-  mountPressBackG({Key key}) : super(key: key);
+  mountPressBackG({Key? key}) : super(key: key);
 
   @override
   _mountPressBackGState createState() => _mountPressBackGState();
@@ -22,15 +22,15 @@ class _mountPressBackGState extends State<mountPressBackG> {
 }
 
 class page1 extends StatefulWidget {
-  page1({Key key}) : super(key: key);
+  page1({Key? key}) : super(key: key);
 
   @override
   _page1State createState() => _page1State();
 }
 
 class _page1State extends State<page1> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {
@@ -121,15 +121,15 @@ class _page1State extends State<page1> {
 }
 
 class pg2 extends StatefulWidget {
-  pg2({Key key}) : super(key: key);
+  pg2({Key? key}) : super(key: key);
 
   @override
   _pg2State createState() => _pg2State();
 }
 
 class _pg2State extends State<pg2> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
 
   @override
   void didChangeDependencies() {

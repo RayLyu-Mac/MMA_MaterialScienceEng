@@ -6,12 +6,12 @@ import 'package:mma_mse/equipment/PageMode.dart';
 
 class METPress extends StatefulWidget {
   METPress(
-      {Key key,
+      {Key? key,
       @optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.location})
       : super(key: key);
-  final String location;
-  final String emailTo;
+  final String? location;
+  final String? emailTo;
   @override
   _METPressState createState() => _METPressState();
 }
@@ -25,7 +25,7 @@ class _METPressState extends State<METPress> {
             "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
         instruction: METinstruction(),
         theory: mountPressBackG(),
-        backC: Colors.indigo[50],
+        backC: Colors.indigo.shade100,
         fontSize: 46,
         dash: "Component & Tools",
         img:
