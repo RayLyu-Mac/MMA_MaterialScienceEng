@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class VolumeUC extends StatefulWidget {
-  VolumeUC({Key key}) : super(key: key);
+  VolumeUC({Key? key}) : super(key: key);
 
   @override
   _VolumeUCState createState() => _VolumeUCState();
 }
 
 class _VolumeUCState extends State<VolumeUC> {
-  double _screenWidth;
-  double _screenH;
-  double valuea;
-  double finalV;
-  double adjust;
-  String dropdownValuea;
-  String dropdownValueb;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double valuea = 0;
+  double finalV = 0;
+  double adjust = 0;
+  String dropdownValuea = '';
+  String dropdownValueb = '';
 
   @override
   void didChangeDependencies() {
@@ -38,7 +38,7 @@ class _VolumeUCState extends State<VolumeUC> {
       width: _screenWidth / 1.15,
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.7),
-          border: Border.all(width: 5, color: Colors.grey[100]),
+          border: Border.all(width: 5, color: Colors.grey.shade100),
           borderRadius: BorderRadius.circular(15)),
       child: Stack(
         children: [
@@ -76,7 +76,7 @@ class _VolumeUCState extends State<VolumeUC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB;
+                        dropdownValuea = valueB!;
                       },
                     );
                   },
@@ -103,7 +103,7 @@ class _VolumeUCState extends State<VolumeUC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value;
+                      dropdownValueb = value!;
                     });
                   },
                   items: <String>[
@@ -124,7 +124,7 @@ class _VolumeUCState extends State<VolumeUC> {
           Positioned(
               top: _screenH / 4,
               left: _screenWidth / 20,
-              child: RaisedButton.icon(
+              child: ElevatedButton.icon(
                   onPressed: () {
                     setState(() {
                       double valuebef = double.parse(before.text);

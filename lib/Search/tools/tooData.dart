@@ -11,58 +11,52 @@ class ToolData {
   String posCode;
   String name;
   String backImg;
-  double top;
+  double? top;
   Widget pageTo;
 
-  ToolData({this.posCode, this.name, this.backImg, this.pageTo, this.top});
-
-  List<ToolData> createToolList() {
-    List toolD = List<ToolData>();
-    return toolD
-      ..add(ToolData(
-          name: "Stats Tool",
-          pageTo: STDCheck(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/stats.png?raw=true",
-          posCode: "a"))
-      ..add(ToolData(
-          name: "Hardness Conversion Sheet",
-          posCode: "b",
-          pageTo: hardnessData(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/hard.jpg?raw=true"))
-      ..add(ToolData(
-          name: "Phase Diagram Check",
-          posCode: "c",
-          pageTo: PhaseDiag(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/phase.jpg?raw=true"))
-      ..add(ToolData(
-          name: "Unit Conversion",
-          posCode: "d",
-          pageTo: UnitCOnverMain(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/unit.jpg?raw=true"))
-      ..add(ToolData(
-          name: "Error function",
-          posCode: "e",
-          pageTo: errorFunction(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true"))
-      ..add(ToolData(
-          name: "Enthalpy Calculator",
-          posCode: "f",
-          pageTo: EnthalpyCal(),
-          backImg:
-              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Picture2.jpg?raw=true"));
-  }
+  ToolData(
+      {required this.posCode,
+      required this.name,
+      required this.backImg,
+      required this.pageTo,
+      this.top});
 }
 
-Map<String, Widget> to = {};
-var qrd = ToolData().createToolList();
-createToolList() {
-  for (var eq = 0; eq < qrd.length; eq++) {
-    to.addAll({qrd[eq].name: qrd[eq].pageTo});
-  }
-  return to;
-}
+List<ToolData> createToolList = [
+  (ToolData(
+      name: "Stats Tool",
+      pageTo: STDCheck(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/stats.png?raw=true",
+      posCode: "a")),
+  (ToolData(
+      name: "Hardness Conversion Sheet",
+      posCode: "b",
+      pageTo: hardnessData(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/hard.jpg?raw=true")),
+  (ToolData(
+      name: "Phase Diagram Check",
+      posCode: "c",
+      pageTo: PhaseDiag(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/phase.jpg?raw=true")),
+  (ToolData(
+      name: "Unit Conversion",
+      posCode: "d",
+      pageTo: UnitCOnverMain(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/unit.jpg?raw=true")),
+  (ToolData(
+      name: "Error function",
+      posCode: "e",
+      pageTo: errorFunction(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true")),
+  (ToolData(
+      name: "Enthalpy Calculator",
+      posCode: "f",
+      pageTo: EnthalpyCal(),
+      backImg:
+          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Picture2.jpg?raw=true"))
+];

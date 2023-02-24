@@ -20,20 +20,20 @@ class _user_noteState extends State<user_note> {
   int _counter = 0;
   List notes = [];
 
-  File jsonFile;
-  Directory dir;
-  String fileC;
+  late File jsonFile;
+  late Directory dir;
+  String fileC = '';
   String fileName = "notes.json";
-  List propty = List();
+  List propty = [];
   bool fileExists = false;
-  Map<String, dynamic> fileContent;
+  Map<String, dynamic> fileContent = {};
   final DateTime now = DateTime.now();
   DateTime today = new DateTime.now();
   final DateFormat formatter = DateFormat('yyyy-MM-dd');
   Map<String, Color> color_data = {
-    "ML Charpy Impact": Colors.green[200],
-    "ML UTM Machine": Colors.orange[200],
-    "ML Rock Well Machine": Colors.pink[200]
+    "ML Charpy Impact": Colors.green.shade200,
+    "ML UTM Machine": Colors.orange.shade200,
+    "ML Rock Well Machine": Colors.pink.shade200
   };
 
   @override
@@ -119,7 +119,7 @@ class _user_noteState extends State<user_note> {
                           controller: keyInputController,
                         ),
                         actions: [
-                          FlatButton(
+                          ElevatedButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
                                 setState(() {

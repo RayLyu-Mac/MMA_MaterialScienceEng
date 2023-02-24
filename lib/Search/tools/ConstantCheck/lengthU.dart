@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class LengthUC extends StatefulWidget {
-  LengthUC({Key key}) : super(key: key);
+  LengthUC({Key? key}) : super(key: key);
 
   @override
   _LengthUCCState createState() => _LengthUCCState();
 }
 
 class _LengthUCCState extends State<LengthUC> {
-  double _screenWidth;
-  double _screenH;
-  double valuea;
-  double finalV;
-  double adjust;
-  String dropdownValuea;
-  String dropdownValueb;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double valuea = 0;
+  double finalV = 0;
+  double adjust = 0;
+  String dropdownValuea = '';
+  String dropdownValueb = '';
 
   @override
   void didChangeDependencies() {
@@ -36,7 +36,7 @@ class _LengthUCCState extends State<LengthUC> {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.7),
-          border: Border.all(width: 5, color: Colors.grey[100]),
+          border: Border.all(width: 5, color: Colors.grey.shade100),
           borderRadius: BorderRadius.circular(15)),
       height: _screenH / 2,
       width: _screenWidth / 1.15,
@@ -76,7 +76,7 @@ class _LengthUCCState extends State<LengthUC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB;
+                        dropdownValuea = valueB!;
                       },
                     );
                   },
@@ -103,7 +103,7 @@ class _LengthUCCState extends State<LengthUC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value;
+                      dropdownValueb = value!;
                     });
                   },
                   items: <String>["m", "mm", "km", "in", "ft", "yd", "mile"]
@@ -118,7 +118,7 @@ class _LengthUCCState extends State<LengthUC> {
           Positioned(
               top: _screenH / 4,
               left: _screenWidth / 20,
-              child: RaisedButton.icon(
+              child: ElevatedButton.icon(
                   onPressed: () {
                     setState(() {
                       double valuebef = double.parse(before.text);

@@ -9,15 +9,15 @@ import 'weightU.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class UnitCOnverMain extends StatefulWidget {
-  UnitCOnverMain({Key key}) : super(key: key);
+  UnitCOnverMain({Key? key}) : super(key: key);
 
   @override
   _UnitCOnverMainState createState() => _UnitCOnverMainState();
 }
 
 class _UnitCOnverMainState extends State<UnitCOnverMain> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   final _drawerController = ZoomDrawerController();
   @override
   void didChangeDependencies() {
@@ -119,7 +119,7 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.7),
-                    border: Border.all(width: 5, color: Colors.grey[200]),
+                    border: Border.all(width: 5, color: Colors.grey.shade200),
                     borderRadius: BorderRadius.circular(15)),
                 padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 20,
                     _screenWidth / 10, _screenH / 20),

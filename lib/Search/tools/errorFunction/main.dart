@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/tools/errorFunction/data.dart';
 
 class errorFunction extends StatefulWidget {
-  errorFunction({Key key}) : super(key: key);
+  errorFunction({Key? key}) : super(key: key);
 
   @override
   _errorFunctionState createState() => _errorFunctionState();
 }
 
 class _errorFunctionState extends State<errorFunction> {
-  double _screenWidth;
-  double _screenH;
-  String output;
-  double mod;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  String output = '';
+  double mod = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -42,7 +42,7 @@ class _errorFunctionState extends State<errorFunction> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               color: Colors.blueGrey.withOpacity(0.75),
-              border: Border.all(width: 8, color: Colors.grey[200]),
+              border: Border.all(width: 8, color: Colors.grey.shade200),
             ),
             child: Column(
               children: [
@@ -71,34 +71,31 @@ class _errorFunctionState extends State<errorFunction> {
                 SizedBox(
                   height: _screenH / 45,
                 ),
-                RaisedButton.icon(
-                    elevation: 10,
-                    padding: EdgeInsets.fromLTRB(_screenWidth / 17,
-                        _screenH / 45, _screenWidth / 17, _screenH / 45),
-                    shape: Border.all(width: 5, color: Colors.grey[700]),
+                ElevatedButton.icon(
                     onPressed: () {
                       setState(() {
                         double input = double.parse(before.text);
                         double round =
-                            num.parse(input.toStringAsExponential(0));
+                            double.parse(input.toStringAsExponential(0));
                         if (input < 1) {
                           mod = 0.05;
                         } else {
                           mod = 0.1;
                         }
                         if (round > input) {
-                          output = ((erf[round] - erf[round - mod]) /
-                                      mod *
-                                      input +
-                                  erf[round] -
-                                  (erf[round] - erf[round - mod]) / mod * round)
-                              .toStringAsExponential(4);
+                          output =
+                              ((erf[round]! - erf[round - mod]!) / mod * input +
+                                      erf[round]! -
+                                      (erf[round]! - erf[round - mod]!) /
+                                          mod *
+                                          round)
+                                  .toStringAsExponential(4);
                         } else {
                           print(round + mod);
                           output =
-                              ((erf[round + mod] - erf[round]) / mod * input +
-                                      erf[round + mod] -
-                                      (erf[round + mod] - erf[round]) /
+                              ((erf[round + mod]! - erf[round]!) / mod * input +
+                                      erf[round + mod]! -
+                                      (erf[round + mod]! - erf[round]!) /
                                           mod *
                                           (round + mod))
                                   .toStringAsExponential(4);

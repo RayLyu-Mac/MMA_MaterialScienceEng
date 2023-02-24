@@ -7,16 +7,16 @@ import 'package:page_transition/page_transition.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PhaseDiag extends StatefulWidget {
-  PhaseDiag({Key key}) : super(key: key);
+  PhaseDiag({Key? key}) : super(key: key);
 
   @override
   _PhaseDiagState createState() => _PhaseDiagState();
 }
 
 class _PhaseDiagState extends State<PhaseDiag> {
-  double _screenWidth;
-  double _screenH;
-  double adjust;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double adjust = 0;
 
   List tiles = [];
   @override
@@ -41,7 +41,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
     }
   }
 
-  List<testdetailData> result = testdetailData().detailL();
+  List<testdetailData> result = phaseData;
   @override
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();
@@ -61,7 +61,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
               Container(
                 constraints: BoxConstraints.expand(
                     width: _screenWidth / 8, height: _screenH / 10),
-                child: RaisedButton.icon(
+                child: ElevatedButton.icon(
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -71,7 +71,6 @@ class _PhaseDiagState extends State<PhaseDiag> {
                               type: PageTransitionType.leftToRight));
                     },
                     icon: Icon(FontAwesomeIcons.signOutAlt),
-                    color: Colors.grey[200],
                     label: Text(
                       "  Back to Tools",
                       style: TextStyle(
@@ -141,7 +140,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         onTap: () {
                                           transition(ZoomInPhaseD(
                                               imgPD:
-                                                  result[index].addonImgLft));
+                                                  result[index].addonImgLft!));
                                         },
                                       ),
                                     ))
@@ -154,7 +153,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         onTap: () {
                                           transition(ZoomInPhaseD(
                                               imgPD:
-                                                  result[index].addonImgRht));
+                                                  result[index].addonImgRht!));
                                         },
                                       ),
                                     )

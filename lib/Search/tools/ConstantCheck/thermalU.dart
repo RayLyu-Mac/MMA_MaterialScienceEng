@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
 class thermalUC extends StatefulWidget {
-  thermalUC({Key key}) : super(key: key);
+  thermalUC({Key? key}) : super(key: key);
 
   @override
   _thermalUCState createState() => _thermalUCState();
 }
 
 class _thermalUCState extends State<thermalUC> {
-  double _screenWidth;
-  double _screenH;
-  double valuea;
-  double finalV;
-  double finalVt;
-  double adjust;
-  String dropdownValuea;
-  String dropdownValueb;
-  String dropdownValueat;
-  String dropdownValuebt;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double valuea = 0;
+  double finalV = 0;
+  double finalVt = 0;
+  double adjust = 0;
+  String dropdownValuea = '';
+  String dropdownValueb = '';
+  String dropdownValueat = '';
+  String dropdownValuebt = '';
 
   @override
   void didChangeDependencies() {
@@ -43,7 +43,7 @@ class _thermalUCState extends State<thermalUC> {
           width: _screenWidth / 1.15,
           decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.7),
-              border: Border.all(width: 5, color: Colors.grey[100]),
+              border: Border.all(width: 5, color: Colors.grey.shade100),
               borderRadius: BorderRadius.circular(15)),
           child: Stack(
             children: [
@@ -81,7 +81,7 @@ class _thermalUCState extends State<thermalUC> {
                       onChanged: (var valueB) {
                         setState(
                           () {
-                            dropdownValuea = valueB;
+                            dropdownValuea = valueB!;
                           },
                         );
                       },
@@ -108,7 +108,7 @@ class _thermalUCState extends State<thermalUC> {
                       value: dropdownValueb,
                       onChanged: (value) {
                         setState(() {
-                          dropdownValueb = value;
+                          dropdownValueb = value!;
                         });
                       },
                       items: <String>["J", "cal"]
@@ -123,7 +123,7 @@ class _thermalUCState extends State<thermalUC> {
               Positioned(
                   top: _screenH / 4,
                   left: _screenWidth / 20,
-                  child: RaisedButton.icon(
+                  child: ElevatedButton.icon(
                       onPressed: () {
                         setState(() {
                           double valuebef = double.parse(before.text);
@@ -170,7 +170,7 @@ class _thermalUCState extends State<thermalUC> {
           width: _screenWidth / 1.15,
           decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.7),
-              border: Border.all(width: 5, color: Colors.grey[100]),
+              border: Border.all(width: 5, color: Colors.grey.shade100),
               borderRadius: BorderRadius.circular(15)),
           child: Stack(
             children: [
@@ -208,7 +208,7 @@ class _thermalUCState extends State<thermalUC> {
                       onChanged: (var valueB) {
                         setState(
                           () {
-                            dropdownValueat = valueB;
+                            dropdownValueat = valueB!;
                           },
                         );
                       },
@@ -235,7 +235,7 @@ class _thermalUCState extends State<thermalUC> {
                       value: dropdownValuebt,
                       onChanged: (value) {
                         setState(() {
-                          dropdownValuebt = value;
+                          dropdownValuebt = value!;
                         });
                       },
                       items: <String>["Celsius", "Kelvin", "Fahrenheit"]
@@ -250,7 +250,7 @@ class _thermalUCState extends State<thermalUC> {
               Positioned(
                   top: _screenH / 4,
                   left: _screenWidth / 20,
-                  child: RaisedButton.icon(
+                  child: ElevatedButton.icon(
                       onPressed: () {
                         setState(() {
                           double valuebef = double.parse(after.text);

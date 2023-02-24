@@ -12,11 +12,6 @@ class room_detail extends StatefulWidget {
 class _room_detailState extends State<room_detail> {
   double _screenWidth = 0;
   double _screenH = 0;
-  @override
-  void initState() {
-    super.initState();
-    _heroType = widget.heroType;
-  }
 
   @override
   void didChangeDependencies() {
@@ -29,8 +24,8 @@ class _room_detailState extends State<room_detail> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: _heroType.materialColor,
-          title: Text('${_heroType.title}',
+          backgroundColor: widget.heroType.materialColor,
+          title: Text('${widget.heroType.title}',
               style: TextStyle(
                   fontSize: 27,
                   fontFamily: 'Raleway',
@@ -40,9 +35,9 @@ class _room_detailState extends State<room_detail> {
             child: Stack(
           children: [
             Hero(
-              tag: 'background' + _heroType.title,
+              tag: 'background' + widget.heroType.title,
               child: Container(
-                color: _heroType.materialColor,
+                color: widget.heroType.materialColor,
               ),
             ),
             Positioned(
@@ -51,9 +46,9 @@ class _room_detailState extends State<room_detail> {
                 width: _screenWidth,
                 height: _screenH / 2.6,
                 child: Hero(
-                    tag: 'image' + _heroType.title,
+                    tag: 'image' + widget.heroType.title,
                     child: Image.network(
-                      _heroType.image,
+                      widget.heroType.image,
                       fit: BoxFit.fitWidth,
                     ))),
             Positioned(
@@ -61,10 +56,10 @@ class _room_detailState extends State<room_detail> {
                 left: 25,
                 width: _screenWidth - 64.0,
                 child: Hero(
-                    tag: 'fText' + _heroType.fText,
+                    tag: 'fText' + widget.heroType.fText,
                     child: Material(
                         color: Colors.transparent,
-                        child: Text(_heroType.fText,
+                        child: Text(widget.heroType.fText,
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
@@ -74,16 +69,13 @@ class _room_detailState extends State<room_detail> {
               top: _screenH / 1.4,
               left: _screenWidth / 5,
               width: _screenWidth - 164.0,
-              child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    side: BorderSide(color: Colors.white, width: 2)),
-                color: _heroType.materialColor.withOpacity(0.4),
-                splashColor: _heroType.materialColor.withOpacity(0.99),
+              child: ElevatedButton(
                 child: Text("Go to the detailed Page"),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => _heroType.forw));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widget.heroType.forw));
                 },
               ),
             )

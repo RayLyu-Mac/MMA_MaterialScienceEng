@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class WeightUC extends StatefulWidget {
-  WeightUC({Key key}) : super(key: key);
+  WeightUC({Key? key}) : super(key: key);
 
   @override
   _WeightUCState createState() => _WeightUCState();
 }
 
 class _WeightUCState extends State<WeightUC> {
-  double _screenWidth;
-  double _screenH;
-  double valuea;
-  double finalV;
-  double adjust;
-  String dropdownValuea;
-  String dropdownValueb;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  double valuea = 0;
+  double finalV = 0;
+  double adjust = 0;
+  String dropdownValuea = '';
+  String dropdownValueb = '';
 
   @override
   void didChangeDependencies() {
@@ -38,7 +38,7 @@ class _WeightUCState extends State<WeightUC> {
       width: _screenWidth / 1.15,
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.7),
-          border: Border.all(width: 5, color: Colors.grey[100]),
+          border: Border.all(width: 5, color: Colors.grey.shade100),
           borderRadius: BorderRadius.circular(15)),
       child: Stack(
         children: [
@@ -76,7 +76,7 @@ class _WeightUCState extends State<WeightUC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB;
+                        dropdownValuea = valueB!;
                       },
                     );
                   },
@@ -103,7 +103,7 @@ class _WeightUCState extends State<WeightUC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value;
+                      dropdownValueb = value!;
                     });
                   },
                   items: <String>["t", "kg", "mg", "oz", "lb"]
@@ -118,7 +118,7 @@ class _WeightUCState extends State<WeightUC> {
           Positioned(
               top: _screenH / 4,
               left: _screenWidth / 20,
-              child: RaisedButton.icon(
+              child: ElevatedButton.icon(
                   onPressed: () {
                     setState(() {
                       double valuebef = double.parse(before.text);

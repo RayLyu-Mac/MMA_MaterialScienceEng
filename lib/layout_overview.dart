@@ -29,8 +29,8 @@ class _layout_overviewState extends State<layout_overview> {
     flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = AndroidInitializationSettings('@mipmap/ic_launcher');
     var initialSet = InitializationSettings(android: android);
-    flutterLocalNotificationsPlugin.initialize(initialSet,
-        onSelectNotification: onSelectN());
+    // flutterLocalNotificationsPlugin.initialize(initialSet,
+    //     onSelectNotification: onSelectN);
 
     showNote();
   }
@@ -52,15 +52,15 @@ class _layout_overviewState extends State<layout_overview> {
     "If you want to check the safety equipment layout for each floor, after entering the floor plan page, click the switch button on the right top corner, you can see those equipment and click them you can see the information for those equipment."
   ];
 
-  Future onSelectN(String message) {
-    debugPrint("Message : $message");
-    showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-              title: Text("Tip of the day"),
-              content: Text(tip[random.nextInt(tip.length)]),
-            ));
-  }
+  // Future onSelectN(String message) {
+  //   debugPrint("Message : $message");
+  //   showDialog(
+  //       context: context,
+  //       builder: (_) => AlertDialog(
+  //             title: Text("Tip of the day"),
+  //             content: Text(tip[random.nextInt(tip.length)]),
+  //           ));
+  // }
 
   @override
   void didChangeDependencies() {
@@ -74,7 +74,8 @@ class _layout_overviewState extends State<layout_overview> {
     Navigator.push(
         context,
         PageTransition(
-            child: to[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -171,7 +172,7 @@ class _layout_overviewState extends State<layout_overview> {
 
   Future scanQR() async {
     await Permission.camera.request();
-    String codeSanner = await scanner.scan(); //barcode scnner
+    String? codeSanner = await scanner.scan(); //barcode scnner
     setState(() {
       goToPage(codeSanner);
     });

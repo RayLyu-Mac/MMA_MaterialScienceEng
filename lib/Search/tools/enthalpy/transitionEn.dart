@@ -3,17 +3,17 @@ import 'data.dart';
 import 'main.dart';
 
 class TransEnthalpy extends StatefulWidget {
-  TransEnthalpy({Key key}) : super(key: key);
+  TransEnthalpy({Key? key}) : super(key: key);
 
   @override
   _TransEnthalpyState createState() => _TransEnthalpyState();
 }
 
 class _TransEnthalpyState extends State<TransEnthalpy> {
-  double _screenWidth;
-  double _screenH;
-  String element;
-  String transE;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  String element = '';
+  String transE = '';
   List eleD = [];
   @override
   void didChangeDependencies() {
@@ -35,7 +35,7 @@ class _TransEnthalpyState extends State<TransEnthalpy> {
         padding: EdgeInsets.fromLTRB(
             _screenWidth / 20, _screenH / 20, _screenWidth / 20, _screenH / 20),
         decoration: BoxDecoration(
-            border: Border.all(width: 8, color: Colors.grey[50]),
+            border: Border.all(width: 8, color: Colors.grey.shade100),
             borderRadius: BorderRadius.circular(15)),
         child: Column(
           children: [
@@ -83,8 +83,8 @@ class _TransEnthalpyState extends State<TransEnthalpy> {
                     value: element,
                     onChanged: (value) {
                       setState(() {
-                        element = value;
-                        eleD = enthP[value];
+                        element = value!;
+                        eleD = enthP[value]!;
                       });
                     },
                     items: <String>["FeS", "SiO2", "FeO", "Cu2S", "Cu2O"]
@@ -111,7 +111,7 @@ class _TransEnthalpyState extends State<TransEnthalpy> {
                     InputDecoration(hintText: "Temp under Melting Point"),
               ),
             ),
-            RaisedButton.icon(
+            ElevatedButton.icon(
                 onPressed: () {
                   setState(() {
                     double tl = double.parse(tbefore.text);

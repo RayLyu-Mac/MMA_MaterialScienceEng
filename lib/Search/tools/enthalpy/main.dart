@@ -6,15 +6,15 @@ import 'package:page_transition/page_transition.dart';
 import 'transitionEn.dart';
 
 class EnthalpyCal extends StatefulWidget {
-  EnthalpyCal({Key key}) : super(key: key);
+  EnthalpyCal({Key? key}) : super(key: key);
 
   @override
   _EnthalpyCalState createState() => _EnthalpyCalState();
 }
 
 class _EnthalpyCalState extends State<EnthalpyCal> {
-  double _screenWidth;
-  double _screenH;
+  double _screenWidth = 0;
+  double _screenH = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -25,11 +25,11 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
     }
   }
 
-  String element;
+  String element = '';
   List eleD = [];
   String phase = '';
-  String output;
-  double finalRe;
+  String output = '';
+  double finalRe = 0;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
   TextEditingController mass = TextEditingController();
@@ -54,7 +54,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
               padding: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 20,
                   _screenWidth / 20, _screenH / 20),
               decoration: BoxDecoration(
-                  border: Border.all(width: 8, color: Colors.grey[50]),
+                  border: Border.all(width: 8, color: Colors.grey.shade100),
                   borderRadius: BorderRadius.circular(15)),
               child: Column(
                 children: [
@@ -83,8 +83,8 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           value: element,
                           onChanged: (value) {
                             setState(() {
-                              element = value;
-                              eleD = enthP[value];
+                              element = value!;
+                              eleD = enthP[value]!;
                             });
                           },
                           items: enthP.keys
@@ -164,7 +164,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                     height: _screenH / 15,
                   ),
                   Container(
-                    child: RaisedButton.icon(
+                    child: ElevatedButton.icon(
                         onPressed: () {
                           setState(() {
                             double tempMin = double.parse(tmin.text);
@@ -319,7 +319,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                       ),
                     ],
                   ),
-                  RaisedButton.icon(
+                  ElevatedButton.icon(
                       onPressed: () {
                         setState(() {
                           double massc = double.parse(mass.text);

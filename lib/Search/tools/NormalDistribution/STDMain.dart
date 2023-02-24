@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 
 class STDCheck extends StatefulWidget {
-  STDCheck({Key key}) : super(key: key);
+  STDCheck({Key? key}) : super(key: key);
 
   @override
   _STDCheckState createState() => _STDCheckState();
@@ -19,14 +19,14 @@ class _STDCheckState extends State<STDCheck> {
   TextEditingController sampmean = TextEditingController();
   TextEditingController pcn = TextEditingController();
   TextEditingController pck = TextEditingController();
-  double _screenWidth;
-  double _screenH;
-  String output;
-  double mz;
-  String pc;
-  double ci95;
-  double ci99;
-  double ci68;
+  double _screenWidth = 0;
+  double _screenH = 0;
+  String output = '';
+  double mz = 0;
+  String pc = '';
+  double ci95 = 0;
+  double ci99 = 0;
+  double ci68 = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -56,7 +56,7 @@ class _STDCheckState extends State<STDCheck> {
               width: _screenWidth / 1.1,
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.8),
-                border: Border.all(width: 7, color: Colors.grey[200]),
+                border: Border.all(width: 7, color: Colors.grey.shade200),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Column(children: [
@@ -108,7 +108,7 @@ class _STDCheckState extends State<STDCheck> {
                     SizedBox(
                       width: _screenWidth / 35,
                     ),
-                    RaisedButton.icon(
+                    ElevatedButton.icon(
                         onPressed: () {
                           double nv = double.parse(pcn.text);
                           double kv = double.parse(pck.text);
@@ -130,7 +130,7 @@ class _STDCheckState extends State<STDCheck> {
                     SizedBox(
                       width: _screenWidth / 18,
                     ),
-                    RaisedButton.icon(
+                    ElevatedButton.icon(
                         onPressed: () {
                           double nv = double.parse(pcn.text);
                           double kv = double.parse(pck.text);
@@ -175,7 +175,7 @@ class _STDCheckState extends State<STDCheck> {
                 _screenWidth / 12, _screenH / 30),
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.8),
-                border: Border.all(width: 10, color: Colors.grey[200]),
+                border: Border.all(width: 10, color: Colors.grey.shade200),
                 borderRadius: BorderRadius.circular(15)),
             child: Column(
               children: [
@@ -242,7 +242,7 @@ class _STDCheckState extends State<STDCheck> {
                         InputDecoration(hintText: "Sample Mean: optional"),
                   ),
                 ),
-                RaisedButton.icon(
+                ElevatedButton.icon(
                     onPressed: () {
                       setState(() {
                         double meuv = double.parse(meu.text);
@@ -348,7 +348,7 @@ class _STDCheckState extends State<STDCheck> {
             width: _screenWidth / 1.1,
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.8),
-              border: Border.all(width: 7, color: Colors.grey[200]),
+              border: Border.all(width: 7, color: Colors.grey.shade200),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
@@ -384,10 +384,7 @@ class _STDCheckState extends State<STDCheck> {
                 SizedBox(
                   height: _screenH / 45,
                 ),
-                RaisedButton.icon(
-                    padding: EdgeInsets.fromLTRB(_screenWidth / 20,
-                        _screenH / 50, _screenWidth / 20, _screenH / 50),
-                    shape: Border.all(width: 5, color: Colors.grey[700]),
+                ElevatedButton.icon(
                     onPressed: () {
                       setState(() {
                         double input = double.parse(before.text);
@@ -398,7 +395,7 @@ class _STDCheckState extends State<STDCheck> {
                           output = "Please correct your input";
                         } else {
                           output = stdNum[input.toString().substring(
-                                          0, input.toString().length - 1)][
+                                          0, input.toString().length - 1)]![
                                       int.parse(input.toString()[
                                           input.toString().length - 1])]
                                   .toString() ??

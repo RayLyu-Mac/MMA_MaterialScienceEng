@@ -5,16 +5,16 @@ import 'package:mma_mse/Drawer.dart';
 import 'tooData.dart';
 
 class toolMain extends StatefulWidget {
-  toolMain({Key key}) : super(key: key);
+  toolMain({Key? key}) : super(key: key);
 
   @override
   _toolMainState createState() => _toolMainState();
 }
 
 class _toolMainState extends State<toolMain> {
-  double _screenWidth;
-  double _screenH;
-  List toolDataList = List<ToolData>();
+  double _screenWidth = 0;
+  double _screenH = 0;
+  List<ToolData> toolDataList = [];
 
   @override
   void didChangeDependencies() {
@@ -26,7 +26,7 @@ class _toolMainState extends State<toolMain> {
   @override
   void initState() {
     super.initState();
-    toolDataList = ToolData().createToolList();
+    toolDataList = createToolList;
   }
 
   @override

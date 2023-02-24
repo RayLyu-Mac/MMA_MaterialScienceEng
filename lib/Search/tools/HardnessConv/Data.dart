@@ -4,7 +4,7 @@ import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 
 class hardnessData extends StatefulWidget {
-  hardnessData({Key key}) : super(key: key);
+  hardnessData({Key? key}) : super(key: key);
 
   @override
   _hardnessDataState createState() => _hardnessDataState();
@@ -20,7 +20,7 @@ class _hardnessDataState extends State<hardnessData> {
     data = csvTable;
   }
 
-  String dropdownValue;
+  String dropdownValue = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,43 +50,43 @@ class _hardnessDataState extends State<hardnessData> {
                     setState(() {
                       switch (value) {
                         case "Vickers 136":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("vicker.csv");
                           break;
                         case "RockWell A":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/A.csv");
                           break;
                         case "RockWell B":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/RockwellB.csv");
                           break;
                         case "RockWell C":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/RockWellC.csv");
                           break;
                         case "RockWell D":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/D.csv");
                           break;
                         case "RockWell Superficial 15-N 15Kg Brale":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/superficial15.csv");
                           break;
                         case "RockWell Superficial 30-N 30Kg Brale":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Rockwell/superf30.csv");
                           break;
                         case "Shore Sciero-scope":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("shore.csv");
                           break;
                         case "Brinell 3000Kg 10mm Ball Steel":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Brinell3000.csv");
                           break;
                         case "Brinell 50Kg 10mm Ball Steel":
-                          dropdownValue = value;
+                          dropdownValue = value!;
                           loadAsset("Brinell50.csv");
                           break;
                       }
