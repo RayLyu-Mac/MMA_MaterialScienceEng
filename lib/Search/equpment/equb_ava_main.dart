@@ -37,7 +37,9 @@ class _equb_mainState extends State<equb_main> {
   @override
   void initState() {
     super.initState();
-
+    controller.addListener(() {
+      setState(() {});
+    });
     for (var eq = 0; eq < equipmentList.length; eq++) {
       equipments.add(equipmentList[eq].title);
     }

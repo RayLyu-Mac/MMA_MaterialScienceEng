@@ -37,8 +37,8 @@ class _metAnalysisState extends State<metAnalysis> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg!,
-        pageTo: testBGdetail[j].pageTo!,
+        addOnImg: testBGdetail[j].addOnImg,
+        pageTo: testBGdetail[j].pageTo,
       ));
     }
     SystemChrome.setPreferredOrientations([

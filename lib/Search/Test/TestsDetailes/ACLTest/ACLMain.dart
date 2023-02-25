@@ -45,12 +45,12 @@ class _ACLTestState extends State<ACLTest> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg!,
-        pageTo: testBGdetail[j].pageTo!,
-        height: testBGdetail[j].top!,
-        length: testBGdetail[j].height!,
-        width: testBGdetail[j].width!,
-        left: testBGdetail[j].left!,
+        addOnImg: testBGdetail[j].addOnImg,
+        pageTo: testBGdetail[j].pageTo,
+        height: testBGdetail[j].top,
+        length: testBGdetail[j].height,
+        width: testBGdetail[j].width,
+        left: testBGdetail[j].left,
       ));
     }
     pages.add(tensileTResult());

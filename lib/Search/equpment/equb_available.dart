@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'equb_ava_data.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:flutter/services.dart';
 
 class equb_ava extends StatefulWidget {
   final HeroType heroType;
@@ -15,7 +15,6 @@ class _equb_avaState extends State<equb_ava> {
   late HeroType _heroType;
   double _screenWidth = 0;
   double _screenH = 0;
-  double adjust = 0;
 
   @override
   void initState() {

@@ -44,21 +44,12 @@ class _welcomeState extends State<welcome> {
               SizedBox(
                 height: 20,
               ),
-              AnimatedTextKit(
-                animatedTexts: [
-                  TyperAnimatedText(
-                    "Welcome to MSE",
-                    speed: const Duration(milliseconds: 1200),
-                    textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w700),
-                  )
-                ],
-                totalRepeatCount: 2,
-                pause: const Duration(milliseconds: 400),
-                displayFullTextOnTap: true,
-                stopPauseOnTap: true,
+              Text(
+                "Welcome to MSE",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w700),
               ),
             ],
           ),

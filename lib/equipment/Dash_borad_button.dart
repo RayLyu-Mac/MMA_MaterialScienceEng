@@ -53,7 +53,7 @@ class _DashButtonState extends State<DashButton> {
               Navigator.push(
                   context,
                   PageTransition(
-                      child: widget.pageTo!,
+                      child: widget.pageTo ?? Container(),
                       type: PageTransitionType.scale,
                       alignment: Alignment.topCenter));
             } else {
@@ -65,7 +65,7 @@ class _DashButtonState extends State<DashButton> {
                       contentPadding: EdgeInsets.fromLTRB(_screenWidth / 30,
                           _screenH / 30, _screenWidth / 50, _screenH / 25),
                       title: Text(
-                        widget.stepTitle!,
+                        widget.stepTitle ?? "Null",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: _screenWidth / 24),
@@ -75,7 +75,7 @@ class _DashButtonState extends State<DashButton> {
                           height: _screenWidth / 50,
                         ),
                         Text(
-                          widget.instruction!,
+                          widget.instruction ?? "Null",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: _screenWidth / 33),
@@ -87,18 +87,18 @@ class _DashButtonState extends State<DashButton> {
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(
-                widget.width != null ? widget.width! / 9 : _screenWidth / 60,
-                widget.width != null ? widget.width! / 10 : _screenH / 27,
+                widget.width ?? _screenWidth / 60,
+                widget.width ?? _screenH / 27,
                 _screenWidth / 80,
-                widget.height != null ? widget.height! / 10 : _screenH / 60),
+                widget.height ?? _screenH / 60),
             child: swtich(
-                iconButton: widget.button_icon!,
-                iconName: widget.buttonName!,
-                fontSize: widget.fontsize,
+                iconButton: widget.button_icon ?? Icon(Icons.abc),
+                iconName: widget.buttonName ?? "Null",
+                fontSize: widget.fontsize ?? 10,
                 screenH: _screenH),
             constraints: BoxConstraints.expand(
-                width: widget.width != null ? widget.width : _screenWidth / 4.7,
-                height: widget.height != null ? widget.height : _screenH / 7),
+                width: widget.width ?? _screenWidth / 4.7,
+                height: widget.height ?? _screenH / 7),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               boxShadow: [

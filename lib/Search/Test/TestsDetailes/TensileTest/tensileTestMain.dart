@@ -37,19 +37,15 @@ class _TensileTestState extends State<TensileTest> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         back_img: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg!,
-        pageTo: testBGdetail[j].pageTo!,
-        height: testBGdetail[j].height!,
-        length: testBGdetail[j].top!,
-        width: testBGdetail[j].width!,
-        left: testBGdetail[j].left!,
+        addOnImg: testBGdetail[j].addOnImg,
+        pageTo: testBGdetail[j].pageTo,
+        height: testBGdetail[j].height,
+        length: testBGdetail[j].top,
+        width: testBGdetail[j].width,
+        left: testBGdetail[j].left,
       ));
     }
     pages.add(tensileTResult());
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
   }
 
   @override

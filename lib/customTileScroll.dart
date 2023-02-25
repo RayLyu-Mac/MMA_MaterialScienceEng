@@ -6,11 +6,10 @@ class ScrollcustomListTile extends StatelessWidget {
       required this.pageTo,
       required this.fonts,
       required this.controller,
-      @optionalTypeArgs this.offset,
-      @optionalTypeArgs this.tileColor,
-      @optionalTypeArgs this.padTop,
-      key})
-      : super(key: key);
+      this.offset,
+      this.tileColor,
+      this.padTop,
+      super.key});
   final String name;
   final int pageTo;
   final double fonts;
@@ -30,7 +29,8 @@ class ScrollcustomListTile extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.blue[100],
         onTap: () => {
-          controller.animateTo(pageTo * (offset! != null ? offset! : 300.0),
+          print(pageTo * (offset ?? 300.0)),
+          controller.animateTo(pageTo * (offset ?? 300.0),
               duration: Duration(milliseconds: 500), curve: Curves.easeInOut)
         },
         child: Wrap(

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'welcome.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(mainp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(mainp()));
+}
 
 class mainp extends StatelessWidget {
   const mainp({Key? key}) : super(key: key);

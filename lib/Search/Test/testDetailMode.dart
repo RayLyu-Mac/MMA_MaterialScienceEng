@@ -6,7 +6,6 @@ class pageMode extends StatefulWidget {
   final String back_img;
   final String title;
   final String? addOnImg;
-  final String? docNumber;
   final bool? wholeImg;
   final Widget? pageTo;
   final double? height;
@@ -22,7 +21,6 @@ class pageMode extends StatefulWidget {
       required this.back_img,
       @optionalTypeArgs this.width,
       @optionalTypeArgs this.content,
-      @optionalTypeArgs this.docNumber,
       @optionalTypeArgs this.addOnImg,
       @optionalTypeArgs this.pageTo,
       Key? key})
@@ -99,7 +97,7 @@ class _pageModeState extends State<pageMode> {
                         height: _screenH / 35,
                       ),
                       Text(
-                        widget.content != null ? widget.content! : "Error",
+                        widget.content ?? "Error",
                         style: TextStyle(
                             fontSize: _screenH / 38,
                             color: Colors.black,
@@ -111,11 +109,11 @@ class _pageModeState extends State<pageMode> {
                       ),
                       imgAddOn(
                         screenH: _screenH,
-                        width: widget.width!,
-                        length: widget.length!,
+                        width: widget.width ?? 10,
+                        length: widget.length ?? 10,
                         screenW: _screenWidth,
-                        img: widget.addOnImg!,
-                        pageTo: widget.pageTo!,
+                        img: widget.addOnImg ?? "Null",
+                        pageTo: widget.pageTo ?? Container(),
                       )
                     ]))),
           ),

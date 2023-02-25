@@ -83,70 +83,55 @@ class _test_avaState extends State<test_ava> {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
+                    color: _heroTypeList[index].materialColor,
                     margin: EdgeInsets.fromLTRB(18, 18, 18, 14),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0)),
                     clipBehavior: Clip.antiAlias,
-                    child: Stack(
+                    child: Column(
                       children: [
                         Hero(
                             tag: 'background' + _heroTypeList[index].title,
                             child: Container(
                               color: _heroTypeList[index].materialColor,
                             )),
-                        Positioned(
-                          top: 0.0,
-                          left: 0.0,
-                          right: 0.0,
-                          child: Hero(
-                            tag: 'image' + _heroTypeList[index].title,
-                            child: Image.network(
-                              _heroTypeList[index].image,
-                              fit: BoxFit.fitWidth,
-                              height: 195,
-                            ),
+                        Hero(
+                          tag: 'image' + _heroTypeList[index].title,
+                          child: Image.network(
+                            _heroTypeList[index].image,
+                            width: double.infinity,
+                            fit: BoxFit.fitWidth,
+                            height: 195,
                           ),
                         ),
-                        Positioned(
-                          top: 198.0,
-                          left: 10.0,
-                          width: _screenWidthAdjustment,
-                          child: Hero(
-                              tag: 'text' + _heroTypeList[index].title,
-                              child: Material(
-                                color: Colors.transparent,
-                                child: Container(
-                                  width: _screenWidth / 1.1,
-                                  child: Text(
-                                    '${_heroTypeList[index].title}',
-                                    style: TextStyle(
-                                        fontSize: _heroTypeList[index]
-                                                .titleFontSize ??
-                                            25.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
+                        Hero(
+                            tag: 'text' + _heroTypeList[index].title,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: Container(
+                                child: Text(
+                                  _heroTypeList[index].title,
+                                  style: TextStyle(
+                                      fontSize:
+                                          _heroTypeList[index].titleFontSize ??
+                                              25.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
                                 ),
-                              )),
-                        ),
-                        Positioned(
-                            top: 228.0,
-                            left: 10.0,
-                            width: _screenWidthAdjustment,
-                            child: Hero(
-                                tag: 'subtitle' + _heroTypeList[index].title,
-                                child: Material(
-                                    color: Colors.transparent,
-                                    child: Text(
-                                      _heroTypeList[index].subTitle,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontSize: _heroTypeList[index]
-                                                  .contentFontsize ??
-                                              16,
-                                          fontWeight: FontWeight.bold),
-                                    )))),
+                              ),
+                            )),
+                        Hero(
+                            tag: 'subtitle' + _heroTypeList[index].title,
+                            child: Material(
+                                color: Colors.transparent,
+                                child: Text(
+                                  _heroTypeList[index].subTitle,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
+                                ))),
                       ],
                     ),
                   ),
