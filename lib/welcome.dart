@@ -3,7 +3,7 @@ import 'package:mma_mse/layout_overview.dart';
 import 'fancyButton.dart';
 import 'terms&Cond.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'DashBoard.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -117,7 +117,7 @@ class _welcomeState extends State<welcome> {
               height: _screenH / 35,
             ),
             fancyBut(
-                pageTo: conditionTerms(pageTo: layout_overview()),
+                pageTo: conditionTerms(pageTo: DashBoard()),
                 width: _screenWidth / 1.2,
                 height: _screenH / 10,
                 fontsize: 25,

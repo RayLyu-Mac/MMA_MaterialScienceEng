@@ -6,7 +6,7 @@ import 'floors/floor2.dart';
 import 'floors/floor3.dart';
 import 'floors/floor1.dart';
 import 'Drawer.dart';
-import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
@@ -32,7 +32,7 @@ class _layout_overviewState extends State<layout_overview> {
     // flutterLocalNotificationsPlugin.initialize(initialSet,
     //     onSelectNotification: onSelectN);
 
-    showNote();
+    // showNote();
   }
 
   double _screenWidth = 0;
@@ -87,6 +87,15 @@ class _layout_overviewState extends State<layout_overview> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        actions: [
+          IconButton(
+              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(FontAwesomeIcons.timesCircle))
+        ],
         title: Text("Layout Overview"),
         backgroundColor: Colors.black,
       ),
@@ -171,11 +180,11 @@ class _layout_overviewState extends State<layout_overview> {
     });
   }
 
-  showNote() async {
-    var android =
-        AndroidNotificationDetails('C ID', "C Name", "channelDescription");
-    var platform = NotificationDetails(android: android);
-    await flutterLocalNotificationsPlugin.show(
-        0, "Tip for the day", tip[random.nextInt(tip.length)], platform);
-  }
+  // showNote() async {
+  //   var android =
+  //       AndroidNotificationDetails('C ID', "C Name", "channelDescription");
+  //   var platform = NotificationDetails(android: android);
+  //   await flutterLocalNotificationsPlugin.show(
+  //       0, "Tip for the day", tip[random.nextInt(tip.length)], platform);
+  // }
 }
