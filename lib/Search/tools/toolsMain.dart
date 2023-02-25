@@ -33,6 +33,15 @@ class _toolMainState extends State<toolMain> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
           backgroundColor: Colors.grey[500],
           title: Text("Malts Eng Tool Box"),
         ),

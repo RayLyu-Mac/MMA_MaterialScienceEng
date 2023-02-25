@@ -14,10 +14,10 @@ class _thermalUCState extends State<thermalUC> {
   double finalV = 0;
   double finalVt = 0;
   double adjust = 0;
-  String dropdownValuea = '';
-  String dropdownValueb = '';
-  String dropdownValueat = '';
-  String dropdownValuebt = '';
+  String dropdownValuea = 'J';
+  String dropdownValueb = 'J';
+  String dropdownValueat = 'Kelvin';
+  String dropdownValuebt = 'Kelvin';
 
   @override
   void didChangeDependencies() {

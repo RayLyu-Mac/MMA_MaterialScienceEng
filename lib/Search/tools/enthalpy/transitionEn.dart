@@ -12,7 +12,7 @@ class TransEnthalpy extends StatefulWidget {
 class _TransEnthalpyState extends State<TransEnthalpy> {
   double _screenWidth = 0;
   double _screenH = 0;
-  String element = '';
+  String element = 'FeS';
   String transE = '';
   List eleD = [];
   @override

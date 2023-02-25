@@ -42,7 +42,7 @@ class _UnitCOnverMainState extends State<UnitCOnverMain> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(FontAwesomeIcons.cross))
+              icon: Icon(FontAwesomeIcons.timesCircle))
         ],
       ),
       drawer: Drawer(

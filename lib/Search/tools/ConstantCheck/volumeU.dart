@@ -13,8 +13,8 @@ class _VolumeUCState extends State<VolumeUC> {
   double valuea = 0;
   double finalV = 0;
   double adjust = 0;
-  String dropdownValuea = '';
-  String dropdownValueb = '';
+  String dropdownValuea = 'L';
+  String dropdownValueb = 'L';
 
   @override
   void didChangeDependencies() {

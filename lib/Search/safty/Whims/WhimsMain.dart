@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'WhimsData.dart';
 import 'package:mma_mse/customTileScroll.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class WhimsSymbols extends StatefulWidget {
   WhimsSymbols({Key? key}) : super(key: key);
@@ -61,6 +62,15 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
         backgroundColor: Colors.lightBlueAccent[100],
         appBar: AppBar(
           backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
           title: Text(
             "Whims Symbols for Potential Hazard",
             style: TextStyle(fontSize: _screenH / 40),
@@ -91,13 +101,13 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
                         child: Text(
                           result[index].title,
                           style: TextStyle(
-                              fontSize: result[index].titleFontsize ?? 15,
+                              fontSize: result[index].titleFontsize,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
                       Positioned(
                           top: 40,
-                          left: _screenWidth / (result[index].picLeft ?? 60),
+                          left: _screenWidth / (result[index].picLeft),
                           child: Image.network(
                             result[index].addOnImg,
                             fit: BoxFit.fitWidth,
@@ -111,8 +121,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
                               child: Text(
                                 result[index].content,
                                 style: TextStyle(
-                                    fontSize: result[index].contentFontsize ??
-                                        _screenH / 45),
+                                    fontSize: result[index].contentFontsize),
                               )))
                     ],
                   ));

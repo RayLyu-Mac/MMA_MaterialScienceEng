@@ -28,9 +28,17 @@ class _saftyMainState extends State<saftyMain> {
     final ScrollController controller = ScrollController();
     return Scaffold(
         appBar: AppBar(
-          title: Text("Matls Eng Safety Guide"),
-          backgroundColor: Colors.grey[500],
-        ),
+            title: Text("Matls Eng Safety Guide"),
+            backgroundColor: Colors.grey[500],
+            actions: [
+              IconButton(
+                  padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                  iconSize: 32,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(FontAwesomeIcons.timesCircle))
+            ]),
         drawer: standardDrawer(header: "Matls Safety Guide"),
         body: SafeArea(
           child: Stack(

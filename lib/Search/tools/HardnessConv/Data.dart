@@ -20,7 +20,7 @@ class _hardnessDataState extends State<hardnessData> {
     data = csvTable;
   }
 
-  String dropdownValue = '';
+  String dropdownValue = 'RockWell C';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

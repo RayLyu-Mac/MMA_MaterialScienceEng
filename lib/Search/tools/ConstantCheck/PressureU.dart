@@ -13,8 +13,8 @@ class _unitCState extends State<unitC> {
   double valuea = 0;
   double finalV = 0;
   double adjust = 0;
-  String dropdownValuea = '';
-  String dropdownValueb = '';
+  String dropdownValuea = 'atm';
+  String dropdownValueb = 'atm';
 
   @override
   void didChangeDependencies() {

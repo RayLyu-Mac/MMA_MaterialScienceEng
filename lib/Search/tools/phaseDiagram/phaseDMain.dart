@@ -86,6 +86,15 @@ class _PhaseDiagState extends State<PhaseDiag> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text("Phase Diagram Check"),
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ],
         ),
         drawer: Container(
           width: _screenWidth / 1.7,

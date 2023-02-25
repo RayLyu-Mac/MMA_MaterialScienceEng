@@ -13,8 +13,8 @@ class _WeightUCState extends State<WeightUC> {
   double valuea = 0;
   double finalV = 0;
   double adjust = 0;
-  String dropdownValuea = '';
-  String dropdownValueb = '';
+  String dropdownValuea = 'kg';
+  String dropdownValueb = 'kg';
 
   @override
   void didChangeDependencies() {

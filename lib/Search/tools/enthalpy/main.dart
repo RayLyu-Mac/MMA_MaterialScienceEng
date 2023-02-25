@@ -25,11 +25,11 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
     }
   }
 
-  String element = '';
+  String element = 'FeS';
   List eleD = [];
-  String phase = '';
-  String output = '';
-  double finalRe = 0;
+  String phase = '1';
+  String output = '1';
+  double finalRe = 1;
   TextEditingController tmin = TextEditingController();
   TextEditingController tmax = TextEditingController();
   TextEditingController mass = TextEditingController();
@@ -201,14 +201,13 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                                       .toStringAsExponential(4);
                                 }
                               } else {
-                                print("S1: " + lowerB.toString());
                                 double sum = 0;
                                 sum = sum +
                                     iniStage(eleD, lowerB, tempMin) +
                                     eleD[5][lowerB];
-                                print(eleD[8][lowerB]);
+
                                 phase = phase + eleD[8][lowerB];
-                                print("S1: " + sum.toString());
+
                                 lowerB = lowerB + 1;
                                 for (var k = 0; k < higherB - lowerB; k++) {
                                   sum = sum + eleD[5][lowerB];
@@ -216,9 +215,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                                   sum = sum + middleStage(eleD, lowerB + k);
                                   lowerB = lowerB + 1;
                                 }
-                                print("S2: " + sum.toString());
-                                print("S2: " + lowerB.toString());
-                                print(eleD[8]);
+
                                 if (tempMax == eleD[1][lowerB]) {
                                   sum = sum +
                                       finalStage(eleD, lowerB, tempMax) +
