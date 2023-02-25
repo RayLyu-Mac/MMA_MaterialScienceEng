@@ -143,10 +143,10 @@ class aboutUs extends StatelessWidget {
 }
 
 _launchURL() async {
-  const url = 'https://www.instagram.com/macmatlssociety/';
-  if (await canLaunch(url)) {
-    await launch(url);
+  final uri = Uri.parse("https://www.instagram.com/macmatlssociety/");
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launch $uri';
   }
 }

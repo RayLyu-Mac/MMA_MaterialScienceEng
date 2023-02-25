@@ -284,12 +284,13 @@ class floor1customListTile extends StatelessWidget {
           child: InkWell(
             splashColor: Colors.blue[100],
             onTap: () => {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: pageTo!,
-                      type: PageTransitionType.leftToRight))
+              pageTo ??
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: pageTo!,
+                          type: PageTransitionType.leftToRight))
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

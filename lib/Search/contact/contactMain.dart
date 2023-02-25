@@ -25,7 +25,6 @@ class _ContactMSEState extends State<ContactMSE> {
   bool searchLoc = false;
   bool searchName = false;
   String _searchText = "";
-  List total = [];
   List name = [];
   List<testdetailData> property = [];
   final ScrollController controller = ScrollController();
@@ -35,7 +34,7 @@ class _ContactMSEState extends State<ContactMSE> {
     super.initState();
     _isSearching = false;
     for (var i = 0; i < detailL.length; i++) {
-      _list.add(total[i].name);
+      _list.add(detailL[i].name);
     }
   }
 
@@ -205,7 +204,7 @@ class _ContactMSEState extends State<ContactMSE> {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           name.add(data);
-          property.add(total[j]);
+          property.add(detailL[j]);
         }
       }
     }

@@ -47,6 +47,7 @@ dependencies:
   web_scraper: ^0.1.4
   flutter_launcher_icons: ^0.9.2
   flutter_zoom_drawer: ^2.1.2
+  lottie: ^2.2.0
 
   
 flutter_icons:
@@ -72,6 +73,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+   - assest/lot/
    - assest/csv/Rockwell/RockWellC.csv
    - assest/csv/Rockwell/RockwellB.csv
    - assest/csv/Rockwell/A.csv
