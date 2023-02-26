@@ -8,10 +8,10 @@ import 'package:lottie/lottie.dart';
 import 'dart:collection';
 import 'package:mma_mse/Search/tools/tooData.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'workingInPro.dart';
 
 DateTime now = new DateTime.now();
 DateTime date = new DateTime(now.year, now.month, now.day);
@@ -141,7 +141,7 @@ class _DashBoardState extends State<DashBoard> {
       "    QR Scanner",
       "assest/lot/qr.json",
       MaterialStateProperty.all(Colors.purple.shade100),
-      toolMain()
+      workingInProg()
     ]
   ];
   @override
