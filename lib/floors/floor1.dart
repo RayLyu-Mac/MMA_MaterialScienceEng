@@ -16,11 +16,7 @@ class floor1 extends StatefulWidget {
   final bool? fire;
   final bool? eye;
   final bool? visitFromOhter;
-  floor1(
-      {@optionalTypeArgs this.fire,
-      @optionalTypeArgs this.eye,
-      @optionalTypeArgs this.visitFromOhter,
-      Key? key})
+  floor1({this.fire, this.eye, this.visitFromOhter, Key? key})
       : super(key: key);
 
   @override
@@ -259,11 +255,11 @@ class _floor1State extends State<floor1> {
 class floor1customListTile extends StatelessWidget {
   const floor1customListTile(
       {required this.name,
-      @optionalTypeArgs this.pageTo,
+      this.pageTo,
       required this.fonts,
-      @optionalTypeArgs this.leadIcon,
-      @optionalTypeArgs this.backC,
-      @optionalTypeArgs this.web,
+      this.leadIcon,
+      this.backC,
+      this.web,
       key})
       : super(key: key);
   final String name;
