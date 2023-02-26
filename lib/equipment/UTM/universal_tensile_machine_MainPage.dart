@@ -5,7 +5,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 
 class tensile_test extends StatefulWidget {
   final ori;
-  tensile_test({@optionalTypeArgs this.ori, Key? key}) : super(key: key);
+  tensile_test({this.ori, Key? key}) : super(key: key);
 
   @override
   _tensile_testState createState() => _tensile_testState();

@@ -19,16 +19,6 @@ class _ManualRWInstrState extends State<ManualRWInstr> {
   final ScrollController controller = ScrollController();
 
   @override
-  void initState() {
-    super.initState();
-
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return InstructionMode(
         instructionList: _instructionList,

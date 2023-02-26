@@ -6,11 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/hardnessTest/hardness_t_back.dart';
 
 class hardness_test extends StatefulWidget {
-  hardness_test(
-      {Key? key,
-      @optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.location})
-      : super(key: key);
+  hardness_test({Key? key, this.emailTo, this.location}) : super(key: key);
   final String? location;
   final String? emailTo;
 

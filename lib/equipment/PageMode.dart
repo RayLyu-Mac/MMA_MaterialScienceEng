@@ -35,19 +35,19 @@ class EqubPageMode extends StatefulWidget {
       required this.title,
       this.oritation = true,
       this.fontSize,
-      @optionalTypeArgs this.toolTip,
-      @optionalTypeArgs this.extraIcon,
-      @optionalTypeArgs this.extraPage,
-      @optionalTypeArgs this.dash,
+      this.toolTip,
+      this.extraIcon,
+      this.extraPage,
+      this.dash,
       required this.backC,
-      @optionalTypeArgs this.theory,
+      this.theory,
       required this.instruction,
-      @optionalTypeArgs this.warnNote = "None",
-      @optionalTypeArgs this.warnVido = "None",
+      this.warnNote = "None",
+      this.warnVido = "None",
       required this.img,
       required this.intro,
-      @optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.location})
+      this.emailTo,
+      this.location})
       : super(key: key);
   final String? location;
   final String? emailTo;
@@ -59,28 +59,6 @@ class _EqubPageModeState extends State<EqubPageMode> {
   double _screenWidth = 0;
   double _screenH = 0;
   double adjust = 1;
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-  }
-
-  @override
-  dispose() {
-    widget.oritation != null
-        ? SystemChrome.setPreferredOrientations([
-            DeviceOrientation.landscapeRight,
-            DeviceOrientation.landscapeLeft,
-          ])
-        : SystemChrome.setPreferredOrientations([
-            DeviceOrientation.portraitUp,
-            DeviceOrientation.portraitDown,
-          ]);
-    super.dispose();
-  }
 
   @override
   void didChangeDependencies() {

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 
 class EqupSearch extends StatefulWidget {
   EqupSearch({Key? key}) : super(key: key);
@@ -55,19 +56,20 @@ class _EqupSearchState extends State<EqupSearch> {
     super.initState();
     _isSearching = false;
     safty = createSaftyList();
-    for (var equpN = 0; equpN < test_data_list.length; equpN++) {
+
+    for (var mequb = 0; mequb < equipmentList.length; mequb++) {
       List<dynamic> datatype = [];
       datatype.clear();
-      datatype.add(equipment.values.toList()[equpN]);
-      datatype.add(Icons.science_rounded);
-      datatype.add(Colors.lightGreenAccent);
-      wholeSample.addAll({equipment.keys.toList()[equpN]: datatype});
+      datatype.add(equipmentList[mequb].pageTo);
+      datatype.add(FontAwesomeIcons.microscope);
+      datatype.add(Colors.purple.shade100);
+      wholeSample.addAll({equipmentList[mequb].title: datatype});
     }
 
     for (var mtest = 0; mtest < test_data_list.length; mtest++) {
       List<dynamic> datatype = [];
       datatype.clear();
-      datatype.add(test_data_list[mtest].title);
+      datatype.add(test_data_list[mtest].pageTo);
       datatype.add(FontAwesomeIcons.fileContract);
       datatype.add(Colors.lightBlueAccent.shade100);
       wholeSample.addAll({test_data_list[mtest].title: datatype});
@@ -76,9 +78,9 @@ class _EqupSearchState extends State<EqupSearch> {
     for (var mtool = 0; mtool < createToolList.length; mtool++) {
       List<dynamic> datatype = [];
       datatype.clear();
-      datatype.add(createToolList[mtool].name);
-      datatype.add(FontAwesomeIcons.tools);
       datatype.add(createToolList[mtool].pageTo);
+      datatype.add(FontAwesomeIcons.tools);
+      datatype.add(Colors.green.shade200);
       wholeSample.addAll({createToolList[mtool].name: datatype});
     }
 
@@ -87,7 +89,7 @@ class _EqupSearchState extends State<EqupSearch> {
       datatype.clear();
       datatype.add(safty.values.toList()[sft]);
       datatype.add(FontAwesomeIcons.skull);
-      datatype.add(Colors.redAccent[100]);
+      datatype.add(Colors.redAccent.shade100);
       wholeSample.addAll({safty.keys.toList()[sft]: datatype});
     }
     _list.addAll(wholeSample.keys.toList());

@@ -19,16 +19,6 @@ class _PCutterinstructionState extends State<PCutterinstruction> {
   List titles = [];
 
   @override
-  void initState() {
-    super.initState();
-
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return InstructionMode(
         instructionList: _instructionList,

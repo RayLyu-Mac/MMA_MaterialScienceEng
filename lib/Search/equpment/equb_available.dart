@@ -20,6 +20,10 @@ class _equb_avaState extends State<equb_ava> {
   void initState() {
     super.initState();
     _heroType = widget.heroType;
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override

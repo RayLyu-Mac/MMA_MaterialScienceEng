@@ -12,6 +12,7 @@ import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class layout_overview extends StatefulWidget {
   layout_overview({Key? key}) : super(key: key);
@@ -86,6 +87,7 @@ class _layout_overviewState extends State<layout_overview> {
     }
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: ButtomMenu(),
       appBar: AppBar(
         actions: [
           IconButton(
