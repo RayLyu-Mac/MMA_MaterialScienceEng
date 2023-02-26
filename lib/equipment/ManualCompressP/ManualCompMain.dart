@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/user_note.dart';
 import '../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
@@ -92,16 +92,10 @@ class _ManualCompPressState extends State<ManualCompPress> {
               pageTo: tensile_test_bg(),
             ),
             functionButtonMode(
-              top: _screenH / 1.56,
-              left: _screenWidth / 2 + 16,
-              buttonName: "Manager",
-              pageTo: EmailContent(
-                  locationOfEqup: widget.location != null
-                      ? widget.location
-                      : "Not Specificed",
-                  nameOfEqup: "Manual MicroHardness Tester",
-                  emailTo: widget.emailTo ?? "Please enter the email address!"),
-            ),
+                top: _screenH / 1.56,
+                left: _screenWidth / 2 + 16,
+                buttonName: "Manager",
+                pageTo: workingInProg()),
             Positioned(
                 top: _screenH / 1.33,
                 left: _screenWidth / 1.3,

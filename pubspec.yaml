@@ -35,7 +35,6 @@ dependencies:
   qrscan: ^0.3.2
   url_launcher: ^6.0.0-nullsafety
   http: ^0.13.3
-  flutter_email_sender: ^5.0.0
   font_awesome_flutter: ^9.0.0
   image_picker: ^0.8.0
   csv: ^5.0.0

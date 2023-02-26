@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/fancyButton.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -110,13 +110,7 @@ class _roomModeState extends State<roomMode> {
               top: _screenH / 1.37,
               left: _screenWidth / 10,
               child: fancyBut(
-                  pageTo: EmailContent(
-                    emailTo:
-                        emailTo != null ? emailTo : "Please enter the email",
-                    locationOfEqup:
-                        widget.location != null ? widget.location : "NUll",
-                    nameOfEqup: "Buehler Precision Cutter",
-                  ),
+                  pageTo: workingInProg(),
                   width: _screenWidth / 1.3,
                   fontsize: 28,
                   height: _screenH / 9,

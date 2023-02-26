@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/workingInPro.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
@@ -170,11 +170,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                 top: _screenH / 1.33,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
-                pageTo: EmailContent(
-                  emailTo: widget.emailTo ?? "Please enter the email",
-                  locationOfEqup: widget.location ?? "NUll",
-                  nameOfEqup: "Buehler Precision Cutter",
-                )),
+                pageTo: workingInProg()),
             Positioned(
                 top: _screenH / 1.8,
                 left: _screenWidth / 1.5,

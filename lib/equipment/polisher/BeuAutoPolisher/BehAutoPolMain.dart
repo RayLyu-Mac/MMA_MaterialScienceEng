@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/user_note.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Instruction/Polisher/buehlerPolisher/buePolisherMian.dart';
 
 class BuehlerAutoPolisherMain extends StatefulWidget {
@@ -99,14 +99,7 @@ class _BuehlerAutoPolisherMainState extends State<BuehlerAutoPolisherMain> {
                 top: _screenH / 1.56,
                 left: _screenWidth / 2 + 16,
                 buttonName: "Manager",
-                pageTo: EmailContent(
-                    locationOfEqup: widget.location != null
-                        ? widget.location
-                        : "Not Specificed",
-                    nameOfEqup: "Automatic Polisher",
-                    emailTo: widget.emailTo! != null
-                        ? widget.emailTo!
-                        : "Please enter the email address!")),
+                pageTo: workingInProg()),
             Positioned(
                 top: _screenH / 1.33,
                 left: _screenWidth / 1.3,

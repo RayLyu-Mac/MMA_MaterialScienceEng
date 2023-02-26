@@ -2,9 +2,9 @@ import 'package:mma_mse/workingInPro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/fancyButton.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/workingInPro.dart';
 
 class roomHorizontal extends StatefulWidget {
   final String? emailTo;
@@ -138,15 +138,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
                           height: _screenH / 10,
                           width: _screenWidth / 2.2,
                           buttonName: "Manager",
-                          pageTo: EmailContent(
-                            emailTo: widget.emailTo! != null
-                                ? widget.emailTo!
-                                : "Please enter the email",
-                            locationOfEqup: widget.location != null
-                                ? widget.location
-                                : "NUll",
-                            nameOfEqup: "Buehler Precision Cutter",
-                          )),
+                          pageTo: workingInProg()),
                       SizedBox(
                         height: _screenH / 40,
                       ),

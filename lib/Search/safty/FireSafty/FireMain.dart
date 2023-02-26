@@ -4,7 +4,7 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:mma_mse/Search/safty/ShowerWasher/location.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/fancyButton.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 
 class ExtingshSymbols extends StatefulWidget {
@@ -212,9 +212,7 @@ class fireProcedure extends StatelessWidget {
               height: 15,
             ),
             fancyBut(
-                pageTo: EmailContent(
-                  emailTo: "null",
-                ),
+                pageTo: workingInProg(),
                 width: 200,
                 height: 50,
                 icon: Icons.fireplace_outlined,

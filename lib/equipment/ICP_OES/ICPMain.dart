@@ -4,7 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'BackG.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/Instruction/icp_instruction/icpMain.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/equipment/Etching/acidProtocol.dart';

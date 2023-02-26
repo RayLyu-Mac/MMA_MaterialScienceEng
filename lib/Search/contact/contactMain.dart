@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'contactData.dart';
-import 'package:mma_mse/SendEmail/sendEmailMain.dart';
+import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class ContactMSE extends StatefulWidget {
@@ -143,11 +143,7 @@ class _ContactMSEState extends State<ContactMSE> {
                                               height: _screenH / 20,
                                             ),
                                             fancyBut(
-                                                pageTo: EmailContent(
-                                                  emailTo:
-                                                      property[index].eamil,
-                                                  prof: property[index].name,
-                                                ),
+                                                pageTo: workingInProg(),
                                                 width: _screenWidth / 1.4,
                                                 height: _screenH / 15,
                                                 icon: Icons.email_rounded,
