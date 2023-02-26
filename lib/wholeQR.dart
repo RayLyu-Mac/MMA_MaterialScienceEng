@@ -7,7 +7,6 @@ import 'package:mma_mse/floors/floor2/roomMain/242.dart';
 import 'package:mma_mse/floors/floor2/roomMain/244.dart';
 import 'package:mma_mse/floors/floor2/roomMain/245.dart';
 import 'package:mma_mse/floors/floor2/roomMain/246A.dart';
-import 'Search/equpment/equb_ava_data.dart';
 
 Map<String, Widget> qr_pageTo = {
   "Room 242": room242Main(),

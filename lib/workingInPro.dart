@@ -26,7 +26,7 @@ class workingInProg extends StatelessWidget {
                   height: 50,
                 ),
                 Text(
-                  "The content is working on progress! Please give me more time qwq\n \n客官请再宽限几日,小的已经在努力堆了：）",
+                  "The content is working on progress! Please give me more time qwq\n \n Or the Content is not avaiable on IOS",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 )
               ],
