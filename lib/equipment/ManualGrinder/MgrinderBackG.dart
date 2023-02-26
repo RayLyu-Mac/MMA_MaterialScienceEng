@@ -18,7 +18,7 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  List<samples> grindSample = [];
+  List<Samples> grindSample = [];
   final ScrollController controller = ScrollController();
   @override
   void initState() {
@@ -97,58 +97,58 @@ class _MgrinderBackgState extends State<MgrinderBackg> {
   }
 }
 
-class samples {
+class Samples {
   String microImg;
   String sampleImg;
   String lev;
 
-  samples({required this.lev, required this.sampleImg, required this.microImg});
+  Samples({required this.lev, required this.sampleImg, required this.microImg});
 }
 
-List<samples> grindsampledata = [
-  (samples(
+List<Samples> grindsampledata = [
+  (Samples(
       lev: "A: 80  ",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/80sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/80micro.tif.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "B:180 ",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/180sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/180micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "C:240",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/240sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/240micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "D:320",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/320sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/320micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "E:400",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/400sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/400micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "F:600",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/600sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/600micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "G:800",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/800sample.jpg?raw=true",
       microImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/800micro.jpg?raw=true")),
-  (samples(
+  (Samples(
       lev: "H1200",
       sampleImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/theory/grinmder/1200sample.jpg?raw=true",

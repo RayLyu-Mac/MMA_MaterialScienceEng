@@ -6,10 +6,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 class BuehlerPolisherMain extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  BuehlerPolisherMain(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
+  BuehlerPolisherMain({Key? key, this.location, this.emailTo})
       : super(key: key);
 
   @override

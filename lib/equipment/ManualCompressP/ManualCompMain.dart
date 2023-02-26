@@ -9,11 +9,7 @@ import 'package:mma_mse/workingInPro.dart';
 class ManualCompPress extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  ManualCompPress(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  ManualCompPress({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _ManualCompPressState createState() => _ManualCompPressState();
@@ -104,9 +100,7 @@ class _ManualCompPressState extends State<ManualCompPress> {
                       ? widget.location
                       : "Not Specificed",
                   nameOfEqup: "Manual MicroHardness Tester",
-                  emailTo: widget.emailTo! != null
-                      ? widget.emailTo!
-                      : "Please enter the email address!"),
+                  emailTo: widget.emailTo ?? "Please enter the email address!"),
             ),
             Positioned(
                 top: _screenH / 1.33,

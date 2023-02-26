@@ -5,11 +5,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 class NikonMicro extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  NikonMicro(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  NikonMicro({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _NikonMicroState createState() => _NikonMicroState();

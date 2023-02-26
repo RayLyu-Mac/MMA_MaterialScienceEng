@@ -8,11 +8,7 @@ import 'package:mma_mse/Instruction/manualGrinder/ManualGMain.dart';
 class MicroDigest extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  MicroDigest(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  MicroDigest({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _MicroDigestState createState() => _MicroDigestState();
@@ -103,9 +99,7 @@ class _MicroDigestState extends State<MicroDigest> {
                       ? widget.location
                       : "Not Specificed",
                   nameOfEqup: "Manual MicroHardness Tester",
-                  emailTo: widget.emailTo! != null
-                      ? widget.emailTo!
-                      : "Please enter the email address!"),
+                  emailTo: widget.emailTo ?? "Please enter the email address!"),
             ),
             Positioned(
                 top: _screenH / 1.33,

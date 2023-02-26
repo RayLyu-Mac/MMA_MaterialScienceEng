@@ -217,9 +217,9 @@ class _EqubPageModeState extends State<EqubPageMode> {
 }
 
 _launchURL() async {
-  const url = 'https://msebooking.mcmaster.ca/';
-  if (await canLaunch(url)) {
-    await launch(url);
+  final url = Uri.parse('https://msebooking.mcmaster.ca/');
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url);
   } else {
     throw 'Could not launch $url';
   }

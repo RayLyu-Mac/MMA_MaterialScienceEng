@@ -5,11 +5,7 @@ import 'package:mma_mse/equipment/MountPress/backGround.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class METPress extends StatefulWidget {
-  METPress(
-      {Key? key,
-      @optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.location})
-      : super(key: key);
+  METPress({Key? key, this.emailTo, this.location}) : super(key: key);
   final String? location;
   final String? emailTo;
   @override

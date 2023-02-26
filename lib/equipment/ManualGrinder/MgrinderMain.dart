@@ -6,11 +6,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 class ManualGrinder extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  ManualGrinder(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  ManualGrinder({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _ManualGrinderState createState() => _ManualGrinderState();

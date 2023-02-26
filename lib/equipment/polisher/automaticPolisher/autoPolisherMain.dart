@@ -6,11 +6,7 @@ import 'package:mma_mse/equipment/PageMode.dart';
 class AutoPolisherMain extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  AutoPolisherMain(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  AutoPolisherMain({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _AutoPolisherMainState createState() => _AutoPolisherMainState();
