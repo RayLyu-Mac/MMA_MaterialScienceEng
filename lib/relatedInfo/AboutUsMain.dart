@@ -1,8 +1,6 @@
 import 'package:mma_mse/Search/extramenu.dart';
-
 import 'AboutUSData.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class AboutTeam extends StatefulWidget {
   AboutTeam({Key? key}) : super(key: key);
@@ -37,18 +35,7 @@ class _AboutTeamState extends State<AboutTeam> {
     return Scaffold(
       backgroundColor: Colors.indigo[50],
       appBar: AppBar(
-        title: TextLiquidFill(
-          text: "About the team",
-          loadDuration: Duration(milliseconds: 1650),
-          waveDuration: Duration(
-            milliseconds: 850,
-          ),
-          waveColor: Colors.grey.shade200,
-          textStyle: TextStyle(
-            fontSize: _screenH / 23,
-            fontWeight: FontWeight.w900,
-          ),
-        ),
+        title: Text("About Us"),
         backgroundColor: Colors.black,
       ),
       body: Container(

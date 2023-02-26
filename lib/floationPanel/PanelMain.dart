@@ -1,4 +1,4 @@
-import 'package:mma_mse/Search/Search_page/search_main.dart';
+import 'package:mma_mse/DashBoard.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
@@ -25,7 +25,7 @@ class _ButtomMenuState extends State<ButtomMenu> {
 
   @override
   Widget build(BuildContext context) {
-    List pageTo = [scanQR, EqupSearch()];
+    List pageTo = [scanQR, DashBoard(), EqupSearch()];
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: (value) {
@@ -41,7 +41,8 @@ class _ButtomMenuState extends State<ButtomMenu> {
           }
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "QR Code"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Find"),
         ]);
   }

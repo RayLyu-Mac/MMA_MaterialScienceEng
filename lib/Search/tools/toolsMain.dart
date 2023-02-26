@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/buttonMode.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'tooData.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class toolMain extends StatefulWidget {
   toolMain({Key? key}) : super(key: key);
@@ -32,6 +33,7 @@ class _toolMainState extends State<toolMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: ButtomMenu(),
         appBar: AppBar(
           actions: [
             IconButton(

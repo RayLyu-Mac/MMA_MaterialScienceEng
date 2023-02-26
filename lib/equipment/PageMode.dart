@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/user_note.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/SendEmail/sendEmailMain.dart';
 import 'package:mma_mse/workingInPro.dart';
-import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/services.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/Drawer.dart';
 
@@ -84,14 +80,9 @@ class _EqubPageModeState extends State<EqubPageMode> {
       backgroundColor: widget.backC,
       appBar: AppBar(
         toolbarHeight: _screenH / 10,
-        title: TextLiquidFill(
-          text: widget.title,
-          loadDuration: Duration(milliseconds: 1650),
-          waveDuration: Duration(
-            milliseconds: 850,
-          ),
-          waveColor: widget.backC,
-          textStyle: TextStyle(
+        title: Text(
+          widget.title,
+          style: TextStyle(
             fontSize: _screenWidth / 18,
             fontWeight: FontWeight.w900,
           ),

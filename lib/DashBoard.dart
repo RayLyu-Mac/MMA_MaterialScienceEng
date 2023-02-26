@@ -42,7 +42,7 @@ class _DashBoardState extends State<DashBoard> {
   List tests = [];
   final ScrollController controller = ScrollController();
 
-  _EqupSearchState() {
+  _DashBoardState() {
     _controller.addListener(() {
       if (_controller.text.isEmpty) {
         setState(() {
@@ -149,14 +149,29 @@ class _DashBoardState extends State<DashBoard> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(title: Text("Welcome")),
+      appBar: AppBar(title: Text("MSE Dash Board")),
       body: SafeArea(
         child: Center(
           child: Column(children: [
+            Padding(
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  heightFactor: height * 0.002,
+                  child: Text(
+                    "Quick Search",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        fontSize: height * 0.03,
+                        color: Colors.grey.shade700),
+                  ),
+                ),
+                padding: EdgeInsets.only(left: width * 0.08)),
             Container(
-              padding: EdgeInsets.fromLTRB(8, 8, 5, 2),
-              height: 55,
-              width: width / 1.08,
+              padding: EdgeInsets.only(left: width * 0.01),
+              height: height * 0.07,
+              width: width * 0.86,
               child: TextField(
                 autocorrect: true,
                 expands: true,
@@ -186,8 +201,10 @@ class _DashBoardState extends State<DashBoard> {
                         itemCount: possibleResult.length,
                         itemBuilder: (BuildContext context, int index) {
                           String listData = possibleResult[index];
-                          return new Padding(
-                              padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+                          return Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: width * 0.06,
+                                  vertical: height * 0.004),
                               child: Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
@@ -214,10 +231,25 @@ class _DashBoardState extends State<DashBoard> {
                         }))
                 : SingleChildScrollView(
                     child: Column(children: [
+                      Padding(
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            heightFactor: height * 0.0015,
+                            child: Text(
+                              "Quick Access",
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline,
+                                  fontSize: height * 0.03,
+                                  color: Colors.grey.shade700),
+                            ),
+                          ),
+                          padding: EdgeInsets.only(left: width * 0.08)),
                       for (var i = 0; i < dashButton.length; i++)
                         Container(
-                            height: height * 0.13,
-                            width: width * 0.8,
+                            height: height * 0.12,
+                            width: width * 0.84,
                             margin: EdgeInsets.all(10),
                             child: ElevatedButton.icon(
                                 style: ButtonStyle(
@@ -257,7 +289,7 @@ class _DashBoardState extends State<DashBoard> {
   void searchOperation(String searchText) {
     possibleResult.clear();
     property.clear();
-    if (_isSearching != null) {
+    if (_isSearching) {
       for (int j = 0; j < _list.length; j++) {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {

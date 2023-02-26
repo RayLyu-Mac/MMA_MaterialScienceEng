@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
-import 'package:mma_mse/floationPanel/PanelMain.dart';
 import '../room/room_main.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class search_area extends StatefulWidget {
@@ -45,14 +42,13 @@ class _search_areaState extends State<search_area> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: DefaultTextStyle(
-            style: const TextStyle(
-              fontSize: 25.0,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Bobbers',
-            ),
-            child: AnimatedTextKit(animatedTexts: [
-              TyperAnimatedText("Do you want to search for...")
-            ])),
+          style: const TextStyle(
+            fontSize: 25.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Bobbers',
+          ),
+          child: Text("a"),
+        ),
       ),
       body: SafeArea(
         child: Stack(

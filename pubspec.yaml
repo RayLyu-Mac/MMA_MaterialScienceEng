@@ -40,11 +40,9 @@ dependencies:
   image_picker: ^0.8.0
   csv: ^5.0.0
   path_provider: ^2.0.2
-  animated_text_kit: ^4.2.1
   flutter_local_notifications: ^8.0.0
   flutter_native_timezone: ^2.0.0
   permission_handler: ^8.1.4+2
-  web_scraper: ^0.1.4
   flutter_launcher_icons: ^0.9.2
   flutter_zoom_drawer: ^2.1.2
   lottie: ^2.2.0

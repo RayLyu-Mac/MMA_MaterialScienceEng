@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
 import 'package:mma_mse/customTileScroll.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/layout_overview.dart';
-import 'package:page_transition/page_transition.dart';
 
 class equb_main extends StatefulWidget {
   const equb_main({Key? key}) : super(key: key);
@@ -300,6 +297,7 @@ class _equb_mainState extends State<equb_main> {
         ),
       ),
       drawer: searchEquipMain(),
+      bottomNavigationBar: ButtomMenu(),
       body: SafeArea(
           child: ListView.builder(
               controller: controller,

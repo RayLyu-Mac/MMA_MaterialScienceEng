@@ -92,14 +92,10 @@ class _welcomeState extends State<welcome> {
               height: _screenH / 20,
             ),
             Container(
-              constraints: BoxConstraints.expand(
-                width: _screenWidth / 2,
-                height: _screenH / 2.6 / adjust,
-              ),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assest/picture1.png"),
-                    fit: BoxFit.cover),
+              width: _screenWidth * 0.55,
+              child: Image(
+                image: AssetImage("assest/picture1.png"),
+                fit: BoxFit.fill,
               ),
             ),
             SizedBox(
