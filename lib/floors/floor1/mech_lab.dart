@@ -1,24 +1,19 @@
 import 'package:mma_mse/floors/floor2/roomMain/roomHorizonMode.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/floors/floor2/equbLayout/room245.dart';
 import 'equbLayout/room134.dart';
 
-class mech_lab extends StatefulWidget {
+class Mech_lab extends StatefulWidget {
   final String? emailTo;
   final String? location;
   final Widget? pageTo;
-  mech_lab(
-      {@optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.pageTo,
-      @optionalTypeArgs this.location,
-      Key? key})
+  Mech_lab({this.emailTo, this.pageTo, this.location, Key? key})
       : super(key: key);
 
   @override
-  _mech_labState createState() => _mech_labState();
+  _Mech_labState createState() => _Mech_labState();
 }
 
-class _mech_labState extends State<mech_lab> {
+class _Mech_labState extends State<Mech_lab> {
   double _screenWidth = 0;
   double _screenH = 0;
   double adjust = 0;

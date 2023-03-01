@@ -29,13 +29,13 @@ List<ToolData> safetyData = [
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/MSDS.png?raw=true",
       posCode: "a")),
   (ToolData(
-      name: "Fire Safty",
+      name: "Fire Safety",
       posCode: "b",
       pageTo: ExtingshSymbols(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/fire.png?raw=true")),
   (ToolData(
-      name: "Acids Safty",
+      name: "Acids Safety",
       posCode: "c",
       pageTo: Aciddetail(),
       backImg:
@@ -47,7 +47,7 @@ List<ToolData> safetyData = [
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true")),
   (ToolData(
-      name: "WHIMS Symbol",
+      name: "WHMIS Symbol",
       posCode: "d",
       pageTo: WhimsSymbols(),
       backImg:

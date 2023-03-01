@@ -158,7 +158,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
             functionButtonMode(
               top: _screenH / 1.51,
               left: _screenWidth / 12,
-              buttonName: "Schedulling",
+              buttonName: "Scheduling",
               url: _launchURL,
             ),
             functionButtonMode(

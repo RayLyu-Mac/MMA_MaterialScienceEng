@@ -116,7 +116,7 @@ class _floor1State extends State<floor1> {
                             backC: Colors.redAccent.shade100.withOpacity(0.8),
                             icon: Icons.remove_red_eye_rounded,
                             detailTitle: "Room 129: Eye shower",
-                            pageTo: room129(),
+                            pageTo: Room129(),
                             details:
                                 "Emergency eye shower when chemical spills",
                           ),
@@ -128,7 +128,7 @@ class _floor1State extends State<floor1> {
                             details:
                                 "Emergency body shower when chemical spills",
                             length: _screenH / 9,
-                            pageTo: room129(),
+                            pageTo: Room129(),
                             width: _screenWidth / 5.5,
                             backC: Colors.redAccent.shade100.withOpacity(0.8),
                             icon: Icons.shower_rounded,
@@ -143,9 +143,9 @@ class _floor1State extends State<floor1> {
                     width: _screenH / rwidth,
                     titleIcon: FontAwesomeIcons.microscope,
                     pageTo: warning(
-                      pageTo: room129(),
+                      pageTo: Room129(),
                       warning_note:
-                          "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lens",
+                          "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lenses",
                     ),
                     name: "129"),
             roomButton(
@@ -205,9 +205,9 @@ class _floor1State extends State<floor1> {
                 width: _screenH / rwidth,
                 titleIcon: FontAwesomeIcons.microscope,
                 pageTo: warning(
-                  pageTo: mech_lab(),
+                  pageTo: Mech_lab(),
                   warning_note:
-                      "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lens",
+                      "1. Safety Glasses\n2. Long Pants\n3. Closed Toe Shoes\n4. No Contact Lenses",
                 ),
                 name: "134"),
             roomButton(
@@ -280,13 +280,12 @@ class floor1customListTile extends StatelessWidget {
           child: InkWell(
             splashColor: Colors.blue[100],
             onTap: () => {
-              pageTo ??
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                          duration: const Duration(milliseconds: 500),
-                          child: pageTo!,
-                          type: PageTransitionType.leftToRight))
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      duration: const Duration(milliseconds: 500),
+                      child: pageTo!,
+                      type: PageTransitionType.leftToRight))
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

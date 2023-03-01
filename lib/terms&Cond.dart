@@ -72,7 +72,7 @@ class _conditionTermsState extends State<conditionTerms> {
                   height: _screenH / 40,
                 ),
                 Text(
-                  "Please note you still need to pass the McMaster Assigned training before using the equipment. \nYou must be famailar with the SOPs of the machine you are going to operate",
+                  "Please note you still need to pass the McMaster Assigned training before using the equipment. \nYou must be familiar with the SOPs of the machine you are going to operate",
                   style: TextStyle(fontSize: _screenWidth / 25),
                 ),
                 SizedBox(

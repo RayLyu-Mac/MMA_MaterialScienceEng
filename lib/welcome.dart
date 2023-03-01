@@ -102,22 +102,22 @@ class _welcomeState extends State<welcome> {
               height: _screenH / 25,
             ),
             Text(
-              "MMA System \nThe APP for Material Eng Student",
+              "MMA System \nThe APP for Material Eng Students",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: _screenWidth / 19,
-                  color: Colors.grey[50]),
+                  fontSize: _screenWidth / 18,
+                  color: Colors.grey.shade200),
             ),
             SizedBox(
-              height: _screenH / 35,
+              height: _screenH / 25,
             ),
             fancyBut(
                 pageTo: conditionTerms(pageTo: DashBoard()),
                 width: _screenWidth / 1.2,
                 height: _screenH / 10,
                 fontsize: 25,
-                icon: FontAwesomeIcons.thumbsUp,
+                icon: FontAwesomeIcons.rocket,
                 buttonName: "   Let's Start : )"),
           ],
         ),

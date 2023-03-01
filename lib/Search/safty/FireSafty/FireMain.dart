@@ -145,26 +145,29 @@ class fireProcedure extends StatelessWidget {
     final ScrollController controller = ScrollController();
     List<List> content = [
       [
-        "Hot Sample Drop on you",
-        "Stay Calm, and go to sink and rinse with cold water, try to reduce burn and seek for medical help"
+        "If a Hot Sample Drops on you",
+        "Stay calm. Go to the sink and rinse with cold water. Try to reduce the burn and seek for medical help"
       ],
       [
-        "Fire Occur",
-        "Leave the room and contact technical Staff, pull fire alarm if you can't contact"
+        "If Fire Occur",
+        "Leave the room and contact technical staff. Pull the fire alarm if you can't contact staff"
       ],
       [
-        "Fire Out of Control",
-        "Pull fire alarm and dial 88 then EOHSS (Extension: 24352) Stay nearby and try not use extinguisher"
+        "If Fire Out of Control",
+        "Pull the fire alarm and dial 88 then EOHSS (Extension: 24352). Stay nearby and try to not use the extinguisher"
       ],
       [
         "When alarm rings",
-        "Evacuate: Close door behind you, use stair. No elevator"
+        "Evacuate, close the door behind you, and use the stairs not the elevator."
       ],
       [
         "When Unsafe to evacuate",
-        'Shut the door and block crackes,stay low near window'
+        'Shut the door and block any cracks. Stay low and near the window.'
       ],
-      ["If room door is hot", "Don't open door stay put, stay low near window"]
+      [
+        "If room door is hot",
+        "Don't open the door, stay put and stay low near the window."
+      ]
     ];
     return Scaffold(
         backgroundColor: Colors.redAccent[100],

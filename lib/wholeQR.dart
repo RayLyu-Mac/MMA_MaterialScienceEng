@@ -16,6 +16,6 @@ Map<String, Widget> qr_pageTo = {
   "Room 245": room245Main(),
   "Room 239": room239(),
   "Room 246A": room246AMain(),
-  "Room 134": mech_lab(),
-  "Room 129": room129()
+  "Room 134": Mech_lab(),
+  "Room 129": Room129()
 };

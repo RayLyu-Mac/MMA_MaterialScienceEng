@@ -45,7 +45,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
     Drawer tensileResult() => Drawer(
           child: ListView(
             children: [
-              DrawerHeader(child: Text("Whims Symbols for Potential Hazard")),
+              DrawerHeader(child: Text("WHMIS Symbols for Potential Hazard")),
               for (var j = 0; j < result.length; j++)
                 ScrollcustomListTile(
                   name: result[j].title,

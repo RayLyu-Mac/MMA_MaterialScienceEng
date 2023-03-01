@@ -14,6 +14,7 @@ class mainp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Maintaince Mangament and Accessibility System',
       home: welcome(),
     );

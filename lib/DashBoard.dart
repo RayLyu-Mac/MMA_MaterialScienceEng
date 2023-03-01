@@ -183,7 +183,7 @@ class _DashBoardState extends State<DashBoard> {
                   color: Colors.black,
                 ),
                 decoration: new InputDecoration(
-                  hintText: "Search For Equpment/Test/Tools...",
+                  hintText: "Search For Equipment/Test/Tools...",
                   hintStyle:
                       TextStyle(color: Colors.grey, fontSize: _screenH / 40),
                   contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),

@@ -27,7 +27,7 @@ class _BuehlerPolisherMainState extends State<BuehlerPolisherMain> {
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true",
       intro:
-          "Polishers are used to remove the mechanical damage from the surface of the sample such as notch and scratch. The mirror finished surface are required for the further observation and analysis. \nThere are three polishers in MSE faculty, which are automatic polisher, manual polisher and Buehler Manual Polisher. ",
+          "Polishers are used to remove the mechanical damage from the surface of the sample such as notch and scratch. The mirror finished surface is required for the observation and analysis. \nThere are three polishers in MSE faculty, which are automatic polisher, manual polisher and Buehler Manual Polisher. ",
       theory: BehPolisherInstru(),
     );
   }

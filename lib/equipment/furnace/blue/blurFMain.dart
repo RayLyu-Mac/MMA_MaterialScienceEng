@@ -32,11 +32,11 @@ class _BlueFurnaceState extends State<BlueFurnace> {
       extraPage: ExtingshSymbols(),
       toolTip: "Fire Safety",
       warnNote:
-          "•Make sure the furnace is properly grounded and no loose wires are connected to furnace\n•Extra cautios need to be taken since material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occues leave the room and contact technicians",
+          "•Make sure the furnace is properly grounded and no loose wires are connected to the furnace\n•Extra caution is required because the material won't appear hot but can cause severe tissue damage\n•Must wear all protective equipment\n•If fire occurs leave the room and contact technicians",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
       intro:
-          "Furnace is used to heat the sample in order to change the microstructure of the samples, during the cooling down process, changing the cooling rate can produce sample with different microstructure and characteristic.\nSiC Furnace has the maximum temp of 1450 C for Blue furnace the max temp is 1000 C \nPlease choose the appropriate furnace for your experiment",
+          "The furnace is used to heat the sample in order to change the microstructure of the samples. During the cooling down process, changing the cooling rate can produce  a sample with different microstructure and characteristics. The SiC Furnace has the maximum temp of 1450 C. The maximum temp for the Blue Furnace is 1000 C. Please choose the appropriate furnace for your experiment",
       theory: PhaseDiag(),
     );
   }

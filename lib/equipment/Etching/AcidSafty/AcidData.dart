@@ -30,7 +30,7 @@ String wcorro =
 String wexplo =
     "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/whims/explode.jpg?raw=true";
 String prepara =
-    "1.Read MSDS for HF\n2.Preview the SOPs\n3. Make sure the you can locate the position for first aid kit and chemical spill kit\nMake sure perform inside the fumehood";
+    "1.Read MSDS for HF\n2.Preview the SOPs\n3. Make sure that you can locate the first aid kit and the chemical spill kit\nMake sure perform the experiment inside the fumehood";
 String bImg =
     "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/IronS.jpg?raw=true";
 List<testdetailData> acidPropData = [
@@ -40,7 +40,7 @@ List<testdetailData> acidPropData = [
     physicalP:
         "1.Hydrogen fluoride, anhydrous appears as a colorless fuming liquid boiling at 67°F. Shipped as a liquid confined under its own vapor pressure.\n2.Vapors are heavier than air. Density 8.2 lb / gal.",
     chemicalP:
-        "1.It can react with glazes, enamels, pottery, concrete, rubber,leather, many metals (especially cast iron) and many organic compounds. \n2.It can etches glass and it may explode when meet hydrogen gas. ",
+        "1.It can react with glazes, enamels, pottery, concrete, rubber,leather, many metals (especially cast iron) and many organic compounds. \n2.It can etch glass and it may explode when it interacts with hydrogen gas.",
     toxic:
         "1.It can cause destruction of deep tissue layers, concentrated acid will case sever skin burn. \n2.Contact with eye will cause cornea destruction and blindess. \n3.Inhalation of HF will cause several lung faliure. \n4.Ingestion of HF may cause death with small amount",
     prep: prepara,
