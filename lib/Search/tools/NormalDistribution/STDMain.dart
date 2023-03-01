@@ -160,7 +160,7 @@ class _STDCheckState extends State<STDCheck> {
                 ),
                 Container(
                   child: Text(
-                    "The value is: " + (pc ?? "--"),
+                    "The value is: " + (pc),
                     style: TextStyle(
                         fontSize: _screenH / 45, fontWeight: FontWeight.bold),
                   ),
@@ -272,7 +272,7 @@ class _STDCheckState extends State<STDCheck> {
                 Container(
                   child: Text(
                     "Z Value after modified: " +
-                        ((mz ?? 99999).toStringAsExponential(2) ?? "--"),
+                        ((mz).toStringAsExponential(2)),
                     style: TextStyle(
                         fontSize: _screenH / 45, fontWeight: FontWeight.bold),
                   ),
@@ -298,7 +298,7 @@ class _STDCheckState extends State<STDCheck> {
                       width: _screenWidth / 1.3,
                       child: Text(
                         "68% Confidence Interval: " +
-                            (ci68 ?? 9999).toStringAsExponential(2),
+                            (ci68).toStringAsExponential(2),
                         style: TextStyle(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.left,
                       ),
@@ -310,7 +310,7 @@ class _STDCheckState extends State<STDCheck> {
                       width: _screenWidth / 1.3,
                       child: Text(
                         "95% Confidence Interval: " +
-                            (ci95 ?? 9999).toStringAsExponential(2),
+                            (ci95).toStringAsExponential(2),
                         style: TextStyle(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.left,
                       ),
@@ -322,7 +322,7 @@ class _STDCheckState extends State<STDCheck> {
                       width: _screenWidth / 1.3,
                       child: Text(
                         "99% Confidence Interval: " +
-                            (ci99 ?? 9999).toStringAsExponential(2),
+                            (ci99).toStringAsExponential(2),
                         style: TextStyle(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.left,
                       ),
@@ -395,11 +395,10 @@ class _STDCheckState extends State<STDCheck> {
                           output = "Please correct your input";
                         } else {
                           output = stdNum[input.toString().substring(
-                                          0, input.toString().length - 1)]![
-                                      int.parse(input.toString()[
-                                          input.toString().length - 1])]
-                                  .toString() ??
-                              "Please correct your input";
+                                      0, input.toString().length - 1)]![
+                                  int.parse(input
+                                      .toString()[input.toString().length - 1])]
+                              .toString();
                         }
                       });
                     },
@@ -414,8 +413,7 @@ class _STDCheckState extends State<STDCheck> {
                 ),
                 Container(
                   child: Text(
-                    "The probablity density for Z value is: " +
-                        (output ?? "--"),
+                    "The probablity density for Z value is: " + (output),
                     style: TextStyle(
                         fontSize: _screenH / 40, fontWeight: FontWeight.bold),
                   ),

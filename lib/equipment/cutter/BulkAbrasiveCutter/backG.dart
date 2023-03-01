@@ -22,12 +22,12 @@ Map<String, String> data = {
   "10S30":
       "Resin Bonded “Silicon Carbide” for Soft Non-Ferrous materials (30 – 300 HV)",
 };
-String back_img =
+String backImg =
     "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/bg.jpg?raw=true";
 final List<Widget> pages = [
   pageMode(
     content: data.values.toList()[0],
-    back_img: back_img,
+    back_img: backImg,
     title: "CW12-50",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/cw12.jpg?raw=true",

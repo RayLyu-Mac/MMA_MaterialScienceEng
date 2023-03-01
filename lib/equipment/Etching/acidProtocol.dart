@@ -36,7 +36,7 @@ class _AcidSaftyState extends State<AcidSafty> {
       pages.add(pageMode(
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
-        back_img: testBGdetail[j].backImg,
+        backImg: testBGdetail[j].backImg,
         addOnImg: testBGdetail[j].addOnImg,
         pageTo: testBGdetail[j].pageTo,
       ));

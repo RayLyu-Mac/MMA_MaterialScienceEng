@@ -3,7 +3,7 @@ import 'package:page_transition/page_transition.dart';
 
 class pageMode extends StatefulWidget {
   final String? content;
-  final String back_img;
+  final String backImg;
   final String title;
   final String? addOnImg;
   final bool? wholeImg;
@@ -18,7 +18,7 @@ class pageMode extends StatefulWidget {
       @optionalTypeArgs this.height,
       @optionalTypeArgs this.length,
       @optionalTypeArgs this.left,
-      required this.back_img,
+      required this.backImg,
       @optionalTypeArgs this.width,
       @optionalTypeArgs this.content,
       @optionalTypeArgs this.addOnImg,
@@ -60,7 +60,7 @@ class _pageModeState extends State<pageMode> {
                   height: _screenH / adjust,
                   width: _screenWidth,
                   alignment: Alignment.center,
-                  image: NetworkImage(widget.back_img),
+                  image: NetworkImage(widget.backImg),
                 ),
               )),
           Positioned(

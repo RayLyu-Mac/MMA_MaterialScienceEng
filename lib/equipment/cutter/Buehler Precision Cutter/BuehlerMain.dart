@@ -4,11 +4,7 @@ import 'DashBorad.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
 class BuehlerCutterMain extends StatefulWidget {
-  BuehlerCutterMain(
-      {Key? key,
-      @optionalTypeArgs this.emailTo,
-      @optionalTypeArgs this.location})
-      : super(key: key);
+  BuehlerCutterMain({Key? key, this.emailTo, this.location}) : super(key: key);
   final String? location;
   final String? emailTo;
   @override

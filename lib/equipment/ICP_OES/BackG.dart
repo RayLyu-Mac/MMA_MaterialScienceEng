@@ -32,41 +32,41 @@ String backImg =
 List<Widget> pages = [
   pageMode(
       content: document.values.toList()[0],
-      back_img: backImg,
+      backImg: backImg,
       title: "Sample Introduction System"),
   pageMode(
       content: document.values.toList()[1],
-      back_img: backImg,
+      backImg: backImg,
       title: "Excitation Source"),
   pageMode(
       content: document.values.toList()[2],
-      back_img: backImg,
+      backImg: backImg,
       title: "Spectrometer"),
   pageMode(
       content: document.values.toList()[3],
-      back_img: backImg,
+      backImg: backImg,
       title: "Detection System"),
   pageMode(
       content: document.values.toList()[4],
-      back_img: backImg,
+      backImg: backImg,
       title: "Data Acquisition and Processing"),
   pageMode(
       content: document.values.toList()[5],
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpBlankCali.png?raw=true",
-      back_img: backImg,
+      backImg: backImg,
       title: "Blank Result Expected"),
   pageMode(
       content: document.values.toList()[6],
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpNaturaI.png?raw=true",
-      back_img: backImg,
+      backImg: backImg,
       title: "Reason one: Natural Interference"),
   pageMode(
       content: document.values.toList()[7],
       addOnImg:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/icpCarry.png?raw=true",
-      back_img: backImg,
+      backImg: backImg,
       title: "Reason two: Carry Over or Memory Effect"),
 ];
 

@@ -17,21 +17,21 @@ Map<String, String> data = {
   "Factors May Affect the Test":
       "\n•1. Interial Effect\n•2.	The complexity of the loading at high impact rate and the boundary conditions \n•3.	The effect of high strain rates on constitutive equations \n•4.	The non-isothermal character of test \n•5.	3-D aspect of the fracture behavior (tunneling effect)\n•6.	Competition between ductile and brittle fracture ",
 };
-final String back_img = "assest/test/hdtbg1.jpg";
+final String backImg = "assest/test/hdtbg1.jpg";
 final List<Widget> pages = [
   pageMode(
     content: data.values.toList()[0],
-    back_img: back_img,
+    backImg: backImg,
     title: "Tests Standard",
   ),
   pageMode(
     content: data.values.toList()[1],
-    back_img: back_img,
+    backImg: backImg,
     title: "Ductile to Brittle Transition",
   ),
   pageMode(
     content: data.values.toList()[2],
-    back_img: back_img,
+    backImg: backImg,
     title: "Factors May Affect the Test",
   ),
 ];
