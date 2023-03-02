@@ -37,7 +37,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
     }
   }
 
-  List<testdetailData> result = whims;
+  List<WHIMSData> result = whims;
   @override
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();
@@ -72,8 +72,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
                 icon: Icon(FontAwesomeIcons.timesCircle))
           ],
           title: Text(
-            "Whims Symbols for Potential Hazard",
-            style: TextStyle(fontSize: _screenH / 40),
+            "WHMIS Symbols",
           ),
         ),
         drawer: Container(
@@ -88,41 +87,37 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
               return Card(
                   color: Colors.white.withOpacity(0.7),
                   semanticContainer: true,
-                  margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
+                  margin: EdgeInsets.fromLTRB(21, 16, 21, 12),
                   elevation: 8,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)),
+                      borderRadius: BorderRadius.circular(20)),
                   clipBehavior: Clip.antiAlias,
-                  child: Stack(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Positioned(
-                        top: 5.0,
-                        left: 10.0,
-                        child: Text(
-                          result[index].title,
-                          style: TextStyle(
-                              fontSize: result[index].titleFontsize,
-                              fontWeight: FontWeight.bold),
-                        ),
+                      Text(
+                        result[index].title,
+                        style: TextStyle(
+                            fontSize: result[index].titleFontsize * 1.3,
+                            fontWeight: FontWeight.bold),
                       ),
-                      Positioned(
-                          top: 40,
-                          left: _screenWidth / (result[index].picLeft),
-                          child: Image.network(
-                            result[index].addOnImg,
-                            fit: BoxFit.fitWidth,
-                            height: 225,
+                      Image.network(
+                        result[index].addOnImg,
+                        fit: BoxFit.fitWidth,
+                        height: 225,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                          width: _screenWidth / 1.2,
+                          child: Text(
+                            result[index].content,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: result[index].contentFontsize),
                           )),
-                      Positioned(
-                          top: 275,
-                          left: 5,
-                          child: Container(
-                              width: _screenWidth / 1.2,
-                              child: Text(
-                                result[index].content,
-                                style: TextStyle(
-                                    fontSize: result[index].contentFontsize),
-                              )))
                     ],
                   ));
             }));

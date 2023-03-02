@@ -18,7 +18,7 @@ class _METPressState extends State<METPress> {
     return EqubPageMode(
         title: "Mounting Press MET Lab",
         warnNote:
-            "Please be familiar with:\n•The essential material needed for pressing: funnel and resin\n•Choose the proper clip holders",
+            "Please be familiar with:\n•The essential material needed for pressing: Funnel and resin\n•Choosing the proper clip holders",
         instruction: METinstruction(),
         theory: mountPressBackG(),
         backC: Colors.indigo.shade100,
