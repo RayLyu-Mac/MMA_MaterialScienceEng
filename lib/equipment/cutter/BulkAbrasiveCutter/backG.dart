@@ -27,42 +27,42 @@ String backImg =
 final List<Widget> pages = [
   pageMode(
     content: data.values.toList()[0],
-    back_img: backImg,
+    backImg: backImg,
     title: "CW12-50",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/cw12.jpg?raw=true",
   ),
   pageMode(
     content: data.values.toList()[1],
-    back_img: back_img,
+    backImg: backImg,
     title: "51-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/51met.jpg?raw=true",
   ),
   pageMode(
     content: data.values.toList()[2],
-    back_img: back_img,
+    backImg: backImg,
     title: "52-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/52met.jpg?raw=true",
   ),
   pageMode(
     content: data.values.toList()[3],
-    back_img: back_img,
+    backImg: backImg,
     title: "53-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/53met.jpg?raw=true",
   ),
   pageMode(
     content: data.values.toList()[4],
-    back_img: back_img,
+    backImg: backImg,
     title: "54-MET",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/54met.jpg?raw=true",
   ),
   pageMode(
     content: data.values.toList()[5],
-    back_img: back_img,
+    backImg: backImg,
     title: "10S30",
     addOnImg:
         "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/theory/automatic_cutter/10s30.jpg?raw=true",

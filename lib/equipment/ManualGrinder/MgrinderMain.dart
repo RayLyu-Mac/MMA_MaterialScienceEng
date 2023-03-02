@@ -16,7 +16,7 @@ class _ManualGrinderState extends State<ManualGrinder> {
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(
-        title: "Llyold Tensile Tester",
+        title: "Manual Grinder",
         warnNote:
             "•Securely hold the sample as it could become a projectile if the grinding wheel catches the sample.\n•The water is cold, and your hand can become numb, you may not realize that your finger is touching the grinding paper and you can grind your skin off your finger.",
         instruction: ManualGrinderinstruction(),

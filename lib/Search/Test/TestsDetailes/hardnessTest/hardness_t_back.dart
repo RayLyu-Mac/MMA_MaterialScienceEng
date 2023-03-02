@@ -33,7 +33,7 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
       pages.add(pageMode(
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
-        back_img: testBGdetail[j].backImg,
+        backImg: testBGdetail[j].backImg,
         addOnImg: testBGdetail[j].addOnImg!,
       ));
     }

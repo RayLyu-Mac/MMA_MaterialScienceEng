@@ -14,17 +14,17 @@ class DashButton extends StatefulWidget {
   final double? fontsize;
   final Widget? pageTo;
   const DashButton(
-      {@optionalTypeArgs this.buttonName,
-      @optionalTypeArgs this.height,
-      @optionalTypeArgs this.width,
+      { this.buttonName,
+       this.height,
+       this.width,
       required this.cardColor,
-      @optionalTypeArgs this.pageTo,
+       this.pageTo,
       required this.left,
       required this.top,
-      @optionalTypeArgs this.stepTitle,
-      @optionalTypeArgs this.instruction,
-      @optionalTypeArgs this.button_icon,
-      @optionalTypeArgs this.fontsize,
+       this.stepTitle,
+       this.instruction,
+       this.button_icon,
+       this.fontsize,
       Key? key})
       : super(key: key);
 
@@ -119,7 +119,7 @@ class swtich extends StatelessWidget {
       {required this.iconButton,
       required this.iconName,
       required this.screenH,
-      @optionalTypeArgs this.fontSize,
+       this.fontSize,
       Key? key})
       : super(key: key);
 

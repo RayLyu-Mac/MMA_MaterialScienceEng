@@ -10,8 +10,8 @@ class BuehlerAutoPolisherMain extends StatefulWidget {
   final String? emailTo;
   BuehlerAutoPolisherMain(
       {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
+      this.location,
+      this.emailTo})
       : super(key: key);
 
   @override

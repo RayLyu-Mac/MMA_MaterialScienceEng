@@ -44,7 +44,7 @@ class _ACLTestState extends State<ACLTest> {
       pages.add(pageMode(
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
-        back_img: testBGdetail[j].backImg,
+        backImg: testBGdetail[j].backImg,
         addOnImg: testBGdetail[j].addOnImg,
         pageTo: testBGdetail[j].pageTo,
         height: testBGdetail[j].top,

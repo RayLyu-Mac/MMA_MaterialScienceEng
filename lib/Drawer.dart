@@ -9,7 +9,7 @@ class standardDrawer extends StatefulWidget {
   final String header;
   final List<ListTile>? others;
   standardDrawer(
-      {required this.header, @optionalTypeArgs this.others, Key? key})
+      {required this.header,  this.others, Key? key})
       : super(key: key);
 
   @override

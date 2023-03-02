@@ -172,7 +172,7 @@ class _ChemicalShowerEyeWasherState extends State<ChemicalShowerEyeWasher> {
                                 width: _screenWidth / 2.3,
                                 height: _screenH / 2.3),
                             child: Text(
-                              "A safety shower is a unit designed to wash an individual's head and body which has come into contact with hazardous chemicals. Large volumes of water are used and a user may need to take off any clothing that has been contaminated with hazardous chemicals. Safety showers cannot be used for flushing an individual's eyes, due to the high pressure of water from the shower, which can damage a user's eyes.",
+                              "A safety shower is a unit designed to wash an individual’s head and body that has come into contact with hazardous chemicals. Large volumes of water is used to  A user may need to take off any clothing contaminated by hazardous chemicals. Large volumes of water are used and a user may need to take off any clothing that has been contaminated with hazardous chemicals. Safety showers cannot be used for flushing an individual's eyes, due to the high pressure of water from the shower, which can damage a user's eyes.",
                               style: TextStyle(fontSize: _screenH / 48),
                             ),
                           )

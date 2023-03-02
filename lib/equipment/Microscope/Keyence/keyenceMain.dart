@@ -16,12 +16,12 @@ class _KeyenceMMainState extends State<KeyenceMMain> {
     return EqubPageMode(
         title: "Keyence Microscope",
         warnNote:
-            "•Make Sure the smaples used have been properly polished and etched",
+            "•Make sure the samples used have been properly polished and etched",
         instruction: KeyenceMicroInstru(),
         backC: Colors.purple.shade100,
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/Keyence.png?raw=true",
         intro:
-            "Microscope which can help the zoom in the sample so that the sample can be observe the microstructure then doing the further analysis.  In MSE faculty, there are two microscope which are Nikon and Keyence microscope.\n \nBoth Keyence and Nikon Microscope perform same function");
+            "Microscope which can zoom in the sample so that the microstructure can be observed when doing further analysis. In MSE faculty, there are two microscopes, Nikon and Keyence microscope.\nBoth Keyence and Nikon Microscope perform the same function.");
   }
 }

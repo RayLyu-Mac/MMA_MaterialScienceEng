@@ -27,6 +27,6 @@ class _METPressState extends State<METPress> {
         img:
             "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
         intro:
-            "The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin), which can mount the sample firmly and easier for further process. \nThere are three types mount press in MSE faculty which are Mounting Press MET Lab, Mounting Press Eco 200 and Mounting Press Strues.");
+            "The Mounting Press is used to embed the metallurgical sample in Bakelite (Phenolic Resin), which can mount the sample firmly and easier for further process. \nThere are three types of mount press in the MSE faculty. They are Mounting Press MET Lab, Mounting Press Eco 200 and Mounting Press Strues.");
   }
 }

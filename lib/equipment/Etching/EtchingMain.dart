@@ -8,11 +8,7 @@ import 'AcidSafty/AcidMain.dart';
 class Etching extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  Etching(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  Etching({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _EtchingState createState() => _EtchingState();
@@ -32,7 +28,7 @@ class _EtchingState extends State<Etching> {
       img:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true",
       intro:
-          "Etching process which after the polishing process can remove the element between the gain and make the gain boundary clearer and more obvious which can make the sample much brighter in microscope level. ",
+          "The etching process, which is after the polishing process, can remove the element between the gain. It can make the gain boundary clearer and more obvious which can make the sample much brighter in microscope level. ",
       theory: Aciddetail(),
     );
   }

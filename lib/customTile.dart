@@ -6,7 +6,7 @@ class customListTile extends StatelessWidget {
       required this.pageTo,
       required this.fonts,
       required this.controller,
-      @optionalTypeArgs this.bgColor,
+       this.bgColor,
       key})
       : super(key: key);
   final String name;

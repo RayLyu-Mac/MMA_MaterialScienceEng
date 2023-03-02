@@ -15,14 +15,14 @@ class functionButtonMode extends StatefulWidget {
   final String? warnV;
 
   functionButtonMode(
-      {@optionalTypeArgs this.top,
-      @optionalTypeArgs this.left,
+      { this.top,
+       this.left,
       required this.buttonName,
-      @optionalTypeArgs this.pageTo,
-      @optionalTypeArgs this.fontSize,
-      @optionalTypeArgs this.warnNote,
-      @optionalTypeArgs this.url,
-      @optionalTypeArgs this.warnV,
+       this.pageTo,
+       this.fontSize,
+       this.warnNote,
+       this.url,
+       this.warnV,
       Key? key})
       : super(key: key);
 

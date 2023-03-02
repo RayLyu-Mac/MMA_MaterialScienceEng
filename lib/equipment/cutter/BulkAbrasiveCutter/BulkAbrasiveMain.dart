@@ -10,11 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class BulkAbrasive_Main extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  BulkAbrasive_Main(
-      {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.emailTo})
-      : super(key: key);
+  BulkAbrasive_Main({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
   _BulkAbrasive_MainState createState() => _BulkAbrasive_MainState();
@@ -42,11 +38,11 @@ class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
       extraPage: BulkAbrasiveCutter(),
       toolTip: "Gear Intro",
       warnNote:
-          "•Ensure the sample is securely fastened \n•Cutting wheel is completely stoped before opening the canopy\n•Do not have the blade the touching the sample prior engaging the motor\n•Cut the sample slowly\n•Sample size should be smaller than 2 inches",
+          "•Ensure the sample is securely fastened \n•Ensure the cutting wheel is completely stopped before opening the canopy\n•Do not have the blade touching the sample prior to engaging the motor\n•Cut the sample slowly\n•Sample size should be smaller than 2 inches",
       img:
           "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true",
       intro:
-          "Cutters is used for cutting big sample into suitable size, and ready for the further processing and analysis.\nThe bulk abrasive cutter are used for big sample sectioning, if you are looking for small and delicated cutting please use precision cutter.",
+          "Cutters are used for cutting big samples into suitable sizes to be ready for further processing and analysis. The bulk abrasive cutter is used for big sample sectioning. If you are looking for small and delicate cutting please use",
       theory: automaticModeInterFaceButton(),
     );
   }

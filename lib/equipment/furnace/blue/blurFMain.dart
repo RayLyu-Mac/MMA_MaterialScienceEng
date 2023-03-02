@@ -11,9 +11,9 @@ class BlueFurnace extends StatefulWidget {
   final bool? ori;
   BlueFurnace(
       {Key? key,
-      @optionalTypeArgs this.location,
-      @optionalTypeArgs this.ori,
-      @optionalTypeArgs this.emailTo})
+       this.location,
+       this.ori,
+       this.emailTo})
       : super(key: key);
 
   @override
