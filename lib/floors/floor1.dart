@@ -57,7 +57,6 @@ class _floor1State extends State<floor1> {
       adjust = 0.9;
     }
     return Scaffold(
-        backgroundColor: Colors.grey.shade200.withOpacity(0.9),
         appBar: AppBar(
           actions: [
             IconButton(

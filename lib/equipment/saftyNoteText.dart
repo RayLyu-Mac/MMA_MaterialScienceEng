@@ -79,12 +79,13 @@ class _warningState extends State<warning> with SingleTickerProviderStateMixin {
                     ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
-                              context,
-                              PageTransition(
-                                  child: widget.pageTo,
-                                  duration: Duration(milliseconds: 650),
-                                  type: PageTransitionType.scale,
-                                  alignment: Alignment.centerLeft));
+                                  context,
+                                  PageTransition(
+                                      child: widget.pageTo,
+                                      duration: Duration(milliseconds: 650),
+                                      type: PageTransitionType.scale,
+                                      alignment: Alignment.centerLeft))
+                              .then((value) => Navigator.of(context).pop());
                         },
                         icon: Icon(Icons.forward),
                         label: Text(

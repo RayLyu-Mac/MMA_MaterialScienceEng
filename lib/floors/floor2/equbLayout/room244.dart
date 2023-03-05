@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/furnace/Sic/SiCFurnaceMain.dart';
 import 'package:mma_mse/equipment/furnace/blue/blurFMain.dart';
-import 'package:flutter/services.dart';
-import 'package:mma_mse/floors/roomBut.dart';
+import 'package:mma_mse/floors/EqubButton.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 
 class room244LayO extends StatefulWidget {
   room244LayO({Key? key}) : super(key: key);
@@ -15,26 +15,6 @@ class _room244LayOState extends State<room244LayO> {
   double _screenWidth = 0;
   double _screenH = 0;
   double adjust = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
-  @override
-  dispose() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-    super.dispose();
-  }
 
   @override
   void didChangeDependencies() {
@@ -56,94 +36,25 @@ class _room244LayOState extends State<room244LayO> {
       _screenH = _screenH * 1.16;
     }
     return Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.8),
-        body: Column(children: [
-          SizedBox(
-            height: _screenWidth / 40,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: _screenH / 30,
-              ),
-              roomButton(
-                  length: _screenWidth / 8,
-                  width: _screenH / 3,
-                  pageTo: SiCFurnace(
-                    ori: true,
-                  ),
-                  backImg:
-                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
-                  name: "SiC Furnace"),
-              SizedBox(
-                width: _screenH / 5,
-              ),
-              for (var i = 0; i < 3; i++)
-                Row(
-                  children: [
-                    SizedBox(
-                      width: _screenH / 19,
-                    ),
-                    roomButton(
-                        length: _screenWidth / 8,
-                        width: _screenH / 3.4,
-                        pageTo: BlueFurnace(
-                          ori: true,
-                        ),
-                        backImg:
-                            "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
-                        name: "Blue Furnace"),
-                  ],
-                )
-            ],
-          ),
-          SizedBox(
-            height: _screenWidth / 28,
-          ),
-          Row(children: [
-            SizedBox(width: _screenH / 3),
-            for (var i = 0; i < 3; i++)
-              Row(
-                children: [
-                  SizedBox(
-                    width: _screenH / 19,
-                  ),
-                  roomButton(
-                      length: _screenWidth / 8,
-                      width: _screenH / 3.4,
-                      pageTo: BlueFurnace(
-                        ori: true,
-                      ),
-                      backImg:
-                          "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
-                      name: "Blue Furnace"),
-                ],
-              )
-          ]),
-          SizedBox(
-            height: _screenWidth / 35,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: _screenH / 25,
-              ),
-              roomButton(
-                  length: _screenWidth / 8, width: _screenH / 3, name: "sink"),
-              SizedBox(
-                width: _screenH / 1.8,
-              ),
-              roomButton(
-                  length: _screenWidth / 8,
-                  width: _screenH / 1.6,
-                  pageTo: BlueFurnace(
-                    ori: true,
-                  ),
-                  backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/HTFume.png?raw=true",
-                  name: "Fume Hood, Salt Pots used for heat treating"),
-            ],
-          )
-        ]));
+        appBar: AppBar(
+          title: Text("Room 244 Equipment List"),
+        ),
+        body: SingleChildScrollView(
+            child: Column(children: [
+          EqubButton(
+              backColor: furnace,
+              function: purpfurnace,
+              pageTo: SiCFurnace(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
+              name: "SiC Furnace"),
+          EqubButton(
+              function: purpfurnace,
+              backColor: furnace,
+              pageTo: BlueFurnace(),
+              backImg:
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
+              name: "Blue Furnace"),
+        ])));
   }
 }

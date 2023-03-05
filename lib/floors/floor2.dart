@@ -11,15 +11,11 @@ import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246A.dart';
 import 'floor2/roomMain/246.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
-import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'floor2/roomMain/241.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class floor2 extends StatefulWidget {
   final bool? safty;
@@ -43,15 +39,6 @@ class _floor2State extends State<floor2> {
   double _screenH = 0;
   double adjust = 1;
   double saftyI = -1;
-
-  @override
-  void goToPage(qr_result) {
-    Navigator.push(
-        context,
-        PageTransition(
-            child: qr_pageTo[qr_result]!,
-            type: PageTransitionType.bottomToTop));
-  }
 
   @override
   void initState() {
