@@ -15,7 +15,6 @@ class welcome extends StatefulWidget {
 class _welcomeState extends State<welcome> {
   double _screenWidth = 0;
   double _screenH = 0;
-  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -26,10 +25,6 @@ class _welcomeState extends State<welcome> {
 
   @override
   Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
-      _screenH = _screenH * 0.83;
-      adjust = 0.8;
-    }
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70.0),
@@ -58,15 +53,15 @@ class _welcomeState extends State<welcome> {
       ),
       body: Container(
         constraints: BoxConstraints.expand(
-          width: _screenWidth / 1,
-          height: _screenH / 1 / adjust,
+          width: _screenWidth,
+          height: _screenH * 1.08,
         ),
         decoration: BoxDecoration(
             image: DecorationImage(
           colorFilter: new ColorFilter.mode(
               Colors.blueAccent.withOpacity(0.7), BlendMode.dstATop),
           image: AssetImage("assest/picture2.png"),
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         )),
         child: Column(
           children: [
@@ -91,8 +86,9 @@ class _welcomeState extends State<welcome> {
             SizedBox(
               height: _screenH / 20,
             ),
+            Spacer(),
             Container(
-              width: _screenWidth * 0.55,
+              width: _screenWidth * 0.51,
               child: Image(
                 image: AssetImage("assest/picture1.png"),
                 fit: BoxFit.fill,
@@ -101,6 +97,7 @@ class _welcomeState extends State<welcome> {
             SizedBox(
               height: _screenH / 25,
             ),
+            Spacer(),
             Text(
               "MMA System \nThe APP for Material Eng Students",
               textAlign: TextAlign.center,
@@ -110,15 +107,19 @@ class _welcomeState extends State<welcome> {
                   color: Colors.grey.shade200),
             ),
             SizedBox(
-              height: _screenH / 25,
+              height: _screenH / 24,
             ),
             fancyBut(
                 pageTo: conditionTerms(pageTo: DashBoard()),
                 width: _screenWidth / 1.2,
-                height: _screenH / 10,
+                height: _screenH / 9.6,
                 fontsize: 25,
                 icon: FontAwesomeIcons.rocket,
                 buttonName: "   Let's Start : )"),
+            SizedBox(
+              height: _screenH / 30,
+            ),
+            Spacer(),
           ],
         ),
       ),
