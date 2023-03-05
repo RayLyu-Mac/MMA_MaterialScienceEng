@@ -51,6 +51,9 @@ class _ContactMSEState extends State<ContactMSE> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        appBar: AppBar(
+          title: Text("Professor List"),
+        ),
         resizeToAvoidBottomInset: false,
         key: globalKey,
         body: Column(

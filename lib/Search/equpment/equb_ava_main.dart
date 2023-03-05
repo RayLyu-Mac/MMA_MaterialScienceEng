@@ -20,7 +20,6 @@ class _equb_mainState extends State<equb_main> {
   List code = [];
   String titleForCsv = '';
   List<Widget> pT = [];
-  double _screenH = 0;
   double co = 0.5;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
@@ -46,7 +45,6 @@ class _equb_mainState extends State<equb_main> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
   }
 
   @override

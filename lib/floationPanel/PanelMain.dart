@@ -41,7 +41,7 @@ class _ButtomMenuState extends State<ButtomMenu> {
           }
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "QR Code"),
+          // BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "QR Code"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Find"),
         ]);

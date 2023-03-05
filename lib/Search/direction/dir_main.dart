@@ -28,22 +28,6 @@ class _direction_mainState extends State<direction_main> {
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         backgroundColor: Colors.black,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => search_main(),
-                  ));
-            },
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-              size: 34,
-            ),
-          )
-        ],
         title: Text("Direction For Material Eng",
             style: TextStyle(
                 color: Colors.white,

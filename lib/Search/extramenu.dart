@@ -66,12 +66,6 @@ class _extraMenuState extends State<extraMenu> {
           fonts: 16,
           leadIcon: FontAwesomeIcons.paperPlane,
         ),
-        floor1customListTile(
-          name: "   Activities",
-          web: _launchURL,
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.democrat,
-        ),
       ],
     );
   }

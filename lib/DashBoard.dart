@@ -11,7 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
-import 'workingInPro.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 DateTime now = new DateTime.now();
 DateTime date = new DateTime(now.year, now.month, now.day);
@@ -137,18 +137,19 @@ class _DashBoardState extends State<DashBoard> {
       MaterialStateProperty.all(Colors.yellow.shade100),
       saftyMain()
     ],
-    [
-      "    QR Scanner",
-      "assest/lot/qr.json",
-      MaterialStateProperty.all(Colors.purple.shade100),
-      workingInProg()
-    ]
+    // [
+    //   "    QR Scanner",
+    //   "assest/lot/qr.json",
+    //   MaterialStateProperty.all(Colors.purple.shade100),
+    //   workingInProg()
+    // ]
   ];
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      bottomNavigationBar: ButtomMenu(),
       appBar: AppBar(title: Text("MSE Dash Board")),
       body: SafeArea(
         child: Center(
@@ -170,7 +171,7 @@ class _DashBoardState extends State<DashBoard> {
             //     padding: EdgeInsets.only(left: width * 0.08)),
             Container(
               padding: EdgeInsets.only(left: width * 0.01),
-              margin: EdgeInsets.only(top: height * 0.03),
+              margin: EdgeInsets.symmetric(vertical: height * 0.03),
               height: height * 0.07,
               width: width * 0.86,
               child: TextField(
@@ -251,7 +252,7 @@ class _DashBoardState extends State<DashBoard> {
                         Container(
                             height: height * 0.12,
                             width: width * 0.84,
-                            margin: EdgeInsets.all(10),
+                            margin: EdgeInsets.all(12),
                             child: ElevatedButton.icon(
                                 style: ButtonStyle(
                                     backgroundColor: dashButton[i][2]),

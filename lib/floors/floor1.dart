@@ -254,7 +254,7 @@ class _floor1State extends State<floor1> {
 class floor1customListTile extends StatelessWidget {
   const floor1customListTile(
       {required this.name,
-      this.pageTo,
+      required this.pageTo,
       required this.fonts,
       this.leadIcon,
       this.backC,
@@ -263,7 +263,7 @@ class floor1customListTile extends StatelessWidget {
       : super(key: key);
   final String name;
   final Color? backC;
-  final Widget? pageTo;
+  final Widget pageTo;
   final double fonts;
   final IconData? leadIcon;
   final Function? web;
@@ -283,7 +283,7 @@ class floor1customListTile extends StatelessWidget {
                   context,
                   PageTransition(
                       duration: const Duration(milliseconds: 500),
-                      child: pageTo!,
+                      child: pageTo,
                       type: PageTransitionType.leftToRight))
             },
             child: Row(
