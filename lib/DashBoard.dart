@@ -153,23 +153,24 @@ class _DashBoardState extends State<DashBoard> {
       body: SafeArea(
         child: Center(
           child: Column(children: [
-            Padding(
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  heightFactor: height * 0.002,
-                  child: Text(
-                    "Quick Search",
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
-                        fontSize: height * 0.03,
-                        color: Colors.grey.shade700),
-                  ),
-                ),
-                padding: EdgeInsets.only(left: width * 0.08)),
+            // Padding(
+            //     child: Align(
+            //       alignment: Alignment.centerLeft,
+            //       heightFactor: height * 0.002,
+            //       child: Text(
+            //         "Quick Search",
+            //         textAlign: TextAlign.start,
+            //         style: TextStyle(
+            //             fontWeight: FontWeight.bold,
+            //             decoration: TextDecoration.underline,
+            //             fontSize: height * 0.03,
+            //             color: Colors.grey.shade700),
+            //       ),
+            //     ),
+            //     padding: EdgeInsets.only(left: width * 0.08)),
             Container(
               padding: EdgeInsets.only(left: width * 0.01),
+              margin: EdgeInsets.only(top: height * 0.03),
               height: height * 0.07,
               width: width * 0.86,
               child: TextField(
@@ -231,21 +232,21 @@ class _DashBoardState extends State<DashBoard> {
                         }))
                 : SingleChildScrollView(
                     child: Column(children: [
-                      Padding(
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            heightFactor: height * 0.0015,
-                            child: Text(
-                              "Quick Access",
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  decoration: TextDecoration.underline,
-                                  fontSize: height * 0.03,
-                                  color: Colors.grey.shade700),
-                            ),
-                          ),
-                          padding: EdgeInsets.only(left: width * 0.08)),
+                      // Padding(
+                      //     child: Align(
+                      //       alignment: Alignment.centerLeft,
+                      //       heightFactor: height * 0.0015,
+                      //       child: Text(
+                      //         "Quick Access",
+                      //         textAlign: TextAlign.start,
+                      //         style: TextStyle(
+                      //             fontWeight: FontWeight.bold,
+                      //             decoration: TextDecoration.underline,
+                      //             fontSize: height * 0.03,
+                      //             color: Colors.grey.shade700),
+                      //       ),
+                      //     ),
+                      //     padding: EdgeInsets.only(left: width * 0.08)),
                       for (var i = 0; i < dashButton.length; i++)
                         Container(
                             height: height * 0.12,

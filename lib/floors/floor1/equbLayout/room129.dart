@@ -4,7 +4,8 @@ import 'package:mma_mse/equipment/furnace/blue/blurFMain.dart';
 import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';
 import 'package:mma_mse/equipment/polisher/BeuAutoPolisher/BehAutoPolMain.dart';
 import 'package:mma_mse/equipment/cutter/Buehler Precision Cutter/BuehlerMain.dart';
-import 'package:mma_mse/floors/roomBut.dart';
+import 'package:mma_mse/floors/EqubButton.dart';
+import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 
 class room129LayO extends StatefulWidget {
   room129LayO({Key? key}) : super(key: key);
@@ -34,93 +35,47 @@ class _room129LayOState extends State<room129LayO> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.8),
         appBar: AppBar(
-          title: Text("Room 129 Layout"),
+          title: Text("Room 129 Equipment List"),
           backgroundColor: Colors.black,
         ),
-        body: Row(children: [
-          SizedBox(
-            width: _screenWidth / 40,
-          ),
-          Column(children: [
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            roomButton(
-                length: _screenH / 7,
-                pageTo: BlueFurnace(),
-                width: _screenWidth / 3,
-                backImg:
-                    "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
-                name: "Blue Furnace"),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            roomButton(
-                length: _screenH / 5.6,
-                pageTo: BuehlerAutoPolisherMain(),
-                backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true",
-                width: _screenWidth / 3,
-                name: "Buehler Auto Polisher"),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            roomButton(
-                length: _screenH / 5.6,
-                pageTo: BuehlerPolisherMain(),
-                backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true",
-                width: _screenWidth / 3,
-                name: "Buehler Manual Polisher"),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            roomButton(
-                length: _screenH / 4,
-                backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
-                width: _screenWidth / 3,
-                name: "Fume Hood"),
-          ]),
-          SizedBox(
-            width: _screenWidth / 4,
-          ),
-          Column(
+        body: SafeArea(
+            child: SingleChildScrollView(
+          child: Column(
             children: [
-              SizedBox(
-                height: _screenH / 10,
-              ),
-              roomButton(
-                  length: _screenH / 5,
-                  pageTo: METPress(),
-                  width: _screenWidth / 3,
+              EqubButton(
+                  function: purpfurnace,
+                  backColor: furnace,
+                  pageTo: BlueFurnace(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
-                  name: "Mounting Press MET"),
+                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
+                  name: "Blue Furnace"),
               SizedBox(
-                height: _screenH / 17,
+                height: _screenH / 40,
               ),
-              roomButton(
-                  length: _screenH / 5,
-                  pageTo: BuehlerPolisherMain(),
-                  width: _screenWidth / 3,
+              EqubButton(
+                  backColor: polish,
+                  function: purpPolishg,
+                  pageTo: BuehlerAutoPolisherMain(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true",
-                  name: "Buehler Manual Polisher"),
-              SizedBox(
-                height: _screenH / 17,
-              ),
-              roomButton(
-                  length: _screenH / 5,
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true",
+                  name: "Buehler Auto Polisher"),
+              EqubButton(
+                  function: "Safe Operation for Chemical",
+                  pageTo: Container(),
+                  backImg:
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
+                  backColor: Colors.amber,
+                  name: "Fume Hood"),
+              EqubButton(
+                  function: purpCutting,
+                  backColor: cutter,
                   pageTo: BuehlerCutterMain(),
                   backImg:
                       "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
-                  width: _screenWidth / 3,
                   name: "Buehler Precision Cutter"),
             ],
-          )
-        ]));
+          ),
+        )));
   }
 }
