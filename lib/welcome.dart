@@ -51,10 +51,11 @@ class _welcomeState extends State<welcome> {
           backgroundColor: Colors.black,
         ),
       ),
-      body: Container(
+      body: Center(
+          child: Container(
         constraints: BoxConstraints.expand(
-          width: _screenWidth,
-          height: _screenH * 1.08,
+          width: _screenH * 9 / 16,
+          height: _screenH,
         ),
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -88,7 +89,7 @@ class _welcomeState extends State<welcome> {
             ),
             Spacer(),
             Container(
-              width: _screenWidth * 0.51,
+              width: _screenWidth * 0.55,
               child: Image(
                 image: AssetImage("assest/picture1.png"),
                 fit: BoxFit.fill,
@@ -122,7 +123,7 @@ class _welcomeState extends State<welcome> {
             Spacer(),
           ],
         ),
-      ),
+      )),
     );
   }
 }

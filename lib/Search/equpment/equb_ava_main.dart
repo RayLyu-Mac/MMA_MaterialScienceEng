@@ -299,71 +299,55 @@ class _equb_mainState extends State<equb_main> {
       body: SafeArea(
           child: ListView.builder(
               controller: controller,
-              itemExtent: 305.0,
               itemCount: equipmentList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   child: Card(
+                    color: equipmentList[index].materialColor,
                     semanticContainer: true,
                     margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
                     elevation: 6,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0)),
                     clipBehavior: Clip.antiAlias,
-                    child: Stack(
+                    child: Column(
                       children: [
                         Hero(
-                            tag: 'background' + equipmentList[index].title,
-                            child: Container(
-                              color: equipmentList[index].materialColor,
-                            )),
-                        Positioned(
-                          top: 0.0,
-                          left: 0.0,
-                          right: 0.0,
-                          child: Hero(
-                            tag: 'image' + equipmentList[index].title,
-                            child: Image.network(
-                              equipmentList[index].image,
-                              fit: BoxFit.fitWidth,
-                              height: 220,
-                            ),
+                          tag: 'image' + equipmentList[index].title,
+                          child: Image.network(
+                            equipmentList[index].image,
+                            fit: BoxFit.cover,
+                            height: 180,
+                            width: double.infinity,
                           ),
                         ),
-                        Positioned(
-                          top: 225.0,
-                          left: 14.0,
-                          width: _screenWidth * 0.8,
-                          child: Hero(
-                              tag: 'text' + equipmentList[index].title,
-                              child: Material(
+                        Hero(
+                            tag: 'text' + equipmentList[index].title,
+                            child: Container(
+                              margin: EdgeInsets.fromLTRB(10, 15, 10, 8),
+                              color: Colors.transparent,
+                              child: Text(
+                                '${equipmentList[index].title}',
+                                style: TextStyle(
+                                  color: Colors.grey[800],
+                                  fontSize: _screenWidth / 21,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )),
+                        Hero(
+                            tag: 'subtitle' + equipmentList[index].title,
+                            child: Container(
+                                margin: EdgeInsets.all(5),
                                 color: Colors.transparent,
                                 child: Text(
-                                  '${equipmentList[index].title}',
+                                  equipmentList[index].subTitle,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                    color: Colors.grey[800],
-                                    fontSize: _screenWidth / 21,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              )),
-                        ),
-                        Positioned(
-                            top: 253.0,
-                            left: 14.0,
-                            width: _screenWidth * 0.8,
-                            child: Hero(
-                                tag: 'subtitle' + equipmentList[index].title,
-                                child: Material(
-                                    color: Colors.transparent,
-                                    child: Text(
-                                      equipmentList[index].subTitle,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          color: Colors.grey[800],
-                                          fontSize: _screenWidth / 33,
-                                          fontWeight: FontWeight.bold),
-                                    )))),
+                                      color: Colors.grey[800],
+                                      fontSize: _screenWidth / 33,
+                                      fontWeight: FontWeight.bold),
+                                )))
                       ],
                     ),
                   ),

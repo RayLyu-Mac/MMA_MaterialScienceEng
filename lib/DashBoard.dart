@@ -12,6 +12,8 @@ import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'Drawer.dart';
+import 'welcome.dart';
 
 DateTime now = new DateTime.now();
 DateTime date = new DateTime(now.year, now.month, now.day);
@@ -150,7 +152,17 @@ class _DashBoardState extends State<DashBoard> {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       bottomNavigationBar: ButtomMenu(),
-      appBar: AppBar(title: Text("MSE Dash Board")),
+      appBar: AppBar(title: Text("MSE Dash Board"), actions: [
+        IconButton(
+            padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+            iconSize: 32,
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => welcome()));
+            },
+            icon: Icon(Icons.backspace))
+      ]),
+      drawer: standardDrawer(header: "Dash Board"),
       body: SafeArea(
         child: Center(
           child: Column(children: [

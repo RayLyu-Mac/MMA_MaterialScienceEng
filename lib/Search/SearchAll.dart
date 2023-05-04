@@ -6,6 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
 import 'package:mma_mse/Search/safty/saftyData.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class EqupSearch extends StatefulWidget {
   EqupSearch({Key? key}) : super(key: key);
@@ -108,6 +109,7 @@ class _EqupSearchState extends State<EqupSearch> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
+        bottomNavigationBar: ButtomMenu(),
         body: Column(children: [
           SizedBox(
             height: _screenH / 60,

@@ -8,8 +8,7 @@ import 'floors/floor1.dart';
 class standardDrawer extends StatefulWidget {
   final String header;
   final List<ListTile>? others;
-  standardDrawer(
-      {required this.header,  this.others, Key? key})
+  standardDrawer({required this.header, this.others, Key? key})
       : super(key: key);
 
   @override
@@ -64,26 +63,23 @@ class _standardDrawerState extends State<standardDrawer> {
           extraMenu(),
           aboutUs(),
           SizedBox(
-            height: 3,
-          ),
-          SizedBox(
-            height: _screenH / 3.8 * adjust,
+            height: _screenH / 30,
           ),
           Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 3, height: _screenH / 6),
+                width: _screenWidth / 3, height: _screenH / 8),
             child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
                       context,
                       PageTransition(
-                          duration: const Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 400),
                           child: layout_overview(),
                           type: PageTransitionType.leftToRight));
                 },
                 icon: Icon(FontAwesomeIcons.signOutAlt),
                 label: Text(
-                  "  Back to Layout",
+                  "  Back to Dashboard",
                   style: TextStyle(
                       fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                 )),

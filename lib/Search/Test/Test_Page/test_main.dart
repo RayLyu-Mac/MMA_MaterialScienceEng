@@ -78,7 +78,6 @@ class _test_avaState extends State<test_ava> {
       drawer: testCase(),
       body: SafeArea(
           child: ListView.builder(
-              itemExtent: 295.0,
               itemCount: _heroTypeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
@@ -87,7 +86,7 @@ class _test_avaState extends State<test_ava> {
                     margin: EdgeInsets.fromLTRB(18, 18, 18, 14),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0)),
+                        borderRadius: BorderRadius.circular(10.0)),
                     clipBehavior: Clip.antiAlias,
                     child: Column(
                       children: [
@@ -107,7 +106,8 @@ class _test_avaState extends State<test_ava> {
                         ),
                         Hero(
                             tag: 'text' + _heroTypeList[index].title,
-                            child: Material(
+                            child: Container(
+                              margin: EdgeInsets.fromLTRB(8, 15, 8, 3),
                               color: Colors.transparent,
                               child: Container(
                                 child: Text(
@@ -115,7 +115,7 @@ class _test_avaState extends State<test_ava> {
                                   style: TextStyle(
                                       fontSize:
                                           _heroTypeList[index].titleFontSize ??
-                                              25.0,
+                                              20.0,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black),
                                 ),
@@ -123,13 +123,15 @@ class _test_avaState extends State<test_ava> {
                             )),
                         Hero(
                             tag: 'subtitle' + _heroTypeList[index].title,
-                            child: Material(
+                            child: Container(
+                                margin: EdgeInsets.all(10),
                                 color: Colors.transparent,
                                 child: Text(
                                   _heroTypeList[index].subTitle,
-                                  overflow: TextOverflow.ellipsis,
+                                  overflow: TextOverflow.visible,
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 ))),
                       ],

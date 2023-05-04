@@ -16,7 +16,10 @@ class mainp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Maintaince Mangament and Accessibility System',
-      home: welcome(),
+      home: AspectRatio(
+        aspectRatio: 16 / 9,
+        child: welcome(),
+      ),
     );
   }
 }

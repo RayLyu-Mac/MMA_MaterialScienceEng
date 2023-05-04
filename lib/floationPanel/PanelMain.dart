@@ -1,10 +1,8 @@
 import 'package:mma_mse/DashBoard.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
-import 'package:mma_mse/workingInPro.dart';
 
 class ButtomMenu extends StatefulWidget {
   ButtomMenu({super.key});
@@ -25,7 +23,7 @@ class _ButtomMenuState extends State<ButtomMenu> {
 
   @override
   Widget build(BuildContext context) {
-    List pageTo = [workingInProg(), DashBoard(), EqupSearch()];
+    List pageTo = [DashBoard(), EqupSearch()];
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: (value) {
