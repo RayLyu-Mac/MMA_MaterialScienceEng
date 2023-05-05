@@ -28,9 +28,6 @@ class _standardDrawerState extends State<standardDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
-      adjust = 1.55;
-    }
     return Drawer(
       elevation: 25,
       child: ListView(
@@ -41,8 +38,7 @@ class _standardDrawerState extends State<standardDrawer> {
                 children: [
                   Text(
                     widget.header,
-                    style: TextStyle(
-                        fontSize: _screenH / 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                   Container(
                     constraints: BoxConstraints.expand(
@@ -54,7 +50,7 @@ class _standardDrawerState extends State<standardDrawer> {
                 ],
               )),
           SizedBox(
-            height: _screenH / 35,
+            height: _screenH / 30,
           ),
           floorMenu(),
           SizedBox(
@@ -67,7 +63,7 @@ class _standardDrawerState extends State<standardDrawer> {
           ),
           Container(
             constraints: BoxConstraints.expand(
-                width: _screenWidth / 3, height: _screenH / 8),
+                width: _screenWidth / 3, height: _screenH / 8.5),
             child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
@@ -80,8 +76,7 @@ class _standardDrawerState extends State<standardDrawer> {
                 icon: Icon(FontAwesomeIcons.signOutAlt),
                 label: Text(
                   "  Back to Dashboard",
-                  style: TextStyle(
-                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )),
           ),
         ],

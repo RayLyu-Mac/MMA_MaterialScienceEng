@@ -8,7 +8,6 @@ import 'floors/floor1.dart';
 import 'Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';

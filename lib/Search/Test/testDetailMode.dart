@@ -14,15 +14,15 @@ class pageMode extends StatefulWidget {
   final double? left;
   pageMode(
       {required this.title,
-      @optionalTypeArgs this.wholeImg,
-      @optionalTypeArgs this.height,
-      @optionalTypeArgs this.length,
-      @optionalTypeArgs this.left,
+      this.wholeImg,
+      this.height,
+      this.length,
+      this.left,
       required this.backImg,
-      @optionalTypeArgs this.width,
-      @optionalTypeArgs this.content,
-      @optionalTypeArgs this.addOnImg,
-      @optionalTypeArgs this.pageTo,
+      this.width,
+      this.content,
+      this.addOnImg,
+      this.pageTo,
       Key? key})
       : super(key: key);
 
@@ -132,10 +132,10 @@ class imgAddOn extends StatelessWidget {
   final double? width;
   const imgAddOn(
       {required this.img,
-      @optionalTypeArgs this.width,
+      this.width,
       required this.screenH,
-      @optionalTypeArgs this.length,
-      @optionalTypeArgs this.pageTo,
+      this.length,
+      this.pageTo,
       required this.screenW,
       Key? key})
       : super(key: key);

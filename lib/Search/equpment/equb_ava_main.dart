@@ -21,6 +21,7 @@ class _equb_mainState extends State<equb_main> {
   String titleForCsv = '';
   List<Widget> pT = [];
   double co = 0.5;
+  double _screenH = 0;
   Color col = Colors.black;
   final ScrollController controller = ScrollController();
   Color tensile = Colors.amber.shade100;
@@ -45,6 +46,7 @@ class _equb_mainState extends State<equb_main> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
   }
 
   @override
@@ -59,12 +61,12 @@ class _equb_mainState extends State<equb_main> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.grey.shade700,
-                    fontSize: _screenWidth / 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 1.5, height: _screenWidth / 4),
+                    width: _screenWidth / 1.5, height: 90),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assest/logocolor.png"))),
@@ -317,20 +319,21 @@ class _equb_mainState extends State<equb_main> {
                           child: Image.network(
                             equipmentList[index].image,
                             fit: BoxFit.cover,
-                            height: 180,
+                            height: 200,
                             width: double.infinity,
                           ),
                         ),
                         Hero(
                             tag: 'text' + equipmentList[index].title,
                             child: Container(
-                              margin: EdgeInsets.fromLTRB(10, 15, 10, 8),
+                              margin: EdgeInsets.fromLTRB(10, 15, 10, 4),
                               color: Colors.transparent,
                               child: Text(
                                 '${equipmentList[index].title}',
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.grey[800],
-                                  fontSize: _screenWidth / 21,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -338,14 +341,15 @@ class _equb_mainState extends State<equb_main> {
                         Hero(
                             tag: 'subtitle' + equipmentList[index].title,
                             child: Container(
-                                margin: EdgeInsets.all(5),
+                                margin: EdgeInsets.all(7),
                                 color: Colors.transparent,
                                 child: Text(
                                   equipmentList[index].subTitle,
+                                  textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                       color: Colors.grey[800],
-                                      fontSize: _screenWidth / 33,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 )))
                       ],

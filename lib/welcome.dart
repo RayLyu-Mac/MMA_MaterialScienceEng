@@ -72,8 +72,7 @@ class _welcomeState extends State<welcome> {
             Text(
               "McMaster University",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, fontSize: _screenWidth / 16),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
             SizedBox(
               height: _screenH / 80,
@@ -81,15 +80,14 @@ class _welcomeState extends State<welcome> {
             Text(
               "Department of Material Science and Engineering",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, fontSize: _screenWidth / 25),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
             ),
             SizedBox(
               height: _screenH / 20,
             ),
             Spacer(),
             Container(
-              width: _screenWidth * 0.55,
+              width: _screenH / 4.5,
               child: Image(
                 image: AssetImage("assest/picture1.png"),
                 fit: BoxFit.fill,
@@ -104,7 +102,7 @@ class _welcomeState extends State<welcome> {
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: _screenWidth / 18,
+                  fontSize: 18,
                   color: Colors.grey.shade200),
             ),
             SizedBox(
@@ -112,9 +110,9 @@ class _welcomeState extends State<welcome> {
             ),
             fancyBut(
                 pageTo: conditionTerms(pageTo: DashBoard()),
-                width: _screenWidth / 1.2,
-                height: _screenH / 9.6,
-                fontsize: 25,
+                width: _screenWidth / 1.25,
+                height: _screenH / 9.8,
+                fontsize: 22,
                 icon: FontAwesomeIcons.rocket,
                 buttonName: "   Let's Start : )"),
             SizedBox(
