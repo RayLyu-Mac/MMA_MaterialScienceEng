@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class roomButton extends StatelessWidget {
@@ -54,7 +53,7 @@ class roomButton extends StatelessWidget {
                         context,
                         PageTransition(
                             duration: const Duration(milliseconds: 550),
-                            child: pageTo ?? workingInProg(),
+                            child: pageTo ?? Container(),
                             type: PageTransitionType.leftToRight))
                     : showGeneralDialog(
                         barrierColor: Colors.black.withOpacity(0.5),
@@ -168,7 +167,7 @@ class roomButton extends StatelessWidget {
                       context,
                       PageTransition(
                           duration: const Duration(milliseconds: 600),
-                          child: pageTo ?? workingInProg(),
+                          child: pageTo ?? Container(),
                           type: PageTransitionType.leftToRight))
                   : showGeneralDialog(
                       barrierColor: Colors.black.withOpacity(0.5),
