@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'roomBut.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:page_transition/page_transition.dart';
@@ -212,11 +210,11 @@ class _floor3State extends State<floor3> {
             type: PageTransitionType.bottomToTop));
   }
 
-  Future scanQR() async {
-    await Permission.camera.request();
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // Future scanQR() async {
+  //   await Permission.camera.request();
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 }

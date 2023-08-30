@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'floor1/mech_lab.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+//import 'package:qrscan/qrscan.dart' as scanner;
 import '../equipment/saftyNoteText.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
@@ -242,13 +242,13 @@ class _floor1State extends State<floor1> {
         ));
   }
 
-  Future scanQR() async {
-    await Permission.camera.request();
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // Future scanQR() async {
+  //   await Permission.camera.request();
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 }
 
 class floor1customListTile extends StatelessWidget {

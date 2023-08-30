@@ -7,7 +7,7 @@ import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/workingInPro.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+//import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/Drawer.dart';
 
@@ -192,13 +192,13 @@ class _EqubPageModeState extends State<EqubPageMode> {
     );
   }
 
-  Future scanQR() async {
-    await Permission.camera.request();
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // Future scanQR() async {
+  //   await Permission.camera.request();
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 }
 
 _launchURL() async {

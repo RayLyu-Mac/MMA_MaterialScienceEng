@@ -8,9 +8,8 @@ import 'floors/floor1.dart';
 import 'Drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+//import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class layout_overview extends StatefulWidget {
@@ -21,19 +20,19 @@ class layout_overview extends StatefulWidget {
 }
 
 class _layout_overviewState extends State<layout_overview> {
-  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
-  @override
-  void initState() {
-    super.initState();
+  // late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  // @override
+  // void initState() {
+  //   super.initState();
 
-    flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
-    var android = AndroidInitializationSettings('@mipmap/ic_launcher');
-    var initialSet = InitializationSettings(android: android);
-    // flutterLocalNotificationsPlugin.initialize(initialSet,
-    //     onSelectNotification: onSelectN);
+  //   flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
+  //   var android = AndroidInitializationSettings('@mipmap/ic_launcher');
+  //   var initialSet = InitializationSettings(android: android);
+  //   // flutterLocalNotificationsPlugin.initialize(initialSet,
+  //   //     onSelectNotification: onSelectN);
 
-    // showNote();
-  }
+  //   // showNote();
+  // }
 
   double _screenWidth = 0;
   double _screenH = 0;
@@ -173,13 +172,13 @@ class _layout_overviewState extends State<layout_overview> {
     );
   }
 
-  Future scanQR() async {
-    await Permission.camera.request();
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // Future scanQR() async {
+  //   await Permission.camera.request();
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 
   // showNote() async {
   //   var android =

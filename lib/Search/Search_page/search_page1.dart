@@ -4,7 +4,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
 import '../room/room_main.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+// import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/fancyButton.dart';
 
@@ -152,10 +152,10 @@ class _search_areaState extends State<search_area> {
     );
   }
 
-  scanQR() async {
-    String? codeSanner = await scanner.scan(); //barcode scnner
-    setState(() {
-      goToPage(codeSanner);
-    });
-  }
+  // scanQR() async {
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   setState(() {
+  //     goToPage(codeSanner);
+  //   });
+  // }
 }
