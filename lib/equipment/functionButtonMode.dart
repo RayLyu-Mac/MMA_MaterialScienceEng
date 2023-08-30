@@ -15,14 +15,14 @@ class functionButtonMode extends StatefulWidget {
   final String? warnV;
 
   functionButtonMode(
-      { this.top,
-       this.left,
+      {this.top,
+      this.left,
       required this.buttonName,
-       this.pageTo,
-       this.fontSize,
-       this.warnNote,
-       this.url,
-       this.warnV,
+      this.pageTo,
+      this.fontSize,
+      this.warnNote,
+      this.url,
+      this.warnV,
       Key? key})
       : super(key: key);
 
@@ -80,7 +80,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
               },
               splashColor: Colors.grey,
               child: Container(
-                width: _screenWidth / 2.7,
+                width: _screenWidth / 1.2,
                 height: _screenH / 15,
                 padding: EdgeInsets.all(6),
                 child: Text(
@@ -132,7 +132,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
             },
             splashColor: Colors.grey,
             child: Container(
-              width: _screenWidth / 2.7,
+              width: _screenWidth / 1.2,
               height: _screenH / 15,
               padding: EdgeInsets.all(6),
               child: Text(

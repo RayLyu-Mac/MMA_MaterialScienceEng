@@ -89,7 +89,7 @@ class _room242LayOState extends State<room242LayO> {
               top: _screenH / 4.2,
               length: _screenH / 5,
               width: _screenWidth / 3,
-              pageTo: BulkAbrasive_Main(),
+              pageTo: BulkAbrasiveMain(),
               backImg:
                   "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/abc.jpg?raw=true",
               name: "Bulk Abrasive Cutter"),

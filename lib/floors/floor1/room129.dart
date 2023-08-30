@@ -1,6 +1,5 @@
-import 'package:mma_mse/floors/floor2/roomMain/roomMode.dart';
+import 'package:mma_mse/floors/floor2/roomMain/roomHorizonMode.dart';
 import 'package:flutter/material.dart';
-
 import 'package:mma_mse/floors/floor1/equbLayout/room129.dart';
 
 class Room129 extends StatefulWidget {
@@ -13,10 +12,10 @@ class Room129 extends StatefulWidget {
 class _Room129State extends State<Room129> {
   @override
   Widget build(BuildContext context) {
-    return roomMode(
+    return roomHorizontal(
         roomName: "Room 129",
         roomTi: "Room 129",
-        roomLayO: room129LayO(),
+        pageTo: room129LayO(),
         roomCont:
             "Equipments:\n1.Buehler Auto Polisher\n2.Buehler Precision Cutter\n3.Buehler Manual Polisher\n4.Blue Furnace\n5.Mounting Press (MET)             ",
         roomImg:

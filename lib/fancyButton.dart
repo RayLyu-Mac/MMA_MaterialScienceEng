@@ -29,9 +29,9 @@ class _fancyButState extends State<fancyBut> {
       constraints:
           BoxConstraints.expand(width: widget.width, height: widget.height),
       decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.3),
-          borderRadius: BorderRadius.circular(widget.height / 2),
-          border: Border.all(color: Colors.grey.shade300, width: 5)),
+          color: Colors.grey.shade200.withOpacity(0.3),
+          borderRadius: BorderRadius.circular(widget.height / 6),
+          border: Border.all(color: Colors.grey, width: 6)),
       child: TextButton.icon(
           onPressed: () {
             Navigator.push(
@@ -50,7 +50,7 @@ class _fancyButState extends State<fancyBut> {
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w700,
-                fontSize: widget.fontsize ?? 14),
+                fontSize: widget.fontsize ?? 18),
           )),
     );
   }

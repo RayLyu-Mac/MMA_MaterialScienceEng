@@ -65,68 +65,58 @@ class _roomModeState extends State<roomMode> {
         ],
       ),
       drawer: standardDrawer(header: widget.roomName),
-      body: Stack(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Positioned(
-              top: _screenH / 40,
-              left: _screenWidth / 55,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.1, height: _screenH / 1.9),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(width: 4, color: Colors.grey.shade300),
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(widget.roomImg))),
-              )),
-          Positioned(
-              top: _screenH / 30,
-              left: _screenWidth / 2,
-              child: Container(
-                width: _screenWidth / 2.1,
-                child: Column(
-                  children: [
-                    Text(
-                      widget.roomTi,
-                      style: TextStyle(
-                          fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: _screenH / 30,
-                    ),
-                    Text(
-                      widget.roomCont,
-                      style: TextStyle(
-                          fontSize: _screenH / 43, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: _screenH / 20,
-                    ),
-                  ],
+          Container(
+            constraints: BoxConstraints.expand(height: _screenH / 2.7),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(width: 4, color: Colors.grey.shade300),
+                image: DecorationImage(
+                    fit: BoxFit.cover, image: NetworkImage(widget.roomImg))),
+          ),
+          Container(
+            child: Column(
+              children: [
+                Text(
+                  widget.roomTi,
+                  style: TextStyle(
+                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
                 ),
-              )),
-          Positioned(
-              top: _screenH / 1.37,
-              left: _screenWidth / 10,
-              child: fancyBut(
-                  pageTo: workingInProg(),
-                  width: _screenWidth / 1.3,
-                  fontsize: 28,
-                  height: _screenH / 9,
-                  icon: Icons.email,
-                  buttonName: "Manager")),
-          Positioned(
-              top: _screenH / 1.7,
-              left: _screenWidth / 10,
-              child: fancyBut(
-                pageTo: widget.roomLayO,
-                icon: Icons.layers_outlined,
-                buttonName: "Layout",
-                height: _screenH / 9,
-                fontsize: 28,
-                width: _screenWidth / 1.3,
-              ))
+                SizedBox(
+                  height: _screenH / 30,
+                ),
+                Text(
+                  widget.roomCont,
+                  style: TextStyle(
+                      fontSize: _screenH / 43, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: _screenH / 20,
+                ),
+              ],
+            ),
+          ),
+          // Positioned(
+          //     top: _screenH / 1.37,
+          //     left: _screenWidth / 10,
+          //     child: fancyBut(
+          //         pageTo: workingInProg(),
+          //         width: _screenWidth / 1.3,
+          //         fontsize: 28,
+          //         height: _screenH / 9,
+          //         icon: Icons.email,
+          //         buttonName: "Manager")),
+          fancyBut(
+            pageTo: widget.roomLayO,
+            icon: Icons.layers_outlined,
+            buttonName: "Layout",
+            height: _screenH / 9,
+            fontsize: 28,
+            width: _screenWidth / 1.2,
+          )
         ],
       ),
     );

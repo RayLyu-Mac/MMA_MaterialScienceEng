@@ -15,7 +15,7 @@ class _room242MainState extends State<room242Main> {
     return roomMode(
         roomName: "Room 242: Undergraduate Lab",
         roomTi: "Room 242: \nUndergrad Lab                 ",
-        roomLayO: room242LayO(),
+        roomLayO: Room242LayO(),
         roomCont:
             "Equipments:\n1.Cutting Machine\n2.Belt Grinder\n3.Bulk Abrasive\n4.Manual Compression Press\n5.Cutting machine",
         roomImg:

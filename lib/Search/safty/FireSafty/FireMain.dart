@@ -93,7 +93,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                           Text(
                             result[index].title,
                             style: TextStyle(
-                                fontSize: result[index].titleFontsize ?? 15,
+                                fontSize: result[index].titleFontsize,
                                 fontWeight: FontWeight.bold),
                           ),
                           Image.network(
@@ -107,8 +107,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                               child: Text(
                                 result[index].content,
                                 style: TextStyle(
-                                    fontSize: result[index].contentFontsize ??
-                                        _screenH / 45),
+                                    fontSize: result[index].contentFontsize),
                               )),
                           SizedBox(
                             height: _screenH / 40,

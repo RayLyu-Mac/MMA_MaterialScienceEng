@@ -156,21 +156,10 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     warnV: widget.warnVido!,
                     pageTo: widget.instruction),
             functionButtonMode(
-              top: _screenH / 1.51,
-              left: _screenWidth / 12,
-              buttonName: "Scheduling",
-              url: _launchURL,
-            ),
-            functionButtonMode(
                 top: _screenH / 1.51,
-                left: _screenWidth / 2 + 16,
+                left: _screenWidth / 12,
                 buttonName: widget.dash ?? "Theory",
                 pageTo: widget.theory ?? workingInProg()),
-            functionButtonMode(
-                top: _screenH / 1.33,
-                left: _screenWidth / 2 + 16,
-                buttonName: "Manager",
-                pageTo: workingInProg()),
             Positioned(
                 top: _screenH / 1.8,
                 left: _screenWidth / 1.5,

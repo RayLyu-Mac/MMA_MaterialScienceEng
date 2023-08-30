@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/cutter/BulkAbrasiveCutter/backG.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'BulkAbrasiveDashB.dart';
 import 'package:mma_mse/Instruction/Cutter/AbrasiveCutter/cutterMain.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BulkAbrasive_Main extends StatefulWidget {
+class BulkAbrasiveMain extends StatefulWidget {
   final String? location;
   final String? emailTo;
-  BulkAbrasive_Main({Key? key, this.location, this.emailTo}) : super(key: key);
+  BulkAbrasiveMain({Key? key, this.location, this.emailTo}) : super(key: key);
 
   @override
-  _BulkAbrasive_MainState createState() => _BulkAbrasive_MainState();
+  _BulkAbrasiveMainState createState() => _BulkAbrasiveMainState();
 }
 
-class _BulkAbrasive_MainState extends State<BulkAbrasive_Main> {
+class _BulkAbrasiveMainState extends State<BulkAbrasiveMain> {
   @override
   void initState() {
     super.initState();

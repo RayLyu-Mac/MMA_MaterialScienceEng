@@ -96,11 +96,11 @@ class _roomHorizontalState extends State<roomHorizontal> {
                               fontSize: _screenH / 40,
                               fontWeight: FontWeight.bold),
                         ),
-                        width: _screenWidth / 2.2,
+                        width: _screenWidth / 1.1,
                       ),
                       Container(
                         margin: EdgeInsets.fromLTRB(10, 1, 5, 5),
-                        width: _screenWidth / 2.2,
+                        width: _screenWidth / 1.1,
                         child: Text(
                           widget.roomCont,
                           style: TextStyle(
@@ -111,37 +111,15 @@ class _roomHorizontalState extends State<roomHorizontal> {
                       SizedBox(
                         height: _screenH / 50,
                       ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      fancyBut(
-                          icon: Icons.explore_rounded,
-                          pageTo: workingInProg(),
-                          height: _screenH / 10,
-                          width: _screenWidth / 2.2,
-                          buttonName: "Test"),
-                      SizedBox(
-                        height: _screenH / 40,
-                      ),
-                      fancyBut(
-                          icon: Icons.email_rounded,
-                          height: _screenH / 10,
-                          width: _screenWidth / 2.2,
-                          buttonName: "Manager",
-                          pageTo: workingInProg()),
-                      SizedBox(
-                        height: _screenH / 40,
-                      ),
                       fancyBut(
                         pageTo: widget.pageTo ?? workingInProg(),
                         icon: Icons.follow_the_signs_rounded,
                         buttonName: "Layout",
-                        height: _screenH / 10,
-                        width: _screenWidth / 2.2,
-                      )
+                        height: _screenH / 8.5,
+                        width: _screenWidth / 1.1,
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ))
         ],
