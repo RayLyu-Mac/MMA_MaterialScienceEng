@@ -32,12 +32,15 @@ class EqubButton extends StatelessWidget {
               child: Row(children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(14),
-                  child: Image(
-                    height: 170,
-                    width: 160,
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                      backImg,
+                  child: Container(
+                    height: 165,
+                    width: 175,
+                    color: Colors.white.withOpacity(0.5),
+                    child: Image(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        backImg,
+                      ),
                     ),
                   ),
                 ),

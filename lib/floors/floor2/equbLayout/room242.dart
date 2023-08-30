@@ -4,14 +4,14 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 
-class room242LayO extends StatefulWidget {
-  room242LayO({Key? key}) : super(key: key);
+class Room242LayO extends StatefulWidget {
+  Room242LayO({Key? key}) : super(key: key);
 
   @override
   _room242LayOState createState() => _room242LayOState();
 }
 
-class _room242LayOState extends State<room242LayO> {
+class _room242LayOState extends State<Room242LayO> {
   double _screenWidth = 0;
   double _screenH = 0;
   double adjust = 0;

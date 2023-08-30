@@ -74,7 +74,7 @@ class _BulkAbrasiveCutterState extends State<BulkAbrasiveCutter> {
   final PageController controller = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
-    Drawer cutter_bg() => Drawer(
+    Drawer cutterBg() => Drawer(
             child: ListView(
           children: [
             DrawerHeader(child: Text("Background for Bulk Abrasive Cutter")),
@@ -121,7 +121,7 @@ class _BulkAbrasiveCutterState extends State<BulkAbrasiveCutter> {
           ],
         ));
     return Scaffold(
-      drawer: cutter_bg(),
+      drawer: cutterBg(),
       body: PageView(
         children: pages,
         controller: controller,

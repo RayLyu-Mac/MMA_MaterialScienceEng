@@ -160,7 +160,7 @@ class _DashBoardState extends State<DashBoard> {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => welcome()));
             },
-            icon: Icon(Icons.backspace))
+            icon: Icon(Icons.cancel_outlined))
       ]),
       drawer: standardDrawer(header: "Dash Board"),
       body: SafeArea(

@@ -4,6 +4,7 @@ import 'saftyData.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:mma_mse/floors/EqubButton.dart';
 
 class saftyMain extends StatefulWidget {
   saftyMain({Key? key}) : super(key: key);
@@ -28,33 +29,36 @@ class _saftyMainState extends State<saftyMain> {
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();
     return Scaffold(
-        bottomNavigationBar: ButtomMenu(),
-        appBar: AppBar(
-            title: Text("Matls Eng Safety Guide"),
-            backgroundColor: Colors.grey[500],
-            actions: [
-              IconButton(
-                  padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-                  iconSize: 32,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(FontAwesomeIcons.timesCircle))
-            ]),
-        drawer: standardDrawer(header: "Matls Safety Guide"),
-        body: SafeArea(
-          child: Stack(
-            children: [
-              for (var i = 0; i < toolDataList.length; i++)
-                IntroButtonMode(
-                  str: true,
-                  pageTo: toolDataList[i].pageTo,
-                  backImg: toolDataList[i].backImg,
-                  title: toolDataList[i].name,
-                  positionCode: toolDataList[i].posCode,
-                ),
-            ],
-          ),
-        ));
+      bottomNavigationBar: ButtomMenu(),
+      appBar: AppBar(
+          title: Text("Matls Eng Safety Guide"),
+          backgroundColor: Colors.grey[500],
+          actions: [
+            IconButton(
+                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+                iconSize: 32,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(FontAwesomeIcons.timesCircle))
+          ]),
+      drawer: standardDrawer(header: "Matls Safety Guide"),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            for (var i = 0; i < toolDataList.length; i++)
+              EqubButton(
+                backColor: toolDataList[i].bgColor,
+                function: "Safety",
+                pageTo: toolDataList[i].pageTo,
+                backImg: toolDataList[i].backImg,
+                name: toolDataList[i].name,
+              ),
+          ],
+        ),
+      ),
+    );
   }
 }

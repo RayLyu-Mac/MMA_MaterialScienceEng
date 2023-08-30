@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:mma_mse/equipment/Etching/acidSafyFinal.dart';
 import 'package:mma_mse/equipment/safty sheet/MSDS.dart';
 import 'FireSafty/FireMain.dart';
@@ -7,14 +8,14 @@ import 'ShowerWasher/ShowerMain.dart';
 import 'package:mma_mse/equipment/Etching/AcidSafty/AcidMain.dart';
 
 class ToolData {
-  String posCode;
+  Color bgColor;
   String name;
   String backImg;
   double top;
   Widget pageTo;
 
   ToolData(
-      {required this.posCode,
+      {required this.bgColor,
       required this.name,
       required this.backImg,
       required this.pageTo,
@@ -27,28 +28,28 @@ List<ToolData> safetyData = [
       pageTo: SearchListExample(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/MSDS.png?raw=true",
-      posCode: "a")),
+      bgColor: Colors.redAccent.shade100.withOpacity(0.7))),
   (ToolData(
       name: "Fire Safety",
-      posCode: "b",
+      bgColor: Colors.redAccent.shade100.withOpacity(0.7),
       pageTo: ExtingshSymbols(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/fire.png?raw=true")),
   (ToolData(
       name: "Acids Safety",
-      posCode: "c",
+      bgColor: Colors.redAccent.shade100.withOpacity(0.7),
       pageTo: Aciddetail(),
       backImg:
           "https://cdn.shopify.com/s/files/1/1456/4892/products/WAR-20-ANSI_-_Warning_Acid_large.png?v=1520011003")),
   (ToolData(
       name: "Chemical Shower/ Eye washer",
-      posCode: "g",
+      bgColor: Colors.redAccent.shade100.withOpacity(0.7),
       pageTo: ChemicalShowerEyeWasher(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/eyewash.png?raw=true")),
   (ToolData(
       name: "WHMIS Symbol",
-      posCode: "d",
+      bgColor: Colors.redAccent.shade100.withOpacity(0.7),
       pageTo: WhimsSymbols(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/whims/bioharzard.jpg?raw=true")),

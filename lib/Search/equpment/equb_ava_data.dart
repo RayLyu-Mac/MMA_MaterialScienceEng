@@ -150,7 +150,7 @@ List<HeroType> equipmentList = [
           'Avaiable on JHE 242\nBulk Abrasive: AbrasiMatic™ 300 Automatic & Manual Abrasive Cutter \nManufacturer: Buehler\nRecirculation Tank Capacity: 83L \nHose Fitting Sizes, Intake: 1in; Discharge: 2in \nSound Rating:78dBA - no load\nFume Extractor Size: 75mm cut-out diameter\nControl Panel: 175mm diagonal; 320x240 pixels; 256 color screen, backlight NEMA4 [IP 65] water resistant\nT-slot table dimensions; 365 x 254mm; 12mm wide t-slots\nTravel movement: Z-Axis: 150mm; Y-Axis: 260mm; X-Axis: 70mm\nAuto Y-Axis Feed Rate: 0.3-2mm/sec\n Abrasive Wheel Diameter & Arbor:maximum 305mm & 32mm\nCutting Chamber: 914 x 558 x 203mm',
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true',
-      pageTo: BulkAbrasive_Main(),
+      pageTo: BulkAbrasiveMain(),
       materialColor: cutter)),
   (HeroType(
       title: 'Buehler Precision Cutter',

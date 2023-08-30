@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/tools/enthalpy/data.dart';
 import 'errorFunction/main.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
@@ -8,14 +9,14 @@ import 'phaseDiagram/phaseDMain.dart';
 import 'enthalpy/main.dart';
 
 class ToolData {
-  String posCode;
+  Color bgColor;
   String name;
   String backImg;
   double? top;
   Widget pageTo;
 
   ToolData(
-      {required this.posCode,
+      {required this.bgColor,
       required this.name,
       required this.backImg,
       required this.pageTo,
@@ -28,34 +29,34 @@ List<ToolData> createToolList = [
       pageTo: STDCheck(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/stats.png?raw=true",
-      posCode: "a")),
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8))),
   (ToolData(
       name: "Hardness Conversion Sheet",
-      posCode: "b",
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
       pageTo: hardnessData(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/hard.jpg?raw=true")),
   (ToolData(
       name: "Phase Diagram Check",
-      posCode: "c",
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
       pageTo: PhaseDiag(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/phase.jpg?raw=true")),
   (ToolData(
       name: "Unit Conversion",
-      posCode: "d",
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
       pageTo: UnitCOnverMain(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/unit.jpg?raw=true")),
   (ToolData(
       name: "Error function",
-      posCode: "e",
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
       pageTo: errorFunction(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true")),
   (ToolData(
       name: "Enthalpy Calculator",
-      posCode: "f",
+      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
       pageTo: EnthalpyCal(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Picture2.jpg?raw=true"))

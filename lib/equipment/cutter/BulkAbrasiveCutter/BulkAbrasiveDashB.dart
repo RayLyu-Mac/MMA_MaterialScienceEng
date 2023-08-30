@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/equipment/Dash_borad_button.dart';
 
 class automaticModeInterFaceButton extends StatefulWidget {
   automaticModeInterFaceButton({Key? key}) : super(key: key);

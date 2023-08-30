@@ -15,17 +15,9 @@ class AcidSafty extends StatefulWidget {
 }
 
 class _AcidSaftyState extends State<AcidSafty> {
-  double _screenWidth = 0;
-  double _screenH = 0;
   List<testdetailData> testBGdetail = acidData;
   List<Widget> pages = [];
   List listtile = [];
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
 
   @override
   void initState() {

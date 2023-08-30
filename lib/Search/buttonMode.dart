@@ -11,7 +11,6 @@ class IntroButtonMode extends StatefulWidget {
       this.fontsize,
       this.length,
       this.width,
-      this.positionCode,
       required this.str,
       Key? key})
       : super(key: key);
@@ -23,7 +22,6 @@ class IntroButtonMode extends StatefulWidget {
   final double? left;
   final double? width;
   final double? length;
-  final String? positionCode;
   final bool str;
 
   @override
@@ -47,61 +45,46 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
     if (_screenH / _screenWidth > 1.7) {
       _screenH = _screenH * 0.96;
     }
-    Map<String, List> position = {
-      "a": [_screenWidth / 19, _screenH / 50, _screenH / 2.8],
-      "b": [_screenWidth / 1.9, _screenH / 50, _screenH / 4.4],
-      "c": [_screenWidth / 1.9, _screenH / 3.8, _screenH / 2.8],
-      "d": [_screenWidth / 1.9, _screenH / 1.55, _screenH / 4.6],
-      "e": [_screenWidth / 19, _screenH / 1.55, _screenH / 4.6],
-      "f": [_screenWidth / 19, _screenH / 2.55, _screenH / 4.4],
-      "g": [_screenWidth / 19, _screenH / 2.5, _screenH / 2.2],
-    };
+
     return widget.str != false
-        ? Positioned(
-            left: position[widget.positionCode]![0] ?? widget.top,
-            top: position[widget.positionCode]![1] ?? widget.left,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                      duration: const Duration(milliseconds: 500),
-                      child: widget.pageTo,
-                      type: PageTransitionType.leftToRight,
-                    ));
-              },
-              child: Container(
-                alignment: Alignment.center,
-                constraints: BoxConstraints.expand(
-                    width: widget.width ?? _screenWidth / 2.7,
-                    height: position[widget.positionCode]![2] ??
-                        widget.length ??
-                        _screenH / 2.8),
-                child: Text(
-                  widget.title!,
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: widget.fontsize ?? _screenH / 35,
-                      fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
-                ),
-                decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(25),
-                    border: Border.all(width: 5, color: Colors.grey.shade600),
-                    image: DecorationImage(
-                        colorFilter: new ColorFilter.mode(
-                            Colors.black.withOpacity(0.5), BlendMode.dstATop),
-                        image: NetworkImage(widget.backImg),
-                        fit: BoxFit.cover)),
+        ? GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                    child: widget.pageTo,
+                    type: PageTransitionType.leftToRight,
+                  ));
+            },
+            child: Container(
+              margin: EdgeInsets.all(5),
+              alignment: Alignment.center,
+              constraints: BoxConstraints.expand(
+                  width: _screenWidth / 1.2, height: _screenH / 6),
+              child: Text(
+                widget.title!,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: widget.fontsize ?? _screenH / 35,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
               ),
-            ))
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(width: 5, color: Colors.grey.shade600),
+                  image: DecorationImage(
+                      colorFilter: new ColorFilter.mode(
+                          Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                      image: NetworkImage(widget.backImg),
+                      fit: BoxFit.cover)),
+            ),
+          )
         : GestureDetector(
             onTap: () {
               Navigator.push(
                   context,
                   PageTransition(
-                    duration: const Duration(milliseconds: 700),
                     child: widget.pageTo,
                     type: PageTransitionType.scale,
                     alignment: Alignment.bottomCenter,
@@ -110,7 +93,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
             child: Container(
                 alignment: Alignment.center,
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.7, height: _screenH / 2.8),
+                    width: _screenWidth / 1.2, height: _screenH / 5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(width: 6, color: Colors.grey.shade200),

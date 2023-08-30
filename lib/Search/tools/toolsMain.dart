@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mma_mse/Search/buttonMode.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'tooData.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:mma_mse/floors/EqubButton.dart';
 
 class toolMain extends StatefulWidget {
   toolMain({Key? key}) : super(key: key);
@@ -13,16 +13,7 @@ class toolMain extends StatefulWidget {
 }
 
 class _toolMainState extends State<toolMain> {
-  double _screenWidth = 0;
-  double _screenH = 0;
   List<ToolData> toolDataList = [];
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
 
   @override
   void initState() {
@@ -49,16 +40,16 @@ class _toolMainState extends State<toolMain> {
         ),
         backgroundColor: Colors.grey[200],
         drawer: standardDrawer(header: "Matls Tool Box"),
-        body: SafeArea(
-          child: Stack(
+        body: SingleChildScrollView(
+          child: Column(
             children: [
               for (var i = 0; i < toolDataList.length; i++)
-                IntroButtonMode(
-                  str: true,
+                EqubButton(
+                  backColor: toolDataList[i].bgColor,
+                  function: "Tools",
                   pageTo: toolDataList[i].pageTo,
                   backImg: toolDataList[i].backImg,
-                  title: toolDataList[i].name,
-                  positionCode: toolDataList[i].posCode,
+                  name: toolDataList[i].name,
                 ),
             ],
           ),
