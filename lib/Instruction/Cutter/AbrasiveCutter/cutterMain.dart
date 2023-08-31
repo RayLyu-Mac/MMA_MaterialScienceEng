@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BulkAbraCutterInstru extends StatefulWidget {
-  const BulkAbraCutterInstru({Key key}) : super(key: key);
+  const BulkAbraCutterInstru({Key? key}) : super(key: key);
 
   @override
   _BulkAbraCutterInstruState createState() => _BulkAbraCutterInstruState();

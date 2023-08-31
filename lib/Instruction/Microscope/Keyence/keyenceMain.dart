@@ -5,7 +5,7 @@ import 'keyenceData.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class KeyenceMicroInstru extends StatefulWidget {
-  const KeyenceMicroInstru({Key key}) : super(key: key);
+  const KeyenceMicroInstru({Key? key}) : super(key: key);
 
   @override
   _KeyenceMicroInstruState createState() => _KeyenceMicroInstruState();

@@ -3,7 +3,7 @@ import 'AboutUSData.dart';
 import 'package:flutter/material.dart';
 
 class AboutTeam extends StatefulWidget {
-  AboutTeam({Key key}) : super(key: key);
+  AboutTeam({Key? key}) : super(key: key);
 
   @override
   _AboutTeamState createState() => _AboutTeamState();
@@ -64,7 +64,7 @@ class _AboutTeamState extends State<AboutTeam> {
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     fit: BoxFit.fitWidth,
-                                    image: NetworkImage(teamInfo[index].img))),
+                                    image: NetworkImage(teamInfo[index].img!))),
                           )
                         : Container(),
                     teamInfo[index].program != null
@@ -83,7 +83,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].eamil != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Email: " + teamInfo[index].eamil,
+                            child: Text("Email: " + teamInfo[index].eamil!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),
@@ -102,7 +102,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].about != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Fun Fact:\n" + teamInfo[index].about,
+                            child: Text("Fun Fact:\n" + teamInfo[index].about!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),
@@ -112,7 +112,7 @@ class _AboutTeamState extends State<AboutTeam> {
                     teamInfo[index].moto != null
                         ? Container(
                             width: _screenWidth / 1.1,
-                            child: Text("Motto:\n" + teamInfo[index].moto,
+                            child: Text("Motto:\n" + teamInfo[index].moto!,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)))
                         : Container(),

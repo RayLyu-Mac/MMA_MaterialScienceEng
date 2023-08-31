@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class AutoPolisherinstruction extends StatefulWidget {
-  const AutoPolisherinstruction({Key key}) : super(key: key);
+  const AutoPolisherinstruction({Key? key}) : super(key: key);
 
   @override
   _AutoPolisherinstructionState createState() =>

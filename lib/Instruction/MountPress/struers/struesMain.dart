@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class struesinstruction extends StatefulWidget {
-  const struesinstruction({Key key}) : super(key: key);
+  const struesinstruction({Key? key}) : super(key: key);
 
   @override
   _struesinstructionState createState() => _struesinstructionState();

@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class ManualMicHardnessInstru extends StatefulWidget {
-  const ManualMicHardnessInstru({Key key}) : super(key: key);
+  const ManualMicHardnessInstru({Key? key}) : super(key: key);
 
   @override
   _ManualMicHardnessInstruState createState() =>

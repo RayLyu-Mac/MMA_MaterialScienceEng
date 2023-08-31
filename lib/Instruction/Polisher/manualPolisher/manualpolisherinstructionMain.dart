@@ -8,7 +8,7 @@ import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 // ignore: camel_case_types
 class manual_polisher_instruction extends StatefulWidget {
-  const manual_polisher_instruction({Key key}) : super(key: key);
+  const manual_polisher_instruction({Key? key}) : super(key: key);
 
   @override
   _manual_polisher_instructionState createState() =>

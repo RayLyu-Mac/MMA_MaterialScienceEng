@@ -1,21 +1,21 @@
 class testdetailData {
   String name;
   String jTitle;
-  double titleFontsize;
-  double contentFontsize;
+  double? titleFontsize;
+  double? contentFontsize;
   String contribution;
   String program;
-  String eamil;
-  String about;
-  String img;
-  String moto;
+  String? eamil;
+  String? about;
+  String? img;
+  String? moto;
   testdetailData(
-      {this.name,
-      this.jTitle,
+      {required this.name,
+      required this.jTitle,
       this.about,
       this.img,
-      this.program,
-      this.contribution,
+      required this.program,
+      required this.contribution,
       this.contentFontsize,
       this.moto,
       this.eamil,
@@ -29,7 +29,7 @@ List<testdetailData> aboutUsData = [
       eamil: "lyuz11@mcmaster.ca",
       program: "Material & Biomedical Engineering",
       img:
-          "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/personal%20Pic/38.pngraw=true",
+          "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/personal%20Pic/38.png?raw=true",
       contribution:
           "•Design the structure for the App\n•Create useful tools and features\n•Cut the instruction video and post\n•Safety Features\n•Test case\n•Side drawer design",
       about:

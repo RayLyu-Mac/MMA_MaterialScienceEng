@@ -4,15 +4,15 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class video {
   String title;
   String subtitle;
-  YoutubePlayerController videoController;
+  YoutubePlayerController? videoController;
   Color materialcolor;
-  String type;
+  String? type;
 
   video({
-    this.title,
-    this.subtitle,
+    required this.title,
+    required this.subtitle,
     this.type,
-    this.materialcolor,
+    required this.materialcolor,
     this.videoController,
   });
 }

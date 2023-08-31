@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class MHTinstruction extends StatefulWidget {
-  const MHTinstruction({Key key}) : super(key: key);
+  const MHTinstruction({Key? key}) : super(key: key);
 
   @override
   _MHTinstructionState createState() => _MHTinstructionState();

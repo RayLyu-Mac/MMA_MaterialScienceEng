@@ -6,7 +6,7 @@ import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class ManualRWInstr extends StatefulWidget {
   const ManualRWInstr({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

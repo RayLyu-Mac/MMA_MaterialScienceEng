@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class EcoPressinstruction extends StatefulWidget {
-  const EcoPressinstruction({Key key}) : super(key: key);
+  const EcoPressinstruction({Key? key}) : super(key: key);
 
   @override
   _EcoPressinstructionState createState() => _EcoPressinstructionState();

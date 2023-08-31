@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'referenceData.dart';
 
 class reference extends StatefulWidget {
-  reference({Key key}) : super(key: key);
+  reference({Key? key}) : super(key: key);
 
   @override
   _referenceState createState() => _referenceState();
