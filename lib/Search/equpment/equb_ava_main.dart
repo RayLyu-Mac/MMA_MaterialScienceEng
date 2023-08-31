@@ -6,14 +6,14 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class equb_main extends StatefulWidget {
-  const equb_main({Key? key}) : super(key: key);
+  const equb_main({Key key}) : super(key: key);
 
   @override
   _equb_mainState createState() => _equb_mainState();
 }
 
 class _equb_mainState extends State<equb_main> {
-  late HeroType _heroType;
+  HeroType _heroType;
   double _screenWidth = 0;
 
   List equipments = [];

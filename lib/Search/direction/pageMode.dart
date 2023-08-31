@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class bio_mat_model extends StatefulWidget {
   const bio_mat_model(
-      {required this.course_name,
-      required this.back_img,
-      required this.course_description,
-      required this.other_info,
-      Key? key})
+      {this.course_name,
+      this.back_img,
+      this.course_description,
+      this.other_info,
+      Key key})
       : super(key: key);
 
   final String course_name;
