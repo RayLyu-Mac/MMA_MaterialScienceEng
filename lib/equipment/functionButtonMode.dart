@@ -5,25 +5,25 @@ import 'safyNoteVideo.dart';
 import 'package:mma_mse/workingInPro.dart';
 
 class functionButtonMode extends StatefulWidget {
-  final double top;
-  final double left;
+  final double? top;
+  final double? left;
   final String buttonName;
-  final double fontSize;
-  final Widget pageTo;
-  final String warnNote;
+  final double? fontSize;
+  final Widget? pageTo;
+  final String? warnNote;
   final dynamic url;
-  final String warnV;
+  final String? warnV;
 
   functionButtonMode(
       {this.top,
       this.left,
-      this.buttonName,
+      required this.buttonName,
       this.pageTo,
       this.fontSize,
       this.warnNote,
       this.url,
       this.warnV,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -55,8 +55,8 @@ class _functionButtonModeState extends State<functionButtonMode> {
                       barrierDismissible: false, // user must tap button!
                       builder: (BuildContext context) {
                         return warning(
-                            pageTo: widget.pageTo,
-                            warning_note: widget.warnNote);
+                            pageTo: widget.pageTo!,
+                            warning_note: widget.warnNote!);
                       });
                 } else if (widget.url != null) {
                   return widget.url();
@@ -66,7 +66,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
                       barrierDismissible: false, // user must tap button!
                       builder: (BuildContext context) {
                         return warningVideo(
-                            pageTo: widget.pageTo, videoID: widget.warnV);
+                            pageTo: widget.pageTo!, videoID: widget.warnV!);
                       });
                 } else {
                   Navigator.push(
@@ -107,7 +107,8 @@ class _functionButtonModeState extends State<functionButtonMode> {
                     barrierDismissible: false, // user must tap button!
                     builder: (BuildContext context) {
                       return warning(
-                          pageTo: widget.pageTo, warning_note: widget.warnNote);
+                          pageTo: widget.pageTo!,
+                          warning_note: widget.warnNote!);
                     });
               } else if (widget.url != null) {
                 return widget.url();
@@ -117,7 +118,7 @@ class _functionButtonModeState extends State<functionButtonMode> {
                     barrierDismissible: false, // user must tap button!
                     builder: (BuildContext context) {
                       return warningVideo(
-                          pageTo: widget.pageTo, videoID: widget.warnV);
+                          pageTo: widget.pageTo!, videoID: widget.warnV!);
                     });
               } else {
                 Navigator.push(

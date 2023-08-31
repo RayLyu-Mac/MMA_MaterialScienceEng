@@ -6,7 +6,8 @@ import 'package:flutter/services.dart';
 class warningVideo extends StatefulWidget {
   final Widget pageTo;
   final String videoID;
-  const warningVideo({this.pageTo, this.videoID, Key key}) : super(key: key);
+  const warningVideo({required this.pageTo, required this.videoID, Key? key})
+      : super(key: key);
 
   @override
   _warningVideoState createState() => _warningVideoState();

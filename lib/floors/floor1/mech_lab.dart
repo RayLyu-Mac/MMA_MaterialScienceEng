@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'equbLayout/room134.dart';
 
 class Mech_lab extends StatefulWidget {
-  final String emailTo;
-  final String location;
-  final Widget pageTo;
-  Mech_lab({this.emailTo, this.pageTo, this.location, Key key})
+  final String? emailTo;
+  final String? location;
+  final Widget? pageTo;
+  Mech_lab({this.emailTo, this.pageTo, this.location, Key? key})
       : super(key: key);
 
   @override
@@ -41,6 +41,6 @@ class _Mech_labState extends State<Mech_lab> {
             "Equipments:\n1.Digital RockWell\n2.Llyold Tensile Test Machine\n3.Furnace\n4.Charpy Impact Tester\n5.UTM",
         pageTo: room134LayO(),
         roomImg:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/134.jpgraw=true");
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/134.jpg?raw=true");
   }
 }

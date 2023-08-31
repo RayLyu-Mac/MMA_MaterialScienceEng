@@ -7,22 +7,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/workingInPro.dart';
 
 class roomHorizontal extends StatefulWidget {
-  final String emailTo;
-  final String location;
-  final Widget pageTo;
+  final String? emailTo;
+  final String? location;
+  final Widget? pageTo;
   final String roomName;
-  final String roomTi;
+  final String? roomTi;
   final String roomCont;
   final String roomImg;
   roomHorizontal(
-      {this.emailTo,
-      this.roomName,
-      this.roomTi,
-      this.pageTo,
-      this.roomCont,
-      this.location,
-      this.roomImg,
-      Key key})
+      {@optionalTypeArgs this.emailTo,
+      required this.roomName,
+      @optionalTypeArgs this.roomTi,
+      @optionalTypeArgs this.pageTo,
+      required this.roomCont,
+      @optionalTypeArgs this.location,
+      required this.roomImg,
+      Key? key})
       : super(key: key);
 
   @override
@@ -49,7 +49,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.roomTi),
+        title: Text(widget.roomTi!),
         backgroundColor: Colors.black,
         actions: [
           IconButton(
@@ -112,7 +112,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
                         height: _screenH / 50,
                       ),
                       fancyBut(
-                        pageTo: widget.pageTo ?? Container(),
+                        pageTo: widget.pageTo ?? workingInProg(),
                         icon: Icons.follow_the_signs_rounded,
                         buttonName: "Layout",
                         height: _screenH / 8.5,
