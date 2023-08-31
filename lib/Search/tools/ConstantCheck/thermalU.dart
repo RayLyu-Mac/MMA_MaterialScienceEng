@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class thermalUC extends StatefulWidget {
-  thermalUC({Key? key}) : super(key: key);
+  thermalUC({Key key}) : super(key: key);
 
   @override
   _thermalUCState createState() => _thermalUCState();
@@ -81,7 +81,7 @@ class _thermalUCState extends State<thermalUC> {
                       onChanged: (var valueB) {
                         setState(
                           () {
-                            dropdownValuea = valueB!;
+                            dropdownValuea = valueB;
                           },
                         );
                       },
@@ -108,7 +108,7 @@ class _thermalUCState extends State<thermalUC> {
                       value: dropdownValueb,
                       onChanged: (value) {
                         setState(() {
-                          dropdownValueb = value!;
+                          dropdownValueb = value;
                         });
                       },
                       items: <String>["J", "cal"]
@@ -208,7 +208,7 @@ class _thermalUCState extends State<thermalUC> {
                       onChanged: (var valueB) {
                         setState(
                           () {
-                            dropdownValueat = valueB!;
+                            dropdownValueat = valueB;
                           },
                         );
                       },
@@ -235,7 +235,7 @@ class _thermalUCState extends State<thermalUC> {
                       value: dropdownValuebt,
                       onChanged: (value) {
                         setState(() {
-                          dropdownValuebt = value!;
+                          dropdownValuebt = value;
                         });
                       },
                       items: <String>["Celsius", "Kelvin", "Fahrenheit"]

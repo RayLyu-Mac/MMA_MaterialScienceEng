@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 class ScrollcustomListTile extends StatelessWidget {
   const ScrollcustomListTile(
-      {required this.name,
-      required this.pageTo,
-      required this.fonts,
-      required this.controller,
+      {this.name,
+      this.pageTo,
+      this.fonts,
+      this.controller,
       this.offset,
       this.tileColor,
       this.padTop,
-      super.key});
+      key});
   final String name;
   final int pageTo;
   final double fonts;
-  final double? offset;
-  final double? padTop;
-  final Color? tileColor;
+  final double offset;
+  final double padTop;
+  final Color tileColor;
   final ScrollController controller;
   @override
   Widget build(BuildContext context) {

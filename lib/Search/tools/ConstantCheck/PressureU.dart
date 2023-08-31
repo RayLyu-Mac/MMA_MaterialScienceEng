@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class unitC extends StatefulWidget {
-  unitC({Key? key}) : super(key: key);
+  unitC({Key key}) : super(key: key);
 
   @override
   _unitCState createState() => _unitCState();
@@ -74,7 +74,7 @@ class _unitCState extends State<unitC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB!;
+                        dropdownValuea = valueB;
                       },
                     );
                   },
@@ -101,7 +101,7 @@ class _unitCState extends State<unitC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value!;
+                      dropdownValueb = value;
                     });
                   },
                   items: <String>["atm", "bar", "MPa", "Psi"]

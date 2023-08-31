@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ZoomInPhaseD extends StatelessWidget {
-  final String? imgPD;
-  const ZoomInPhaseD({@optionalTypeArgs this.imgPD, Key? key})
-      : super(key: key);
+  final String imgPD;
+  const ZoomInPhaseD({@optionalTypeArgs this.imgPD, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

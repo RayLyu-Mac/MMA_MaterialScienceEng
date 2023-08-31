@@ -7,7 +7,7 @@ import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class FractureTest extends StatefulWidget {
-  FractureTest({Key? key}) : super(key: key);
+  FractureTest({Key key}) : super(key: key);
   List<Widget> pages = [];
 
   @override

@@ -7,7 +7,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PhaseDiag extends StatefulWidget {
-  PhaseDiag({Key? key}) : super(key: key);
+  PhaseDiag({Key key}) : super(key: key);
 
   @override
   _PhaseDiagState createState() => _PhaseDiagState();
@@ -149,7 +149,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         onTap: () {
                                           transition(ZoomInPhaseD(
                                               imgPD:
-                                                  result[index].addonImgLft!));
+                                                  result[index].addonImgLft));
                                         },
                                       ),
                                     ))
@@ -162,7 +162,7 @@ class _PhaseDiagState extends State<PhaseDiag> {
                                         onTap: () {
                                           transition(ZoomInPhaseD(
                                               imgPD:
-                                                  result[index].addonImgRht!));
+                                                  result[index].addonImgRht));
                                         },
                                       ),
                                     )

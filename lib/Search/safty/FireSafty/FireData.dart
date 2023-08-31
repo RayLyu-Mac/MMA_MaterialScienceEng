@@ -7,12 +7,12 @@ class testdetailData {
   double picLeft;
 
   testdetailData(
-      {required this.title,
-      required this.content,
-      required this.addOnImg,
+      {this.title,
+      this.content,
+      this.addOnImg,
       this.contentFontsize = 5,
       this.picLeft = 0,
-      required this.titleFontsize});
+      this.titleFontsize});
 }
 
 List<testdetailData> fireData = [

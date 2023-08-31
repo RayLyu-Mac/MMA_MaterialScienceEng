@@ -9,7 +9,7 @@ import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class search_area extends StatefulWidget {
-  search_area({Key? key}) : super(key: key);
+  search_area({Key key}) : super(key: key);
 
   @override
   _search_areaState createState() => _search_areaState();
@@ -21,8 +21,7 @@ class _search_areaState extends State<search_area> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
   }
 
   double _screenWidth = 0;

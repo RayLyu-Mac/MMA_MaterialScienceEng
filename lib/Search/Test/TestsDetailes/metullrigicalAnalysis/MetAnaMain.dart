@@ -7,7 +7,7 @@ import 'package:mma_mse/customTile.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class metAnalysis extends StatefulWidget {
-  metAnalysis({Key? key}) : super(key: key);
+  metAnalysis({Key key}) : super(key: key);
   List<Widget> pages = [];
 
   @override

@@ -6,7 +6,7 @@ import 'package:mma_mse/Search/direction/dir_main.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class search_p2 extends StatefulWidget {
-  search_p2({Key? key}) : super(key: key);
+  search_p2({Key key}) : super(key: key);
 
   @override
   _search_p2State createState() => _search_p2State();

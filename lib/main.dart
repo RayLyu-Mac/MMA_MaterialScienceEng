@@ -9,7 +9,7 @@ void main() {
 }
 
 class mainp extends StatelessWidget {
-  const mainp({Key? key}) : super(key: key);
+  const mainp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

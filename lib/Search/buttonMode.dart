@@ -3,25 +3,25 @@ import 'package:page_transition/page_transition.dart';
 
 class IntroButtonMode extends StatefulWidget {
   IntroButtonMode(
-      {required this.pageTo,
-      required this.backImg,
+      {this.pageTo,
+      this.backImg,
       this.title,
       this.top,
       this.left,
       this.fontsize,
       this.length,
       this.width,
-      required this.str,
-      Key? key})
+      this.str,
+      Key key})
       : super(key: key);
   final Widget pageTo;
   final String backImg;
-  final String? title;
-  final double? fontsize;
-  final double? top;
-  final double? left;
-  final double? width;
-  final double? length;
+  final String title;
+  final double fontsize;
+  final double top;
+  final double left;
+  final double width;
+  final double length;
   final bool str;
 
   @override
@@ -62,7 +62,7 @@ class _IntroButtonModeState extends State<IntroButtonMode> {
               constraints: BoxConstraints.expand(
                   width: _screenWidth / 1.2, height: _screenH / 6),
               child: Text(
-                widget.title!,
+                widget.title,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: widget.fontsize ?? _screenH / 35,

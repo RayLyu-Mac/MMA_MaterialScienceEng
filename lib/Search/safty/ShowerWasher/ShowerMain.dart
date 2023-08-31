@@ -3,7 +3,7 @@ import 'package:page_transition/page_transition.dart';
 import 'location.dart';
 
 class ChemicalShowerEyeWasher extends StatefulWidget {
-  ChemicalShowerEyeWasher({Key? key}) : super(key: key);
+  ChemicalShowerEyeWasher({Key key}) : super(key: key);
 
   @override
   _ChemicalShowerEyeWasherState createState() =>

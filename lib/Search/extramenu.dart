@@ -15,7 +15,7 @@ import 'package:mma_mse/relatedInfo/AboutUsMain.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class extraMenu extends StatefulWidget {
-  extraMenu({Key? key}) : super(key: key);
+  extraMenu({Key key}) : super(key: key);
 
   @override
   _extraMenuState createState() => _extraMenuState();
@@ -72,7 +72,7 @@ class _extraMenuState extends State<extraMenu> {
 }
 
 class floorMenu extends StatelessWidget {
-  const floorMenu({Key? key}) : super(key: key);
+  const floorMenu({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class floorMenu extends StatelessWidget {
 }
 
 class aboutUs extends StatelessWidget {
-  const aboutUs({Key? key}) : super(key: key);
+  const aboutUs({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

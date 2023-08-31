@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class pageMode extends StatefulWidget {
-  final String? content;
+  final String content;
   final String backImg;
   final String title;
-  final String? addOnImg;
-  final bool? wholeImg;
-  final Widget? pageTo;
-  final double? height;
-  final double? length;
-  final double? width;
-  final double? left;
+  final String addOnImg;
+  final bool wholeImg;
+  final Widget pageTo;
+  final double height;
+  final double length;
+  final double width;
+  final double left;
   pageMode(
-      {required this.title,
+      {this.title,
       this.wholeImg,
       this.height,
       this.length,
       this.left,
-      required this.backImg,
+      this.backImg,
       this.width,
       this.content,
       this.addOnImg,
       this.pageTo,
-      Key? key})
+      Key key})
       : super(key: key);
 
   @override
@@ -127,17 +127,17 @@ class imgAddOn extends StatelessWidget {
   final String img;
   final double screenW;
   final double screenH;
-  final Widget? pageTo;
-  final double? length;
-  final double? width;
+  final Widget pageTo;
+  final double length;
+  final double width;
   const imgAddOn(
-      {required this.img,
+      {this.img,
       this.width,
-      required this.screenH,
+      this.screenH,
       this.length,
       this.pageTo,
-      required this.screenW,
-      Key? key})
+      this.screenW,
+      Key key})
       : super(key: key);
 
   @override
@@ -150,7 +150,7 @@ class imgAddOn extends StatelessWidget {
                   context,
                   PageTransition(
                       duration: Duration(milliseconds: 700),
-                      child: pageTo!,
+                      child: pageTo,
                       type: PageTransitionType.scale,
                       alignment: Alignment.topCenter));
             },

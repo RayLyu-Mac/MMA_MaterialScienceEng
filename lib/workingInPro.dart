@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class workingInProg extends StatelessWidget {
-  const workingInProg({Key? key}) : super(key: key);
+  const workingInProg({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

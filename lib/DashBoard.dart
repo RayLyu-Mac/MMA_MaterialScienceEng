@@ -19,7 +19,7 @@ DateTime now = new DateTime.now();
 DateTime date = new DateTime(now.year, now.month, now.day);
 
 class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+  const DashBoard({key});
 
   @override
   State<DashBoard> createState() => _DashBoardState();
@@ -308,7 +308,7 @@ class _DashBoardState extends State<DashBoard> {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           possibleResult.add(data);
-          property.add(wholeSample[data]!);
+          property.add(wholeSample[data]);
         }
       }
     }

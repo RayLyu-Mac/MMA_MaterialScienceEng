@@ -4,7 +4,7 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class test_ava extends StatefulWidget {
-  const test_ava({Key? key}) : super(key: key);
+  const test_ava({Key key}) : super(key: key);
 
   @override
   _test_avaState createState() => _test_avaState();

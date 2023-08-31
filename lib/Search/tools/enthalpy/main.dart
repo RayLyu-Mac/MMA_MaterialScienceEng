@@ -6,7 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import 'transitionEn.dart';
 
 class EnthalpyCal extends StatefulWidget {
-  EnthalpyCal({Key? key}) : super(key: key);
+  EnthalpyCal({Key key}) : super(key: key);
 
   @override
   _EnthalpyCalState createState() => _EnthalpyCalState();
@@ -83,8 +83,8 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                           value: element,
                           onChanged: (value) {
                             setState(() {
-                              element = value!;
-                              eleD = enthP[value]!;
+                              element = value;
+                              eleD = enthP[value];
                             });
                           },
                           items: enthP.keys

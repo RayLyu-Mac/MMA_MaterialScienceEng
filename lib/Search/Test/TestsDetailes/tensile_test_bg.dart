@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class tensile_test_bg extends StatefulWidget {
-  tensile_test_bg({Key? key}) : super(key: key);
+  tensile_test_bg({Key key}) : super(key: key);
 
   @override
   _tensile_test_bgState createState() => _tensile_test_bgState();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/Search/tools/errorFunction/data.dart';
 
 class errorFunction extends StatefulWidget {
-  errorFunction({Key? key}) : super(key: key);
+  errorFunction({Key key}) : super(key: key);
 
   @override
   _errorFunctionState createState() => _errorFunctionState();
@@ -83,19 +83,18 @@ class _errorFunctionState extends State<errorFunction> {
                           mod = 0.1;
                         }
                         if (round > input) {
-                          output =
-                              ((erf[round]! - erf[round - mod]!) / mod * input +
-                                      erf[round]! -
-                                      (erf[round]! - erf[round - mod]!) /
-                                          mod *
-                                          round)
-                                  .toStringAsExponential(4);
+                          output = ((erf[round] - erf[round - mod]) /
+                                      mod *
+                                      input +
+                                  erf[round] -
+                                  (erf[round] - erf[round - mod]) / mod * round)
+                              .toStringAsExponential(4);
                         } else {
                           print(round + mod);
                           output =
-                              ((erf[round + mod]! - erf[round]!) / mod * input +
-                                      erf[round + mod]! -
-                                      (erf[round + mod]! - erf[round]!) /
+                              ((erf[round + mod] - erf[round]) / mod * input +
+                                      erf[round + mod] -
+                                      (erf[round + mod] - erf[round]) /
                                           mod *
                                           (round + mod))
                                   .toStringAsExponential(4);

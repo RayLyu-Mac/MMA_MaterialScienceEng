@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 
 class STDCheck extends StatefulWidget {
-  STDCheck({Key? key}) : super(key: key);
+  STDCheck({Key key}) : super(key: key);
 
   @override
   _STDCheckState createState() => _STDCheckState();
@@ -251,7 +251,7 @@ class _STDCheckState extends State<STDCheck> {
 
                         double sn = double.parse(sampn.text);
                         double sm = double.parse(sampmean.text);
-                        if (sn != null) {
+                        if (sn = null) {
                           mz = ((sm - xv) / sigmav / sqrt(sn));
                           ci68 = sigmav * 0.47 / sqrt(sn);
                           ci95 = sigmav * 1.96 / sqrt(sn);
@@ -395,7 +395,7 @@ class _STDCheckState extends State<STDCheck> {
                           output = "Please correct your input";
                         } else {
                           output = stdNum[input.toString().substring(
-                                      0, input.toString().length - 1)]![
+                                      0, input.toString().length - 1)][
                                   int.parse(input
                                       .toString()[input.toString().length - 1])]
                               .toString();

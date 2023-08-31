@@ -4,7 +4,7 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class WhimsSymbols extends StatefulWidget {
-  WhimsSymbols({Key? key}) : super(key: key);
+  WhimsSymbols({Key key}) : super(key: key);
 
   @override
   _WhimsSymbolsState createState() => _WhimsSymbolsState();

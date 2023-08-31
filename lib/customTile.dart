@@ -2,18 +2,13 @@ import 'package:flutter/material.dart';
 
 class customListTile extends StatelessWidget {
   const customListTile(
-      {required this.name,
-      required this.pageTo,
-      required this.fonts,
-      required this.controller,
-       this.bgColor,
-      key})
+      {this.name, this.pageTo, this.fonts, this.controller, this.bgColor, key})
       : super(key: key);
   final String name;
   final int pageTo;
   final double fonts;
   final PageController controller;
-  final Color? bgColor;
+  final Color bgColor;
   @override
   Widget build(BuildContext context) {
     return Padding(

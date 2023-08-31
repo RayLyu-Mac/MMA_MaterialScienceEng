@@ -7,12 +7,12 @@ class WHIMSData {
   double picLeft;
 
   WHIMSData(
-      {required this.title,
-      required this.content,
-      required this.addOnImg,
+      {this.title,
+      this.content,
+      this.addOnImg,
       this.contentFontsize = 15,
-      required this.picLeft,
-      required this.titleFontsize});
+      this.picLeft,
+      this.titleFontsize});
 }
 
 List<WHIMSData> whims = [

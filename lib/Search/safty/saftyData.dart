@@ -14,12 +14,7 @@ class ToolData {
   double top;
   Widget pageTo;
 
-  ToolData(
-      {required this.bgColor,
-      required this.name,
-      required this.backImg,
-      required this.pageTo,
-      this.top = 5});
+  ToolData({this.bgColor, this.name, this.backImg, this.pageTo, this.top = 5});
 }
 
 List<ToolData> safetyData = [

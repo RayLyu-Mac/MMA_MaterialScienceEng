@@ -8,8 +8,7 @@ import 'package:intl/intl.dart';
 class user_note extends StatefulWidget {
   final String loc;
   final Color themem_color;
-  const user_note({required this.loc, required this.themem_color, Key? key})
-      : super(key: key);
+  const user_note({this.loc, this.themem_color, Key key}) : super(key: key);
 
   @override
   _user_noteState createState() => _user_noteState();
@@ -20,8 +19,8 @@ class _user_noteState extends State<user_note> {
   int _counter = 0;
   List notes = [];
 
-  late File jsonFile;
-  late Directory dir;
+  File jsonFile;
+  Directory dir;
   String fileC = '';
   String fileName = "notes.json";
   List propty = [];
