@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 
 class Room242LayO extends StatefulWidget {
-  Room242LayO({Key key}) : super(key: key);
+  Room242LayO({Key? key}) : super(key: key);
 
   @override
   _room242LayOState createState() => _room242LayOState();
@@ -67,7 +67,7 @@ class _room242LayOState extends State<Room242LayO> {
               length: _screenH / 5.5,
               width: _screenWidth / 3,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.pngraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.png?raw=true",
               name: "Sink"),
           roomButton(
               left: _screenWidth / 1.6,
@@ -82,7 +82,7 @@ class _room242LayOState extends State<Room242LayO> {
               width: _screenWidth / 3,
               pageTo: ManualCompPress(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpgraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true",
               name: "Manual Compression Press"),
           roomButton(
               left: _screenWidth / 1.6,
@@ -91,7 +91,7 @@ class _room242LayOState extends State<Room242LayO> {
               width: _screenWidth / 3,
               pageTo: BulkAbrasiveMain(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/abc.jpgraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/abc.jpg?raw=true",
               name: "Bulk Abrasive Cutter"),
           roomButton(
               left: _screenWidth / 1.6,

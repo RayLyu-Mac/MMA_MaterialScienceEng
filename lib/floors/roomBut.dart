@@ -4,40 +4,40 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/fancyButton.dart';
 
 class roomButton extends StatelessWidget {
-  final double left;
-  final double top;
+  final double? left;
+  final double? top;
   final double length;
   final double width;
-  final String name;
-  final Widget pageTo;
-  final double fontsize;
-  final Color backC;
-  final IconData icon;
-  final int elevation;
-  final String details;
-  final String detailTitle;
-  final double detailsFontS;
-  final double detailsTiFontS;
-  final IconData titleIcon;
-  final String backImg;
+  final String? name;
+  final Widget? pageTo;
+  final double? fontsize;
+  final Color? backC;
+  final IconData? icon;
+  final int? elevation;
+  final String? details;
+  final String? detailTitle;
+  final double? detailsFontS;
+  final double? detailsTiFontS;
+  final IconData? titleIcon;
+  final String? backImg;
   const roomButton(
-      {this.left,
-      this.titleIcon,
-      this.detailTitle,
-      this.detailsFontS,
-      this.detailsTiFontS,
-      this.backC,
-      this.details,
-      this.top,
-      this.length,
-      this.backImg,
-      this.fontsize,
-      this.icon,
-      this.width,
-      this.name,
-      this.pageTo,
-      this.elevation,
-      Key key})
+      {@optionalTypeArgs this.left,
+      @optionalTypeArgs this.titleIcon,
+      @optionalTypeArgs this.detailTitle,
+      @optionalTypeArgs this.detailsFontS,
+      @optionalTypeArgs this.detailsTiFontS,
+      @optionalTypeArgs this.backC,
+      @optionalTypeArgs this.details,
+      @optionalTypeArgs this.top,
+      required this.length,
+      @optionalTypeArgs this.backImg,
+      @optionalTypeArgs this.fontsize,
+      @optionalTypeArgs this.icon,
+      required this.width,
+      @optionalTypeArgs this.name,
+      @optionalTypeArgs this.pageTo,
+      @optionalTypeArgs this.elevation,
+      Key? key})
       : super(key: key);
 
   @override
@@ -77,18 +77,18 @@ class roomButton extends StatelessWidget {
                                     ),
                                     contentPadding:
                                         EdgeInsets.fromLTRB(20, 15, 25, 35),
-                                    title: Text(detailTitle,
+                                    title: Text(detailTitle!,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: detailsTiFontS ?? 20)),
                                     children: [
-                                      Text(details,
+                                      Text(details!,
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: detailsTiFontS ?? 17)),
                                       pageTo != null
                                           ? fancyBut(
-                                              pageTo: pageTo,
+                                              pageTo: pageTo!,
                                               width: width / 1.1,
                                               height: length / 4,
                                               icon: FontAwesomeIcons.restroom,
@@ -109,7 +109,7 @@ class roomButton extends StatelessWidget {
                                   colorFilter: new ColorFilter.mode(
                                       Colors.black.withOpacity(0.4),
                                       BlendMode.dstATop),
-                                  image: NetworkImage(backImg)),
+                                  image: NetworkImage(backImg!)),
                               borderRadius: BorderRadius.circular(25),
                               border: Border.all(
                                   width: 6, color: Colors.grey.shade100),
@@ -132,7 +132,7 @@ class roomButton extends StatelessWidget {
                                         width: width / 10,
                                       ),
                                       Text(
-                                        name,
+                                        name!,
                                         style: TextStyle(
                                             fontSize: fontsize ?? 23,
                                             color: Colors.grey[100],
@@ -150,7 +150,7 @@ class roomButton extends StatelessWidget {
                                     ],
                                   )
                                 : Text(
-                                    name,
+                                    name!,
                                     style: TextStyle(
                                         fontSize: fontsize ?? 23,
                                         color: Colors.grey[100],
@@ -191,12 +191,12 @@ class roomButton extends StatelessWidget {
                                   ),
                                   contentPadding:
                                       EdgeInsets.fromLTRB(20, 15, 25, 35),
-                                  title: Text(detailTitle,
+                                  title: Text(detailTitle!,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: detailsTiFontS ?? 20)),
                                   children: [
-                                    Text(details,
+                                    Text(details!,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: detailsTiFontS ?? 15)),
@@ -205,7 +205,7 @@ class roomButton extends StatelessWidget {
                                     ),
                                     pageTo != null
                                         ? fancyBut(
-                                            pageTo: pageTo,
+                                            pageTo: pageTo!,
                                             width: width / 1.2,
                                             height: length / 1.3,
                                             icon: FontAwesomeIcons.checkDouble,
@@ -225,7 +225,7 @@ class roomButton extends StatelessWidget {
                             colorFilter: new ColorFilter.mode(
                                 Colors.black.withOpacity(0.4),
                                 BlendMode.dstATop),
-                            image: NetworkImage(backImg)),
+                            image: NetworkImage(backImg!)),
                         borderRadius: BorderRadius.circular(25),
                         border:
                             Border.all(width: 6, color: Colors.grey.shade100),
@@ -246,7 +246,7 @@ class roomButton extends StatelessWidget {
                               children: [
                                 Icon(titleIcon),
                                 Text(
-                                  name,
+                                  name!,
                                   style: TextStyle(
                                       fontSize: fontsize ?? 22,
                                       color: Colors.grey[100],
@@ -256,7 +256,7 @@ class roomButton extends StatelessWidget {
                               ],
                             )
                           : Text(
-                              name,
+                              name!,
                               style: TextStyle(
                                   fontSize: fontsize ?? 22,
                                   color: Colors.grey[100],

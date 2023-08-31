@@ -7,7 +7,7 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room246LayO extends StatefulWidget {
-  room246LayO({Key key}) : super(key: key);
+  room246LayO({Key? key}) : super(key: key);
 
   @override
   _room246LayOState createState() => _room246LayOState();
@@ -56,7 +56,7 @@ class _room246LayOState extends State<room246LayO> {
               width: _screenWidth / 1.1,
               pageTo: Etching(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpgraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true",
               name: "Etching",
             ),
           ]),
@@ -73,7 +73,7 @@ class _room246LayOState extends State<room246LayO> {
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpgraw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               ),
               SizedBox(
@@ -84,7 +84,7 @@ class _room246LayOState extends State<room246LayO> {
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpgraw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               )
             ],
@@ -102,7 +102,7 @@ class _room246LayOState extends State<room246LayO> {
                 width: _screenWidth / 3,
                 pageTo: AutoPolisherMain(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpgraw=true",
+                    "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true",
                 name: "Auto Polisher",
               ),
               SizedBox(
@@ -113,7 +113,7 @@ class _room246LayOState extends State<room246LayO> {
                 width: _screenWidth / 3,
                 pageTo: manual_polisher(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpgraw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
                 name: "Manual Polisher",
               ),
             ],

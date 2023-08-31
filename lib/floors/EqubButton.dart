@@ -8,12 +8,12 @@ class EqubButton extends StatelessWidget {
   final String backImg;
   final Color backColor;
   const EqubButton(
-      {this.backImg,
-      this.name,
-      this.backColor,
-      this.pageTo,
-      this.function,
-      Key key})
+      {required this.backImg,
+      required this.name,
+      required this.backColor,
+      required this.pageTo,
+      required this.function,
+      Key? key})
       : super(key: key);
 
   @override

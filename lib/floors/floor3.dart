@@ -3,13 +3,16 @@ import 'package:flutter/services.dart';
 import 'roomBut.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/wholeQR.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:page_transition/page_transition.dart';
+
 import 'package:mma_mse/Drawer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class floor3 extends StatefulWidget {
   final bool eye;
 
-  floor3({this.eye, Key key}) : super(key: key);
+  floor3({required this.eye, Key? key}) : super(key: key);
 
   @override
   _floor3State createState() => _floor3State();
@@ -203,7 +206,8 @@ class _floor3State extends State<floor3> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   // Future scanQR() async {

@@ -4,7 +4,7 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room239 extends StatefulWidget {
-  room239({Key key}) : super(key: key);
+  room239({Key? key}) : super(key: key);
 
   @override
   _room239State createState() => _room239State();
@@ -54,7 +54,7 @@ class _room239State extends State<room239> {
               length: _screenH / 3,
               width: _screenWidth / 3,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LECO.pngraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LECO.png?raw=true",
               name: "Oxygen / Nitrogen Determinator"),
           roomButton(
               left: _screenWidth / 13,
@@ -62,7 +62,7 @@ class _room239State extends State<room239> {
               length: _screenH / 7,
               width: _screenWidth / 3,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.pngraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
               name: "Scale"),
           roomButton(
               left: _screenWidth / 1.6,
@@ -77,7 +77,7 @@ class _room239State extends State<room239> {
               width: _screenWidth / 3,
               pageTo: PcutterMain(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpgraw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true",
               name: "Precision Cutter"),
         ],
       ),

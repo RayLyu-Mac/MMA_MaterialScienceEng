@@ -4,16 +4,20 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
 //import 'package:qrscan/qrscan.dart' as scanner;
 import '../equipment/saftyNoteText.dart';
+import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class floor1 extends StatefulWidget {
-  final bool fire;
-  final bool eye;
-  final bool visitFromOhter;
-  floor1({this.fire, this.eye, this.visitFromOhter, Key key}) : super(key: key);
+  final bool? fire;
+  final bool? eye;
+  final bool? visitFromOhter;
+  floor1({this.fire, this.eye, this.visitFromOhter, Key? key})
+      : super(key: key);
 
   @override
   _floor1State createState() => _floor1State();
@@ -34,7 +38,8 @@ class _floor1State extends State<floor1> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -95,7 +100,7 @@ class _floor1State extends State<floor1> {
                 width: _screenH / rwidth,
                 backC: Colors.grey.shade900,
                 name: "130"),
-            widget.eye || saftyI > 0
+            widget.eye! || saftyI > 0
                 ? Positioned(
                     top: _screenH / 2.9,
                     left: _screenWidth / 35,
@@ -149,7 +154,7 @@ class _floor1State extends State<floor1> {
                 width: _screenH / rwidth,
                 backC: Colors.grey.shade900,
                 name: "128"),
-            widget.fire || saftyI > 0
+            widget.fire! || saftyI > 0
                 ? roomButton(
                     detailTitle: "Fire Extinguisher",
                     details: "Emergency for fire situation",
@@ -239,7 +244,7 @@ class _floor1State extends State<floor1> {
 
   // Future scanQR() async {
   //   await Permission.camera.request();
-  //   String codeSanner = await scanner.scan(); //barcode scnner
+  //   String? codeSanner = await scanner.scan(); //barcode scnner
   //   setState(() {
   //     goToPage(codeSanner);
   //   });
@@ -248,20 +253,20 @@ class _floor1State extends State<floor1> {
 
 class floor1customListTile extends StatelessWidget {
   const floor1customListTile(
-      {this.name,
-      this.pageTo,
-      this.fonts,
+      {required this.name,
+      required this.pageTo,
+      required this.fonts,
       this.leadIcon,
       this.backC,
       this.web,
       key})
       : super(key: key);
   final String name;
-  final Color backC;
+  final Color? backC;
   final Widget pageTo;
   final double fonts;
-  final IconData leadIcon;
-  final Function web;
+  final IconData? leadIcon;
+  final Function? web;
   @override
   Widget build(BuildContext context) {
     return Padding(
