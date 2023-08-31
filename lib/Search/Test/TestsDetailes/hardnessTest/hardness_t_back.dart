@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class hardness_test_bg extends StatefulWidget {
-  hardness_test_bg({Key key}) : super(key: key);
+  hardness_test_bg({Key? key}) : super(key: key);
 
   @override
   _hardness_test_bgState createState() => _hardness_test_bgState();
@@ -34,7 +34,7 @@ class _hardness_test_bgState extends State<hardness_test_bg> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         backImg: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg,
+        addOnImg: testBGdetail[j].addOnImg!,
       ));
     }
     SystemChrome.setPreferredOrientations([

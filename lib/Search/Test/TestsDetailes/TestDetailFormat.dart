@@ -4,17 +4,17 @@ class testdetailData {
   String title;
   String content;
   String backImg;
-  String addOnImg;
-  Widget pageTo;
-  double height;
-  double left;
-  double top;
-  double width;
+  String? addOnImg;
+  Widget? pageTo;
+  double? height;
+  double? left;
+  double? top;
+  double? width;
 
   testdetailData(
-      {this.title,
-      this.content,
-      this.backImg,
+      {required this.title,
+      required this.content,
+      required this.backImg,
       this.left,
       this.addOnImg,
       this.width,

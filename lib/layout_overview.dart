@@ -13,7 +13,7 @@ import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class layout_overview extends StatefulWidget {
-  layout_overview({Key key}) : super(key: key);
+  layout_overview({Key? key}) : super(key: key);
 
   @override
   _layout_overviewState createState() => _layout_overviewState();
@@ -73,7 +73,8 @@ class _layout_overviewState extends State<layout_overview> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result]!,
+            type: PageTransitionType.bottomToTop));
   }
 
   @override

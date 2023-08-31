@@ -3,7 +3,7 @@ import 'search_page1.dart';
 import 'search_page2.dart';
 
 class search_main extends StatefulWidget {
-  search_main({Key key}) : super(key: key);
+  search_main({Key? key}) : super(key: key);
 
   @override
   _search_mainState createState() => _search_mainState();

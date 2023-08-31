@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class VolumeUC extends StatefulWidget {
-  VolumeUC({Key key}) : super(key: key);
+  VolumeUC({Key? key}) : super(key: key);
 
   @override
   _VolumeUCState createState() => _VolumeUCState();
@@ -76,7 +76,7 @@ class _VolumeUCState extends State<VolumeUC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB;
+                        dropdownValuea = valueB!;
                       },
                     );
                   },
@@ -103,7 +103,7 @@ class _VolumeUCState extends State<VolumeUC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value;
+                      dropdownValueb = value!;
                     });
                   },
                   items: <String>[

@@ -8,7 +8,7 @@ import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 
 class ExtingshSymbols extends StatefulWidget {
-  ExtingshSymbols({Key key}) : super(key: key);
+  ExtingshSymbols({Key? key}) : super(key: key);
 
   @override
   _ExtingshSymbolsState createState() => _ExtingshSymbolsState();
@@ -137,7 +137,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
 }
 
 class fireProcedure extends StatelessWidget {
-  const fireProcedure({Key key}) : super(key: key);
+  const fireProcedure({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

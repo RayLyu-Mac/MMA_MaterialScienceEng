@@ -7,15 +7,15 @@ class fancyBut extends StatefulWidget {
   final double width;
   final double height;
   final String buttonName;
-  final double fontsize;
+  final double? fontsize;
   fancyBut(
-      {this.pageTo,
-      this.width,
-      this.height,
-      this.icon,
-      this.buttonName,
+      {required this.pageTo,
+      required this.width,
+      required this.height,
+      required this.icon,
+      required this.buttonName,
       @optionalTypeArgs this.fontsize,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override

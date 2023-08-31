@@ -7,7 +7,7 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/floors/EqubButton.dart';
 
 class saftyMain extends StatefulWidget {
-  saftyMain({Key key}) : super(key: key);
+  saftyMain({Key? key}) : super(key: key);
 
   @override
   _saftyMainState createState() => _saftyMainState();

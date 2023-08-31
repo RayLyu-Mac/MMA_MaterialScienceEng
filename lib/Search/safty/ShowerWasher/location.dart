@@ -6,7 +6,8 @@ import 'package:mma_mse/floors/floor3.dart';
 class eyewashStation extends StatefulWidget {
   final bool fire;
   final bool eye;
-  eyewashStation({this.eye, this.fire, Key key}) : super(key: key);
+  eyewashStation({required this.eye, required this.fire, Key? key})
+      : super(key: key);
 
   @override
   _eyewashStationState createState() => _eyewashStationState();

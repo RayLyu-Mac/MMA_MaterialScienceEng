@@ -6,7 +6,7 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/floors/EqubButton.dart';
 
 class toolMain extends StatefulWidget {
-  toolMain({Key key}) : super(key: key);
+  toolMain({Key? key}) : super(key: key);
 
   @override
   _toolMainState createState() => _toolMainState();

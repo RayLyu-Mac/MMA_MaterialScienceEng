@@ -3,7 +3,7 @@ import 'data.dart';
 import 'main.dart';
 
 class TransEnthalpy extends StatefulWidget {
-  TransEnthalpy({Key key}) : super(key: key);
+  TransEnthalpy({Key? key}) : super(key: key);
 
   @override
   _TransEnthalpyState createState() => _TransEnthalpyState();
@@ -83,8 +83,8 @@ class _TransEnthalpyState extends State<TransEnthalpy> {
                     value: element,
                     onChanged: (value) {
                       setState(() {
-                        element = value;
-                        eleD = enthP[value];
+                        element = value!;
+                        eleD = enthP[value]!;
                       });
                     },
                     items: <String>["FeS", "SiO2", "FeO", "Cu2S", "Cu2O"]

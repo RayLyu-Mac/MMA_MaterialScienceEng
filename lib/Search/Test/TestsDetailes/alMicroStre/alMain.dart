@@ -7,7 +7,7 @@ import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class AlStrengthTest extends StatefulWidget {
-  AlStrengthTest({Key key}) : super(key: key);
+  AlStrengthTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
@@ -37,12 +37,12 @@ class _AlStrengthTestState extends State<AlStrengthTest> {
         title: testBGdetail[j].title,
         content: testBGdetail[j].content,
         backImg: testBGdetail[j].backImg,
-        addOnImg: testBGdetail[j].addOnImg,
-        pageTo: testBGdetail[j].pageTo,
-        height: testBGdetail[j].top,
-        length: testBGdetail[j].height,
-        width: testBGdetail[j].width,
-        left: testBGdetail[j].left,
+        addOnImg: testBGdetail[j].addOnImg!,
+        pageTo: testBGdetail[j].pageTo!,
+        height: testBGdetail[j].top!,
+        length: testBGdetail[j].height!,
+        width: testBGdetail[j].width!,
+        left: testBGdetail[j].left!,
       ));
     }
     pages.add(tensileTResult());

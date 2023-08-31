@@ -12,10 +12,15 @@ class ToolData {
   Color bgColor;
   String name;
   String backImg;
-  double top;
+  double? top;
   Widget pageTo;
 
-  ToolData({this.bgColor, this.name, this.backImg, this.pageTo, this.top});
+  ToolData(
+      {required this.bgColor,
+      required this.name,
+      required this.backImg,
+      required this.pageTo,
+      this.top});
 }
 
 List<ToolData> createToolList = [

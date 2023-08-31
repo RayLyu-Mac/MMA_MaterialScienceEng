@@ -4,7 +4,7 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class tensileTResult extends StatefulWidget {
-  tensileTResult({Key key}) : super(key: key);
+  tensileTResult({Key? key}) : super(key: key);
 
   @override
   _tensileTResultState createState() => _tensileTResultState();

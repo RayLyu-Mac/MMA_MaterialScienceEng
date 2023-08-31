@@ -7,8 +7,9 @@ import 'floors/floor1.dart';
 
 class standardDrawer extends StatefulWidget {
   final String header;
-  final List<ListTile> others;
-  standardDrawer({this.header, this.others, Key key}) : super(key: key);
+  final List<ListTile>? others;
+  standardDrawer({required this.header, this.others, Key? key})
+      : super(key: key);
 
   @override
   _standardDrawerState createState() => _standardDrawerState();

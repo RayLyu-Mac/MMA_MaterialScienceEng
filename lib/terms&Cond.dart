@@ -5,7 +5,7 @@ import 'fancyButton.dart';
 
 class conditionTerms extends StatefulWidget {
   final Widget pageTo;
-  conditionTerms({this.pageTo, Key key}) : super(key: key);
+  conditionTerms({required this.pageTo, Key? key}) : super(key: key);
 
   @override
   _conditionTermsState createState() => _conditionTermsState();

@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'DashBoard.dart';
 
 class welcome extends StatefulWidget {
-  welcome({Key key}) : super(key: key);
+  welcome({Key? key}) : super(key: key);
 
   @override
   _welcomeState createState() => _welcomeState();

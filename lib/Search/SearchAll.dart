@@ -9,7 +9,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 
 class EqupSearch extends StatefulWidget {
-  EqupSearch({Key key}) : super(key: key);
+  EqupSearch({Key? key}) : super(key: key);
 
   @override
   _EqupSearchState createState() => _EqupSearchState();
@@ -220,7 +220,7 @@ class _EqupSearchState extends State<EqupSearch> {
         String data = _list[j];
         if (data.toLowerCase().contains(searchText.toLowerCase())) {
           possibleResult.add(data);
-          property.add(wholeSample[data]);
+          property.add(wholeSample[data]!);
         }
       }
     }

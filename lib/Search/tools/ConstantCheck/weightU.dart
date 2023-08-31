@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WeightUC extends StatefulWidget {
-  WeightUC({Key key}) : super(key: key);
+  WeightUC({Key? key}) : super(key: key);
 
   @override
   _WeightUCState createState() => _WeightUCState();
@@ -76,7 +76,7 @@ class _WeightUCState extends State<WeightUC> {
                   onChanged: (var valueB) {
                     setState(
                       () {
-                        dropdownValuea = valueB;
+                        dropdownValuea = valueB!;
                       },
                     );
                   },
@@ -103,7 +103,7 @@ class _WeightUCState extends State<WeightUC> {
                   value: dropdownValueb,
                   onChanged: (value) {
                     setState(() {
-                      dropdownValueb = value;
+                      dropdownValueb = value!;
                     });
                   },
                   items: <String>["t", "kg", "mg", "oz", "lb"]

@@ -4,7 +4,8 @@ class button extends StatelessWidget {
   final String text;
   final VoidCallback onClicked;
 
-  const button({this.text, this.onClicked, Key key}) : super(key: key);
+  const button({required this.text, required this.onClicked, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) => ElevatedButton(

@@ -7,7 +7,7 @@ import 'testResult.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/TestDetailFormat.dart';
 
 class TensileTest extends StatefulWidget {
-  TensileTest({Key key}) : super(key: key);
+  TensileTest({Key? key}) : super(key: key);
   List<Widget> pages = [];
 
   @override
