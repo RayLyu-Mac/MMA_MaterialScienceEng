@@ -11,8 +11,6 @@ import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246A.dart';
 import 'floor2/roomMain/246.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'floor2/roomMain/241.dart';

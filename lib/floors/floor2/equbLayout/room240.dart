@@ -57,7 +57,7 @@ class _room240LayOState extends State<room240LayO> {
               length: _screenH / 10,
               width: _screenWidth / 3,
               name: "Distiller for distilled water"),
-          widget.eye != null && widget.eye
+          widget.eye
               ? Positioned(
                   left: _screenWidth / 13,
                   top: _screenH / 2.47,

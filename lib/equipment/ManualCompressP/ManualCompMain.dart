@@ -4,7 +4,6 @@ import 'package:mma_mse/user_note.dart';
 import '../functionButtonMode.dart';
 import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
 import 'package:mma_mse/Instruction/manualGrinder/ManualGMain.dart';
-import 'package:mma_mse/workingInPro.dart';
 
 class ManualCompPress extends StatefulWidget {
   final String? location;

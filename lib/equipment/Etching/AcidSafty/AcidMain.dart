@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'AcidData.dart';
 import 'package:mma_mse/Search/safty/Whims/WhimsMain.dart';
-import 'package:page_transition/page_transition.dart';
 
 class Aciddetail extends StatefulWidget {
   Aciddetail({Key? key}) : super(key: key);

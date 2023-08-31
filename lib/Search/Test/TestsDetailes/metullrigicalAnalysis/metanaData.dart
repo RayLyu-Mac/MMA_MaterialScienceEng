@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:mma_mse/equipment/MountPress/EcoPress/EcoMain.dart';
 import 'package:mma_mse/equipment/ManualGrinder/MgrinderMain.dart';
 import 'package:mma_mse/equipment/polisher/Bupolisher/BuPolisherMain.dart';

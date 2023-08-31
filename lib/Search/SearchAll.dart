@@ -215,14 +215,12 @@ class _EqupSearchState extends State<EqupSearch> {
   void searchOperation(String searchText) {
     possibleResult.clear();
     property.clear();
-    if (_isSearching != null) {
-      for (int j = 0; j < _list.length; j++) {
-        String data = _list[j];
-        if (data.toLowerCase().contains(searchText.toLowerCase())) {
-          possibleResult.add(data);
-          property.add(wholeSample[data]!);
-        }
+    for (int j = 0; j < _list.length; j++) {
+      String data = _list[j];
+      if (data.toLowerCase().contains(searchText.toLowerCase())) {
+        possibleResult.add(data);
+        property.add(wholeSample[data]!);
       }
     }
-  }
+    }
 }

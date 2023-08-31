@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'cutterData.dart';
-import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BulkAbraCutterInstru extends StatefulWidget {

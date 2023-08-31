@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'fancyButton.dart';
 import 'floors/floor2.dart';
@@ -69,11 +68,11 @@ class _layout_overviewState extends State<layout_overview> {
   }
 
   @override
-  void goToPage(qr_result) {
+  void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
+            child: qr_pageTo[qrResult]!,
             type: PageTransitionType.bottomToTop));
   }
 

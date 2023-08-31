@@ -13,11 +13,11 @@ class ButtomMenu extends StatefulWidget {
 
 class _ButtomMenuState extends State<ButtomMenu> {
   @override
-  void goToPage(qr_result) {
+  void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
+            child: qr_pageTo[qrResult]!,
             type: PageTransitionType.bottomToTop));
   }
 

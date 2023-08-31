@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/tools/enthalpy/data.dart';
 import 'errorFunction/main.dart';
 import 'package:mma_mse/Search/tools/HardnessConv/Data.dart';
 import 'NormalDistribution/STDMain.dart';

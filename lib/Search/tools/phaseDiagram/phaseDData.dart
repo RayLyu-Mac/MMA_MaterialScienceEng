@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:mma_mse/equipment/UTM/universal_tensile_machine_MainPage.dart';
 
 class testdetailData {
   String title;

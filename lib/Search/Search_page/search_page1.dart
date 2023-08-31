@@ -17,11 +17,11 @@ class search_area extends StatefulWidget {
 
 class _search_areaState extends State<search_area> {
   @override
-  void goToPage(qr_result) {
+  void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
+            child: qr_pageTo[qrResult]!,
             type: PageTransitionType.bottomToTop));
   }
 

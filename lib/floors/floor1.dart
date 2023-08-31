@@ -4,13 +4,10 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
 //import 'package:qrscan/qrscan.dart' as scanner;
 import '../equipment/saftyNoteText.dart';
-import 'package:mma_mse/floationPanel/PanelMain.dart';
-import 'package:mma_mse/Search/SearchAll.dart';
 import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class floor1 extends StatefulWidget {
   final bool? fire;
@@ -34,11 +31,11 @@ class _floor1State extends State<floor1> {
   double rwidth = 5;
 
   @override
-  void goToPage(qr_result) {
+  void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
+            child: qr_pageTo[qrResult]!,
             type: PageTransitionType.bottomToTop));
   }
 

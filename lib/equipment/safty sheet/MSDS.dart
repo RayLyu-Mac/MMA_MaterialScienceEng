@@ -275,14 +275,12 @@ class _SearchListExampleState extends State<SearchListExample> {
   void searchOperation(String searchText) {
     name.clear();
     property.clear();
-    if (_isSearching != null) {
-      for (int j = 0; j < _list.length; j++) {
-        String data = _list[j];
-        if (data.toLowerCase().contains(searchText.toLowerCase())) {
-          name.add(data);
-          property.add(total[j]);
-        }
+    for (int j = 0; j < _list.length; j++) {
+      String data = _list[j];
+      if (data.toLowerCase().contains(searchText.toLowerCase())) {
+        name.add(data);
+        property.add(total[j]);
       }
     }
-  }
+    }
 }

@@ -4,11 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/workingInPro.dart';
-import 'package:mma_mse/workingInPro.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
 //import 'package:qrscan/qrscan.dart' as scanner;
-import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/Drawer.dart';
 
 class EqubPageMode extends StatefulWidget {
@@ -63,11 +61,11 @@ class _EqubPageModeState extends State<EqubPageMode> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  void goToPage(qr_result) {
+  void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
+            child: qr_pageTo[qrResult]!,
             type: PageTransitionType.bottomToTop));
   }
 
