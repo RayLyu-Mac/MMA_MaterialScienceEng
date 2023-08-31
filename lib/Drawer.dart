@@ -1,4 +1,5 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mma_mse/DashBoard.dart';
 import 'package:mma_mse/Search/extramenu.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -69,7 +70,7 @@ class _standardDrawerState extends State<standardDrawer> {
                       context,
                       PageTransition(
                           duration: const Duration(milliseconds: 400),
-                          child: layout_overview(),
+                          child: DashBoard(),
                           type: PageTransitionType.leftToRight));
                 },
                 icon: Icon(FontAwesomeIcons.signOutAlt),
