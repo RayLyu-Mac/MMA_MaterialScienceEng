@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor2/equbLayout/room246.dart';
 
 class room246Main extends StatefulWidget {
-  final String? emailTo;
-  final String? location;
-  final Widget? pageTo;
+  final String emailTo;
+  final String location;
+  final Widget pageTo;
   room246Main(
       {@optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.location,
-      Key? key})
+      Key key})
       : super(key: key);
 
   @override
@@ -44,6 +44,6 @@ class _room246MainState extends State<room246Main> {
         roomCont: "Equipments:\n1.Etching\n2.Auto Polisher\n3.Manual Polisher",
         pageTo: room246LayO(),
         roomImg:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246.jpg?raw=true");
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/246.jpgraw=true");
   }
 }

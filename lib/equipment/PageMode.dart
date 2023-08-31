@@ -4,49 +4,47 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mma_mse/equipment/functionButtonMode.dart';
 import 'package:mma_mse/workingInPro.dart';
-import 'package:mma_mse/workingInPro.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/wholeQR.dart';
 //import 'package:qrscan/qrscan.dart' as scanner;
-import 'package:permission_handler/permission_handler.dart';
 import 'package:mma_mse/Drawer.dart';
 
 class EqubPageMode extends StatefulWidget {
   final String title;
-  final String? intro;
+  final String intro;
   final String img;
-  final String? warnNote;
-  final String? warnVido;
+  final String warnNote;
+  final String warnVido;
   final Widget instruction;
-  final Widget? theory;
+  final Widget theory;
   final Color backC;
-  final String? dash;
-  final IconData? extraIcon;
-  final Widget? extraPage;
-  final String? toolTip;
-  final double? fontSize;
-  final bool? oritation;
+  final String dash;
+  final IconData extraIcon;
+  final Widget extraPage;
+  final String toolTip;
+  final double fontSize;
+  final bool oritation;
   EqubPageMode(
-      {Key? key,
-      required this.title,
+      {Key key,
+      this.title,
       this.oritation = true,
       this.fontSize,
       this.toolTip,
       this.extraIcon,
       this.extraPage,
       this.dash,
-      required this.backC,
+      this.backC,
       this.theory,
-      required this.instruction,
+      this.instruction,
       this.warnNote = "None",
       this.warnVido = "None",
-      required this.img,
-      required this.intro,
+      this.img,
+      this.intro,
       this.emailTo,
       this.location})
       : super(key: key);
-  final String? location;
-  final String? emailTo;
+  final String location;
+  final String emailTo;
   @override
   _EqubPageModeState createState() => _EqubPageModeState();
 }
@@ -67,8 +65,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -147,13 +144,13 @@ class _EqubPageModeState extends State<EqubPageMode> {
                     top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
-                    warnNote: widget.warnNote!,
+                    warnNote: widget.warnNote,
                     pageTo: widget.instruction)
                 : functionButtonMode(
                     top: _screenH / 1.33,
                     left: _screenWidth / 12,
                     buttonName: "Instruction",
-                    warnV: widget.warnVido!,
+                    warnV: widget.warnVido,
                     pageTo: widget.instruction),
             functionButtonMode(
                 top: _screenH / 1.51,
@@ -175,7 +172,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      child: widget.extraPage!,
+                                      child: widget.extraPage,
                                       type: PageTransitionType.bottomToTop));
                             })
                         : Container(),
@@ -194,7 +191,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
 
   // Future scanQR() async {
   //   await Permission.camera.request();
-  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   String codeSanner = await scanner.scan(); //barcode scnner
   //   setState(() {
   //     goToPage(codeSanner);
   //   });
@@ -212,7 +209,7 @@ _launchURL() async {
 
 _Safety() async {
   const url =
-      'https://docs.google.com/forms/d/e/1FAIpQLSfxc4bqsI4koNBQBCsR02siKhGX-UFDzdNW8_LfxYkVoGuy3Q/viewform?usp=sf_link';
+      'https://docs.google.com/forms/d/e/1FAIpQLSfxc4bqsI4koNBQBCsR02siKhGX-UFDzdNW8_LfxYkVoGuy3Q/viewformusp=sf_link';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

@@ -4,8 +4,7 @@ import 'package:page_transition/page_transition.dart';
 class warning extends StatefulWidget {
   final Widget pageTo;
   final String warning_note;
-  const warning({required this.pageTo, required this.warning_note, Key? key})
-      : super(key: key);
+  const warning({this.pageTo, this.warning_note, Key key}) : super(key: key);
 
   @override
   _warningState createState() => _warningState();

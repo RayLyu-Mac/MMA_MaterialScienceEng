@@ -13,13 +13,13 @@ class roomMode extends StatefulWidget {
   final Widget roomLayO;
   final String roomImg;
   roomMode(
-      {required this.roomName,
-      required this.roomTi,
-      required this.roomLayO,
-      required this.roomCont,
+      {this.roomName,
+      this.roomTi,
+      this.roomLayO,
+      this.roomCont,
       this.location = "Null",
-      required this.roomImg,
-      Key? key})
+      this.roomImg,
+      Key key})
       : super(key: key);
 
   @override

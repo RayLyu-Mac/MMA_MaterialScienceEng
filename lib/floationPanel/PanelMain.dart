@@ -5,7 +5,7 @@ import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/Search/SearchAll.dart';
 
 class ButtomMenu extends StatefulWidget {
-  ButtomMenu({super.key});
+  ButtomMenu({key});
 
   @override
   State<ButtomMenu> createState() => _ButtomMenuState();
@@ -17,8 +17,7 @@ class _ButtomMenuState extends State<ButtomMenu> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qr_result]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qr_result], type: PageTransitionType.bottomToTop));
   }
 
   @override

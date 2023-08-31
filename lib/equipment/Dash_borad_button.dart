@@ -3,29 +3,29 @@ import 'package:page_transition/page_transition.dart';
 
 class DashButton extends StatefulWidget {
   final Color cardColor;
-  final String? stepTitle;
+  final String stepTitle;
   final double top;
   final double left;
-  final String? instruction;
-  final String? buttonName;
-  final Icon? button_icon;
-  final double? width;
-  final double? height;
-  final double? fontsize;
-  final Widget? pageTo;
+  final String instruction;
+  final String buttonName;
+  final Icon button_icon;
+  final double width;
+  final double height;
+  final double fontsize;
+  final Widget pageTo;
   const DashButton(
-      { this.buttonName,
-       this.height,
-       this.width,
-      required this.cardColor,
-       this.pageTo,
-      required this.left,
-      required this.top,
-       this.stepTitle,
-       this.instruction,
-       this.button_icon,
-       this.fontsize,
-      Key? key})
+      {this.buttonName,
+      this.height,
+      this.width,
+      this.cardColor,
+      this.pageTo,
+      this.left,
+      this.top,
+      this.stepTitle,
+      this.instruction,
+      this.button_icon,
+      this.fontsize,
+      Key key})
       : super(key: key);
 
   @override
@@ -114,13 +114,9 @@ class swtich extends StatelessWidget {
   final double screenH;
   final Icon iconButton;
   final String iconName;
-  final double? fontSize;
+  final double fontSize;
   const swtich(
-      {required this.iconButton,
-      required this.iconName,
-      required this.screenH,
-       this.fontSize,
-      Key? key})
+      {this.iconButton, this.iconName, this.screenH, this.fontSize, Key key})
       : super(key: key);
 
   @override

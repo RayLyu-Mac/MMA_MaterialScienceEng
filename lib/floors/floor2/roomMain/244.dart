@@ -4,14 +4,14 @@ import 'package:mma_mse/floors/floor2/equbLayout/room244.dart';
 import 'package:flutter/services.dart';
 
 class room244Main extends StatefulWidget {
-  final String? emailTo;
-  final String? location;
-  final Widget? pageTo;
+  final String emailTo;
+  final String location;
+  final Widget pageTo;
   room244Main(
       {@optionalTypeArgs this.emailTo,
       @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.location,
-      Key? key})
+      Key key})
       : super(key: key);
 
   @override
@@ -44,6 +44,6 @@ class _room244MainState extends State<room244Main> {
         roomCont: "Equipments:\n1.Blue Furnace\n2.SiC Furnace",
         pageTo: room244LayO(),
         roomImg:
-            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/244.jpg?raw=true");
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/floors/floor2/244.jpgraw=true");
   }
 }

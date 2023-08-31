@@ -8,7 +8,7 @@ import 'package:mma_mse/floors/EqubButton.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 
 class room129LayO extends StatefulWidget {
-  room129LayO({Key? key}) : super(key: key);
+  room129LayO({Key key}) : super(key: key);
 
   @override
   _room129LayOState createState() => _room129LayOState();
@@ -48,7 +48,7 @@ class _room129LayOState extends State<room129LayO> {
                   backColor: furnace,
                   pageTo: BlueFurnace(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpgraw=true",
                   name: "Blue Furnace"),
               SizedBox(
                 height: _screenH / 40,
@@ -58,13 +58,13 @@ class _room129LayOState extends State<room129LayO> {
                   function: purpPolishg,
                   pageTo: BuehlerAutoPolisherMain(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpgraw=true",
                   name: "Buehler Auto Polisher"),
               EqubButton(
                   function: "Safe Operation for Chemical",
                   pageTo: Container(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.pngraw=true",
                   backColor: Colors.amber,
                   name: "Fume Hood"),
               EqubButton(
@@ -72,7 +72,7 @@ class _room129LayOState extends State<room129LayO> {
                   backColor: cutter,
                   pageTo: BuehlerCutterMain(),
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpgraw=true",
                   name: "Buehler Precision Cutter"),
             ],
           ),
