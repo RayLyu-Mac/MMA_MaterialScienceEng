@@ -67,13 +67,11 @@ class _layout_overviewState extends State<layout_overview> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  @override
   void goToPage(qrResult) {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qrResult]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
   }
 
   @override
