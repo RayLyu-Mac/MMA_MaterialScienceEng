@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Instruction/Microscope/Keyence/keyenceData.dart';
-
 import 'NikonData.dart';
 import 'package:flutter/services.dart';
 
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class NikonMicroInstru extends StatefulWidget {
-  const NikonMicroInstru({Key? key}) : super(key: key);
+  const NikonMicroInstru({Key key}) : super(key: key);
 
   @override
   _NikonMicroInstruState createState() => _NikonMicroInstruState();

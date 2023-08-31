@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class icp_instruction extends StatefulWidget {
-  const icp_instruction({Key? key}) : super(key: key);
+  const icp_instruction({Key key}) : super(key: key);
 
   @override
   _icp_instructionState createState() => _icp_instructionState();

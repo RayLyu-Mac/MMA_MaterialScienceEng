@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BlueFurnaceInstr extends StatefulWidget {
-  const BlueFurnaceInstr({Key? key}) : super(key: key);
+  const BlueFurnaceInstr({Key key}) : super(key: key);
 
   @override
   _BlueFurnaceInstrState createState() => _BlueFurnaceInstrState();

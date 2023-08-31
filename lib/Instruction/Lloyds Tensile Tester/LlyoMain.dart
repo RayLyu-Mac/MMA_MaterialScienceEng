@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class LlyoTensileinstruction extends StatefulWidget {
-  const LlyoTensileinstruction({Key? key}) : super(key: key);
+  const LlyoTensileinstruction({Key key}) : super(key: key);
 
   @override
   _LlyoTensileinstructionState createState() => _LlyoTensileinstructionState();

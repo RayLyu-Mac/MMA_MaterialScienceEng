@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_main.dart';
-import '../room/room_main.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_main.dart';
 import 'package:page_transition/page_transition.dart';
 // import 'package:qrscan/qrscan.dart' as scanner;
@@ -120,7 +119,7 @@ class _search_areaState extends State<search_area> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => room_main()));
+                      MaterialPageRoute(builder: (context) => Container()));
                 },
                 child: Container(
                   constraints: BoxConstraints.expand(
@@ -135,16 +134,6 @@ class _search_areaState extends State<search_area> {
                 ),
               ),
             ),
-            Positioned(
-                top: _screenH / 1.5,
-                left: 15,
-                child: fancyBut(
-                    pageTo: room_main(),
-                    width: _screenWidth / 2.4,
-                    height: _screenH / 8,
-                    fontsize: 16,
-                    icon: FontAwesomeIcons.book,
-                    buttonName: "Room in MSE")),
           ],
         ),
       ),

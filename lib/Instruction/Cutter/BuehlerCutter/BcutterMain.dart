@@ -5,7 +5,7 @@ import 'BcutterData.dart';
 import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class BuehlerCutterInstru extends StatefulWidget {
-  const BuehlerCutterInstru({Key? key}) : super(key: key);
+  const BuehlerCutterInstru({Key key}) : super(key: key);
 
   @override
   _BuehlerCutterInstruState createState() => _BuehlerCutterInstruState();

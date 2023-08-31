@@ -9,13 +9,13 @@ class testdetailData {
   String eamil;
 
   testdetailData(
-      {required this.name,
-      required this.jobTitle,
-      required this.officeLoc,
-      required this.researchA,
-      required this.extention,
+      {this.name,
+      this.jobTitle,
+      this.officeLoc,
+      this.researchA,
+      this.extention,
       this.contentFontsize = 10,
-      required this.eamil,
+      this.eamil,
       this.titleFontsize = 10});
 }
 

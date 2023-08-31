@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'package:mma_mse/customTileScroll.dart';
@@ -8,10 +6,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InstructionMode extends StatefulWidget {
   InstructionMode({
-    required this.instructionList,
-    required this.name,
-    required this.controller,
-    Key? key,
+    this.instructionList,
+    this.name,
+    this.controller,
+    Key key,
   }) : super(key: key);
   final List instructionList;
   final String name;

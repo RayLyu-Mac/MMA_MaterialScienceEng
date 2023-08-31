@@ -7,7 +7,7 @@ import 'package:mma_mse/Instruction/InstructionMode.dart';
 
 class DigiRWInstr extends StatefulWidget {
   const DigiRWInstr({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
