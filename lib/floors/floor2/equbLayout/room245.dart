@@ -8,7 +8,7 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'package:flutter/services.dart';
 
 class room245LayO extends StatefulWidget {
-  room245LayO({Key? key}) : super(key: key);
+  room245LayO({Key key}) : super(key: key);
 
   @override
   _room245LayOState createState() => _room245LayOState();
@@ -83,7 +83,7 @@ class _room245LayOState extends State<room245LayO> {
                   length: _screenH / 7,
                   width: _screenWidth / 3.5,
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/245C.png?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/245C.pngraw=true",
                   name: "Microscope & Gloves",
                 ),
               ],
@@ -102,7 +102,7 @@ class _room245LayOState extends State<room245LayO> {
                   name: "MET Mounting Machine",
                   fontsize: 16,
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpgraw=true",
                   pageTo: METPress(),
                 ),
                 SizedBox(
@@ -114,7 +114,7 @@ class _room245LayOState extends State<room245LayO> {
                   fontsize: 16,
                   name: "MET Mounting Machine",
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpgraw=true",
                   pageTo: METPress(),
                 ),
                 SizedBox(
@@ -126,7 +126,7 @@ class _room245LayOState extends State<room245LayO> {
                   fontsize: 16,
                   name: "Strues Mounting Machine",
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpgraw=true",
                   pageTo: StruesMain(),
                 ),
                 SizedBox(
@@ -138,7 +138,7 @@ class _room245LayOState extends State<room245LayO> {
                   fontsize: 16,
                   name: "Eco Mounting Machine",
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpgraw=true",
                   pageTo: EcoPress(),
                 ),
                 SizedBox(
@@ -150,7 +150,7 @@ class _room245LayOState extends State<room245LayO> {
                   fontsize: 16,
                   name: "Manual Grinder",
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpgraw=true",
                   pageTo: ManualGrinder(),
                 ),
                 SizedBox(
@@ -162,7 +162,7 @@ class _room245LayOState extends State<room245LayO> {
                   fontsize: 16,
                   name: "Auto Polisher Machine",
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpgraw=true",
                   pageTo: AutoPolisherMain(),
                 ),
                 SizedBox(
@@ -175,7 +175,7 @@ class _room245LayOState extends State<room245LayO> {
                     name: "Manual Grinder",
                     pageTo: ManualGrinder(),
                     backImg:
-                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true"),
+                        "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpgraw=true"),
               ],
             )
           ],

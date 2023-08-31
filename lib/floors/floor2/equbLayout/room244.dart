@@ -5,7 +5,7 @@ import 'package:mma_mse/floors/EqubButton.dart';
 import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 
 class room244LayO extends StatefulWidget {
-  room244LayO({Key? key}) : super(key: key);
+  room244LayO({Key key}) : super(key: key);
 
   @override
   _room244LayOState createState() => _room244LayOState();
@@ -46,14 +46,14 @@ class _room244LayOState extends State<room244LayO> {
               function: purpfurnace,
               pageTo: SiCFurnace(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true",
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpgraw=true",
               name: "SiC Furnace"),
           EqubButton(
               function: purpfurnace,
               backColor: furnace,
               pageTo: BlueFurnace(),
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true",
+                  "https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpgraw=true",
               name: "Blue Furnace"),
         ])));
   }

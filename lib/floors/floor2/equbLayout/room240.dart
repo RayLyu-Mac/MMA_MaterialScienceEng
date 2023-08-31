@@ -4,8 +4,7 @@ import 'package:flutter/services.dart';
 
 class room240LayO extends StatefulWidget {
   final bool eye;
-  room240LayO({@optionalTypeArgs required this.eye, Key? key})
-      : super(key: key);
+  room240LayO({this.eye, Key key}) : super(key: key);
 
   @override
   _room240LayOState createState() => _room240LayOState();
@@ -94,7 +93,7 @@ class _room240LayOState extends State<room240LayO> {
                   length: _screenH / 10,
                   width: _screenWidth / 3,
                   backImg:
-                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.png?raw=true",
+                      "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/sink.pngraw=true",
                   name: "Water Sink"),
           roomButton(
               left: _screenWidth / 13,
@@ -102,7 +101,7 @@ class _room240LayOState extends State<room240LayO> {
               length: _screenH / 4,
               width: _screenWidth / 3,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.png?raw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/RFume.pngraw=true",
               name: "Fume Hood"),
           roomButton(
               left: _screenWidth / 4.9,
@@ -110,7 +109,7 @@ class _room240LayOState extends State<room240LayO> {
               length: _screenH / 12,
               width: _screenWidth / 5,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.pngraw=true",
               name: "Scale"),
           roomButton(
               left: _screenWidth / 1.64,
@@ -124,7 +123,7 @@ class _room240LayOState extends State<room240LayO> {
               length: _screenH / 9,
               width: _screenWidth / 3,
               backImg:
-                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.png?raw=true",
+                  "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/regularE/Scale.pngraw=true",
               name: "Scale"),
         ],
       ),

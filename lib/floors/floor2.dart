@@ -11,23 +11,21 @@ import 'floor2/roomMain/245.dart';
 import 'floor2/roomMain/246A.dart';
 import 'floor2/roomMain/246.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/equipment/saftyNoteText.dart';
 import 'package:mma_mse/Drawer.dart';
 import 'floor2/roomMain/241.dart';
 
 class floor2 extends StatefulWidget {
-  final bool? safty;
-  final bool? eye;
-  final bool? fire;
-  final bool? visitFromOhter;
+  final bool safty;
+  final bool eye;
+  final bool fire;
+  final bool visitFromOhter;
   floor2(
       {@optionalTypeArgs this.eye,
       @optionalTypeArgs this.safty,
       @optionalTypeArgs this.fire,
       @optionalTypeArgs this.visitFromOhter,
-      Key? key})
+      Key key})
       : super(key: key);
 
   @override
@@ -94,7 +92,7 @@ class _floor2State extends State<floor2> {
       drawer: standardDrawer(header: "JHE Floor II"),
       body: Stack(
         children: [
-          widget.eye! || saftyI > 0
+          widget.eye || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 10,
                   top: _screenH / 35,
@@ -139,7 +137,7 @@ class _floor2State extends State<floor2> {
               titleIcon: FontAwesomeIcons.microscope,
               pageTo: room241Main(),
               name: "241"),
-          widget.eye! || saftyI > 0
+          widget.eye || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 13,
                   top: _screenH / 2.05,
@@ -226,7 +224,7 @@ class _floor2State extends State<floor2> {
                     "1. Safety glasses\n2. Thermal gloves\n3. Tongs to handle hot samples\n4. Closed toe shoes with socks\n5. Long pants(No shorts)\n6. Face shield\n7. Aluminized hear resistant jacket",
               ),
               name: "244"),
-          widget.fire! || saftyI > 0
+          widget.fire || saftyI > 0
               ? roomButton(
                   left: _screenWidth / 2.05,
                   top: _screenH / 30,
@@ -241,7 +239,7 @@ class _floor2State extends State<floor2> {
                   left: _screenWidth / 1.94,
                   top: _screenH / 35,
                   child: Container()),
-          widget.fire! || saftyI > 0
+          widget.fire || saftyI > 0
               ? roomButton(
                   detailTitle: "Fire Extinguisher",
                   details: "Emergency for fire situation",
@@ -268,7 +266,7 @@ class _floor2State extends State<floor2> {
                     "1. Safety Glasses\n2. Closed Toe Shoes\n3. Long Pants (No Shorts)\n4. Lab Coat (optional)\n5. No Contact Lens",
               ),
               name: "245"),
-          widget.eye! || saftyI > 0
+          widget.eye || saftyI > 0
               ? Positioned(
                   left: _screenWidth / 1.72,
                   top: _screenH / 3.75,
@@ -418,7 +416,7 @@ class _floor2State extends State<floor2> {
 
   // Future scanQR() async {
   //   await Permission.camera.request();
-  //   String? codeSanner = await scanner.scan(); //barcode scnner
+  //   String codeSanner = await scanner.scan(); //barcode scnner
   //   setState(() {
   //     goToPage(codeSanner);
   //   });

@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/Hardness/manualMicroHardness/manualMHMain.dart';
 
 class room246BLayO extends StatefulWidget {
-  room246BLayO({Key? key}) : super(key: key);
+  room246BLayO({Key key}) : super(key: key);
 
   @override
   _room246BLayOState createState() => _room246BLayOState();
@@ -55,7 +55,7 @@ class _room246BLayOState extends State<room246BLayO> {
                 width: _screenWidth / 3,
                 pageTo: NikonMicro(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.pngraw=true",
                 name: "Nikon Microscope",
               ),
               SizedBox(
@@ -66,7 +66,7 @@ class _room246BLayOState extends State<room246BLayO> {
                 width: _screenWidth / 3,
                 pageTo: NikonMicro(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.png?raw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/NiKon.pngraw=true",
                 name: "Nikon Microscope",
               ),
             ],
@@ -84,7 +84,7 @@ class _room246BLayOState extends State<room246BLayO> {
                 width: _screenWidth / 3,
                 pageTo: ManualMicroHardness(),
                 backImg:
-                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/ManualHardness.png?raw=true",
+                    "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Update/ManualHardness.pngraw=true",
                 name: "Manual Micro-Hardness Tester",
               ),
               SizedBox(
