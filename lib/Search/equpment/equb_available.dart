@@ -5,14 +5,14 @@ import 'package:flutter/services.dart';
 
 class equb_ava extends StatefulWidget {
   final HeroType heroType;
-  const equb_ava({Key key, this.heroType}) : super(key: key);
+  const equb_ava({Key? key, required this.heroType}) : super(key: key);
 
   @override
   _equb_avaState createState() => _equb_avaState();
 }
 
 class _equb_avaState extends State<equb_ava> {
-  HeroType _heroType;
+  late HeroType _heroType;
   double _screenWidth = 0;
   double _screenH = 0;
 

@@ -42,12 +42,12 @@ class HeroType {
   final Widget pageTo;
   final Color materialColor;
   HeroType(
-      {this.title,
-      this.subTitle,
-      this.fText,
-      this.image,
-      this.materialColor,
-      this.pageTo});
+      {required this.title,
+      required this.subTitle,
+      required this.fText,
+      required this.image,
+      required this.materialColor,
+      required this.pageTo});
 }
 
 String purposeRW = "Machine for testing material hardness";
