@@ -1,4 +1,0 @@
-target 'Runner' do
-    platform :ios, '14.0'
-end
-  
