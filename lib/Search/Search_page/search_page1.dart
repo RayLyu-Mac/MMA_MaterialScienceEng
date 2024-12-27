@@ -21,8 +21,7 @@ class _search_areaState extends State<search_area> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qrResult]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
   }
 
   double _screenWidth = 0;
@@ -59,7 +58,7 @@ class _search_areaState extends State<search_area> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => equb_main()));
+                      MaterialPageRoute(builder: (context) => EquipmentMain()));
                 },
                 child: Container(
                   constraints: BoxConstraints.expand(
@@ -78,7 +77,7 @@ class _search_areaState extends State<search_area> {
                 top: _screenH / 8,
                 left: _screenWidth / 45,
                 child: fancyBut(
-                    pageTo: equb_main(),
+                    pageTo: EquipmentMain(),
                     width: _screenWidth / 2,
                     height: _screenH / 8,
                     fontsize: 16,

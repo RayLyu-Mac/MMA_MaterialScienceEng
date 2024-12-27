@@ -149,14 +149,14 @@ class _autoPolishDashBoardState extends State<autoPolishDashBoard> {
               top: _screenH / thirdLine),
           DashButton(
               button_icon: Icon(FontAwesomeIcons.dotCircle),
-              cardColor: Colors.redAccent.shade400.withOpacity(0.9),
+              cardColor: Colors.red.shade400.withOpacity(0.9),
               instruction: "Stop: \n•Press stop button will stop the process",
               left: _screenWidth / 1.5,
               stepTitle: "Red Stop Button",
               top: _screenH / thirdLine + _screenH / 12),
           DashButton(
               button_icon: Icon(Icons.exit_to_app),
-              cardColor: Colors.pinkAccent.shade400.withOpacity(0.9),
+              cardColor: Colors.pink.shade400.withOpacity(0.9),
               instruction: "When Pressed backs you out of a sub menu",
               left: _screenWidth / 6,
               stepTitle: "Esc Key",

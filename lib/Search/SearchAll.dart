@@ -16,211 +16,227 @@ class EqupSearch extends StatefulWidget {
 }
 
 class _EqupSearchState extends State<EqupSearch> {
-  final TextEditingController _controller = new TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
+  final Map<String, List<dynamic>> _wholeSample = HashMap();
+
+  late double _screenWidth;
+  late double _screenHeight;
+
+  List<String> _searchResults = [];
+  List<List> _resultProperties = [];
+  List<String> _allItems = [];
   bool _isSearching = false;
-  String _searchText = "";
-  List<List> property = [];
-  List _list = [];
-  List possibleResult = [];
-  Map<String, Widget> equipment = {};
-  Map<String, Widget> mseTest = {};
-  Map<String, Widget> tools = {};
-  Map<String, Widget> safty = {};
-  Map<String, List<dynamic>> wholeSample = HashMap();
-
-  Icon icon = new Icon(
-    Icons.search,
-    color: Colors.white,
-  );
-  List tests = [];
-  final ScrollController controller = ScrollController();
-
-  _EqupSearchState() {
-    _controller.addListener(() {
-      if (_controller.text.isEmpty) {
-        setState(() {
-          _isSearching = false;
-          _searchText = "";
-        });
-      } else {
-        setState(() {
-          _isSearching = true;
-          _searchText = _controller.text;
-        });
-      }
-    });
-  }
 
   @override
   void initState() {
     super.initState();
-    _isSearching = false;
-    safty = createSaftyList();
-
-    for (var mequb = 0; mequb < equipmentList.length; mequb++) {
-      List<dynamic> datatype = [];
-      datatype.clear();
-      datatype.add(equipmentList[mequb].pageTo);
-      datatype.add(FontAwesomeIcons.microscope);
-      datatype.add(Colors.purple.shade100);
-      wholeSample.addAll({equipmentList[mequb].title: datatype});
-    }
-
-    for (var mtest = 0; mtest < test_data_list.length; mtest++) {
-      List<dynamic> datatype = [];
-      datatype.clear();
-      datatype.add(test_data_list[mtest].pageTo);
-      datatype.add(FontAwesomeIcons.fileContract);
-      datatype.add(Colors.lightBlueAccent.shade100);
-      wholeSample.addAll({test_data_list[mtest].title: datatype});
-    }
-
-    for (var mtool = 0; mtool < createToolList.length; mtool++) {
-      List<dynamic> datatype = [];
-      datatype.clear();
-      datatype.add(createToolList[mtool].pageTo);
-      datatype.add(FontAwesomeIcons.tools);
-      datatype.add(Colors.green.shade200);
-      wholeSample.addAll({createToolList[mtool].name: datatype});
-    }
-
-    for (var sft = 0; sft < safty.length; sft++) {
-      List<dynamic> datatype = [];
-      datatype.clear();
-      datatype.add(safty.values.toList()[sft]);
-      datatype.add(FontAwesomeIcons.skull);
-      datatype.add(Colors.redAccent.shade100);
-      wholeSample.addAll({safty.keys.toList()[sft]: datatype});
-    }
-    _list.addAll(wholeSample.keys.toList());
+    _initializeData();
+    _setupSearchListener();
   }
 
-  double _screenWidth = 0;
-  double _screenH = 0;
+  void _setupSearchListener() {
+    _searchController.addListener(() {
+      setState(() {
+        _isSearching = _searchController.text.isNotEmpty;
+        if (!_isSearching) _clearSearch();
+      });
+    });
+  }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
+  void _initializeData() {
+    _addItemsToSample(
+      equipmentList,
+      (item) => item.title,
+      (item) => item.pageTo,
+      FontAwesomeIcons.microscope,
+      Colors.purple.shade100,
+    );
+
+    _addItemsToSample(
+      test_data_list,
+      (item) => item.title,
+      (item) => item.pageTo,
+      FontAwesomeIcons.fileContract,
+      Colors.lightBlue.shade100,
+    );
+
+    _addItemsToSample(
+      createToolList,
+      (item) => item.name,
+      (item) => item.pageTo,
+      FontAwesomeIcons.tools,
+      Colors.green.shade200,
+    );
+
+    final saftyItems = createSaftyList();
+    _addMapItemsToSample(
+      saftyItems,
+      FontAwesomeIcons.skull,
+      Colors.red.shade100,
+    );
+
+    _allItems.addAll(_wholeSample.keys);
+  }
+
+  void _addItemsToSample<T>(
+    List<T> items,
+    String Function(T) getTitle,
+    Widget Function(T) getPage,
+    IconData icon,
+    Color color,
+  ) {
+    for (var item in items) {
+      _wholeSample[getTitle(item)] = [getPage(item), icon, color];
+    }
+  }
+
+  void _addMapItemsToSample(
+    Map<String, Widget> items,
+    IconData icon,
+    Color color,
+  ) {
+    items.forEach((key, value) {
+      _wholeSample[key] = [value, icon, color];
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        bottomNavigationBar: ButtomMenu(),
-        body: Column(children: [
-          SizedBox(
-            height: _screenH / 60,
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: _screenWidth / 70,
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(8, 8, 5, 2),
-                height: 55,
-                width: _screenWidth / 1.08,
-                child: TextField(
-                  autocorrect: true,
-                  expands: true,
-                  maxLines: null,
-                  controller: _controller,
-                  style: TextStyle(
-                    fontSize: _screenH / 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                  decoration: new InputDecoration(
-                    hintText: "Search For Equpment/Test/Tools...",
-                    hintStyle:
-                        TextStyle(color: Colors.grey, fontSize: _screenH / 40),
-                    contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
-                    border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 2.5, color: Colors.black)),
-                  ),
-                  onChanged: searchOperation,
-                ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-            ],
-          ),
-          possibleResult.length != 0
-              ? Expanded(
-                  child: ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: possibleResult.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        String listData = possibleResult[index];
-                        return new Padding(
-                            padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(
-                                        color: Colors.grey, width: 4)),
-                                child: InkWell(
-                                    child: ListTile(
-                                      trailing: Icon(property[index][1]),
-                                      tileColor: property[index][2],
-                                      title: new Text(listData.toString()),
-                                    ),
-                                    splashColor: Colors.grey,
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              child: property[index][0],
-                                              type: PageTransitionType.scale,
-                                              duration:
-                                                  Duration(milliseconds: 600),
-                                              alignment: Alignment.topCenter));
-                                    })));
-                      }))
-              : Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.5, height: _screenH / 1.5),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/SearchB.png?raw=true"))),
-                )
-        ]));
+      resizeToAvoidBottomInset: false,
+      bottomNavigationBar: const BottomMenu(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            _buildSearchBar(),
+            Expanded(
+              child: _searchResults.isEmpty && !_isSearching
+                  ? _buildEmptyState()
+                  : _buildSearchResults(),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
-  Widget buildAppBar(BuildContext context) {
-    return new AppBar(
-      backgroundColor: Colors.black,
-      toolbarHeight: 60,
-      centerTitle: true,
-      title: Column(
+  Widget _buildSearchBar() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: TextField(
+        controller: _searchController,
+        style: TextStyle(
+          fontSize: _screenHeight / 30,
+          fontWeight: FontWeight.w500,
+        ),
+        decoration: InputDecoration(
+          hintText: "Search for Equipment/Test/Tools...",
+          hintStyle: TextStyle(color: Colors.grey.shade600),
+          prefixIcon: const Icon(Icons.search),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.grey.shade300),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.blue.shade700, width: 2),
+          ),
+          filled: true,
+          fillColor: Colors.grey.shade50,
+        ),
+        onChanged: _performSearch,
+      ),
+    );
+  }
+
+  Widget _buildSearchResults() {
+    return ListView.builder(
+      controller: _scrollController,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      itemCount: _searchResults.length,
+      itemBuilder: (context, index) => _buildResultCard(index),
+    );
+  }
+
+  Widget _buildResultCard(int index) {
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: Colors.grey.shade300),
+      ),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        leading: Icon(
+          _resultProperties[index][1] as IconData,
+          color: _resultProperties[index][2] as Color,
+        ),
+        title: Text(
+          _searchResults[index],
+          style: const TextStyle(fontWeight: FontWeight.w500),
+        ),
+        onTap: () => _navigateToPage(index),
+      ),
+    );
+  }
+
+  Widget _buildEmptyState() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Quick Search"),
-          SizedBox(
-            height: 10,
+          Image.network(
+            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/SearchB.png?raw=true",
+            height: _screenHeight / 3,
+          ),
+          const SizedBox(height: 16),
+          Text(
+            "Start searching...",
+            style: TextStyle(
+              fontSize: _screenHeight / 40,
+              color: Colors.grey.shade600,
+            ),
           ),
         ],
       ),
     );
   }
 
-  void searchOperation(String searchText) {
-    possibleResult.clear();
-    property.clear();
-    for (int j = 0; j < _list.length; j++) {
-      String data = _list[j];
-      if (data.toLowerCase().contains(searchText.toLowerCase())) {
-        possibleResult.add(data);
-        property.add(wholeSample[data]!);
+  void _performSearch(String query) {
+    setState(() {
+      _searchResults.clear();
+      _resultProperties.clear();
+
+      if (query.isEmpty) return;
+
+      for (String item in _allItems) {
+        if (item.toLowerCase().contains(query.toLowerCase())) {
+          _searchResults.add(item);
+          _resultProperties.add(_wholeSample[item]!);
+        }
       }
-    }
-    }
+    });
+  }
+
+  void _clearSearch() {
+    _searchResults.clear();
+    _resultProperties.clear();
+  }
+
+  void _navigateToPage(int index) {
+    Navigator.push(
+      context,
+      PageTransition(
+        child: _resultProperties[index][0] as Widget,
+        type: PageTransitionType.scale,
+        duration: const Duration(milliseconds: 300),
+        alignment: Alignment.topCenter,
+      ),
+    );
+  }
 }

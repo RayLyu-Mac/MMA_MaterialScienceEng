@@ -113,7 +113,7 @@ class _AciddetailState extends State<Aciddetail> {
       children: [
         for (var acids = 0; acids < result.length; acids++)
           Scaffold(
-            backgroundColor: Colors.redAccent[100],
+            backgroundColor: Colors.red[100],
             appBar: AppBar(
               title: Text(result[acids].chemName),
               backgroundColor: Colors.black,
@@ -371,9 +371,9 @@ class _AciddetailState extends State<Aciddetail> {
   settleColor(List select, int index, int ii) {
     if (select[ii][0] == index) {
       if (select[ii][1] == 1) {
-        return Colors.lightGreenAccent;
+        return Colors.lightGreen;
       } else {
-        return Colors.redAccent[100];
+        return Colors.red[100];
       }
     } else {
       return Colors.grey[100];

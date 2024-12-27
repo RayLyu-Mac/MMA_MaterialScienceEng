@@ -8,6 +8,9 @@ import 'package:mma_mse/floors/roomBut.dart';
 import 'floor1/room129.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mma_mse/Drawer.dart';
+import 'package:clay_containers/clay_containers.dart';
+
+const Color baseColor = Color(0xFFE0E5EC);
 
 class floor1 extends StatefulWidget {
   final bool? fire;
@@ -35,8 +38,7 @@ class _floor1State extends State<floor1> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qrResult]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
   }
 
   @override
@@ -80,7 +82,7 @@ class _floor1State extends State<floor1> {
                 TextStyle(fontSize: _screenH / 33, fontWeight: FontWeight.bold),
           ),
         ),
-        drawer: standardDrawer(header: "JHE Floor I"),
+        drawer: StandardNavigationDrawer(headerTitle: "JHE Floor I"),
         body: Stack(
           children: [
             roomButton(
@@ -109,7 +111,7 @@ class _floor1State extends State<floor1> {
                           roomButton(
                             length: _screenH / 9,
                             width: _screenWidth / 5.5,
-                            backC: Colors.redAccent.shade100.withOpacity(0.8),
+                            backC: Colors.red.shade100.withOpacity(0.8),
                             icon: Icons.remove_red_eye_rounded,
                             detailTitle: "Room 129: Eye shower",
                             pageTo: Room129(),
@@ -126,7 +128,7 @@ class _floor1State extends State<floor1> {
                             length: _screenH / 9,
                             pageTo: Room129(),
                             width: _screenWidth / 5.5,
-                            backC: Colors.redAccent.shade100.withOpacity(0.8),
+                            backC: Colors.red.shade100.withOpacity(0.8),
                             icon: Icons.shower_rounded,
                           )
                         ],
@@ -159,7 +161,7 @@ class _floor1State extends State<floor1> {
                     top: _screenH / 8,
                     length: _screenH / 13,
                     width: _screenWidth / 8.5,
-                    backC: Colors.redAccent.shade100,
+                    backC: Colors.red.shade100,
                     icon: Icons.fire_extinguisher,
                   )
                 : Positioned(
@@ -235,6 +237,29 @@ class _floor1State extends State<floor1> {
                         child: Text("Swipe to see Floor II"),
                       )
                     : Container()),
+            Positioned(
+              bottom: 10,
+              left: _screenWidth * 0.1,
+              right: _screenWidth * 0.1,
+              child: ClayContainer(
+                spread: 1,
+                depth: 20,
+                color: const Color(0xFFE0E5EC),
+                borderRadius: 8,
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                  child: Text(
+                    "See latest changes on McMaster Website",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: _screenH / 55,
+                      color: Colors.grey[600],
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ));
   }
@@ -246,6 +271,44 @@ class _floor1State extends State<floor1> {
   //     goToPage(codeSanner);
   //   });
   // }
+
+  Widget _buildSafetyButton({
+    required String title,
+    required IconData icon,
+    required String details,
+    double? top,
+    double? left,
+  }) {
+    return Positioned(
+      top: top,
+      left: left,
+      child: ClayContainer(
+        spread: 2,
+        depth: 40,
+        color: Colors.red.shade50,
+        borderRadius: 12,
+        emboss: true,
+        child: Container(
+          padding: EdgeInsets.all(12),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, color: Colors.red.shade700),
+              SizedBox(height: 4),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: _screenH / 50,
+                  color: Colors.red.shade700,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class floor1customListTile extends StatelessWidget {

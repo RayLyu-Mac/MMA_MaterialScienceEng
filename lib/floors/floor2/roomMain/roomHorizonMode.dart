@@ -59,9 +59,7 @@ class _roomHorizontalState extends State<roomHorizontal> {
               icon: Icon(FontAwesomeIcons.timesCircle))
         ],
       ),
-      drawer: standardDrawer(
-        header: widget.roomName,
-      ),
+      drawer: StandardNavigationDrawer(headerTitle: widget.roomName),
       body: Stack(
         children: [
           Positioned(

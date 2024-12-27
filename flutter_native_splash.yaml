@@ -1,0 +1,31 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/logo.png
+  branding: assets/images/branding.png
+  color_dark: "#000000"
+  android_12:
+    image: assets/images/logo.png
+    icon_background_color: "#FFFFFF"
+    splash_screen_duration: "2200"
+  fullscreen: true
+  android: true
+  ios: true
+  web: false
+  
+  # Add loading animation
+  android_gravity: center
+  ios_content_mode: center
+  image_size: 0.5
+  
+  # Add disclaimer text
+  branding_mode: bottom
+  branding_dark: assets/images/branding.png
+  info_plist_files:
+    - 'ios/Runner/Info-Release.plist'
+    - 'ios/Runner/Info-Debug.plist'
+  
+  # Disclaimer text configuration
+  info: >
+    Funded by McMaster MSE, this resource is solely intended to serve as an aid for establishing
+    equipment Standard Operating Procedures (SOPs) and as a reminder of safety regulations.
+    In-person training remains necessary. 

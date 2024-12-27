@@ -63,7 +63,7 @@ class _roomModeState extends State<roomMode> {
               icon: Icon(FontAwesomeIcons.timesCircle))
         ],
       ),
-      drawer: standardDrawer(header: widget.roomName),
+      drawer: StandardNavigationDrawer(headerTitle: widget.roomName),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,

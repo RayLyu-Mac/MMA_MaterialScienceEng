@@ -48,6 +48,9 @@ dependencies:
   flutter_zoom_drawer: ^3.1.1
   lottie: ^2.3.2
   flutter_inappwebview: ^5.7.2+3
+  flutter_native_splash: ^2.3.2
+  clay_containers: ^0.3.2
+  google_fonts: ^5.1.0
 
   
 flutter_icons:

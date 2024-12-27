@@ -23,7 +23,7 @@ class _direction_mainState extends State<direction_main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent.shade100,
+      backgroundColor: Colors.lightBlue.shade100,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text("Direction For Material Eng",

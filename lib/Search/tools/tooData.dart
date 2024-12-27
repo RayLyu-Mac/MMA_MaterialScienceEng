@@ -27,34 +27,34 @@ List<ToolData> createToolList = [
       pageTo: STDCheck(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/stats.png?raw=true",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8))),
-  (ToolData(
-      name: "Hardness Conversion Sheet",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
-      pageTo: hardnessData(),
-      backImg:
-          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/hard.jpg?raw=true")),
+      bgColor: Colors.blue.shade100.withOpacity(0.8))),
+  // (ToolData(
+  //     name: "Hardness Conversion Sheet",
+  //     bgColor: Colors.blue.shade100.withOpacity(0.8),
+  //     pageTo: hardnessData(),
+  //     backImg:
+  //         "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/hard.jpg?raw=true")),
   (ToolData(
       name: "Phase Diagram Check",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
+      bgColor: Colors.blue.shade100.withOpacity(0.8),
       pageTo: PhaseDiag(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/phase.jpg?raw=true")),
   (ToolData(
       name: "Unit Conversion",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
-      pageTo: UnitCOnverMain(),
+      bgColor: Colors.blue.shade100.withOpacity(0.8),
+      pageTo: UnitConverterMain(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/unit.jpg?raw=true")),
   (ToolData(
       name: "Error function",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
+      bgColor: Colors.blue.shade100.withOpacity(0.8),
       pageTo: errorFunction(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true")),
   (ToolData(
       name: "Enthalpy Calculator",
-      bgColor: Colors.blueAccent.shade100.withOpacity(0.8),
+      bgColor: Colors.blue.shade100.withOpacity(0.8),
       pageTo: EnthalpyCal(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Picture2.jpg?raw=true"))

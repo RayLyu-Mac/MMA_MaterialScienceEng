@@ -64,12 +64,12 @@ List<video> microHardnessData = [
     type: "tit",
     title: "Template",
     subtitle: "How to use different mode of template",
-    materialcolor: Colors.limeAccent,
+    materialcolor: Colors.lime,
   )),
   (video(
       title: "Field Template",
       subtitle: "Pattern needed (multiple indent)",
-      materialcolor: Colors.limeAccent,
+      materialcolor: Colors.lime,
       videoController: YoutubePlayerController(
         initialVideoId: 'hpK5HnruF_s',
         flags: YoutubePlayerFlags(
@@ -81,7 +81,7 @@ List<video> microHardnessData = [
       title: "Linear Template",
       subtitle:
           "Linear Template is done when a straight line is required (preforming a Case-Hardened Sample).",
-      materialcolor: Colors.limeAccent,
+      materialcolor: Colors.lime,
       videoController: YoutubePlayerController(
         initialVideoId: 'J6HhFkc3Auo',
         flags: YoutubePlayerFlags(
@@ -93,7 +93,7 @@ List<video> microHardnessData = [
       title: "Field Point Template",
       subtitle:
           "Field Point is use when random points are required around the sample.",
-      materialcolor: Colors.limeAccent,
+      materialcolor: Colors.lime,
       videoController: YoutubePlayerController(
         initialVideoId: 'kmIsfgi7E_E',
         flags: YoutubePlayerFlags(

@@ -87,12 +87,12 @@ List<video> keyenceData = [
     type: "tit",
     title: "Post-processing",
     subtitle: "Get a better image for analysing",
-    materialcolor: Colors.purpleAccent,
+    materialcolor: Colors.purple,
   )),
   (video(
       title: "Enhancing the resolution",
       subtitle: "Chose 2D or 3D, 3D is required when sample is not flat",
-      materialcolor: Colors.purpleAccent,
+      materialcolor: Colors.purple,
       videoController: YoutubePlayerController(
         initialVideoId: 'SvwAnZuChzA',
         flags: YoutubePlayerFlags(
@@ -103,7 +103,7 @@ List<video> keyenceData = [
   (video(
       title: "Selecting the best image",
       subtitle: "Choose a best and clear images",
-      materialcolor: Colors.purpleAccent,
+      materialcolor: Colors.purple,
       videoController: YoutubePlayerController(
         initialVideoId: 'IzNETDmhF9I',
         flags: YoutubePlayerFlags(
@@ -114,7 +114,7 @@ List<video> keyenceData = [
   (video(
       title: "Glare removal",
       subtitle: "Chose 2D or 3D, 3D is required when sample is not flat",
-      materialcolor: Colors.purpleAccent,
+      materialcolor: Colors.purple,
       videoController: YoutubePlayerController(
         initialVideoId: '9TYFOn23E_8',
         flags: YoutubePlayerFlags(

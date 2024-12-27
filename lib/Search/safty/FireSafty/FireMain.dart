@@ -6,6 +6,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
+import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExtingshSymbols extends StatefulWidget {
   ExtingshSymbols({Key? key}) : super(key: key);
@@ -35,7 +37,23 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
     }
   }
 
-  List<testdetailData> result = fireData;
+  List<FireSafetyData> result = fireSafetyData;
+
+  Container _buildGradientBackground() {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.red.shade50,
+            Colors.orange.shade50,
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_screenH / _screenWidth > 1.7) {
@@ -63,70 +81,105 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
       children: [
         fireProcedure(),
         Scaffold(
-            backgroundColor: Colors.redAccent[100],
-            appBar: AppBar(
-              backgroundColor: Colors.black,
-              title: Text(
-                "Fire Class",
-                style: TextStyle(fontSize: _screenH / 40),
+          backgroundColor: Colors.transparent,
+          extendBodyBehindAppBar: true,
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.black.withOpacity(0.7),
+            title: Text(
+              "Fire Class",
+              style: GoogleFonts.poppins(
+                fontSize: _screenH / 40,
+                fontWeight: FontWeight.w600,
               ),
             ),
-            drawer: Container(
-              width: _screenWidth / 1.4,
-              child: tensileResult(),
-            ),
-            body: ListView.builder(
+          ),
+          drawer: Container(
+            width: _screenWidth / 1.4,
+            child: tensileResult(),
+          ),
+          body: Stack(
+            children: [
+              _buildGradientBackground(),
+              ListView.builder(
                 itemCount: result.length,
                 itemExtent: 445,
                 controller: controller,
                 itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                      color: Colors.white.withOpacity(0.7),
-                      semanticContainer: true,
-                      margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
-                      elevation: 8,
+                  return AnimatedContainer(
+                    duration: Duration(milliseconds: 300),
+                    margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
+                    child: Card(
+                      color: Colors.white.withOpacity(0.9),
+                      elevation: 4,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      clipBehavior: Clip.antiAlias,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       child: Column(
                         children: [
-                          Text(
-                            result[index].title,
-                            style: TextStyle(
+                          Padding(
+                            padding: EdgeInsets.all(16),
+                            child: Text(
+                              result[index].title,
+                              style: GoogleFonts.poppins(
                                 fontSize: result[index].titleFontsize,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                          Image.network(
-                            result[index].addOnImg,
-                            fit: BoxFit.fitWidth,
-                            height: 205,
-                            width: _screenWidth / 1.17,
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.network(
+                              result[index].imageUrl,
+                              fit: BoxFit.cover,
+                              height: 205,
+                              width: _screenWidth / 1.17,
+                            ),
                           ),
-                          Container(
-                              width: _screenWidth / 1.2,
-                              child: Text(
-                                result[index].content,
-                                style: TextStyle(
-                                    fontSize: result[index].contentFontsize),
-                              )),
-                          SizedBox(
-                            height: _screenH / 40,
+                          Padding(
+                            padding: EdgeInsets.all(16),
+                            child: Text(
+                              result[index].content,
+                              style: GoogleFonts.poppins(
+                                fontSize: result[index].titleFontsize,
+                              ),
+                            ),
                           ),
-                          TextButton.icon(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        type: PageTransitionType.leftToRight,
-                                        duration: Duration(milliseconds: 700),
-                                        child: eyewashStation(
-                                            eye: false, fire: true)));
-                              },
-                              icon: Icon(Icons.location_city_outlined),
-                              label: Text("Location of the extinguisher"))
+                          ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.black87,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 12),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  duration: Duration(milliseconds: 700),
+                                  child: eyewashStation(eye: false, fire: true),
+                                ),
+                              );
+                            },
+                            icon: Icon(Icons.location_city_outlined),
+                            label: Text(
+                              "Location of the extinguisher",
+                              style: GoogleFonts.poppins(),
+                            ),
+                          ),
+                          SizedBox(height: 16),
                         ],
-                      ));
-                })),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
         ZoomInPhaseD(
           imgPD:
               "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/Safty/extinguisher/exting.jpg?raw=true",
@@ -169,46 +222,65 @@ class fireProcedure extends StatelessWidget {
       ]
     ];
     return Scaffold(
-        backgroundColor: Colors.redAccent[100],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text(
-            "Fire Emergency Procedure",
-            style: TextStyle(fontSize: 25),
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.black.withOpacity(0.7),
+        title: Text(
+          "Fire Emergency Procedure",
+          style: GoogleFonts.poppins(
+            fontSize: 25,
+            fontWeight: FontWeight.w600,
           ),
         ),
-        body: Column(
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Colors.red.shade50, Colors.orange.shade50],
+          ),
+        ),
+        child: Column(
           children: [
             Expanded(
               child: ListView.builder(
-                  itemExtent: 165,
-                  itemCount: content.length,
-                  controller: controller,
-                  itemBuilder: (BuildContext context, int index1) {
-                    return Card(
-                        margin: EdgeInsets.fromLTRB(25, 16, 25, 8),
-                        elevation: 8,
-                        color: Colors.grey.shade100.withOpacity(0.8),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Container(
-                          padding: EdgeInsets.fromLTRB(10, 5, 10, 2),
-                          child: Column(
-                            children: [
-                              Text(
-                                content[index1][0],
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                content[index1][1],
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ],
+                itemExtent: 165,
+                itemCount: content.length,
+                controller: controller,
+                itemBuilder: (BuildContext context, int index1) {
+                  return Card(
+                    margin: EdgeInsets.fromLTRB(25, 16, 25, 8),
+                    elevation: 4,
+                    color: Colors.white.withOpacity(0.9),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.all(16),
+                      child: Column(
+                        children: [
+                          Text(
+                            content[index1][0],
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.poppins(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ));
-                  }),
+                          SizedBox(height: 8),
+                          Text(
+                            content[index1][1],
+                            style: GoogleFonts.poppins(fontSize: 16),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
             SizedBox(
               height: 15,
@@ -223,6 +295,8 @@ class fireProcedure extends StatelessWidget {
               height: 15,
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

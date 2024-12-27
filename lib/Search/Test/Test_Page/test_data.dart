@@ -40,21 +40,21 @@ List<HeroType> test_data_list = [
           'Use Elastic Modulus to compare advantage over \ndifferent structure (Tension)',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/tensile.png?raw=true',
-      materialColor: Colors.greenAccent)),
+      materialColor: Colors.green)),
   (HeroType(
       title: 'Meturllgical Analysis',
       pageTo: metAnalysis(),
       subTitle: 'Find the microstructure & property',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/ms.jpg?raw=true',
-      materialColor: Colors.redAccent.shade700)),
+      materialColor: Colors.red.shade700)),
   (HeroType(
       title: 'Creep Test (UTM + Heat Coil)',
       pageTo: CreepTest(),
       subTitle: 'Find the resistance to creep for alloy and pure material',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/Creep/expSet.jpg?raw=true',
-      materialColor: Colors.orangeAccent.shade100)),
+      materialColor: Colors.orange.shade100)),
   (HeroType(
       title: 'Crack resistant case',
       pageTo: FractureTest(),
@@ -62,5 +62,5 @@ List<HeroType> test_data_list = [
           'Find the resistance to crack for material with different heat treatment',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/test/crack/showPic.jpg?raw=true',
-      materialColor: Colors.lightBlueAccent.shade100))
+      materialColor: Colors.lightBlue.shade100))
 ];

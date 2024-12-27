@@ -81,7 +81,7 @@ class _floor3State extends State<floor3> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: standardDrawer(header: "JHE Floor III"),
+      drawer: StandardNavigationDrawer(headerTitle: "JHE Floor III"),
       body: Stack(
         children: [
           widget.eye || saftyI > 0
@@ -90,7 +90,7 @@ class _floor3State extends State<floor3> {
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.greenAccent.shade100.withOpacity(0.8),
+                  backC: Colors.green.shade100.withOpacity(0.8),
                   detailTitle: "Exit",
                   details: "Emergency Exit for JHE Floor II",
                   icon: Icons.exit_to_app_rounded,
@@ -204,8 +204,7 @@ class _floor3State extends State<floor3> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qrResult]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
   }
 
   // Future scanQR() async {

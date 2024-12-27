@@ -5,14 +5,14 @@ import 'package:mma_mse/Drawer.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'package:mma_mse/floors/EqubButton.dart';
 
-class saftyMain extends StatefulWidget {
-  saftyMain({Key? key}) : super(key: key);
+class SafetyMain extends StatefulWidget {
+  SafetyMain({Key? key}) : super(key: key);
 
   @override
-  _saftyMainState createState() => _saftyMainState();
+  _SafetyMainState createState() => _SafetyMainState();
 }
 
-class _saftyMainState extends State<saftyMain> {
+class _SafetyMainState extends State<SafetyMain> {
   double _screenWidth = 0;
   double _screenH = 0;
   List toolDataList = safetyData;
@@ -28,7 +28,7 @@ class _saftyMainState extends State<saftyMain> {
   Widget build(BuildContext context) {
     final ScrollController controller = ScrollController();
     return Scaffold(
-      bottomNavigationBar: ButtomMenu(),
+      bottomNavigationBar: BottomMenu(),
       appBar: AppBar(
           title: Text("Matls Eng Safety Guide"),
           backgroundColor: Colors.grey[500],
@@ -41,7 +41,7 @@ class _saftyMainState extends State<saftyMain> {
                 },
                 icon: Icon(FontAwesomeIcons.timesCircle))
           ]),
-      drawer: standardDrawer(header: "Matls Safety Guide"),
+      drawer: StandardNavigationDrawer(headerTitle: "Matls Safety Guide"),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

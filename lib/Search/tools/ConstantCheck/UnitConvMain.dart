@@ -8,167 +8,177 @@ import 'package:mma_mse/customTileScroll.dart';
 import 'weightU.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
-class UnitCOnverMain extends StatefulWidget {
-  UnitCOnverMain({Key? key}) : super(key: key);
+class UnitConverterMain extends StatefulWidget {
+  const UnitConverterMain({Key? key}) : super(key: key);
 
   @override
-  _UnitCOnverMainState createState() => _UnitCOnverMainState();
+  _UnitConverterMainState createState() => _UnitConverterMainState();
 }
 
-class _UnitCOnverMainState extends State<UnitCOnverMain> {
-  double _screenWidth = 0;
-  double _screenH = 0;
+class _UnitConverterMainState extends State<UnitConverterMain> {
+  static const double kPadding = 15.0;
+  static const double kBorderRadius = 15.0;
+
+  late double _screenWidth;
+  late double _screenH;
   final _drawerController = ZoomDrawerController();
+  final ScrollController _controller = ScrollController();
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _updateScreenDimensions();
+  }
+
+  void _updateScreenDimensions() {
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
+      _screenH *= 0.83;
     }
   }
 
-  final ScrollController controller = ScrollController();
+  List<Widget> _buildDrawerItems() {
+    return [
+      _buildDrawerHeader(),
+      ..._conversionOptions.map((option) => ScrollcustomListTile(
+            name: option.name,
+            pageTo: option.page,
+            fonts: 14,
+            controller: _controller,
+          )),
+    ];
+  }
+
+  Widget _buildDrawerHeader() {
+    return DrawerHeader(
+      child: Column(
+        children: [
+          Text(
+            "Unit Conversion Tool",
+            style: TextStyle(
+              fontSize: _screenH / 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(
+            constraints: BoxConstraints.expand(
+              width: _screenWidth / 1.5,
+              height: _screenWidth / 4,
+            ),
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assest/logocolor.png"),
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+          SizedBox(height: _screenH / 35),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent[100],
-      appBar: AppBar(
-        title: Text("Unit Conversion Tools"),
-        backgroundColor: Colors.black,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(FontAwesomeIcons.timesCircle))
+      backgroundColor: Colors.blue.shade50,
+      appBar: _buildAppBar(),
+      drawer: Drawer(child: ListView(children: _buildDrawerItems())),
+      body: _buildBody(),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      title: const Text("Unit Conversion Tools"),
+      backgroundColor: Colors.black,
+      elevation: 0,
+      actions: [
+        IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(FontAwesomeIcons.timesCircle),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildBody() {
+    return SingleChildScrollView(
+      padding: EdgeInsets.fromLTRB(
+        _screenWidth / 15,
+        _screenH / 40,
+        _screenWidth / 20,
+        _screenH / 15,
+      ),
+      controller: _controller,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _buildInfoCard(),
+          const SizedBox(height: 20),
+          ..._buildConverters(),
         ],
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                child: Column(
-              children: [
-                Text(
-                  "Unit Conversion Tool",
-                  style: TextStyle(
-                      fontSize: _screenH / 30, fontWeight: FontWeight.bold),
-                ),
-                Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 1.5, height: _screenWidth / 4),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assest/logocolor.png"))),
-                ),
-                SizedBox(
-                  height: _screenH / 35,
-                ),
-              ],
-            )),
-            ScrollcustomListTile(
-                name: "Common unit check",
-                pageTo: 0,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Pressure unit conversion",
-                pageTo: 1,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Theramal unit conversion",
-                pageTo: 2,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Temperature unit conversion",
-                pageTo: 3,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Length unit conversion",
-                pageTo: 4,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Volumne unit conversion",
-                pageTo: 5,
-                fonts: 14,
-                controller: controller),
-            ScrollcustomListTile(
-                name: "Weight unit conversion",
-                pageTo: 6,
-                fonts: 14,
-                controller: controller),
-          ],
+    );
+  }
+
+  List<Widget> _buildConverters() {
+    return [
+      _buildConverterCard("Pressure Units", unitC()),
+      _buildConverterCard("Thermal Units", thermalUC()),
+      _buildConverterCard("Length Units", LengthUC()),
+      _buildConverterCard("Volume Units", VolumeUC()),
+      _buildConverterCard("Weight Units", WeightUC()),
+    ];
+  }
+
+  Widget _buildConverterCard(String title, Widget page) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8),
+      child: ListTile(
+        title: Text(title),
+        trailing: const Icon(Icons.arrow_forward_ios),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
         ),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(
-            _screenWidth / 15, _screenH / 40, _screenWidth / 20, _screenH / 15),
-        controller: controller,
+    );
+  }
+
+  Widget _buildInfoCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              width: _screenWidth / 1.15,
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
-                    border: Border.all(width: 5, color: Colors.grey.shade200),
-                    borderRadius: BorderRadius.circular(15)),
-                padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 20,
-                    _screenWidth / 10, _screenH / 20),
-                child: Column(
-                  children: [
-                    Text("Common Letter Means (Big) \n(Take Pa as example)",
-                        style: TextStyle(
-                            fontSize: _screenH / 33,
-                            fontWeight: FontWeight.bold)),
-                    Text("kPa=1e3 Pa\nmPa=1e6 Pa\nGPa=1e9 Pa",
-                        style: TextStyle(fontSize: _screenH / 40)),
-                    SizedBox(
-                      height: _screenH / 30,
-                    ),
-                    Text("Common Letter Means (Small) \n(Take m as example)",
-                        style: TextStyle(
-                            fontSize: _screenH / 33,
-                            fontWeight: FontWeight.bold)),
-                    Text(
-                      "mm=1e-3 m\nmicro-meter=1e-6 m\nnm=1e-9 m\nA= 1e-10 m",
-                      style: TextStyle(fontSize: _screenH / 40),
-                    ),
-                  ],
-                ),
+            Text(
+              "Unit Conversion Tools",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              height: _screenH / 40,
+            SizedBox(height: 8),
+            Text(
+              "Convert between different units of measurement commonly used in materials science.",
+              textAlign: TextAlign.center,
             ),
-            unitC(),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            thermalUC(),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            LengthUC(),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            VolumeUC(),
-            SizedBox(
-              height: _screenH / 40,
-            ),
-            WeightUC()
           ],
         ),
       ),
     );
   }
 }
+
+final _conversionOptions = [
+  (name: "Common unit check", page: 0),
+  (name: "Pressure unit conversion", page: 1),
+  (name: "Thermal unit conversion", page: 2),
+  (name: "Temperature unit conversion", page: 3),
+  (name: "Length unit conversion", page: 4),
+  (name: "Volume unit conversion", page: 5),
+  (name: "Weight unit conversion", page: 6),
+];

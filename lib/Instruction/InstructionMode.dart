@@ -32,6 +32,92 @@ class _InstructionModeState extends State<InstructionMode> {
     _screenW = MediaQuery.of(context).size.width;
   }
 
+  Widget _buildInstructionCard(dynamic instruction, int index) {
+    return instruction.type != "tit"
+        ? Card(
+            color: instruction.materialcolor.withOpacity(0.85),
+            margin: EdgeInsets.symmetric(
+              horizontal: _screenW * 0.04,
+              vertical: _screenH * 0.01,
+            ),
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: YoutubePlayer(
+                    controller: instruction.videoController,
+                    liveUIColor: Colors.amber,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(_screenW * 0.04),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        instruction.title,
+                        style: TextStyle(
+                          fontSize: _screenW * 0.05,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: _screenH * 0.01),
+                      Text(
+                        instruction.subtitle,
+                        style: TextStyle(
+                          fontSize: _screenW * 0.035,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
+        : Container(
+            margin: EdgeInsets.symmetric(
+              horizontal: _screenW * 0.04,
+              vertical: _screenH * 0.02,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: instruction.materialcolor.withOpacity(0.1),
+              border: Border.all(
+                width: 2,
+                color: instruction.materialcolor,
+              ),
+            ),
+            padding: EdgeInsets.all(_screenW * 0.04),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  instruction.title,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: _screenW * 0.045,
+                    color: Colors.black87,
+                  ),
+                ),
+                SizedBox(height: _screenH * 0.02),
+                Text(
+                  instruction.subtitle,
+                  style: TextStyle(
+                    fontSize: _screenW * 0.035,
+                    color: Colors.black87,
+                  ),
+                ),
+              ],
+            ),
+          );
+  }
+
   @override
   Widget build(BuildContext context) {
     Drawer buehlerCInstr() => Drawer(
@@ -74,126 +160,38 @@ class _InstructionModeState extends State<InstructionMode> {
           ),
         );
     return Scaffold(
-      backgroundColor: Colors.amber[50],
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
         backgroundColor: Colors.black,
+        elevation: 0,
         actions: [
           IconButton(
-              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-              iconSize: 32,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(FontAwesomeIcons.timesCircle))
+            padding: EdgeInsets.symmetric(horizontal: _screenW * 0.04),
+            iconSize: _screenW * 0.07,
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(FontAwesomeIcons.timesCircle),
+          )
         ],
         title: Text(
-          widget.name + " Instruction",
-          style:
-              TextStyle(fontSize: _screenW / 18, fontWeight: FontWeight.bold),
+          "${widget.name} Instruction",
+          style: TextStyle(
+            fontSize: _screenW * 0.05,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
       drawer: buehlerCInstr(),
       body: SingleChildScrollView(
-          controller: widget.controller,
-          child: Column(children: [
-            for (var index = 0; index < widget.instructionList.length; index++)
-              widget.instructionList[index].type != "tit"
-                  ? Card(
-                      color: widget.instructionList[index].materialcolor
-                          .withOpacity(0.85),
-                      margin: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16.0)),
-                      clipBehavior: Clip.antiAlias,
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 245,
-                            width: double.infinity,
-                            child: YoutubePlayer(
-                              controller:
-                                  widget.instructionList[index].videoController,
-                              liveUIColor: Colors.amber,
-                            ),
-                          ),
-                          SizedBox(
-                            height: _screenH / 70,
-                          ),
-                          Text(
-                            widget.instructionList[index].title,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: _screenW / 22.5,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: _screenW / 30),
-                            child: Text(
-                              widget.instructionList[index].subtitle,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: _screenW / 33,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: _screenH / 65,
-                          ),
-                        ],
-                      ),
-                    )
-                  : Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                              width: 5,
-                              color:
-                                  widget.instructionList[index].materialcolor),
-                          color: widget.instructionList[index].materialcolor
-                              .withOpacity(0.5)),
-                      margin: EdgeInsets.symmetric(
-                          horizontal: _screenW / 20, vertical: _screenH / 25),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: _screenW / 30, vertical: _screenH / 37),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(
-                                        width: 4,
-                                        color: Colors.grey.shade100))),
-                            child: Text(
-                              widget.instructionList[index].title,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: _screenW / 25,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: _screenH / 50,
-                          ),
-                          Container(
-                            width: double.infinity,
-                            child: Text(
-                              widget.instructionList[index].subtitle,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: _screenW / 36),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-            SizedBox(
-              height: _screenH / 20,
-            ),
-          ])),
+        controller: widget.controller,
+        child: Column(
+          children: [
+            ...widget.instructionList.asMap().entries.map(
+                  (entry) => _buildInstructionCard(entry.value, entry.key),
+                ),
+            SizedBox(height: _screenH * 0.04),
+          ],
+        ),
+      ),
     );
   }
 }

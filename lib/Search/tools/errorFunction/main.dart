@@ -27,7 +27,7 @@ class _errorFunctionState extends State<errorFunction> {
   Widget build(BuildContext context) {
     TextEditingController before = TextEditingController();
     return Scaffold(
-        backgroundColor: Colors.lightGreenAccent[100],
+        backgroundColor: Colors.lightGreen[100],
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: Text("Erf Function"),

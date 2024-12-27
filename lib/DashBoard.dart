@@ -14,6 +14,7 @@ import 'package:mma_mse/Search/equpment/equb_ava_data.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'Drawer.dart';
 import 'welcome.dart';
+import 'package:clay_containers/clay_containers.dart';
 
 DateTime now = new DateTime.now();
 DateTime date = new DateTime(now.year, now.month, now.day);
@@ -26,6 +27,15 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
+  // Constants for styling
+  static const double kPadding = 20.0;
+  static const double kButtonHeight = 0.13;
+  static const double kSearchBarHeight = 0.07;
+  static const double kBorderRadius = 25.0;
+  static const double kDepth = 10.0;
+  static const double kIntensity = 0.8;
+  static const Color kBaseColor = Color(0xFFE0E5EC);
+
   final TextEditingController _controller = new TextEditingController();
   bool _isSearching = false;
   String _searchText = "";
@@ -80,7 +90,7 @@ class _DashBoardState extends State<DashBoard> {
       datatype.clear();
       datatype.add(test_data_list[mtest].pageTo);
       datatype.add(FontAwesomeIcons.fileContract);
-      datatype.add(Colors.lightBlueAccent.shade100);
+      datatype.add(Colors.lightBlue.shade100);
       wholeSample.addAll({test_data_list[mtest].title: datatype});
     }
 
@@ -98,7 +108,7 @@ class _DashBoardState extends State<DashBoard> {
       datatype.clear();
       datatype.add(safty.values.toList()[sft]);
       datatype.add(FontAwesomeIcons.skull);
-      datatype.add(Colors.redAccent.shade100);
+      datatype.add(Colors.red.shade100);
       wholeSample.addAll({safty.keys.toList()[sft]: datatype});
     }
     _list.addAll(wholeSample.keys.toList());
@@ -118,26 +128,26 @@ class _DashBoardState extends State<DashBoard> {
     [
       "   Find a Room",
       "assest/lot/map.json",
-      MaterialStateProperty.all(Colors.lightBlue.shade100),
+      Colors.lightBlue.shade100.withOpacity(1),
       layout_overview()
     ],
     [
       " Find an Equipment        ",
       "assest/lot/equip.json",
-      MaterialStateProperty.all(Colors.red.shade100),
-      equb_main()
+      Colors.red.shade100.withOpacity(1),
+      EquipmentMain()
     ],
     [
       "    Find a Tool",
       "assest/lot/tool.json",
-      MaterialStateProperty.all(Colors.green.shade100),
+      Colors.green.shade100.withOpacity(1),
       toolMain()
     ],
     [
       " Safety Instruction   ",
       "assest/lot/safety.json",
-      MaterialStateProperty.all(Colors.yellow.shade100),
-      saftyMain()
+      Colors.yellow.shade100.withOpacity(1),
+      SafetyMain()
     ],
     // [
     //   "    QR Scanner",
@@ -146,155 +156,228 @@ class _DashBoardState extends State<DashBoard> {
     //   workingInProg()
     // ]
   ];
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    return Scaffold(
-      bottomNavigationBar: ButtomMenu(),
-      appBar: AppBar(title: Text("MSE Dash Board"), actions: [
-        IconButton(
-            padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-            iconSize: 32,
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => welcome()));
-            },
-            icon: Icon(Icons.cancel_outlined))
-      ]),
-      drawer: standardDrawer(header: "Dash Board"),
-      body: SafeArea(
-        child: Center(
-          child: Column(children: [
-            // Padding(
-            //     child: Align(
-            //       alignment: Alignment.centerLeft,
-            //       heightFactor: height * 0.002,
-            //       child: Text(
-            //         "Quick Search",
-            //         textAlign: TextAlign.start,
-            //         style: TextStyle(
-            //             fontWeight: FontWeight.bold,
-            //             decoration: TextDecoration.underline,
-            //             fontSize: height * 0.03,
-            //             color: Colors.grey.shade700),
-            //       ),
-            //     ),
-            //     padding: EdgeInsets.only(left: width * 0.08)),
-            Container(
-              padding: EdgeInsets.only(left: width * 0.01),
-              margin: EdgeInsets.symmetric(vertical: height * 0.03),
-              height: height * 0.07,
-              width: width * 0.86,
-              child: TextField(
-                autocorrect: true,
-                expands: true,
-                maxLines: null,
-                controller: _controller,
+
+  Widget _buildSearchBar() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: kPadding),
+      margin: EdgeInsets.symmetric(vertical: _screenH * 0.025),
+      height: _screenH * (kSearchBarHeight + 0.01),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          double fontSize = (constraints.maxWidth * 0.04).clamp(14.0, 18.0);
+
+          return ClayContainer(
+            depth: kDepth.toInt(),
+            spread: kIntensity,
+            borderRadius: kBorderRadius + 5,
+            color: Colors.white,
+            emboss: false,
+            child: TextField(
+              controller: _controller,
+              style: TextStyle(
+                fontSize: fontSize,
+                fontWeight: FontWeight.w500,
+                color: Colors.black87,
+              ),
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 16,
+                ),
+                hintText: "Search Equipment/Test/Tools",
+                hintStyle: TextStyle(
+                  color: Colors.grey.shade600,
+                  fontSize: fontSize,
+                ),
+                prefixIcon: Padding(
+                  padding: EdgeInsets.only(left: 12, right: 8),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.grey.shade800,
+                    size: fontSize * 1.5,
+                  ),
+                ),
+                suffixIcon: _controller.text.isNotEmpty
+                    ? Padding(
+                        padding: EdgeInsets.only(right: 12),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.clear,
+                            size: fontSize * 1.2,
+                            color: Colors.grey.shade800,
+                          ),
+                          onPressed: () {
+                            _controller.clear();
+                            searchOperation("");
+                          },
+                        ),
+                      )
+                    : null,
+                border: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              onChanged: searchOperation,
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildSearchResults() {
+    return ListView.builder(
+      padding: EdgeInsets.symmetric(horizontal: kPadding),
+      itemCount: possibleResult.length,
+      itemBuilder: (context, index) {
+        String listData = possibleResult[index];
+        return Container(
+          margin: EdgeInsets.only(bottom: 8),
+          child: Card(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(kBorderRadius),
+            ),
+            child: ListTile(
+              leading: Icon(
+                property[index][1],
+                color: property[index][2],
+                size: _screenH * 0.03,
+              ),
+              title: Text(
+                listData,
                 style: TextStyle(
-                  fontSize: height / 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  fontSize: (_screenH * 0.018).clamp(14.0, 18.0),
+                  fontWeight: FontWeight.w500,
                 ),
-                decoration: new InputDecoration(
-                  hintText: "Search For Equipment/Test/Tools...",
-                  hintStyle:
-                      TextStyle(color: Colors.grey, fontSize: _screenH / 40),
-                  contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
-                  border: OutlineInputBorder(),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2.5, color: Colors.black)),
+              ),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: kPadding,
+                vertical: 8,
+              ),
+              onTap: () => Navigator.push(
+                context,
+                PageTransition(
+                  child: property[index][0],
+                  type: PageTransitionType.rightToLeft,
+                  duration: Duration(milliseconds: 300),
                 ),
-                onChanged: searchOperation,
               ),
             ),
-            possibleResult.length != 0
-                ? Expanded(
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: possibleResult.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          String listData = possibleResult[index];
-                          return Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: width * 0.06,
-                                  vertical: height * 0.004),
-                              child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      border: Border.all(
-                                          color: Colors.grey, width: 4)),
-                                  child: InkWell(
-                                      child: ListTile(
-                                        trailing: Icon(property[index][1]),
-                                        tileColor: property[index][2],
-                                        title: new Text(listData.toString()),
-                                      ),
-                                      splashColor: Colors.grey,
-                                      onTap: () {
-                                        Navigator.push(
-                                            context,
-                                            PageTransition(
-                                                child: property[index][0],
-                                                type: PageTransitionType.scale,
-                                                duration:
-                                                    Duration(milliseconds: 600),
-                                                alignment:
-                                                    Alignment.topCenter));
-                                      })));
-                        }))
-                : SingleChildScrollView(
-                    child: Column(children: [
-                      // Padding(
-                      //     child: Align(
-                      //       alignment: Alignment.centerLeft,
-                      //       heightFactor: height * 0.0015,
-                      //       child: Text(
-                      //         "Quick Access",
-                      //         textAlign: TextAlign.start,
-                      //         style: TextStyle(
-                      //             fontWeight: FontWeight.bold,
-                      //             decoration: TextDecoration.underline,
-                      //             fontSize: height * 0.03,
-                      //             color: Colors.grey.shade700),
-                      //       ),
-                      //     ),
-                      //     padding: EdgeInsets.only(left: width * 0.08)),
-                      for (var i = 0; i < dashButton.length; i++)
-                        Container(
-                            height: height * 0.12,
-                            width: width * 0.84,
-                            margin: EdgeInsets.all(12),
-                            child: ElevatedButton.icon(
-                                style: ButtonStyle(
-                                    backgroundColor: dashButton[i][2]),
-                                icon: Container(
-                                  height: height * 0.1,
-                                  width: width * 0.25,
-                                  child: Lottie.asset(dashButton[i][1],
-                                      fit: BoxFit.fitHeight),
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      PageTransition(
-                                          duration:
-                                              const Duration(milliseconds: 500),
-                                          child: dashButton[i][3],
-                                          type:
-                                              PageTransitionType.rightToLeft));
-                                },
-                                label: Text(
-                                  dashButton[i][0],
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                      fontSize: height * 0.025),
-                                )))
-                    ]),
-                  )
-          ]),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildDashboardButton(List buttonData) {
+    return Container(
+      height: _screenH * kButtonHeight,
+      margin: EdgeInsets.symmetric(
+        horizontal: kPadding,
+        vertical: _screenH * 0.015,
+      ),
+      child: GestureDetector(
+        onTap: () => Navigator.push(
+          context,
+          PageTransition(
+            duration: Duration(milliseconds: 300),
+            child: buttonData[3],
+            type: PageTransitionType.rightToLeft,
+          ),
+        ),
+        child: ClayContainer(
+          depth: kDepth.toInt(),
+          spread: kIntensity,
+          color: buttonData[2],
+          borderRadius: kBorderRadius,
+          parentColor: kBaseColor,
+          curveType: CurveType.convex,
+          child: Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(12),
+                  child: Lottie.asset(
+                    buttonData[1],
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Text(
+                  buttonData[0],
+                  style: TextStyle(
+                    fontSize: (_screenH * 0.026).clamp(18.0, 26.0),
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black87,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kBaseColor,
+      bottomNavigationBar: BottomMenu(),
+      appBar: AppBar(
+        title: Text(
+          "MSE Dashboard",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: (_screenH * 0.024).clamp(18.0, 24.0),
+          ),
+        ),
+        elevation: 2,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            iconSize: (_screenH * 0.03).clamp(24.0, 32.0),
+            onPressed: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => welcome())),
+          )
+        ],
+      ),
+      drawer: StandardNavigationDrawer(headerTitle: "Dashboard"),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.lightBlue.shade100.withOpacity(0.45),
+              Colors.red.shade100.withOpacity(0.45),
+              Colors.green.shade100.withOpacity(0.45),
+              Colors.yellow.shade100.withOpacity(0.45),
+            ],
+            stops: [0.3, 0.6, 0.9, 1.0],
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              _buildSearchBar(),
+              Expanded(
+                child: possibleResult.isNotEmpty
+                    ? _buildSearchResults()
+                    : ListView.builder(
+                        padding: EdgeInsets.symmetric(vertical: kPadding),
+                        itemCount: dashButton.length,
+                        itemBuilder: (context, index) =>
+                            _buildDashboardButton(dashButton[index]),
+                      ),
+              ),
+            ],
+          ),
         ),
       ),
     );

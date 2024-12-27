@@ -59,7 +59,7 @@ class _WhimsSymbolsState extends State<WhimsSymbols> {
         );
 
     return Scaffold(
-        backgroundColor: Colors.lightBlueAccent[100],
+        backgroundColor: Colors.lightBlue[100],
         appBar: AppBar(
           backgroundColor: Colors.black,
           actions: [

@@ -89,7 +89,7 @@ class _floor2State extends State<floor2> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: standardDrawer(header: "JHE Floor II"),
+      drawer: StandardNavigationDrawer(headerTitle: "JHE Floor II"),
       body: Stack(
         children: [
           widget.eye! || saftyI > 0
@@ -98,7 +98,7 @@ class _floor2State extends State<floor2> {
                   top: _screenH / 35,
                   length: _screenH / 15,
                   width: _screenWidth / 3,
-                  backC: Colors.greenAccent.shade100.withOpacity(0.8),
+                  backC: Colors.green.shade100.withOpacity(0.8),
                   detailTitle: "Exit",
                   details: "Emergency Exit for JHE Floor II",
                   icon: Icons.exit_to_app_rounded,
@@ -149,7 +149,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent.shade100.withOpacity(0.8),
+                          backC: Colors.red.shade100.withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           detailTitle: "Room 240: Eye shower",
                           pageTo: room240LayO(
@@ -168,7 +168,7 @@ class _floor2State extends State<floor2> {
                             eye: true,
                           ),
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent.shade100.withOpacity(0.8),
+                          backC: Colors.red.shade100.withOpacity(0.8),
                           icon: Icons.shower_rounded,
                         )
                       ],
@@ -231,7 +231,7 @@ class _floor2State extends State<floor2> {
                   length: _screenH / 13,
                   width: _screenWidth / 8.5,
                   icon: Icons.fire_extinguisher,
-                  backC: Colors.redAccent.shade100,
+                  backC: Colors.red.shade100,
                   details: "Emergency for fire situation",
                   detailTitle: "Fire Extinguisher",
                 )
@@ -245,7 +245,7 @@ class _floor2State extends State<floor2> {
                   details: "Emergency for fire situation",
                   left: _screenWidth / 2.05,
                   top: _screenH / 6.2,
-                  backC: Colors.redAccent.shade100,
+                  backC: Colors.red.shade100,
                   length: _screenH / 13,
                   width: _screenWidth / 8.5,
                   icon: Icons.fire_extinguisher,
@@ -278,7 +278,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent.shade100.withOpacity(0.8),
+                          backC: Colors.red.shade100.withOpacity(0.8),
                           icon: Icons.remove_red_eye_rounded,
                           pageTo: room246AMain(),
                           detailTitle: "Room 246A: Eye shower",
@@ -290,7 +290,7 @@ class _floor2State extends State<floor2> {
                         roomButton(
                           length: _screenH / 9.5,
                           width: _screenWidth / 5.5,
-                          backC: Colors.redAccent.shade100.withOpacity(0.8),
+                          backC: Colors.red.shade100.withOpacity(0.8),
                           icon: Icons.shower_rounded,
                           pageTo: room246AMain(),
                           detailTitle: "Room 246A: Chemical Shower",
@@ -343,8 +343,7 @@ class _floor2State extends State<floor2> {
                               roomButton(
                                 length: _screenH / 10,
                                 width: _screenWidth / 6,
-                                backC:
-                                    Colors.redAccent.shade100.withOpacity(0.8),
+                                backC: Colors.red.shade100.withOpacity(0.8),
                                 icon: FontAwesomeIcons.firstAid,
                                 detailTitle: "Room 248: First Aid Kit",
                                 details: "QRS kit for any emergency",
@@ -355,8 +354,7 @@ class _floor2State extends State<floor2> {
                               roomButton(
                                 length: _screenH / 10,
                                 width: _screenWidth / 6,
-                                backC:
-                                    Colors.redAccent.shade100.withOpacity(0.8),
+                                backC: Colors.red.shade100.withOpacity(0.8),
                                 icon: FontAwesomeIcons.burn,
                                 detailTitle: "Room 248: Burn Kit",
                                 details: "QRS for burning situation",
@@ -375,8 +373,7 @@ class _floor2State extends State<floor2> {
                                 length: _screenH / 4.5,
                                 width: _screenWidth / 5,
                                 fontsize: 22,
-                                backC:
-                                    Colors.redAccent.shade100.withOpacity(0.8),
+                                backC: Colors.red.shade100.withOpacity(0.8),
                                 detailsFontS: 16,
                                 detailsTiFontS: 25,
                                 detailTitle: "Equipment Manager Contact Info",

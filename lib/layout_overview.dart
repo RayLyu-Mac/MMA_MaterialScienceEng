@@ -10,6 +10,10 @@ import 'package:page_transition/page_transition.dart';
 //import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:mma_mse/wholeQR.dart';
 import 'package:mma_mse/floationPanel/PanelMain.dart';
+import 'package:clay_containers/clay_containers.dart';
+
+const String BUILDING_FULL_NAME = "John Hodgins Engineering Building (JHE)";
+const String BUILDING_SHORT_NAME = "JHE Building";
 
 class layout_overview extends StatefulWidget {
   layout_overview({Key? key}) : super(key: key);
@@ -19,46 +23,57 @@ class layout_overview extends StatefulWidget {
 }
 
 class _layout_overviewState extends State<layout_overview> {
-  // late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
-  // @override
-  // void initState() {
-  //   super.initState();
-
-  //   flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
-  //   var android = AndroidInitializationSettings('@mipmap/ic_launcher');
-  //   var initialSet = InitializationSettings(android: android);
-  //   // flutterLocalNotificationsPlugin.initialize(initialSet,
-  //   //     onSelectNotification: onSelectN);
-
-  //   // showNote();
-  // }
-
   double _screenWidth = 0;
   double _screenH = 0;
-  double adjust = 1;
-  final random = Random();
-
-  List<String> tip = [
-    "If you want to find the technical elective for your direction in MSE, open the side drawer under menu section and click the Tech Elective Button. \n*Please view most updated information on McMaster Website",
-    "If you are trapped by the enthalpy calculation in 3F, you can find the enthalpy calculator under tool section. Go to tool section by open the side drawer under menu section",
-    "If you just finished the hardness test and want to transfer the experiment data to data you can understand, you can find the hardness conversion tool under tool section. Go to tool section by open the side drawer under menu section",
-    "If you want to find the location of chemical shower and eye washer and be preparaed for the experiment tomorrow, you can find all those information under safety section. Go to safety section by open the side drawer under menu section",
-    "If you want to find specific equipment, you can find them under equipment on side drawer under menu section, or click the button on floation panel and type the name of the equipment in quick search button",
-    "If you want to find the location of fire distinguisher and familiar yourself with fire code,you can find all those information under safety section. Go to safety section by open the side drawer under menu section.",
-    "If you want to use the QR scanner to scan the QR code on equipment or the room, you can find this on floation panel, click the QR code button",
-    "If you want to find the layout of the building and the room, follow the page and click the floor you want and find the room you are interested. Or you can find them on side drawer under floors",
-    "If you want to check the safety equipment layout for each floor, after entering the floor plan page, click the switch button on the right top corner, you can see those equipment and click them you can see the information for those equipment."
+  final List<FloorData> floors = [
+    FloorData(
+      name: "Floor I",
+      icon: Icons.layers,
+      color: Colors.orange[600]!,
+      page: floor1(eye: false, fire: false),
+      description: "Undergraduate Teaching Labs",
+    ),
+    FloorData(
+      name: "Floor II",
+      icon: Icons.layers,
+      color: Colors.green[600]!,
+      page: floor2(eye: false, fire: false),
+      description: "Teaching Labs & Research Facilities",
+    ),
+    FloorData(
+      name: "Floor III",
+      icon: Icons.layers,
+      color: Colors.blue[700]!,
+      page: floor3(eye: false),
+      description: "MSE Office & Graduate Facilities",
+    ),
   ];
 
-  // Future onSelectN(String message) {
-  //   debugPrint("Message : $message");
-  //   showDialog(
-  //       context: context,
-  //       builder: (_) => AlertDialog(
-  //             title: Text("Tip of the day"),
-  //             content: Text(tip[random.nextInt(tip.length)]),
-  //           ));
-  // }
+  static const double kPadding = 20.0;
+  static const double kDepth = 10.0;
+  static const double kIntensity = 0.8;
+  static const Color kBaseColor = Color(0xFFE0E5EC);
+
+  BoxDecoration _getNeumorphicDecoration({bool isPressed = false}) {
+    return BoxDecoration(
+      color: kBaseColor,
+      borderRadius: BorderRadius.circular(kDepth),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.white,
+          offset: Offset(-5, -5),
+          blurRadius: 10,
+          spreadRadius: isPressed ? 0 : 1,
+        ),
+        BoxShadow(
+          color: Colors.grey[400]!,
+          offset: Offset(5, 5),
+          blurRadius: 10,
+          spreadRadius: isPressed ? 0 : 1,
+        ),
+      ],
+    );
+  }
 
   @override
   void didChangeDependencies() {
@@ -67,121 +82,262 @@ class _layout_overviewState extends State<layout_overview> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
-  void goToPage(qrResult) {
-    Navigator.push(
-        context,
-        PageTransition(
-            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
-  }
-
   @override
   Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
-      _screenH = _screenH * 0.8;
-      adjust = 0.82;
-    }
     return Scaffold(
-      backgroundColor: Colors.white,
-      bottomNavigationBar: ButtomMenu(),
+      backgroundColor: kBaseColor,
+      bottomNavigationBar: BottomMenu(),
       appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Building Layout",
+          style: TextStyle(
+            fontSize: (_screenH * 0.024).clamp(18.0, 24.0),
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
         actions: [
           IconButton(
-              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-              iconSize: 32,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(FontAwesomeIcons.timesCircle))
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            icon: Icon(Icons.close, size: _screenH * 0.032),
+            onPressed: () => Navigator.pop(context),
+          ),
         ],
-        title: Text("Layout Overview"),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black87,
       ),
-      drawer: standardDrawer(header: "JHE Layout"),
-      body: Stack(
-        children: [
-          Positioned(
-              top: _screenH / 50,
-              left: _screenWidth / 25,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                  width: _screenWidth / 1.1,
-                  height: _screenH / 1.3 / adjust,
+      drawer: StandardNavigationDrawer(headerTitle: "JHE Layout"),
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.grey[100]!.withOpacity(0.9),
+                Colors.grey[50]!.withOpacity(0.9),
+              ],
+            ),
+          ),
+          child: SafeArea(
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(kPadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildBuildingImage(),
+                      SizedBox(height: _screenH * 0.02),
+                    ],
+                  ),
                 ),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assest/bglay.png"),
-                        fit: BoxFit.cover)),
-              )),
-          Positioned(
-              top: _screenH / 1.74 / adjust,
-              left: _screenWidth / 20,
-              child: fancyBut(
-                  fontsize: 19,
-                  pageTo: floor1(
-                    eye: false,
-                    fire: false,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: kPadding),
+                  child: Column(
+                    children:
+                        floors.map((floor) => _buildFloorCard(floor)).toList(),
                   ),
-                  width: _screenWidth / 2.8,
-                  height: _screenH / 12,
-                  icon: Icons.stairs,
-                  buttonName: "Floor I")),
-          Positioned(
-              top: _screenH / 2.7 / adjust,
-              left: _screenWidth / 1.78,
-              child: fancyBut(
-                  fontsize: 19,
-                  pageTo: floor2(
-                    eye: false,
-                    fire: false,
-                  ),
-                  width: _screenWidth / 2.8,
-                  height: _screenH / 12,
-                  icon: Icons.stairs,
-                  buttonName: "Floor II")),
-          Positioned(
-              top: _screenH / 5 / adjust,
-              left: _screenWidth / 20,
-              child: fancyBut(
-                  fontsize: 19,
-                  pageTo: floor3(
-                    eye: false,
-                  ),
-                  width: _screenWidth / 2.7,
-                  height: _screenH / 12,
-                  icon: Icons.stairs,
-                  buttonName: "Floor III")),
-          Positioned(
-              top: _screenH / 1.4 / adjust,
-              left: _screenWidth / 1.4,
-              child: Container(
-                constraints: BoxConstraints.expand(
-                  width: _screenWidth / 4,
-                  height: _screenH / 5.5 / adjust,
                 ),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/layout/sci.PNG?raw=true"),
-                        fit: BoxFit.cover)),
-              )),
-        ],
+                Padding(
+                  padding: EdgeInsets.all(kPadding),
+                  child: _buildLegendSection(),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
 
-  // Future scanQR() async {
-  //   await Permission.camera.request();
-  //   String? codeSanner = await scanner.scan(); //barcode scnner
-  //   setState(() {
-  //     goToPage(codeSanner);
-  //   });
-  // }
+  Widget _buildBuildingImage() {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          height: min(_screenH * 0.3, 300),
+          width: double.infinity,
+          decoration: _getNeumorphicDecoration(),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(kDepth),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                Image.asset(
+                  "assest/jhe.jpg",
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        Colors.black.withOpacity(0.7),
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 16,
+                  left: 16,
+                  right: 16,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        BUILDING_FULL_NAME,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: min(24, constraints.maxWidth * 0.06),
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow(
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              color: Colors.black.withOpacity(0.5),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 
-  // showNote() async {
-  //   var android =
-  //       AndroidNotificationDetails('C ID', "C Name", "channelDescription");
-  //   var platform = NotificationDetails(android: android);
-  //   await flutterLocalNotificationsPlugin.show(
-  //       0, "Tip for the day", tip[random.nextInt(tip.length)], platform);
-  // }
+  Widget _buildFloorCard(FloorData floor) {
+    double titleSize = (_screenH * 0.022).clamp(16.0, 22.0);
+    double descriptionSize = (_screenH * 0.016).clamp(12.0, 16.0);
+
+    return Padding(
+      padding: EdgeInsets.only(bottom: _screenH * 0.015),
+      child: ClayContainer(
+        height: _screenH * 0.12,
+        depth: kDepth.toInt(),
+        spread: kIntensity,
+        borderRadius: 15,
+        color: kBaseColor,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(15),
+            onTap: () => Navigator.push(
+              context,
+              PageTransition(
+                type: PageTransitionType.rightToLeft,
+                child: floor.page,
+              ),
+            ),
+            child: Container(
+              padding: EdgeInsets.all(kPadding * 0.8),
+              child: Row(
+                children: [
+                  ClayContainer(
+                    height: _screenH * 0.06,
+                    width: _screenH * 0.06,
+                    depth: kDepth.toInt(),
+                    spread: kIntensity,
+                    borderRadius: 12,
+                    color: floor.color.withOpacity(0.2),
+                    child: Icon(
+                      floor.icon,
+                      color: floor.color,
+                      size: _screenH * 0.03,
+                    ),
+                  ),
+                  SizedBox(width: kPadding * 0.8),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          floor.name,
+                          style: TextStyle(
+                            fontSize: titleSize,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87,
+                          ),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          floor.description,
+                          style: TextStyle(
+                            fontSize: descriptionSize,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.chevron_right,
+                    color: Colors.grey[600],
+                    size: _screenH * 0.03,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLegendSection() {
+    return ClayContainer(
+      depth: kDepth.toInt(),
+      spread: kIntensity,
+      borderRadius: 15,
+      color: kBaseColor,
+      child: Padding(
+        padding: EdgeInsets.all(kPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Legend",
+              style: TextStyle(
+                fontSize: (_screenH * 0.022).clamp(16.0, 22.0),
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,
+              ),
+            ),
+            SizedBox(height: 16),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.network(
+                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/layout/sci.PNG?raw=true",
+                height: _screenH * 0.15,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class FloorData {
+  final String name;
+  final IconData icon;
+  final Color color;
+  final Widget page;
+  final String description;
+
+  FloorData({
+    required this.name,
+    required this.icon,
+    required this.color,
+    required this.page,
+    required this.description,
+  });
 }

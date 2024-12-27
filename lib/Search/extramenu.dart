@@ -33,7 +33,7 @@ class _extraMenuState extends State<extraMenu> {
       children: [
         floor1customListTile(
           name: "   Equipment",
-          pageTo: equb_main(),
+          pageTo: EquipmentMain(),
           fonts: 16,
           leadIcon: FontAwesomeIcons.microscope,
         ),
@@ -51,7 +51,7 @@ class _extraMenuState extends State<extraMenu> {
         ),
         floor1customListTile(
           name: "   Safety",
-          pageTo: saftyMain(),
+          pageTo: SafetyMain(),
           fonts: 16,
           leadIcon: FontAwesomeIcons.lifeRing,
         ),

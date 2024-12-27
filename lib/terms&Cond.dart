@@ -56,7 +56,7 @@ class _conditionTermsState extends State<conditionTerms> {
                   style: TextStyle(
                       fontSize: _screenWidth / 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.redAccent),
+                      color: Colors.red),
                 ),
                 SizedBox(
                   height: _screenH / 18,

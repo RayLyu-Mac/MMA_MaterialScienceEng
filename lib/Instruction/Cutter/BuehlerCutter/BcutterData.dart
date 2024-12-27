@@ -38,7 +38,7 @@ List<video> bueCutterData = [
       type: "ins",
       title: "Assembling Vise",
       subtitle: "Process of secure sample into the cutter",
-      materialcolor: Colors.orangeAccent,
+      materialcolor: Colors.orange,
       videoController: YoutubePlayerController(
         initialVideoId: 'BeHxZQ6Bh70',
         flags: YoutubePlayerFlags(
@@ -50,7 +50,7 @@ List<video> bueCutterData = [
       type: "ins",
       title: "Assemble for round sample",
       subtitle: "Process of secure round sample into the cutter",
-      materialcolor: Colors.orangeAccent,
+      materialcolor: Colors.orange,
       videoController: YoutubePlayerController(
         initialVideoId: 'Eo6A4kceSCE',
         flags: YoutubePlayerFlags(
@@ -92,7 +92,7 @@ List<video> bueCutterData = [
       type: "ins",
       title: "Serial cut",
       subtitle: "Process of making a serial cut",
-      materialcolor: Colors.greenAccent,
+      materialcolor: Colors.green,
       videoController: YoutubePlayerController(
         initialVideoId: 'PDkmYVFGIjM',
         flags: YoutubePlayerFlags(

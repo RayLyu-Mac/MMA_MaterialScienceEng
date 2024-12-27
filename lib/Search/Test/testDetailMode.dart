@@ -46,7 +46,7 @@ class _pageModeState extends State<pageMode> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent[100],
+        backgroundColor: Colors.blue[100],
         title: Text(widget.title),
       ),
       body: Stack(

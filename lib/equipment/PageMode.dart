@@ -65,8 +65,45 @@ class _EqubPageModeState extends State<EqubPageMode> {
     Navigator.push(
         context,
         PageTransition(
-            child: qr_pageTo[qrResult]!,
-            type: PageTransitionType.bottomToTop));
+            child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
+  }
+
+  Widget _buildActionButton(
+      String label, Widget page, String? warnNote, String? warnVideo) {
+    return ElevatedButton(
+      child: Text(label),
+      onPressed: () => _navigateToPage(page),
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.symmetric(
+          horizontal: _screenWidth * 0.03,
+          vertical: _screenH * 0.02,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildIconButton({
+    required IconData icon,
+    required String? tooltip,
+    required VoidCallback onPressed,
+  }) {
+    return IconButton(
+      tooltip: tooltip,
+      iconSize: _screenH / 17,
+      icon: Icon(icon),
+      color: Colors.red,
+      onPressed: onPressed,
+    );
+  }
+
+  void _navigateToPage(Widget page) {
+    Navigator.push(
+      context,
+      PageTransition(
+        child: page,
+        type: PageTransitionType.bottomToTop,
+      ),
+    );
   }
 
   @override
@@ -96,7 +133,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
               icon: Icon(FontAwesomeIcons.timesCircle))
         ],
       ),
-      drawer: standardDrawer(header: widget.title),
+      drawer: StandardNavigationDrawer(headerTitle: widget.title),
       body: SafeArea(
         child: Stack(
           children: [
@@ -168,7 +205,7 @@ class _EqubPageModeState extends State<EqubPageMode> {
                             tooltip: widget.toolTip,
                             iconSize: _screenH / 17,
                             icon: Icon(widget.extraIcon),
-                            color: Colors.redAccent,
+                            color: Colors.red,
                             onPressed: () {
                               Navigator.push(
                                   context,

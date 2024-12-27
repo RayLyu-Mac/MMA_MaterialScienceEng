@@ -159,7 +159,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.sortAlphaDown),
           ),
           DashButton(
-            cardColor: Colors.pinkAccent,
+            cardColor: Colors.pink,
             left: _screenH / 1.2,
             top: _screenWidth / 8,
             height: _screenWidth / 18,
@@ -170,7 +170,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             buttonName: "Esc",
           ),
           DashButton(
-            cardColor: Colors.pinkAccent,
+            cardColor: Colors.pink,
             left: _screenH / 1.2,
             top: _screenWidth / 5,
             height: _screenWidth / 18,
@@ -180,7 +180,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.arrowsAltH),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.99,
             top: _screenWidth / 8,
             height: _screenWidth / 18,
@@ -191,7 +191,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.angleDoubleLeft),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.99,
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
@@ -202,7 +202,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.arrowLeft),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.865,
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
@@ -212,7 +212,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.arrowDown),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.865,
             top: _screenWidth / 8,
             height: _screenWidth / 18,
@@ -222,7 +222,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.arrowUp),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.77,
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,
@@ -233,7 +233,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.arrowRight),
           ),
           DashButton(
-            cardColor: Colors.yellowAccent,
+            cardColor: Colors.yellow,
             left: _screenH / 0.77,
             top: _screenWidth / 8,
             height: _screenWidth / 18,
@@ -244,7 +244,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.angleDoubleRight),
           ),
           DashButton(
-            cardColor: Colors.greenAccent,
+            cardColor: Colors.green,
             left: _screenH / 0.69,
             top: _screenWidth / 8,
             height: _screenWidth / 18,
@@ -254,7 +254,7 @@ class _PrecisonCutterDashBState extends State<PrecisonCutterDashB> {
             button_icon: Icon(FontAwesomeIcons.disease),
           ),
           DashButton(
-            cardColor: Colors.redAccent,
+            cardColor: Colors.red,
             left: _screenH / 0.69,
             top: _screenWidth / 4.9,
             height: _screenWidth / 18,

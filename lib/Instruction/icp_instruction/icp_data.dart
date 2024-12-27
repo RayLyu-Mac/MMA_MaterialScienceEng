@@ -35,12 +35,12 @@ List<video> icpData = [
     type: "tit",
     title: "Preparation II",
     subtitle: "Pump and customize the method on software",
-    materialcolor: Colors.redAccent,
+    materialcolor: Colors.red,
   )),
   video(
       title: "Step 3: Peristaltic Pump Set-Up",
       subtitle: "Setting tension, Ensuring proper flow and Inserting Tubes",
-      materialcolor: Colors.redAccent,
+      materialcolor: Colors.red,
       videoController: YoutubePlayerController(
         initialVideoId: 'WDtx6M9AkYU',
         flags: YoutubePlayerFlags(
@@ -51,7 +51,7 @@ List<video> icpData = [
   video(
       title: "Step 4: Edit Method on software",
       subtitle: "Periodic table, Conditions, Standard, Sequence",
-      materialcolor: Colors.redAccent,
+      materialcolor: Colors.red,
       videoController: YoutubePlayerController(
         initialVideoId: 'Ywu-4KFUc8M',
         flags: YoutubePlayerFlags(

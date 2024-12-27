@@ -66,210 +66,219 @@ class _SearchListExampleState extends State<SearchListExample> {
 
   @override
   Widget build(BuildContext context) {
-    String dropdownValue = "Name";
-    return new Scaffold(
-        resizeToAvoidBottomInset: false,
-        key: globalKey,
-        body: Column(
-          children: [
-            SizedBox(
-              height: _screenH / 45,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(10, 8, 5, 2),
-                  height: 55,
-                  width: _screenWidth / 1.3,
-                  child: TextField(
-                    expands: true,
-                    maxLines: null,
-                    controller: _controller,
-                    style: TextStyle(
-                      fontSize: _screenH / 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                    decoration: new InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(10, 1, 1, 1),
-                      border: OutlineInputBorder(),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2.5, color: Colors.black)),
-                    ),
-                    onChanged: searchOperation,
-                  ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      key: globalKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios, color: Colors.black87),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        title: Text(
+          'MSDS Database',
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 5,
+                  offset: Offset(0, 2),
                 ),
-                Container(
-                  height: 30,
-                  width: 80,
-                  child: DropdownButton(
-                    isExpanded: true,
-                    icon: const Icon(Icons.arrow_downward),
-                    iconSize: 25,
-                    elevation: 16,
-                    value: dropdownValue,
-                    style: const TextStyle(color: Colors.deepPurple),
-                    onChanged: (value) {
-                      setState(() {
-                        dropdownValue = value!;
-                        switch (value) {
-                          case "Name":
-                            searchName = true;
-                            _list.clear();
-                            for (var i = 0; i < total.length; i++) {
-                              _list.add(total[i].name);
-                            }
-                            break;
-                          case "Location":
-                            searchLoc = true;
-                            _list.clear();
-                            for (var i = 0; i < total.length; i++) {
-                              _list.add(total[i].location);
-                            }
-                            break;
-                          case "Chemical Formula":
-                            searchChem = true;
-                            _list.clear();
-                            for (var i = 0; i < total.length; i++) {
-                              _list.add(total[i].short);
-                            }
-                            break;
-                        }
-                      });
-                    },
-                    items: <String>["Name", "Location", "Chemical Formula"]
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(
-                            value + '\n \n \n ',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: _screenH / 45,
-                            ),
-                          ));
-                    }).toList(),
-                  ),
-                )
               ],
             ),
-            name.length != 0
-                ? Expanded(
-                    child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: name.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      String listData = name[index];
-                      return new Padding(
-                          padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  border:
-                                      Border.all(color: Colors.grey, width: 4)),
-                              child: InkWell(
-                                splashColor: Colors.grey,
-                                onTap: () {
-                                  showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return SimpleDialog(
-                                          backgroundColor: property[index]
-                                              .level
-                                              .withOpacity(0.9),
-                                          contentPadding: EdgeInsets.fromLTRB(
-                                              _screenWidth / 30,
-                                              _screenH / 30,
-                                              _screenWidth / 50,
-                                              _screenH / 25),
-                                          title: Text(property[index].name),
-                                          children: [
-                                            Text(
-                                                "The Location of the material: " +
-                                                    property[index].location),
-                                            Text(
-                                                "The Chemical Formula the material: " +
-                                                    property[index].short),
-                                            Text("The type of the material: " +
-                                                property[index].type),
-                                            Text("The level of harzard is: " +
-                                                saftyLevel[
-                                                    property[index].level]!)
-                                          ],
-                                        );
-                                      });
-                                },
-                                child: ListTile(
-                                  title: new Text(listData.toString()),
-                                  tileColor: property[index].level,
-                                ),
-                              )));
-                    },
-                  ))
-                : Container(
-                    constraints: BoxConstraints.expand(
-                        width: _screenWidth / 1.5, height: _screenH / 1.5),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/searchChem.png?raw=true"))),
+                      color: Colors.grey[100],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: TextField(
+                      controller: _controller,
+                      style: TextStyle(fontSize: 16),
+                      decoration: InputDecoration(
+                        hintText: 'Search MSDS...',
+                        prefixIcon: Icon(Icons.search, color: Colors.grey),
+                        border: InputBorder.none,
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      ),
+                      onChanged: searchOperation,
+                    ),
+                  ),
+                ),
+                SizedBox(width: 12),
+                PopupMenuButton<String>(
+                  icon: Icon(Icons.filter_list),
+                  onSelected: (value) {
+                    setState(() {
+                      switch (value) {
+                        case "Name":
+                          searchName = true;
+                          _list.clear();
+                          for (var i = 0; i < total.length; i++) {
+                            _list.add(total[i].name);
+                          }
+                          break;
+                        case "Location":
+                          searchLoc = true;
+                          _list.clear();
+                          for (var i = 0; i < total.length; i++) {
+                            _list.add(total[i].location);
+                          }
+                          break;
+                        case "Chemical Formula":
+                          searchChem = true;
+                          _list.clear();
+                          for (var i = 0; i < total.length; i++) {
+                            _list.add(total[i].short);
+                          }
+                          break;
+                      }
+                    });
+                  },
+                  itemBuilder: (context) =>
+                      ["Name", "Location", "Chemical Formula"]
+                          .map((String value) => PopupMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              ))
+                          .toList(),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: name.isNotEmpty
+                ? ListView.builder(
+                    padding: EdgeInsets.all(8),
+                    itemCount: name.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        elevation: 2,
+                        margin: EdgeInsets.symmetric(vertical: 4),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.all(16),
+                          title: Text(
+                            name[index],
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          subtitle: Text(property[index].short),
+                          tileColor: property[index].level.withOpacity(0.1),
+                          trailing: Icon(Icons.arrow_forward_ios, size: 16),
+                          onTap: () => _showDetailsDialog(context, index),
+                        ),
+                      );
+                    },
                   )
-          ],
-        ));
+                : Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.network(
+                          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/searchChem.png?raw=true",
+                          height: _screenH / 3,
+                        ),
+                        SizedBox(height: 16),
+                        Text(
+                          'Search for MSDS data',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+          ),
+        ],
+      ),
+    );
   }
 
-  Widget buildAppBar(BuildContext context) {
-    return new AppBar(
-        backgroundColor: Colors.black,
-        toolbarHeight: 60,
-        centerTitle: true,
-        title: Column(
-          children: [
-            Text("MSDS Data Sheet"),
-            SizedBox(
-              height: 10,
+  void _showDetailsDialog(BuildContext context, int index) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          backgroundColor: property[index].level.withOpacity(0.9),
+          title: Text(
+            property[index].name,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _detailRow(
+                  Icons.location_on, "Location", property[index].location),
+              _detailRow(
+                  Icons.science, "Chemical Formula", property[index].short),
+              _detailRow(Icons.category, "Type", property[index].type),
+              _detailRow(Icons.warning, "Hazard Level",
+                  saftyLevel[property[index].level]!),
+            ],
+          ),
+          actions: [
+            TextButton(
+              child: Text('Close'),
+              onPressed: () => Navigator.of(context).pop(),
             ),
           ],
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: icon,
-            onPressed: () {
-              setState(() {
-                if (this.icon.icon == Icons.search) {
-                  this.icon = new Icon(
-                    Icons.close,
-                    color: Colors.white,
-                  );
+        );
+      },
+    );
+  }
 
-                  _handleSearchStart();
-                } else {
-                  _handleSearchEnd();
-                }
-              });
-            },
+  Widget _detailRow(IconData icon, String label, String value) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        children: [
+          Icon(icon, size: 20),
+          SizedBox(width: 8),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.black54,
+                  ),
+                ),
+                Text(
+                  value,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ]);
-  }
-
-  void _handleSearchStart() {
-    setState(() {
-      _isSearching = true;
-    });
-  }
-
-  void _handleSearchEnd() {
-    setState(() {
-      this.icon = new Icon(
-        Icons.search,
-        color: Colors.white,
-      );
-      _isSearching = false;
-      _controller.clear();
-    });
+        ],
+      ),
+    );
   }
 
   void searchOperation(String searchText) {
@@ -282,5 +291,5 @@ class _SearchListExampleState extends State<SearchListExample> {
         property.add(total[j]);
       }
     }
-    }
+  }
 }

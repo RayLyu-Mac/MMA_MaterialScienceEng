@@ -29,8 +29,8 @@ import 'package:mma_mse/equipment/ManualCompressP/ManualCompMain.dart';
 Color tensile = Colors.amber.shade100;
 Color hardness = Colors.blueGrey.shade100;
 Color microsco = Colors.purple.shade100;
-Color furnace = Colors.redAccent.shade100;
-Color cutter = Colors.greenAccent.shade100;
+Color furnace = Colors.red.shade100;
+Color cutter = Colors.green.shade100;
 Color mountP = Colors.indigo.shade100;
 Color polish = Colors.lightBlue.shade100;
 
@@ -41,13 +41,17 @@ class HeroType {
   final String image;
   final Widget pageTo;
   final Color materialColor;
-  HeroType(
-      {required this.title,
-      required this.subTitle,
-      required this.fText,
-      required this.image,
-      required this.materialColor,
-      required this.pageTo});
+  final String category;
+
+  HeroType({
+    required this.title,
+    required this.subTitle,
+    required this.fText,
+    required this.image,
+    required this.pageTo,
+    required this.materialColor,
+    required this.category,
+  });
 }
 
 String purposeRW = "Machine for testing material hardness";
@@ -67,7 +71,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mts.jpg?raw=true',
       materialColor: tensile,
-      pageTo: tensile_test())),
+      pageTo: tensile_test(),
+      category: 'tensile')),
   (HeroType(
       title: 'Llyods Tensile Tester',
       subTitle: purptensileT,
@@ -75,7 +80,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/LyolTenT.jpg?raw=true',
       pageTo: LlyoldTensileTester(),
-      materialColor: tensile)),
+      materialColor: tensile,
+      category: 'tensile')),
   (HeroType(
       title: 'Manual Rockwell Hardness Tester',
       subTitle: purposeRW,
@@ -84,7 +90,8 @@ List<HeroType> equipmentList = [
           'Device Needed: Rockwell machine.\n \nMaterial property can be tested: hardness ',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/manualRW.jpg?raw=true',
-      materialColor: hardness)),
+      materialColor: hardness,
+      category: 'hardness')),
   (HeroType(
       title: 'Automatic Micro-Hardness Tester',
       subTitle: purposeRW,
@@ -92,7 +99,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/mht.jpg?raw=true',
       pageTo: AutomaticMicroHardnessMain(),
-      materialColor: hardness)),
+      materialColor: hardness,
+      category: 'hardness')),
   (HeroType(
       title: 'Digital Rockwell Hardness Tester',
       subTitle: purposeRW,
@@ -100,7 +108,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/digiRW.jpg?raw=true',
       pageTo: DigitalRWMain(),
-      materialColor: hardness)),
+      materialColor: hardness,
+      category: 'hardness')),
   (HeroType(
       title: 'Manual MicroHardness tester',
       subTitle: purposeRW,
@@ -108,7 +117,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/microHardness.png?raw=true',
       pageTo: ManualMicroHardness(),
-      materialColor: hardness)),
+      materialColor: hardness,
+      category: 'hardness')),
   (HeroType(
       title: 'Keyence Microscope',
       subTitle: purpmicrosco,
@@ -117,7 +127,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/kms.jpg?raw=true',
       pageTo: KeyenceMMain(),
-      materialColor: microsco)),
+      materialColor: microsco,
+      category: 'microscopy')),
   (HeroType(
       title: 'Nikon Microscope',
       subTitle: purpmicrosco,
@@ -125,7 +136,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/niko.jpg?raw=true',
       pageTo: NikonMicro(),
-      materialColor: microsco)),
+      materialColor: microsco,
+      category: 'microscopy')),
   (HeroType(
       title: 'Silicon Carbide Furnace',
       subTitle: purpfurnace,
@@ -133,7 +145,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/hscf.jpg?raw=true',
       pageTo: SiCFurnace(),
-      materialColor: furnace)),
+      materialColor: furnace,
+      category: 'furnace')),
   (HeroType(
       title: 'Blue Furnace',
       subTitle: purpfurnace,
@@ -142,7 +155,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/blue.jpg?raw=true',
       pageTo: BlueFurnace(),
-      materialColor: furnace)),
+      materialColor: furnace,
+      category: 'furnace')),
   (HeroType(
       title: 'Automatic Bulk Abrasive Cutter',
       subTitle: purpCutting,
@@ -151,7 +165,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/abc.jpg?raw=true',
       pageTo: BulkAbrasiveMain(),
-      materialColor: cutter)),
+      materialColor: cutter,
+      category: 'cutting')),
   (HeroType(
       title: 'Buehler Precision Cutter',
       subTitle: purpCutting,
@@ -160,7 +175,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bcutter.jpg?raw=true',
       pageTo: BuehlerCutterMain(),
-      materialColor: cutter)),
+      materialColor: cutter,
+      category: 'cutting')),
   (HeroType(
       title: 'Precision cutter',
       subTitle: purpCutting,
@@ -169,7 +185,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/Ray_Test/assest/equipment/precut.jpg?raw=true',
       pageTo: PcutterMain(),
-      materialColor: cutter)),
+      materialColor: cutter,
+      category: 'cutting')),
   (HeroType(
       title: 'Mounting Press ECOPRESS 200',
       subTitle: purpoMountg,
@@ -178,7 +195,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/ecop.jpg?raw=true',
       pageTo: EcoPress(),
-      materialColor: mountP)),
+      materialColor: mountP,
+      category: 'mounting')),
   (HeroType(
       title: 'Mounting Press (Struers)',
       subTitle: purpoMountg,
@@ -186,7 +204,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/stru.jpg?raw=true',
       pageTo: StruesMain(),
-      materialColor: mountP)),
+      materialColor: mountP,
+      category: 'mounting')),
   (HeroType(
       title: 'Mounting Press (METLAB)',
       subTitle: purpoMountg,
@@ -195,7 +214,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/met.jpg?raw=true',
       pageTo: METPress(),
-      materialColor: mountP)),
+      materialColor: mountP,
+      category: 'mounting')),
   (HeroType(
       title: 'Automatic Polisher',
       subTitle: purpPolishg,
@@ -203,7 +223,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/ap.jpg?raw=true',
       pageTo: AutoPolisherMain(),
-      materialColor: polish)),
+      materialColor: polish,
+      category: 'polishing')),
   (HeroType(
       title: 'Buehler Manual Polisher',
       subTitle: purpPolishg,
@@ -211,7 +232,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/bmaPolisher.jpg?raw=true',
       pageTo: BuehlerPolisherMain(),
-      materialColor: polish)),
+      materialColor: polish,
+      category: 'polishing')),
   (HeroType(
       title: 'Buehler Auto-Polisher',
       subTitle: purpPolishg,
@@ -220,7 +242,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Buehler%20Auto%20Polisher.jpg?raw=true',
       pageTo: BuehlerAutoPolisherMain(),
-      materialColor: Colors.lightBlueAccent)),
+      materialColor: Colors.lightBlue,
+      category: 'polishing')),
   (HeroType(
       title: 'Manual Polisher',
       subTitle: purpPolishg,
@@ -228,7 +251,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mpolisher.jpg?raw=true',
       pageTo: manual_polisher(),
-      materialColor: Colors.lightBlueAccent)),
+      materialColor: Colors.lightBlue,
+      category: 'polishing')),
   (HeroType(
       title: 'ICP-OES',
       subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
@@ -237,7 +261,8 @@ List<HeroType> equipmentList = [
           'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/icp.jpg?raw=true',
-      materialColor: Colors.redAccent.shade700)),
+      materialColor: Colors.red.shade700,
+      category: 'analysis')),
   (HeroType(
       title: 'Charpy Impact Tester',
       subTitle: 'Used to measure the relative toughness of a material',
@@ -245,7 +270,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA/blob/master/assest/equipment/cit.jpg?raw=true',
       pageTo: charpy_test(),
-      materialColor: Colors.grey)),
+      materialColor: Colors.grey,
+      category: 'analysis')),
   (HeroType(
       title: 'Manual Grinder',
       subTitle:
@@ -254,7 +280,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/mg.jpg?raw=true',
       pageTo: ManualGrinder(),
-      materialColor: Colors.blueGrey.shade400)),
+      materialColor: Colors.blueGrey.shade400,
+      category: 'grinding')),
   (HeroType(
       title: 'Etching',
       subTitle:
@@ -263,7 +290,8 @@ List<HeroType> equipmentList = [
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/eth.jpg?raw=true',
       pageTo: Etching(),
-      materialColor: Colors.redAccent)),
+      materialColor: Colors.red,
+      category: 'etching')),
   (HeroType(
       title: 'Microwave Digestor',
       subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
@@ -272,7 +300,8 @@ List<HeroType> equipmentList = [
           'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Microwave%20Digestor%20.jpg?raw=true',
-      materialColor: Colors.lightGreenAccent)),
+      materialColor: Colors.lightGreen,
+      category: 'analysis')),
   (HeroType(
       title: 'Manual Compression Press',
       subTitle: 'Inductive Coupled Plasma Optical Emission Spectrometer',
@@ -281,5 +310,6 @@ List<HeroType> equipmentList = [
           'Avaiable on: \nJHE Room 239 \n \nFeatures: \n•Varian Vista Pro. \n•CCD camera as a dectector with a very wide range of available wavelengths, agrating wavelength selector and powerful sofrware to capture and analyze the data. \n•The instrument is configured for liquid samples only',
       image:
           'https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/equipment/Manual%20Pressor.jpg?raw=true',
-      materialColor: Colors.indigoAccent)),
+      materialColor: Colors.indigo,
+      category: 'analysis')),
 ];

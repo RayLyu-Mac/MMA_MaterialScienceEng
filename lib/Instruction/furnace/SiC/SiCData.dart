@@ -24,13 +24,13 @@ List<video> sicFData = [
     type: "tit",
     title: "Preparation",
     subtitle: "Necessary preparation for the furnace",
-    materialcolor: Colors.redAccent,
+    materialcolor: Colors.red,
   )),
   (video(
       title: "Machine Preparation",
       subtitle:
           "Set up the temperature(Actual Temp: Top value, Set Point: Bottom value)",
-      materialcolor: Colors.redAccent,
+      materialcolor: Colors.red,
       videoController: YoutubePlayerController(
         initialVideoId: 'mjmuxQAqHZE',
         flags: YoutubePlayerFlags(
@@ -41,7 +41,7 @@ List<video> sicFData = [
   video(
       title: "Sample Placement",
       subtitle: "Wearing all PPE and insert sample into the furnace",
-      materialcolor: Colors.redAccent,
+      materialcolor: Colors.red,
       videoController: YoutubePlayerController(
         initialVideoId: 's5G7AbokcYE',
         flags: YoutubePlayerFlags(

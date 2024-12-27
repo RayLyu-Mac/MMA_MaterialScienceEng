@@ -59,7 +59,7 @@ class _welcomeState extends State<welcome> {
         decoration: BoxDecoration(
             image: DecorationImage(
           colorFilter: new ColorFilter.mode(
-              Colors.blueAccent.withOpacity(0.7), BlendMode.dstATop),
+              Colors.blue.withOpacity(0.7), BlendMode.dstATop),
           image: AssetImage("assest/picture2.png"),
           fit: BoxFit.fill,
         )),
@@ -106,16 +106,6 @@ class _welcomeState extends State<welcome> {
             ),
             SizedBox(
               height: _screenH / 24,
-            ),
-            fancyBut(
-                pageTo: conditionTerms(pageTo: DashBoard()),
-                width: _screenWidth / 1.25,
-                height: _screenH / 9.8,
-                fontsize: 22,
-                icon: FontAwesomeIcons.rocket,
-                buttonName: "   Let's Start : )"),
-            SizedBox(
-              height: _screenH / 30,
             ),
             Spacer(),
           ],

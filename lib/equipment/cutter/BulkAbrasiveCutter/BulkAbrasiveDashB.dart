@@ -158,7 +158,7 @@ class _automaticModeInterFaceButtonState
       //     buttonName: "Light",
       //   ),
       //   DashButton(
-      //     cardColor: Colors.lightBlueAccent,
+      //     cardColor: Colors.lightBlue,
       //     left: _screenH / 0.85,
       //     top: _screenWidth / 6,
       //     stepTitle: "Pump",

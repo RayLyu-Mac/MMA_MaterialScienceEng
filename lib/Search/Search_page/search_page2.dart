@@ -120,7 +120,7 @@ class _search_p2State extends State<search_p2> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => saftyMain()));
+                      MaterialPageRoute(builder: (context) => SafetyMain()));
                 },
                 child: Container(
                   constraints: BoxConstraints.expand(

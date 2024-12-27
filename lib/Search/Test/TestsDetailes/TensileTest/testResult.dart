@@ -74,7 +74,7 @@ class _tensileTResultState extends State<tensileTResult> {
         );
 
     return Scaffold(
-        backgroundColor: Colors.lightBlueAccent[100],
+        backgroundColor: Colors.lightBlue[100],
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text("Test Result for tensile test"),
