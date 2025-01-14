@@ -139,10 +139,6 @@ class _layout_overviewState extends State<layout_overview> {
                         floors.map((floor) => _buildFloorCard(floor)).toList(),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(kPadding),
-                  child: _buildLegendSection(),
-                ),
               ],
             ),
           ),
@@ -155,7 +151,7 @@ class _layout_overviewState extends State<layout_overview> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
-          height: min(_screenH * 0.3, 300),
+          height: min(_screenH * 0.32, 300),
           width: double.infinity,
           decoration: _getNeumorphicDecoration(),
           child: ClipRRect(
@@ -180,7 +176,7 @@ class _layout_overviewState extends State<layout_overview> {
                   ),
                 ),
                 Positioned(
-                  bottom: 16,
+                  bottom: 20,
                   left: 16,
                   right: 16,
                   child: Column(
@@ -217,9 +213,9 @@ class _layout_overviewState extends State<layout_overview> {
     double descriptionSize = (_screenH * 0.016).clamp(12.0, 16.0);
 
     return Padding(
-      padding: EdgeInsets.only(bottom: _screenH * 0.015),
+      padding: EdgeInsets.only(bottom: _screenH * 0.02),
       child: ClayContainer(
-        height: _screenH * 0.12,
+        height: _screenH * 0.13,
         depth: kDepth.toInt(),
         spread: kIntensity,
         borderRadius: 15,
@@ -286,40 +282,6 @@ class _layout_overviewState extends State<layout_overview> {
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLegendSection() {
-    return ClayContainer(
-      depth: kDepth.toInt(),
-      spread: kIntensity,
-      borderRadius: 15,
-      color: kBaseColor,
-      child: Padding(
-        padding: EdgeInsets.all(kPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Legend",
-              style: TextStyle(
-                fontSize: (_screenH * 0.022).clamp(16.0, 22.0),
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
-              ),
-            ),
-            SizedBox(height: 16),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.network(
-                "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/layout/sci.PNG?raw=true",
-                height: _screenH * 0.15,
-                fit: BoxFit.contain,
-              ),
-            ),
-          ],
         ),
       ),
     );

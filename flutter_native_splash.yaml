@@ -28,4 +28,10 @@ flutter_native_splash:
   info: >
     Funded by McMaster MSE, this resource is solely intended to serve as an aid for establishing
     equipment Standard Operating Procedures (SOPs) and as a reminder of safety regulations.
-    In-person training remains necessary. 
+    In-person training remains necessary.
+  info_color: "#000000"
+  info_size: 16.0
+  
+  # Ensure proper positioning
+  android_gravity: bottom
+  ios_content_mode: bottom 
