@@ -5,7 +5,6 @@ import 'PrecutterDashB.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PcutterMain extends StatefulWidget {
@@ -22,12 +21,24 @@ class PcutterMain extends StatefulWidget {
 }
 
 class _PcutterMainState extends State<PcutterMain> {
-  final Uri _url = Uri.parse('https://your-pdf-url.com');
-
-  Future<void> _launchURL() async {
-    if (await canLaunchUrl(_url)) {
-      await launchUrl(_url);
-    }
+  void _showContent(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => Container(
+        padding: EdgeInsets.all(16),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
+                'Equipment Information',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              // Add your content here
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
