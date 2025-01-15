@@ -5,6 +5,8 @@ import 'PrecutterDashB.dart';
 import 'package:flutter/services.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PcutterMain extends StatefulWidget {
   PcutterMain(
@@ -20,6 +22,14 @@ class PcutterMain extends StatefulWidget {
 }
 
 class _PcutterMainState extends State<PcutterMain> {
+  final Uri _url = Uri.parse('https://your-pdf-url.com');
+
+  Future<void> _launchURL() async {
+    if (await canLaunchUrl(_url)) {
+      await launchUrl(_url);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
