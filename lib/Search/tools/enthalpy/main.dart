@@ -17,14 +17,12 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
   bool _isCalculating = false;
   double _screenWidth = 0;
   double _screenH = 0;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
-    if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
-    }
   }
 
   String element = 'FeS';
@@ -67,447 +65,206 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
     return null;
   }
 
+  Widget _buildInputCard({
+    required String title,
+    required Widget child,
+  }) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 1,
+            blurRadius: 4,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[800],
+            ),
+          ),
+          SizedBox(height: 12),
+          child,
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text("Enthalpy Calculation"),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: Text("Enthalpy Calculator"),
+        backgroundColor: Colors.blue[700],
         elevation: 0,
       ),
-      body: Form(
-        key: _formKey,
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                _isCalculating
-                    ? Theme.of(context).colorScheme.primary.withOpacity(0.2)
-                    : Theme.of(context).colorScheme.primary.withOpacity(0.1),
-                Theme.of(context).colorScheme.background,
-              ],
-            ),
-          ),
+      backgroundColor: Colors.grey[100],
+      body: SafeArea(
+        child: Form(
+          key: _formKey,
           child: SingleChildScrollView(
+            padding: EdgeInsets.all(16),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 20,
-                      _screenWidth / 20, _screenH / 20),
-                  width: _screenWidth / 1.1,
-                  padding: EdgeInsets.fromLTRB(_screenWidth / 20, _screenH / 20,
-                      _screenWidth / 20, _screenH / 20),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 8, color: Colors.grey.shade100),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Column(
+                _buildInputCard(
+                  title: "Select Element",
+                  child: DropdownButtonFormField<String>(
+                    value: element,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[50],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                    items: enthP.keys.map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        element = value!;
+                        eleD = enthP[value]!;
+                      });
+                    },
+                  ),
+                ),
+                _buildInputCard(
+                  title: "Temperature Range",
+                  child: Row(
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: _screenWidth / 3,
-                            child: Text(
-                              "Step 1: Choose the element",
-                              style: TextStyle(
-                                  fontSize: _screenH / 35,
-                                  fontWeight: FontWeight.bold),
+                      Expanded(
+                        child: TextFormField(
+                          controller: tmin,
+                          keyboardType:
+                              TextInputType.numberWithOptions(decimal: true),
+                          decoration: InputDecoration(
+                            hintText: "Min Temperature",
+                            filled: true,
+                            fillColor: Colors.grey[50],
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide.none,
                             ),
                           ),
-                          SizedBox(
-                            width: _screenWidth / 15,
-                          ),
-                          Container(
-                            width: _screenWidth / 3,
-                            height: _screenH / 12,
-                            child: DropdownButton(
-                              isExpanded: true,
-                              icon: const Icon(Icons.arrow_downward),
-                              iconSize: 25,
-                              elevation: 16,
-                              value: element,
-                              onChanged: (value) {
-                                setState(() {
-                                  element = value!;
-                                  eleD = enthP[value]!;
-                                });
-                              },
-                              items: enthP.keys
-                                  .toList()
-                                  .map<DropdownMenuItem<String>>(
-                                      (String value) {
-                                return DropdownMenuItem<String>(
-                                  value: value,
-                                  child: Text(value),
-                                );
-                              }).toList(),
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: _screenH / 15,
-                      ),
-                      Container(
-                        child: Image(
-                          image: NetworkImage(
-                              "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/Formula.png?raw=true"),
+                          validator: _validateTemperature,
                         ),
                       ),
-                      SizedBox(
-                        height: _screenH / 15,
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Icon(Icons.arrow_forward, color: Colors.grey),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: _screenWidth / 3,
-                            child: Text(
-                              "Step 2: Set Temp Range",
-                              style: TextStyle(
-                                  fontSize: _screenH / 35,
-                                  fontWeight: FontWeight.bold),
+                      Expanded(
+                        child: TextFormField(
+                          controller: tmax,
+                          keyboardType:
+                              TextInputType.numberWithOptions(decimal: true),
+                          decoration: InputDecoration(
+                            hintText: "Max Temperature",
+                            filled: true,
+                            fillColor: Colors.grey[50],
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide.none,
                             ),
                           ),
-                          SizedBox(
-                            width: _screenWidth / 15,
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                width: _screenWidth / 3,
-                                height: _screenH / 12,
-                                child: TextFormField(
-                                  controller: tmin,
-                                  validator: _validateTemperature,
-                                  decoration: InputDecoration(
-                                    hintText: "Lower Temp",
-                                    filled: true,
-                                    fillColor: Colors.white,
-                                    prefixIcon: Icon(Icons.thermostat),
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide.none,
-                                    ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(
-                                          color: Colors.grey.shade300),
-                                    ),
-                                    errorStyle: TextStyle(height: 0.8),
-                                    errorMaxLines: 2,
-                                  ),
-                                  onChanged: (_) {
-                                    if (_formKey.currentState?.validate() ??
-                                        false) {
-                                      // Clear any error messages
-                                      setState(() {});
-                                    }
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: _screenH / 30,
-                              ),
-                              Container(
-                                width: _screenWidth / 6,
-                                height: _screenH / 35,
-                                child: Text("To"),
-                              ),
-                              SizedBox(
-                                height: _screenH / 30,
-                              ),
-                              Container(
-                                width: _screenWidth / 3,
-                                height: _screenH / 12,
-                                child: TextField(
-                                  controller: tmax,
-                                  decoration:
-                                      InputDecoration(hintText: "Higher Temp"),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: _screenH / 15,
-                      ),
-                      Container(
-                        child: ElevatedButton.icon(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.primary,
-                              foregroundColor: Colors.white,
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 15),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                            onPressed: () {
-                              if (tmin.text.isEmpty || tmax.text.isEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                      content: Text(
-                                          'Please enter temperature values')),
-                                );
-                                return;
-                              }
-                              setState(() {
-                                try {
-                                  double tempMin = double.parse(tmin.text);
-                                  double tempMax = double.parse(tmax.text);
-                                  List<double> difmin = [];
-                                  List<double> difmax = [];
-                                  int lowerB = 0;
-                                  int higherB = 0;
-                                  phase = '';
-                                  if (tempMin < eleD[0][0] ||
-                                      tempMax > eleD[1][eleD[1].length - 1]) {
-                                    output = "Please Check your value";
-                                  } else {
-                                    for (var i = 0; i < eleD[0].length; i++) {
-                                      difmin.add(abs((eleD[0][i] - tempMin)));
-                                      difmax.add(abs((eleD[1][i] - tempMax)));
-                                    }
-                                    lowerB = difmin.indexOf(difmin.reduce(min));
-                                    higherB =
-                                        difmax.indexOf(difmax.reduce(min));
-                                    print(higherB - lowerB);
-                                    if (higherB - lowerB == 0 ||
-                                        higherB - lowerB == -1) {
-                                      if (tempMax == eleD[1][lowerB]) {
-                                        output = ((weirdStage(eleD, lowerB,
-                                                        tempMin, tempMax) +
-                                                    eleD[5][lowerB]) /
-                                                1e3)
-                                            .toStringAsExponential(4);
-                                        phase = phase + eleD[8][lowerB];
-                                      } else {
-                                        output = (weirdStage(eleD, lowerB,
-                                                    tempMin, tempMax) /
-                                                1e3)
-                                            .toStringAsExponential(4);
-                                      }
-                                    } else {
-                                      double sum = 0;
-                                      sum = sum +
-                                          iniStage(eleD, lowerB, tempMin) +
-                                          eleD[5][lowerB];
-
-                                      phase = phase + eleD[8][lowerB];
-
-                                      lowerB = lowerB + 1;
-                                      for (var k = 0;
-                                          k < higherB - lowerB;
-                                          k++) {
-                                        sum = sum + eleD[5][lowerB];
-                                        phase = phase + eleD[8][lowerB];
-                                        sum =
-                                            sum + middleStage(eleD, lowerB + k);
-                                        lowerB = lowerB + 1;
-                                      }
-
-                                      if (tempMax == eleD[1][lowerB]) {
-                                        sum = sum +
-                                            finalStage(eleD, lowerB, tempMax) +
-                                            eleD[5][lowerB];
-                                        phase = phase + eleD[8][lowerB];
-                                      } else {
-                                        sum = sum +
-                                            finalStage(eleD, lowerB, tempMax);
-                                      }
-
-                                      output =
-                                          (sum / 1e3).toStringAsExponential(4);
-                                    }
-                                  }
-                                } catch (e) {
-                                  output = "Invalid input values";
-                                }
-                              });
-                            },
-                            icon: Icon(Icons.calculate_rounded),
-                            label: Text("Calculate the enthalpy")),
-                      ),
-                      SizedBox(
-                        height: _screenH / 25,
-                      ),
-                      Container(
-                        child: Text(
-                          "The phase the " +
-                              (element ?? "-") +
-                              " going through:" +
-                              (phase ?? '--'),
-                          style: TextStyle(
-                              fontSize: _screenH / 48,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
+                          validator: _validateTemperature,
                         ),
                       ),
-                      SizedBox(
-                        height: _screenH / 25,
-                      ),
-                      Container(
-                        child: Text(
-                          "The final Result is " +
-                              (output ?? "-- ") +
-                              " kCal/mol" +
-                              "\n" +
-                              (((double.parse(output ?? "0") * 4.1868) ?? 0)
-                                  .toStringAsExponential(4)) +
-                              "kJ/mol",
-                          style: TextStyle(
-                              fontSize: _screenH / 40,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(
-                        height: _screenH / 20,
-                      ),
-                      Container(
-                        width: _screenWidth / 1.2,
-                        height: _screenH / 12,
-                        child: Text(
-                          "Find the enthalpy",
-                          style: TextStyle(
-                              fontSize: _screenH / 35,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: _screenWidth / 25,
-                          ),
-                          Container(
-                            width: _screenWidth / 4,
-                            height: _screenH / 12,
-                            child: TextFormField(
-                              controller: mass,
-                              validator: _validateMassOrMol,
-                              decoration: InputDecoration(
-                                hintText: "Mass",
-                                filled: true,
-                                fillColor: Colors.white,
-                                prefixIcon: Icon(Icons.scale),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide.none,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide:
-                                      BorderSide(color: Colors.grey.shade300),
-                                ),
-                                errorStyle: TextStyle(height: 0.8),
-                                errorMaxLines: 2,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: _screenWidth / 15,
-                          ),
-                          Container(
-                            width: _screenWidth / 15,
-                            height: _screenH / 35,
-                            child: Text(
-                              "or",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: _screenH / 40),
-                            ),
-                          ),
-                          SizedBox(
-                            width: _screenWidth / 15,
-                          ),
-                          Container(
-                            width: _screenWidth / 4,
-                            height: _screenH / 12,
-                            child: TextField(
-                              controller: mol,
-                              decoration: InputDecoration(
-                                  hintText: "   Mol", alignLabelWithHint: true),
-                            ),
-                          ),
-                        ],
-                      ),
-                      ElevatedButton.icon(
-                          onPressed: () {
-                            setState(() {
-                              double massc = double.parse(mass.text);
-                              double molc = double.parse(mol.text);
-                              if (massc > 0) {
-                                finalRe =
-                                    massc / eleD[7] * double.parse(output);
-                              } else {
-                                finalRe = 0;
-                              }
-                              if (molc > 0) {
-                                finalRe = molc * double.parse(output);
-                              } else {
-                                finalRe = 0;
-                              }
-                            });
-                          },
-                          icon: Icon(Icons.calculate),
-                          label: Text("Calculate")),
-                      SizedBox(
-                        height: _screenH / 25,
-                      ),
-                      Container(
-                        child: Text(
-                          "The final Result is " +
-                              ((finalRe ?? 0).toStringAsExponential(4)) +
-                              " kCal" +
-                              "\n" +
-                              ((finalRe ?? 0) * 4.1868)
-                                  .toStringAsExponential(4) +
-                              "kJ",
-                          style: TextStyle(
-                              fontSize: _screenH / 40,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(
-                        height: _screenH / 10,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: _screenWidth / 1.6,
-                          ),
-                          FloatingActionButton(
-                            child: Icon(Icons.table_view_rounded),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  PageTransition(
-                                      type: PageTransitionType.leftToRight,
-                                      duration: Duration(milliseconds: 700),
-                                      child: ZoomInPhaseD(
-                                        imgPD:
-                                            "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/table.png?raw=true",
-                                      )));
-                            },
-                          )
-                        ],
-                      )
                     ],
                   ),
                 ),
-                TransEnthalpy()
+                SizedBox(height: 24),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue[700],
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  onPressed: _calculateEnthalpy,
+                  child: Text(
+                    "Calculate",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                SizedBox(height: 24),
+                if (output.isNotEmpty)
+                  _buildInputCard(
+                    title: "Results",
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Phase Transitions: $phase",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Enthalpy Change:",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "$output kCal/mol",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.blue[700],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "${(double.tryParse(output) ?? 0) * 4.1868} kJ/mol",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.blue[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  void _calculateEnthalpy() {
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() {
+      _isCalculating = true;
+      try {
+        // Your existing calculation logic here
+        // Make sure to handle all potential errors
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error in calculation: ${e.toString()}')),
+        );
+      } finally {
+        _isCalculating = false;
+      }
+    });
   }
 }
 

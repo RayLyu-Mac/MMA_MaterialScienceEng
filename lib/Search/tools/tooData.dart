@@ -38,8 +38,7 @@ List<ToolData> createToolList = [
       name: "Phase Diagram Check",
       bgColor: Colors.blue.shade100.withOpacity(0.8),
       pageTo: PhaseDiag(),
-      backImg:
-          "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/phase.jpg?raw=true")),
+      backImg: 'assest/search/tools/phase.jpg')),
   (ToolData(
       name: "Unit Conversion",
       bgColor: Colors.blue.shade100.withOpacity(0.8),

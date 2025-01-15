@@ -1,11 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'safty/saftyMain.dart';
 import 'equpment/equb_ava_main.dart';
 import 'tools/toolsMain.dart';
 import 'direction/dir_main.dart';
 import 'Test/Test_Page/test_main.dart';
-import 'package:flutter/material.dart';
 import 'package:mma_mse/floors/floor1.dart';
 import 'package:mma_mse/floors/floor2.dart';
 import 'package:mma_mse/floors/floor3.dart';
@@ -14,123 +13,178 @@ import 'package:mma_mse/relatedInfo/reference.dart';
 import 'package:mma_mse/relatedInfo/AboutUsMain.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class extraMenu extends StatefulWidget {
-  extraMenu({Key? key}) : super(key: key);
+class MenuListTile extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final Widget destination;
+  final bool isSubItem;
 
-  @override
-  _extraMenuState createState() => _extraMenuState();
-}
+  const MenuListTile({
+    required this.title,
+    required this.icon,
+    required this.destination,
+    this.isSubItem = false,
+    Key? key,
+  }) : super(key: key);
 
-class _extraMenuState extends State<extraMenu> {
   @override
   Widget build(BuildContext context) {
-    return ExpansionTile(
-      leading: Icon(Icons.menu_book_rounded),
-      title: Text(
-        "Menu",
-        style: TextStyle(fontSize: 20),
+    return ListTile(
+      contentPadding: EdgeInsets.only(
+        left: isSubItem ? 32.0 : 16.0,
+        right: 16.0,
       ),
-      children: [
-        floor1customListTile(
-          name: "   Equipment",
-          pageTo: EquipmentMain(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.microscope,
+      leading: Icon(
+        icon,
+        size: 20,
+        color: Colors.grey[700],
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontSize: 15,
+          color: Colors.grey[800],
+          fontWeight: isSubItem ? FontWeight.normal : FontWeight.w500,
         ),
-        floor1customListTile(
-          name: "   Case Study",
-          pageTo: test_ava(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.briefcase,
+      ),
+      onTap: () {
+        Navigator.pop(context); // Close drawer
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => destination),
+        );
+      },
+    );
+  }
+}
+
+class extraMenu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+      data: Theme.of(context).copyWith(
+        dividerColor: Colors.transparent,
+        listTileTheme: ListTileTheme.of(context).copyWith(
+          dense: true,
+          visualDensity: VisualDensity.compact,
         ),
-        floor1customListTile(
-          name: "   Tools",
-          pageTo: toolMain(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.tools,
+      ),
+      child: ExpansionTile(
+        leading: Icon(Icons.menu_book_rounded, color: Colors.grey[700]),
+        title: Text(
+          "Menu",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.grey[800],
+          ),
         ),
-        floor1customListTile(
-          name: "   Safety",
-          pageTo: SafetyMain(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.lifeRing,
-        ),
-        floor1customListTile(
-            name: "   Contact Info",
-            pageTo: ContactMSE(),
-            fonts: 16,
-            leadIcon: Icons.contact_page),
-        floor1customListTile(
-          name: "   Tech Elective",
-          pageTo: direction_main(),
-          fonts: 16,
-          leadIcon: FontAwesomeIcons.paperPlane,
-        ),
-      ],
+        children: [
+          MenuListTile(
+            title: "Equipment",
+            icon: FontAwesomeIcons.microscope,
+            destination: EquipmentMain(),
+            isSubItem: true,
+          ),
+          MenuListTile(
+            title: "Case Study",
+            icon: FontAwesomeIcons.briefcase,
+            destination: test_ava(),
+            isSubItem: true,
+          ),
+          MenuListTile(
+            title: "Tools",
+            icon: FontAwesomeIcons.tools,
+            destination: toolMain(),
+            isSubItem: true,
+          ),
+          MenuListTile(
+            title: "Safety",
+            icon: FontAwesomeIcons.shieldAlt,
+            destination: SafetyMain(),
+            isSubItem: true,
+          ),
+          MenuListTile(
+            title: "Contact Info",
+            icon: Icons.contact_page,
+            destination: ContactMSE(),
+            isSubItem: true,
+          ),
+          MenuListTile(
+            title: "Tech Elective",
+            icon: FontAwesomeIcons.graduationCap,
+            destination: direction_main(),
+            isSubItem: true,
+          ),
+        ],
+      ),
     );
   }
 }
 
 class floorMenu extends StatelessWidget {
-  const floorMenu({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      leading: Icon(Icons.stairs_rounded),
+      leading: Icon(Icons.stairs_rounded, color: Colors.grey[700]),
       title: Text(
         "Floors",
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: Colors.grey[800],
+        ),
       ),
       children: [
-        floor1customListTile(
-            name: "   Floor I",
-            leadIcon: Icons.stairs_rounded,
-            pageTo: floor1(
-              fire: false,
-              eye: false,
-            ),
-            fonts: 16),
-        floor1customListTile(
-            name: "   Floor II",
-            leadIcon: Icons.stairs_rounded,
-            pageTo: floor2(fire: false, eye: false),
-            fonts: 16),
-        floor1customListTile(
-            name: "   Floor III",
-            leadIcon: Icons.stairs_rounded,
-            pageTo: floor3(
-              eye: false,
-            ),
-            fonts: 16),
+        MenuListTile(
+          title: "Floor I",
+          icon: Icons.looks_one_outlined,
+          destination: floor1(fire: false, eye: false),
+          isSubItem: true,
+        ),
+        MenuListTile(
+          title: "Floor II",
+          icon: Icons.looks_two_outlined,
+          destination: floor2(fire: false, eye: false),
+          isSubItem: true,
+        ),
+        MenuListTile(
+          title: "Floor III",
+          icon: Icons.looks_3_outlined,
+          destination: floor3(eye: false),
+          isSubItem: true,
+        ),
       ],
     );
   }
 }
 
 class aboutUs extends StatelessWidget {
-  const aboutUs({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      leading: Icon(FontAwesomeIcons.infoCircle),
+      leading: Icon(FontAwesomeIcons.infoCircle, color: Colors.grey[700]),
       title: Text(
         "Other Info",
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: Colors.grey[800],
+        ),
       ),
       children: [
-        floor1customListTile(
-            name: "   About the Team",
-            pageTo: AboutTeam(),
-            fonts: 19,
-            leadIcon: FontAwesomeIcons.peopleCarry),
-        floor1customListTile(
-          name: "   Reference",
-          pageTo: reference(),
-          fonts: 19,
-          leadIcon: FontAwesomeIcons.checkCircle,
-        )
+        MenuListTile(
+          title: "About the Team",
+          icon: FontAwesomeIcons.users,
+          destination: AboutTeam(),
+          isSubItem: true,
+        ),
+        MenuListTile(
+          title: "Reference",
+          icon: FontAwesomeIcons.bookOpen,
+          destination: reference(),
+          isSubItem: true,
+        ),
       ],
     );
   }

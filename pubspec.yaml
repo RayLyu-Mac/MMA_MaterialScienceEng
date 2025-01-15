@@ -47,7 +47,7 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_zoom_drawer: ^3.1.1
   lottie: ^2.3.2
-  flutter_inappwebview: ^5.7.2+3
+  webview_flutter: ^4.4.2
   flutter_native_splash: ^2.3.2
   clay_containers: ^0.3.2
   google_fonts: ^5.1.0
@@ -94,6 +94,11 @@ flutter:
    - assest/picture1.png
    - assest/picture2.png
    - assest/equipment/theory/automatic_cutter/posserabracut.png
+   - assest/search/tools/phase.jpg
+   - assest/search/tools/unit.jpg
+   - assest/search/tools/erf.png
+   - assest/search/tools/Picture2.jpg
+   - assest/JHE.jpg
    
   # To add assets to your application, add an assets section, like this:
   # assets:

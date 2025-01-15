@@ -160,7 +160,7 @@ class _layout_overviewState extends State<layout_overview> {
               fit: StackFit.expand,
               children: [
                 Image.asset(
-                  "assest/jhe.jpg",
+                  "assest/JHE.jpg",
                   fit: BoxFit.cover,
                 ),
                 Container(

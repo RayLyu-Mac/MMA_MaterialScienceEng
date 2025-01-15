@@ -95,7 +95,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
             ),
           ),
           drawer: Container(
-            width: _screenWidth / 1.4,
+            width: _screenWidth * 0.7,
             child: tensileResult(),
           ),
           body: Stack(
@@ -103,12 +103,12 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
               _buildGradientBackground(),
               ListView.builder(
                 itemCount: result.length,
-                itemExtent: 445,
+                itemExtent: _screenH * 0.5,
                 controller: controller,
                 itemBuilder: (BuildContext context, int index) {
                   return AnimatedContainer(
                     duration: Duration(milliseconds: 300),
-                    margin: EdgeInsets.fromLTRB(21, 16, 21, 8),
+                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Card(
                       color: Colors.white.withOpacity(0.9),
                       elevation: 4,
@@ -118,7 +118,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(16),
+                            padding: EdgeInsets.all(12),
                             child: Text(
                               result[index].title,
                               style: GoogleFonts.poppins(
@@ -132,12 +132,12 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                             child: Image.network(
                               result[index].imageUrl,
                               fit: BoxFit.cover,
-                              height: 205,
-                              width: _screenWidth / 1.17,
+                              height: _screenH * 0.25,
+                              width: double.infinity,
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.all(16),
+                            padding: EdgeInsets.all(12),
                             child: Text(
                               result[index].content,
                               style: GoogleFonts.poppins(

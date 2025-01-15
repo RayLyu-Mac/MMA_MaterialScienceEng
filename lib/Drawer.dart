@@ -14,25 +14,25 @@ import 'package:clay_containers/clay_containers.dart';
 /// Provides navigation options with a modern, consistent UI
 class StandardNavigationDrawer extends StatelessWidget {
   // UI Constants
-  static const double _kIconSize = 24.0;
-  static const double _kSpacing = 16.0;
-  static const double _kBorderRadius = 12.0;
-  static const Duration _kTransitionDuration = Duration(milliseconds: 300);
+  static const double _iconSize = 24.0;
+  static const double _spacing = 16.0;
+  static const double _borderRadius = 12.0;
+  static const Duration _transitionDuration = Duration(milliseconds: 300);
 
   // App Constants
-  static const String _kAppVersion = '1.0.0';
-  static const String _kSubtitle = 'MSE Navigation Menu';
+  static const String _appVersion = '1.0.0';
+  static const String _subtitle = 'MSE Navigation Menu';
 
-  // Add new constants for clay styling
-  static const double _kClayDepth = 40;
-  static const double _kSpread = 6;
+  // Clay styling constants
+  static const double _clayDepth = 40;
+  static const double _spread = 6;
 
   final String headerTitle;
 
   const StandardNavigationDrawer({Key? key, required this.headerTitle})
       : super(key: key);
 
-  /// Builds a standardized drawer item with clay design
+  /// Builds a standardized drawer item with modern design
   Widget _buildNavigationItem({
     required BuildContext context,
     required IconData icon,
@@ -44,18 +44,19 @@ class StandardNavigationDrawer extends StatelessWidget {
     Color baseColor = const Color(0xFFF0F0F3);
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: _kSpacing / 2,
-        vertical: _kSpacing / 4,
+        horizontal: _spacing / 2,
+        vertical: _spacing / 8,
       ),
-      child: ClayContainer(
-        depth: _kClayDepth.toInt(),
-        spread: _kSpread,
+      child: Card(
         color: backgroundColor?.withOpacity(0.1) ?? baseColor,
-        borderRadius: _kBorderRadius,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(_borderRadius),
+        ),
+        elevation: 0,
         child: ListTile(
           leading: Icon(
             icon,
-            size: _kIconSize,
+            size: _iconSize,
             color: iconColor?.withOpacity(0.8) ?? Colors.grey.shade700,
           ),
           title: Text(
@@ -63,7 +64,7 @@ class StandardNavigationDrawer extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
-              color: Colors.grey.shade800,
+              color: Colors.blue.shade800,
             ),
           ),
           onTap: () => _handleNavigation(context, destination),
@@ -80,19 +81,22 @@ class StandardNavigationDrawer extends StatelessWidget {
       PageTransition(
         type: PageTransitionType.rightToLeft,
         child: destination,
-        duration: _kTransitionDuration,
+        duration: _transitionDuration,
       ),
     );
   }
 
-  /// Builds the header section with clay design
+  /// Builds the header section with modern design
   Widget _buildDrawerHeader() {
-    return ClayContainer(
-      depth: -_kClayDepth.toInt(),
-      spread: _kSpread,
-      color: Colors.blue.shade100,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.blue.shade100,
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(_borderRadius),
+        ),
+      ),
       child: Container(
-        padding: const EdgeInsets.fromLTRB(_kSpacing, 40, _kSpacing, _kSpacing),
+        padding: const EdgeInsets.fromLTRB(_spacing, 40, _spacing, _spacing),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,7 +111,7 @@ class StandardNavigationDrawer extends StatelessWidget {
                   color: Colors.blue,
                 ),
               ),
-              const SizedBox(height: _kSpacing),
+              const SizedBox(height: _spacing),
               // Header Title
               Text(
                 headerTitle,
@@ -119,7 +123,7 @@ class StandardNavigationDrawer extends StatelessWidget {
               ),
               // Subtitle
               const Text(
-                _kSubtitle,
+                _subtitle,
                 style: TextStyle(
                   color: Colors.white70,
                   fontSize: 14,
@@ -144,7 +148,7 @@ class StandardNavigationDrawer extends StatelessWidget {
           // Navigation Items
           Expanded(
             child: ListView(
-              padding: const EdgeInsets.symmetric(vertical: _kSpacing),
+              padding: const EdgeInsets.symmetric(vertical: _spacing),
               children: [
                 // Main Navigation Items
                 _buildNavigationItem(
@@ -188,11 +192,11 @@ class StandardNavigationDrawer extends StatelessWidget {
                   backgroundColor: Colors.red,
                 ),
 
-                const Divider(height: _kSpacing * 2),
+                const Divider(height: _spacing * 2),
 
                 // Additional Information Section
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: _kSpacing),
+                  padding: const EdgeInsets.symmetric(horizontal: _spacing),
                   child: Text(
                     'More Information',
                     style: TextStyle(
@@ -222,9 +226,9 @@ class StandardNavigationDrawer extends StatelessWidget {
 
           // Version Information
           Padding(
-            padding: const EdgeInsets.all(_kSpacing),
+            padding: const EdgeInsets.all(_spacing),
             child: Text(
-              'Version $_kAppVersion',
+              'Version $_appVersion',
               style: TextStyle(
                 color: Colors.grey.shade600,
                 fontSize: 12,

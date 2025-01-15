@@ -30,32 +30,50 @@ class _SafetyMainState extends State<SafetyMain> {
     return Scaffold(
       bottomNavigationBar: BottomMenu(),
       appBar: AppBar(
-          title: Text("Matls Eng Safety Guide"),
-          backgroundColor: Colors.grey[500],
-          actions: [
-            IconButton(
-                padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-                iconSize: 32,
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(FontAwesomeIcons.timesCircle))
-          ]),
-      drawer: StandardNavigationDrawer(headerTitle: "Matls Safety Guide"),
+        title: Text("Materials Engineering Safety Guide"),
+        backgroundColor: Colors.grey[500],
+        actions: [
+          IconButton(
+            padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
+            iconSize: 32,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(FontAwesomeIcons.timesCircle),
+          ),
+        ],
+      ),
+      drawer: StandardNavigationDrawer(headerTitle: "Materials Safety Guide"),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            for (var i = 0; i < toolDataList.length; i++)
-              EqubButton(
-                backColor: toolDataList[i].bgColor,
-                function: "Safety",
-                pageTo: toolDataList[i].pageTo,
-                backImg: toolDataList[i].backImg,
-                name: toolDataList[i].name,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                "Safety Resources",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue.shade800,
+                ),
+                textAlign: TextAlign.center,
               ),
-          ],
+              SizedBox(height: 16),
+              for (var i = 0; i < toolDataList.length; i++)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: EqubButton(
+                    backColor: toolDataList[i].bgColor,
+                    function: "Safety",
+                    pageTo: toolDataList[i].pageTo,
+                    backImg: toolDataList[i].backImg,
+                    name: toolDataList[i].name,
+                  ),
+                ),
+            ],
+          ),
         ),
       ),
     );

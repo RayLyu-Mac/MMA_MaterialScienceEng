@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/Test/TestsDetailes/tensile_test_bg.dart';
+import 'package:mma_mse/Search/Test/TestsDetailes/TensileTest/testResult.dart';
 import 'package:mma_mse/Instruction/Lloyds Tensile Tester/LlyoMain.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
 
@@ -25,7 +25,7 @@ class _LlyoldTensileTesterState extends State<LlyoldTensileTester> {
         title: "Llyold Tensile Tester",
         warnVido: "bdunyatEEG0",
         instruction: LlyoTensileinstruction(),
-        theory: tensile_test_bg(),
+        theory: tensileTResult(),
         fontSize: 47,
         oritation: widget.ori,
         backC: Colors.amber.shade100,

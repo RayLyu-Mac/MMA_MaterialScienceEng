@@ -51,7 +51,7 @@ class _toolMainState extends State<toolMain> {
           padding: EdgeInsets.all(16),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.85,
+            childAspectRatio: 0.75,
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
           ),
@@ -86,11 +86,15 @@ class _toolMainState extends State<toolMain> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        height: 80,
-                        width: 80,
+                        height: 120,
+                        width: 120,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(toolDataList[index].backImg),
+                            image:
+                                toolDataList[index].backImg.startsWith('http')
+                                    ? NetworkImage(toolDataList[index].backImg)
+                                    : AssetImage(toolDataList[index].backImg)
+                                        as ImageProvider,
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -100,9 +104,9 @@ class _toolMainState extends State<toolMain> {
                         toolDataList[index].name,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          color: Colors.white,
+                          color: Colors.black87,
                           letterSpacing: 0.5,
                         ),
                       ),
