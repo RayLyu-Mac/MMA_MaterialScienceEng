@@ -3,7 +3,8 @@ platform :ios, '11.0'
 
 target 'Runner' do
   # Comment the next line if you don't want to use dynamic frameworks
-  pod 'flutter_inappwebview', :path => 'C:\Users\Sir\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_inappwebview-5.7.2+3\ios\flutter_inappwebview.podspec'
-  # Pods for Runner
-
+  use_frameworks!
+  
+  # Remove or comment out this line
+  # pod 'flutter_inappwebview'
 end
