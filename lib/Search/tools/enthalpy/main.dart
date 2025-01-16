@@ -192,7 +192,8 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 SizedBox(height: 24),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue[700],
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blue[700]),
                     padding: EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
