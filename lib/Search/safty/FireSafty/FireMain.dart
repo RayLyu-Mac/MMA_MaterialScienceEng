@@ -147,8 +147,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                           ),
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.black87),
+                              backgroundColor: Colors.black87,
                               padding: EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 12),
                               shape: RoundedRectangleBorder(
