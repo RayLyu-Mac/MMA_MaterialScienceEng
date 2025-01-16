@@ -50,7 +50,7 @@ android {
         applicationId "com.MMA_MSE.myapp"
         minSdkVersion 19
         targetSdkVersion 34
-        versionCode 26
+        versionCode 27
         versionName "1.0"
         multiDexEnabled true
     }
@@ -69,6 +69,10 @@ android {
            signingConfig signingConfigs.release
        }
    }
+
+   buildFeatures {
+       viewBinding true
+   }
 }
 
 flutter {
@@ -77,5 +81,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.multidex:multidex: 2.0.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.window:window:1.2.0'
 }
