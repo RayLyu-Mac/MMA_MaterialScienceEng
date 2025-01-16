@@ -25,17 +25,34 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Keep these essential packages
+  # Core packages with platform restrictions
+  path_provider: 
+    ^2.1.2
+    platforms: 
+      android:
+      ios:
+  
+  url_launcher:
+    ^6.1.13
+    platforms:
+      android:
+      ios:
+
+  google_fonts:
+    ^6.2.0
+    platforms:
+      android:
+      ios:
+
+  # Mobile-only packages
   cupertino_icons: ^1.0.2
   intl: ^0.19.0
   youtube_player_flutter: ^9.0.4
   page_transition: "^2.0.9"
-  url_launcher: ^6.1.13
   http: "1.1.0"
   font_awesome_flutter: ^10.5.0
   image_picker: ^1.0.4
   csv: ^6.0.0
-  path_provider: ^2.0.2
   flutter_native_timezone: ^2.0.0
   permission_handler: ^11.0.1
   flutter_launcher_icons: ^0.13.1
@@ -43,13 +60,11 @@ dependencies:
   lottie: ^2.3.2
   flutter_native_splash: ^2.3.2
   clay_containers: ^0.3.2
-  google_fonts: ^6.2.0
 
-  
 flutter_icons:
   image_path: "assest/icon.png"
   android: true
-  ios: true  
+  ios: true
 
 dev_dependencies:
   flutter_test:
