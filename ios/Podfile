@@ -4,7 +4,4 @@ platform :ios, '12.0'
 target 'Runner' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
-  # Remove or comment out this line
-  # pod 'flutter_inappwebview'
 end
