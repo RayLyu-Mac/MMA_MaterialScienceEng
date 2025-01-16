@@ -25,8 +25,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Remove or comment out if present
-  # flutter_inappwebview: any
 
   path_provider: ^2.1.2
   url_launcher: ^6.1.13
