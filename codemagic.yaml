@@ -14,6 +14,23 @@ workflows:
       - flutter clean
       - flutter pub get
       - flutter doctor -v
+      - |
+        # Update Podfile to force iOS 13.0 deployment target
+        podfile_path="ios/Podfile"
+        if [ -f "$podfile_path" ]; then
+          sed -i '' '/platform :ios/d' "$podfile_path" || true
+          echo "platform :ios, '13.0'" | cat - "$podfile_path" > temp && mv temp "$podfile_path"
+        else
+          echo "platform :ios, '13.0'" > "$podfile_path"
+        fi
+      - |
+        # Ensure Pods are correctly installed
+        cd ios
+        pod deintegrate
+        pod cache clean --all
+        pod repo update
+        pod install
+        cd ..
       - keychain initialize
       - app-store-connect fetch-signing-files "com.mcmaster.mmamse" --type IOS_APP_STORE --create
       - keychain add-certificates
