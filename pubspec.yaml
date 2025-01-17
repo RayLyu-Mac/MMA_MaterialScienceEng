@@ -44,7 +44,6 @@ dependencies:
   lottie: ^2.6.0
   clay_containers: ^0.3.2
   chewie: ^1.7.1
-  package_info_plus: ^4.1.0
 
 flutter_icons:
   image_path: "assest/icon.png"
