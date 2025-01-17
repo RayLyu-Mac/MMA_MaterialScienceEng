@@ -1,7 +1,28 @@
-# Uncomment the next line to define a global platform for your project
+# Define a global platform for your project
 platform :ios, '13.0'
 
 target 'Runner' do
-  # Comment the next line if you don't want to use dynamic frameworks
+  # Enable dynamic frameworks for compatibility with Swift dependencies
   use_frameworks!
+
+  # Add Flutter-specific Pod installation logic
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+
+  # Post-install script to configure specific dependencies and ensure compatibility
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        # Set minimum iOS deployment target for all dependencies
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      end
+
+      # Special configuration for FirebaseAuth or other specific pods
+      if ['FirebaseAuth'].include?(target.name)
+        target.build_configurations.each do |config|
+          # Ensure Swift version is set for Apple Sign-In compatibility
+          config.build_settings['SWIFT_VERSION'] = '5.10'
+        end
+      end
+    end
+  end
 end
