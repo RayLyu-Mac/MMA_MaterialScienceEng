@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> keyenceData = [
@@ -7,28 +7,28 @@ List<video> keyenceData = [
     type: "tit",
     title: "Preparation",
     subtitle: "Ready the Microscope",
-    materialcolor: Colors.black,
+    materialcolor: Colors.grey,
   )),
   (video(
       title: "Start the machine",
       subtitle: "Press the power button",
-      materialcolor: Colors.black,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'xrLiwrYBhMs',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      materialcolor: Colors.grey,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'xrLiwrYBhMs',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   video(
       title: "Placing the sample into the stage",
       subtitle: "Prepare the sample for the test",
-      materialcolor: Colors.black,
-      videoController: YoutubePlayerController(
-        initialVideoId: '3ms1xMMMQjc',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      materialcolor: Colors.grey,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '3ms1xMMMQjc',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
@@ -36,11 +36,11 @@ List<video> keyenceData = [
       subtitle:
           "ID brightfield, polarize and dark field light, adjust them based on the case",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'V8abiMLr2cY',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'V8abiMLr2cY',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -53,11 +53,11 @@ List<video> keyenceData = [
       title: "Taking simple image",
       subtitle: "Process of taking image and save",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '4hs7BH65vLI',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '4hs7BH65vLI',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
@@ -65,22 +65,22 @@ List<video> keyenceData = [
       subtitle:
           "Find the lowest point of the sample using either the Fine or Coarse Focusing.",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'cnUS2RppP7U',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'cnUS2RppP7U',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
       title: "Large Image Scan",
       subtitle: "Chose 2D or 3D, 3D is required when sample is not flat",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'bDzxWiM7kwY',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'bDzxWiM7kwY',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -93,33 +93,33 @@ List<video> keyenceData = [
       title: "Enhancing the resolution",
       subtitle: "Chose 2D or 3D, 3D is required when sample is not flat",
       materialcolor: Colors.purple,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'SvwAnZuChzA',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'SvwAnZuChzA',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
       title: "Selecting the best image",
       subtitle: "Choose a best and clear images",
       materialcolor: Colors.purple,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'IzNETDmhF9I',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'IzNETDmhF9I',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
       title: "Glare removal",
       subtitle: "Chose 2D or 3D, 3D is required when sample is not flat",
       materialcolor: Colors.purple,
-      videoController: YoutubePlayerController(
-        initialVideoId: '9TYFOn23E_8',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '9TYFOn23E_8',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -132,11 +132,11 @@ List<video> keyenceData = [
       title: "Finish the experiment",
       subtitle: "Save the image the shut the microscope",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: '6_7OJJNYE_M',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '6_7OJJNYE_M',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];

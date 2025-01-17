@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mma_mse/Instruction/CharpyImpact/charpyImpactMain.dart';
 import 'charpyImpactBackG.dart';
 import 'package:mma_mse/equipment/PageMode.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class charpy_test extends StatefulWidget {
   final String? location;
@@ -15,6 +16,26 @@ class charpy_test extends StatefulWidget {
 }
 
 class _charpy_testState extends State<charpy_test> {
+  late YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = YoutubePlayerController.fromVideoId(
+      videoId: 'eS8gsOCzugY',
+      params: const YoutubePlayerParams(
+        showControls: true,
+        showFullscreenButton: true,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.close();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return EqubPageMode(

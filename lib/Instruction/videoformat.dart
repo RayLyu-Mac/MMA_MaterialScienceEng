@@ -1,17 +1,17 @@
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:flutter/material.dart';
 
 class video {
-  String title;
-  String subtitle;
-  YoutubePlayerController? videoController;
-  Color materialcolor;
-  String? type;
+  final String? type;
+  final String? title;
+  final String subtitle;
+  final MaterialColor materialcolor;
+  final YoutubePlayerController? videoController;
 
   video({
-    required this.title,
-    required this.subtitle,
     this.type,
+    this.title,
+    required this.subtitle,
     required this.materialcolor,
     this.videoController,
   });

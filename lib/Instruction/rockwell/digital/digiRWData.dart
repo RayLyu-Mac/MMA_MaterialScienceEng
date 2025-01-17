@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> digiRock = [
@@ -13,11 +13,11 @@ List<video> digiRock = [
       title: "Start the experiemnt",
       subtitle: "Turn on the machine and set the program",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'SSov4nOaGgs',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'SSov4nOaGgs',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -25,11 +25,11 @@ List<video> digiRock = [
       subtitle:
           "Choose the indenter based on your sample and do the calibration",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'hKK4G6LT8fE',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'hKK4G6LT8fE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -42,33 +42,33 @@ List<video> digiRock = [
       title: "Flat sample measurement",
       subtitle: "watch for beep!",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'YLfzJ8V5Cag',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'YLfzJ8V5Cag',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
       title: "Test for round sample",
       subtitle: "Place the appropriate platen onto the testing frame",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'vij2mqy36tY',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'vij2mqy36tY',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
       title: "Test for superficail sample",
       subtitle: "Search for proper scale for superficial sample",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '6tGXmptryXE',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '6tGXmptryXE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -81,11 +81,11 @@ List<video> digiRock = [
       title: "Finish the experiment",
       subtitle: "Shut down the machine and remove sample",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'xRf2dFPd-qA',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'xRf2dFPd-qA',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )))
 ];

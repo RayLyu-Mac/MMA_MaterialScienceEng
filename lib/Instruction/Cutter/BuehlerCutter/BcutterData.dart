@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> bueCutterData = [
@@ -15,11 +15,11 @@ List<video> bueCutterData = [
       subtitle:
           "Be careful, the blade is easily break during put on and take off",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'MzD4ooJuOV4',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'MzD4ooJuOV4',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   video(
@@ -27,11 +27,11 @@ List<video> bueCutterData = [
       title: "Placing an Abrasive Blade onto to the Motor Shaft",
       subtitle: "Alignment shaft, washer, blade",
       materialcolor: Colors.orange,
-      videoController: YoutubePlayerController(
-        initialVideoId: '-nClP_NYMEU',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '-nClP_NYMEU',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -39,11 +39,11 @@ List<video> bueCutterData = [
       title: "Assembling Vise",
       subtitle: "Process of secure sample into the cutter",
       materialcolor: Colors.orange,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'BeHxZQ6Bh70',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'BeHxZQ6Bh70',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -51,11 +51,11 @@ List<video> bueCutterData = [
       title: "Assemble for round sample",
       subtitle: "Process of secure round sample into the cutter",
       materialcolor: Colors.orange,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'Eo6A4kceSCE',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'Eo6A4kceSCE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -69,11 +69,11 @@ List<video> bueCutterData = [
       title: "Precision Control",
       subtitle: "Precision control of the position of the samples",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '1eGMt-H2CNU',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '1eGMt-H2CNU',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -81,11 +81,11 @@ List<video> bueCutterData = [
       title: "Running for automated cut",
       subtitle: "Process of automated cut",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'cploFTTCrig',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'cploFTTCrig',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -93,11 +93,11 @@ List<video> bueCutterData = [
       title: "Serial cut",
       subtitle: "Process of making a serial cut",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'PDkmYVFGIjM',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'PDkmYVFGIjM',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -111,11 +111,11 @@ List<video> bueCutterData = [
       title: "Finish the experiment",
       subtitle: "Dissemble the chuck and clean the cutter",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'k9TSrAnF9dg',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'k9TSrAnF9dg',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )))
 ];

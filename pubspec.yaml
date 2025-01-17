@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.1.4
 
 environment:
-  sdk: '>=3.0.0 <3.7.0'
+  sdk: '>=3.5.0 <4.0.0'
 
 
 dependencies:
@@ -32,20 +32,21 @@ dependencies:
   
   # Mobile-only packages
   cupertino_icons: ^1.0.2
-  intl: ^0.19.0
-  youtube_player_flutter: ^8.1.2
+  intl: ^0.20.1
+  youtube_player_iframe: ^4.0.4
   page_transition: "^2.0.9"
-  http: "1.1.0"
+  http: ^1.2.2
   font_awesome_flutter: ^10.5.0
   image_picker: ^1.0.4
   csv: ^6.0.0
   flutter_native_timezone: ^2.0.0
   permission_handler: ^11.0.1
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.2
   flutter_zoom_drawer: ^3.1.1
-  lottie: ^2.3.2
+  lottie: ^3.2.0
   flutter_native_splash: ^2.3.2
   clay_containers: ^0.3.2
+  chewie: ^1.9.2
 
 flutter_icons:
   image_path: "assest/icon.png"

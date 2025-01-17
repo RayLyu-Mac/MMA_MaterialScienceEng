@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> precCutter = [
@@ -13,22 +13,22 @@ List<video> precCutter = [
       title: "Assemble Blade",
       subtitle: "Put the blade into postion and use screw driver",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'pdIl5KIRY7o',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'pdIl5KIRY7o',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
       title: "Load Sample",
       subtitle: "Loose the screw and olace sample toward front",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'dbKrMrkOSG4',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'dbKrMrkOSG4',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -42,33 +42,33 @@ List<video> precCutter = [
       subtitle:
           "Press X to move sample and Press Y to move sample closer to the blade",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '2kJGtB1n4Sc',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '2kJGtB1n4Sc',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
       title: "Cutting a sample",
       subtitle: "Set the cutting distance",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'Vrnl9qqsdis',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'Vrnl9qqsdis',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
       title: "Sectioning the Sample",
       subtitle: "Way to Sectioning the Sample",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '76jcSgLCns0',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '76jcSgLCns0',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -81,11 +81,11 @@ List<video> precCutter = [
       title: "Removing the sample and the blade",
       subtitle: "Move sample away and use screwer driver",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'xRCRBQCEGYs',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'xRCRBQCEGYs',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -93,11 +93,11 @@ List<video> precCutter = [
       subtitle:
           "Wipe: Interface button, inside the safty shield, inside of chamber. Place all tools back on top of the instrument",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'BZiXUXT22dI',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'BZiXUXT22dI',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];

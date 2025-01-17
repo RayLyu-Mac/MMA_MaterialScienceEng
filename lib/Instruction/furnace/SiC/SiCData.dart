@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> sicFData = [
@@ -13,11 +13,11 @@ List<video> sicFData = [
       title: "Tools used for assisting the process",
       subtitle: "Several useful tools",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'd9L0nf1U8yc',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'd9L0nf1U8yc',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -31,41 +31,41 @@ List<video> sicFData = [
       subtitle:
           "Set up the temperature(Actual Temp: Top value, Set Point: Bottom value)",
       materialcolor: Colors.red,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'mjmuxQAqHZE',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'mjmuxQAqHZE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
-  video(
+  (video(
       title: "Sample Placement",
       subtitle: "Wearing all PPE and insert sample into the furnace",
       materialcolor: Colors.red,
-      videoController: YoutubePlayerController(
-        initialVideoId: 's5G7AbokcYE',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 's5G7AbokcYE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )),
+      ))),
   (video(
     type: "tit",
     title: "Operation",
     subtitle: "How to operate the furnace",
     materialcolor: Colors.green,
   )),
-  video(
+  (video(
       title: "Operating the furnace door",
       subtitle: "Make sure don't let the interior of the door facing you",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'fMuzfMrqQag',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'fMuzfMrqQag',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )),
+      ))),
   (video(
       type: "tit",
       title: "Finish the experiment and clean up",
@@ -76,11 +76,11 @@ List<video> sicFData = [
       subtitle:
           "Turn off the furnace and place the sample on the sand and mark the time",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: '6trERmdj-rA',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '6trERmdj-rA',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];

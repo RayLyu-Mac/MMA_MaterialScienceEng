@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -51,7 +51,7 @@ class _InstructionModeState extends State<InstructionMode> {
                   aspectRatio: 16 / 9,
                   child: YoutubePlayer(
                     controller: instruction.videoController,
-                    liveUIColor: Colors.amber,
+                    aspectRatio: 16 / 9,
                   ),
                 ),
                 Padding(

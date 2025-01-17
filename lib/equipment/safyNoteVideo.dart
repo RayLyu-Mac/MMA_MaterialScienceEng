@@ -1,45 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/rendering.dart';
+import 'package:chewie/chewie.dart';
+import 'package:video_player/video_player.dart';
 import 'dart:ui';
 
-class warningVideo extends StatefulWidget {
+/// A dialog that displays safety instructions with video content
+class WarningVideo extends StatefulWidget {
   final Widget pageTo;
-  final String videoID;
-  const warningVideo({required this.pageTo, required this.videoID, Key? key})
+  final String videoUrl;
+
+  const WarningVideo({required this.pageTo, required this.videoUrl, Key? key})
       : super(key: key);
 
   @override
-  _warningVideoState createState() => _warningVideoState();
+  _WarningVideoState createState() => _WarningVideoState();
 }
 
-class _warningVideoState extends State<warningVideo>
-    with SingleTickerProviderStateMixin {
+class _WarningVideoState extends State<WarningVideo> {
   static const double kDialogPadding = 24.0;
   static const double kButtonSpacing = 16.0;
   static const double kBorderRadius = 20.0;
 
-  late YoutubePlayerController _controller;
+  late VideoPlayerController _videoController;
+  ChewieController? _chewieController;
   late Size screenSize;
 
   @override
   void initState() {
     super.initState();
-    _controller = YoutubePlayerController(
-      initialVideoId: widget.videoID,
-      flags: YoutubePlayerFlags(
-        autoPlay: true,
-        mute: false,
-        showLiveFullscreenButton: false,
-      ),
+    _initializeVideo();
+  }
+
+  Future<void> _initializeVideo() async {
+    _videoController =
+        VideoPlayerController.networkUrl(Uri.parse(widget.videoUrl));
+
+    await _videoController.initialize();
+
+    _chewieController = ChewieController(
+      videoPlayerController: _videoController,
+      autoPlay: true,
+      looping: false,
+      aspectRatio: 16 / 9,
+      showControls: true,
     );
+
+    setState(() {});
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _videoController.dispose();
+    _chewieController?.dispose();
     super.dispose();
   }
 
@@ -178,15 +191,9 @@ class _warningVideoState extends State<warningVideo>
                             ),
                           ],
                         ),
-                        child: YoutubePlayer(
-                          controller: _controller,
-                          showVideoProgressIndicator: true,
-                          progressIndicatorColor: Colors.red,
-                          progressColors: ProgressBarColors(
-                            playedColor: Colors.red,
-                            handleColor: Colors.red,
-                          ),
-                        ),
+                        child: _chewieController != null
+                            ? Chewie(controller: _chewieController!)
+                            : const Center(child: CircularProgressIndicator()),
                       ),
                     ),
                   ),

@@ -59,14 +59,14 @@ class _functionButtonModeState extends State<functionButtonMode> {
                             warning_note: widget.warnNote!);
                       });
                 } else if (widget.url != null) {
-                  return widget.url();
+                  widget.url();
                 } else if (widget.warnV != null) {
                   showDialog<void>(
                       context: context,
-                      barrierDismissible: false, // user must tap button!
+                      barrierDismissible: false,
                       builder: (BuildContext context) {
-                        return warningVideo(
-                            pageTo: widget.pageTo!, videoID: widget.warnV!);
+                        return WarningVideo(
+                            pageTo: widget.pageTo!, videoUrl: widget.warnV!);
                       });
                 } else {
                   Navigator.push(
@@ -111,14 +111,14 @@ class _functionButtonModeState extends State<functionButtonMode> {
                           warning_note: widget.warnNote!);
                     });
               } else if (widget.url != null) {
-                return widget.url();
+                widget.url();
               } else if (widget.warnV != null) {
                 showDialog<void>(
                     context: context,
-                    barrierDismissible: false, // user must tap button!
+                    barrierDismissible: false,
                     builder: (BuildContext context) {
-                      return warningVideo(
-                          pageTo: widget.pageTo!, videoID: widget.warnV!);
+                      return WarningVideo(
+                          pageTo: widget.pageTo!, videoUrl: widget.warnV!);
                     });
               } else {
                 Navigator.push(

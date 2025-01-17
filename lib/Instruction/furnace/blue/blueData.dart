@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'package:mma_mse/Instruction/videoformat.dart';
 
@@ -14,41 +14,41 @@ List<video> blueFdata = [
       title: "Machine Preparation",
       subtitle: "Set up the temperature and time",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'md9WYfd808g',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'md9WYfd808g',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
-  video(
+  (video(
       title: "Sample Placement",
       subtitle: "Place the sample in the right position inside the furnace",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'KVUl4Pkv37U',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'KVUl4Pkv37U',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )),
+      ))),
   (video(
     type: "tit",
     title: "Operation",
     subtitle: "How to operate the furnace",
     materialcolor: Colors.green,
   )),
-  video(
+  (video(
       title: "Quench Sample",
       subtitle: "Quench sample to get desired microstructure",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'KZxKw7AxjZ4',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'KZxKw7AxjZ4',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )),
+      ))),
   (video(
     type: "tit",
     title: "Finish the experiment and clean up",
@@ -59,11 +59,11 @@ List<video> blueFdata = [
       title: "Shut down the machine and useful tools",
       subtitle: "Turn off the switch and some useful tools",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'gn4Eq6bGf18',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'gn4Eq6bGf18',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];

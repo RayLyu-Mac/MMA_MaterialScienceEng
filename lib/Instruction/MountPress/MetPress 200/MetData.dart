@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
 
 List<video> metPress = [
@@ -14,11 +14,11 @@ List<video> metPress = [
       subtitle:
           "The two mold are corresponding to two holder on the left and right",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'dFGz37wZMjc',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'dFGz37wZMjc',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -31,22 +31,22 @@ List<video> metPress = [
       title: "Making a Metallurgical Mount I",
       subtitle: "Set the program and load the sample",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '9LTU5AuLjsM',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '9LTU5AuLjsM',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
       title: "Making a Metallurgical Mount II",
       subtitle: "Load resin, close the screw cap and press start",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'avUQcGp4mg0',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'avUQcGp4mg0',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -59,11 +59,11 @@ List<video> metPress = [
       title: "Finish the experiment",
       subtitle: "Remove sample from the mold",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'lD1g-3Ys1ck',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'lD1g-3Ys1ck',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))
 ];

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 import 'package:mma_mse/Instruction/videoformat.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 List<video> etchingData = [
   (video(
@@ -14,11 +13,11 @@ List<video> etchingData = [
       title: "Preparation before start",
       subtitle: "Wear the PPE, Set up container and get acid",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'F3vNsclDaxo',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'F3vNsclDaxo',
+        params: YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
@@ -32,11 +31,11 @@ List<video> etchingData = [
       subtitle:
           "Use Syringe dispense the etchant onto the surface and make sure it covers the surface",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '53XXl1vDOWs',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '53XXl1vDOWs',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
@@ -44,11 +43,11 @@ List<video> etchingData = [
       subtitle:
           "After the etching complete rinse it under tap water and blow dry",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'JR_7n8-J99w',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'JR_7n8-J99w',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -61,22 +60,22 @@ List<video> etchingData = [
       title: "Finish the experiment I: Clean Up",
       subtitle: "Clean the container and pour into the waste backet",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'TSZ3qKA27EM',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'TSZ3qKA27EM',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   (video(
       title: "Finish the experiment II: Organize Equipment",
       subtitle: "Place all used tools back into place",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'NtzRB1_2bTo',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'NtzRB1_2bTo',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:mma_mse/Instruction/videoformat.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 List<video> llyoldTensile = [
   (video(
@@ -13,33 +13,33 @@ List<video> llyoldTensile = [
       title: "Start the experiment",
       subtitle: "Turn on the machine and the software",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'taifpWToaMc',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'taifpWToaMc',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       ))),
   video(
       title: "Use the extensometer",
       subtitle: "Method of using the extensometer",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'rIvRC6OAfwE',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'rIvRC6OAfwE',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   video(
       title: "Loading Sample to the grip",
       subtitle: "The proper way of loading sample to the machine",
       materialcolor: Colors.amber,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'nDR80RWMVUs',
-        flags: YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'nDR80RWMVUs',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -52,11 +52,11 @@ List<video> llyoldTensile = [
       title: "Running the tensile test",
       subtitle: "Start the experiment and observation the data",
       materialcolor: Colors.green,
-      videoController: YoutubePlayerController(
-        initialVideoId: '0cvb-QyCVZw',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: '0cvb-QyCVZw',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
       )),
   (video(
@@ -69,11 +69,11 @@ List<video> llyoldTensile = [
       title: "Finish the test",
       subtitle: "Remove the extensometer and turn off the machine",
       materialcolor: Colors.blue,
-      videoController: YoutubePlayerController(
-        initialVideoId: 'jRFT1Z9c7z8',
-        flags: YoutubePlayerFlags(
-          autoPlay: false,
-          mute: false,
+      videoController: YoutubePlayerController.fromVideoId(
+        videoId: 'jRFT1Z9c7z8',
+        params: const YoutubePlayerParams(
+          showControls: true,
+          showFullscreenButton: true,
         ),
-      )))
+      ))),
 ];
