@@ -15,30 +15,10 @@ workflows:
       - flutter pub get
       - flutter doctor -v
       - |
-        # Clean iOS build artifacts
-        cd ios
-        rm -rf Pods/
-        rm -rf .symlinks/
-        rm -rf Flutter/Flutter.framework
-        rm -rf Flutter/Flutter.podspec
-        rm -f Podfile.lock
-        cd ..
-      - |
-        # Set minimum iOS version to 13.0 in Podfile
-        podfile_path="ios/Podfile"
-        if [ -f "$podfile_path" ]; then
-          sed -i '' '/platform :ios/d' "$podfile_path" || true
-          echo "platform :ios, '13.0'" | cat - "$podfile_path" > temp && mv temp "$podfile_path"
-        else
-          echo "Creating Podfile with platform :ios, '13.0'"
-          echo "platform :ios, '13.0'" > "$podfile_path"
-        fi
-      - |
-        # Deintegrate and reinstall CocoaPods
+        # Clean and ensure dependencies are installed using the custom Podfile
         cd ios
         pod deintegrate
         pod cache clean --all
-        pod repo update
         pod install
         cd ..
       - keychain initialize
