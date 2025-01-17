@@ -7,8 +7,8 @@ workflows:
         APP_STORE_CONNECT_ISSUER_ID: 6c07076c-aac2-4830-b38a-0be127e029dd
         APP_STORE_CONNECT_KEY_IDENTIFIER: 5B3RGV345J
         APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFB...)
-      flutter: 3.24.0
-      xcode: 16.0
+      flutter: stable
+      xcode: latest
       cocoapods: default
     scripts:
       - flutter clean
