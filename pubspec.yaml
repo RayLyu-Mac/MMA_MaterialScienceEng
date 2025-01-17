@@ -37,7 +37,6 @@ dependencies:
   page_transition: ^2.0.9
   http: ^1.1.0
   font_awesome_flutter: ^10.5.0
-  image_picker: ^1.0.4
   csv: ^5.0.2
   permission_handler: ^10.4.3
   flutter_launcher_icons: ^0.13.1
