@@ -7,7 +7,6 @@ import 'package:mma_mse/fancyButton.dart';
 import 'package:mma_mse/workingInPro.dart';
 import 'package:mma_mse/Search/tools/phaseDiagram/zoomIn.dart';
 import 'package:mma_mse/Search/Test/Test_Page/test_data.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ExtingshSymbols extends StatefulWidget {
   ExtingshSymbols({Key? key}) : super(key: key);
@@ -88,7 +87,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
             backgroundColor: Colors.black.withOpacity(0.7),
             title: Text(
               "Fire Class",
-              style: GoogleFonts.poppins(
+              style: TextStyle(
                 fontSize: _screenH / 40,
                 fontWeight: FontWeight.w600,
               ),
@@ -121,7 +120,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                             padding: EdgeInsets.all(12),
                             child: Text(
                               result[index].title,
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
                                 fontSize: result[index].titleFontsize,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -140,7 +139,7 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                             padding: EdgeInsets.all(12),
                             child: Text(
                               result[index].content,
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
                                 fontSize: result[index].titleFontsize,
                               ),
                             ),
@@ -167,7 +166,10 @@ class _ExtingshSymbolsState extends State<ExtingshSymbols> {
                             icon: Icon(Icons.location_city_outlined),
                             label: Text(
                               "Location of the extinguisher",
-                              style: GoogleFonts.poppins(),
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
                           ),
                           SizedBox(height: 16),
@@ -229,7 +231,7 @@ class fireProcedure extends StatelessWidget {
         backgroundColor: Colors.black.withOpacity(0.7),
         title: Text(
           "Fire Emergency Procedure",
-          style: GoogleFonts.poppins(
+          style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
           ),
@@ -265,7 +267,7 @@ class fireProcedure extends StatelessWidget {
                           Text(
                             content[index1][0],
                             textAlign: TextAlign.center,
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                             ),
@@ -273,7 +275,7 @@ class fireProcedure extends StatelessWidget {
                           SizedBox(height: 8),
                           Text(
                             content[index1][1],
-                            style: GoogleFonts.poppins(fontSize: 16),
+                            style: TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -282,18 +284,14 @@ class fireProcedure extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(
-              height: 15,
-            ),
+            SizedBox(height: 15),
             fancyBut(
                 pageTo: workingInProg(),
                 width: 200,
                 height: 50,
                 icon: Icons.fireplace_outlined,
                 buttonName: "Contact Info"),
-            SizedBox(
-              height: 15,
-            ),
+            SizedBox(height: 15),
           ],
         ),
       ),
