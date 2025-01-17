@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class BueDashBoard extends StatefulWidget {
   const BueDashBoard({Key? key}) : super(key: key);
@@ -15,11 +14,9 @@ class _BueDashBoardState extends State<BueDashBoard> {
   double _screenH = 0;
   double adjust = 1;
 
-  // Video controllers for both pages
-  late VideoPlayerController _videoController1;
-  late VideoPlayerController _videoController2;
-  ChewieController? _chewieController1;
-  ChewieController? _chewieController2;
+  // Replace video controllers with YouTube controllers
+  late YoutubePlayerController _youtubeController1;
+  late YoutubePlayerController _youtubeController2;
 
   final List<InstructionSection> _page1Sections = [
     InstructionSection(
@@ -60,47 +57,32 @@ class _BueDashBoardState extends State<BueDashBoard> {
   void initState() {
     super.initState();
     _pageController = PageController(initialPage: 0);
-    _initializeVideoPlayers();
+    _initializeYoutubeControllers();
   }
 
-  Future<void> _initializeVideoPlayers() async {
-    // Replace these URLs with your actual video URLs
-    _videoController1 = VideoPlayerController.networkUrl(
-      Uri.parse('YOUR_VIDEO_URL_1'),
-    );
-    _videoController2 = VideoPlayerController.networkUrl(
-      Uri.parse('YOUR_VIDEO_URL_2'),
-    );
-
-    await Future.wait([
-      _videoController1.initialize(),
-      _videoController2.initialize(),
-    ]);
-
-    _chewieController1 = ChewieController(
-      videoPlayerController: _videoController1,
-      autoPlay: false,
-      aspectRatio: 16 / 9,
-      looping: false,
+  void _initializeYoutubeControllers() {
+    _youtubeController1 = YoutubePlayerController.fromVideoId(
+      videoId: 'YOUR_YOUTUBE_VIDEO_ID_1',
+      params: const YoutubePlayerParams(
+        showControls: true,
+        showFullscreenButton: true,
+      ),
     );
 
-    _chewieController2 = ChewieController(
-      videoPlayerController: _videoController2,
-      autoPlay: false,
-      aspectRatio: 16 / 9,
-      looping: false,
+    _youtubeController2 = YoutubePlayerController.fromVideoId(
+      videoId: 'YOUR_YOUTUBE_VIDEO_ID_2',
+      params: const YoutubePlayerParams(
+        showControls: true,
+        showFullscreenButton: true,
+      ),
     );
-
-    setState(() {});
   }
 
   @override
   void dispose() {
     _pageController.dispose();
-    _videoController1.dispose();
-    _videoController2.dispose();
-    _chewieController1?.dispose();
-    _chewieController2?.dispose();
+    _youtubeController1.close();
+    _youtubeController2.close();
     super.dispose();
   }
 
@@ -134,7 +116,7 @@ class _BueDashBoardState extends State<BueDashBoard> {
   }
 
   Widget _buildPage(
-      ChewieController? controller, List<InstructionSection> sections,
+      YoutubePlayerController? controller, List<InstructionSection> sections,
       {bool showSwipeHint = false}) {
     return SafeArea(
       child: SingleChildScrollView(
@@ -146,7 +128,10 @@ class _BueDashBoardState extends State<BueDashBoard> {
               Container(
                 width: _screenWidth / 1.1,
                 margin: EdgeInsets.symmetric(horizontal: _screenWidth / 20),
-                child: Chewie(controller: controller),
+                child: YoutubePlayer(
+                  controller: controller,
+                  aspectRatio: 16 / 9,
+                ),
               ),
             ...sections.map((section) => _buildInstructionSection(
                   section,
@@ -181,8 +166,8 @@ class _BueDashBoardState extends State<BueDashBoard> {
       body: PageView(
         controller: _pageController,
         children: [
-          _buildPage(_chewieController1, _page1Sections, showSwipeHint: true),
-          _buildPage(_chewieController2, _page2Sections),
+          _buildPage(_youtubeController1, _page1Sections, showSwipeHint: true),
+          _buildPage(_youtubeController2, _page2Sections),
         ],
       ),
     );

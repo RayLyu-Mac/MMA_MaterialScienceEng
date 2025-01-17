@@ -43,7 +43,6 @@ dependencies:
   flutter_zoom_drawer: ^3.1.1
   lottie: ^2.6.0
   clay_containers: ^0.3.2
-  chewie: ^1.7.1
 
 flutter_icons:
   image_path: "assest/icon.png"
