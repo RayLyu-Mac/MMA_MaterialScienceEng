@@ -43,7 +43,6 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_zoom_drawer: ^3.1.1
   lottie: ^2.6.0
-  flutter_native_splash: ^2.3.1
   clay_containers: ^0.3.2
   chewie: ^1.7.1
   package_info_plus: ^4.1.0
