@@ -42,8 +42,8 @@ dependencies:
   lottie: ^2.6.0
   clay_containers: ^0.3.2
 dependency_overrides:
-  path_provider: ^2.1.5
-  path_provider_foundation: ^2.4.1
+  path_provider: ^2.1.1
+  path_provider_foundation: ^2.3.1
 
 
 flutter_icons:
