@@ -1,33 +1,7 @@
+# Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-# You need to add this line to include Flutter helpers
-require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), File.absolute_path(File.join('..', '.flutter-plugins-dependencies')))
-
 target 'Runner' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  use_modular_headers!
-
-  # Install Flutter dependencies
-  install_all_flutter_pods(File.dirname(File.realpath(__FILE__)))
-
-  # Additional pods
-  pod 'path_provider_foundation'
-  pod 'permission_handler_apple'
-  pod 'url_launcher_ios'
-  pod 'webview_flutter_wkwebview'
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    flutter_additional_ios_build_settings(target)
-    target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-      config.build_settings['SWIFT_VERSION'] = '5.0' # Add Swift version
-      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
-        '$(inherited)',
-        'PERMISSION_CAMERA=1',
-        'PERMISSION_PHOTOS=1'
-      ]
-    end
-  end
 end
