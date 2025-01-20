@@ -25,25 +25,7 @@ class _toolMainState extends State<toolMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomMenu(),
-      appBar: AppBar(
-        elevation: 0,
-        actions: [
-          IconButton(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            icon: Icon(Icons.close, size: 28),
-            onPressed: () => Navigator.pop(context),
-          )
-        ],
-        backgroundColor: Colors.grey[800],
-        title: Text(
-          "Materials Engineering Tools",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-            letterSpacing: 0.5,
-          ),
-        ),
-      ),
+      appBar: _buildAppBar(),
       backgroundColor: Colors.grey[100],
       drawer: StandardNavigationDrawer(headerTitle: "Materials Tool Box"),
       body: SafeArea(
@@ -116,6 +98,29 @@ class _toolMainState extends State<toolMain> {
               ),
             );
           },
+        ),
+      ),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      actions: [
+        IconButton(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          icon: Icon(Icons.close, size: 28, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        )
+      ],
+      backgroundColor: Colors.blue[900],
+      title: Text(
+        "Materials Engineering Tools",
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          color: Colors.white,
+          letterSpacing: 0.5,
         ),
       ),
     );

@@ -30,16 +30,24 @@ class _SafetyMainState extends State<SafetyMain> {
     return Scaffold(
       bottomNavigationBar: BottomMenu(),
       appBar: AppBar(
-        title: Text("Materials Engineering Safety Guide"),
-        backgroundColor: Colors.grey[500],
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Text(
+          "Materials Engineering Safety Guide",
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+            letterSpacing: 0.5,
+          ),
+        ),
+        backgroundColor: Colors.blue[900],
         actions: [
           IconButton(
-            padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-            iconSize: 32,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(FontAwesomeIcons.timesCircle),
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            icon: Icon(Icons.close, size: 28),
+            onPressed: () => Navigator.pop(context),
+            color: Colors.white,
           ),
         ],
       ),

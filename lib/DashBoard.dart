@@ -29,10 +29,10 @@ class DashBoard extends StatefulWidget {
 class _DashBoardState extends State<DashBoard> {
   // Constants for styling
   static const double kPadding = 20.0;
-  static const double kButtonHeight = 0.13;
-  static const double kSearchBarHeight = 0.07;
+  static const double kButtonHeight = 0.14;
+  static const double kSearchBarHeight = 0.065;
   static const double kBorderRadius = 25.0;
-  static const double kDepth = 10.0;
+  static const double kDepth = 15.0;
   static const double kIntensity = 0.8;
   static const Color kBaseColor = Color(0xFFE0E5EC);
 
@@ -160,8 +160,8 @@ class _DashBoardState extends State<DashBoard> {
   Widget _buildSearchBar() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: kPadding),
-      margin: EdgeInsets.symmetric(vertical: _screenH * 0.025),
-      height: _screenH * (kSearchBarHeight + 0.01),
+      margin: EdgeInsets.symmetric(vertical: _screenH * 0.02),
+      height: _screenH * (kSearchBarHeight),
       child: LayoutBuilder(
         builder: (context, constraints) {
           double fontSize = (constraints.maxWidth * 0.04).clamp(14.0, 18.0);
@@ -169,7 +169,6 @@ class _DashBoardState extends State<DashBoard> {
           return ClayContainer(
             depth: kDepth.toInt(),
             spread: kIntensity,
-            borderRadius: kBorderRadius + 5,
             color: Colors.white,
             emboss: false,
             child: TextField(
@@ -228,41 +227,34 @@ class _DashBoardState extends State<DashBoard> {
 
   Widget _buildSearchResults() {
     return ListView.builder(
-      padding: EdgeInsets.symmetric(horizontal: kPadding),
       itemCount: possibleResult.length,
       itemBuilder: (context, index) {
         String listData = possibleResult[index];
-        return Container(
-          margin: EdgeInsets.only(bottom: 8),
-          child: Card(
-            elevation: 2,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(kBorderRadius),
+        return Card(
+          elevation: 2,
+          child: ListTile(
+            leading: Icon(
+              property[index][1],
+              color: property[index][2],
+              size: _screenH * 0.03,
             ),
-            child: ListTile(
-              leading: Icon(
-                property[index][1],
-                color: property[index][2],
-                size: _screenH * 0.03,
+            title: Text(
+              listData,
+              style: TextStyle(
+                fontSize: (_screenH * 0.018).clamp(14.0, 18.0),
+                fontWeight: FontWeight.w500,
               ),
-              title: Text(
-                listData,
-                style: TextStyle(
-                  fontSize: (_screenH * 0.018).clamp(14.0, 18.0),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              contentPadding: EdgeInsets.symmetric(
-                horizontal: kPadding,
-                vertical: 8,
-              ),
-              onTap: () => Navigator.push(
-                context,
-                PageTransition(
-                  child: property[index][0],
-                  type: PageTransitionType.rightToLeft,
-                  duration: Duration(milliseconds: 300),
-                ),
+            ),
+            contentPadding: EdgeInsets.symmetric(
+              horizontal: kPadding,
+              vertical: 8,
+            ),
+            onTap: () => Navigator.push(
+              context,
+              PageTransition(
+                child: property[index][0],
+                type: PageTransitionType.rightToLeft,
+                duration: Duration(milliseconds: 300),
               ),
             ),
           ),
@@ -276,13 +268,13 @@ class _DashBoardState extends State<DashBoard> {
       height: _screenH * kButtonHeight,
       margin: EdgeInsets.symmetric(
         horizontal: kPadding,
-        vertical: _screenH * 0.015,
+        vertical: _screenH * 0.012,
       ),
       child: GestureDetector(
         onTap: () => Navigator.push(
           context,
           PageTransition(
-            duration: Duration(milliseconds: 300),
+            duration: Duration(milliseconds: 200),
             child: buttonData[3],
             type: PageTransitionType.rightToLeft,
           ),
@@ -311,8 +303,8 @@ class _DashBoardState extends State<DashBoard> {
                 child: Text(
                   buttonData[0],
                   style: TextStyle(
-                    fontSize: (_screenH * 0.026).clamp(18.0, 26.0),
-                    fontWeight: FontWeight.w600,
+                    fontSize: (_screenH * 0.028).clamp(18.0, 26.0),
+                    fontWeight: FontWeight.w700,
                     color: Colors.black87,
                   ),
                 ),
@@ -334,18 +326,10 @@ class _DashBoardState extends State<DashBoard> {
           "MSE Dashboard",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: (_screenH * 0.024).clamp(18.0, 24.0),
+            fontSize: (_screenH * 0.025).clamp(18.0, 24.0),
           ),
         ),
         elevation: 2,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.logout),
-            iconSize: (_screenH * 0.03).clamp(24.0, 32.0),
-            onPressed: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => welcome())),
-          )
-        ],
       ),
       drawer: StandardNavigationDrawer(headerTitle: "Dashboard"),
       body: Container(

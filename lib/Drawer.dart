@@ -57,14 +57,14 @@ class StandardNavigationDrawer extends StatelessWidget {
           leading: Icon(
             icon,
             size: _iconSize,
-            color: iconColor?.withOpacity(0.8) ?? Colors.grey.shade700,
+            color: iconColor?.withOpacity(0.8) ?? Colors.white,
           ),
           title: Text(
             title,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
-              color: Colors.blue.shade800,
+              color: Colors.black,
             ),
           ),
           onTap: () => _handleNavigation(context, destination),
@@ -90,7 +90,7 @@ class StandardNavigationDrawer extends StatelessWidget {
   Widget _buildDrawerHeader() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue.shade100,
+        color: Color.fromARGB(255, 124, 196, 255),
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(_borderRadius),
         ),

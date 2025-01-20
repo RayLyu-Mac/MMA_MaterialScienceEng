@@ -1,7 +1,9 @@
-workflows:
-  default-workflow:
-    name: Default Workflow
-    max_build_duration: 60
+ios-workflow:
+  name: iOS Workflow
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    integrations:
+    app_store_connect: codemagic
     environment:
       vars:
         APP_STORE_CONNECT_ISSUER_ID: 6c07076c-aac2-4830-b38a-0be127e029dd

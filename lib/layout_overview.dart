@@ -49,10 +49,10 @@ class _layout_overviewState extends State<layout_overview> {
     ),
   ];
 
-  static const double kPadding = 20.0;
-  static const double kDepth = 10.0;
+  static const double kPadding = 17.0;
+  static const double kDepth = 16.0;
   static const double kIntensity = 0.8;
-  static const Color kBaseColor = Color(0xFFE0E5EC);
+  static const Color kBaseColor = Color.fromARGB(255, 190, 209, 235);
 
   BoxDecoration _getNeumorphicDecoration({bool isPressed = false}) {
     return BoxDecoration(
@@ -89,19 +89,22 @@ class _layout_overviewState extends State<layout_overview> {
       bottomNavigationBar: BottomMenu(),
       appBar: AppBar(
         elevation: 0,
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           "Building Layout",
           style: TextStyle(
-            fontSize: (_screenH * 0.024).clamp(18.0, 24.0),
+            fontSize: (_screenH * 0.026).clamp(18.0, 24.0),
             fontWeight: FontWeight.w600,
             letterSpacing: 0.5,
+            color: Colors.white,
           ),
         ),
         actions: [
           IconButton(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: EdgeInsets.symmetric(horizontal: 14),
             icon: Icon(Icons.close, size: _screenH * 0.032),
             onPressed: () => Navigator.pop(context),
+            color: Colors.white,
           ),
         ],
         backgroundColor: Colors.black87,
@@ -232,15 +235,15 @@ class _layout_overviewState extends State<layout_overview> {
               ),
             ),
             child: Container(
-              padding: EdgeInsets.all(kPadding * 0.8),
+              padding: EdgeInsets.all(kPadding * 0.7),
               child: Row(
                 children: [
                   ClayContainer(
-                    height: _screenH * 0.06,
+                    height: _screenH * 0.065,
                     width: _screenH * 0.06,
                     depth: kDepth.toInt(),
                     spread: kIntensity,
-                    borderRadius: 12,
+                    borderRadius: 14,
                     color: floor.color.withOpacity(0.2),
                     child: Icon(
                       floor.icon,
@@ -248,7 +251,7 @@ class _layout_overviewState extends State<layout_overview> {
                       size: _screenH * 0.03,
                     ),
                   ),
-                  SizedBox(width: kPadding * 0.8),
+                  SizedBox(width: kPadding * 0.75),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -262,11 +265,12 @@ class _layout_overviewState extends State<layout_overview> {
                             color: Colors.black87,
                           ),
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 3),
                         Text(
                           floor.description,
                           style: TextStyle(
                             fontSize: descriptionSize,
+                            fontWeight: FontWeight.w600,
                             color: Colors.black54,
                           ),
                         ),

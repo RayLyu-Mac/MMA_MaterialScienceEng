@@ -48,7 +48,7 @@ List<ToolData> createToolList = [
   (ToolData(
       name: "Error function",
       bgColor: Colors.blue.shade100.withOpacity(0.8),
-      pageTo: errorFunction(),
+      pageTo: ErrorFunction(),
       backImg:
           "https://github.com/RayLyu-Mac/MMA_MaterialScienceEng/blob/main/assest/search/tools/erf.png?raw=true")),
   (ToolData(

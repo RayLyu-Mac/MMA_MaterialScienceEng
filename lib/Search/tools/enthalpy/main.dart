@@ -192,7 +192,7 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                 SizedBox(height: 24),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue[700],
+                    backgroundColor: Color.fromARGB(255, 162, 204, 247),
                     padding: EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
@@ -201,7 +201,10 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
                   onPressed: _calculateEnthalpy,
                   child: Text(
                     "Calculate",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
                   ),
                 ),
                 SizedBox(height: 24),
@@ -253,16 +256,42 @@ class _EnthalpyCalState extends State<EnthalpyCal> {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() {
-      _isCalculating = true;
       try {
-        // Your existing calculation logic here
-        // Make sure to handle all potential errors
+        double tminValue = double.parse(tmin.text);
+        double tmaxValue = double.parse(tmax.text);
+
+        // Get the transition temperatures for the selected element
+        List transitions = enthP[element] ?? [];
+
+        double totalEnthalpy = 0;
+        int phaseCount = 0;
+
+        // Calculate enthalpy change through different phases
+        for (int i = 0; i < transitions[0].length - 1; i++) {
+          if (tminValue < transitions[1][i] && tmaxValue > transitions[0][i]) {
+            phaseCount++;
+
+            if (tmaxValue <= transitions[1][i]) {
+              totalEnthalpy += weirdStage(transitions, i, tminValue, tmaxValue);
+            } else if (tminValue <= transitions[0][i]) {
+              totalEnthalpy += finalStage(transitions, i, tmaxValue);
+            } else {
+              totalEnthalpy += middleStage(transitions, i);
+            }
+          }
+        }
+
+        // Update state variables
+        phase = phaseCount.toString();
+        output = totalEnthalpy.toStringAsFixed(2);
       } catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error in calculation: ${e.toString()}')),
+          SnackBar(
+            content:
+                Text('Error in calculation: Please check your input values'),
+            backgroundColor: Colors.red,
+          ),
         );
-      } finally {
-        _isCalculating = false;
       }
     });
   }

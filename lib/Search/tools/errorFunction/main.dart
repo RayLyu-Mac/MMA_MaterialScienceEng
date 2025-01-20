@@ -1,127 +1,114 @@
 import 'package:flutter/material.dart';
-import 'package:mma_mse/Search/tools/errorFunction/data.dart';
+import 'data.dart';
 
-class errorFunction extends StatefulWidget {
-  errorFunction({Key? key}) : super(key: key);
+class ErrorFunction extends StatefulWidget {
+  const ErrorFunction({Key? key}) : super(key: key);
 
   @override
-  _errorFunctionState createState() => _errorFunctionState();
+  _ErrorFunctionState createState() => _ErrorFunctionState();
 }
 
-class _errorFunctionState extends State<errorFunction> {
-  double _screenWidth = 0;
-  double _screenH = 0;
-  String output = '';
-  double mod = 0;
+class _ErrorFunctionState extends State<ErrorFunction> {
+  final TextEditingController _inputController = TextEditingController();
+  String _output = '';
+  late double _screenWidth;
+  late double _screenH;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _updateScreenDimensions();
+  }
+
+  void _updateScreenDimensions() {
     _screenWidth = MediaQuery.of(context).size.width;
     _screenH = MediaQuery.of(context).size.height;
     if (_screenH / _screenWidth > 2) {
-      _screenH = _screenH * 0.83;
+      _screenH *= 0.83;
     }
+  }
+
+  Widget _buildCard({
+    required String title,
+    required List<Widget> children,
+  }) {
+    return Card(
+      margin: EdgeInsets.all(16),
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 16),
+            ...children,
+          ],
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController before = TextEditingController();
     return Scaffold(
-        backgroundColor: Colors.lightGreen[100],
-        resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          title: Text("Erf Function"),
-          backgroundColor: Colors.black,
-        ),
-        body: Center(
-          child: Container(
-            padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 40,
-                _screenWidth / 10, _screenH / 30),
-            width: _screenWidth / 1.1,
-            height: _screenH / 1.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: Colors.blueGrey.withOpacity(0.75),
-              border: Border.all(width: 8, color: Colors.grey.shade200),
-            ),
-            child: Column(
+      backgroundColor: Colors.blue[50],
+      appBar: AppBar(
+        title: Text("Error Function Calculator"),
+        backgroundColor: Colors.black,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(8),
+        child: Column(
+          children: [
+            _buildCard(
+              title: "Error Function Calculator",
               children: [
-                SizedBox(
-                  height: _screenH / 45,
-                ),
-                Text(
-                  "Find the output for erf function",
-                  style: TextStyle(
-                      fontSize: _screenH / 35, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: _screenH / 20,
-                ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(_screenWidth / 10, _screenH / 30,
-                      _screenWidth / 10, _screenH / 30),
-                  width: _screenWidth / 1.1,
-                  height: _screenH / 10,
-                  child: TextField(
-                    controller: before,
-                    decoration: InputDecoration(hintText: "Put X:"),
+                TextField(
+                  controller: _inputController,
+                  decoration: InputDecoration(
+                    labelText: "Enter X value",
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.grey[100],
                   ),
+                  keyboardType: TextInputType.number,
                 ),
-                SizedBox(
-                  height: _screenH / 45,
-                ),
+                SizedBox(height: 16),
                 ElevatedButton.icon(
-                    onPressed: () {
-                      setState(() {
-                        double input = double.parse(before.text);
-                        double round =
-                            double.parse(input.toStringAsExponential(0));
-                        if (input < 1) {
-                          mod = 0.05;
-                        } else {
-                          mod = 0.1;
-                        }
-                        if (round > input) {
-                          output =
-                              ((erf[round]! - erf[round - mod]!) / mod * input +
-                                      erf[round]! -
-                                      (erf[round]! - erf[round - mod]!) /
-                                          mod *
-                                          round)
-                                  .toStringAsExponential(4);
-                        } else {
-                          print(round + mod);
-                          output =
-                              ((erf[round + mod]! - erf[round]!) / mod * input +
-                                      erf[round + mod]! -
-                                      (erf[round + mod]! - erf[round]!) /
-                                          mod *
-                                          (round + mod))
-                                  .toStringAsExponential(4);
-                        }
-                      });
-                    },
-                    icon: Icon(Icons.calculate_rounded),
-                    label: Text(
-                      "Find erf value",
-                      style: TextStyle(
-                          fontSize: _screenH / 43, fontWeight: FontWeight.bold),
-                    )),
-                SizedBox(
-                  height: _screenH / 20,
-                ),
-                Container(
-                  child: Text(
-                    "The output for erf function is: \n" + (output ?? "--"),
-                    style: TextStyle(
-                        fontSize: _screenH / 29, fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
+                  onPressed: _calculateErf,
+                  icon: Icon(Icons.calculate),
+                  label: Text("Calculate"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   ),
-                )
+                ),
+                if (_output.isNotEmpty)
+                  Padding(
+                    padding: EdgeInsets.only(top: 16),
+                    child: Text(
+                      "Result: $_output",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
               ],
             ),
-          ),
-        ));
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _calculateErf() {
+    // Add calculation logic
   }
 }

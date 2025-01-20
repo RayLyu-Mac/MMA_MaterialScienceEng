@@ -289,7 +289,7 @@ packages:
     source: hosted
     version: "2.2.10"
   path_provider_foundation:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
       name: path_provider_foundation
       sha256: "4843174df4d288f5e29185bd6e72a6fbdf5a4a4602717eed565497429f179942"
