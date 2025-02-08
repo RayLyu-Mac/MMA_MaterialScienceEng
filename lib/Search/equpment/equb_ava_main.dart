@@ -2,7 +2,6 @@ import 'package:mma_mse/floationPanel/PanelMain.dart';
 import 'equb_available.dart';
 import 'equb_ava_data.dart';
 import 'package:flutter/material.dart';
-import 'package:mma_mse/customTileScroll.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class EquipmentMain extends StatefulWidget {

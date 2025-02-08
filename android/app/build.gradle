@@ -15,17 +15,23 @@ if (localPropertiesFile.exists()) {
 
 def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
 if (flutterVersionCode == null) {
-    flutterVersionCode = "1"
+    flutterVersionCode = "29"
 }
 
 def flutterVersionName = localProperties.getProperty("flutter.versionName")
 if (flutterVersionName == null) {
-    flutterVersionName = "1.0"
+    flutterVersionName = "1.1.6"
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
 android {
-    namespace = "com.example.mma_materialscienceeng"
-    compileSdk = flutter.compileSdkVersion
+    namespace "com.MMA_MSE.myapp"
+    compileSdkVersion flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -35,20 +41,29 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.mma_materialscienceeng"
+        applicationId "com.MMA_MSE.myapp"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutterVersionCode.toInteger()
-        versionName = flutterVersionName
+        minSdkVersion 21
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode 31
+        versionName "1.2.0"
+        multiDexEnabled true
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'MMAs' // Replace with your key alias
+            keyPassword 'Ss182060317' // Replace with your key password
+            storeFile file('MSE_Insider.jks') // Ensure the file path is correct
+            storePassword 'Ss182060317' // Replace with your keystore password
+        }
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
 }

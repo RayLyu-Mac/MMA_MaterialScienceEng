@@ -50,9 +50,8 @@ class EqubPageMode extends StatefulWidget {
 }
 
 class _EqubPageModeState extends State<EqubPageMode> {
-  double _screenWidth = 0;
-  double _screenH = 0;
-  double adjust = 1;
+  late double _screenWidth;
+  late double _screenH;
 
   @override
   void didChangeDependencies() {
@@ -68,31 +67,202 @@ class _EqubPageModeState extends State<EqubPageMode> {
             child: qr_pageTo[qrResult]!, type: PageTransitionType.bottomToTop));
   }
 
-  Widget _buildActionButton(
-      String label, Widget page, String? warnNote, String? warnVideo) {
-    return ElevatedButton(
-      child: Text(label),
-      onPressed: () => _navigateToPage(page),
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(
-          horizontal: _screenWidth * 0.03,
-          vertical: _screenH * 0.02,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[50], // Lighter background
+      appBar: AppBar(
+        elevation: 2,
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: Colors.white, // Explicit white color
+          ),
+        ),
+        backgroundColor: Colors.blue[900], // Darker blue for better contrast
+        iconTheme: IconThemeData(color: Colors.white), // White drawer icon
+        actions: [
+          IconButton(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            icon: Icon(Icons.close, size: 28),
+            onPressed: () => Navigator.pop(context),
+            color: Colors.white, // White close icon
+          )
+        ],
+      ),
+      drawer: StandardNavigationDrawer(headerTitle: widget.title),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Image Section
+              Container(
+                height: _screenH * 0.35,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 8,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    widget.img,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 24),
+
+              // Introduction Section
+              Card(
+                elevation: 2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // Title with info icon
+                          Row(
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.circleInfo,
+                                color: Colors.blue[900],
+                                size: 20,
+                              ),
+                              SizedBox(width: 8),
+                              Text(
+                                'Introduction',
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue[900],
+                                ),
+                              ),
+                            ],
+                          ),
+                          // Action icons
+                          Row(
+                            children: [
+                              if (widget.extraPage != null)
+                                IconButton(
+                                  tooltip: widget.toolTip,
+                                  icon: Icon(
+                                    widget.extraIcon ??
+                                        FontAwesomeIcons.clipboardList,
+                                    color: Colors.blue[700],
+                                    size: 22,
+                                  ),
+                                  onPressed: () => Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      child: widget.extraPage!,
+                                      type: PageTransitionType.bottomToTop,
+                                    ),
+                                  ),
+                                ),
+                              IconButton(
+                                tooltip: "Safety Sheet",
+                                icon: Icon(
+                                  FontAwesomeIcons.shieldHalved,
+                                  color: Colors.red[700],
+                                  size: 22,
+                                ),
+                                onPressed: _Safety,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 12),
+                      Text(
+                        widget.intro ?? "None",
+                        style: TextStyle(
+                          fontSize: 16,
+                          height: 1.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 24),
+
+              // Action Buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildActionButton(
+                    "Instructions",
+                    widget.instruction,
+                    widget.warnNote,
+                    widget.warnVido,
+                    Colors.blue[700]!,
+                  ),
+                  _buildActionButton(
+                    widget.dash ?? "Theory",
+                    widget.theory ?? workingInProg(),
+                    null,
+                    null,
+                    Colors.green[700]!,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildIconButton({
-    required IconData icon,
-    required String? tooltip,
-    required VoidCallback onPressed,
-  }) {
-    return IconButton(
-      tooltip: tooltip,
-      iconSize: _screenH / 17,
-      icon: Icon(icon),
-      color: Colors.red,
-      onPressed: onPressed,
+  Widget _buildActionButton(String label, Widget page, String? warnNote,
+      String? warnVideo, Color color) {
+    return ElevatedButton.icon(
+      icon: Icon(
+        label == "Instructions"
+            ? FontAwesomeIcons.bookOpen // Book icon for instructions
+            : FontAwesomeIcons.flask, // Flask icon for theory
+        color: Colors.white,
+        size: 18,
+      ),
+      label: Text(
+        label,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+          fontWeight: FontWeight.bold, // Made text bold
+          letterSpacing: 0.5,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        padding: EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 16, // Increased padding
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        elevation: 3, // Added elevation
+      ),
+      onPressed: () => _navigateToPage(page),
     );
   }
 
@@ -102,127 +272,6 @@ class _EqubPageModeState extends State<EqubPageMode> {
       PageTransition(
         child: page,
         type: PageTransitionType.bottomToTop,
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (_screenH / _screenWidth > 1.7) {
-      adjust = 0.86;
-    }
-    return Scaffold(
-      backgroundColor: widget.backC,
-      appBar: AppBar(
-        toolbarHeight: _screenH / 10,
-        title: Text(
-          widget.title,
-          style: TextStyle(
-            fontSize: _screenWidth / 18,
-            fontWeight: FontWeight.w900,
-          ),
-        ),
-        backgroundColor: Colors.black,
-        actions: [
-          IconButton(
-              padding: EdgeInsets.fromLTRB(10, 3, 19, 3),
-              iconSize: 32,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(FontAwesomeIcons.timesCircle))
-        ],
-      ),
-      drawer: StandardNavigationDrawer(headerTitle: widget.title),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned(
-                top: _screenH / 45,
-                left: _screenWidth / 1.95,
-                child: Text(
-                  'Introduction',
-                  style: TextStyle(
-                      fontSize: _screenWidth / 15, fontWeight: FontWeight.bold),
-                )),
-            Positioned(
-              top: _screenH / 13,
-              left: _screenWidth / 1.95,
-              child: Container(
-                height: _screenH / 2.2,
-                width: _screenWidth / 2.3,
-                child: SingleChildScrollView(
-                    child: Text(
-                  widget.intro ?? "None",
-                  style: TextStyle(
-                      fontSize:
-                          _screenWidth * 2.3 / (widget.fontSize ?? 55 / adjust),
-                      fontWeight: FontWeight.bold),
-                )),
-              ),
-            ),
-            Positioned(
-              top: _screenH / 55,
-              left: _screenWidth / 55,
-              child: Container(
-                  constraints: BoxConstraints.expand(
-                      width: _screenWidth / 2.1, height: _screenH / 1.85),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      width: 6,
-                      color: Colors.grey.shade200,
-                    ),
-                    image: DecorationImage(
-                        image: NetworkImage(widget.img), fit: BoxFit.cover),
-                  )),
-            ),
-            widget.warnNote != "None"
-                ? functionButtonMode(
-                    top: _screenH / 1.33,
-                    left: _screenWidth / 12,
-                    buttonName: "Instruction",
-                    warnNote: widget.warnNote!,
-                    pageTo: widget.instruction)
-                : functionButtonMode(
-                    top: _screenH / 1.33,
-                    left: _screenWidth / 12,
-                    buttonName: "Instruction",
-                    warnV: widget.warnVido!,
-                    pageTo: widget.instruction),
-            functionButtonMode(
-                top: _screenH / 1.51,
-                left: _screenWidth / 12,
-                buttonName: widget.dash ?? "Theory",
-                pageTo: widget.theory ?? workingInProg()),
-            Positioned(
-                top: _screenH / 1.8,
-                left: _screenWidth / 1.5,
-                child: Row(
-                  children: [
-                    widget.extraPage != null
-                        ? IconButton(
-                            tooltip: widget.toolTip,
-                            iconSize: _screenH / 17,
-                            icon: Icon(widget.extraIcon),
-                            color: Colors.red,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  PageTransition(
-                                      child: widget.extraPage!,
-                                      type: PageTransitionType.bottomToTop));
-                            })
-                        : Container(),
-                    IconButton(
-                        tooltip: "Safety Sheet",
-                        iconSize: _screenH / 17,
-                        onPressed: _Safety,
-                        icon: Icon(FontAwesomeIcons.fileArchive))
-                  ],
-                )),
-          ],
-        ),
       ),
     );
   }

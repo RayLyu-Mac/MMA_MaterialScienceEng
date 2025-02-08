@@ -13,8 +13,8 @@ class equb_ava extends StatefulWidget {
 
 class _equb_avaState extends State<equb_ava> {
   late HeroType _heroType;
-  double _screenWidth = 0;
-  double _screenH = 0;
+  late double _screenWidth;
+  late double _screenH;
 
   @override
   void initState() {
@@ -29,86 +29,155 @@ class _equb_avaState extends State<equb_ava> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-
     _screenWidth = MediaQuery.of(context).size.width;
-
     _screenH = MediaQuery.of(context).size.height;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: _heroType.materialColor,
-        title: Text('${_heroType.title}',
-            style: TextStyle(
-                fontSize: _screenH / 35,
-                color: Colors.grey[800],
-                fontWeight: FontWeight.bold)),
-      ),
-      body: Container(
-        height: _screenH / 0.85,
-        decoration: BoxDecoration(
-          color: _heroType.materialColor.withAlpha(85),
+        elevation: 0,
+        backgroundColor: Colors.blue[900],
+        title: Text(
+          _heroType.title,
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Hero(
-                tag: 'background' + _heroType.title,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.close, color: Colors.white),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Image Section
+            Container(
+              height: _screenH * 0.4,
+              child: Hero(
+                tag: 'image${_heroType.title}',
                 child: Container(
-                  color: _heroType.materialColor.withOpacity(0.9),
-                ),
-              ),
-              Container(
-                  height: _screenH / 2.5,
-                  width: _screenWidth,
-                  child: Hero(
-                      tag: 'image' + _heroType.title,
-                      child: Image.network(
-                        _heroType.image,
-                        fit: BoxFit.fitWidth,
-                      ))),
-              SizedBox(
-                height: _screenH / 30,
-              ),
-              Container(
-                  padding: EdgeInsets.only(left: _screenWidth / 45),
-                  width: _screenWidth - 14.0,
-                  child: Hero(
-                      tag: 'fText' + _heroType.fText,
-                      child: Material(
-                          color: Colors.transparent,
-                          child: Text(_heroType.fText,
-                              style: TextStyle(
-                                fontSize: _screenH / (40),
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ))))),
-              SizedBox(
-                height: _screenH / 17,
-              ),
-              Container(
-                width: _screenWidth - 64.0,
-                child: Hero(
-                  tag: 'pageTo',
-                  child: fancyBut(
-                    pageTo: _heroType.pageTo,
-                    width: _screenWidth / 1.4,
-                    height: _screenWidth / 5.5,
-                    fontsize: _screenWidth / 22,
-                    icon: Icons.follow_the_signs_rounded,
-                    buttonName: "Go to the equipment page",
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(_heroType.image),
+                      fit: BoxFit.cover,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 8,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              SizedBox(
-                height: _screenH / 30,
+            ),
+
+            // Content Section
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Title and Description
+                  Hero(
+                    tag: 'fText${_heroType.fText}',
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.05),
+                              blurRadius: 4,
+                              offset: Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              _heroType.title,
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[900],
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              _heroType.fText,
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black87,
+                                height: 1.5,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(height: 24),
+
+                  // Action Button
+                  Hero(
+                    tag: 'pageTo',
+                    child: Container(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => _heroType.pageTo,
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward),
+                        label: Text(
+                          "View Equipment Details",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue[700],
+                          foregroundColor: Colors.white,
+                          padding: EdgeInsets.symmetric(
+                            vertical: 16,
+                            horizontal: 24,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          elevation: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

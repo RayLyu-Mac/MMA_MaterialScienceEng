@@ -1,3 +1,4 @@
 {
-    "cmake.configureSettings": {}
+    "cmake.configureSettings": {},
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

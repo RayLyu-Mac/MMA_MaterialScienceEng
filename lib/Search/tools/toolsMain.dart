@@ -106,6 +106,7 @@ class _toolMainState extends State<toolMain> {
   AppBar _buildAppBar() {
     return AppBar(
       elevation: 0,
+      iconTheme: IconThemeData(color: Colors.white),
       actions: [
         IconButton(
           padding: EdgeInsets.symmetric(horizontal: 16),
